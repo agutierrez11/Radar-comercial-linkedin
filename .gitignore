@@ -1,0 +1,28 @@
+# Secrets and environment variables
+.env
+.env.*
+*.local
+credentials.json
+token.json
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# User personal data (ZIPs and CSVs)
+*.zip
+*.csv
+*.xlsx
+*.tsv
+connections/
+contacts/
+Boveda_Contactos_Linkedin/
+Boveda_Contactos_Superconectados/
+
+# OS specific files
+.DS_Store
+Thumbs.db
