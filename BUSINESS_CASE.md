@@ -42,18 +42,23 @@ Los CRMs líderes no nos ven como competencia, sino como un **acelerador de adop
 
 ---
 
-## 5. Estrategia de Validación de Riesgo Mínimo (MVP Concierge)
+## 5. Estrategia de Validación de Riesgo Mínimo (Fase 1: B2C 1:1)
 
-Para validar la disposición de pago antes de invertir recursos de desarrollo en la extensión de Chrome y el backend, ejecutaremos una prueba piloto de una semana:
+Para validar la disposición de pago sin forzar al usuario a compartir su base de contactos (lo cual generaría rechazo inmediato), el MVP se centrará estrictamente en la venta **1:1 al comercial individual**:
 
 ```
-[ Vendedor comparte Connections.csv ] ──► [ Procesamiento Manual local con IA ] ──► [ Dashboard HTML interactivo personalizado ]
+[ Comercial sube su propio ZIP ] ──► [ Procesamiento 100% Local / Privado ] ──► [ Dashboard de Prospección Personal ]
                                                                                                     │
                                                                                                     ▼
-                                                                                         [ Validación de Pago ($10 USD) ]
+                                                                                         [ Pago de Suscripción / Fee ]
 ```
 
-1.  **Captura de Leads:** Solicitar el CSV de LinkedIn a un grupo de 15 comerciales objetivo a cambio de un análisis relacional gratuito.
-2.  **Procesamiento:** Correr nuestro script de Python para clasificar e inferir países, normalizando acentos (ej. Cancún -> cancun).
-3.  **Entrega del Dashboard:** Entregar el HTML interactivo personalizado con las sugerencias de pitcheo dinámicas por ICP (Toku/Netpay).
-4.  **Validación de Monetización:** Ofrecer la actualización mensual automática por una tarifa piloto de **$10 USD/mes**. Si el 20-30% acepta pagar por el entregable manual, procedemos a automatizar la ingeniería de software.
+### Las 3 Fases del Go-To-Market (GTM):
+
+1.  **Fase 1: B2C (El Comercial Individual - 1:1):** 
+    *   **Producto:** Una herramienta web 100% privada y local. El comercial sube su propio ZIP de LinkedIn, la herramienta procesa los datos en su propio navegador (IndexedDB) y le genera su dashboard personal con filtros de país, análisis semántico de ICP y sugerencia de pitches. **Nadie más ve su información.**
+    *   **Validación:** Se vende directamente a vendedores comisionistas, hunters o personas buscando empleo por una suscripción mensual asequible ($10 USD).
+2.  **Fase 2: B2B (La Empresa / CRM):** 
+    *   **Producto:** Se integra con el CRM de la empresa (HubSpot). Los vendedores de la empresa suben sus ZIPs a contenedores privados encriptados y el CRM solo muestra el "semáforo de intros" a las cuentas objetivo sin revelar la base completa del vendedor. Se introduce el sistema de bounties internos corporativos.
+3.  **Fase 3: P2P Platform (La Red Descentralizada):** 
+    *   **Producto:** Habilitar círculos de confianza donde comerciales independientes en diferentes países y empresas compartan coincidencias de red de forma criptográfica (Zero-Knowledge Match), permitiendo solicitar introducciones seguras. Esta fase se ejecuta solo después de consolidar la tecnología y la confianza de las fases 1 y 2.
