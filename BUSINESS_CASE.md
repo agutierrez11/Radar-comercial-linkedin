@@ -64,5 +64,12 @@ Para validar la disposición de pago sin forzar al usuario a compartir su base d
         *   *Escenario B (Pasivo - Rep NO sube ZIP):* Si el equipo comercial se niega a subir sus ZIPs, la empresa utiliza el motor para enriquecer y priorizar leads fríos corporativos, asignándolos de forma inteligente al vendedor con mejor match por vertical, geografía o historial.
         *   *Escenario C (Selectivo - Rep sube leads individuales a mano):* El vendedor no sube su red completa, sino que ingresa y comparte manualmente solo los contactos específicos de su LinkedIn que son clave para avanzar un trato activo en el CRM a cambio de comisiones/bounties de co-selling.
     *   **Validación:** Pilotos corporativos enfocados en directores de ventas (VPs of Sales) interesados en acelerar el ciclo de cierre de cuentas clave.
-3.  **Fase 3: P2P Platform (La Red Descentralizada):** 
-    *   **Producto:** Habilitar círculos de confianza donde comerciales independientes en diferentes países y empresas compartan coincidencias de red de forma criptográfica (Zero-Knowledge Match), permitiendo solicitar introducciones seguras. Esta fase se ejecuta solo después de consolidar la tecnología y la confianza de las fases 1 y 2.
+## 6. Estrategia de Crecimiento: El Caballo de Troya (PLG / B2C2B)
+
+El producto se comercializa bajo un modelo de crecimiento liderado por el producto (Product-Led Growth - PLG):
+
+1.  **Fase de Prosumidor (Medición Local):** Generar una base inicial de usuarios comerciales para su uso 100% personal. Mapeamos su uso, medimos la mejora en su tasa de respuesta (Warm Outbound) y recopilamos historias de éxito cuantitativas (ej. *"Cerré una cuenta de $10K USD gracias al atajo de red"*).
+2.  **El Caballo de Troya Corporativo:** Con los datos de éxito de los usuarios individuales, nos presentamos ante los directores de ventas (VPs of Sales) de sus respectivas empresas:
+    > *“Tus vendedores estrella ya están usando nuestro software de forma privada para acelerar sus cierres. Si contratas la licencia corporativa, desbloqueas la visibilidad colectiva de estas relaciones para todo tu pipeline de HubSpot, conviviendo de forma segura con la privacidad del monedero del vendedor.”*
+
+Esta estrategia reduce drásticamente el ciclo de venta B2B corporativo, ya que no vendemos "en frío" a la empresa, sino que entramos respaldados por la tracción y demanda interna de sus propios comerciales.
