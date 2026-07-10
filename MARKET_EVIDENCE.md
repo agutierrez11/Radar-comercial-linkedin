@@ -33,3 +33,17 @@ Este documento compila y analiza publicaciones recientes de líderes de opinión
 *   **Evidencia:** Registró métricas comparando 30 días de LinkedIn Premium contra la versión gratuita. El volumen de interacciones orgánicas se mantuvo idéntico, y las postulaciones destacadas de pago no alteraron los tiempos de respuesta de los reclutadores.
 *   **Cita Clave:** *“La conclusión técnica es que la herramienta de pago no altera el valor de fondo... Optimizar procesos basándose en datos reales siempre será la mejor inversión.”*
 *   **Encaje con Radar:** Valida la disposición del comercial a cancelar suscripciones caras de LinkedIn (que cuestan de $40 a $150 USD/mes por métricas de vanidad) a cambio de una herramienta de utilidad real de **$10 USD/mes** como Radar Comercial.
+
+---
+
+## 5. El Bloqueo de Puertas de LinkedIn: Límites Comerciales y de Prospección
+
+La plataforma de LinkedIn limita y restringe proactivamente la prospección comercial fría y masiva a través de tres barreras de software estrictas:
+
+*   **Límite Semanal de Conexiones (Weekly Limit):** LinkedIn restringe los envíos de solicitudes a un promedio estricto de **100 invitaciones por semana** (hasta 150-200 para cuentas con alto SSI). Intentar agregar leads en frío masivamente está bloqueado de raíz.
+*   **Commercial Use Limit (Límite de Búsqueda):** Si realizas búsquedas frecuentes de personas o empresas en la versión gratuita de LinkedIn, el sistema **bloquea tus resultados de búsqueda** y te obliga a pagar Sales Navigator para seguir navegando.
+*   **Baneos por Automatización (Account Suspensions):** LinkedIn penaliza agresivamente el uso de herramientas de automatización de terceros (crawlers y extensiones de mensajería masiva), suspendiendo temporalmente o borrando de forma definitiva las cuentas de los comerciales.
+
+### Encaje estratégico con Radar Comercial:
+Radar Comercial evita que el vendedor golpee estas tres paredes de LinkedIn. Al operar mediante la **descarga voluntaria del ZIP (BYOD) y el cruce local**, el comercial puede buscar e identificar oportunidades dentro de su red preexistente de forma ilimitada, sin activar los límites de búsqueda comercial de LinkedIn y **sin riesgo de baneo de cuenta**, ya que no utiliza bots de automatización intrusivos.
+
