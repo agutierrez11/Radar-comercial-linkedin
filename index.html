@@ -855,7 +855,11 @@ async function processCSVOnly(file) {
 }
 
 function buildContacts(rows) {
-  const newContacts = rows.map((row, idx) => {
+  const existingKeys = new Set(S.contacts.map(c => 
+    `${norm(c.name)}|${norm(c.company)}|${norm(c.position)}|${c.connectedOn}`
+  ));
+
+  const newContacts = rows.map(row => {
     const fn = (row['First Name'] || '').trim();
     const ln = (row['Last Name'] || '').trim();
     const name = `${fn} ${ln}`.trim();
@@ -868,8 +872,19 @@ function buildContacts(rows) {
     const country = inferCountry(email, company, position);
     const hierarchy = inferHierarchy(position);
     const sector = inferSector(position, company);
-    return { id: S.contacts.length + idx, name, company, position, email, url, connectedOn, connectedYearsAgo: yearsAgo, country, hierarchy, sector, score: 0 };
-  }).filter(c => c.name.length > 0);
+    return { name, company, position, email, url, connectedOn, connectedYearsAgo: yearsAgo, country, hierarchy, sector, score: 0 };
+  }).filter(c => {
+    if (c.name.length === 0) return false;
+    const key = `${norm(c.name)}|${norm(c.company)}|${norm(c.position)}|${c.connectedOn}`;
+    if (existingKeys.has(key)) return false;
+    existingKeys.add(key);
+    return true;
+  });
+
+  newContacts.forEach((c, idx) => {
+    c.id = S.contacts.length + idx;
+  });
+
   S.contacts = S.contacts.concat(newContacts);
 }
 
