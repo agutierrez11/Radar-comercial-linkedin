@@ -42,3 +42,19 @@ HubSpot y Salesforce tienen los tratos cerrados, pero **no tienen el historial i
 Con millones de interacciones calificadas por "Éxito Comercial" (si hubo llamada, demo o cierre), podemos entrenar nuestro propio modelo de lenguaje (Fine-Tuning) especializado exclusivamente en **redacción y optimización de mensajes de prospección comercial**. 
 
 Este modelo no redactará como ChatGPT (que suena robótico y formal); redactará con el tono exacto, humano y efectivo que los datos demuestran que **sí cierra tratos de verdad**.
+
+---
+
+## 5. Atribución del Embudo Multicanal: De la Apertura al Cierre
+
+El verdadero reto técnico y de negocio es mapear el embudo multicanal completo, ya que el comportamiento de compra B2B sigue un patrón claro:
+1.  **LinkedIn DMs abre la puerta (Apertura):** Es el canal de mayor confianza humana y respuesta rápida.
+2.  **El correo electrónico y llamadas cierran el trato (Cierre):** La conversación migra a Gmail/Outlook/HubSpot en cuanto se intercambian correos corporativos y propuestas formales.
+
+### Cómo lo resolverá Radar Comercial:
+1.  **Detección de Migración de Canal:** El sistema identificará de forma automática cuando el contacto envíe un correo electrónico o teléfono en el chat de LinkedIn (ej. *"escríbeme a miguel.pedraza@macropay.mx"*).
+2.  **Integración CRM / Email (El Cierre del Bucle):** Radar se conectará vía API a HubSpot/Salesforce o Gmail. Buscará ese correo electrónico y rastreará si se creó un trato (*deal*) y si se marcó como *Closed-Won*.
+3.  **Atribución de Ingresos (ROI de LinkedIn):** El sistema generará el reporte definitivo para el CEO/Director de Ventas: 
+    *   *"Este trato de $20,000 USD cerrado hoy en HubSpot se originó gracias a este mensaje abridor de Antonio en LinkedIn hace 3 meses."*
+    *   Esto demuestra científicamente el retorno de inversión del Social Selling, algo que hoy es imposible de rastrear de forma automatizada.
+
