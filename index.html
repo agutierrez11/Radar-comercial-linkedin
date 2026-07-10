@@ -473,7 +473,9 @@
         <button class="mini-btn" onclick="exportCSV(icpContacts, 'icp_leads')">↓ Exportar CSV</button>
       </div>
       <div id="icp-context-banner" style="margin-bottom:14px"></div>
-      <div class="filter-bar">
+      <div class="filter-bar" style="align-items: center;">
+        <span style="font-size:11px; font-weight:600; color:var(--muted2)">Analizar para:</span>
+        <select class="filter-input" id="icp-role-select" style="min-width: 220px; font-weight: 600;" onchange="changeIcpActiveRole(this.value)"></select>
         <input class="filter-input search" id="icp-search" type="text" placeholder="Buscar...">
         <select class="filter-input" id="icp-min-score">
           <option value="0">Todos los scores</option>
@@ -1159,6 +1161,21 @@ function populateFilters() {
   sectors.forEach(s => {
     const o = document.createElement('option'); o.value = s; o.textContent = s; sels.appendChild(o);
   });
+
+  // Populate ICP Role Selector
+  const icpRoleSelect = document.getElementById('icp-role-select');
+  if (icpRoleSelect) {
+    icpRoleSelect.innerHTML = S.positions.map((p, idx) => 
+      `<option value="${idx}">${p.title} @ ${p.company}</option>`
+    ).join('') || '<option value="">Sin cargos cargados</option>';
+    icpRoleSelect.value = S.activePositionIndex || 0;
+  }
+}
+
+function changeIcpActiveRole(val) {
+  const idx = parseInt(val);
+  if (isNaN(idx)) return;
+  selectActivePosition(idx);
 }
 
 ['net-search','net-country','net-hier','net-sector'].forEach(id => {
@@ -1322,6 +1339,12 @@ function renderICP() {
   const activeIdx = S.activePositionIndex || 0;
   const activePos = S.positions[activeIdx];
   const override = document.getElementById('icp-override').value.trim();
+  
+  const icpRoleSelect = document.getElementById('icp-role-select');
+  if (icpRoleSelect && icpRoleSelect.value != activeIdx) {
+    icpRoleSelect.value = activeIdx;
+  }
+  
   let bannerHtml = '';
   if (override) {
     bannerHtml = `<div class="kpi-card" style="border-color:var(--accent);margin-bottom:0"><div class="kpi-label">ICP Personalizado activo</div><div style="font-size:12px;font-weight:600;margin-top:4px">"${override}"</div></div>`;
