@@ -545,6 +545,7 @@ const S = {
   activeSection: 'upload',
   pitchLead: null,
   pitchApproach: 'directo',
+  activePositionIndex: 0,
   loadedParts: {
     connections: false,
     positions: false,
@@ -619,8 +620,8 @@ function inferSector(pos, company) {
 
 function scoreContact(c) {
   const icpText = norm(document.getElementById('icp-override').value);
-  const lastPos = S.positions.length ? S.positions[0] : null;
-  const ownerSector = lastPos ? inferSector(lastPos.title, lastPos.company) : '';
+  const activePos = S.positions.length ? S.positions[S.activePositionIndex || 0] : null;
+  const ownerSector = activePos ? inferSector(activePos.title, activePos.company) : '';
   let score = 0;
   if (c.hierarchy === 'C-Level') score += 35;
   else if (c.hierarchy === 'Director') score += 20;
@@ -1008,22 +1009,39 @@ function renderProfile() {
   if (!S.positions.length && !S.ownerName) return;
   const el = document.getElementById('profile-content');
   const name = S.ownerName || 'Propietario';
+  const activeIdx = S.activePositionIndex || 0;
   let html = `<div style="margin-bottom:16px"><div style="font-size:18px;font-weight:700">${name}</div>`;
-  if (S.positions[0]) html += `<div style="font-size:12px;color:var(--muted2);margin-top:3px">${S.positions[0].title} @ ${S.positions[0].company}</div>`;
+  if (S.positions[activeIdx]) html += `<div style="font-size:12px;color:var(--muted2);margin-top:3px">Contexto Activo para Pitches: <strong>${S.positions[activeIdx].title} @ ${S.positions[activeIdx].company}</strong></div>`;
   html += `</div><div class="timeline">`;
   S.positions.forEach((p, i) => {
-    const active = i === 0 ? 'active' : '';
+    const isActive = i === activeIdx;
+    const activeClass = isActive ? 'active' : '';
     const endLabel = p.end || 'Actual';
-    html += `<div class="tl-item ${active}">
+    html += `<div class="tl-item ${activeClass}" style="cursor:pointer;" onclick="selectActivePosition(${i})">
       <div class="tl-dot"></div>
       <div class="tl-company">${p.company}</div>
       <div class="tl-role">${p.title}</div>
       <div class="tl-period">${p.start} → ${endLabel}</div>
-      ${i === 0 ? `<span class="badge badge-green tl-toggle">● Contexto activo para pitches</span>` : ''}
+      ${isActive ? `<span class="badge badge-green tl-toggle">● Contexto activo para pitches y scoring</span>` : `<span class="badge badge-muted tl-toggle">Hacer contexto activo</span>`}
     </div>`;
   });
   html += '</div>';
   el.innerHTML = html;
+}
+
+function selectActivePosition(idx) {
+  S.activePositionIndex = idx;
+  // Recalculate scores based on the new active position
+  S.contacts.forEach(c => { c.score = scoreContact(c); });
+  icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
+  
+  // Re-render and update UI
+  renderProfile();
+  renderNetwork();
+  renderICP();
+  renderHeader();
+  renderPurge();
+  renderMessages();
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -1159,13 +1177,14 @@ document.getElementById('icp-override').addEventListener('input', () => {
 });
 
 function renderICP() {
-  const lastPos = S.positions[0];
+  const activeIdx = S.activePositionIndex || 0;
+  const activePos = S.positions[activeIdx];
   const override = document.getElementById('icp-override').value.trim();
   let bannerHtml = '';
   if (override) {
     bannerHtml = `<div class="kpi-card" style="border-color:var(--accent);margin-bottom:0"><div class="kpi-label">ICP Personalizado activo</div><div style="font-size:12px;font-weight:600;margin-top:4px">"${override}"</div></div>`;
-  } else if (lastPos) {
-    bannerHtml = `<div class="kpi-card" style="border-color:var(--purple);margin-bottom:0"><div class="kpi-label">ICP Auto-detectado desde tu último cargo</div><div style="font-size:12px;font-weight:600;margin-top:4px">${lastPos.title} @ ${lastPos.company} → Sector: ${inferSector(lastPos.title,lastPos.company)}</div></div>`;
+  } else if (activePos) {
+    bannerHtml = `<div class="kpi-card" style="border-color:var(--purple);margin-bottom:0"><div class="kpi-label">ICP Auto-detectado desde tu cargo activo</div><div style="font-size:12px;font-weight:600;margin-top:4px">${activePos.title} @ ${activePos.company} → Sector: ${inferSector(activePos.title,activePos.company)}</div></div>`;
   }
   document.getElementById('icp-context-banner').innerHTML = bannerHtml;
   renderICPTable();
@@ -1406,9 +1425,10 @@ function updatePitchModal() {
   const c = S.pitchLead;
   if (!c) return;
   const firstName = c.name.split(' ')[0];
-  const lastPos = S.positions[0];
-  const myRole = lastPos ? lastPos.title : 'profesional en ventas';
-  const myCompany = lastPos ? lastPos.company : 'mi empresa';
+  const activeIdx = S.activePositionIndex || 0;
+  const activePos = S.positions[activeIdx];
+  const myRole = activePos ? activePos.title : 'profesional en ventas';
+  const myCompany = activePos ? activePos.company : 'mi empresa';
   const countryCtx = c.country !== 'Desconocido' ? ` en ${c.country}` : '';
   document.getElementById('modal-name').textContent = c.name;
   document.getElementById('modal-details').textContent = `${c.position} @ ${c.company}`;
