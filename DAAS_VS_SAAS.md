@@ -39,9 +39,11 @@ Radar Comercial no es un DaaS tradicional invasivo. Somos una **SaaS que genera 
 ```
 
 ### Ventajas de nuestro modelo SaaS + DaaS:
-1.  **Enriquecimiento On-Demand (Bajo Demanda):** No intentamos almacenar a todo el universo de contactos. Solo enriquecemos las empresas y sectores que los usuarios reales suben a sus bóvedas. Esto reduce los costos de almacenamiento y cómputo en un **90%**.
-2.  **Privacidad por Diseño (Zero-Knowledge DaaS):** No guardamos datos personales en nuestra nube. El servidor de Radar solo almacena firmas criptográficas (hashes SHA-256) de dominios de empresas e industrias normalizadas. El "gráfico de relaciones" sigue siendo propiedad del usuario.
-3.  **Efecto de Red de Datos (Data Network Effects):** Cada vez que un usuario sube un ZIP y nuestro agente NERV cura la metadata pública de una empresa (ej. descripción, sector, financiamiento), esa información enriquecida se queda en nuestra caché. El siguiente usuario que tenga contacto con esa misma empresa obtiene la data instantáneamente a costo cero para nosotros.
+1.  **Tu Data como Fuente de Verdad (Ground Truth):** Las bases de datos DaaS de la competencia están plagadas de información desactualizada, errores de scrapeo y alucinaciones de IA. En Radar, tu archivo de conexiones reales es la fuente de verdad absoluta. El comercial sabe perfectamente a quién conoce y a quién no.
+2.  **Human-in-the-Loop (Curación contra Errores de Internet):** El usuario valida, limpia y corrige la metadata directamente en su dashboard (ej. corregir una geografía mal inferida por el algoritmo o actualizar una empresa que cambió de nombre). Eliminamos los errores de internet combinando el poder del Swarm NERV con el criterio y validación humana del dueño de la relación.
+3.  **Enriquecimiento On-Demand (Bajo Demanda):** No intentamos almacenar a todo el universo de contactos. Solo enriquecemos las empresas y sectores que los usuarios reales suben a sus bóvedas. Esto reduce los costos de almacenamiento y cómputo en un **90%**.
+4.  **Privacidad por Diseño (Zero-Knowledge DaaS):** No guardamos datos personales en nuestra nube. El servidor de Radar solo almacena firmas criptográficas (hashes SHA-256) de dominios de empresas e industrias normalizadas. El "gráfico de relaciones" sigue siendo propiedad del usuario.
+5.  **Efecto de Red de Datos (Data Network Effects):** Cada vez que un usuario sube un ZIP y nuestro agente NERV cura la metadata pública de una empresa (ej. descripción, sector, financiamiento), esa información enriquecida se queda en nuestra caché. El siguiente usuario que tenga contacto con esa misma empresa obtiene la data instantáneamente a costo cero para nosotros.
 
 ---
 
