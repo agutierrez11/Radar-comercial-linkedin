@@ -667,15 +667,23 @@ async function handleFile(file) {
       await processZip(zip);
     } else if (name.endsWith('.csv')) {
       await processCSVOnly(file);
+    } else {
+      throw new Error("Formato de archivo no soportado. Por favor sube un archivo .zip exportado de LinkedIn o un .csv de contactos válido.");
     }
   } catch(err) {
-    alert('Error al procesar el archivo: ' + err.message);
+    alert('⚠️ Error de Importación:\n\n' + err.message + '\n\nAsegúrate de que estás subiendo el archivo exportado directamente desde LinkedIn.');
   }
   setLoading(false);
 }
 
 async function processZip(zip) {
   const files = Object.keys(zip.files);
+
+  // Validate connections file presence
+  const connFile = files.find(f => /connection/i.test(f) && f.endsWith('.csv'));
+  if (!connFile) {
+    throw new Error("No se encontró el archivo de contactos ('Connections.csv') dentro del ZIP. Asegúrate de marcar 'Mis contactos' al solicitar la copia de seguridad de datos en LinkedIn.");
+  }
 
   // Profile
   const profileFile = files.find(f => f.includes('Profile.csv'));
@@ -705,16 +713,18 @@ async function processZip(zip) {
   setLoading(true, 65);
 
   // Connections
-  const connFile = files.find(f => /connection/i.test(f) && f.endsWith('.csv'));
-  if (connFile) {
-    const txt = await zip.files[connFile].async('string');
-    // Skip LinkedIn's extra header rows
-    const lines = txt.split('\n');
-    const startIdx = lines.findIndex(l => l.includes('First Name'));
-    const csvData = lines.slice(startIdx).join('\n');
-    const parsed = Papa.parse(csvData, { header: true, skipEmptyLines: true });
-    buildContacts(parsed.data);
+  const txt = await zip.files[connFile].async('string');
+  const lines = txt.split('\n');
+  const startIdx = lines.findIndex(l => l.includes('First Name'));
+  if (startIdx === -1) {
+    throw new Error("El archivo 'Connections.csv' no contiene el formato oficial de LinkedIn (falta la cabecera 'First Name').");
   }
+  const csvData = lines.slice(startIdx).join('\n');
+  const parsed = Papa.parse(csvData, { header: true, skipEmptyLines: true });
+  if (!parsed.data || parsed.data.length === 0) {
+    throw new Error("El archivo 'Connections.csv' está vacío o no contiene registros válidos.");
+  }
+  buildContacts(parsed.data);
 
   setLoading(true, 80);
 
@@ -731,10 +741,36 @@ async function processZip(zip) {
 }
 
 async function processCSVOnly(file) {
-  return new Promise(resolve => {
+  return new Promise((resolve, reject) => {
     Papa.parse(file, {
       header: true, skipEmptyLines: true,
-      complete: r => { buildContacts(r.data); finalize(); resolve(); }
+      complete: r => {
+        if (!r.data || r.data.length === 0) {
+          reject(new Error("El archivo CSV está vacío. Por favor sube un archivo con registros de contactos."));
+          return;
+        }
+        // Check for common headers
+        const firstRow = r.data[0];
+        const hasFirstName = 'First Name' in firstRow || 'First name' in firstRow || 'first_name' in firstRow || 'Nombre' in firstRow;
+        if (!hasFirstName) {
+          reject(new Error("El archivo CSV no contiene una columna de nombre reconocible (como 'First Name' o 'Nombre')."));
+          return;
+        }
+        // Normalize rows to map expected properties
+        const normalized = r.data.map(row => ({
+          'First Name': row['First Name'] || row['First name'] || row['first_name'] || row['Nombre'] || '',
+          'Last Name': row['Last Name'] || row['Last name'] || row['last_name'] || row['Apellido'] || '',
+          'Company': row['Company'] || row['company'] || row['Empresa'] || '',
+          'Position': row['Position'] || row['position'] || row['Title'] || row['title'] || row['Cargo'] || '',
+          'Email Address': row['Email Address'] || row['Email'] || row['email'] || row['Correo'] || '',
+          'URL': row['URL'] || row['url'] || row['LinkedIn Profile'] || '',
+          'Connected On': row['Connected On'] || row['Connected on'] || row['Fecha de conexión'] || ''
+        }));
+        buildContacts(normalized);
+        finalize();
+        resolve();
+      },
+      error: err => reject(err)
     });
   });
 }
