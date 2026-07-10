@@ -25,6 +25,7 @@ Este archivo define las reglas persistentes, contexto de negocio y arquitectura 
 - **Alineación Comercial:** Cada decisión técnica o de diseño en el dashboard, extensión de Chrome o backend debe priorizar la facilidad de prospección del comercial individual y la velocidad de venta (Speed to Sell).
 - **Tratamiento de Datos Rotos:** Indicar siempre un *disclaimer* en el dashboard y las notas de Obsidian, ya que la información de LinkedIn puede estar obsoleta o desestructurada (ej. países desconocidos, cargos históricos mezclados).
 - **Normalización de Texto:** Para la clasificación por países y cargos, siempre normalizar acentos y diacríticos (ej. Cancún -> cancun) para evitar falsos negativos en los filtros.
+- **CI/CD Obligatorio:** Todo desarrollo debe tener en cuenta el pipeline de Integración y Despliegue Continuo (CI/CD). El código en `main` debe ser siempre desplegable, incluir pruebas automatizadas/linters y configuraciones para despliegue automatizado en la nube (GitHub Actions, Render, Vercel).
 - **Tone & Language:** Comunicarse con el usuario de manera proactiva, en español, de forma directa, ágil y con un tono técnico/de negocio de alto nivel.
 
 ---
