@@ -38,6 +38,7 @@ Es vital delimitar la propuesta de valor para evitar comparaciones erróneas con
     1.  **Limpieza Forense:** Removemos emojis, títulos basura y ruido de tu base de contactos para hacerla operable.
     2.  **Mapeo de Jerarquías e Inferencia de País:** Estructuramos tu base desordenada para que sepas exactamente a quién tienes en cada geografía y nivel de decisión.
     3.  **El Pad Comercial (Roadmap de Pitcheo):** Analizamos la temperatura de tus conversaciones pasadas (`Messages.csv`) y te trazamos el camino cálido: a quién debes escribirle hoy, con qué enfoque (Directo o de Valor) y te sugerimos el mensaje redactado para tu ICP específico.
+*   **Filosofía: Conexión sobre Volumen (Bonds over Volume):** Como reflexiona el Dr. Adrián Huñis (líder de opinión en oncología), el verdadero valor en las redes profesionales *"no es el volumen superficial, sino la calidad del vínculo que se está construyendo"*. Las herramientas tradicionales automatizan el spam masivo quemando tu nombre. Radar Comercial va en sentido contrario: reduce el ruido para ayudarte a profundizar en las conexiones de alta temperatura (los "vínculos reales") de tu red.
 
 Esto blinda el producto éticamente, ya que operamos al 100% sobre **los activos relacionales que el usuario ya posee** y que simplemente no sabe cómo explotar.
 
