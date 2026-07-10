@@ -61,6 +61,7 @@ Incluso bajo un escenario de penetración ultra-conservador basado en los 310 mi
 | **0.003% de MAU** (Piloto B2C Inicial) | 10,000 | $100,000 USD | $1,200,000 USD |
 
 ### El Argumento de Ventas B2C (No Corporativo):
+*   **Utilidad Real vs. Espejismos Premium ($10 vs. $50+ USD):** Analistas de datos como Jonathan Ramírez han demostrado con métricas reales que pagar por **LinkedIn Premium ($40 a $150 USD/mes) no altera el alcance orgánico ni mejora la efectividad real** de la plataforma. La gente paga por vanidad (ver quién vio su perfil) o promesas vacías del algoritmo. Con Radar Comercial, el usuario paga una fracción (**$10 USD**) por **utilidad pura**: curar sus datos y trazar su Pad Comercial.
 *   **El precio no es barrera ($10 USD):** Cualquier comercial que cierre una sola venta gracias a un atajo relacional recupera el costo de 5 años de suscripción en una tarde.
 *   **Independencia Laboral:** El vendedor conserva su base de datos y su dashboard sin importar si cambia de empleo. Es su herramienta de trabajo personal portátil.
 *   **Crecimiento Orgánico (PLG):** Si el vendedor individual tiene éxito, la empresa lo notará en sus resultados de cuota y decidirá adquirir licencias corporativas de forma orgánica (B2C2B).
