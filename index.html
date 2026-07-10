@@ -1540,10 +1540,10 @@ function renderMessages() {
   const openers = [];
 
   const styleStats = {
-    'Saludo Simple / Informal': { sent: 0, replied: 0 },
-    'Pregunta / Ayuda Directa': { sent: 0, replied: 0 },
-    'Presentación Larga / Propuesta': { sent: 0, replied: 0 },
-    'Otros / Sin Clasificar': { sent: 0, replied: 0 }
+    'Saludo Simple / Informal': { sent: 0, repliedToOpener: 0, pitched: 0, pitchReplied: 0 },
+    'Pregunta / Ayuda Directa': { sent: 0, repliedToOpener: 0, pitched: 0, pitchReplied: 0 },
+    'Presentación Larga / Propuesta': { sent: 0, repliedToOpener: 0, pitched: 0, pitchReplied: 0 },
+    'Otros / Sin Clasificar': { sent: 0, repliedToOpener: 0, pitched: 0, pitchReplied: 0 }
   };
 
   const campaignStats = {};
@@ -1559,33 +1559,44 @@ function renderMessages() {
     const replied = subsequent.some(m => !isMe(m.sender));
     if (replied) gotReply++;
     
-    const isComm = msgs.some(m => isCommercial(m.content));
-    if (isComm) {
+    const firstCommIdx = msgs.findIndex((m, idx) => idx >= firstMineIdx && isMe(m.sender) && isCommercial(m.content));
+    const pitched = firstCommIdx !== -1;
+    const pitchReplied = pitched && msgs.slice(firstCommIdx+1).some(m => !isMe(m.sender));
+
+    if (pitched) {
       commercial++;
-      if (replied) commercialReply++;
+      if (pitchReplied) commercialReply++;
     }
 
     const style = getOpenerStyle(opener.content);
     if (styleStats[style]) {
       styleStats[style].sent++;
-      if (replied) styleStats[style].replied++;
+      if (replied) styleStats[style].repliedToOpener++;
+      if (pitched) {
+        styleStats[style].pitched++;
+        if (pitchReplied) styleStats[style].pitchReplied++;
+      }
     }
 
     const campaign = getCampaignByDate(opener.date);
     if (!campaignStats[campaign]) {
-      campaignStats[campaign] = { sent: 0, replied: 0 };
+      campaignStats[campaign] = { sent: 0, repliedToOpener: 0, pitched: 0, pitchReplied: 0 };
     }
     campaignStats[campaign].sent++;
-    if (replied) campaignStats[campaign].replied++;
+    if (replied) campaignStats[campaign].repliedToOpener++;
+    if (pitched) {
+      campaignStats[campaign].pitched++;
+      if (pitchReplied) campaignStats[campaign].pitchReplied++;
+    }
 
-    openers.push({ text: opener.content, replied, isComm, turns: subsequent.length });
+    openers.push({ text: opener.content, replied, isComm: pitched, turns: subsequent.length });
   });
 
   const openRate = initiated ? Math.round(gotReply/initiated*100) : 0;
   const commRate = commercial ? Math.round(commercialReply/commercial*100) : 0;
   const bestOpeners = openers
-    .filter(o => o.replied && o.text.trim().length > 0)
-    .sort((a,b) => a.text.length - b.text.length)
+    .filter(o => o.replied && o.text.trim().replace(/[^a-zA-ZáéíóúñÁÉÍÓÚÑ]/g, '').length > 20)
+    .sort((a,b) => b.turns - a.turns)
     .slice(0, 5);
 
   document.getElementById('nb-msgs').textContent = Object.keys(convs).length.toLocaleString();
@@ -1599,8 +1610,8 @@ function renderMessages() {
       </div>
       <div class="msg-stat-card">
         <div class="msg-rate" style="color:var(--accent)">${commRate}%</div>
-        <div class="msg-label">Tasa respuesta comercial</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:4px">${commercialReply} / ${commercial} convs.</div>
+        <div class="msg-label">Tasa respuesta comercial real</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">${commercialReply} / ${commercial} pitches</div>
       </div>
       <div class="msg-stat-card">
         <div class="msg-rate" style="color:var(--purple)">${Object.keys(convs).length.toLocaleString()}</div>
@@ -1609,7 +1620,7 @@ function renderMessages() {
       </div>
     </div>
 
-    <div class="charts-row" style="grid-template-columns: 1fr 1fr; margin-bottom:14px;">
+    <div class="charts-row" style="grid-template-columns: 1.15fr 0.85fr; margin-bottom:14px; gap:10px;">
       <div class="chart-card" style="padding: 12px 14px; overflow-x: auto;">
         <div class="chart-title">Rendimiento por Estilo de Abridor</div>
         <table class="compact-table" style="width: 100%;">
@@ -1617,17 +1628,22 @@ function renderMessages() {
             <tr>
               <th style="padding: 4px 6px;">Estilo</th>
               <th style="padding: 4px 6px; text-align: center;">Enviados</th>
-              <th style="padding: 4px 6px; text-align: right;">Respuesta (%)</th>
+              <th style="padding: 4px 6px; text-align: center;">Resp. Abridor</th>
+              <th style="padding: 4px 6px; text-align: center;">Pitched</th>
+              <th style="padding: 4px 6px; text-align: right;">Resp. Pitch Real</th>
             </tr>
           </thead>
           <tbody>
             ${Object.entries(styleStats).map(([style, s]) => {
-              const rate = s.sent ? Math.round(s.replied / s.sent * 100) : 0;
+              const opRate = s.sent ? Math.round(s.repliedToOpener / s.sent * 100) : 0;
+              const pRate = s.pitched ? Math.round(s.pitchReplied / s.pitched * 100) : 0;
               return `
                 <tr>
                   <td style="padding: 6px; font-weight:600;">${style}</td>
                   <td style="padding: 6px; text-align: center; font-family:'JetBrains Mono';">${s.sent}</td>
-                  <td style="padding: 6px; text-align: right; font-weight:700; color:${rate >= 60 ? 'var(--green)' : rate >= 40 ? 'var(--amber)' : 'var(--red)'}; font-family:'JetBrains Mono';">${rate}%</td>
+                  <td style="padding: 6px; text-align: center; font-family:'JetBrains Mono'; color:var(--muted2);">${opRate}%</td>
+                  <td style="padding: 6px; text-align: center; font-family:'JetBrains Mono';">${s.pitched}</td>
+                  <td style="padding: 6px; text-align: right; font-weight:700; color:${pRate >= 40 ? 'var(--green)' : pRate >= 20 ? 'var(--amber)' : 'var(--red)'}; font-family:'JetBrains Mono';">${pRate}%</td>
                 </tr>
               `;
             }).join('')}
@@ -1642,17 +1658,19 @@ function renderMessages() {
             <tr>
               <th style="padding: 4px 6px;">Campaña / Contexto</th>
               <th style="padding: 4px 6px; text-align: center;">Chats</th>
-              <th style="padding: 4px 6px; text-align: right;">Respuesta (%)</th>
+              <th style="padding: 4px 6px; text-align: center;">Pitched</th>
+              <th style="padding: 4px 6px; text-align: right;">Resp. Pitch Real</th>
             </tr>
           </thead>
           <tbody>
             ${Object.entries(campaignStats).sort((a,b) => b[1].sent - a[1].sent).map(([campaign, s]) => {
-              const rate = s.sent ? Math.round(s.replied / s.sent * 100) : 0;
+              const pRate = s.pitched ? Math.round(s.pitchReplied / s.pitched * 100) : 0;
               return `
                 <tr>
                   <td style="padding: 6px; font-weight:600;">${campaign}</td>
                   <td style="padding: 6px; text-align: center; font-family:'JetBrains Mono';">${s.sent}</td>
-                  <td style="padding: 6px; text-align: right; font-weight:700; color:${rate >= 60 ? 'var(--green)' : rate >= 40 ? 'var(--amber)' : 'var(--red)'}; font-family:'JetBrains Mono';">${rate}%</td>
+                  <td style="padding: 6px; text-align: center; font-family:'JetBrains Mono';">${s.pitched}</td>
+                  <td style="padding: 6px; text-align: right; font-weight:700; color:${pRate >= 40 ? 'var(--green)' : pRate >= 20 ? 'var(--amber)' : 'var(--red)'}; font-family:'JetBrains Mono';">${pRate}%</td>
                 </tr>
               `;
             }).join('')}
@@ -1661,7 +1679,7 @@ function renderMessages() {
       </div>
     </div>
 
-    <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:var(--muted2)">🏆 Tus mejores aperturas (con respuesta, ordenadas por brevedad)</div>
+    <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:var(--muted2)">🏆 Abridores con Mayor Enganche (con respuesta, ordenados por profundidad de conversación)</div>
     ${bestOpeners.map((o,i) => `
       <div class="opener-row">
         <div class="opener-meta">
