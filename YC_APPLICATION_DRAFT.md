@@ -9,10 +9,12 @@ Este documento contiene las preguntas clave del formulario oficial de **Y Combin
 ### What is your company going to make?
 We are building a private, client-side relational intelligence wallet that helps B2B sales representatives mine and leverage their existing first-degree professional networks to close deals, without ceding ownership of their contacts to the company CRM.
 
-### Why did you choose this idea? What do you know about this problem that others don't?
+#### Why did you choose this idea? What do you know about this problem that others don't?
 As former sales executives at leading fintechs (Clip, Fiserv), we know that cold outreach (emails/messages) is dead, yielding response rates under 1%. However, we also know that sales representatives collectively sit on thousands of warm, first-degree LinkedIn connections that are completely abandoned. 
 
-Sales reps hide their networks from Salesforce/HubSpot because they view their contacts as personal professional equity—if they leave the company, they lose their network. We realized that by building a "Zero-Knowledge" client-side wallet where contacts are processed locally, reps will willingly upload their data to find warm paths to target accounts, while companies will happily pay to unlock those introductions.
+We discovered a critical structural secret of the LinkedIn algorithm: **LinkedIn limits organic reach by testing posts on a small initial cohort (5-10% of your network)**. If you have 4,000 "dead-weight" connections (inactive, irrelevant profiles), the test cohort gets diluted, nobody interacts, and the algorithm kills the post's reach. By providing a "LinkedIn Purger" tool, sales reps prune their network down to their active 150-connection Dunbar Limit. This instantly triggers the LinkedIn algorithm to boost their organic content reach. 
+
+Additionally, sales reps hide their networks from Salesforce/HubSpot because they view their contacts as personal professional equity. By building a "Zero-Knowledge" client-side wallet where contacts are processed locally, reps will willingly upload their data to find warm paths to target accounts, while companies will happily pay to unlock those introductions.
 
 ---
 
@@ -53,7 +55,7 @@ We operate a hybrid business model:
 ### How will you acquire customers?
 *   **Bottom-Up Adoption (B2C2B):** We distribute the tool to individual sales reps looking to hit quota. Once multiple reps in a company use it, the VP of Sales buys the B2B team tier to coordinate matches and integrate with the corporate CRM.
 *   **CRM Marketplaces:** Listing our plugin on HubSpot and Pipedrive app stores as an adoption tool. HubSpot wants us because we solve the "Empty CRM" problem by giving reps an incentive to use it.
-*   **Communities:** Growth loops via LATAM Commerce and sales training programs.
+*   **Communities:** Growth loops via sales training programs and Slack channels.
 
 ---
 
@@ -65,9 +67,9 @@ We have a balanced, high-execution team:
 *   **Data Engineer & Data Scientist (José & team):** Building the parsing pipelines, vector embeddings, and geographic inference models.
 
 ### What is the immediate validation plan (next 2 weeks)?
-We will not build the automated platform yet. We are launching a **"Concierge MVP"**:
-1.  Collect LinkedIn CSV files from 15 friendly sales reps.
-2.  Manually process their contacts using our local Python scripts.
-3.  Deliver a custom, interactive HTML dashboard with tailored pitches for their target accounts.
-4.  Offer a weekly update for a pilot fee of $10 USD. 
-If 3-5 reps pay, the demand is validated, and we begin coding the Chrome Extension.
+We will not build the automated platform yet. We are launching a **Private Client-Side MVP**:
+1.  Deliver a single-file interactive HTML dashboard (`index.html`) to 15 friendly sales reps.
+2.  The reps drag and drop their own LinkedIn `Connections.csv` locally.
+3.  The dashboard cleans the data, infers countries, and generates warm pitches for their target accounts *completely locally on their own screen* (0% data sharing, overcoming the trust barrier).
+4.  Offer a paid upgrade ($10 USD/month) to run the weekly update, filter by country/hierarchy, and access custom Toku/Netpay pitch templates.
+If 3-5 reps pay, the B2C demand is validated, and we begin coding the Chrome Extension.
