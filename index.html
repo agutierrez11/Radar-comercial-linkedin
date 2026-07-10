@@ -1,536 +1,1284 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar Comercial - Tu Asistente de Prospección Personal</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS (via CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- PapaParse (for CSV parsing) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        brand: {
-                            bg: '#050608',
-                            card: '#0c0e12',
-                            border: '#1e293b',
-                            accent: '#3b82f6',
-                            highlight: '#a855f7',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #050608;
-            color: #f8fafc;
-        }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #0c0e12;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 3px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #3b82f6;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radar Comercial — Intelligence Dashboard</title>
+  <meta name="description" content="Minería inteligente de relaciones de LinkedIn. 100% local, sin servidor.">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg:       #050608;
+      --surface:  #0c0e12;
+      --border:   #1a2035;
+      --border2:  #252d40;
+      --accent:   #3b82f6;
+      --purple:   #a855f7;
+      --green:    #22c55e;
+      --amber:    #f59e0b;
+      --red:      #ef4444;
+      --text:     #e2e8f0;
+      --muted:    #64748b;
+      --muted2:   #94a3b8;
+      --sidebar:  180px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: var(--surface); }
+    ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+    /* ── HEADER ── */
+    #app-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 44px; background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; padding: 0 16px; gap: 16px;
+    }
+    .header-logo { display: flex; align-items: center; gap: 8px; min-width: var(--sidebar); }
+    .logo-icon { width: 24px; height: 24px; background: linear-gradient(135deg, var(--accent), var(--purple)); border-radius: 6px; display:flex; align-items:center; justify-content:center; font-size: 12px; }
+    .logo-text { font-size: 13px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+    .logo-text span { color: var(--accent); }
+    .header-kpis { display: flex; align-items: center; gap: 12px; flex: 1; overflow: hidden; }
+    .kpi-pill {
+      display: flex; align-items: center; gap: 5px;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 6px; padding: 3px 8px; font-size: 11px; font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap;
+    }
+    .kpi-pill .dot { width: 6px; height: 6px; border-radius: 50%; }
+    .dunbar-bar { flex: 1; max-width: 200px; display: flex; align-items: center; gap: 6px; font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--muted2); }
+    .dunbar-track { flex: 1; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+    .dunbar-fill { height: 100%; border-radius: 2px; transition: width .6s ease; }
+    .privacy-badge { margin-left: auto; display: flex; align-items: center; gap: 5px; font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--muted); }
+    .privacy-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
+
+    /* ── LAYOUT ── */
+    #app-shell { display: flex; padding-top: 44px; min-height: 100vh; }
+
+    /* ── SIDEBAR ── */
+    #sidebar {
+      position: fixed; top: 44px; left: 0; bottom: 0;
+      width: var(--sidebar); background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; padding: 8px 0; z-index: 50;
+      overflow-y: auto;
+    }
+    .nav-item {
+      display: flex; align-items: center; gap: 9px;
+      padding: 8px 14px; cursor: pointer; transition: all .15s;
+      font-size: 12px; font-weight: 600; color: var(--muted2);
+      border-left: 2px solid transparent; position: relative;
+    }
+    .nav-item:hover { background: rgba(59,130,246,.06); color: var(--text); }
+    .nav-item.active { color: var(--accent); border-left-color: var(--accent); background: rgba(59,130,246,.08); }
+    .nav-icon { font-size: 14px; min-width: 18px; text-align: center; }
+    .nav-badge { margin-left: auto; font-size: 9px; font-family: 'JetBrains Mono', monospace; background: var(--border); border-radius: 4px; padding: 1px 5px; }
+    .nav-item.active .nav-badge { background: rgba(59,130,246,.2); color: var(--accent); }
+    .nav-section { padding: 12px 14px 4px; font-size: 9px; font-family: 'JetBrains Mono', monospace; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
+
+    /* ── MAIN ── */
+    #main-content { margin-left: var(--sidebar); flex: 1; padding: 16px; min-width: 0; }
+
+    /* ── UPLOAD SCREEN ── */
+    #upload-screen {
+      min-height: calc(100vh - 44px); display: flex; align-items: center; justify-content: center;
+    }
+    .upload-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px; padding: 40px; max-width: 460px; width: 100%;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .upload-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background: linear-gradient(90deg, var(--accent), var(--purple)); }
+    .upload-icon { width: 56px; height: 56px; background: rgba(59,130,246,.1); border: 1px solid rgba(59,130,246,.3); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px; }
+    .upload-card h2 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .upload-card p { font-size: 12px; color: var(--muted2); line-height: 1.7; margin-bottom: 24px; }
+    .upload-zone {
+      border: 2px dashed var(--border2); border-radius: 12px; padding: 24px;
+      cursor: pointer; transition: all .2s; margin-bottom: 16px;
+    }
+    .upload-zone:hover, .upload-zone.drag-over { border-color: var(--accent); background: rgba(59,130,246,.05); }
+    .upload-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent); color: #fff; border: none; cursor: pointer;
+      padding: 10px 22px; border-radius: 10px; font-size: 12px; font-weight: 700;
+      letter-spacing: .05em; text-transform: uppercase; transition: background .2s;
+      font-family: 'Outfit', sans-serif;
+    }
+    .upload-btn:hover { background: #2563eb; }
+    .upload-hint { font-size: 10px; color: var(--muted); margin-top: 12px; }
+    .upload-hint a { color: var(--accent); text-decoration: none; }
+    .upload-hint a:hover { text-decoration: underline; }
+
+    /* ── SECTIONS ── */
+    .section { display: none; }
+    .section.active { display: block; }
+    .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+    .section-title { font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+    .section-sub { font-size: 11px; color: var(--muted2); margin-top: 2px; }
+
+    /* ── CARDS / KPI ── */
+    .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin-bottom: 14px; }
+    .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+    .kpi-label { font-size: 9px; font-family: 'JetBrains Mono', monospace; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
+    .kpi-value { font-size: 24px; font-weight: 800; line-height: 1; }
+    .kpi-sub { font-size: 9px; color: var(--muted); margin-top: 3px; }
+
+    /* ── FILTERS ── */
+    .filter-bar { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+    .filter-input {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 7px 10px; font-size: 12px; color: var(--text);
+      font-family: 'Outfit', sans-serif; outline: none; transition: border-color .15s;
+    }
+    .filter-input:focus { border-color: var(--accent); }
+    .filter-input.search { flex: 1; min-width: 160px; }
+    select.filter-input { cursor: pointer; }
+
+    /* ── TABLE ── */
+    .table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .compact-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .compact-table thead tr { background: var(--bg); border-bottom: 1px solid var(--border); }
+    .compact-table th { padding: 8px 10px; text-align: left; font-size: 9px; font-family: 'JetBrains Mono', monospace; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; cursor: pointer; user-select: none; white-space: nowrap; }
+    .compact-table th:hover { color: var(--text); }
+    .compact-table th .sort-arrow { margin-left: 3px; opacity: .4; }
+    .compact-table th.sorted .sort-arrow { opacity: 1; color: var(--accent); }
+    .compact-table tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
+    .compact-table tbody tr:last-child { border-bottom: none; }
+    .compact-table tbody tr:hover { background: rgba(255,255,255,.02); }
+    .compact-table td { padding: 7px 10px; vertical-align: middle; }
+    .td-name { font-weight: 600; color: var(--text); white-space: nowrap; }
+    .td-sub { font-size: 10px; color: var(--muted2); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px; }
+    .table-scroll { max-height: 420px; overflow-y: auto; }
+
+    /* ── BADGES ── */
+    .badge { display: inline-flex; align-items: center; gap: 3px; font-size: 9px; font-weight: 700; font-family: 'JetBrains Mono', monospace; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+    .badge-clevel  { background: rgba(168,85,247,.15); color: #c084fc; border: 1px solid rgba(168,85,247,.3); }
+    .badge-director{ background: rgba(59,130,246,.15); color: #60a5fa; border: 1px solid rgba(59,130,246,.3); }
+    .badge-gerente { background: rgba(34,197,94,.12); color: #4ade80; border: 1px solid rgba(34,197,94,.25); }
+    .badge-otros   { background: rgba(100,116,139,.12); color: var(--muted2); border: 1px solid var(--border); }
+    .badge-green   { background: rgba(34,197,94,.12); color: #4ade80; border: 1px solid rgba(34,197,94,.25); }
+    .badge-amber   { background: rgba(245,158,11,.12); color: #fcd34d; border: 1px solid rgba(245,158,11,.25); }
+    .badge-red     { background: rgba(239,68,68,.12); color: #f87171; border: 1px solid rgba(239,68,68,.25); }
+    .badge-muted   { background: var(--border); color: var(--muted2); border: 1px solid var(--border2); }
+
+    /* ── SCORE BAR ── */
+    .score-wrap { display: flex; align-items: center; gap: 6px; }
+    .score-bar  { width: 52px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+    .score-fill { height: 100%; border-radius: 2px; }
+    .score-num  { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--muted2); min-width: 22px; }
+
+    /* ── MINI BTN ── */
+    .mini-btn {
+      background: transparent; border: 1px solid var(--border2); border-radius: 6px;
+      color: var(--muted2); cursor: pointer; padding: 4px 8px; font-size: 10px;
+      font-family: 'JetBrains Mono', monospace; transition: all .15s;
+    }
+    .mini-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(59,130,246,.08); }
+    .mini-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .mini-btn.primary:hover { background: #2563eb; }
+
+    /* ── CHARTS ── */
+    .charts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+    .chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+    .chart-title { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }
+    .chart-canvas-wrap { height: 180px; position: relative; }
+
+    /* ── PROFILE TIMELINE ── */
+    .timeline { position: relative; padding-left: 16px; }
+    .timeline::before { content:''; position:absolute; left:5px; top:6px; bottom:6px; width:1px; background: var(--border2); }
+    .tl-item { position: relative; margin-bottom: 16px; }
+    .tl-dot { position:absolute; left:-14px; top:4px; width:8px; height:8px; border-radius:50%; border:2px solid var(--border); background: var(--surface); }
+    .tl-item.active .tl-dot { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 8px rgba(59,130,246,.5); }
+    .tl-company { font-size: 13px; font-weight: 700; }
+    .tl-role { font-size: 11px; color: var(--muted2); margin-top: 1px; }
+    .tl-period { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--muted); margin-top: 3px; }
+    .tl-toggle { display: inline-flex; align-items: center; gap: 4px; font-size: 9px; padding: 2px 7px; margin-top: 4px; cursor: pointer; }
+
+    /* ── ICP CONFIG ── */
+    .icp-config { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px; margin-bottom: 14px; }
+    .icp-config label { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--muted); text-transform: uppercase; display: block; margin-bottom: 6px; }
+    .icp-input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px; color: var(--text); font-family: 'Outfit', sans-serif; outline: none; }
+    .icp-input:focus { border-color: var(--accent); }
+    .icp-hint { font-size: 10px; color: var(--muted); margin-top: 6px; }
+
+    /* ── PURGE TOGGLES ── */
+    .purge-criteria { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .criterion-row { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; }
+    .criterion-label { flex: 1; font-size: 12px; }
+    .criterion-count { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--muted2); }
+    .toggle { position: relative; width: 30px; height: 16px; }
+    .toggle input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider { position:absolute; cursor:pointer; inset:0; background:var(--border2); border-radius:16px; transition:.2s; }
+    .toggle-slider::before { content:''; position:absolute; height:10px; width:10px; left:3px; bottom:3px; background:#fff; border-radius:50%; transition:.2s; }
+    .toggle input:checked + .toggle-slider { background: var(--accent); }
+    .toggle input:checked + .toggle-slider::before { transform: translateX(14px); }
+
+    /* ── MESSAGES ── */
+    .msg-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
+    .msg-stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px; text-align: center; }
+    .msg-rate { font-size: 28px; font-weight: 800; }
+    .msg-label { font-size: 10px; color: var(--muted2); margin-top: 3px; }
+    .opener-row { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-bottom: 6px; }
+    .opener-text { font-size: 12px; color: var(--muted2); font-style: italic; border-left: 2px solid var(--border2); padding-left: 8px; margin: 6px 0; line-height: 1.5; }
+    .opener-meta { display: flex; align-items: center; gap: 8px; font-size: 10px; color: var(--muted); }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer { display: flex; gap: 8px; align-items: flex-start; background: rgba(245,158,11,.06); border: 1px solid rgba(245,158,11,.2); border-radius: 8px; padding: 10px 12px; font-size: 11px; color: #fcd34d; margin-bottom: 12px; line-height: 1.6; }
+    .disclaimer-icon { font-size: 14px; margin-top: 1px; flex-shrink: 0; }
+
+    /* ── EMPTY / LOCKED ── */
+    .locked-state { text-align: center; padding: 40px 20px; color: var(--muted); }
+    .locked-state .lock-icon { font-size: 32px; margin-bottom: 12px; }
+    .locked-state p { font-size: 12px; line-height: 1.7; }
+    .no-results { text-align: center; padding: 32px; font-size: 12px; color: var(--muted); }
+
+    /* ── MODAL ── */
+    .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.75); backdrop-filter:blur(4px); z-index:200; display:none; align-items:center; justify-content:center; padding:16px; }
+    .modal-overlay.open { display:flex; }
+    .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; max-width: 500px; width: 100%; padding: 22px; position: relative; }
+    .modal::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--accent),var(--purple)); border-radius:16px 16px 0 0; }
+    .modal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
+    .modal-close { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 18px; padding: 2px; line-height: 1; }
+    .modal-close:hover { color: var(--text); }
+    .modal-pitch { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; font-size: 12px; font-family: 'JetBrains Mono', monospace; white-space: pre-wrap; line-height: 1.7; min-height: 120px; color: var(--muted2); margin-bottom: 12px; }
+    .pitch-type-row { display: flex; gap: 6px; margin-bottom: 12px; background: var(--bg); padding: 4px; border-radius: 8px; border: 1px solid var(--border); }
+    .pitch-type-btn { flex: 1; padding: 6px; border: none; background: transparent; color: var(--muted2); font-size: 10px; font-weight: 700; font-family: 'Outfit', sans-serif; border-radius: 6px; cursor: pointer; transition: all .15s; text-transform: uppercase; letter-spacing: .04em; }
+    .pitch-type-btn.active { background: var(--accent); color: #fff; }
+    .modal-actions { display: flex; gap: 8px; }
+
+    /* ── PROGRESS ── */
+    #loading-bar { position: fixed; top: 44px; left: 0; right: 0; height: 2px; background: var(--border); z-index: 150; display: none; }
+    #loading-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--purple)); width: 0%; transition: width .3s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      :root { --sidebar: 48px; }
+      .nav-item span { display: none; }
+      .nav-badge { display: none; }
+      .kpi-row { grid-template-columns: 1fr 1fr; }
+      .charts-row { grid-template-columns: 1fr; }
+      .msg-stats { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-<body class="font-sans antialiased min-h-screen relative overflow-x-hidden">
-    <!-- Grid Pattern Background -->
-    <div class="absolute inset-0 opacity-[0.02] pointer-events-none" 
-         style="background-image: linear-gradient(#3b82f6 1px, transparent 1px), linear-gradient(90deg, #3b82f6 1px, transparent 1px); background-size: 40px 40px;">
+<body>
+
+<!-- Loading bar -->
+<div id="loading-bar"><div id="loading-fill"></div></div>
+
+<!-- HEADER -->
+<header id="app-header">
+  <div class="header-logo">
+    <div class="logo-icon">📡</div>
+    <div class="logo-text">Radar <span>Comercial</span></div>
+  </div>
+  <div class="header-kpis" id="header-kpis" style="display:none">
+    <div class="kpi-pill"><span class="dot" style="background:var(--accent)"></span><span id="hkpi-total">0</span> contactos</div>
+    <div class="kpi-pill"><span class="dot" style="background:var(--purple)"></span><span id="hkpi-clevel">0</span> C-Level</div>
+    <div class="kpi-pill"><span class="dot" style="background:var(--green)"></span><span id="hkpi-countries">0</span> países</div>
+    <div class="dunbar-bar">
+      <span>Dunbar</span>
+      <div class="dunbar-track"><div class="dunbar-fill" id="dunbar-fill" style="width:0%;background:var(--green)"></div></div>
+      <span id="dunbar-label">0/150</span>
+    </div>
+  </div>
+  <div class="privacy-badge">
+    <div class="privacy-dot"></div>
+    <span>100% LOCAL</span>
+  </div>
+</header>
+
+<!-- SHELL -->
+<div id="app-shell">
+
+  <!-- SIDEBAR -->
+  <nav id="sidebar">
+    <div class="nav-section">Análisis</div>
+    <div class="nav-item active" data-section="upload" onclick="navigate('upload')">
+      <span class="nav-icon">📂</span><span>Cargar ZIP</span>
+    </div>
+    <div class="nav-item" data-section="profile" onclick="navigate('profile')">
+      <span class="nav-icon">👤</span><span>Mi Perfil</span>
+    </div>
+    <div class="nav-item" data-section="network" onclick="navigate('network')">
+      <span class="nav-icon">🌐</span><span>Mi Red</span>
+      <span class="nav-badge" id="nb-network">–</span>
+    </div>
+    <div class="nav-item" data-section="icp" onclick="navigate('icp')">
+      <span class="nav-icon">🎯</span><span>ICP / Leads</span>
+      <span class="nav-badge" id="nb-icp">–</span>
+    </div>
+    <div class="nav-item" data-section="purge" onclick="navigate('purge')">
+      <span class="nav-icon">🗑️</span><span>Dunbar Purge</span>
+      <span class="nav-badge" id="nb-purge">–</span>
+    </div>
+    <div class="nav-item" data-section="messages" onclick="navigate('messages')">
+      <span class="nav-icon">💬</span><span>Mensajes</span>
+      <span class="nav-badge" id="nb-msgs">–</span>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main id="main-content">
+
+    <!-- ── UPLOAD ── -->
+    <div class="section active" id="sec-upload">
+      <div id="upload-screen">
+        <div class="upload-card">
+          <div class="upload-icon">🗜️</div>
+          <h2>Comienza a minar tu red</h2>
+          <p>Sube tu archivo ZIP de exportación de LinkedIn.<br>Todo se procesa localmente — tus datos nunca salen de tu navegador.</p>
+          <div class="upload-zone" id="drop-zone" onclick="document.getElementById('zip-input').click()">
+            <p style="font-size:13px;font-weight:600;margin-bottom:4px">Arrastra tu ZIP aquí</p>
+            <p style="font-size:11px;color:var(--muted)">o haz clic para seleccionar</p>
+            <input type="file" id="zip-input" accept=".zip,.csv" style="display:none">
+          </div>
+          <button class="upload-btn" onclick="document.getElementById('zip-input').click()">
+            📁 Seleccionar archivo
+          </button>
+          <div class="upload-hint">
+            💡 ¿Cómo exportar? <a href="https://www.linkedin.com/psettings/member-data" target="_blank">Configuración de datos de LinkedIn ↗</a><br>
+            <span style="color:var(--muted)">Marca "Mis contactos" y solicita el archivo completo (~10 min).</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 py-8 relative z-10">
-        <!-- Header -->
-        <header class="flex flex-col md:flex-row justify-between items-center border-b border-brand-border/40 pb-6 mb-8 gap-4">
-            <div class="flex items-center gap-3">
-                <div class="p-2.5 bg-brand-accent/20 rounded-xl border border-brand-accent/40 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-                    <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 009 11c0-3.517 1.009-6.799 2.753-9.571m-3.44 2.04A13.916 13.916 0 009 11c0 3.517 1.009 6.799 2.753 9.571m3 0c1.744-2.772 2.753-6.053 2.753-9.57m-2.753-9.57A13.916 13.916 0 009 11"></path>
-                    </svg>
-                </div>
-                <div>
-                    <h1 class="text-xl font-extrabold tracking-tight uppercase">Radar <span class="text-brand-accent">Comercial</span></h1>
-                    <p class="text-[9px] text-brand-accent/60 font-mono tracking-[0.3em] uppercase">100% Privado · Procesamiento Local</p>
-                </div>
-            </div>
-            <div class="text-[10px] font-mono text-gray-500 bg-brand-card px-3 py-1.5 rounded-lg border border-brand-border/30 flex items-center gap-2">
-                <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.5)]"></div>
-                <span>TUS DATOS NUNCA SALEN DE TU COMPUTADORA</span>
-            </div>
-        </header>
-
-        <!-- Drag & Drop / File Upload -->
-        <div id="upload-container" class="transition-all duration-300">
-            <div class="max-w-xl mx-auto bg-brand-card border border-brand-border/50 p-8 rounded-3xl text-center shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-brand-highlight"></div>
-                <div class="w-16 h-16 bg-brand-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-accent">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
-                    </svg>
-                </div>
-                <h2 class="text-lg font-bold mb-2">Comienza a Minar tu Red</h2>
-                <p class="text-xs text-gray-400 mb-6 max-w-sm mx-auto">
-                    Exporta tu lista de contactos desde LinkedIn como archivo CSV y arrástralo aquí para ver tu dashboard de prospección.
-                </p>
-                
-                <label for="csv-file" class="cursor-pointer inline-flex items-center gap-2 px-6 py-3 bg-brand-accent hover:bg-blue-600 transition-colors text-xs font-bold uppercase tracking-widest rounded-xl text-white shadow-lg shadow-brand-accent/20 mb-4">
-                    Seleccionar Connections.csv
-                    <input type="file" id="csv-file" accept=".csv" class="hidden">
-                </label>
-                
-                <div class="text-[10px] text-gray-500 flex flex-col gap-1 items-center justify-center border-t border-brand-border/30 pt-6 mt-4">
-                    <span>💡 ¿Cómo descargar tu CSV en 1 minuto?</span>
-                    <a href="https://www.linkedin.com/psettings/member-data" target="_blank" class="text-brand-accent hover:underline">Configuración de datos de LinkedIn ↗</a>
-                    <span class="text-[9px] text-gray-600 italic">Marca "Mis contactos" y solicita el archivo ligero (tarda ~10 min).</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dashboard View (Hidden by default) -->
-        <div id="dashboard-container" class="hidden space-y-6">
-            <!-- Stats Grid -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-brand-card border border-brand-border/40 p-5 rounded-2xl">
-                    <span class="text-[10px] text-gray-500 font-mono uppercase tracking-wider block">Total Contactos</span>
-                    <span id="stat-total" class="text-3xl font-extrabold mt-1 block">0</span>
-                </div>
-                <div class="bg-brand-card border border-brand-border/40 p-5 rounded-2xl">
-                    <span class="text-[10px] text-gray-500 font-mono uppercase tracking-wider block">Nivel C-Level</span>
-                    <span id="stat-clevel" class="text-3xl font-extrabold mt-1 block text-brand-highlight">0</span>
-                </div>
-                <div class="bg-brand-card border border-brand-border/40 p-5 rounded-2xl">
-                    <span class="text-[10px] text-gray-500 font-mono uppercase tracking-wider block">Directores</span>
-                    <span id="stat-directors" class="text-3xl font-extrabold mt-1 block text-brand-accent">0</span>
-                </div>
-                <div class="bg-brand-card border border-brand-border/40 p-5 rounded-2xl">
-                    <span class="text-[10px] text-gray-500 font-mono uppercase tracking-wider block">Países Identificados</span>
-                    <span id="stat-countries" class="text-3xl font-extrabold mt-1 block text-green-400">0</span>
-                </div>
-            </div>
-
-            <!-- Filters & Search -->
-            <div class="flex flex-col lg:flex-row gap-4 bg-brand-card border border-brand-border/40 p-4 rounded-2xl">
-                <div class="flex-1 relative">
-                    <input type="text" id="search-input" placeholder="Buscar por nombre, cargo o empresa..." 
-                           class="w-full bg-brand-bg border border-brand-border/60 p-3 pl-10 rounded-xl text-xs outline-none focus:border-brand-accent transition-all text-gray-200">
-                    <div class="absolute left-3.5 top-3.5 text-gray-500">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="flex gap-3">
-                    <select id="country-filter" class="bg-brand-bg border border-brand-border/60 p-3 rounded-xl text-xs text-gray-400 outline-none focus:border-brand-accent">
-                        <option value="ALL">🇲🇽 Todos los Países</option>
-                    </select>
-                    <select id="hierarchy-filter" class="bg-brand-bg border border-brand-border/60 p-3 rounded-xl text-xs text-gray-400 outline-none focus:border-brand-accent">
-                        <option value="ALL">👑 Toda la Jerarquía</option>
-                        <option value="C-Level">C-Level</option>
-                        <option value="Director">Directores</option>
-                        <option value="Gerente">Gerentes</option>
-                        <option value="Otros">Otros</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Contacts Table/List -->
-            <div class="bg-brand-card border border-brand-border/40 rounded-2xl overflow-hidden shadow-xl">
-                <div class="overflow-x-auto custom-scrollbar max-h-[500px]">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-brand-bg border-b border-brand-border/60 text-[10px] text-gray-500 font-mono uppercase tracking-wider">
-                                <th class="p-4 pl-6">Contacto</th>
-                                <th class="p-4">Cargo / Empresa</th>
-                                <th class="p-4">País Inferido</th>
-                                <th class="p-4 text-center">Filtro ICP</th>
-                                <th class="p-4 pr-6 text-right">Acción</th>
-                            </tr>
-                        </thead>
-                        <tbody id="contacts-body" class="divide-y divide-brand-border/30 text-xs">
-                            <!-- Rows injected by JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
-                <div id="no-results" class="hidden p-20 text-center text-gray-500 italic text-xs">
-                    No se encontraron contactos coincidentes con los filtros activos.
-                </div>
-            </div>
-        </div>
+    <!-- ── PROFILE ── -->
+    <div class="section" id="sec-profile">
+      <div class="section-header">
+        <div><div class="section-title">👤 Mi Perfil</div><div class="section-sub">Historial laboral y contexto activo para pitches</div></div>
+      </div>
+      <div class="icp-config">
+        <label>Contexto ICP activo — define a quién le vendes (opcional, sobreescribe el auto-detect)</label>
+        <input class="icp-input" id="icp-override" type="text" placeholder='ej: "CFO de empresa SaaS B2B de 50-500 empleados en México"'>
+        <div class="icp-hint">Si está vacío, el ICP se inferirá de tu última posición detectada en el ZIP.</div>
+      </div>
+      <div id="profile-content">
+        <div class="locked-state"><div class="lock-icon">🔒</div><p>Sube tu ZIP completo para ver tu historial laboral y activar el toggle de contexto.</p></div>
+      </div>
     </div>
 
-    <!-- Pitch Suggestion Modal -->
-    <div id="pitch-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-        <div class="bg-brand-card border border-brand-border/50 max-w-xl w-full rounded-3xl p-6 relative overflow-hidden shadow-2xl">
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-brand-highlight"></div>
-            
-            <div class="flex justify-between items-start mb-6">
-                <div>
-                    <h3 class="text-sm font-bold uppercase tracking-widest text-brand-accent">Sugerencia de Pitch</h3>
-                    <p id="modal-lead-name" class="text-lg font-extrabold text-white mt-1">Nombre</p>
-                    <p id="modal-lead-details" class="text-[10px] text-gray-400 font-mono">Cargo @ Empresa</p>
-                </div>
-                <button onclick="closeModal()" class="text-gray-500 hover:text-white transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Pitch Selector (Toku / Netpay / General) -->
-            <div class="flex gap-2 mb-4 bg-brand-bg p-1 rounded-xl border border-brand-border/40">
-                <button onclick="setModalPitchType('Toku')" id="btn-pitch-toku" class="flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all bg-brand-accent text-white">💸 ICP Toku (Cobros)</button>
-                <button onclick="setModalPitchType('Netpay')" id="btn-pitch-netpay" class="flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all text-gray-400 hover:text-white">💳 ICP Netpay (POS)</button>
-                <button onclick="setModalPitchType('General')" id="btn-pitch-general" class="flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all text-gray-400 hover:text-white">🤝 Networking</button>
-            </div>
-
-            <!-- Pitch Text Area -->
-            <div class="relative bg-brand-bg border border-brand-border/60 p-4 rounded-xl mb-6">
-                <p id="pitch-text" class="text-xs text-gray-200 font-mono whitespace-pre-wrap leading-relaxed min-h-[120px]"></p>
-                <div class="absolute bottom-3 right-3 flex gap-2">
-                    <button onclick="toggleModalApproach()" id="btn-modal-approach" class="px-3 py-1.5 bg-brand-border hover:bg-gray-800 text-[9px] font-bold uppercase tracking-wider rounded-lg transition-all text-gray-300">Cambiar Enfoque</button>
-                    <button onclick="copyPitchToClipboard()" class="px-3 py-1.5 bg-brand-accent hover:bg-blue-600 text-[9px] font-bold uppercase tracking-wider rounded-lg text-white transition-all">Copiar</button>
-                </div>
-            </div>
-
-            <div class="text-[10px] text-gray-500 italic border-t border-brand-border/30 pt-4 flex gap-2 items-center justify-center">
-                <svg class="w-4 h-4 text-brand-highlight" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-                </svg>
-                <span>Disclaimer: Revisa los datos reales antes de mandar el mensaje.</span>
-            </div>
+    <!-- ── NETWORK ── -->
+    <div class="section" id="sec-network">
+      <div class="section-header">
+        <div><div class="section-title">🌐 Mi Red de Contactos</div><div class="section-sub">Análisis por jerarquía, país y sector</div></div>
+        <button class="mini-btn" onclick="exportCSV(filteredContacts, 'red_contactos')">↓ Exportar CSV</button>
+      </div>
+      <div class="kpi-row" id="net-kpis"></div>
+      <div class="charts-row" id="net-charts" style="display:none">
+        <div class="chart-card"><div class="chart-title">Jerarquía</div><div class="chart-canvas-wrap"><canvas id="chart-hier"></canvas></div></div>
+        <div class="chart-card"><div class="chart-title">Top Países</div><div class="chart-canvas-wrap"><canvas id="chart-countries"></canvas></div></div>
+      </div>
+      <div class="filter-bar">
+        <input class="filter-input search" id="net-search" type="text" placeholder="Buscar nombre, cargo, empresa...">
+        <select class="filter-input" id="net-country"><option value="">🌎 Todos los países</option></select>
+        <select class="filter-input" id="net-hier"><option value="">👑 Toda jerarquía</option><option>C-Level</option><option>Director</option><option>Gerente</option><option>Otros</option></select>
+        <select class="filter-input" id="net-sector"><option value="">🏭 Todos los sectores</option></select>
+      </div>
+      <div class="table-wrap">
+        <div class="table-scroll">
+          <table class="compact-table" id="net-table">
+            <thead><tr>
+              <th onclick="sortTable('name')">Nombre <span class="sort-arrow">↕</span></th>
+              <th onclick="sortTable('position')">Cargo / Empresa <span class="sort-arrow">↕</span></th>
+              <th onclick="sortTable('country')">País <span class="sort-arrow">↕</span></th>
+              <th onclick="sortTable('sector')">Sector <span class="sort-arrow">↕</span></th>
+              <th onclick="sortTable('hierarchy')">Nivel <span class="sort-arrow">↕</span></th>
+              <th onclick="sortTable('score')">Score <span class="sort-arrow">↕</span></th>
+              <th></th>
+            </tr></thead>
+            <tbody id="net-tbody"></tbody>
+          </table>
         </div>
+        <div class="no-results" id="net-empty" style="display:none">No hay contactos que coincidan con los filtros.</div>
+      </div>
     </div>
 
-    <!-- Core App Logic -->
-    <script>
-        let allContacts = [];
-        let filteredContacts = [];
-        let activePitchLead = null;
-        let activePitchType = 'Toku'; // Toku, Netpay, General
-        let activeApproach = 'A'; // A: Corto/Directo, B: Valor/PDF
+    <!-- ── ICP ── -->
+    <div class="section" id="sec-icp">
+      <div class="section-header">
+        <div><div class="section-title">🎯 Potenciales Clientes (ICP)</div><div class="section-sub">Contactos con mayor score de afinidad según tu perfil activo</div></div>
+        <button class="mini-btn" onclick="exportCSV(icpContacts, 'icp_leads')">↓ Exportar CSV</button>
+      </div>
+      <div id="icp-context-banner" style="margin-bottom:14px"></div>
+      <div class="filter-bar">
+        <input class="filter-input search" id="icp-search" type="text" placeholder="Buscar...">
+        <select class="filter-input" id="icp-min-score">
+          <option value="0">Todos los scores</option>
+          <option value="40">Score ≥ 40</option>
+          <option value="60" selected>Score ≥ 60</option>
+          <option value="80">Score ≥ 80</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <div class="table-scroll">
+          <table class="compact-table" id="icp-table">
+            <thead><tr>
+              <th>Nombre</th><th>Cargo / Empresa</th><th>País</th><th>Score ICP</th><th></th>
+            </tr></thead>
+            <tbody id="icp-tbody"></tbody>
+          </table>
+        </div>
+        <div class="no-results" id="icp-empty" style="display:none">No hay contactos con ese score mínimo.</div>
+      </div>
+    </div>
 
-        // UI Selectors
-        const uploadContainer = document.getElementById('upload-container');
-        const dashboardContainer = document.getElementById('dashboard-container');
-        const csvFileInput = document.getElementById('csv-file');
+    <!-- ── PURGE ── -->
+    <div class="section" id="sec-purge">
+      <div class="section-header">
+        <div><div class="section-title">🗑️ Dunbar Purge</div><div class="section-sub">Identifica los contactos que consumen tu Dunbar Budget sin retornar valor</div></div>
+        <button class="mini-btn primary" onclick="exportPurgeList()">↓ Exportar lista de purga</button>
+      </div>
 
-        // File processing hook
-        csvFileInput.addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (!file) return;
+      <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <span><strong>Revisar antes de eliminar.</strong> Algunos contactos marcados pueden ser fuentes de conocimiento, playbooks o alianzas estratégicas que agregaste sin intención comercial directa. Este análisis es una guía — la decisión final es tuya. LinkedIn no permite purga masiva; usa el CSV exportado como guía manual.</span>
+      </div>
 
-            Papa.parse(file, {
-                header: true,
-                skipEmptyLines: true,
-                complete: function(results) {
-                    processCSVData(results.data);
-                },
-                error: function(err) {
-                    alert("Error al procesar el archivo CSV: " + err.message);
-                }
-            });
-        });
+      <div class="kpi-row" style="margin-bottom:14px" id="purge-kpis"></div>
 
-        // Parse CSV fields, clean text, and infer country + hierarchy
-        function processCSVData(data) {
-            allContacts = data.map((row, idx) => {
-                const firstName = row['First Name'] || '';
-                const lastName = row['Last Name'] || '';
-                const cleanName = cleanText(`${firstName} ${lastName}`);
-                const company = row['Company'] || '';
-                const position = row['Position'] || '';
-                const email = row['Email Address'] || '';
-                const url = row['URL'] || '';
+      <div class="purge-criteria" id="purge-criteria">
+        <!-- rendered by JS -->
+      </div>
 
-                const country = inferCountry(row);
-                const hierarchy = classifyHierarchy(position);
+      <div class="filter-bar">
+        <input class="filter-input" id="purge-custom" type="text" placeholder="+ Añadir keyword custom (cargo/empresa)..." style="flex:1">
+        <button class="mini-btn" onclick="addCustomCriterion()">Añadir</button>
+        <button class="mini-btn" onclick="selectAllPurge()">Sel. todos</button>
+      </div>
 
-                return {
-                    id: idx,
-                    name: cleanName,
-                    company: cleanText(company),
-                    position: cleanText(position),
-                    email: email,
-                    url: url,
-                    country: country,
-                    hierarchy: hierarchy
-                };
-            });
+      <div class="table-wrap">
+        <div class="table-scroll">
+          <table class="compact-table" id="purge-table">
+            <thead><tr>
+              <th><input type="checkbox" id="purge-check-all" onchange="toggleAllPurgeChecks(this.checked)"></th>
+              <th>Nombre</th><th>Cargo / Empresa</th><th>País</th><th>Criterio</th>
+            </tr></thead>
+            <tbody id="purge-tbody"></tbody>
+          </table>
+        </div>
+        <div class="no-results" id="purge-empty" style="display:none">Ningún contacto cumple los criterios activos.</div>
+      </div>
+    </div>
 
-            // Update filters and render
-            populateCountryFilter();
-            updateStats();
-            filterAndRender();
+    <!-- ── MESSAGES ── -->
+    <div class="section" id="sec-messages">
+      <div class="section-header">
+        <div><div class="section-title">💬 Análisis de Mensajes</div><div class="section-sub">Tus aperturas, tasas de respuesta y conversaciones comerciales</div></div>
+      </div>
+      <div id="messages-content">
+        <div class="locked-state"><div class="lock-icon">🔒</div><p>Sube el ZIP completo de LinkedIn para desbloquear el análisis de mensajes.<br><span style="color:var(--muted);font-size:10px">El ZIP debe contener el archivo messages.csv</span></p></div>
+      </div>
+    </div>
 
-            // Transition UI views
-            uploadContainer.classList.add('hidden');
-            dashboardContainer.classList.remove('hidden');
-        }
+  </main>
+</div>
 
-        // Clean names, emojis, noise
-        function cleanText(str) {
-            if (!str) return '';
-            // Remove diacritics / normalize accents
-            let cleaned = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            // Remove common professional suffixes
-            cleaned = cleaned.replace(/\b(PMP|MBA|PhD|MSc|CSM|PO|LSSGB)\b/gi, '');
-            // Clean brackets/emojis
-            cleaned = cleaned.replace(/[^\w\s\.\-@:/]/gi, '');
-            return cleaned.trim();
-        }
+<!-- PITCH MODAL -->
+<div class="modal-overlay" id="pitch-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Sugerencia de Pitch</div>
+        <div id="modal-name" style="font-size:16px;font-weight:700"></div>
+        <div id="modal-details" style="font-size:11px;color:var(--muted2);margin-top:2px"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="pitch-type-row">
+      <button class="pitch-type-btn active" id="pt-directo" onclick="setPitchApproach('directo')">💬 Directo</button>
+      <button class="pitch-type-btn" id="pt-valor" onclick="setPitchApproach('valor')">📄 Valor</button>
+      <button class="pitch-type-btn" id="pt-networking" onclick="setPitchApproach('networking')">🤝 Networking</button>
+    </div>
+    <div class="modal-pitch" id="modal-pitch-text"></div>
+    <div class="disclaimer" style="margin-bottom:12px"><span class="disclaimer-icon">⚠️</span><span>Revisa los datos reales del perfil antes de enviar. Los datos de LinkedIn pueden estar desactualizados.</span></div>
+    <div class="modal-actions">
+      <button class="mini-btn primary" onclick="copyPitch()" style="flex:1">📋 Copiar mensaje</button>
+      <button class="mini-btn" onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+</div>
 
-        // Infer country based on email domain and keywords in company/position
-        function inferCountry(row) {
-            const email = (row['Email Address'] || '').toLowerCase();
-            const company = (row['Company'] || '').toLowerCase();
-            const position = (row['Position'] || '').toLowerCase();
+<script>
+// ═══════════════════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════════════════
+const S = {
+  contacts: [],
+  positions: [],
+  ownerName: '',
+  messages: [],
+  filteredContacts: [],
+  purgeChecked: new Set(),
+  sortCol: 'score',
+  sortDir: -1,
+  purgeActive: true,
+  activeSection: 'upload',
+  pitchLead: null,
+  pitchApproach: 'directo',
+  criteria: [
+    { id: 'no_company',   label: 'Sin empresa registrada',          on: true,  fn: c => !c.company },
+    { id: 'no_position',  label: 'Sin cargo registrado',             on: true,  fn: c => !c.position },
+    { id: 'no_name',      label: 'Nombre incompleto (<4 chars)',     on: true,  fn: c => c.name.length < 4 },
+    { id: 'generic_pos',  label: 'Cargo genérico (student/unemployed)', on: true, fn: c => /\b(student|estudiante|desempleado|unemployed|—)\b/i.test(c.position) },
+    { id: 'old_contact',  label: 'Conexión >4 años sin interacción', on: true,  fn: c => c.connectedYearsAgo > 4 },
+    { id: 'no_country',   label: 'País no identificado',             on: false, fn: c => c.country === 'Desconocido' },
+  ]
+};
 
-            // 1. Email TLD Check
-            if (email.endsWith('.mx')) return 'México';
-            if (email.endsWith('.cl')) return 'Chile';
-            if (email.endsWith('.co')) return 'Colombia';
-            if (email.endsWith('.pe')) return 'Perú';
-            if (email.endsWith('.br')) return 'Brasil';
+let filteredContacts = [];
+let icpContacts = [];
+let chartHier = null;
+let chartCountries = null;
 
-            // 2. Keywords Checks (normalizing accents)
-            const textToScan = `${company} ${position}`.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            
-            if (/\b(mexico|cdmx|monterrey|guadalajara|cancun|queretaro|mx)\b/.test(textToScan)) return 'México';
-            if (/\b(chile|santiago|cl)\b/.test(textToScan)) return 'Chile';
-            if (/\b(colombia|bogota|medellin|co)\b/.test(textToScan)) return 'Colombia';
-            if (/\b(peru|lima|pe)\b/.test(textToScan)) return 'Perú';
-            if (/\b(brasil|brazil|sao paulo|rio)\b/.test(textToScan)) return 'Brasil';
+// ═══════════════════════════════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════════════════════════════
+function norm(t) {
+  if (!t) return '';
+  return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').trim();
+}
 
-            return 'Desconocido';
-        }
+function inferCountry(email, company, position) {
+  const e = (email||'').toLowerCase();
+  const b = norm(`${company} ${position}`);
+  if (e.endsWith('.mx')) return 'México';
+  if (e.endsWith('.cl')) return 'Chile';
+  if (e.endsWith('.co')) return 'Colombia';
+  if (e.endsWith('.pe')) return 'Perú';
+  if (e.endsWith('.br')) return 'Brasil';
+  if (e.endsWith('.ar')) return 'Argentina';
+  if (e.endsWith('.es')) return 'España';
+  if (/\b(mexico|cdmx|monterrey|guadalajara|cancun|queretaro)\b/.test(b)) return 'México';
+  if (/\b(chile|santiago)\b/.test(b)) return 'Chile';
+  if (/\b(colombia|bogota|medellin)\b/.test(b)) return 'Colombia';
+  if (/\b(peru|lima)\b/.test(b)) return 'Perú';
+  if (/\b(brasil|brazil|sao paulo|rio)\b/.test(b)) return 'Brasil';
+  if (/\b(argentina|buenos aires|cordoba)\b/.test(b)) return 'Argentina';
+  if (/\b(espana|spain|madrid|barcelona)\b/.test(b)) return 'España';
+  if (/\b(usa|united states|new york|san francisco|chicago|houston)\b/.test(b)) return 'USA';
+  return 'Desconocido';
+}
 
-        // Classify hierarchy based on position keywords
-        function classifyHierarchy(pos) {
-            const p = pos.toLowerCase();
-            if (/\b(ceo|cfo|cto|cmo|cro|coo|founder|fundador|cofounder|director general|managing director)\b/.test(p)) {
-                return 'C-Level';
-            }
-            if (/\b(director|head|vp|vicepresident|vicepresidente|lead)\b/.test(p)) {
-                return 'Director';
-            }
-            if (/\b(gerente|manager|leads|responsable|jefe)\b/.test(p)) {
-                return 'Gerente';
-            }
-            return 'Otros';
-        }
+function inferHierarchy(pos) {
+  const p = norm(pos);
+  if (/\b(ceo|cfo|cto|cmo|cro|coo|founder|fundador|cofounder|director general|managing director|presidente)\b/.test(p)) return 'C-Level';
+  if (/\b(director|head|vp|vice president|vicepresidente)\b/.test(p)) return 'Director';
+  if (/\b(gerente|manager|jefe|responsable|lead)\b/.test(p)) return 'Gerente';
+  return 'Otros';
+}
 
-        // Stats calculation
-        function updateStats() {
-            document.getElementById('stat-total').innerText = allContacts.length;
-            document.getElementById('stat-clevel').innerText = allContacts.filter(c => c.hierarchy === 'C-Level').length;
-            document.getElementById('stat-directors').innerText = allContacts.filter(c => c.hierarchy === 'Director').length;
-            
-            const uniqueCountries = [...new Set(allContacts.map(c => c.country))].filter(c => c !== 'Desconocido').length;
-            document.getElementById('stat-countries').innerText = uniqueCountries;
-        }
+function inferSector(pos, company) {
+  const b = norm(`${pos} ${company}`);
+  if (/\b(fintech|pago|cobro|treasury|tesoreria|banking|bank|banco|credito|credit|adquirente|pos|terminal)\b/.test(b)) return 'Fintech/Pagos';
+  if (/\b(retail|ecommerce|tienda|store|marketplace|comercio)\b/.test(b)) return 'Retail/eCommerce';
+  if (/\b(software|saas|tech|platform|developer|engineer|startup|digital)\b/.test(b)) return 'SaaS/Tech';
+  if (/\b(manufactura|industrial|planta|supply|logistic|transport|delivery)\b/.test(b)) return 'Manufactura/Logística';
+  if (/\b(health|salud|pharma|hospital|medico|clinica)\b/.test(b)) return 'Salud';
+  if (/\b(educacion|universidad|school|edtech|instituto)\b/.test(b)) return 'Educación';
+  if (/\b(gobierno|municipal|federal|secretaria|publico)\b/.test(b)) return 'Gobierno';
+  if (/\b(consulting|consultor|advisory|strategy|consultoria)\b/.test(b)) return 'Consultoría';
+  if (/\b(media|marketing|publicidad|advertising|agencia|agency)\b/.test(b)) return 'Marketing/Media';
+  return 'Otro';
+}
 
-        // Dynamically add unique countries to dropdown filter
-        function populateCountryFilter() {
-            const countryFilter = document.getElementById('country-filter');
-            countryFilter.innerHTML = '<option value="ALL">🌎 Todos los Países</option>';
-            
-            const countries = [...new Set(allContacts.map(c => c.country))].sort();
-            countries.forEach(c => {
-                const opt = document.createElement('option');
-                opt.value = c;
-                opt.innerText = c === 'México' ? '🇲🇽 México' :
-                                c === 'Chile' ? '🇨🇱 Chile' :
-                                c === 'Colombia' ? '🇨🇴 Colombia' :
-                                c === 'Perú' ? '🇵🇪 Perú' :
-                                c === 'Brasil' ? '🇧🇷 Brasil' : `📍 ${c}`;
-                countryFilter.appendChild(opt);
-            });
-        }
+function scoreContact(c) {
+  const icpText = norm(document.getElementById('icp-override').value);
+  const lastPos = S.positions.length ? S.positions[0] : null;
+  const ownerSector = lastPos ? inferSector(lastPos.title, lastPos.company) : '';
+  let score = 0;
+  if (c.hierarchy === 'C-Level') score += 35;
+  else if (c.hierarchy === 'Director') score += 20;
+  else if (c.hierarchy === 'Gerente') score += 10;
+  if (c.country !== 'Desconocido') score += 15;
+  if (c.sector === ownerSector && ownerSector && ownerSector !== 'Otro') score += 25;
+  if (c.email) score += 10;
+  if (c.connectedYearsAgo < 2) score += 10;
+  if (c.connectedYearsAgo < 1) score += 5;
+  // ICP override text match
+  if (icpText) {
+    const blob = norm(`${c.position} ${c.company} ${c.sector} ${c.country}`);
+    const words = icpText.split(/\s+/).filter(w => w.length > 3);
+    const matches = words.filter(w => blob.includes(w)).length;
+    score += Math.round((matches / Math.max(words.length, 1)) * 20);
+  }
+  return Math.min(100, score);
+}
 
-        // Filters, search, and table render
-        const searchInput = document.getElementById('search-input');
-        const countryFilter = document.getElementById('country-filter');
-        const hierarchyFilter = document.getElementById('hierarchy-filter');
+function scoreColor(s) {
+  if (s >= 70) return 'var(--green)';
+  if (s >= 45) return 'var(--amber)';
+  return 'var(--red)';
+}
 
-        [searchInput, countryFilter, hierarchyFilter].forEach(el => {
-            el.addEventListener('input', filterAndRender);
-        });
+function hierarchyBadge(h) {
+  const map = { 'C-Level':'clevel','Director':'director','Gerente':'gerente','Otros':'otros' };
+  return `<span class="badge badge-${map[h]||'otros'}">${h}</span>`;
+}
 
-        function filterAndRender() {
-            const search = searchInput.value.toLowerCase();
-            const country = countryFilter.value;
-            const hierarchy = hierarchyFilter.value;
+function countryFlag(c) {
+  const flags = { 'México':'🇲🇽','Chile':'🇨🇱','Colombia':'🇨🇴','Perú':'🇵🇪','Brasil':'🇧🇷','Argentina':'🇦🇷','España':'🇪🇸','USA':'🇺🇸' };
+  return `${flags[c]||'📍'} ${c}`;
+}
 
-            filteredContacts = allContacts.filter(c => {
-                const matchesSearch = c.name.toLowerCase().includes(search) || 
-                                      c.company.toLowerCase().includes(search) || 
-                                      c.position.toLowerCase().includes(search);
-                const matchesCountry = (country === 'ALL' || c.country === country);
-                const matchesHierarchy = (hierarchy === 'ALL' || c.hierarchy === hierarchy);
+function connectedYearsAgo(str) {
+  if (!str) return 99;
+  try {
+    const months = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+    const parts = str.trim().split(' ');
+    if (parts.length === 3) {
+      const d = new Date(parseInt(parts[2]), months[parts[1].toLowerCase().slice(0,3)], parseInt(parts[0]));
+      return (Date.now() - d) / (365.25 * 86400 * 1000);
+    }
+  } catch(e) {}
+  return 99;
+}
 
-                return matchesSearch && matchesCountry && matchesHierarchy;
-            });
+// ═══════════════════════════════════════════════════════════════════════
+// FILE PROCESSING
+// ═══════════════════════════════════════════════════════════════════════
+document.getElementById('zip-input').addEventListener('change', e => {
+  const f = e.target.files[0];
+  if (f) handleFile(f);
+});
 
-            renderTable();
-        }
+const dropZone = document.getElementById('drop-zone');
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('drag-over');
+  if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+});
 
-        function renderTable() {
-            const body = document.getElementById('contacts-body');
-            const noResults = document.getElementById('no-results');
-            body.innerHTML = '';
+async function handleFile(file) {
+  setLoading(true, 10);
+  const name = file.name.toLowerCase();
+  try {
+    if (name.endsWith('.zip')) {
+      const zip = await JSZip.loadAsync(file);
+      setLoading(true, 30);
+      await processZip(zip);
+    } else if (name.endsWith('.csv')) {
+      await processCSVOnly(file);
+    }
+  } catch(err) {
+    alert('Error al procesar el archivo: ' + err.message);
+  }
+  setLoading(false);
+}
 
-            if (filteredContacts.length === 0) {
-                noResults.classList.remove('hidden');
-                return;
-            }
-            noResults.classList.add('hidden');
+async function processZip(zip) {
+  const files = Object.keys(zip.files);
 
-            filteredContacts.forEach(c => {
-                // Check if ICP Match
-                const isTokuICP = c.hierarchy === 'C-Level' && (c.position.toLowerCase().includes('finance') || c.position.toLowerCase().includes('finanzas') || c.position.toLowerCase().includes('operations') || c.position.toLowerCase().includes('operaciones'));
-                const isNetpayICP = c.position.toLowerCase().includes('ecommerce') || c.position.toLowerCase().includes('retail') || c.position.toLowerCase().includes('sales') || c.position.toLowerCase().includes('ventas');
-                
-                let icpBadge = '';
-                if (isTokuICP) {
-                    icpBadge = '<span class="px-2 py-0.5 bg-green-500/10 text-green-400 text-[8px] font-black rounded border border-green-500/20 uppercase">Match Toku</span>';
-                } else if (isNetpayICP) {
-                    icpBadge = '<span class="px-2 py-0.5 bg-purple-500/10 text-purple-400 text-[8px] font-black rounded border border-purple-500/20 uppercase">Match Netpay</span>';
-                } else {
-                    icpBadge = '<span class="text-gray-600 text-[8px]">-</span>';
-                }
+  // Profile
+  const profileFile = files.find(f => f.includes('Profile.csv'));
+  if (profileFile) {
+    const txt = await zip.files[profileFile].async('string');
+    const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true });
+    if (parsed.data[0]) {
+      S.ownerName = `${parsed.data[0]['First Name']||''} ${parsed.data[0]['Last Name']||''}`.trim();
+    }
+  }
 
-                const row = document.createElement('tr');
-                row.className = "hover:bg-brand-border/10 transition-colors";
-                row.innerHTML = `
-                    <td class="p-4 pl-6 font-bold text-white">${c.name}</td>
-                    <td class="p-4">
-                        <div class="font-semibold text-gray-200">${c.position}</div>
-                        <div class="text-[10px] text-gray-400 font-mono">${c.company}</div>
-                    </td>
-                    <td class="p-4 text-gray-400">${c.country}</td>
-                    <td class="p-4 text-center">${icpBadge}</td>
-                    <td class="p-4 pr-6 text-right">
-                        <button onclick="openPitchModal(${c.id})" class="px-4 py-2 bg-brand-accent/20 hover:bg-brand-accent text-brand-accent hover:text-white border border-brand-accent/40 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all">
-                            Sugerir Pitch
-                        </button>
-                    </td>
-                `;
-                body.appendChild(row);
-            });
-        }
+  setLoading(true, 50);
 
-        // Pitch Modal Controller
-        function openPitchModal(leadId) {
-            activePitchLead = allContacts.find(c => c.id === leadId);
-            activeApproach = 'A';
-            
-            // Auto select pitch type based on profile
-            const pos = activePitchLead.position.toLowerCase();
-            if (pos.includes('finance') || pos.includes('finanzas') || pos.includes('ops') || pos.includes('operaciones')) {
-                activePitchType = 'Toku';
-            } else if (pos.includes('ecommerce') || pos.includes('retail') || pos.includes('sales') || pos.includes('ventas')) {
-                activePitchType = 'Netpay';
-            } else {
-                activePitchType = 'General';
-            }
+  // Positions
+  const posFile = files.find(f => f.includes('Positions.csv'));
+  if (posFile) {
+    const txt = await zip.files[posFile].async('string');
+    const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true });
+    S.positions = parsed.data.map(r => ({
+      company: r['Company Name'] || '',
+      title: r['Title'] || '',
+      start: r['Started On'] || '',
+      end: r['Finished On'] || ''
+    })).filter(p => p.company || p.title);
+  }
 
-            updateModalUI();
-            document.getElementById('pitch-modal').classList.remove('hidden');
-        }
+  setLoading(true, 65);
 
-        function closeModal() {
-            document.getElementById('pitch-modal').classList.add('hidden');
-        }
+  // Connections
+  const connFile = files.find(f => /connection/i.test(f) && f.endsWith('.csv'));
+  if (connFile) {
+    const txt = await zip.files[connFile].async('string');
+    // Skip LinkedIn's extra header rows
+    const lines = txt.split('\n');
+    const startIdx = lines.findIndex(l => l.includes('First Name'));
+    const csvData = lines.slice(startIdx).join('\n');
+    const parsed = Papa.parse(csvData, { header: true, skipEmptyLines: true });
+    buildContacts(parsed.data);
+  }
 
-        function setModalPitchType(type) {
-            activePitchType = type;
-            activeApproach = 'A';
-            updateModalUI();
-        }
+  setLoading(true, 80);
 
-        function toggleModalApproach() {
-            activeApproach = activeApproach === 'A' ? 'B' : 'A';
-            updateModalUI();
-        }
+  // Messages
+  const msgFile = files.find(f => f === 'messages.csv' || f.endsWith('/messages.csv'));
+  if (msgFile) {
+    const txt = await zip.files[msgFile].async('string');
+    const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true });
+    S.messages = parsed.data;
+  }
 
-        function updateModalUI() {
-            const lead = activePitchLead;
-            if (!lead) return;
+  setLoading(true, 95);
+  finalize();
+}
 
-            document.getElementById('modal-lead-name').innerText = lead.name;
-            document.getElementById('modal-lead-details').innerText = `${lead.position} @ ${lead.company}`;
+async function processCSVOnly(file) {
+  return new Promise(resolve => {
+    Papa.parse(file, {
+      header: true, skipEmptyLines: true,
+      complete: r => { buildContacts(r.data); finalize(); resolve(); }
+    });
+  });
+}
 
-            // Buttons Highlight class
-            const btnToku = document.getElementById('btn-pitch-toku');
-            const btnNetpay = document.getElementById('btn-pitch-netpay');
-            const btnGeneral = document.getElementById('btn-pitch-general');
+function buildContacts(rows) {
+  S.contacts = rows.map((row, idx) => {
+    const fn = (row['First Name'] || '').trim();
+    const ln = (row['Last Name'] || '').trim();
+    const name = `${fn} ${ln}`.trim();
+    const company = (row['Company'] || '').trim();
+    const position = (row['Position'] || '').trim();
+    const email = (row['Email Address'] || '').trim();
+    const url = (row['URL'] || '').trim();
+    const connectedOn = (row['Connected On'] || '').trim();
+    const yearsAgo = connectedYearsAgo(connectedOn);
+    const country = inferCountry(email, company, position);
+    const hierarchy = inferHierarchy(position);
+    const sector = inferSector(position, company);
+    return { id: idx, name, company, position, email, url, connectedOn, connectedYearsAgo: yearsAgo, country, hierarchy, sector, score: 0 };
+  }).filter(c => c.name.length > 0);
+  // Score after building
+  S.contacts.forEach(c => { c.score = scoreContact(c); });
+}
 
-            [btnToku, btnNetpay, btnGeneral].forEach(btn => {
-                btn.className = "flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all text-gray-400 hover:text-white";
-            });
+function finalize() {
+  filteredContacts = [...S.contacts];
+  icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
+  populateFilters();
+  renderHeader();
+  renderProfile();
+  renderNetwork();
+  renderICP();
+  renderPurgeCriteria();
+  renderPurge();
+  renderMessages();
+  navigate('network');
+  setLoading(false);
+}
 
-            if (activePitchType === 'Toku') {
-                btnToku.className = "flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all bg-brand-accent text-white shadow-lg shadow-brand-accent/20";
-            } else if (activePitchType === 'Netpay') {
-                btnNetpay.className = "flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all bg-brand-accent text-white shadow-lg shadow-brand-accent/20";
-            } else {
-                btnGeneral.className = "flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all bg-brand-accent text-white shadow-lg shadow-brand-accent/20";
-            }
+// ═══════════════════════════════════════════════════════════════════════
+// NAVIGATION
+// ═══════════════════════════════════════════════════════════════════════
+function navigate(sec) {
+  S.activeSection = sec;
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('sec-' + sec).classList.add('active');
+  document.querySelector(`[data-section="${sec}"]`).classList.add('active');
+}
 
-            // Generate Pitch String based on Type & Approach
-            const countryText = lead.country !== 'Desconocido' ? ` en ${lead.country}` : '';
-            const firstName = lead.name.split(' ')[0];
-            let pitch = '';
+// ═══════════════════════════════════════════════════════════════════════
+// HEADER KPIs
+// ═══════════════════════════════════════════════════════════════════════
+function renderHeader() {
+  const total = S.contacts.length;
+  const clevel = S.contacts.filter(c => c.hierarchy === 'C-Level').length;
+  const countries = new Set(S.contacts.filter(c => c.country !== 'Desconocido').map(c => c.country)).size;
+  const classa = S.contacts.filter(c => c.score >= 60).length;
+  document.getElementById('hkpi-total').textContent = total.toLocaleString();
+  document.getElementById('hkpi-clevel').textContent = clevel;
+  document.getElementById('hkpi-countries').textContent = countries;
+  const dunbarPct = Math.min(100, (classa / 150) * 100);
+  document.getElementById('dunbar-fill').style.width = dunbarPct + '%';
+  document.getElementById('dunbar-fill').style.background = classa > 150 ? 'var(--amber)' : 'var(--green)';
+  document.getElementById('dunbar-label').textContent = `${classa}/150`;
+  document.getElementById('header-kpis').style.display = 'flex';
 
-            if (activePitchType === 'Toku') {
-                if (activeApproach === 'A') {
-                    pitch = `Hola ${firstName},\n\nVi que estás liderando la operación financiera en ${lead.company}${countryText}. Generalmente, conciliar los cobros recurrentes de miles de clientes es una pesadilla manual para los equipos de tesorería.\n\nNosotros automatizamos esa capa: cuenta virtual única por cliente y conciliación por SPEI instantánea. ¿Te hace sentido ver si podemos ahorrarle horas a tu equipo?`;
-                } else {
-                    pitch = `Hola ${firstName},\n\nTe escribo porque armamos un Blueprint de Cobranza Recurrente para empresas en ${lead.company}${countryText}. Muestra cómo automatizar el recaudo reduce los rechazos bancarios en un 18% sin cambiar de plataforma.\n\nTe lo dejo por aquí sin costo. Si después te interesa ver cómo se implementaría en tu empresa, platicamos 10 minutos.`;
-                }
-            } else if (activePitchType === 'Netpay') {
-                if (activeApproach === 'A') {
-                    pitch = `Hola ${firstName},\n\nDirigir la conversión en ${lead.company}${countryText} significa que cada carrito abandonado en el checkout te duele directamente. ¿Tienen medido cuánto revenue se les escapa por falsos rechazos en la pasarela?\n\nCon Netpay subimos la tasa de aprobación de tarjetas sin subir el riesgo de contracargos. ¿Le vemos 15 minutos?`;
-                } else {
-                    pitch = `Hola ${firstName},\n\nTe comparto un reporte corto sobre la Optimización de Checkout en eCommerce de Retail${countryText}. Analiza por qué los métodos de pago alternativos aumentan el ticket promedio.\n\nAvísame si te sirve y con gusto te platico cómo lo integramos sin alterar tu plataforma actual.`;
-                }
-            } else {
-                if (activeApproach === 'A') {
-                    pitch = `Hola ${firstName},\n\nGusto en saludarte. Vi tu trayectoria en ${lead.company} y tu rol en ${lead.position}. Encontré varios retos en común en la industria de pagos${countryText} y pensé que sería de valor conectar por aquí. Un saludo.`;
-                } else {
-                    pitch = `Hola ${firstName},\n\n¿Cómo van las cosas por ${lead.company}? Te escribo porque ando organizando una mesa redonda de networking virtual con profesionales del sector. Sería excelente contar con tu perspectiva. Avísame si te late.`;
-                }
-            }
+  document.getElementById('nb-network').textContent = total.toLocaleString();
+  document.getElementById('nb-icp').textContent = icpContacts.length;
+  const purgeCount = S.contacts.filter(c => isPurgeCandidate(c)).length;
+  document.getElementById('nb-purge').textContent = purgeCount;
+  document.getElementById('nb-msgs').textContent = S.messages.length > 0 ? S.messages.length.toLocaleString() : '–';
+}
 
-            document.getElementById('pitch-text').innerText = pitch;
-        }
+// ═══════════════════════════════════════════════════════════════════════
+// PROFILE
+// ═══════════════════════════════════════════════════════════════════════
+function renderProfile() {
+  if (!S.positions.length && !S.ownerName) return;
+  const el = document.getElementById('profile-content');
+  const name = S.ownerName || 'Propietario';
+  let html = `<div style="margin-bottom:16px"><div style="font-size:18px;font-weight:700">${name}</div>`;
+  if (S.positions[0]) html += `<div style="font-size:12px;color:var(--muted2);margin-top:3px">${S.positions[0].title} @ ${S.positions[0].company}</div>`;
+  html += `</div><div class="timeline">`;
+  S.positions.forEach((p, i) => {
+    const active = i === 0 ? 'active' : '';
+    const endLabel = p.end || 'Actual';
+    html += `<div class="tl-item ${active}">
+      <div class="tl-dot"></div>
+      <div class="tl-company">${p.company}</div>
+      <div class="tl-role">${p.title}</div>
+      <div class="tl-period">${p.start} → ${endLabel}</div>
+      ${i === 0 ? `<span class="badge badge-green tl-toggle">● Contexto activo para pitches</span>` : ''}
+    </div>`;
+  });
+  html += '</div>';
+  el.innerHTML = html;
+}
 
-        function copyPitchToClipboard() {
-            const text = document.getElementById('pitch-text').innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert("¡Mensaje copiado al portapapeles!");
-            });
-        }
-    </script>
+// ═══════════════════════════════════════════════════════════════════════
+// NETWORK
+// ═══════════════════════════════════════════════════════════════════════
+function populateFilters() {
+  const countries = [...new Set(S.contacts.map(c => c.country))].sort();
+  const sel = document.getElementById('net-country');
+  sel.innerHTML = '<option value="">🌎 Todos los países</option>';
+  countries.forEach(c => {
+    const o = document.createElement('option'); o.value = c;
+    o.textContent = countryFlag(c); sel.appendChild(o);
+  });
+  const sectors = [...new Set(S.contacts.map(c => c.sector))].sort();
+  const sels = document.getElementById('net-sector');
+  sels.innerHTML = '<option value="">🏭 Todos los sectores</option>';
+  sectors.forEach(s => {
+    const o = document.createElement('option'); o.value = s; o.textContent = s; sels.appendChild(o);
+  });
+}
+
+['net-search','net-country','net-hier','net-sector'].forEach(id => {
+  document.getElementById(id).addEventListener('input', applyNetworkFilters);
+});
+
+function applyNetworkFilters() {
+  const search = norm(document.getElementById('net-search').value);
+  const country = document.getElementById('net-country').value;
+  const hier = document.getElementById('net-hier').value;
+  const sector = document.getElementById('net-sector').value;
+  filteredContacts = S.contacts.filter(c => {
+    if (search && !norm(c.name).includes(search) && !norm(c.position).includes(search) && !norm(c.company).includes(search)) return false;
+    if (country && c.country !== country) return false;
+    if (hier && c.hierarchy !== hier) return false;
+    if (sector && c.sector !== sector) return false;
+    return true;
+  });
+  renderNetworkTable();
+}
+
+function renderNetwork() {
+  const total = S.contacts.length;
+  const hier = {};
+  S.contacts.forEach(c => { hier[c.hierarchy] = (hier[c.hierarchy]||0)+1; });
+  const countries = {};
+  S.contacts.forEach(c => { countries[c.country] = (countries[c.country]||0)+1; });
+  const identified = Object.entries(countries).filter(([k]) => k !== 'Desconocido').sort((a,b)=>b[1]-a[1]);
+  const classa = S.contacts.filter(c=>c.score>=60).length;
+
+  document.getElementById('net-kpis').innerHTML = `
+    <div class="kpi-card"><div class="kpi-label">Total</div><div class="kpi-value">${total.toLocaleString()}</div></div>
+    <div class="kpi-card"><div class="kpi-label">C-Level</div><div class="kpi-value" style="color:var(--purple)">${hier['C-Level']||0}</div><div class="kpi-sub">${((hier['C-Level']||0)/total*100).toFixed(1)}%</div></div>
+    <div class="kpi-card"><div class="kpi-label">Directores</div><div class="kpi-value" style="color:var(--accent)">${hier['Director']||0}</div></div>
+    <div class="kpi-card"><div class="kpi-label">Gerentes</div><div class="kpi-value" style="color:var(--green)">${hier['Gerente']||0}</div></div>
+    <div class="kpi-card"><div class="kpi-label">Países ID</div><div class="kpi-value">${identified.length}</div></div>
+    <div class="kpi-card"><div class="kpi-label">Clase A (≥60)</div><div class="kpi-value" style="color:var(--amber)">${classa}</div><div class="kpi-sub">Dunbar: 150</div></div>
+  `;
+
+  // Charts
+  if (chartHier) chartHier.destroy();
+  if (chartCountries) chartCountries.destroy();
+  document.getElementById('net-charts').style.display = 'grid';
+  const cHier = document.getElementById('chart-hier').getContext('2d');
+  chartHier = new Chart(cHier, {
+    type: 'doughnut',
+    data: {
+      labels: ['C-Level','Director','Gerente','Otros'],
+      datasets: [{ data: [hier['C-Level']||0, hier['Director']||0, hier['Gerente']||0, hier['Otros']||0], backgroundColor: ['#a855f7','#3b82f6','#22c55e','#334155'], borderWidth: 0 }]
+    },
+    options: { plugins: { legend: { labels: { color: '#94a3b8', font: { size: 10 } } } }, cutout: '65%' }
+  });
+  const top10 = identified.slice(0,10);
+  const cCountries = document.getElementById('chart-countries').getContext('2d');
+  chartCountries = new Chart(cCountries, {
+    type: 'bar',
+    data: {
+      labels: top10.map(([k])=>k),
+      datasets: [{ data: top10.map(([,v])=>v), backgroundColor: '#3b82f6', borderRadius: 4 }]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { color: '#64748b', font:{size:9} }, grid: { color: '#1a2035' } },
+        y: { ticks: { color: '#94a3b8', font:{size:10} }, grid: { display: false } }
+      }
+    }
+  });
+  renderNetworkTable();
+}
+
+let sortCol = 'score', sortDir = -1;
+function sortTable(col) {
+  if (sortCol === col) sortDir *= -1; else { sortCol = col; sortDir = -1; }
+  document.querySelectorAll('#net-table th').forEach(th => th.classList.remove('sorted'));
+  filteredContacts.sort((a,b) => {
+    const av = a[col], bv = b[col];
+    if (typeof av === 'number') return (av-bv)*sortDir;
+    return String(av||'').localeCompare(String(bv||''))*sortDir;
+  });
+  renderNetworkTable();
+}
+
+function renderNetworkTable() {
+  const tbody = document.getElementById('net-tbody');
+  const empty = document.getElementById('net-empty');
+  if (!filteredContacts.length) { tbody.innerHTML=''; empty.style.display='block'; return; }
+  empty.style.display = 'none';
+  tbody.innerHTML = filteredContacts.map(c => `
+    <tr>
+      <td><div class="td-name">${c.name}</div></td>
+      <td><div class="td-sub" title="${c.position}">${c.position||'—'}</div><div class="td-sub" title="${c.company}" style="color:var(--muted)">${c.company||'—'}</div></td>
+      <td style="font-size:11px;white-space:nowrap">${countryFlag(c.country)}</td>
+      <td><span class="badge badge-muted" style="font-size:8px">${c.sector}</span></td>
+      <td>${hierarchyBadge(c.hierarchy)}</td>
+      <td><div class="score-wrap"><div class="score-bar"><div class="score-fill" style="width:${c.score}%;background:${scoreColor(c.score)}"></div></div><span class="score-num">${c.score}</span></div></td>
+      <td><button class="mini-btn" onclick="openModal(${c.id})">Pitch →</button></td>
+    </tr>`).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// ICP
+// ═══════════════════════════════════════════════════════════════════════
+['icp-search','icp-min-score'].forEach(id => {
+  document.getElementById(id).addEventListener('input', renderICPTable);
+});
+document.getElementById('icp-override').addEventListener('input', () => {
+  S.contacts.forEach(c => { c.score = scoreContact(c); });
+  icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
+  renderNetwork();
+  renderHeader();
+  renderICP();
+});
+
+function renderICP() {
+  const lastPos = S.positions[0];
+  const override = document.getElementById('icp-override').value.trim();
+  let bannerHtml = '';
+  if (override) {
+    bannerHtml = `<div class="kpi-card" style="border-color:var(--accent);margin-bottom:0"><div class="kpi-label">ICP Personalizado activo</div><div style="font-size:12px;font-weight:600;margin-top:4px">"${override}"</div></div>`;
+  } else if (lastPos) {
+    bannerHtml = `<div class="kpi-card" style="border-color:var(--purple);margin-bottom:0"><div class="kpi-label">ICP Auto-detectado desde tu último cargo</div><div style="font-size:12px;font-weight:600;margin-top:4px">${lastPos.title} @ ${lastPos.company} → Sector: ${inferSector(lastPos.title,lastPos.company)}</div></div>`;
+  }
+  document.getElementById('icp-context-banner').innerHTML = bannerHtml;
+  renderICPTable();
+}
+
+function renderICPTable() {
+  const search = norm(document.getElementById('icp-search').value);
+  const minScore = parseInt(document.getElementById('icp-min-score').value)||0;
+  const filtered = icpContacts.filter(c => {
+    if (c.score < minScore) return false;
+    if (search && !norm(c.name).includes(search) && !norm(c.position).includes(search)) return false;
+    return true;
+  });
+  document.getElementById('nb-icp').textContent = filtered.length;
+  const tbody = document.getElementById('icp-tbody');
+  const empty = document.getElementById('icp-empty');
+  if (!filtered.length) { tbody.innerHTML=''; empty.style.display='block'; return; }
+  empty.style.display = 'none';
+  tbody.innerHTML = filtered.map(c => `
+    <tr>
+      <td><div class="td-name">${c.name}</div></td>
+      <td><div class="td-sub">${c.position||'—'}</div><div class="td-sub" style="color:var(--muted)">${c.company||'—'}</div></td>
+      <td style="font-size:11px">${countryFlag(c.country)}</td>
+      <td><div class="score-wrap">
+        <div class="score-bar" style="width:80px"><div class="score-fill" style="width:${c.score}%;background:${scoreColor(c.score)}"></div></div>
+        <span class="score-num">${c.score}</span>
+        <span class="badge ${c.score>=70?'badge-green':c.score>=45?'badge-amber':'badge-red'}">${c.score>=70?'Alto':c.score>=45?'Medio':'Bajo'}</span>
+      </div></td>
+      <td><button class="mini-btn primary" onclick="openModal(${c.id})">Pitch →</button></td>
+    </tr>`).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// PURGE
+// ═══════════════════════════════════════════════════════════════════════
+function isPurgeCandidate(c) {
+  return S.criteria.filter(cr => cr.on).some(cr => cr.fn(c));
+}
+
+function getPurgeReasons(c) {
+  return S.criteria.filter(cr => cr.on && cr.fn(c)).map(cr => cr.label);
+}
+
+function renderPurgeCriteria() {
+  const container = document.getElementById('purge-criteria');
+  container.innerHTML = S.criteria.map((cr, i) => {
+    const count = S.contacts.filter(cr.fn).length;
+    return `<div class="criterion-row">
+      <label class="toggle"><input type="checkbox" ${cr.on?'checked':''} onchange="toggleCriterion(${i},this.checked)"><span class="toggle-slider"></span></label>
+      <span class="criterion-label">${cr.label}</span>
+      <span class="criterion-count">${count.toLocaleString()} contactos</span>
+    </div>`;
+  }).join('');
+}
+
+function toggleCriterion(idx, val) {
+  S.criteria[idx].on = val;
+  renderPurge();
+  renderHeader();
+}
+
+function addCustomCriterion() {
+  const val = document.getElementById('purge-custom').value.trim();
+  if (!val) return;
+  const kw = norm(val);
+  S.criteria.push({
+    id: 'custom_' + Date.now(),
+    label: `Keyword custom: "${val}"`,
+    on: true,
+    fn: c => norm(c.position).includes(kw) || norm(c.company).includes(kw)
+  });
+  document.getElementById('purge-custom').value = '';
+  renderPurgeCriteria();
+  renderPurge();
+}
+
+function renderPurge() {
+  const candidates = S.contacts.filter(c => isPurgeCandidate(c));
+  document.getElementById('nb-purge').textContent = candidates.length;
+
+  const classa = S.contacts.filter(c => c.score >= 60).length;
+  document.getElementById('purge-kpis').innerHTML = `
+    <div class="kpi-card"><div class="kpi-label">Candidatos a purga</div><div class="kpi-value" style="color:var(--red)">${candidates.length.toLocaleString()}</div><div class="kpi-sub">${(candidates.length/S.contacts.length*100).toFixed(1)}% de tu red</div></div>
+    <div class="kpi-card"><div class="kpi-label">Clase A (≥60 score)</div><div class="kpi-value" style="color:var(--green)">${classa}</div><div class="kpi-sub">Dunbar target: 150</div></div>
+    <div class="kpi-card"><div class="kpi-label">Red post-purga est.</div><div class="kpi-value">${(S.contacts.length-candidates.length).toLocaleString()}</div></div>
+  `;
+
+  const tbody = document.getElementById('purge-tbody');
+  const empty = document.getElementById('purge-empty');
+  if (!candidates.length) { tbody.innerHTML=''; empty.style.display='block'; return; }
+  empty.style.display = 'none';
+  tbody.innerHTML = candidates.map(c => {
+    const reasons = getPurgeReasons(c);
+    const checked = S.purgeChecked.has(c.id) ? 'checked' : '';
+    return `<tr>
+      <td><input type="checkbox" ${checked} onchange="togglePurgeCheck(${c.id},this.checked)"></td>
+      <td><div class="td-name">${c.name||'—'}</div></td>
+      <td><div class="td-sub">${c.position||'Sin cargo'}</div><div class="td-sub" style="color:var(--muted)">${c.company||'Sin empresa'}</div></td>
+      <td style="font-size:11px">${c.country==='Desconocido'?'📍 —':countryFlag(c.country)}</td>
+      <td>${reasons.map(r=>`<span class="badge badge-red" style="margin-right:3px;margin-bottom:2px">${r}</span>`).join('')}</td>
+    </tr>`;
+  }).join('');
+}
+
+function togglePurgeCheck(id, val) {
+  val ? S.purgeChecked.add(id) : S.purgeChecked.delete(id);
+}
+
+function selectAllPurge() {
+  const candidates = S.contacts.filter(c => isPurgeCandidate(c));
+  candidates.forEach(c => S.purgeChecked.add(c.id));
+  renderPurge();
+  // Re-check all checkboxes
+  document.querySelectorAll('#purge-tbody input[type=checkbox]').forEach(cb => cb.checked = true);
+}
+
+function toggleAllPurgeChecks(val) {
+  const candidates = S.contacts.filter(c => isPurgeCandidate(c));
+  candidates.forEach(c => val ? S.purgeChecked.add(c.id) : S.purgeChecked.delete(c.id));
+  document.querySelectorAll('#purge-tbody input[type=checkbox]').forEach(cb => cb.checked = val);
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// MESSAGES
+// ═══════════════════════════════════════════════════════════════════════
+function renderMessages() {
+  const el = document.getElementById('messages-content');
+  if (!S.messages.length) return;
+
+  // Group by conversation
+  const convs = {};
+  S.messages.forEach(row => {
+    const id = row['CONVERSATION ID'] || row['Conversation ID'] || '';
+    if (!id) return;
+    if (!convs[id]) convs[id] = [];
+    convs[id].push({
+      sender: row['FROM'] || row['From'] || '',
+      date: row['DATE'] || row['Date'] || '',
+      content: row['CONTENT'] || row['Content'] || ''
+    });
+  });
+
+  const ownerNorm = norm(S.ownerName || '');
+  const isMe = s => {
+    const sn = norm(s);
+    if (!ownerNorm) return false;
+    const parts = ownerNorm.split(' ').filter(p => p.length > 2);
+    return parts.every(p => sn.includes(p));
+  };
+
+  const commercialKws = ['reunion','demo','propuesta','cotizacion','precio','interesado','llamada','agenda','meeting','proposal','presenta','solucion','oferta','proyecto','colaborar','negocio','venta','servicio'];
+  const isCommercial = text => {
+    const t = norm(text);
+    return commercialKws.some(kw => t.includes(kw));
+  };
+
+  let initiated = 0, gotReply = 0, commercial = 0, commercialReply = 0;
+  const openers = [];
+
+  Object.values(convs).forEach(msgs => {
+    msgs.sort((a,b) => a.date.localeCompare(b.date));
+    const firstMineIdx = msgs.findIndex(m => isMe(m.sender));
+    if (firstMineIdx === -1) return;
+    initiated++;
+    const opener = msgs[firstMineIdx];
+    const subsequent = msgs.slice(firstMineIdx+1);
+    const replied = subsequent.some(m => !isMe(m.sender));
+    if (replied) gotReply++;
+    const isComm = msgs.some(m => isCommercial(m.content));
+    if (isComm) {
+      commercial++;
+      if (replied) commercialReply++;
+    }
+    openers.push({ text: opener.content, replied, isComm, turns: subsequent.length });
+  });
+
+  const openRate = initiated ? Math.round(gotReply/initiated*100) : 0;
+  const commRate = commercial ? Math.round(commercialReply/commercial*100) : 0;
+  const bestOpeners = openers.filter(o => o.replied).sort((a,b) => a.text.length - b.text.length).slice(0,5);
+
+  document.getElementById('nb-msgs').textContent = Object.keys(convs).length.toLocaleString();
+
+  el.innerHTML = `
+    <div class="msg-stats">
+      <div class="msg-stat-card">
+        <div class="msg-rate" style="color:var(--green)">${openRate}%</div>
+        <div class="msg-label">Tasa de respuesta global</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">${gotReply} / ${initiated} iniciadas</div>
+      </div>
+      <div class="msg-stat-card">
+        <div class="msg-rate" style="color:var(--accent)">${commRate}%</div>
+        <div class="msg-label">Tasa respuesta comercial</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">${commercialReply} / ${commercial} convs.</div>
+      </div>
+      <div class="msg-stat-card">
+        <div class="msg-rate" style="color:var(--purple)">${Object.keys(convs).length.toLocaleString()}</div>
+        <div class="msg-label">Conversaciones totales</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">${initiated} iniciadas por ti</div>
+      </div>
+    </div>
+    <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:var(--muted2)">🏆 Tus mejores aperturas (con respuesta, ordenadas por brevedad)</div>
+    ${bestOpeners.map((o,i) => `
+      <div class="opener-row">
+        <div class="opener-meta">
+          <span class="badge badge-green">✅ Obtuvo respuesta</span>
+          <span>${o.isComm ? '<span class="badge badge-accent" style="background:rgba(59,130,246,.12);color:#60a5fa;border:1px solid rgba(59,130,246,.3)">Comercial</span>' : ''}</span>
+          <span style="margin-left:auto">${o.turns} turnos · ${o.text.length} chars</span>
+        </div>
+        <div class="opener-text">"${o.text.slice(0,280)}${o.text.length>280?'...':''}"</div>
+      </div>`).join('')}
+    <div class="disclaimer" style="margin-top:12px">
+      <span class="disclaimer-icon">💡</span>
+      <span>El análisis detecta contexto comercial por keywords. Conversaciones en "Otros" pueden contener outreach comercial no clasificado — con embeddings semánticos esta precisión mejoraría significativamente.</span>
+    </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// PITCH MODAL
+// ═══════════════════════════════════════════════════════════════════════
+function openModal(id) {
+  S.pitchLead = S.contacts.find(c => c.id === id);
+  S.pitchApproach = 'directo';
+  updatePitchModal();
+  document.getElementById('pitch-modal').classList.add('open');
+}
+
+function closeModal() { document.getElementById('pitch-modal').classList.remove('open'); }
+document.getElementById('pitch-modal').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+
+function setPitchApproach(a) {
+  S.pitchApproach = a;
+  document.querySelectorAll('.pitch-type-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('pt-' + a).classList.add('active');
+  updatePitchModal();
+}
+
+function updatePitchModal() {
+  const c = S.pitchLead;
+  if (!c) return;
+  const firstName = c.name.split(' ')[0];
+  const lastPos = S.positions[0];
+  const myRole = lastPos ? lastPos.title : 'profesional en ventas';
+  const myCompany = lastPos ? lastPos.company : 'mi empresa';
+  const countryCtx = c.country !== 'Desconocido' ? ` en ${c.country}` : '';
+  document.getElementById('modal-name').textContent = c.name;
+  document.getElementById('modal-details').textContent = `${c.position} @ ${c.company}`;
+  let pitch = '';
+  if (S.pitchApproach === 'directo') {
+    pitch = `Hola ${firstName},\n\nVi que estás en ${c.position} en ${c.company}${countryCtx}. Desde mi experiencia como ${myRole} en ${myCompany}, he trabajado con equipos similares enfrentando retos de [personaliza con el pain point específico].\n\n¿Te hace sentido explorar si hay sinergia? Serían 15 minutos.`;
+  } else if (S.pitchApproach === 'valor') {
+    pitch = `Hola ${firstName},\n\nTe comparto un recurso que armé sobre los principales retos en ${c.sector}${countryCtx}. Basado en mi trayectoria en ${myCompany}, creo que puede ser útil para alguien en tu posición.\n\n¿Te lo dejo sin costo? Si después quieres platicarlo, con gusto agendamos 10 minutos.`;
+  } else {
+    pitch = `Hola ${firstName},\n\nGusto en saludarte. Tu trayectoria en ${c.company} y tu rol en ${c.position} me parecen muy interesantes.\n\nAndamos conectando con profesionales del sector ${c.sector} para compartir perspectivas. ¿Te apalancaría conectar?`;
+  }
+  document.getElementById('modal-pitch-text').textContent = pitch;
+}
+
+function copyPitch() {
+  const text = document.getElementById('modal-pitch-text').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.modal-actions .mini-btn.primary');
+    btn.textContent = '✅ Copiado';
+    setTimeout(() => btn.textContent = '📋 Copiar mensaje', 2000);
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// EXPORT
+// ═══════════════════════════════════════════════════════════════════════
+function exportCSV(data, filename) {
+  if (!data.length) return;
+  const fields = ['name','company','position','country','sector','hierarchy','score','email','url'];
+  const rows = [fields.join(',')];
+  data.forEach(c => rows.push(fields.map(f => `"${String(c[f]||'').replace(/"/g,'""')}"`).join(',')));
+  downloadFile(rows.join('\n'), `${filename}_${new Date().toISOString().slice(0,10)}.csv`, 'text/csv;charset=utf-8;');
+}
+
+function exportPurgeList() {
+  const selected = S.purgeChecked.size > 0
+    ? S.contacts.filter(c => S.purgeChecked.has(c.id))
+    : S.contacts.filter(c => isPurgeCandidate(c));
+  if (!selected.length) { alert('Selecciona al menos un contacto o activa criterios de purga.'); return; }
+  const fields = ['name','company','position','country','url'];
+  const rows = [fields.join(',')];
+  selected.forEach(c => rows.push(fields.map(f => `"${String(c[f]||'').replace(/"/g,'""')}"`).join(',')));
+  downloadFile(rows.join('\n'), `dunbar_purge_${new Date().toISOString().slice(0,10)}.csv`, 'text/csv;charset=utf-8;');
+}
+
+function downloadFile(content, filename, mime) {
+  const blob = new Blob(['\uFEFF' + content], { type: mime });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename; a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// LOADING
+// ═══════════════════════════════════════════════════════════════════════
+function setLoading(on, pct) {
+  const bar = document.getElementById('loading-bar');
+  const fill = document.getElementById('loading-fill');
+  if (on) { bar.style.display='block'; fill.style.width = (pct||0) + '%'; }
+  else { fill.style.width='100%'; setTimeout(() => { bar.style.display='none'; fill.style.width='0%'; }, 400); }
+}
+</script>
 </body>
 </html>
