@@ -18,15 +18,22 @@ Las conexiones de LinkedIn son hoy un **activo latente y muerto**. La gente acum
 
 ---
 
-## 📈 Viabilidad Financiera (La Regla del 0.01% de LinkedIn)
+## 📈 Métricas de LinkedIn y Viabilidad Financiera (La Regla del 0.01%)
 
-LinkedIn cuenta actualmente con más de **1,000 millones de usuarios** a nivel global. Incluso bajo un escenario de penetración de mercado ultra-conservador, los números demuestran la viabilidad de un modelo B2C puro de suscripción barata:
+LinkedIn representa el mayor catálogo de talento y empresas del mundo, con métricas clave que sustentan la escala de nuestro TAM (Total Addressable Market):
+*   **Usuarios Registrados:** Más de 1,000 millones a nivel global.
+*   **Usuarios Activos Mensuales (MAU):** Alrededor de **310 millones de personas**.
+*   **Alcance Global:** Presencia en más de 200 países y territorios.
+*   **Participación Demográfica:** El grupo de edad con mayor presencia es el de 25 a 34 años (cerca del 47%), representando el grueso de la fuerza comercial y de toma de decisiones B2B activa.
+*   **Presencia Corporativa:** Más de **69 millones de empresas** registradas.
 
-| Penetración de LinkedIn | Usuarios Activos de Pago | Ingreso Mensual ($10 USD/mes) | Ingreso Anual (ARR) |
+Incluso bajo un escenario de penetración ultra-conservador basado en los 310 millones de usuarios activos mensuales (MAU), un modelo B2C puro de suscripción asequible ($10 USD) demuestra una viabilidad económica masiva:
+
+| Penetración de LinkedIn (MAU) | Usuarios Activos de Pago | Ingreso Mensual ($10 USD/mes) | Ingreso Anual (ARR) |
 | :--- | :--- | :--- | :--- |
-| **0.1%** | 1,000,000 | $10,000,000 USD | $120,000,000 USD |
-| **0.01%** (Nuestra Meta) | 100,000 | $1,000,000 USD | $12,000,000 USD |
-| **0.001%** (Piloto Inicial) | 10,000 | $100,000 USD | $1,200,000 USD |
+| **0.1% de MAU** | 310,000 | $3,100,000 USD | $37,200,000 USD |
+| **0.01% de MAU** (Meta Mediano Plazo) | 31,000 | $310,000 USD | $3,720,000 USD |
+| **0.003% de MAU** (Piloto B2C Inicial) | 10,000 | $100,000 USD | $1,200,000 USD |
 
 ### El Argumento de Ventas B2C (No Corporativo):
 *   **El precio no es barrera ($10 USD):** Cualquier comercial que cierre una sola venta gracias a un atajo relacional recupera el costo de 5 años de suscripción en una tarde.
