@@ -1310,6 +1310,18 @@ function toggleAllPurgeChecks(val) {
 // ═══════════════════════════════════════════════════════════════════════
 // MESSAGES
 // ═══════════════════════════════════════════════════════════════════════
+function getRowVal(row, targetKey) {
+  if (!row) return '';
+  const target = targetKey.toLowerCase().trim();
+  for (const k in row) {
+    const cleanK = k.replace(/^["']|["']$/g, '').toLowerCase().trim();
+    if (cleanK === target) {
+      return row[k];
+    }
+  }
+  return '';
+}
+
 function renderMessages() {
   const el = document.getElementById('messages-content');
   if (!S.messages.length) return;
@@ -1317,13 +1329,13 @@ function renderMessages() {
   // Group by conversation
   const convs = {};
   S.messages.forEach(row => {
-    const id = row['CONVERSATION ID'] || row['Conversation ID'] || '';
+    const id = getRowVal(row, 'CONVERSATION ID');
     if (!id) return;
     if (!convs[id]) convs[id] = [];
     convs[id].push({
-      sender: row['FROM'] || row['From'] || '',
-      date: row['DATE'] || row['Date'] || '',
-      content: row['CONTENT'] || row['Content'] || ''
+      sender: getRowVal(row, 'FROM'),
+      date: getRowVal(row, 'DATE'),
+      content: getRowVal(row, 'CONTENT')
     });
   });
 
@@ -1331,8 +1343,17 @@ function renderMessages() {
   const isMe = s => {
     const sn = norm(s);
     if (!ownerNorm) return false;
-    const parts = ownerNorm.split(' ').filter(p => p.length > 2);
-    return parts.every(p => sn.includes(p));
+    const ownerParts = ownerNorm.split(' ').filter(p => p.length > 2);
+    if (ownerParts.length === 0) return false;
+    const hasFirstName = sn.includes(ownerParts[0]);
+    const hasAnyLastName = ownerParts.slice(1).some(p => {
+      if (sn.includes(p)) return true;
+      // Accent-insensitive and vowel-agnostic comparison for name mutations (e.g., "gutirrez" vs "gutierrez")
+      const cleanP = p.replace(/[aeiouü]/g, '');
+      const cleanSn = sn.replace(/[aeiouü]/g, '');
+      return cleanP.length > 2 && cleanSn.includes(cleanP);
+    });
+    return hasFirstName && (ownerParts.length === 1 || hasAnyLastName);
   };
 
   const commercialKws = ['reunion','demo','propuesta','cotizacion','precio','interesado','llamada','agenda','meeting','proposal','presenta','solucion','oferta','proyecto','colaborar','negocio','venta','servicio'];
@@ -1341,29 +1362,89 @@ function renderMessages() {
     return commercialKws.some(kw => t.includes(kw));
   };
 
+  const getOpenerStyle = text => {
+    const t = norm(text);
+    if (!t) return 'Otros / Sin Clasificar';
+    if (t.length < 50 || /\b(como vas|hola|buen dia|que tal|gusto en saludar|gracias por conectar|mucho gusto)\b/.test(t)) {
+      return 'Saludo Simple / Informal';
+    }
+    if (/\b(ayuda|consejo|pregunta|duda|opinion|apoyar|feedback)\b/.test(t)) {
+      return 'Pregunta / Ayuda Directa';
+    }
+    if (t.length > 150 || /\b(propuesta|clip|fiserv|latam|odoo|servicios|plataforma|reunion|demo|agenda|meeting)\b/.test(t)) {
+      return 'Presentación Larga / Propuesta';
+    }
+    return 'Otros / Sin Clasificar';
+  };
+
+  const getCampaignByDate = dateStr => {
+    if (!dateStr || !S.positions.length) return 'Networking General';
+    try {
+      const datePart = dateStr.slice(0, 10);
+      const msgDate = new Date(datePart);
+      
+      for (const p of S.positions) {
+        const start = new Date(p.start);
+        const end = p.end ? new Date(p.end) : new Date();
+        if (msgDate >= start && msgDate <= end) {
+          return p.company;
+        }
+      }
+    } catch(e) {}
+    return 'Networking General';
+  };
+
   let initiated = 0, gotReply = 0, commercial = 0, commercialReply = 0;
   const openers = [];
+
+  const styleStats = {
+    'Saludo Simple / Informal': { sent: 0, replied: 0 },
+    'Pregunta / Ayuda Directa': { sent: 0, replied: 0 },
+    'Presentación Larga / Propuesta': { sent: 0, replied: 0 },
+    'Otros / Sin Clasificar': { sent: 0, replied: 0 }
+  };
+
+  const campaignStats = {};
 
   Object.values(convs).forEach(msgs => {
     msgs.sort((a,b) => a.date.localeCompare(b.date));
     const firstMineIdx = msgs.findIndex(m => isMe(m.sender));
     if (firstMineIdx === -1) return;
+    
     initiated++;
     const opener = msgs[firstMineIdx];
     const subsequent = msgs.slice(firstMineIdx+1);
     const replied = subsequent.some(m => !isMe(m.sender));
     if (replied) gotReply++;
+    
     const isComm = msgs.some(m => isCommercial(m.content));
     if (isComm) {
       commercial++;
       if (replied) commercialReply++;
     }
+
+    const style = getOpenerStyle(opener.content);
+    if (styleStats[style]) {
+      styleStats[style].sent++;
+      if (replied) styleStats[style].replied++;
+    }
+
+    const campaign = getCampaignByDate(opener.date);
+    if (!campaignStats[campaign]) {
+      campaignStats[campaign] = { sent: 0, replied: 0 };
+    }
+    campaignStats[campaign].sent++;
+    if (replied) campaignStats[campaign].replied++;
+
     openers.push({ text: opener.content, replied, isComm, turns: subsequent.length });
   });
 
   const openRate = initiated ? Math.round(gotReply/initiated*100) : 0;
   const commRate = commercial ? Math.round(commercialReply/commercial*100) : 0;
-  const bestOpeners = openers.filter(o => o.replied).sort((a,b) => a.text.length - b.text.length).slice(0,5);
+  const bestOpeners = openers
+    .filter(o => o.replied && o.text.trim().length > 0)
+    .sort((a,b) => a.text.length - b.text.length)
+    .slice(0, 5);
 
   document.getElementById('nb-msgs').textContent = Object.keys(convs).length.toLocaleString();
 
@@ -1385,6 +1466,59 @@ function renderMessages() {
         <div style="font-size:10px;color:var(--muted);margin-top:4px">${initiated} iniciadas por ti</div>
       </div>
     </div>
+
+    <div class="charts-row" style="grid-template-columns: 1fr 1fr; margin-bottom:14px;">
+      <div class="chart-card" style="padding: 12px 14px; overflow-x: auto;">
+        <div class="chart-title">Rendimiento por Estilo de Abridor</div>
+        <table class="compact-table" style="width: 100%;">
+          <thead>
+            <tr>
+              <th style="padding: 4px 6px;">Estilo</th>
+              <th style="padding: 4px 6px; text-align: center;">Enviados</th>
+              <th style="padding: 4px 6px; text-align: right;">Respuesta (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${Object.entries(styleStats).map(([style, s]) => {
+              const rate = s.sent ? Math.round(s.replied / s.sent * 100) : 0;
+              return `
+                <tr>
+                  <td style="padding: 6px; font-weight:600;">${style}</td>
+                  <td style="padding: 6px; text-align: center; font-family:'JetBrains Mono';">${s.sent}</td>
+                  <td style="padding: 6px; text-align: right; font-weight:700; color:${rate >= 60 ? 'var(--green)' : rate >= 40 ? 'var(--amber)' : 'var(--red)'}; font-family:'JetBrains Mono';">${rate}%</td>
+                </tr>
+              `;
+            }).join('')}
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="chart-card" style="padding: 12px 14px; overflow-x: auto;">
+        <div class="chart-title">Historial por Época/Empresa</div>
+        <table class="compact-table" style="width: 100%;">
+          <thead>
+            <tr>
+              <th style="padding: 4px 6px;">Campaña / Contexto</th>
+              <th style="padding: 4px 6px; text-align: center;">Chats</th>
+              <th style="padding: 4px 6px; text-align: right;">Respuesta (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${Object.entries(campaignStats).sort((a,b) => b[1].sent - a[1].sent).map(([campaign, s]) => {
+              const rate = s.sent ? Math.round(s.replied / s.sent * 100) : 0;
+              return `
+                <tr>
+                  <td style="padding: 6px; font-weight:600;">${campaign}</td>
+                  <td style="padding: 6px; text-align: center; font-family:'JetBrains Mono';">${s.sent}</td>
+                  <td style="padding: 6px; text-align: right; font-weight:700; color:${rate >= 60 ? 'var(--green)' : rate >= 40 ? 'var(--amber)' : 'var(--red)'}; font-family:'JetBrains Mono';">${rate}%</td>
+                </tr>
+              `;
+            }).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:var(--muted2)">🏆 Tus mejores aperturas (con respuesta, ordenadas por brevedad)</div>
     ${bestOpeners.map((o,i) => `
       <div class="opener-row">
@@ -1397,7 +1531,7 @@ function renderMessages() {
       </div>`).join('')}
     <div class="disclaimer" style="margin-top:12px">
       <span class="disclaimer-icon">💡</span>
-      <span>El análisis detecta contexto comercial por keywords. Conversaciones en "Otros" pueden contener outreach comercial no clasificado — con embeddings semánticos esta precisión mejoraría significativamente.</span>
+      <span>El análisis de campañas e intereses se basa en las fechas de tus posiciones. Conversaciones en "Otros" pueden contener outreach comercial no clasificado — con embeddings semánticos la precisión mejoraría significativamente.</span>
     </div>`;
 }
 
