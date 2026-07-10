@@ -19,8 +19,12 @@ En lugar de vender Radar Comercial como un SaaS tradicional (una página web a l
 ## 2. ¿Por qué este modelo se vende e integra 10x más rápido?
 
 ### A. Cero Fricción de Interfaz (No UI Overhead)
-No tienes que diseñar, programar ni dar mantenimiento a complejas aplicaciones web o extensiones de navegador. El "frontend" es el chat o el agente que la empresa ya utiliza (ej. Slack, Teams o su chatbot interno).
-*   **Ejemplo de uso:** El comercial simplemente le chatea a su copiloto de IA corporativo: *"Oye, necesito entrar a Nu México. Revisa en el módulo de Radar Comercial si tenemos algún puente cálido."* El agente invoca la Skill en segundo plano y responde en el chat: *"Sí, Antonio Gutiérrez conoce al CEO Armando Herrera. ¿Quieres que redacte la solicitud de introducción?"*
+No tienes que diseñar, programar ni dar mantenimiento a complejas aplicaciones web o extensiones de navegador. El "frontend" es el chat o el agente que el comercial ya utiliza (ej. Slack, Teams o copilotos web).
+*   **El Principio Clave: Tu Propia Red Primero (Self-Data First):** Para evitar que el comercial sienta que es "solo otro LinkedIn" o que se preocupe por la privacidad de compartir datos con sus colegas, la Skill se enfoca primero en minar **sus propios contactos olvidados**.
+*   **Ejemplo de uso:** El comercial chatea con su copiloto de IA:
+    > **Vendedor:** *“Oye, quiero venderle a Nu México. Revisa entre MIS contactos si tengo alguna entrada o relación olvidada.”*
+    > **Agente (invoca la Skill):** *“Sí, en tu propio monedero de LinkedIn tienes agregado al CEO Armando Herrera. Además, el análisis de tu chat muestra que intercambiaron 4 mensajes hace 3 meses (Relación Activa). También tienes agregados a otros 2 contactos que trabajaron antes en Nu y hoy están en tu red.”*
+*   Este enfoque resuelve el problema del "Punto Ciego" del propio vendedor utilizando estrictamente sus datos, sin generar desconfianza de privacidad en la fase inicial.
 
 ### B. Aprobación de TI Corporativa Ultra Rápida
 Conseguir que el departamento de seguridad de una empresa apruebe la instalación de una nueva plataforma de software externa puede tardar meses. Aprobar una "Skill" o una conexión de API bajo un entorno seguro existente (como Google Cloud / Vertex AI) es un proceso infinitamente más rápido y sencillo.
