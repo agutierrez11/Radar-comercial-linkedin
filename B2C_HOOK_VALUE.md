@@ -21,7 +21,7 @@ Las conexiones de LinkedIn son hoy un **activo latente y muerto**. La gente acum
 ## 📈 Métricas de LinkedIn y Viabilidad Financiera (La Regla del 0.01%)
 
 LinkedIn representa el mayor catálogo de talento y empresas del mundo, con métricas clave que sustentan la escala de nuestro TAM (Total Addressable Market):
-*   **Usuarios Registrados:** Más de 1,000 millones a nivel global.
+*   **Miembros Registrados:** Más de 850 millones de personas a nivel global.
 *   **Usuarios Activos Mensuales (MAU):** Alrededor de **310 millones de personas**.
 *   **Alcance Global:** Presencia en más de 200 países y territorios.
 *   **Participación Demográfica:** El grupo de edad con mayor presencia es el de 25 a 34 años (cerca del 47%), representando el grueso de la fuerza comercial y de toma de decisiones B2B activa.
