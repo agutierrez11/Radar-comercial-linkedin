@@ -123,7 +123,10 @@
 
     /* ── CARDS / KPI ── */
     .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin-bottom: 14px; }
-    .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+    .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; transition: all 0.2s ease; }
+    .kpi-card[onclick] { cursor: pointer; }
+    .kpi-card[onclick]:hover { border-color: var(--accent); background: rgba(59,130,246,0.03); transform: translateY(-1px); }
+    .kpi-card.active-filter { border-color: var(--accent); background: rgba(59,130,246,0.06); box-shadow: 0 0 8px rgba(59,130,246,0.15); }
     .kpi-label { font-size: 9px; font-family: 'JetBrains Mono', monospace; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
     .kpi-value { font-size: 24px; font-weight: 800; line-height: 1; }
     .kpi-sub { font-size: 9px; color: var(--muted); margin-top: 3px; }
@@ -546,6 +549,8 @@ const S = {
   pitchLead: null,
   pitchApproach: 'directo',
   activePositionIndex: 0,
+  activeKpiFilter: 'total',
+  filterClassA: false,
   loadedParts: {
     connections: false,
     positions: false,
@@ -1079,7 +1084,17 @@ function populateFilters() {
 }
 
 ['net-search','net-country','net-hier','net-sector'].forEach(id => {
-  document.getElementById(id).addEventListener('input', applyNetworkFilters);
+  document.getElementById(id).addEventListener('input', () => {
+    const hierVal = document.getElementById('net-hier').value;
+    S.filterClassA = false;
+    if (hierVal) {
+      S.activeKpiFilter = hierVal;
+    } else {
+      S.activeKpiFilter = 'total';
+    }
+    updateKpiHighlights();
+    applyNetworkFilters();
+  });
 });
 
 function applyNetworkFilters() {
@@ -1092,9 +1107,36 @@ function applyNetworkFilters() {
     if (country && c.country !== country) return false;
     if (hier && c.hierarchy !== hier) return false;
     if (sector && c.sector !== sector) return false;
+    if (S.filterClassA && c.score < 60) return false;
     return true;
   });
   renderNetworkTable();
+}
+
+function filterNetworkBy(type) {
+  const hierSel = document.getElementById('net-hier');
+  S.activeKpiFilter = type;
+  
+  if (type === 'total') {
+    hierSel.value = "";
+    S.filterClassA = false;
+  } else if (type === 'C-Level' || type === 'Director' || type === 'Gerente') {
+    hierSel.value = type;
+    S.filterClassA = false;
+  } else if (type === 'clase-a') {
+    hierSel.value = "";
+    S.filterClassA = true;
+  }
+  
+  updateKpiHighlights();
+  applyNetworkFilters();
+}
+
+function updateKpiHighlights() {
+  document.querySelectorAll('#net-kpis .kpi-card').forEach(c => c.classList.remove('active-filter'));
+  const activeType = S.activeKpiFilter || 'total';
+  const card = document.getElementById('kpicard-' + activeType);
+  if (card) card.classList.add('active-filter');
 }
 
 function renderNetwork() {
@@ -1106,13 +1148,14 @@ function renderNetwork() {
   const identified = Object.entries(countries).filter(([k]) => k !== 'Desconocido').sort((a,b)=>b[1]-a[1]);
   const classa = S.contacts.filter(c=>c.score>=60).length;
 
+  const activeF = S.activeKpiFilter || 'total';
   document.getElementById('net-kpis').innerHTML = `
-    <div class="kpi-card"><div class="kpi-label">Total</div><div class="kpi-value">${total.toLocaleString()}</div></div>
-    <div class="kpi-card"><div class="kpi-label">C-Level</div><div class="kpi-value" style="color:var(--purple)">${hier['C-Level']||0}</div><div class="kpi-sub">${((hier['C-Level']||0)/total*100).toFixed(1)}%</div></div>
-    <div class="kpi-card"><div class="kpi-label">Directores</div><div class="kpi-value" style="color:var(--accent)">${hier['Director']||0}</div></div>
-    <div class="kpi-card"><div class="kpi-label">Gerentes</div><div class="kpi-value" style="color:var(--green)">${hier['Gerente']||0}</div></div>
-    <div class="kpi-card"><div class="kpi-label">Países ID</div><div class="kpi-value">${identified.length}</div></div>
-    <div class="kpi-card"><div class="kpi-label">Clase A (≥60)</div><div class="kpi-value" style="color:var(--amber)">${classa}</div><div class="kpi-sub">Dunbar: 150</div></div>
+    <div class="kpi-card ${activeF==='total'?'active-filter':''}" id="kpicard-total" onclick="filterNetworkBy('total')"><div class="kpi-label">Total</div><div class="kpi-value">${total.toLocaleString()}</div></div>
+    <div class="kpi-card ${activeF==='C-Level'?'active-filter':''}" id="kpicard-C-Level" onclick="filterNetworkBy('C-Level')"><div class="kpi-label">C-Level</div><div class="kpi-value" style="color:var(--purple)">${hier['C-Level']||0}</div><div class="kpi-sub">${((hier['C-Level']||0)/total*100).toFixed(1)}%</div></div>
+    <div class="kpi-card ${activeF==='Director'?'active-filter':''}" id="kpicard-Director" onclick="filterNetworkBy('Director')"><div class="kpi-label">Directores</div><div class="kpi-value" style="color:var(--accent)">${hier['Director']||0}</div></div>
+    <div class="kpi-card ${activeF==='Gerente'?'active-filter':''}" id="kpicard-Gerente" onclick="filterNetworkBy('Gerente')"><div class="kpi-label">Gerentes</div><div class="kpi-value" style="color:var(--green)">${hier['Gerente']||0}</div></div>
+    <div class="kpi-card" id="kpicard-paises"><div class="kpi-label">Países ID</div><div class="kpi-value">${identified.length}</div></div>
+    <div class="kpi-card ${activeF==='clase-a'?'active-filter':''}" id="kpicard-clase-a" onclick="filterNetworkBy('clase-a')"><div class="kpi-label">Clase A (≥60)</div><div class="kpi-value" style="color:var(--amber)">${classa}</div><div class="kpi-sub">Dunbar: 150</div></div>
   `;
 
   // Charts
