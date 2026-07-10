@@ -1,6 +1,8 @@
-# Radar Comercial: Relationship Intelligence (BYOD MVP)
+# Radar Comercial: El Cohete de Prospección Relacional (BYOD)
 
-Este repositorio contiene las especificaciones, código base y desarrollo del MVP para **Radar Comercial**, una plataforma SaaS híbrida B2B/B2C que permite a los comerciales y empresas mapear, segmentar y utilizar relaciones de primer grado preexistentes (Warm Pipeline Mining) para acelerar las ventas.
+> **"Los comerciales dedican hoy el 70% o 80% de su tiempo buscando prospectos en frío y solo el resto a vender. Nosotros les damos un cohete, gasolina y herramientas: purgas tu red, eliminas la basura, garantizas que lo que postees le llegue a las personas indicadas y cierras o descartas tratos 5x más rápido."**
+
+Este repositorio contiene las especificaciones, código base y desarrollo del MVP para **Radar Comercial**, una plataforma SaaS híbrida B2B/B2C que permite a los comerciales y empresas mapear, segmentar y activar relaciones preexistentes (Warm Pipeline Mining) para acelerar las ventas.
 
 ---
 
