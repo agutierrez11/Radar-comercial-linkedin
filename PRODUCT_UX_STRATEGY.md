@@ -34,3 +34,26 @@ Si por algún error de algoritmo aparece un contacto irrelevante (como el caso d
 *   El comercial no entra a un panel de configuración a borrarlo.
 *   Simplemente hace clic en **"Omitir"** o **"No es relevante"** en la tarjeta de sugerencia.
 *   El sistema registra ese clic y ajusta la recomendación del modelo para ese usuario de forma silenciosa en segundo plano.
+
+---
+
+## 3. El Flujo de Onboarding RLHF en 1 Clic (Confirmación de Entidades)
+
+Para garantizar la precisión de los diccionarios de venta sin forzar al usuario a escribir nada, el proceso de Onboarding implementará un flujo de **Reinforcement Learning from Human Feedback (RLHF)** basado en micro-confirmaciones:
+
+```
+[ Lee Positions.csv ] ──► [ Búsqueda Auto: "Clip" -> clip.mx ] ──► [ Onboarding UI: "¿Es esta tu empresa? [Sí/No]" ]
+```
+
+1.  **Búsqueda Automática en Segundo Plano:** 
+    *   Al subir el ZIP, el sistema lee `Positions.csv` y detecta las empresas (ej. *Clip*, *Fiserv*).
+    *   El servidor busca automáticamente en internet (vía API de búsqueda) las URLs oficiales y resúmenes de negocio de esas marcas (ej. `https://www.clip.mx`).
+2.  **La Micro-Tarjeta de Confirmación (RLHF):**
+    *   En lugar de un formulario en blanco, el onboarding muestra una tarjeta interactiva muy limpia:
+        > **"Confirmemos tu historial para activar tu Radar:"**
+        > *   *¿Trabajaste en **Clip** y su web oficial es [clip.mx](https://www.clip.mx)?*  
+        >     **[ Sí ]**  **[ No ]**
+3.  **El Cierre del Círculo (Loop de Aprendizaje):**
+    *   **Si el usuario hace clic en [ Sí ] (90% de los casos):** El sistema confirma la entidad, asocia el dominio, descarga la propuesta de valor y activa los diccionarios correctos. Todo con **un solo clic**.
+    *   **Si hace clic en [ No ]:** El sistema le permite escribir rápidamente la URL correcta o buscar una alternativa, corrigiendo el modelo para futuros usuarios.
+
