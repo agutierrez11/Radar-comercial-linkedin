@@ -702,7 +702,7 @@ function inferSector(pos, company) {
   if (/\b(gobierno|municipal|federal|secretaria|publico)\b/.test(b)) return 'Gobierno';
   if (/\b(consulting|consultor|advisory|strategy|consultoria)\b/.test(b)) return 'Consultoría';
   if (/\b(media|marketing|publicidad|advertising|agencia|agency)\b/.test(b)) return 'Marketing/Media';
-  if (/\b(cpg|fmcg|consumo masivo|alimento|food|bebida|drink|conagra|nestle|unilever|coca|pepsi|cerveza|beer)\b/.test(b)) return 'Consumo Masivo/CPG';
+  if (/\b(cpg|fmcg|consumo masivo|alimento|food|bebida|drink|conagra|nestle|unilever|coca|pepsi|cerveza|beer|tobacco|tabaco|cigarette|cigarro)\b/.test(b)) return 'Consumo Masivo/CPG';
   return 'Otro';
 }
 
