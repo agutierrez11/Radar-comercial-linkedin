@@ -18,6 +18,20 @@ Las conexiones de LinkedIn son hoy un **activo latente y muerto**. La gente acum
 
 ---
 
+## 🚫 Lo que NO somos vs. Lo que SÍ entregamos
+
+Es vital delimitar la propuesta de valor para evitar comparaciones erróneas con herramientas invasivas de datos fríos (como Apollo, Lusha o Hunter):
+
+*   **Lo que NO hacemos:** **No vendemos, no entregamos ni descubrimos correos electrónicos privados o números de teléfono de terceros.** No somos un directorio de espionaje o spam.
+*   **Lo que SÍ hacemos (El Valor Real):** **Curamos tus propios datos y te entregamos un "Pad Comercial" (Camino Relacional Cálido).**
+    1.  **Limpieza Forense:** Removemos emojis, títulos basura y ruido de tu base de contactos para hacerla operable.
+    2.  **Mapeo de Jerarquías e Inferencia de País:** Estructuramos tu base desordenada para que sepas exactamente a quién tienes en cada geografía y nivel de decisión.
+    3.  **El Pad Comercial (Roadmap de Pitcheo):** Analizamos la temperatura de tus conversaciones pasadas (`Messages.csv`) y te trazamos el camino cálido: a quién debes escribirle hoy, con qué enfoque (Directo o de Valor) y te sugerimos el mensaje redactado para tu ICP específico.
+
+Esto blinda el producto éticamente, ya que operamos al 100% sobre **los activos relacionales que el usuario ya posee** y que simplemente no sabe cómo explotar.
+
+---
+
 ## 📈 Métricas de LinkedIn y Viabilidad Financiera (La Regla del 0.01%)
 
 LinkedIn representa el mayor catálogo de talento y empresas del mundo, con métricas clave que sustentan la escala de nuestro TAM (Total Addressable Market):
