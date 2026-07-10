@@ -692,7 +692,7 @@ function inferHierarchy(pos) {
 function inferSector(pos, company) {
   const b = norm(`${pos} ${company}`);
   if (/\b(fintech|pago|cobro|treasury|tesoreria|banking|bank|banco|credito|credit|adquirente|pos|terminal)\b/.test(b)) return 'Fintech/Pagos';
-  if (/\b(retail|ecommerce|tienda|store|marketplace|comercio)\b/.test(b)) return 'Retail/eCommerce';
+  if (/\b(retail|ecommerce|commerce|tienda|store|marketplace|comercio)\b/.test(b)) return 'Retail/eCommerce';
   if (/\b(software|saas|tech|platform|developer|engineer|startup|digital)\b/.test(b)) return 'SaaS/Tech';
   if (/\b(manufactura|industrial|planta|supply|logistic|transport|delivery)\b/.test(b)) return 'Manufactura/Logística';
   if (/\b(health|salud|pharma|hospital|medico|clinica)\b/.test(b)) return 'Salud';
@@ -700,6 +700,7 @@ function inferSector(pos, company) {
   if (/\b(gobierno|municipal|federal|secretaria|publico)\b/.test(b)) return 'Gobierno';
   if (/\b(consulting|consultor|advisory|strategy|consultoria)\b/.test(b)) return 'Consultoría';
   if (/\b(media|marketing|publicidad|advertising|agencia|agency)\b/.test(b)) return 'Marketing/Media';
+  if (/\b(cpg|fmcg|consumo masivo|alimento|food|bebida|drink|conagra|nestle|unilever|coca|pepsi|cerveza|beer)\b/.test(b)) return 'Consumo Masivo/CPG';
   return 'Otro';
 }
 
