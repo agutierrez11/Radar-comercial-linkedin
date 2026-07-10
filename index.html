@@ -11,22 +11,58 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     :root {
-      --bg:       #050608;
-      --surface:  #0c0e12;
-      --border:   #1a2035;
-      --border2:  #252d40;
+      /* Dark Theme variables (default) */
+      --bg:       #090a0f;
+      --surface:  #111219;
+      --border:   #1e2030;
+      --border2:  #2b2e46;
       --accent:   #3b82f6;
-      --purple:   #a855f7;
-      --green:    #22c55e;
+      --purple:   #c084fc;
+      --green:    #10b981;
       --amber:    #f59e0b;
       --red:      #ef4444;
-      --text:     #e2e8f0;
+      --text:     #f1f5f9;
       --muted:    #64748b;
       --muted2:   #94a3b8;
       --sidebar:  180px;
+      
+      --badge-clevel-bg: rgba(168,85,247,0.12);
+      --badge-clevel-txt: #d8b4fe;
+      --badge-director-bg: rgba(59,130,246,0.12);
+      --badge-director-txt: #93c5fd;
+      --badge-gerente-bg: rgba(16,185,129,0.12);
+      --badge-gerente-txt: #6ee7b7;
+      --badge-others-bg: rgba(100,116,139,0.12);
+      --badge-others-txt: #cbd5e1;
     }
+
+    body.light {
+      /* Light Theme variables (SaaS style, Linear/Stripe style) */
+      --bg:       #f8fafc;
+      --surface:  #ffffff;
+      --border:   #e2e8f0;
+      --border2:  #cbd5e1;
+      --accent:   #2563eb;
+      --purple:   #7e22ce;
+      --green:    #15803d;
+      --amber:    #b45309;
+      --red:      #b91c1c;
+      --text:     #0f172a;
+      --muted:    #64748b;
+      --muted2:   #475569;
+      
+      --badge-clevel-bg: #f3e8ff;
+      --badge-clevel-txt: #7e22ce;
+      --badge-director-bg: #dbeafe;
+      --badge-director-txt: #1d4ed8;
+      --badge-gerente-bg: #dcfce7;
+      --badge-gerente-txt: #15803d;
+      --badge-others-bg: #f1f5f9;
+      --badge-others-txt: #475569;
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; }
+    body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; transition: background 0.2s, color 0.2s; }
     ::-webkit-scrollbar { width: 4px; height: 4px; }
     ::-webkit-scrollbar-track { background: var(--surface); }
     ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
@@ -38,6 +74,7 @@
       height: 44px; background: var(--surface);
       border-bottom: 1px solid var(--border);
       display: flex; align-items: center; padding: 0 16px; gap: 16px;
+      transition: background 0.2s, border-color 0.2s;
     }
     .header-logo { display: flex; align-items: center; gap: 8px; min-width: var(--sidebar); }
     .logo-icon { width: 24px; height: 24px; background: linear-gradient(135deg, var(--accent), var(--purple)); border-radius: 6px; display:flex; align-items:center; justify-content:center; font-size: 12px; }
@@ -54,7 +91,7 @@
     .dunbar-bar { flex: 1; max-width: 200px; display: flex; align-items: center; gap: 6px; font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--muted2); }
     .dunbar-track { flex: 1; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
     .dunbar-fill { height: 100%; border-radius: 2px; transition: width .6s ease; }
-    .privacy-badge { margin-left: auto; display: flex; align-items: center; gap: 5px; font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--muted); }
+    .privacy-badge { display: flex; align-items: center; gap: 5px; font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--muted); }
     .privacy-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
 
     /* ── LAYOUT ── */
@@ -160,13 +197,13 @@
 
     /* ── BADGES ── */
     .badge { display: inline-flex; align-items: center; gap: 3px; font-size: 9px; font-weight: 700; font-family: 'JetBrains Mono', monospace; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
-    .badge-clevel  { background: rgba(168,85,247,.15); color: #c084fc; border: 1px solid rgba(168,85,247,.3); }
-    .badge-director{ background: rgba(59,130,246,.15); color: #60a5fa; border: 1px solid rgba(59,130,246,.3); }
-    .badge-gerente { background: rgba(34,197,94,.12); color: #4ade80; border: 1px solid rgba(34,197,94,.25); }
-    .badge-otros   { background: rgba(100,116,139,.12); color: var(--muted2); border: 1px solid var(--border); }
-    .badge-green   { background: rgba(34,197,94,.12); color: #4ade80; border: 1px solid rgba(34,197,94,.25); }
-    .badge-amber   { background: rgba(245,158,11,.12); color: #fcd34d; border: 1px solid rgba(245,158,11,.25); }
-    .badge-red     { background: rgba(239,68,68,.12); color: #f87171; border: 1px solid rgba(239,68,68,.25); }
+    .badge-clevel  { background: var(--badge-clevel-bg); color: var(--badge-clevel-txt); border: 1px solid rgba(168,85,247,.2); }
+    .badge-director{ background: var(--badge-director-bg); color: var(--badge-director-txt); border: 1px solid rgba(59,130,246,.2); }
+    .badge-gerente { background: var(--badge-gerente-bg); color: var(--badge-gerente-txt); border: 1px solid rgba(34,197,94,.2); }
+    .badge-otros   { background: var(--badge-others-bg); color: var(--badge-others-txt); border: 1px solid var(--border); }
+    .badge-green   { background: var(--badge-gerente-bg); color: var(--badge-gerente-txt); border: 1px solid rgba(34,197,94,.2); }
+    .badge-amber   { background: rgba(245,158,11,.08); color: var(--amber); border: 1px solid rgba(245,158,11,.2); }
+    .badge-red     { background: rgba(239,68,68,.08); color: var(--red); border: 1px solid rgba(239,68,68,.2); }
     .badge-muted   { background: var(--border); color: var(--muted2); border: 1px solid var(--border2); }
 
     /* ── SCORE BAR ── */
@@ -290,7 +327,10 @@
       <span id="dunbar-label">0/150</span>
     </div>
   </div>
-  <div class="privacy-badge">
+  <button class="mini-btn" id="theme-toggle" onclick="toggleTheme()" style="margin-left:auto; display:flex; align-items:center; gap:6px; padding:4px 10px; font-weight:600; font-family:'Outfit', sans-serif;">
+    <span id="theme-icon">☀️</span> <span id="theme-text">Modo Claro</span>
+  </button>
+  <div class="privacy-badge" style="margin-left:12px">
     <div class="privacy-dot"></div>
     <span>100% LOCAL</span>
   </div>
@@ -571,6 +611,44 @@ let filteredContacts = [];
 let icpContacts = [];
 let chartHier = null;
 let chartCountries = null;
+
+// ═══════════════════════════════════════════════════════════════════════
+// THEME SWITCHER
+// ═══════════════════════════════════════════════════════════════════════
+function toggleTheme() {
+  const isLight = document.body.classList.toggle('light');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  
+  const icon = document.getElementById('theme-icon');
+  const text = document.getElementById('theme-text');
+  if (isLight) {
+    icon.textContent = '🌙';
+    text.textContent = 'Modo Oscuro';
+  } else {
+    icon.textContent = '☀️';
+    text.textContent = 'Modo Claro';
+  }
+  
+  if (S.contacts.length) {
+    renderNetwork();
+  }
+}
+
+// Load theme on startup without flash
+(function() {
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  if (savedTheme === 'light') {
+    document.body.classList.add('light');
+    document.addEventListener('DOMContentLoaded', () => {
+      const icon = document.getElementById('theme-icon');
+      const text = document.getElementById('theme-text');
+      if (icon && text) {
+        icon.textContent = '🌙';
+        text.textContent = 'Modo Oscuro';
+      }
+    });
+  }
+})();
 
 // ═══════════════════════════════════════════════════════════════════════
 // HELPERS
@@ -1159,6 +1237,12 @@ function renderNetwork() {
   `;
 
   // Charts
+  const isL = document.body.classList.contains('light');
+  const txtColor = isL ? '#475569' : '#94a3b8';
+  const gridColor = isL ? '#e2e8f0' : '#1e2235';
+  const barBgColor = isL ? '#2563eb' : '#3b82f6';
+  const doughnutBgs = isL ? ['#7e22ce','#2563eb','#15803d','#cbd5e1'] : ['#c084fc','#3b82f6','#10b981','#2b2e46'];
+
   if (chartHier) chartHier.destroy();
   if (chartCountries) chartCountries.destroy();
   document.getElementById('net-charts').style.display = 'grid';
@@ -1167,9 +1251,9 @@ function renderNetwork() {
     type: 'doughnut',
     data: {
       labels: ['C-Level','Director','Gerente','Otros'],
-      datasets: [{ data: [hier['C-Level']||0, hier['Director']||0, hier['Gerente']||0, hier['Otros']||0], backgroundColor: ['#a855f7','#3b82f6','#22c55e','#334155'], borderWidth: 0 }]
+      datasets: [{ data: [hier['C-Level']||0, hier['Director']||0, hier['Gerente']||0, hier['Otros']||0], backgroundColor: doughnutBgs, borderWidth: 0 }]
     },
-    options: { plugins: { legend: { labels: { color: '#94a3b8', font: { size: 10 } } } }, cutout: '65%' }
+    options: { plugins: { legend: { labels: { color: txtColor, font: { size: 10 } } } }, cutout: '65%' }
   });
   const top10 = identified.slice(0,10);
   const cCountries = document.getElementById('chart-countries').getContext('2d');
@@ -1177,14 +1261,14 @@ function renderNetwork() {
     type: 'bar',
     data: {
       labels: top10.map(([k])=>k),
-      datasets: [{ data: top10.map(([,v])=>v), backgroundColor: '#3b82f6', borderRadius: 4 }]
+      datasets: [{ data: top10.map(([,v])=>v), backgroundColor: barBgColor, borderRadius: 4 }]
     },
     options: {
       indexAxis: 'y',
       plugins: { legend: { display: false } },
       scales: {
-        x: { ticks: { color: '#64748b', font:{size:9} }, grid: { color: '#1a2035' } },
-        y: { ticks: { color: '#94a3b8', font:{size:10} }, grid: { display: false } }
+        x: { ticks: { color: txtColor, font:{size:9} }, grid: { color: gridColor } },
+        y: { ticks: { color: txtColor, font:{size:10} }, grid: { display: false } }
       }
     }
   });
