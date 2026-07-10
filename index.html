@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Comercial - Tu Asistente de Prospección Personal</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- PapaParse (for CSV parsing) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#050608',
+                            card: '#0c0e12',
+                            border: '#1e293b',
+                            accent: '#3b82f6',
+                            highlight: '#a855f7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050608;
+            color: #f8fafc;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0c0e12;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased min-h-screen relative overflow-x-hidden">
+    <!-- Grid Pattern Background -->
+    <div class="absolute inset-0 opacity-[0.02] pointer-events-none" 
+         style="background-image: linear-gradient(#3b82f6 1px, transparent 1px), linear-gradient(90deg, #3b82f6 1px, transparent 1px); background-size: 40px 40px;">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 py-8 relative z-10">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-center border-b border-brand-border/40 pb-6 mb-8 gap-4">
+            <div class="flex items-center gap-3">
+                <div class="p-2.5 bg-brand-accent/20 rounded-xl border border-brand-accent/40 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                    <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 009 11c0-3.517 1.009-6.799 2.753-9.571m-3.44 2.04A13.916 13.916 0 009 11c0 3.517 1.009 6.799 2.753 9.571m3 0c1.744-2.772 2.753-6.053 2.753-9.57m-2.753-9.57A13.916 13.916 0 009 11"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight uppercase">Radar <span class="text-brand-accent">Comercial</span></h1>
+                    <p class="text-[9px] text-brand-accent/60 font-mono tracking-[0.3em] uppercase">100% Privado · Procesamiento Local</p>
+                </div>
+            </div>
+            <div class="text-[10px] font-mono text-gray-500 bg-brand-card px-3 py-1.5 rounded-lg border border-brand-border/30 flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.5)]"></div>
+                <span>TUS DATOS NUNCA SALEN DE TU COMPUTADORA</span>
+            </div>
+        </header>
+
+        <!-- Drag & Drop / File Upload -->
+        <div id="upload-container" class="transition-all duration-300">
+            <div class="max-w-xl mx-auto bg-brand-card border border-brand-border/50 p-8 rounded-3xl text-center shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-brand-highlight"></div>
+                <div class="w-16 h-16 bg-brand-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-accent">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                    </svg>
+                </div>
+                <h2 class="text-lg font-bold mb-2">Comienza a Minar tu Red</h2>
+                <p class="text-xs text-gray-400 mb-6 max-w-sm mx-auto">
+                    Exporta tu lista de contactos desde LinkedIn como archivo CSV y arrástralo aquí para ver tu dashboard de prospección.
+                </p>
+                
+                <label for="csv-file" class="cursor-pointer inline-flex items-center gap-2 px-6 py-3 bg-brand-accent hover:bg-blue-600 transition-colors text-xs font-bold uppercase tracking-widest rounded-xl text-white shadow-lg shadow-brand-accent/20 mb-4">
+                    Seleccionar Connections.csv
+                    <input type="file" id="csv-file" accept=".csv" class="hidden">
+                </label>
+                
+                <div class="text-[10px] text-gray-500 flex flex-col gap-1 items-center justify-center border-t border-brand-border/30 pt-6 mt-4">
+                    <span>💡 ¿Cómo descargar tu CSV en 1 minuto?</span>
+                    <a href="https://www.linkedin.com/psettings/member-data" target="_blank" class="text-brand-accent hover:underline">Configuración de datos de LinkedIn ↗</a>
+                    <span class="text-[9px] text-gray-600 italic">Marca "Mis contactos" y solicita el archivo ligero (tarda ~10 min).</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard View (Hidden by default) -->
+        <div id="dashboard-container" class="hidden space-y-6">
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-brand-card border border-brand-border/40 p-5 rounded-2xl">
+                    <span class="text-[10px] text-gray-500 font-mono uppercase tracking-wider block">Total Contactos</span>
+                    <span id="stat-total" class="text-3xl font-extrabold mt-1 block">0</span>
+                </div>
+                <div class="bg-brand-card border border-brand-border/40 p-5 rounded-2xl">
+                    <span class="text-[10px] text-gray-500 font-mono uppercase tracking-wider block">Nivel C-Level</span>
+                    <span id="stat-clevel" class="text-3xl font-extrabold mt-1 block text-brand-highlight">0</span>
+                </div>
+                <div class="bg-brand-card border border-brand-border/40 p-5 rounded-2xl">
+                    <span class="text-[10px] text-gray-500 font-mono uppercase tracking-wider block">Directores</span>
+                    <span id="stat-directors" class="text-3xl font-extrabold mt-1 block text-brand-accent">0</span>
+                </div>
+                <div class="bg-brand-card border border-brand-border/40 p-5 rounded-2xl">
+                    <span class="text-[10px] text-gray-500 font-mono uppercase tracking-wider block">Países Identificados</span>
+                    <span id="stat-countries" class="text-3xl font-extrabold mt-1 block text-green-400">0</span>
+                </div>
+            </div>
+
+            <!-- Filters & Search -->
+            <div class="flex flex-col lg:flex-row gap-4 bg-brand-card border border-brand-border/40 p-4 rounded-2xl">
+                <div class="flex-1 relative">
+                    <input type="text" id="search-input" placeholder="Buscar por nombre, cargo o empresa..." 
+                           class="w-full bg-brand-bg border border-brand-border/60 p-3 pl-10 rounded-xl text-xs outline-none focus:border-brand-accent transition-all text-gray-200">
+                    <div class="absolute left-3.5 top-3.5 text-gray-500">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <select id="country-filter" class="bg-brand-bg border border-brand-border/60 p-3 rounded-xl text-xs text-gray-400 outline-none focus:border-brand-accent">
+                        <option value="ALL">🇲🇽 Todos los Países</option>
+                    </select>
+                    <select id="hierarchy-filter" class="bg-brand-bg border border-brand-border/60 p-3 rounded-xl text-xs text-gray-400 outline-none focus:border-brand-accent">
+                        <option value="ALL">👑 Toda la Jerarquía</option>
+                        <option value="C-Level">C-Level</option>
+                        <option value="Director">Directores</option>
+                        <option value="Gerente">Gerentes</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contacts Table/List -->
+            <div class="bg-brand-card border border-brand-border/40 rounded-2xl overflow-hidden shadow-xl">
+                <div class="overflow-x-auto custom-scrollbar max-h-[500px]">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-brand-bg border-b border-brand-border/60 text-[10px] text-gray-500 font-mono uppercase tracking-wider">
+                                <th class="p-4 pl-6">Contacto</th>
+                                <th class="p-4">Cargo / Empresa</th>
+                                <th class="p-4">País Inferido</th>
+                                <th class="p-4 text-center">Filtro ICP</th>
+                                <th class="p-4 pr-6 text-right">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contacts-body" class="divide-y divide-brand-border/30 text-xs">
+                            <!-- Rows injected by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="no-results" class="hidden p-20 text-center text-gray-500 italic text-xs">
+                    No se encontraron contactos coincidentes con los filtros activos.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pitch Suggestion Modal -->
+    <div id="pitch-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-brand-card border border-brand-border/50 max-w-xl w-full rounded-3xl p-6 relative overflow-hidden shadow-2xl">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-brand-highlight"></div>
+            
+            <div class="flex justify-between items-start mb-6">
+                <div>
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-brand-accent">Sugerencia de Pitch</h3>
+                    <p id="modal-lead-name" class="text-lg font-extrabold text-white mt-1">Nombre</p>
+                    <p id="modal-lead-details" class="text-[10px] text-gray-400 font-mono">Cargo @ Empresa</p>
+                </div>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Pitch Selector (Toku / Netpay / General) -->
+            <div class="flex gap-2 mb-4 bg-brand-bg p-1 rounded-xl border border-brand-border/40">
+                <button onclick="setModalPitchType('Toku')" id="btn-pitch-toku" class="flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all bg-brand-accent text-white">💸 ICP Toku (Cobros)</button>
+                <button onclick="setModalPitchType('Netpay')" id="btn-pitch-netpay" class="flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all text-gray-400 hover:text-white">💳 ICP Netpay (POS)</button>
+                <button onclick="setModalPitchType('General')" id="btn-pitch-general" class="flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all text-gray-400 hover:text-white">🤝 Networking</button>
+            </div>
+
+            <!-- Pitch Text Area -->
+            <div class="relative bg-brand-bg border border-brand-border/60 p-4 rounded-xl mb-6">
+                <p id="pitch-text" class="text-xs text-gray-200 font-mono whitespace-pre-wrap leading-relaxed min-h-[120px]"></p>
+                <div class="absolute bottom-3 right-3 flex gap-2">
+                    <button onclick="toggleModalApproach()" id="btn-modal-approach" class="px-3 py-1.5 bg-brand-border hover:bg-gray-800 text-[9px] font-bold uppercase tracking-wider rounded-lg transition-all text-gray-300">Cambiar Enfoque</button>
+                    <button onclick="copyPitchToClipboard()" class="px-3 py-1.5 bg-brand-accent hover:bg-blue-600 text-[9px] font-bold uppercase tracking-wider rounded-lg text-white transition-all">Copiar</button>
+                </div>
+            </div>
+
+            <div class="text-[10px] text-gray-500 italic border-t border-brand-border/30 pt-4 flex gap-2 items-center justify-center">
+                <svg class="w-4 h-4 text-brand-highlight" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+                <span>Disclaimer: Revisa los datos reales antes de mandar el mensaje.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core App Logic -->
+    <script>
+        let allContacts = [];
+        let filteredContacts = [];
+        let activePitchLead = null;
+        let activePitchType = 'Toku'; // Toku, Netpay, General
+        let activeApproach = 'A'; // A: Corto/Directo, B: Valor/PDF
+
+        // UI Selectors
+        const uploadContainer = document.getElementById('upload-container');
+        const dashboardContainer = document.getElementById('dashboard-container');
+        const csvFileInput = document.getElementById('csv-file');
+
+        // File processing hook
+        csvFileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            Papa.parse(file, {
+                header: true,
+                skipEmptyLines: true,
+                complete: function(results) {
+                    processCSVData(results.data);
+                },
+                error: function(err) {
+                    alert("Error al procesar el archivo CSV: " + err.message);
+                }
+            });
+        });
+
+        // Parse CSV fields, clean text, and infer country + hierarchy
+        function processCSVData(data) {
+            allContacts = data.map((row, idx) => {
+                const firstName = row['First Name'] || '';
+                const lastName = row['Last Name'] || '';
+                const cleanName = cleanText(`${firstName} ${lastName}`);
+                const company = row['Company'] || '';
+                const position = row['Position'] || '';
+                const email = row['Email Address'] || '';
+                const url = row['URL'] || '';
+
+                const country = inferCountry(row);
+                const hierarchy = classifyHierarchy(position);
+
+                return {
+                    id: idx,
+                    name: cleanName,
+                    company: cleanText(company),
+                    position: cleanText(position),
+                    email: email,
+                    url: url,
+                    country: country,
+                    hierarchy: hierarchy
+                };
+            });
+
+            // Update filters and render
+            populateCountryFilter();
+            updateStats();
+            filterAndRender();
+
+            // Transition UI views
+            uploadContainer.classList.add('hidden');
+            dashboardContainer.classList.remove('hidden');
+        }
+
+        // Clean names, emojis, noise
+        function cleanText(str) {
+            if (!str) return '';
+            // Remove diacritics / normalize accents
+            let cleaned = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            // Remove common professional suffixes
+            cleaned = cleaned.replace(/\b(PMP|MBA|PhD|MSc|CSM|PO|LSSGB)\b/gi, '');
+            // Clean brackets/emojis
+            cleaned = cleaned.replace(/[^\w\s\.\-@:/]/gi, '');
+            return cleaned.trim();
+        }
+
+        // Infer country based on email domain and keywords in company/position
+        function inferCountry(row) {
+            const email = (row['Email Address'] || '').toLowerCase();
+            const company = (row['Company'] || '').toLowerCase();
+            const position = (row['Position'] || '').toLowerCase();
+
+            // 1. Email TLD Check
+            if (email.endsWith('.mx')) return 'México';
+            if (email.endsWith('.cl')) return 'Chile';
+            if (email.endsWith('.co')) return 'Colombia';
+            if (email.endsWith('.pe')) return 'Perú';
+            if (email.endsWith('.br')) return 'Brasil';
+
+            // 2. Keywords Checks (normalizing accents)
+            const textToScan = `${company} ${position}`.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            
+            if (/\b(mexico|cdmx|monterrey|guadalajara|cancun|queretaro|mx)\b/.test(textToScan)) return 'México';
+            if (/\b(chile|santiago|cl)\b/.test(textToScan)) return 'Chile';
+            if (/\b(colombia|bogota|medellin|co)\b/.test(textToScan)) return 'Colombia';
+            if (/\b(peru|lima|pe)\b/.test(textToScan)) return 'Perú';
+            if (/\b(brasil|brazil|sao paulo|rio)\b/.test(textToScan)) return 'Brasil';
+
+            return 'Desconocido';
+        }
+
+        // Classify hierarchy based on position keywords
+        function classifyHierarchy(pos) {
+            const p = pos.toLowerCase();
+            if (/\b(ceo|cfo|cto|cmo|cro|coo|founder|fundador|cofounder|director general|managing director)\b/.test(p)) {
+                return 'C-Level';
+            }
+            if (/\b(director|head|vp|vicepresident|vicepresidente|lead)\b/.test(p)) {
+                return 'Director';
+            }
+            if (/\b(gerente|manager|leads|responsable|jefe)\b/.test(p)) {
+                return 'Gerente';
+            }
+            return 'Otros';
+        }
+
+        // Stats calculation
+        function updateStats() {
+            document.getElementById('stat-total').innerText = allContacts.length;
+            document.getElementById('stat-clevel').innerText = allContacts.filter(c => c.hierarchy === 'C-Level').length;
+            document.getElementById('stat-directors').innerText = allContacts.filter(c => c.hierarchy === 'Director').length;
+            
+            const uniqueCountries = [...new Set(allContacts.map(c => c.country))].filter(c => c !== 'Desconocido').length;
+            document.getElementById('stat-countries').innerText = uniqueCountries;
+        }
+
+        // Dynamically add unique countries to dropdown filter
+        function populateCountryFilter() {
+            const countryFilter = document.getElementById('country-filter');
+            countryFilter.innerHTML = '<option value="ALL">🌎 Todos los Países</option>';
+            
+            const countries = [...new Set(allContacts.map(c => c.country))].sort();
+            countries.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c;
+                opt.innerText = c === 'México' ? '🇲🇽 México' :
+                                c === 'Chile' ? '🇨🇱 Chile' :
+                                c === 'Colombia' ? '🇨🇴 Colombia' :
+                                c === 'Perú' ? '🇵🇪 Perú' :
+                                c === 'Brasil' ? '🇧🇷 Brasil' : `📍 ${c}`;
+                countryFilter.appendChild(opt);
+            });
+        }
+
+        // Filters, search, and table render
+        const searchInput = document.getElementById('search-input');
+        const countryFilter = document.getElementById('country-filter');
+        const hierarchyFilter = document.getElementById('hierarchy-filter');
+
+        [searchInput, countryFilter, hierarchyFilter].forEach(el => {
+            el.addEventListener('input', filterAndRender);
+        });
+
+        function filterAndRender() {
+            const search = searchInput.value.toLowerCase();
+            const country = countryFilter.value;
+            const hierarchy = hierarchyFilter.value;
+
+            filteredContacts = allContacts.filter(c => {
+                const matchesSearch = c.name.toLowerCase().includes(search) || 
+                                      c.company.toLowerCase().includes(search) || 
+                                      c.position.toLowerCase().includes(search);
+                const matchesCountry = (country === 'ALL' || c.country === country);
+                const matchesHierarchy = (hierarchy === 'ALL' || c.hierarchy === hierarchy);
+
+                return matchesSearch && matchesCountry && matchesHierarchy;
+            });
+
+            renderTable();
+        }
+
+        function renderTable() {
+            const body = document.getElementById('contacts-body');
+            const noResults = document.getElementById('no-results');
+            body.innerHTML = '';
+
+            if (filteredContacts.length === 0) {
+                noResults.classList.remove('hidden');
+                return;
+            }
+            noResults.classList.add('hidden');
+
+            filteredContacts.forEach(c => {
+                // Check if ICP Match
+                const isTokuICP = c.hierarchy === 'C-Level' && (c.position.toLowerCase().includes('finance') || c.position.toLowerCase().includes('finanzas') || c.position.toLowerCase().includes('operations') || c.position.toLowerCase().includes('operaciones'));
+                const isNetpayICP = c.position.toLowerCase().includes('ecommerce') || c.position.toLowerCase().includes('retail') || c.position.toLowerCase().includes('sales') || c.position.toLowerCase().includes('ventas');
+                
+                let icpBadge = '';
+                if (isTokuICP) {
+                    icpBadge = '<span class="px-2 py-0.5 bg-green-500/10 text-green-400 text-[8px] font-black rounded border border-green-500/20 uppercase">Match Toku</span>';
+                } else if (isNetpayICP) {
+                    icpBadge = '<span class="px-2 py-0.5 bg-purple-500/10 text-purple-400 text-[8px] font-black rounded border border-purple-500/20 uppercase">Match Netpay</span>';
+                } else {
+                    icpBadge = '<span class="text-gray-600 text-[8px]">-</span>';
+                }
+
+                const row = document.createElement('tr');
+                row.className = "hover:bg-brand-border/10 transition-colors";
+                row.innerHTML = `
+                    <td class="p-4 pl-6 font-bold text-white">${c.name}</td>
+                    <td class="p-4">
+                        <div class="font-semibold text-gray-200">${c.position}</div>
+                        <div class="text-[10px] text-gray-400 font-mono">${c.company}</div>
+                    </td>
+                    <td class="p-4 text-gray-400">${c.country}</td>
+                    <td class="p-4 text-center">${icpBadge}</td>
+                    <td class="p-4 pr-6 text-right">
+                        <button onclick="openPitchModal(${c.id})" class="px-4 py-2 bg-brand-accent/20 hover:bg-brand-accent text-brand-accent hover:text-white border border-brand-accent/40 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all">
+                            Sugerir Pitch
+                        </button>
+                    </td>
+                `;
+                body.appendChild(row);
+            });
+        }
+
+        // Pitch Modal Controller
+        function openPitchModal(leadId) {
+            activePitchLead = allContacts.find(c => c.id === leadId);
+            activeApproach = 'A';
+            
+            // Auto select pitch type based on profile
+            const pos = activePitchLead.position.toLowerCase();
+            if (pos.includes('finance') || pos.includes('finanzas') || pos.includes('ops') || pos.includes('operaciones')) {
+                activePitchType = 'Toku';
+            } else if (pos.includes('ecommerce') || pos.includes('retail') || pos.includes('sales') || pos.includes('ventas')) {
+                activePitchType = 'Netpay';
+            } else {
+                activePitchType = 'General';
+            }
+
+            updateModalUI();
+            document.getElementById('pitch-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('pitch-modal').classList.add('hidden');
+        }
+
+        function setModalPitchType(type) {
+            activePitchType = type;
+            activeApproach = 'A';
+            updateModalUI();
+        }
+
+        function toggleModalApproach() {
+            activeApproach = activeApproach === 'A' ? 'B' : 'A';
+            updateModalUI();
+        }
+
+        function updateModalUI() {
+            const lead = activePitchLead;
+            if (!lead) return;
+
+            document.getElementById('modal-lead-name').innerText = lead.name;
+            document.getElementById('modal-lead-details').innerText = `${lead.position} @ ${lead.company}`;
+
+            // Buttons Highlight class
+            const btnToku = document.getElementById('btn-pitch-toku');
+            const btnNetpay = document.getElementById('btn-pitch-netpay');
+            const btnGeneral = document.getElementById('btn-pitch-general');
+
+            [btnToku, btnNetpay, btnGeneral].forEach(btn => {
+                btn.className = "flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all text-gray-400 hover:text-white";
+            });
+
+            if (activePitchType === 'Toku') {
+                btnToku.className = "flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all bg-brand-accent text-white shadow-lg shadow-brand-accent/20";
+            } else if (activePitchType === 'Netpay') {
+                btnNetpay.className = "flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all bg-brand-accent text-white shadow-lg shadow-brand-accent/20";
+            } else {
+                btnGeneral.className = "flex-1 py-2 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all bg-brand-accent text-white shadow-lg shadow-brand-accent/20";
+            }
+
+            // Generate Pitch String based on Type & Approach
+            const countryText = lead.country !== 'Desconocido' ? ` en ${lead.country}` : '';
+            const firstName = lead.name.split(' ')[0];
+            let pitch = '';
+
+            if (activePitchType === 'Toku') {
+                if (activeApproach === 'A') {
+                    pitch = `Hola ${firstName},\n\nVi que estás liderando la operación financiera en ${lead.company}${countryText}. Generalmente, conciliar los cobros recurrentes de miles de clientes es una pesadilla manual para los equipos de tesorería.\n\nNosotros automatizamos esa capa: cuenta virtual única por cliente y conciliación por SPEI instantánea. ¿Te hace sentido ver si podemos ahorrarle horas a tu equipo?`;
+                } else {
+                    pitch = `Hola ${firstName},\n\nTe escribo porque armamos un Blueprint de Cobranza Recurrente para empresas en ${lead.company}${countryText}. Muestra cómo automatizar el recaudo reduce los rechazos bancarios en un 18% sin cambiar de plataforma.\n\nTe lo dejo por aquí sin costo. Si después te interesa ver cómo se implementaría en tu empresa, platicamos 10 minutos.`;
+                }
+            } else if (activePitchType === 'Netpay') {
+                if (activeApproach === 'A') {
+                    pitch = `Hola ${firstName},\n\nDirigir la conversión en ${lead.company}${countryText} significa que cada carrito abandonado en el checkout te duele directamente. ¿Tienen medido cuánto revenue se les escapa por falsos rechazos en la pasarela?\n\nCon Netpay subimos la tasa de aprobación de tarjetas sin subir el riesgo de contracargos. ¿Le vemos 15 minutos?`;
+                } else {
+                    pitch = `Hola ${firstName},\n\nTe comparto un reporte corto sobre la Optimización de Checkout en eCommerce de Retail${countryText}. Analiza por qué los métodos de pago alternativos aumentan el ticket promedio.\n\nAvísame si te sirve y con gusto te platico cómo lo integramos sin alterar tu plataforma actual.`;
+                }
+            } else {
+                if (activeApproach === 'A') {
+                    pitch = `Hola ${firstName},\n\nGusto en saludarte. Vi tu trayectoria en ${lead.company} y tu rol en ${lead.position}. Encontré varios retos en común en la industria de pagos${countryText} y pensé que sería de valor conectar por aquí. Un saludo.`;
+                } else {
+                    pitch = `Hola ${firstName},\n\n¿Cómo van las cosas por ${lead.company}? Te escribo porque ando organizando una mesa redonda de networking virtual con profesionales del sector. Sería excelente contar con tu perspectiva. Avísame si te late.`;
+                }
+            }
+
+            document.getElementById('pitch-text').innerText = pitch;
+        }
+
+        function copyPitchToClipboard() {
+            const text = document.getElementById('pitch-text').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("¡Mensaje copiado al portapapeles!");
+            });
+        }
+    </script>
+</body>
+</html>
