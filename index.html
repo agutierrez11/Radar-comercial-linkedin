@@ -332,18 +332,41 @@
         <div class="upload-card">
           <div class="upload-icon">🗜️</div>
           <h2>Comienza a minar tu red</h2>
-          <p>Sube tu archivo ZIP de exportación de LinkedIn.<br>Todo se procesa localmente — tus datos nunca salen de tu navegador.</p>
+          <p>Sube tus archivos de exportación de LinkedIn.<br>Puedes subir varios ZIPs o CSVs (ej: si LinkedIn dividió tu descarga en 2 ZIPs). Todo local.</p>
           <div class="upload-zone" id="drop-zone" onclick="document.getElementById('zip-input').click()">
-            <p style="font-size:13px;font-weight:600;margin-bottom:4px">Arrastra tu ZIP aquí</p>
-            <p style="font-size:11px;color:var(--muted)">o haz clic para seleccionar</p>
-            <input type="file" id="zip-input" accept=".zip,.csv" style="display:none">
+            <p style="font-size:13px;font-weight:600;margin-bottom:4px">Arrastra tus archivos aquí</p>
+            <p style="font-size:11px;color:var(--muted)">ZIP completo o CSVs individuales (puedes seleccionar varios)</p>
+            <input type="file" id="zip-input" accept=".zip,.csv" style="display:none" multiple>
           </div>
           <button class="upload-btn" onclick="document.getElementById('zip-input').click()">
-            📁 Seleccionar archivo
+            📁 Seleccionar archivos
           </button>
+          
+          <div class="upload-status-card" id="upload-status" style="display:none; margin-top:20px; text-align:left; background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:15px;">
+            <h4 style="font-size:10px; margin-bottom:10px; color:var(--muted2); font-family:'JetBrains Mono', monospace; text-transform:uppercase; letter-spacing:0.05em;">Componentes Importados:</h4>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div id="status-connections" style="display:flex; align-items:center; gap:8px; font-size:11px;">
+                <span class="status-dot" style="width:8px; height:8px; border-radius:50%; background:var(--muted); flex-shrink:0;"></span>
+                <span>Contactos (Connections.csv): <strong style="color:var(--muted)">Pendiente</strong></span>
+              </div>
+              <div id="status-messages" style="display:flex; align-items:center; gap:8px; font-size:11px;">
+                <span class="status-dot" style="width:8px; height:8px; border-radius:50%; background:var(--muted); flex-shrink:0;"></span>
+                <span>Mensajes (messages.csv): <strong style="color:var(--muted)">Pendiente</strong></span>
+              </div>
+              <div id="status-positions" style="display:flex; align-items:center; gap:8px; font-size:11px;">
+                <span class="status-dot" style="width:8px; height:8px; border-radius:50%; background:var(--muted); flex-shrink:0;"></span>
+                <span>Cargos (Positions.csv): <strong style="color:var(--muted)">Pendiente</strong></span>
+              </div>
+            </div>
+            <div style="margin-top:15px; display:flex; gap:8px;">
+              <button class="mini-btn primary" id="btn-go-dashboard" style="flex:1; display:none;" onclick="navigate('network')">Ver Dashboard →</button>
+              <button class="mini-btn" id="btn-reset-data" style="flex:1;" onclick="resetAllData()">Limpiar</button>
+            </div>
+          </div>
+
           <div class="upload-hint">
             💡 ¿Cómo exportar? <a href="https://www.linkedin.com/psettings/member-data" target="_blank">Configuración de datos de LinkedIn ↗</a><br>
-            <span style="color:var(--muted)">Marca "Mis contactos" y solicita el archivo completo (~10 min).</span>
+            <span style="color:var(--muted)">Marca "Mis contactos" y solicita el archivo completo. Si pesa mucho, te darán 2 partes.</span>
           </div>
         </div>
       </div>
@@ -522,6 +545,12 @@ const S = {
   activeSection: 'upload',
   pitchLead: null,
   pitchApproach: 'directo',
+  loadedParts: {
+    connections: false,
+    positions: false,
+    messages: false,
+    profile: false
+  },
   criteria: [
     { id: 'no_company',   label: 'Sin empresa registrada',          on: true,  fn: c => !c.company },
     { id: 'no_position',  label: 'Sin cargo registrado',             on: true,  fn: c => !c.position },
@@ -644,8 +673,8 @@ function connectedYearsAgo(str) {
 // FILE PROCESSING
 // ═══════════════════════════════════════════════════════════════════════
 document.getElementById('zip-input').addEventListener('change', e => {
-  const f = e.target.files[0];
-  if (f) handleFile(f);
+  const files = e.target.files;
+  if (files && files.length > 0) handleFiles(Array.from(files));
 });
 
 const dropZone = document.getElementById('drop-zone');
@@ -654,90 +683,116 @@ dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-ove
 dropZone.addEventListener('drop', e => {
   e.preventDefault();
   dropZone.classList.remove('drag-over');
-  if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+  if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+    handleFiles(Array.from(e.dataTransfer.files));
+  }
 });
 
-async function handleFile(file) {
+async function handleFiles(files) {
   setLoading(true, 10);
-  const name = file.name.toLowerCase();
-  try {
-    if (name.endsWith('.zip')) {
-      const zip = await JSZip.loadAsync(file);
-      setLoading(true, 30);
-      await processZip(zip);
-    } else if (name.endsWith('.csv')) {
-      await processCSVOnly(file);
-    } else {
-      throw new Error("Formato de archivo no soportado. Por favor sube un archivo .zip exportado de LinkedIn o un .csv de contactos válido.");
+  let processedAny = false;
+  let errors = [];
+
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    const name = file.name.toLowerCase();
+    const progress = Math.round(10 + (i / files.length) * 80);
+    setLoading(true, progress);
+
+    try {
+      if (name.endsWith('.zip')) {
+        const zip = await JSZip.loadAsync(file);
+        const didProcess = await processZip(zip);
+        if (didProcess) processedAny = true;
+      } else if (name.endsWith('.csv')) {
+        const didProcess = await processCSVOnly(file);
+        if (didProcess) processedAny = true;
+      } else {
+        errors.push(`${file.name}: Formato no soportado.`);
+      }
+    } catch(err) {
+      errors.push(`${file.name}: ${err.message}`);
     }
-  } catch(err) {
-    alert('⚠️ Error de Importación:\n\n' + err.message + '\n\nAsegúrate de que estás subiendo el archivo exportado directamente desde LinkedIn.');
+  }
+
+  if (processedAny) {
+    finalize();
+  }
+
+  if (errors.length > 0) {
+    alert("⚠️ Alertas de Importación:\n\n" + errors.join("\n"));
   }
   setLoading(false);
 }
 
 async function processZip(zip) {
   const files = Object.keys(zip.files);
+  let foundAny = false;
 
-  // Validate connections file presence
-  const connFile = files.find(f => /connection/i.test(f) && f.endsWith('.csv'));
-  if (!connFile) {
-    throw new Error("No se encontró el archivo de contactos ('Connections.csv') dentro del ZIP. Asegúrate de marcar 'Mis contactos' al solicitar la copia de seguridad de datos en LinkedIn.");
-  }
-
-  // Profile
+  // 1. Profile
   const profileFile = files.find(f => f.includes('Profile.csv'));
   if (profileFile) {
     const txt = await zip.files[profileFile].async('string');
     const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true });
     if (parsed.data[0]) {
       S.ownerName = `${parsed.data[0]['First Name']||''} ${parsed.data[0]['Last Name']||''}`.trim();
+      S.loadedParts.profile = true;
+      foundAny = true;
     }
   }
 
-  setLoading(true, 50);
-
-  // Positions
+  // 2. Positions
   const posFile = files.find(f => f.includes('Positions.csv'));
   if (posFile) {
     const txt = await zip.files[posFile].async('string');
     const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true });
-    S.positions = parsed.data.map(r => ({
+    const parsedPos = parsed.data.map(r => ({
       company: r['Company Name'] || '',
       title: r['Title'] || '',
       start: r['Started On'] || '',
       end: r['Finished On'] || ''
     })).filter(p => p.company || p.title);
+    
+    if (parsedPos.length > 0) {
+      S.positions = parsedPos;
+      S.loadedParts.positions = true;
+      foundAny = true;
+    }
   }
 
-  setLoading(true, 65);
-
-  // Connections
-  const txt = await zip.files[connFile].async('string');
-  const lines = txt.split('\n');
-  const startIdx = lines.findIndex(l => l.includes('First Name'));
-  if (startIdx === -1) {
-    throw new Error("El archivo 'Connections.csv' no contiene el formato oficial de LinkedIn (falta la cabecera 'First Name').");
+  // 3. Connections
+  const connFile = files.find(f => /connection/i.test(f) && f.endsWith('.csv'));
+  if (connFile) {
+    const txt = await zip.files[connFile].async('string');
+    const lines = txt.split('\n');
+    const startIdx = lines.findIndex(l => l.includes('First Name'));
+    if (startIdx !== -1) {
+      const csvData = lines.slice(startIdx).join('\n');
+      const parsed = Papa.parse(csvData, { header: true, skipEmptyLines: true });
+      if (parsed.data && parsed.data.length > 0) {
+        buildContacts(parsed.data);
+        S.loadedParts.connections = true;
+        foundAny = true;
+      }
+    }
   }
-  const csvData = lines.slice(startIdx).join('\n');
-  const parsed = Papa.parse(csvData, { header: true, skipEmptyLines: true });
-  if (!parsed.data || parsed.data.length === 0) {
-    throw new Error("El archivo 'Connections.csv' está vacío o no contiene registros válidos.");
-  }
-  buildContacts(parsed.data);
 
-  setLoading(true, 80);
-
-  // Messages
+  // 4. Messages
   const msgFile = files.find(f => f === 'messages.csv' || f.endsWith('/messages.csv'));
   if (msgFile) {
     const txt = await zip.files[msgFile].async('string');
     const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true });
-    S.messages = parsed.data;
+    if (parsed.data && parsed.data.length > 0) {
+      S.messages = parsed.data;
+      S.loadedParts.messages = true;
+      foundAny = true;
+    }
   }
 
-  setLoading(true, 95);
-  finalize();
+  if (!foundAny) {
+    throw new Error("No se encontraron archivos oficiales de LinkedIn (como Connections.csv, Profile.csv o messages.csv) en este ZIP.");
+  }
+  return true;
 }
 
 async function processCSVOnly(file) {
@@ -746,17 +801,40 @@ async function processCSVOnly(file) {
       header: true, skipEmptyLines: true,
       complete: r => {
         if (!r.data || r.data.length === 0) {
-          reject(new Error("El archivo CSV está vacío. Por favor sube un archivo con registros de contactos."));
+          reject(new Error("El archivo CSV está vacío."));
           return;
         }
-        // Check for common headers
+        
         const firstRow = r.data[0];
+        
+        // 1. Is it Positions?
+        if ('Company Name' in firstRow || 'Company name' in firstRow || 'Started On' in firstRow) {
+          S.positions = r.data.map(r => ({
+            company: r['Company Name'] || r['Company name'] || '',
+            title: r['Title'] || r['title'] || '',
+            start: r['Started On'] || r['Started on'] || '',
+            end: r['Finished On'] || r['Finished on'] || ''
+          })).filter(p => p.company || p.title);
+          S.loadedParts.positions = true;
+          resolve(true);
+          return;
+        }
+
+        // 2. Is it Messages?
+        if ('CONVERSATION ID' in firstRow || 'Conversation ID' in firstRow || ('From' in firstRow && 'Content' in firstRow)) {
+          S.messages = r.data;
+          S.loadedParts.messages = true;
+          resolve(true);
+          return;
+        }
+
+        // 3. Else treat as Connections
         const hasFirstName = 'First Name' in firstRow || 'First name' in firstRow || 'first_name' in firstRow || 'Nombre' in firstRow;
         if (!hasFirstName) {
-          reject(new Error("El archivo CSV no contiene una columna de nombre reconocible (como 'First Name' o 'Nombre')."));
+          reject(new Error("El archivo CSV no contiene columnas reconocibles de LinkedIn (como First Name, Company Name, o Conversation ID)."));
           return;
         }
-        // Normalize rows to map expected properties
+
         const normalized = r.data.map(row => ({
           'First Name': row['First Name'] || row['First name'] || row['first_name'] || row['Nombre'] || '',
           'Last Name': row['Last Name'] || row['Last name'] || row['last_name'] || row['Apellido'] || '',
@@ -767,8 +845,8 @@ async function processCSVOnly(file) {
           'Connected On': row['Connected On'] || row['Connected on'] || row['Fecha de conexión'] || ''
         }));
         buildContacts(normalized);
-        finalize();
-        resolve();
+        S.loadedParts.connections = true;
+        resolve(true);
       },
       error: err => reject(err)
     });
@@ -776,7 +854,7 @@ async function processCSVOnly(file) {
 }
 
 function buildContacts(rows) {
-  S.contacts = rows.map((row, idx) => {
+  const newContacts = rows.map((row, idx) => {
     const fn = (row['First Name'] || '').trim();
     const ln = (row['Last Name'] || '').trim();
     const name = `${fn} ${ln}`.trim();
@@ -789,15 +867,16 @@ function buildContacts(rows) {
     const country = inferCountry(email, company, position);
     const hierarchy = inferHierarchy(position);
     const sector = inferSector(position, company);
-    return { id: idx, name, company, position, email, url, connectedOn, connectedYearsAgo: yearsAgo, country, hierarchy, sector, score: 0 };
+    return { id: S.contacts.length + idx, name, company, position, email, url, connectedOn, connectedYearsAgo: yearsAgo, country, hierarchy, sector, score: 0 };
   }).filter(c => c.name.length > 0);
-  // Score after building
-  S.contacts.forEach(c => { c.score = scoreContact(c); });
+  S.contacts = S.contacts.concat(newContacts);
 }
 
 function finalize() {
+  S.contacts.forEach(c => { c.score = scoreContact(c); });
   filteredContacts = [...S.contacts];
   icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
+  
   populateFilters();
   renderHeader();
   renderProfile();
@@ -806,14 +885,91 @@ function finalize() {
   renderPurgeCriteria();
   renderPurge();
   renderMessages();
-  navigate('network');
+  
+  updateUploadStatusUI();
   setLoading(false);
+}
+
+function updateUploadStatusUI() {
+  const statusDiv = document.getElementById('upload-status');
+  statusDiv.style.display = 'block';
+
+  // Connections
+  const dotConn = document.querySelector('#status-connections .status-dot');
+  const textConn = document.querySelector('#status-connections span');
+  if (S.loadedParts.connections) {
+    dotConn.style.background = 'var(--green)';
+    textConn.innerHTML = `Contactos (Connections.csv): <strong style="color:var(--green)">Cargados (${S.contacts.length.toLocaleString()})</strong>`;
+  } else {
+    dotConn.style.background = 'var(--muted)';
+    textConn.innerHTML = `Contactos (Connections.csv): <strong style="color:var(--muted)">Pendiente</strong>`;
+  }
+
+  // Messages
+  const dotMsg = document.querySelector('#status-messages .status-dot');
+  const textMsg = document.querySelector('#status-messages span');
+  if (S.loadedParts.messages) {
+    dotMsg.style.background = 'var(--green)';
+    textMsg.innerHTML = `Mensajes (messages.csv): <strong style="color:var(--green)">Cargados (${S.messages.length.toLocaleString()} mensajes)</strong>`;
+  } else {
+    dotMsg.style.background = 'var(--muted)';
+    textMsg.innerHTML = `Mensajes (messages.csv): <strong style="color:var(--muted)">Pendiente</strong>`;
+  }
+
+  // Positions
+  const dotPos = document.querySelector('#status-positions .status-dot');
+  const textPos = document.querySelector('#status-positions span');
+  if (S.loadedParts.positions) {
+    dotPos.style.background = 'var(--green)';
+    textPos.innerHTML = `Cargos (Positions.csv): <strong style="color:var(--green)">Cargados (${S.positions.length} posiciones)</strong>`;
+  } else {
+    dotPos.style.background = 'var(--muted)';
+    textPos.innerHTML = `Cargos (Positions.csv): <strong style="color:var(--muted)">Pendiente</strong>`;
+  }
+
+  // Show/hide Go to Dashboard button
+  const btnGo = document.getElementById('btn-go-dashboard');
+  if (S.loadedParts.connections) {
+    btnGo.style.display = 'block';
+  } else {
+    btnGo.style.display = 'none';
+  }
+}
+
+function resetAllData() {
+  if (confirm("¿Estás seguro de que deseas limpiar todos los datos importados?")) {
+    S.contacts = [];
+    S.positions = [];
+    S.ownerName = '';
+    S.messages = [];
+    S.filteredContacts = [];
+    S.purgeChecked.clear();
+    S.loadedParts = { connections: false, positions: false, messages: false, profile: false };
+    
+    // Reset badges
+    document.getElementById('nb-network').textContent = '–';
+    document.getElementById('nb-icp').textContent = '–';
+    document.getElementById('nb-purge').textContent = '–';
+    document.getElementById('nb-msgs').textContent = '–';
+    document.getElementById('header-kpis').style.display = 'none';
+    
+    // Reset UI
+    document.getElementById('zip-input').value = '';
+    document.getElementById('upload-status').style.display = 'none';
+    
+    alert("Datos limpiados con éxito.");
+    navigate('upload');
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════════
 // NAVIGATION
 // ═══════════════════════════════════════════════════════════════════════
 function navigate(sec) {
+  if (sec !== 'upload' && !S.loadedParts.connections) {
+    alert("⚠️ Carga primero tu archivo de contactos (Connections.csv) para habilitar el dashboard.");
+    return;
+  }
   S.activeSection = sec;
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
