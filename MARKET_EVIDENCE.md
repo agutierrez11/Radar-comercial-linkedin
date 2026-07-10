@@ -5,9 +5,13 @@ Este documento compila y analiza publicaciones recientes de líderes de opinión
 ---
 
 ## 1. Validación de la Caída de Alcance Orgánico ("Tierra Rentada")
-*   **Fuente:** Eros Castillo (Especialista en Email Marketing & CRM).
-*   **Evidencia:** El alcance orgánico promedio en LinkedIn ha caído brutalmente a niveles del **1% al 3%**. De cada 100 contactos, apenas 1 a 3 verán el contenido. 
-*   **Cita Clave:** *“Las redes sociales son solo una parcela en alquiler, que te pueden quitar mañana mismo… cambian el algoritmo y tienes que adaptarte de inmediato, o tu estrategia simplemente quedará obsoleta.”*
+*   **Fuente:** Richard van der Blom (Investigador líder global del algoritmo de LinkedIn) y Eros Castillo (Especialista en Email Marketing & CRM).
+*   **Evidencias Documentales y Estadísticas:** 
+    *   El alcance orgánico promedio en LinkedIn ha caído aproximadamente un **50% año contra año**.
+    *   La interacción y enganche (engagement) general en la plataforma cayó un **25%**.
+    *   El crecimiento orgánico de nuevos seguidores se ha desplomado un **59%**.
+    *   El alcance promedio de un post normal para cuentas comunes ronda apenas el **1% al 3%** de su base total de contactos.
+*   **Cita Clave (Eros Castillo):** *“Las redes sociales son solo una parcela en alquiler, que te pueden quitar mañana mismo… cambian el algoritmo y tienes que adaptarte de inmediato, o tu estrategia simplemente quedará obsoleta.”*
 *   **Encaje con Radar:** Valida la necesidad de exportar y adueñarse de los contactos (BYOD) para trazar un **Pad Comercial** directo en lugar de depender de la distribución pasiva y devaluada del feed de LinkedIn.
 
 ---
