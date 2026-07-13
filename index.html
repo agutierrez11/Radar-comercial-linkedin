@@ -295,6 +295,41 @@
     #loading-bar { position: fixed; top: 44px; left: 0; right: 0; height: 2px; background: var(--border); z-index: 150; display: none; }
     #loading-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--purple)); width: 0%; transition: width .3s; }
 
+    /* ── BENCHMARKS SECTION ── */
+    .benchmarks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 14px; }
+    .benchmark-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; transition: all 0.2s; position: relative; overflow: hidden; }
+    .benchmark-card.radar-style::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, var(--accent), var(--purple)); }
+    .bench-icon { font-size: 24px; margin-bottom: 8px; }
+    .bench-label { font-size: 11px; font-family: 'JetBrains Mono', monospace; color: var(--muted2); text-transform: uppercase; letter-spacing: .05em; }
+    .bench-rate { font-size: 28px; font-weight: 800; color: var(--text); margin: 6px 0; }
+    .bench-sub { font-size: 10px; color: var(--muted); margin-bottom: 10px; }
+    .bench-details { font-size: 11px; color: var(--muted2); line-height: 1.6; }
+    
+    .bench-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+    @media (max-width: 768px) {
+      .bench-row { grid-template-columns: 1fr; }
+    }
+    .bench-main-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+    .bench-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+    .bench-card-desc { font-size: 11px; color: var(--muted2); line-height: 1.5; }
+    
+    .sim-slider { -webkit-appearance: none; width: 100%; height: 6px; border-radius: 3px; background: var(--border); outline: none; margin: 12px 0; }
+    .sim-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); cursor: pointer; transition: transform 0.1s; }
+    .sim-slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+    
+    .sim-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 15px; }
+    .sim-stat { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px; text-align: center; }
+    .sim-stat.highlight { border-color: var(--green); background: rgba(16,185,129,0.02); }
+    .sim-stat-lbl { font-size: 9px; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; font-weight: 600; }
+    .sim-stat-val { font-size: 18px; font-weight: 800; font-family: 'JetBrains Mono', monospace; }
+    .sim-stat-sub { font-size: 9px; color: var(--muted2); margin-top: 4px; }
+    
+    .sim-conclusion { font-size: 11px; color: var(--muted2); margin-top: 15px; line-height: 1.5; padding: 10px; background: rgba(59,130,246,0.03); border-radius: 8px; border: 1px dashed rgba(59,130,246,0.18); }
+    
+    .industry-details-box { margin-top: 15px; display: flex; flex-direction: column; gap: 10px; }
+    .ind-badge-row { display: flex; gap: 8px; align-items: center; }
+    .ind-why { font-size: 11px; color: var(--muted2); line-height: 1.6; background: var(--bg); padding: 10px; border-radius: 8px; border: 1px solid var(--border); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
       :root { --sidebar: 48px; }
@@ -363,6 +398,10 @@
     <div class="nav-item" data-section="messages" onclick="navigate('messages')">
       <span class="nav-icon">💬</span><span>Mensajes</span>
       <span class="nav-badge" id="nb-msgs">–</span>
+    </div>
+    <div class="nav-section">Mercado</div>
+    <div class="nav-item" data-section="benchmarks" onclick="navigate('benchmarks')">
+      <span class="nav-icon">📊</span><span>Benchmarks B2B</span>
     </div>
   </nav>
 
@@ -542,6 +581,115 @@
       </div>
       <div id="messages-content">
         <div class="locked-state"><div class="lock-icon">🔒</div><p>Sube el ZIP completo de LinkedIn para desbloquear el análisis de mensajes.<br><span style="color:var(--muted);font-size:10px">El ZIP debe contener el archivo messages.csv</span></p></div>
+      </div>
+    </div>
+
+    <!-- ── BENCHMARKS ── -->
+    <div class="section" id="sec-benchmarks">
+      <div class="section-header">
+        <div>
+          <div class="section-title">📊 Benchmarks de Conversión B2B (2026)</div>
+          <div class="section-sub">Estadísticas reales de prospección en México y LATAM</div>
+        </div>
+      </div>
+
+      <!-- Comparison Grid -->
+      <div class="benchmarks-grid">
+        <div class="benchmark-card">
+          <div class="bench-icon">✉️</div>
+          <div class="bench-label">Email Frío (Outbound)</div>
+          <div class="bench-rate">1% - 3%</div>
+          <div class="bench-sub">Tasa de respuesta promedio</div>
+          <div class="bench-details">Cae a menos del 1% sin segmentación extrema. Elevado riesgo de spam por filtros SPF/DKIM (Google/Outlook 2026).</div>
+        </div>
+        <div class="benchmark-card">
+          <div class="bench-icon">📞</div>
+          <div class="bench-label">Llamadas (Cold Calling)</div>
+          <div class="bench-rate">3% - 6%</div>
+          <div class="bench-sub">Conversión Dial-to-Meeting</div>
+          <div class="bench-details">Canal de mayor confianza en México para manufactura y logística. Requiere mucho esfuerzo operativo.</div>
+        </div>
+        <div class="benchmark-card radar-style">
+          <div class="bench-icon">📡</div>
+          <div class="bench-label">LinkedIn (Warm Outbound)</div>
+          <div class="bench-rate">15% - 22%</div>
+          <div class="bench-sub">Tasa de respuesta a DMs</div>
+          <div class="bench-details">El canal más rentable en tecnología, fintech y servicios. Se dispara a 40%+ con relaciones templadas y ganchos de valor.</div>
+        </div>
+      </div>
+
+      <!-- Simulador & Info Row -->
+      <div class="bench-row">
+        <!-- Simulator Card -->
+        <div class="bench-main-card">
+          <div class="bench-card-title">🔌 Simulador de Alcance de Red ( Dunbar Budget )</div>
+          <div class="bench-card-desc">LinkedIn penaliza el alcance si tu red está llena de "peso muerto". Ajusta tu tamaño de red para ver la proyección.</div>
+          
+          <div style="margin: 20px 0;">
+            <div style="display:flex; justify-content:space-between; font-size:12px; font-family:'JetBrains Mono',monospace; margin-bottom:8px;">
+              <span>Tus conexiones estimadas:</span>
+              <span style="color:var(--accent); font-weight:700;" id="sim-conn-val">3,000</span>
+            </div>
+            <input type="range" min="500" max="10000" step="100" value="3000" class="sim-slider" id="sim-conn-slider" oninput="updateSim()">
+          </div>
+
+          <div class="sim-stats-grid">
+            <div class="sim-stat">
+              <div class="sim-stat-lbl">Peso Muerto (Inactivos/No ICP)</div>
+              <div class="sim-stat-val" id="sim-dead" style="color:var(--red)">1,500</div>
+              <div class="sim-stat-sub">Est. 50% de la red</div>
+            </div>
+            <div class="sim-stat">
+              <div class="sim-stat-lbl">Alcance Orgánico Actual</div>
+              <div class="sim-stat-val" id="sim-reach" style="color:var(--muted)">30 - 90</div>
+              <div class="sim-stat-sub">1% a 3% de tu red total</div>
+            </div>
+            <div class="sim-stat highlight">
+              <div class="sim-stat-lbl">Con Radar (Dunbar 150)</div>
+              <div class="sim-stat-val" id="sim-dunbar" style="color:var(--green)">60 - 75</div>
+              <div class="sim-stat-sub">40% a 50% de alcance activo</div>
+            </div>
+          </div>
+          <div class="sim-conclusion">
+            💡 <strong>La paradoja de LinkedIn 2026:</strong> Tener menos contactos, pero altamente calificados e interactivos, entrena al algoritmo para considerar tu perfil como "relevante", disparando tu visibilidad y tasa de respuesta.
+          </div>
+        </div>
+
+        <!-- Industry Card -->
+        <div class="bench-main-card">
+          <div class="bench-card-title">🏭 Comportamiento por Industria (México / LATAM)</div>
+          <div class="bench-card-desc">Selecciona un sector para ver cuál es el canal ganador y por qué.</div>
+          
+          <div style="margin: 15px 0;">
+            <select class="filter-input" id="bench-industry-select" style="width:100%; font-weight:600;" onchange="updateIndustryBench(this.value)">
+              <option value="tech">💻 SaaS / Tech / Fintech / Digital</option>
+              <option value="manufactura">🏭 Manufactura / Construcción / Logística</option>
+              <option value="finanzas">🏦 Servicios Financieros / Banca Regulada</option>
+              <option value="marketing">🎨 Marketing / Consultoría Estratégica</option>
+              <option value="salud">🏥 Salud / Educación / Gobierno</option>
+            </select>
+          </div>
+
+          <div id="industry-bench-details" class="industry-details-box">
+            <!-- populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Algorithmic Alert Section -->
+      <div class="alert-box" style="margin-top:14px; border: 1px solid var(--border); border-radius:10px; padding:15px; background:var(--surface);">
+        <div style="display:flex; gap:12px; align-items:flex-start;">
+          <div style="font-size:24px;">🚨</div>
+          <div>
+            <h4 style="font-size:13px; font-weight:700; margin-bottom:5px; color:var(--red);">Alerta Algorítmica 2026: Tasa de Aceptación a la Baja</h4>
+            <p style="font-size:11px; color:var(--muted2); line-height:1.6;">
+              Las tasas de aceptación de conexión en LinkedIn han caído del <strong>45% al 15%-25%</strong>. LinkedIn penaliza activamente las solicitudes genéricas en frío. Si tu tasa de aceptación cae por debajo del 20%, tu perfil puede ser catalogado como cuenta sospechosa de spam, reduciendo tu alcance orgánico y visibilidad de forma permanente.
+            </p>
+            <p style="font-size:11px; color:var(--green); margin-top:8px; font-weight:600;">
+              ✔ La Solución: Radar Comercial implementa un silo Zero-Knowledge local que te ayuda a priorizar relaciones templadas en tu propia red y la de tu equipo antes de enviar cualquier mensaje.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1070,7 +1218,7 @@ function resetAllData() {
 // NAVIGATION
 // ═══════════════════════════════════════════════════════════════════════
 function navigate(sec) {
-  if (sec !== 'upload' && !S.loadedParts.connections) {
+  if (sec !== 'upload' && sec !== 'benchmarks' && !S.loadedParts.connections) {
     alert("⚠️ Carga primero tu archivo de contactos (Connections.csv) para habilitar el dashboard.");
     return;
   }
@@ -1930,6 +2078,91 @@ function setLoading(on, pct) {
   if (on) { bar.style.display='block'; fill.style.width = (pct||0) + '%'; }
   else { fill.style.width='100%'; setTimeout(() => { bar.style.display='none'; fill.style.width='0%'; }, 400); }
 }
+
+// ═══════════════════════════════════════════════════════════════════════
+// BENCHMARKS B2B LOGIC
+// ═══════════════════════════════════════════════════════════════════════
+const IND_BENCH = {
+  tech: {
+    channel: "💻 LinkedIn + Email",
+    rate: "12% - 20% respuesta",
+    why: "<strong>Por qué:</strong> Los tomadores de decisiones (CTOs, CMOs, CFOs, Heads) están extremadamente activos en LinkedIn y consumen contenido de valor estratégico. El email sirve de soporte secundario para enviar casos de éxito detallados y propuestas comerciales formales.",
+    badge: "badge-green"
+  },
+  manufactura: {
+    channel: "🏭 Llamadas + WhatsApp",
+    rate: "3% - 6% dial-to-meeting",
+    why: "<strong>Por qué:</strong> Decisiones más tradicionales y operativas. Los gerentes de compras, operaciones y planta en México prefieren el contacto directo y cercano. WhatsApp es muy efectivo para dar seguimiento y cerrar cotizaciones velozmente.",
+    badge: "badge-amber"
+  },
+  finanzas: {
+    channel: "🏦 Email formal + LinkedIn",
+    rate: "10% - 18% respuesta",
+    why: "<strong>Por qué:</strong> Procesos con altos niveles de compliance y auditoría. El email institucional es obligatorio para registrar propuestas y presupuestos. LinkedIn se utiliza estratégicamente para establecer autoridad y confianza antes de intentar el contacto formal.",
+    badge: "badge-green"
+  },
+  marketing: {
+    channel: "🎨 LinkedIn (Autoridad)",
+    rate: "15% - 25% respuesta",
+    why: "<strong>Por qué:</strong> En consultoría y agencias se compra reputación. Los fundadores y directores responden muy bien a mensajes de LinkedIn que demuestren un caso de éxito directo o un diagnóstico rápido de sus problemas de negocio.",
+    badge: "badge-green"
+  },
+  salud: {
+    channel: "🏥 Email + Reuniones",
+    rate: "2% - 4% reply rate",
+    why: "<strong>Por qué:</strong> Canales institucionales lentos. Las decisiones de compra suelen pasar por comités directivos, licitaciones o directores médicos. El email formal es el medio de entrada oficial; el seguimiento presencial o telefónico es indispensable.",
+    badge: "badge-muted"
+  }
+};
+
+function updateSim() {
+  const slider = document.getElementById('sim-conn-slider');
+  const connValEl = document.getElementById('sim-conn-val');
+  const deadEl = document.getElementById('sim-dead');
+  const reachEl = document.getElementById('sim-reach');
+  const dunbarEl = document.getElementById('sim-dunbar');
+  
+  if (!slider) return;
+  const conn = parseInt(slider.value);
+  connValEl.textContent = conn.toLocaleString();
+  
+  // 50% dead weight on average
+  const dead = Math.round(conn * 0.5);
+  deadEl.textContent = dead.toLocaleString();
+  
+  // 1% to 3% organic reach
+  const rMin = Math.round(conn * 0.01);
+  const rMax = Math.round(conn * 0.03);
+  reachEl.textContent = `${rMin} - ${rMax}`;
+  
+  // Dunbar 150 target has 40% to 50% high engagement reach
+  // 150 * 0.4 = 60, 150 * 0.5 = 75
+  dunbarEl.textContent = "60 - 75";
+}
+
+function updateIndustryBench(ind) {
+  const data = IND_BENCH[ind];
+  const box = document.getElementById('industry-bench-details');
+  if (!data || !box) return;
+  
+  box.innerHTML = `
+    <div class="ind-badge-row">
+      <span style="font-size:11px; color:var(--muted2)">Canal Ganador:</span>
+      <span class="badge ${data.badge}">${data.channel}</span>
+    </div>
+    <div class="ind-badge-row">
+      <span style="font-size:11px; color:var(--muted2)">Conversión Esperada:</span>
+      <span class="badge badge-others" style="font-family:'JetBrains Mono',monospace;">${data.rate}</span>
+    </div>
+    <div class="ind-why">${data.why}</div>
+  `;
+}
+
+// Initialize benchmarks page on load
+document.addEventListener('DOMContentLoaded', () => {
+  updateSim();
+  updateIndustryBench('tech');
+});
 </script>
 </body>
 </html>
