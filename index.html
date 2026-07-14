@@ -2427,7 +2427,9 @@ function saveContactCrm(contactId, status, notes, customData) {
 
   const key = getContactCrmKey(c);
   c.crmStatus = status;
-  c.crmNotes = notes || '';
+  if (notes !== undefined) {
+    c.crmNotes = notes || '';
+  }
   c.crmDate = new Date().toISOString().slice(0, 10);
 
   if (customData) {
@@ -2487,14 +2489,9 @@ function saveModalCrm(silent) {
 
   const c = S.pitchLead;
   
-  // Si hay notas o cambios en nombre/cargo/empresa, pero el estado sigue en Ninguno (Sin Contactar),
-  // promovemos automáticamente a 'Lead' para ingresar en el Pipeline Kanban.
-  const hasChanges = (name !== (c.customName || c.name)) || 
-                     (position !== (c.customPosition || c.position)) || 
-                     (company !== (c.customCompany || c.company)) || 
-                     notes;
-                     
-  if (status === 'Ninguno' && hasChanges) {
+  // Si el estado es Ninguno (Sin Contactar), promovemos incondicionalmente a 'Lead'
+  // al hacer clic en Guardar Cambios para que ingrese directamente en el Pipeline.
+  if (status === 'Ninguno') {
     status = 'Lead';
     document.getElementById('modal-crm-status').value = 'Lead';
   }
@@ -2659,7 +2656,7 @@ function renderCRM() {
               <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px; border-top:1px solid var(--border); padding-top:6px; gap:4px;">
                 <span style="font-size:8px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:80px;">${countryFlag(c.country)}</span>
                 <div onclick="event.stopPropagation();">
-                  <select class="filter-input" style="font-size:8px; padding:1px 3px; border-radius:4px; height:auto; background:var(--surface); border-color:var(--border);" onchange="saveContactCrm(${c.id}, this.value, S.contacts.find(x => x.id === ${c.id}).crmNotes)">
+                  <select class="filter-input" style="font-size:8px; padding:1px 3px; border-radius:4px; height:auto; background:var(--surface); border-color:var(--border);" onchange="saveContactCrm(${c.id}, this.value)">
                     <option value="Lead" ${c.crmStatus === 'Lead' ? 'selected' : ''}>Lead</option>
                     <option value="Pitch" ${c.crmStatus === 'Pitch' ? 'selected' : ''}>Pitch</option>
                     <option value="Conversacion" ${c.crmStatus === 'Conversacion' ? 'selected' : ''}>Conv</option>
