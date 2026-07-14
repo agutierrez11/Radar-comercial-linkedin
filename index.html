@@ -2576,6 +2576,7 @@ function renderCRM() {
   const board = document.getElementById('crm-kanban-board');
   const emptyState = document.getElementById('crm-empty-state');
   if (!board) return;
+  try {
 
   // Filtrar contactos con un estado de CRM activo
   let crmContacts = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno');
@@ -2654,7 +2655,7 @@ function renderCRM() {
                 <div class="crm-card-notes" title="${c.crmNotes}">${c.crmNotes}</div>
               ` : ''}
               <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px; border-top:1px solid var(--border); padding-top:6px; gap:4px;">
-                <span style="font-size:8px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:80px;">${countryFlag(c.country)}</span>
+                <span style="font-size:8px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:80px;">${countryFlag(c.country || '')}</span>
                 <div onclick="event.stopPropagation();">
                   <select class="filter-input" style="font-size:8px; padding:1px 3px; border-radius:4px; height:auto; background:var(--surface); border-color:var(--border);" onchange="saveContactCrm(${c.id}, this.value)">
                     <option value="Lead" ${c.crmStatus === 'Lead' ? 'selected' : ''}>Lead</option>
@@ -2676,6 +2677,12 @@ function renderCRM() {
       </div>
     `;
   }).join('');
+  } catch(err) {
+    console.error('[renderCRM ERROR]', err);
+    board.innerHTML = `<div style="grid-column:1/-1; padding:24px; text-align:center; color:var(--red); font-family:'JetBrains Mono',monospace; font-size:11px;">⚠️ Error al renderizar el pipeline: ${err.message}<br><small style='opacity:.6'>Abre la consola del navegador (F12) para ver el detalle completo.</small></div>`;
+    board.style.display = 'grid';
+    if (emptyState) emptyState.style.display = 'none';
+  }
 }
 
 function exportCrmCSV() {
