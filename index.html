@@ -1253,7 +1253,7 @@ function buildContacts(rows) {
     const country = inferCountry(email, company, position);
     const hierarchy = inferHierarchy(position);
     const sector = inferSector(position, company);
-    return { name, company, position, email, url, connectedOn, connectedYearsAgo: yearsAgo, country, hierarchy, sector, score: 0 };
+    return { name, company, position, originalName: name, originalCompany: company, originalPosition: position, email, url, connectedOn, connectedYearsAgo: yearsAgo, country, hierarchy, sector, score: 0 };
   }).filter(c => {
     if (c.name.length === 0) return false;
     const key = `${norm(c.name)}|${norm(c.company)}|${norm(c.position)}|${c.connectedOn}`;
@@ -2377,7 +2377,9 @@ function getContactCrmKey(c) {
   if (c.url && c.url.trim().length > 0) {
     return c.url.trim();
   }
-  return `${norm(c.name)}|${norm(c.company || '')}`;
+  const name = c.originalName || c.name || '';
+  const company = c.originalCompany || c.company || '';
+  return `${norm(name)}|${norm(company)}`;
 }
 
 function loadCrmState() {
@@ -2477,18 +2479,30 @@ function saveContactCrm(contactId, status, notes, customData) {
 
 function saveModalCrm(silent) {
   if (!S.pitchLead) return;
-  const status = document.getElementById('modal-crm-status').value;
+  let status = document.getElementById('modal-crm-status').value;
   const notes = document.getElementById('modal-crm-notes').value.trim();
   const name = document.getElementById('modal-crm-name-input').value.trim();
   const position = document.getElementById('modal-crm-pos-input').value.trim();
   const company = document.getElementById('modal-crm-comp-input').value.trim();
 
-  // Verificar si hay campos editados en local
   const c = S.pitchLead;
+  
+  // Si hay notas o cambios en nombre/cargo/empresa, pero el estado sigue en Ninguno (Sin Contactar),
+  // promovemos automáticamente a 'Lead' para ingresar en el Pipeline Kanban.
+  const hasChanges = (name !== (c.customName || c.name)) || 
+                     (position !== (c.customPosition || c.position)) || 
+                     (company !== (c.customCompany || c.company)) || 
+                     notes;
+                     
+  if (status === 'Ninguno' && hasChanges) {
+    status = 'Lead';
+    document.getElementById('modal-crm-status').value = 'Lead';
+  }
+
   const customData = {
-    name: name !== c.name ? name : (c.customName || ''),
-    position: position !== c.position ? position : (c.customPosition || ''),
-    company: company !== c.company ? company : (c.customCompany || '')
+    name: name !== c.originalName ? name : (c.customName || ''),
+    position: position !== c.originalPosition ? position : (c.customPosition || ''),
+    company: company !== c.originalCompany ? company : (c.customCompany || '')
   };
 
   saveContactCrm(c.id, status, notes, customData);
