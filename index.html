@@ -330,6 +330,19 @@
     .ind-badge-row { display: flex; gap: 8px; align-items: center; }
     .ind-why { font-size: 11px; color: var(--muted2); line-height: 1.6; background: var(--bg); padding: 10px; border-radius: 8px; border: 1px solid var(--border); }
 
+    /* ── CRM KANBAN ── */
+    .crm-pipeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 14px; align-items: start; }
+    .crm-column { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 8px; min-height: 480px; }
+    .crm-column-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid var(--border); margin-bottom: 4px; }
+    .crm-column-title { font-size: 10px; font-family: 'JetBrains Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+    .crm-column-count { font-size: 9px; background: var(--border); border: 1px solid var(--border2); padding: 1px 5px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; color: var(--muted2); }
+    .crm-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px; display: flex; flex-direction: column; gap: 6px; transition: transform 0.15s, border-color 0.15s; cursor: pointer; }
+    .crm-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .crm-card-name { font-size: 11px; font-weight: 700; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .crm-card-meta { font-size: 9px; color: var(--muted2); line-height: 1.4; }
+    .crm-card-notes { font-size: 9px; color: var(--muted); font-style: italic; background: rgba(255,255,255,0.01); padding: 5px; border-radius: 4px; border-left: 2px solid var(--border2); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.3; }
+    .edit-indicator { font-size: 8px; font-family: 'JetBrains Mono', monospace; color: var(--purple); display: inline-flex; align-items: center; gap: 2px; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
       :root { --sidebar: 48px; }
@@ -390,6 +403,10 @@
     <div class="nav-item" data-section="icp" onclick="navigate('icp')">
       <span class="nav-icon">🎯</span><span>ICP / Leads</span>
       <span class="nav-badge" id="nb-icp">–</span>
+    </div>
+    <div class="nav-item" data-section="crm" onclick="navigate('crm')">
+      <span class="nav-icon">📋</span><span>Mi Pipeline</span>
+      <span class="nav-badge" id="nb-crm">0</span>
     </div>
     <div class="nav-item" data-section="purge" onclick="navigate('purge')">
       <span class="nav-icon">🗑️</span><span>Dunbar Purge</span>
@@ -530,9 +547,78 @@
               <th>Nombre</th><th>Cargo / Empresa</th><th>País</th><th>Score ICP</th><th></th>
             </tr></thead>
             <tbody id="icp-tbody"></tbody>
-          </table>
+      </div>
+      <div class="no-results" id="icp-empty" style="display:none">No hay contactos con ese score mínimo.</div>
+      </div>
+    </div>
+
+    <!-- ── CRM PIPELINE ── -->
+    <div class="section" id="sec-crm">
+      <div class="section-header">
+        <div>
+          <div class="section-title">💼 Mi Pipeline Comercial (CRM Local)</div>
+          <div class="section-sub">Seguimiento local y privado de tus oportunidades calientes</div>
         </div>
-        <div class="no-results" id="icp-empty" style="display:none">No hay contactos con ese score mínimo.</div>
+        <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+          <button class="mini-btn" onclick="exportCrmCSV()" title="Exportar leads activos a CSV">↓ Exportar CSV</button>
+          <button class="mini-btn" onclick="exportCrmBackup()" title="Descargar copia de seguridad local del CRM">💾 Respaldar CRM (JSON)</button>
+          <button class="mini-btn" onclick="document.getElementById('crm-backup-file').click()" title="Restaurar copia de seguridad local">📂 Restaurar CRM</button>
+          <input type="file" id="crm-backup-file" accept=".json" style="display:none" onchange="importCrmBackup(this)">
+          <button class="mini-btn" id="btn-clear-crm" onclick="clearCRMData()" style="border-color:rgba(239,68,68,0.3); color:var(--red);">Limpiar CRM</button>
+        </div>
+      </div>
+
+      <!-- CRM Disclaimer (Datos Rotos) -->
+      <div class="disclaimer" style="margin-bottom:14px; background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.2); color:#93c5fd;">
+        <span class="disclaimer-icon">💡</span>
+        <span><strong>Tratamiento de Datos Rotos:</strong> La información de tu ZIP de LinkedIn puede ser histórica o desestructurada. Utiliza la ficha de cada contacto (botón Outreach / Tarjeta) para limpiar y corregir nombres, cargos o empresas localmente.</span>
+      </div>
+
+      <!-- CRM KPIs -->
+      <div class="kpi-row" style="margin-bottom:14px;">
+        <div class="kpi-card">
+          <div class="kpi-label">Leads Activos</div>
+          <div class="kpi-value" id="crm-kpi-active" style="color:var(--accent)">0</div>
+          <div class="kpi-sub">En seguimiento</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">En Conversación</div>
+          <div class="kpi-value" id="crm-kpi-conv" style="color:var(--amber)">0</div>
+          <div class="kpi-sub">Chats activos</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Reuniones</div>
+          <div class="kpi-value" id="crm-kpi-meet" style="color:#06b6d4">0</div>
+          <div class="kpi-sub">Demos agendadas</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Cerrados / Ganados</div>
+          <div class="kpi-value" id="crm-kpi-won" style="color:var(--green)">0</div>
+          <div class="kpi-sub">Bounty potencial</div>
+        </div>
+      </div>
+
+      <!-- CRM Filters -->
+      <div class="filter-bar" style="margin-bottom:14px;">
+        <input class="filter-input search" id="crm-search" type="text" placeholder="Buscar lead, empresa o notas..." oninput="renderCRM()">
+        <select class="filter-input" id="crm-filter-score" onchange="renderCRM()">
+          <option value="0">Todos los scores ICP</option>
+          <option value="60">Score ICP ≥ 60 (Clase A)</option>
+          <option value="80">Score ICP ≥ 80</option>
+        </select>
+      </div>
+
+      <div id="crm-empty-state" class="locked-state" style="display:none; background:var(--surface); border:1px solid var(--border); border-radius:12px;">
+        <div class="lock-icon">💼</div>
+        <h3>Tu Pipeline está vacío</h3>
+        <p style="margin-top:8px; max-width:400px; margin-left:auto; margin-right:auto;">
+          Añade contactos a tu pipeline desde <a href="#" onclick="navigate('network'); return false;" style="color:var(--accent); text-decoration:none; font-weight:600;">Mi Red</a> o <a href="#" onclick="navigate('icp'); return false;" style="color:var(--accent); text-decoration:none; font-weight:600;">ICP / Leads</a> abriendo su ficha de Outreach y seleccionando un estado de seguimiento.
+        </p>
+      </div>
+
+      <!-- Kanban Board -->
+      <div class="crm-pipeline-grid" id="crm-kanban-board">
+        <!-- Rendered dynamically by JS -->
       </div>
     </div>
 
@@ -714,7 +800,66 @@
     </div>
     <div class="modal-pitch" id="modal-pitch-text"></div>
     <div class="disclaimer" style="margin-bottom:12px"><span class="disclaimer-icon">⚠️</span><span>Revisa los datos reales del perfil antes de enviar. Los datos de LinkedIn pueden estar desactualizados.</span></div>
-    <div class="modal-actions">
+    
+    <!-- CRM Local & Limpieza de Datos -->
+    <div style="border-top: 1px solid var(--border); margin-top: 14px; padding-top: 12px; text-align:left;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <div style="font-size:10px; font-family:'JetBrains Mono',monospace; color:var(--purple); text-transform:uppercase; letter-spacing:.08em;">
+          Seguimiento & Limpieza del Lead (Local)
+        </div>
+        <div id="modal-crm-edit-indicator" class="edit-indicator" style="display:none;">
+          ✏️ Modificado localmente
+        </div>
+      </div>
+
+      <!-- Inputs de Edición para Datos Rotos -->
+      <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px; margin-bottom:10px;">
+        <div>
+          <label style="font-size:9px; color:var(--muted); display:block; margin-bottom:3px; font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Nombre</label>
+          <input class="filter-input" id="modal-crm-name-input" type="text" style="width:100%; font-size:11px; padding:4px 6px;" oninput="onModalDataChange()">
+        </div>
+        <div>
+          <label style="font-size:9px; color:var(--muted); display:block; margin-bottom:3px; font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Cargo</label>
+          <input class="filter-input" id="modal-crm-pos-input" type="text" style="width:100%; font-size:11px; padding:4px 6px;" oninput="onModalDataChange()">
+        </div>
+        <div>
+          <label style="font-size:9px; color:var(--muted); display:block; margin-bottom:3px; font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Empresa</label>
+          <input class="filter-input" id="modal-crm-comp-input" type="text" style="width:100%; font-size:11px; padding:4px 6px;" oninput="onModalDataChange()">
+        </div>
+      </div>
+
+      <!-- Estado y Notas -->
+      <div style="display:grid; grid-template-columns: 1.2fr 2fr; gap:8px; margin-bottom:10px;">
+        <div>
+          <label style="font-size:9px; color:var(--muted); display:block; margin-bottom:3px; font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Estado CRM</label>
+          <select class="filter-input" id="modal-crm-status" style="width:100%; font-size:11px; padding:4px 6px;">
+            <option value="Ninguno">Sin Contactar</option>
+            <option value="Lead">Por Contactar (Lead)</option>
+            <option value="Pitch">Pitch Enviado</option>
+            <option value="Conversacion">En Conversación</option>
+            <option value="Reunion">Reunión Agendada</option>
+            <option value="Cerrado">Cerrado / Ganado</option>
+            <option value="Descartado">Descartado</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:9px; color:var(--muted); display:block; margin-bottom:3px; font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Notas de Seguimiento</label>
+          <textarea class="filter-input" id="modal-crm-notes" placeholder="ej. Mostrar demo de semáforo de intros..." style="width:100%; font-size:11px; padding:4px 6px; height:28px; resize:none; font-family:'Outfit',sans-serif;"></textarea>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div id="modal-crm-date-wrap" style="font-size:9px; color:var(--muted); display:none;">
+          Última actualización: <span id="modal-crm-date">-</span>
+        </div>
+        <div style="margin-left:auto; display:flex; gap:6px;">
+          <button class="mini-btn" id="modal-crm-chat-btn" onclick="goToContactChat()" style="font-size:10px; padding:3px 8px; display:none;">💬 Ver Chat</button>
+          <button class="mini-btn primary" onclick="saveModalCrm()" style="font-size:10px; padding:4px 10px;">💾 Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-actions" style="margin-top:14px; border-top:1px solid var(--border); padding-top:12px;">
       <button class="mini-btn primary" onclick="copyPitch()" style="flex:1">📋 Copiar mensaje</button>
       <button class="mini-btn" onclick="closeModal()">Cerrar</button>
     </div>
@@ -1125,9 +1270,8 @@ function buildContacts(rows) {
 }
 
 function finalize() {
-  S.contacts.forEach(c => { c.score = scoreContact(c); });
+  loadCrmState();
   filteredContacts = [...S.contacts];
-  icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
   
   populateFilters();
   renderHeader();
@@ -1203,6 +1347,7 @@ function resetAllData() {
     document.getElementById('nb-icp').textContent = '–';
     document.getElementById('nb-purge').textContent = '–';
     document.getElementById('nb-msgs').textContent = '–';
+    document.getElementById('nb-crm').textContent = '0';
     document.getElementById('header-kpis').style.display = 'none';
     
     // Reset UI
@@ -1227,6 +1372,10 @@ function navigate(sec) {
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('sec-' + sec).classList.add('active');
   document.querySelector(`[data-section="${sec}"]`).classList.add('active');
+  
+  if (sec === 'crm') {
+    renderCRM();
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -1251,6 +1400,9 @@ function renderHeader() {
   const purgeCount = S.contacts.filter(c => isPurgeCandidate(c)).length;
   document.getElementById('nb-purge').textContent = purgeCount;
   document.getElementById('nb-msgs').textContent = S.messages.length > 0 ? S.messages.length.toLocaleString() : '–';
+  
+  const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno').length;
+  document.getElementById('nb-crm').textContent = crmCount;
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -1460,16 +1612,21 @@ function renderNetworkTable() {
   const empty = document.getElementById('net-empty');
   if (!filteredContacts.length) { tbody.innerHTML=''; empty.style.display='block'; return; }
   empty.style.display = 'none';
-  tbody.innerHTML = filteredContacts.map(c => `
-    <tr>
-      <td><div class="td-name">${c.name}</div></td>
-      <td><div class="td-sub" title="${c.position}">${c.position||'—'}</div><div class="td-sub" title="${c.company}" style="color:var(--muted)">${c.company||'—'}</div></td>
-      <td style="font-size:11px;white-space:nowrap">${countryFlag(c.country)}</td>
-      <td><span class="badge badge-muted" style="font-size:8px">${c.sector}</span></td>
-      <td>${hierarchyBadge(c.hierarchy)}</td>
-      <td><div class="score-wrap"><div class="score-bar"><div class="score-fill" style="width:${c.score}%;background:${scoreColor(c.score)}"></div></div><span class="score-num">${c.score}</span></div></td>
-      <td><button class="mini-btn" onclick="openModal(${c.id})">Pitch →</button></td>
-    </tr>`).join('');
+  tbody.innerHTML = filteredContacts.map(c => {
+    const crmBadge = c.crmStatus && c.crmStatus !== 'Ninguno' 
+      ? `<span class="badge" style="background:${scoreColorCrm(c.crmStatus)}; color:#fff; border:none; margin-right:4px; font-size:8px;">${c.crmStatus}</span>` 
+      : '';
+    return `
+      <tr>
+        <td><div class="td-name">${c.name}</div></td>
+        <td><div class="td-sub" title="${c.position}">${c.position||'—'}</div><div class="td-sub" title="${c.company}" style="color:var(--muted)">${c.company||'—'}</div></td>
+        <td style="font-size:11px;white-space:nowrap">${countryFlag(c.country)}</td>
+        <td><span class="badge badge-muted" style="font-size:8px">${c.sector}</span></td>
+        <td>${hierarchyBadge(c.hierarchy)}</td>
+        <td><div class="score-wrap"><div class="score-bar"><div class="score-fill" style="width:${c.score}%;background:${scoreColor(c.score)}"></div></div><span class="score-num">${c.score}</span></div></td>
+        <td style="white-space:nowrap; text-align:right;">${crmBadge}<button class="mini-btn" onclick="openModal(${c.id})">Outreach</button></td>
+      </tr>`;
+  }).join('');
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -1511,7 +1668,7 @@ function renderICPTable() {
   const minScore = parseInt(document.getElementById('icp-min-score').value)||0;
   const filtered = icpContacts.filter(c => {
     if (c.score < minScore) return false;
-    if (search && !norm(c.name).includes(search) && !norm(c.position).includes(search)) return false;
+    if (search && !norm(c.name).includes(search) && !norm(c.position).includes(search) && !norm(c.company || '').includes(search)) return false;
     return true;
   });
   document.getElementById('nb-icp').textContent = filtered.length;
@@ -1519,18 +1676,23 @@ function renderICPTable() {
   const empty = document.getElementById('icp-empty');
   if (!filtered.length) { tbody.innerHTML=''; empty.style.display='block'; return; }
   empty.style.display = 'none';
-  tbody.innerHTML = filtered.map(c => `
-    <tr>
-      <td><div class="td-name">${c.name}</div></td>
-      <td><div class="td-sub">${c.position||'—'}</div><div class="td-sub" style="color:var(--muted)">${c.company||'—'}</div></td>
-      <td style="font-size:11px">${countryFlag(c.country)}</td>
-      <td><div class="score-wrap">
-        <div class="score-bar" style="width:80px"><div class="score-fill" style="width:${c.score}%;background:${scoreColor(c.score)}"></div></div>
-        <span class="score-num">${c.score}</span>
-        <span class="badge ${c.score>=70?'badge-green':c.score>=45?'badge-amber':'badge-red'}">${c.score>=70?'Alto':c.score>=45?'Medio':'Bajo'}</span>
-      </div></td>
-      <td><button class="mini-btn primary" onclick="openModal(${c.id})">Pitch →</button></td>
-    </tr>`).join('');
+  tbody.innerHTML = filtered.map(c => {
+    const crmBadge = c.crmStatus && c.crmStatus !== 'Ninguno' 
+      ? `<span class="badge" style="background:${scoreColorCrm(c.crmStatus)}; color:#fff; border:none; margin-right:4px; font-size:8px;">${c.crmStatus}</span>` 
+      : '';
+    return `
+      <tr>
+        <td><div class="td-name">${c.name}</div></td>
+        <td><div class="td-sub">${c.position||'—'}</div><div class="td-sub" style="color:var(--muted)">${c.company||'—'}</div></td>
+        <td style="font-size:11px">${countryFlag(c.country)}</td>
+        <td><div class="score-wrap">
+          <div class="score-bar" style="width:80px"><div class="score-fill" style="width:${c.score}%;background:${scoreColor(c.score)}"></div></div>
+          <span class="score-num">${c.score}</span>
+          <span class="badge ${c.score>=70?'badge-green':c.score>=45?'badge-amber':'badge-red'}">${c.score>=70?'Alto':c.score>=45?'Medio':'Bajo'}</span>
+        </div></td>
+        <td style="white-space:nowrap; text-align:right;">${crmBadge}<button class="mini-btn primary" onclick="openModal(${c.id})">Outreach</button></td>
+      </tr>`;
+  }).join('');
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -1992,8 +2154,41 @@ function renderConversationsList() {
 // PITCH MODAL
 // ═══════════════════════════════════════════════════════════════════════
 function openModal(id) {
-  S.pitchLead = S.contacts.find(c => c.id === id);
+  const c = S.contacts.find(c => c.id === id);
+  if (!c) return;
+  S.pitchLead = c;
   S.pitchApproach = 'directo';
+
+  // Rellenar campos del CRM & Edición
+  document.getElementById('modal-crm-name-input').value = c.customName || c.name || '';
+  document.getElementById('modal-crm-pos-input').value = c.customPosition || c.position || '';
+  document.getElementById('modal-crm-comp-input').value = c.customCompany || c.company || '';
+  document.getElementById('modal-crm-status').value = c.crmStatus || 'Ninguno';
+  document.getElementById('modal-crm-notes').value = c.crmNotes || '';
+
+  const dateWrap = document.getElementById('modal-crm-date-wrap');
+  const dateSpan = document.getElementById('modal-crm-date');
+  if (c.crmDate) {
+    dateSpan.textContent = c.crmDate;
+    dateWrap.style.display = 'block';
+  } else {
+    dateWrap.style.display = 'none';
+  }
+
+  // Mostrar u ocultar botón de chat
+  const chatBtn = document.getElementById('modal-crm-chat-btn');
+  const nameNorm = norm(c.name);
+  const hasChat = S.messages && S.messages.length > 0 && S.conversations && S.conversations.some(conv => 
+    norm(conv.participant).includes(nameNorm)
+  );
+  if (hasChat) {
+    chatBtn.style.display = 'inline-flex';
+  } else {
+    chatBtn.style.display = 'none';
+  }
+
+  onModalDataChange(); // verificar indicador de modificado
+
   updatePitchModal();
   document.getElementById('pitch-modal').classList.add('open');
 }
@@ -2011,21 +2206,29 @@ function setPitchApproach(a) {
 function updatePitchModal() {
   const c = S.pitchLead;
   if (!c) return;
-  const firstName = c.name.split(' ')[0];
+
+  // Usar valores editados si existen en el modal, sino los del contacto
+  const name = document.getElementById('modal-crm-name-input').value.trim() || c.name;
+  const position = document.getElementById('modal-crm-pos-input').value.trim() || c.position;
+  const company = document.getElementById('modal-crm-comp-input').value.trim() || c.company;
+
+  const firstName = name.split(' ')[0];
   const activeIdx = S.activePositionIndex || 0;
   const activePos = S.positions[activeIdx];
   const myRole = activePos ? activePos.title : 'profesional en ventas';
   const myCompany = activePos ? activePos.company : 'mi empresa';
   const countryCtx = c.country !== 'Desconocido' ? ` en ${c.country}` : '';
-  document.getElementById('modal-name').textContent = c.name;
-  document.getElementById('modal-details').textContent = `${c.position} @ ${c.company}`;
+
+  document.getElementById('modal-name').textContent = name;
+  document.getElementById('modal-details').textContent = `${position} @ ${company}`;
+
   let pitch = '';
   if (S.pitchApproach === 'directo') {
-    pitch = `Hola ${firstName},\n\nVi que estás en ${c.position} en ${c.company}${countryCtx}. Desde mi experiencia como ${myRole} en ${myCompany}, he trabajado con equipos similares enfrentando retos de [personaliza con el pain point específico].\n\n¿Te hace sentido explorar si hay sinergia? Serían 15 minutos.`;
+    pitch = `Hola ${firstName},\n\nVi que estás en ${position} en ${company}${countryCtx}. Desde mi experiencia como ${myRole} en ${myCompany}, he trabajado con equipos similares enfrentando retos de [personaliza con el pain point específico].\n\n¿Te hace sentido explorar si hay sinergia? Serían 15 minutos.`;
   } else if (S.pitchApproach === 'valor') {
     pitch = `Hola ${firstName},\n\nTe comparto un recurso que armé sobre los principales retos en ${c.sector}${countryCtx}. Basado en mi trayectoria en ${myCompany}, creo que puede ser útil para alguien en tu posición.\n\n¿Te lo dejo sin costo? Si después quieres platicarlo, con gusto agendamos 10 minutos.`;
   } else {
-    pitch = `Hola ${firstName},\n\nGusto en saludarte. Tu trayectoria en ${c.company} y tu rol en ${c.position} me parecen muy interesantes.\n\nAndamos conectando con profesionales del sector ${c.sector} para compartir perspectivas. ¿Te apalancaría conectar?`;
+    pitch = `Hola ${firstName},\n\nGusto en saludarte. Tu trayectoria en ${company} y tu rol en ${position} me parecen muy interesantes.\n\nAndamos conectando con profesionales del sector ${c.sector} para compartir perspectivas. ¿Te apalancaría conectar?`;
   }
   document.getElementById('modal-pitch-text').textContent = pitch;
 }
@@ -2035,6 +2238,14 @@ function copyPitch() {
   navigator.clipboard.writeText(text).then(() => {
     const btn = document.querySelector('.modal-actions .mini-btn.primary');
     btn.textContent = '✅ Copiado';
+    
+    // Auto-update CRM a 'Pitch' si es Ninguno o Lead
+    const statusSel = document.getElementById('modal-crm-status');
+    if (statusSel && (statusSel.value === 'Ninguno' || statusSel.value === 'Lead')) {
+      statusSel.value = 'Pitch';
+      saveModalCrm(true); // Flag silencioso para que no aparezca el alert
+    }
+    
     setTimeout(() => btn.textContent = '📋 Copiar mensaje', 2000);
   });
 }
@@ -2156,6 +2367,366 @@ function updateIndustryBench(ind) {
     </div>
     <div class="ind-why">${data.why}</div>
   `;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// CRM LOCAL SYSTEM
+// ═══════════════════════════════════════════════════════════════════════
+
+function getContactCrmKey(c) {
+  if (c.url && c.url.trim().length > 0) {
+    return c.url.trim();
+  }
+  return `${norm(c.name)}|${norm(c.company || '')}`;
+}
+
+function loadCrmState() {
+  const raw = localStorage.getItem('radar_comercial_crm');
+  let db = {};
+  if (raw) {
+    try { db = JSON.parse(raw); } catch(e) {}
+  }
+  
+  S.contacts.forEach(c => {
+    const key = getContactCrmKey(c);
+    if (db[key]) {
+      c.crmStatus = db[key].status || 'Ninguno';
+      c.crmNotes = db[key].notes || '';
+      c.crmDate = db[key].date || '';
+      c.customName = db[key].customName || '';
+      c.customPosition = db[key].customPosition || '';
+      c.customCompany = db[key].customCompany || '';
+      
+      // Aplicar corrección local si existe
+      if (c.customName) c.name = c.customName;
+      if (c.customPosition) c.position = c.customPosition;
+      if (c.customCompany) c.company = c.customCompany;
+    } else {
+      c.crmStatus = 'Ninguno';
+      c.crmNotes = '';
+      c.crmDate = '';
+      c.customName = '';
+      c.customPosition = '';
+      c.customCompany = '';
+    }
+  });
+
+  // Re-evaluar scores e ICPs por si cambiaron de cargo/empresa
+  S.contacts.forEach(c => { c.score = scoreContact(c); });
+  icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
+  
+  const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno').length;
+  document.getElementById('nb-crm').textContent = crmCount;
+}
+
+function saveContactCrm(contactId, status, notes, customData) {
+  const c = S.contacts.find(x => x.id === contactId);
+  if (!c) return;
+
+  const key = getContactCrmKey(c);
+  c.crmStatus = status;
+  c.crmNotes = notes || '';
+  c.crmDate = new Date().toISOString().slice(0, 10);
+
+  if (customData) {
+    c.customName = customData.name || '';
+    c.customPosition = customData.position || '';
+    c.customCompany = customData.company || '';
+
+    // Guardar también en la referencia actual para visualización instantánea
+    if (c.customName) c.name = c.customName;
+    if (c.customPosition) c.position = c.customPosition;
+    if (c.customCompany) c.company = c.customCompany;
+  }
+
+  // Guardar en localStorage
+  const raw = localStorage.getItem('radar_comercial_crm');
+  let db = {};
+  if (raw) {
+    try { db = JSON.parse(raw); } catch(e) {}
+  }
+
+  if (status === 'Ninguno' && !c.crmNotes && !c.customName && !c.customPosition && !c.customCompany) {
+    delete db[key];
+  } else {
+    db[key] = {
+      status: status,
+      notes: c.crmNotes,
+      date: c.crmDate,
+      customName: c.customName,
+      customPosition: c.customPosition,
+      customCompany: c.customCompany
+    };
+  }
+
+  localStorage.setItem('radar_comercial_crm', JSON.stringify(db));
+
+  // Re-evaluar scores
+  c.score = scoreContact(c);
+  icpContacts = S.contacts.filter(x => x.score >= 60).sort((a,b) => b.score - a.score);
+
+  // Renderizar vistas
+  renderHeader();
+  renderNetwork();
+  renderICP();
+  renderPurge();
+  if (S.activeSection === 'crm') {
+    renderCRM();
+  }
+}
+
+function saveModalCrm(silent) {
+  if (!S.pitchLead) return;
+  const status = document.getElementById('modal-crm-status').value;
+  const notes = document.getElementById('modal-crm-notes').value.trim();
+  const name = document.getElementById('modal-crm-name-input').value.trim();
+  const position = document.getElementById('modal-crm-pos-input').value.trim();
+  const company = document.getElementById('modal-crm-comp-input').value.trim();
+
+  // Verificar si hay campos editados en local
+  const c = S.pitchLead;
+  const customData = {
+    name: name !== c.name ? name : (c.customName || ''),
+    position: position !== c.position ? position : (c.customPosition || ''),
+    company: company !== c.company ? company : (c.customCompany || '')
+  };
+
+  saveContactCrm(c.id, status, notes, customData);
+
+  // Actualizar UI del modal
+  const dateWrap = document.getElementById('modal-crm-date-wrap');
+  const dateSpan = document.getElementById('modal-crm-date');
+  if (dateWrap && dateSpan) {
+    dateSpan.textContent = new Date().toISOString().slice(0, 10);
+    dateWrap.style.display = 'block';
+  }
+
+  onModalDataChange();
+
+  if (!silent) {
+    const btn = document.querySelector('[onclick="saveModalCrm()"]');
+    if (btn) {
+      btn.textContent = '✅ Guardado';
+      setTimeout(() => btn.textContent = '💾 Guardar Cambios', 1500);
+    }
+  }
+}
+
+function onModalDataChange() {
+  const c = S.pitchLead;
+  if (!c) return;
+
+  const name = document.getElementById('modal-crm-name-input').value.trim();
+  const position = document.getElementById('modal-crm-pos-input').value.trim();
+  const company = document.getElementById('modal-crm-comp-input').value.trim();
+
+  const isNameChanged = name && name !== c.name && name !== (c.customName || c.name);
+  const isPosChanged = position && position !== c.position && position !== (c.customPosition || c.position);
+  const isCompChanged = company && company !== c.company && company !== (c.customCompany || c.company);
+
+  const indicator = document.getElementById('modal-crm-edit-indicator');
+  if (c.customName || c.customPosition || c.customCompany || isNameChanged || isPosChanged || isCompChanged) {
+    indicator.style.display = 'inline-flex';
+  } else {
+    indicator.style.display = 'none';
+  }
+  
+  // Reactualizar pitch por si cambiaron de nombre
+  updatePitchModal();
+}
+
+function goToContactChat() {
+  const c = S.pitchLead;
+  if (!c) return;
+  closeModal();
+  navigate('messages');
+  
+  // Buscar en el filtro de mensajes
+  const searchInput = document.getElementById('msg-search');
+  if (searchInput) {
+    searchInput.value = c.name;
+    renderConversationsList();
+  }
+}
+
+function scoreColorCrm(status) {
+  const map = {
+    'Lead': 'var(--accent)',
+    'Pitch': 'var(--purple)',
+    'Conversacion': 'var(--amber)',
+    'Reunion': '#06b6d4',
+    'Cerrado': 'var(--green)',
+    'Descartado': 'var(--red)'
+  };
+  return map[status] || 'var(--muted)';
+}
+
+function renderCRM() {
+  const board = document.getElementById('crm-kanban-board');
+  const emptyState = document.getElementById('crm-empty-state');
+  if (!board) return;
+
+  // Filtrar contactos con un estado de CRM activo
+  let crmContacts = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno');
+
+  // Filtros de búsqueda
+  const searchVal = norm(document.getElementById('crm-search').value);
+  const minScore = parseInt(document.getElementById('crm-filter-score').value);
+
+  if (searchVal) {
+    crmContacts = crmContacts.filter(c => 
+      norm(c.name).includes(searchVal) || 
+      norm(c.company || '').includes(searchVal) || 
+      norm(c.position || '').includes(searchVal) || 
+      norm(c.crmNotes || '').includes(searchVal)
+    );
+  }
+
+  if (minScore > 0) {
+    crmContacts = crmContacts.filter(c => c.score >= minScore);
+  }
+
+  // KPIs
+  const totalActive = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno' && c.crmStatus !== 'Cerrado' && c.crmStatus !== 'Descartado').length;
+  const totalConv = S.contacts.filter(c => c.crmStatus === 'Conversacion').length;
+  const totalMeet = S.contacts.filter(c => c.crmStatus === 'Reunion').length;
+  const totalWon = S.contacts.filter(c => c.crmStatus === 'Cerrado').length;
+
+  document.getElementById('crm-kpi-active').textContent = totalActive;
+  document.getElementById('crm-kpi-conv').textContent = totalConv;
+  document.getElementById('crm-kpi-meet').textContent = totalMeet;
+  document.getElementById('crm-kpi-won').textContent = totalWon;
+
+  const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno').length;
+  document.getElementById('nb-crm').textContent = crmCount;
+
+  if (crmContacts.length === 0 && !searchVal && minScore === 0) {
+    board.style.display = 'none';
+    emptyState.style.display = 'block';
+    return;
+  }
+
+  board.style.display = 'grid';
+  emptyState.style.display = 'none';
+
+  const columns = [
+    { id: 'Lead', label: 'Por Contactar', color: 'var(--accent)' },
+    { id: 'Pitch', label: 'Pitch Enviado', color: 'var(--purple)' },
+    { id: 'Conversacion', label: 'En Conversación', color: 'var(--amber)' },
+    { id: 'Reunion', label: 'Reunión / Demo', color: '#06b6d4' },
+    { id: 'Cerrado', label: 'Cerrado / Ganado', color: 'var(--green)' },
+    { id: 'Descartado', label: 'Descartado', color: 'var(--red)' }
+  ];
+
+  board.innerHTML = columns.map(col => {
+    const colLeads = crmContacts.filter(c => c.crmStatus === col.id);
+    return `
+      <div class="crm-column">
+        <div class="crm-column-header">
+          <span class="crm-column-title" style="color:${col.color}">${col.label}</span>
+          <span class="crm-column-count">${colLeads.length}</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px; overflow-y:auto; max-height:500px; padding-right:2px;">
+          ${colLeads.map(c => `
+            <div class="crm-card" onclick="openModal(${c.id})">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:4px;">
+                <div class="crm-card-name" title="${c.name}">${c.name}</div>
+                <div style="font-size:8px; font-family:'JetBrains Mono',monospace; padding:1px 3px; border-radius:4px; background:rgba(255,255,255,0.05); color:${scoreColor(c.score)}; flex-shrink:0;">
+                  ${c.score}
+                </div>
+              </div>
+              <div class="crm-card-meta">
+                <div style="font-weight:600; color:var(--text); text-overflow:ellipsis; overflow:hidden; white-space:nowrap;" title="${c.company}">${c.company || '—'}</div>
+                <div style="color:var(--muted2); text-overflow:ellipsis; overflow:hidden; white-space:nowrap; font-size:9px;" title="${c.position}">${c.position || '—'}</div>
+              </div>
+              ${c.crmNotes ? `
+                <div class="crm-card-notes" title="${c.crmNotes}">${c.crmNotes}</div>
+              ` : ''}
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px; border-top:1px solid var(--border); padding-top:6px; gap:4px;">
+                <span style="font-size:8px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:80px;">${countryFlag(c.country)}</span>
+                <div onclick="event.stopPropagation();">
+                  <select class="filter-input" style="font-size:8px; padding:1px 3px; border-radius:4px; height:auto; background:var(--surface); border-color:var(--border);" onchange="saveContactCrm(${c.id}, this.value, S.contacts.find(x => x.id === ${c.id}).crmNotes)">
+                    <option value="Lead" ${c.crmStatus === 'Lead' ? 'selected' : ''}>Lead</option>
+                    <option value="Pitch" ${c.crmStatus === 'Pitch' ? 'selected' : ''}>Pitch</option>
+                    <option value="Conversacion" ${c.crmStatus === 'Conversacion' ? 'selected' : ''}>Conv</option>
+                    <option value="Reunion" ${c.crmStatus === 'Reunion' ? 'selected' : ''}>Demo</option>
+                    <option value="Cerrado" ${c.crmStatus === 'Cerrado' ? 'selected' : ''}>Ganado</option>
+                    <option value="Descartado" ${c.crmStatus === 'Descartado' ? 'selected' : ''}>Desc</option>
+                    <option value="Ninguno">Eliminar</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+          ${colLeads.length === 0 ? `
+            <div style="font-size:9px; color:var(--muted); text-align:center; padding:16px; border:1px dashed var(--border); border-radius:8px; pointer-events:none;">Sin contactos</div>
+          ` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function exportCrmCSV() {
+  const crmLeads = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno');
+  if (!crmLeads.length) { alert('No hay leads en el CRM para exportar.'); return; }
+  
+  const fields = ['name','company','position','country','sector','hierarchy','score','crmStatus','crmNotes','crmDate','email','url'];
+  const rows = [fields.join(',')];
+  crmLeads.forEach(c => rows.push(fields.map(f => `"${String(c[f]||'').replace(/"/g,'""')}"`).join(',')));
+  downloadFile(rows.join('\n'), `radar_crm_pipeline_${new Date().toISOString().slice(0,10)}.csv`, 'text/csv;charset=utf-8;');
+}
+
+function clearCRMData() {
+  if (confirm("⚠️ ¿Estás seguro de que deseas vaciar todo tu CRM local? Esto eliminará todos los estados y notas guardadas permanentemente de tu navegador.")) {
+    localStorage.removeItem('radar_comercial_crm');
+    S.contacts.forEach(c => {
+      c.crmStatus = 'Ninguno';
+      c.crmNotes = '';
+      c.crmDate = '';
+      c.customName = '';
+      c.customPosition = '';
+      c.customCompany = '';
+    });
+    finalize();
+    alert("CRM limpiado con éxito.");
+  }
+}
+
+function exportCrmBackup() {
+  const raw = localStorage.getItem('radar_comercial_crm');
+  if (!raw || raw === '{}') {
+    alert("El CRM está vacío, no hay nada que respaldar.");
+    return;
+  }
+  downloadFile(raw, `radar_crm_backup_${new Date().toISOString().slice(0,10)}.json`, 'application/json;charset=utf-8;');
+}
+
+function importCrmBackup(input) {
+  const file = input.files[0];
+  if (!file) return;
+  
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (typeof data !== 'object' || data === null) {
+        throw new Error("El archivo no tiene el formato de copia de seguridad correcto.");
+      }
+      
+      // Guardar en localStorage
+      localStorage.setItem('radar_comercial_crm', JSON.stringify(data));
+      
+      // Recargar datos en memoria y re-renderizar
+      finalize();
+      
+      alert("🎉 Copia de seguridad del CRM restaurada con éxito.");
+    } catch (err) {
+      alert("❌ Error al restaurar la copia de seguridad: " + err.message);
+    }
+    input.value = ''; // Reset input
+  };
+  reader.readAsText(file);
 }
 
 // Initialize benchmarks page on load
