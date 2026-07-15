@@ -1659,7 +1659,18 @@ function renderNetworkTable() {
         <td><span class="badge badge-muted" style="font-size:8px">${c.sector}</span></td>
         <td>${hierarchyBadge(c.hierarchy)}</td>
         <td><div class="score-wrap"><div class="score-bar"><div class="score-fill" style="width:${c.score}%;background:${scoreColor(c.score)}"></div></div><span class="score-num">${c.score}</span></div></td>
-        <td style="white-space:nowrap; text-align:right;">${crmBadge}<button class="mini-btn" onclick="openModal(${c.id})">Outreach</button></td>
+        <td style="white-space:nowrap; text-align:right;">
+          <select class="filter-input" style="font-size:10px; padding:2px 4px; border-radius:6px; height:auto; width:95px; margin-right:6px; background:var(--surface); border:1px solid var(--border); color:var(--text); cursor:pointer;" onchange="saveContactCrm(${c.id}, this.value)">
+            <option value="Ninguno" ${c.crmStatus === 'Ninguno' || !c.crmStatus ? 'selected' : ''}>— Mover a —</option>
+            <option value="Lead" ${c.crmStatus === 'Lead' ? 'selected' : ''}>Lead</option>
+            <option value="Pitch" ${c.crmStatus === 'Pitch' ? 'selected' : ''}>Pitch</option>
+            <option value="Conversacion" ${c.crmStatus === 'Conversacion' ? 'selected' : ''}>Conv</option>
+            <option value="Reunion" ${c.crmStatus === 'Reunion' ? 'selected' : ''}>Demo</option>
+            <option value="Cerrado" ${c.crmStatus === 'Cerrado' ? 'selected' : ''}>Ganado</option>
+            <option value="Descartado" ${c.crmStatus === 'Descartado' ? 'selected' : ''}>Desc</option>
+          </select>
+          <button class="mini-btn" onclick="openModal(${c.id})">Outreach</button>
+        </td>
       </tr>`;
   }).join('');
 }
@@ -1725,7 +1736,18 @@ function renderICPTable() {
           <span class="score-num">${c.score}</span>
           <span class="badge ${c.score>=70?'badge-green':c.score>=45?'badge-amber':'badge-red'}">${c.score>=70?'Alto':c.score>=45?'Medio':'Bajo'}</span>
         </div></td>
-        <td style="white-space:nowrap; text-align:right;">${crmBadge}<button class="mini-btn primary" onclick="openModal(${c.id})">Outreach</button></td>
+        <td style="white-space:nowrap; text-align:right;">
+          <select class="filter-input" style="font-size:10px; padding:2px 4px; border-radius:6px; height:auto; width:95px; margin-right:6px; background:var(--surface); border:1px solid var(--border); color:var(--text); cursor:pointer;" onchange="saveContactCrm(${c.id}, this.value)">
+            <option value="Ninguno" ${c.crmStatus === 'Ninguno' || !c.crmStatus ? 'selected' : ''}>— Mover a —</option>
+            <option value="Lead" ${c.crmStatus === 'Lead' ? 'selected' : ''}>Lead</option>
+            <option value="Pitch" ${c.crmStatus === 'Pitch' ? 'selected' : ''}>Pitch</option>
+            <option value="Conversacion" ${c.crmStatus === 'Conversacion' ? 'selected' : ''}>Conv</option>
+            <option value="Reunion" ${c.crmStatus === 'Reunion' ? 'selected' : ''}>Demo</option>
+            <option value="Cerrado" ${c.crmStatus === 'Cerrado' ? 'selected' : ''}>Ganado</option>
+            <option value="Descartado" ${c.crmStatus === 'Descartado' ? 'selected' : ''}>Desc</option>
+          </select>
+          <button class="mini-btn primary" onclick="openModal(${c.id})">Outreach</button>
+        </td>
       </tr>`;
   }).join('');
 }
@@ -2539,6 +2561,11 @@ function saveContactCrm(contactId, status, notes, customData) {
   renderNetwork();
   renderICP();
   renderPurge();
+
+  const crmCount = S.contacts.filter(x => x.crmStatus && x.crmStatus !== 'Ninguno').length;
+  const nbCrmEl = document.getElementById('nb-crm');
+  if (nbCrmEl) nbCrmEl.textContent = crmCount;
+
   if (S.activeSection === 'crm') {
     renderCRM();
   }
@@ -2707,14 +2734,8 @@ function renderCRM() {
   const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno').length;
   document.getElementById('nb-crm').textContent = crmCount;
 
-  if (crmContacts.length === 0 && !searchVal && minScore === 0) {
-    board.style.display = 'none';
-    emptyState.style.display = 'block';
-    return;
-  }
-
   board.style.display = 'grid';
-  emptyState.style.display = 'none';
+  if (emptyState) emptyState.style.display = 'none';
 
   const columns = [
     { id: 'Lead', label: 'Por Contactar', color: 'var(--accent)' },
