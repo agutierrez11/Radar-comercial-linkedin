@@ -352,6 +352,24 @@
       .charts-row { grid-template-columns: 1fr; }
       .msg-stats { grid-template-columns: 1fr; }
     }
+
+    /* ── CRM QUICK-STATUS PILLS ── */
+    .crm-qbtn {
+      font-family: 'Outfit', sans-serif;
+      font-size: 10px; font-weight: 600;
+      padding: 3px 9px; border-radius: 20px;
+      border: 1px solid var(--border2);
+      background: transparent; color: var(--muted2);
+      cursor: pointer; transition: all .15s ease;
+      white-space: nowrap;
+    }
+    .crm-qbtn:hover { background: var(--border); color: var(--text); border-color: var(--accent); }
+    .crm-qbtn.active-Lead        { background: rgba(59,130,246,.18); color:#93c5fd; border-color:#3b82f6; }
+    .crm-qbtn.active-Pitch       { background: rgba(192,132,252,.18); color:#d8b4fe; border-color:#c084fc; }
+    .crm-qbtn.active-Conversacion{ background: rgba(245,158,11,.18);  color:#fcd34d; border-color:#f59e0b; }
+    .crm-qbtn.active-Reunion     { background: rgba(6,182,212,.18);   color:#67e8f9; border-color:#06b6d4; }
+    .crm-qbtn.active-Cerrado     { background: rgba(16,185,129,.18);  color:#6ee7b7; border-color:#10b981; }
+    .crm-qbtn.active-Descartado  { background: rgba(239,68,68,.18);   color:#fca5a5; border-color:#ef4444; }
   </style>
 </head>
 <body>
@@ -786,12 +804,22 @@
 <div class="modal-overlay" id="pitch-modal">
   <div class="modal">
     <div class="modal-header">
-      <div>
-        <div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Sugerencia de Pitch</div>
+      <div style="flex:1;">
+        <div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Outreach / Pipeline</div>
         <div id="modal-name" style="font-size:16px;font-weight:700"></div>
         <div id="modal-details" style="font-size:11px;color:var(--muted2);margin-top:2px"></div>
+        <!-- ── BARRA DE ESTADO CRM (visible al instante) ── -->
+        <div id="modal-crm-quick-bar" style="display:flex; gap:5px; margin-top:10px; flex-wrap:wrap;">
+          <span style="font-size:9px;font-family:'JetBrains Mono',monospace;color:var(--muted);align-self:center;text-transform:uppercase;letter-spacing:.05em;margin-right:2px;">Pipeline:</span>
+          <button id="qbtn-Lead"        class="crm-qbtn" onclick="quickSetCrm('Lead')"        title="Marcar como Lead (Por Contactar)">🎯 Lead</button>
+          <button id="qbtn-Pitch"       class="crm-qbtn" onclick="quickSetCrm('Pitch')"       title="Pitch enviado">📩 Pitch</button>
+          <button id="qbtn-Conversacion" class="crm-qbtn" onclick="quickSetCrm('Conversacion')" title="En conversación activa">💬 Conv.</button>
+          <button id="qbtn-Reunion"     class="crm-qbtn" onclick="quickSetCrm('Reunion')"     title="Reunión / Demo agendada">📅 Demo</button>
+          <button id="qbtn-Cerrado"     class="crm-qbtn" onclick="quickSetCrm('Cerrado')"     title="Cerrado / Ganado">✅ Ganado</button>
+          <button id="qbtn-Descartado"  class="crm-qbtn" onclick="quickSetCrm('Descartado')"  title="Descartar contacto">❌ Desc.</button>
+        </div>
       </div>
-      <button class="modal-close" onclick="closeModal()">✕</button>
+      <button class="modal-close" onclick="closeModal()" style="align-self:flex-start;">✕</button>
     </div>
     <div class="pitch-type-row">
       <button class="pitch-type-btn active" id="pt-directo" onclick="setPitchApproach('directo')">💬 Directo</button>
@@ -2189,12 +2217,42 @@ function openModal(id) {
 
   onModalDataChange(); // verificar indicador de modificado
 
+  syncCrmPills(c.crmStatus || 'Ninguno'); // resaltar pill activo
   updatePitchModal();
   document.getElementById('pitch-modal').classList.add('open');
 }
 
 function closeModal() { document.getElementById('pitch-modal').classList.remove('open'); }
 document.getElementById('pitch-modal').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+
+// Resalta el pill CRM activo en el modal
+function syncCrmPills(status) {
+  const statuses = ['Lead','Pitch','Conversacion','Reunion','Cerrado','Descartado'];
+  statuses.forEach(s => {
+    const btn = document.getElementById('qbtn-' + s);
+    if (!btn) return;
+    btn.className = 'crm-qbtn' + (s === status ? ' active-' + s : '');
+  });
+}
+
+// Click rápido en un pill del modal → guarda estado + actualiza Kanban
+function quickSetCrm(status) {
+  const c = S.pitchLead;
+  if (!c) return;
+  // Actualizar select oculto para mantener consistencia con saveModalCrm
+  const sel = document.getElementById('modal-crm-status');
+  if (sel) sel.value = status;
+  // Guardar directamente
+  saveContactCrm(c.id, status, c.crmNotes || '', null);
+  syncCrmPills(status);
+  // Feedback visual en el pill
+  const btn = document.getElementById('qbtn-' + status);
+  if (btn) {
+    const orig = btn.textContent;
+    btn.textContent = '✓ Guardado';
+    setTimeout(() => { btn.textContent = orig; }, 1200);
+  }
+}
 
 function setPitchApproach(a) {
   S.pitchApproach = a;
