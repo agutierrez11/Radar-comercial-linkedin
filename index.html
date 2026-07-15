@@ -1390,9 +1390,12 @@ function resetAllData() {
 // ═══════════════════════════════════════════════════════════════════════
 // NAVIGATION
 // ═══════════════════════════════════════════════════════════════════════
+// Secciones que SÍ requieren ZIP cargado
+const REQUIRES_ZIP = ['network', 'icp', 'purge', 'messages', 'profile'];
+
 function navigate(sec) {
-  if (sec !== 'upload' && sec !== 'benchmarks' && !S.loadedParts.connections) {
-    alert("⚠️ Carga primero tu archivo de contactos (Connections.csv) para habilitar el dashboard.");
+  if (REQUIRES_ZIP.includes(sec) && !S.loadedParts.connections) {
+    alert("⚠️ Carga primero tu archivo de contactos (Connections.csv) para habilitar esta sección.");
     return;
   }
   S.activeSection = sec;
@@ -1400,11 +1403,10 @@ function navigate(sec) {
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('sec-' + sec).classList.add('active');
   document.querySelector(`[data-section="${sec}"]`).classList.add('active');
-  
+
   if (sec === 'crm') {
-    // Esperar a que el DOM pinte la sección antes de calcular el grid
     const board = document.getElementById('crm-kanban-board');
-    if (board) board.style.display = 'grid'; // evitar flash de none
+    if (board) board.style.display = 'grid';
     requestAnimationFrame(() => {
       requestAnimationFrame(() => { renderCRM(); });
     });
@@ -2641,8 +2643,38 @@ function renderCRM() {
   if (!board) return;
   try {
 
-  // Filtrar contactos con un estado de CRM activo
-  let crmContacts = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno');
+  // Si no hay ZIP cargado pero sí hay CRM en localStorage, reconstruir desde ahí
+  let crmContacts;
+  if (S.contacts.length === 0) {
+    const raw = localStorage.getItem('radar_comercial_crm');
+    if (raw) {
+      try {
+        const db = JSON.parse(raw);
+        crmContacts = Object.entries(db)
+          .filter(([, v]) => v.status && v.status !== 'Ninguno')
+          .map(([key, v], i) => ({
+            id: i,
+            name: v.customName || key,
+            company: v.customCompany || '—',
+            position: v.customPosition || '—',
+            country: '',
+            sector: '',
+            hierarchy: '',
+            score: 0,
+            crmStatus: v.status,
+            crmNotes: v.notes || '',
+            crmDate: v.date || '',
+            email: '',
+            url: ''
+          }));
+      } catch(e) { crmContacts = []; }
+    } else {
+      crmContacts = [];
+    }
+  } else {
+    // Filtrar contactos con un estado de CRM activo
+    crmContacts = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno');
+  }
 
   // Filtros de búsqueda
   const searchVal = norm(document.getElementById('crm-search').value);
