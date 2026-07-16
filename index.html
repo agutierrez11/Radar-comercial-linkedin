@@ -2720,19 +2720,28 @@ function renderCRM() {
     crmContacts = crmContacts.filter(c => c.score >= minScore);
   }
 
-  // KPIs
-  const totalActive = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno' && c.crmStatus !== 'Cerrado' && c.crmStatus !== 'Descartado').length;
-  const totalConv = S.contacts.filter(c => c.crmStatus === 'Conversacion').length;
-  const totalMeet = S.contacts.filter(c => c.crmStatus === 'Reunion').length;
-  const totalWon = S.contacts.filter(c => c.crmStatus === 'Cerrado').length;
+  // KPIs — usamos crmContacts (ya cargados desde localStorage o S.contacts)
+  // para que funcionen tanto con ZIP como sin él
+  const allCrmEntries = S.contacts.length > 0
+    ? S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno')
+    : crmContacts;
 
-  document.getElementById('crm-kpi-active').textContent = totalActive;
-  document.getElementById('crm-kpi-conv').textContent = totalConv;
-  document.getElementById('crm-kpi-meet').textContent = totalMeet;
-  document.getElementById('crm-kpi-won').textContent = totalWon;
+  const totalActive = allCrmEntries.filter(c => c.crmStatus !== 'Cerrado' && c.crmStatus !== 'Descartado').length;
+  const totalConv = allCrmEntries.filter(c => c.crmStatus === 'Conversacion').length;
+  const totalMeet = allCrmEntries.filter(c => c.crmStatus === 'Reunion').length;
+  const totalWon = allCrmEntries.filter(c => c.crmStatus === 'Cerrado').length;
+  const crmCount = allCrmEntries.length;
 
-  const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno').length;
-  document.getElementById('nb-crm').textContent = crmCount;
+  const elActive = document.getElementById('crm-kpi-active');
+  const elConv   = document.getElementById('crm-kpi-conv');
+  const elMeet   = document.getElementById('crm-kpi-meet');
+  const elWon    = document.getElementById('crm-kpi-won');
+  const elNbCrm  = document.getElementById('nb-crm');
+  if (elActive) elActive.textContent = totalActive;
+  if (elConv)   elConv.textContent   = totalConv;
+  if (elMeet)   elMeet.textContent   = totalMeet;
+  if (elWon)    elWon.textContent    = totalWon;
+  if (elNbCrm)  elNbCrm.textContent  = crmCount;
 
   board.style.display = 'grid';
   if (emptyState) emptyState.style.display = 'none';
