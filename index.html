@@ -823,7 +823,10 @@
     <div class="modal-header">
       <div style="flex:1;">
         <div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Outreach / Pipeline</div>
-        <div id="modal-name" style="font-size:16px;font-weight:700"></div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div id="modal-name" style="font-size:16px;font-weight:700"></div>
+          <a id="modal-linkedin-url" href="#" target="_blank" style="display:none; font-size:9px; padding:2px 8px; background:rgba(10,102,194,0.1); color:#0a66c2; border-radius:12px; text-decoration:none; font-weight:700; border:1px solid rgba(10,102,194,0.2);">in Ver Perfil</a>
+        </div>
         <div id="modal-details" style="font-size:11px;color:var(--muted2);margin-top:2px"></div>
         <!-- ── BARRA DE ESTADO CRM (visible al instante) ── -->
         <div id="modal-crm-quick-bar" style="display:flex; gap:5px; margin-top:10px; flex-wrap:wrap;">
@@ -2396,6 +2399,14 @@ function updatePitchModal() {
 
   document.getElementById('modal-name').textContent = name;
   document.getElementById('modal-details').textContent = `${position} @ ${company}`;
+  
+  const lnkBtn = document.getElementById('modal-linkedin-url');
+  if (c.url && c.url.trim()) {
+    lnkBtn.href = c.url.trim();
+    lnkBtn.style.display = 'inline-block';
+  } else {
+    lnkBtn.style.display = 'none';
+  }
 
   let pitch = '';
   if (S.pitchApproach === 'directo') {
