@@ -623,7 +623,13 @@
         <div class="kpi-card">
           <div class="kpi-label">Cerrados / Ganados</div>
           <div class="kpi-value" id="crm-kpi-won" style="color:var(--green)">0</div>
-          <div class="kpi-sub">Bounty potencial</div>
+          <div class="kpi-sub">Bounty cobrado</div>
+        </div>
+        <div class="kpi-card" style="background:linear-gradient(135deg, var(--purple) 0%, #4f46e5 100%); color:#fff; border:none; position:relative; overflow:hidden; box-shadow:0 4px 15px rgba(126,34,206,0.3);">
+          <div style="position:absolute; top:-10px; right:-10px; font-size:60px; opacity:0.1; line-height:1;">💸</div>
+          <div class="kpi-label" style="color:rgba(255,255,255,0.8); border:none;">Valor de Pipeline</div>
+          <div class="kpi-value" id="crm-kpi-bounty" style="color:#fff;">$0</div>
+          <div class="kpi-sub" style="color:rgba(255,255,255,0.7);">@ $150 USD Bounty</div>
         </div>
       </div>
 
@@ -2812,17 +2818,31 @@ function renderCRM() {
   const totalConv = allCrmEntries.filter(c => c.crmStatus === 'Conversacion').length;
   const totalMeet = allCrmEntries.filter(c => c.crmStatus === 'Reunion').length;
   const totalWon = allCrmEntries.filter(c => c.crmStatus === 'Cerrado').length;
+  const totalLead = allCrmEntries.filter(c => c.crmStatus === 'Lead').length;
+  const totalPitch = allCrmEntries.filter(c => c.crmStatus === 'Pitch').length;
+  
+  // Pipeline Value Calculation (Business Impact)
+  const bountyPerWin = 150;
+  const pipeValue = (totalLead * 0.1 * bountyPerWin) + 
+                    (totalPitch * 0.2 * bountyPerWin) + 
+                    (totalConv * 0.4 * bountyPerWin) + 
+                    (totalMeet * 0.8 * bountyPerWin) + 
+                    (totalWon * 1.0 * bountyPerWin);
+                    
   const crmCount = allCrmEntries.length;
 
   const elActive = document.getElementById('crm-kpi-active');
   const elConv   = document.getElementById('crm-kpi-conv');
   const elMeet   = document.getElementById('crm-kpi-meet');
   const elWon    = document.getElementById('crm-kpi-won');
+  const elBounty = document.getElementById('crm-kpi-bounty');
   const elNbCrm  = document.getElementById('nb-crm');
+  
   if (elActive) elActive.textContent = totalActive;
   if (elConv)   elConv.textContent   = totalConv;
   if (elMeet)   elMeet.textContent   = totalMeet;
   if (elWon)    elWon.textContent    = totalWon;
+  if (elBounty) elBounty.textContent = '$' + pipeValue.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
   if (elNbCrm)  elNbCrm.textContent  = crmCount;
 
   board.style.display = 'grid';
