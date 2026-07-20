@@ -25,6 +25,8 @@
       --muted:    #64748b;
       --muted2:   #94a3b8;
       --sidebar:  180px;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
       
       --badge-clevel-bg: rgba(168,85,247,0.12);
       --badge-clevel-txt: #d8b4fe;
@@ -50,6 +52,8 @@
       --text:     #0f172a;
       --muted:    #64748b;
       --muted2:   #475569;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
       
       --badge-clevel-bg: #f3e8ff;
       --badge-clevel-txt: #7e22ce;
@@ -129,6 +133,7 @@
       background: var(--surface); border: 1px solid var(--border);
       border-radius: 20px; padding: 40px; max-width: 460px; width: 100%;
       text-align: center; position: relative; overflow: hidden;
+      box-shadow: var(--shadow-md);
     }
     .upload-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background: linear-gradient(90deg, var(--accent), var(--purple)); }
     .upload-icon { width: 56px; height: 56px; background: rgba(59,130,246,.1); border: 1px solid rgba(59,130,246,.3); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px; }
@@ -160,7 +165,7 @@
 
     /* ── CARDS / KPI ── */
     .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin-bottom: 14px; }
-    .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; transition: all 0.2s ease; }
+    .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; transition: all 0.2s ease; box-shadow: var(--shadow-sm); }
     .kpi-card[onclick] { cursor: pointer; }
     .kpi-card[onclick]:hover { border-color: var(--accent); background: rgba(59,130,246,0.03); transform: translateY(-1px); }
     .kpi-card.active-filter { border-color: var(--accent); background: rgba(59,130,246,0.06); box-shadow: 0 0 8px rgba(59,130,246,0.15); }
@@ -180,7 +185,7 @@
     select.filter-input { cursor: pointer; }
 
     /* ── TABLE ── */
-    .table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); }
     .compact-table { width: 100%; border-collapse: collapse; font-size: 12px; }
     .compact-table thead tr { background: var(--bg); border-bottom: 1px solid var(--border); }
     .compact-table th { padding: 8px 10px; text-align: left; font-size: 9px; font-family: 'JetBrains Mono', monospace; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; cursor: pointer; user-select: none; white-space: nowrap; }
@@ -455,9 +460,14 @@
             <p style="font-size:11px;color:var(--muted)">ZIP completo o CSVs individuales (puedes seleccionar varios)</p>
             <input type="file" id="zip-input" accept=".zip,.csv" style="display:none" multiple>
           </div>
-          <button class="upload-btn" onclick="document.getElementById('zip-input').click()">
-            📁 Seleccionar archivos
-          </button>
+          <div style="display:flex; gap:12px; justify-content:center; margin-bottom:12px; flex-wrap:wrap;">
+            <button class="upload-btn" onclick="document.getElementById('zip-input').click()">
+              📁 Seleccionar archivos
+            </button>
+            <button class="upload-btn" style="background:var(--surface); color:var(--text); border:1px solid var(--border);" onclick="loadDemoData()">
+              🚀 Cargar datos de prueba
+            </button>
+          </div>
           
           <div class="upload-status-card" id="upload-status" style="display:none; margin-top:20px; text-align:left; background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:15px;">
             <h4 style="font-size:10px; margin-bottom:10px; color:var(--muted2); font-family:'JetBrains Mono', monospace; text-transform:uppercase; letter-spacing:0.05em;">Componentes Importados:</h4>
@@ -1386,6 +1396,66 @@ function resetAllData() {
     alert("Datos limpiados con éxito.");
     navigate('upload');
   }
+}
+
+function loadDemoData() {
+  if (!confirm("Esto cargará datos ficticios para explorar el Dashboard sin necesidad de un ZIP. ¿Continuar?")) return;
+  
+  setLoading(true, 50);
+  
+  S.ownerName = "Usuario Demo";
+  S.positions = [
+    { company: "TechCorp SaaS", title: "VP of Sales", start: "2020", end: "Actual" }
+  ];
+  
+  const mockContacts = [];
+  const companies = ["Stripe", "Vercel", "Fintech X", "Banco Y", "Retail Z", "HealthCorp", "Acme", "Globex"];
+  const titles = ["CEO", "Director de Ventas", "CTO", "Gerente de Producto", "CFO", "Marketing Lead"];
+  const countries = ["México", "España", "Colombia", "Desconocido", "USA"];
+  const h = ["C-Level", "Director", "C-Level", "Gerente", "C-Level", "Gerente"];
+  
+  for(let i=0; i<185; i++) {
+    const fn = "Lead " + i;
+    const ln = "Demo";
+    const comp = companies[i % companies.length];
+    const tit = titles[i % titles.length];
+    const ctry = countries[i % countries.length];
+    const isOld = (i % 5 === 0);
+    
+    mockContacts.push({
+      id: i,
+      name: fn + " " + ln, company: comp, position: tit, originalName: fn + " " + ln,
+      originalCompany: comp, originalPosition: tit, email: "lead"+i+"@"+comp.replace(/\s+/g,'').toLowerCase()+".com",
+      url: "https://linkedin.com", connectedOn: isOld ? "10 Jan 2018" : "15 May 2024", connectedYearsAgo: isOld ? 8 : (0.5 + (i%2)),
+      country: ctry, hierarchy: h[i%h.length], sector: inferSector(tit, comp), score: 0
+    });
+  }
+  
+  // Set random CRM status to some to populate the Kanban
+  mockContacts[0].crmStatus = "Lead"; mockContacts[0].crmNotes = "Prospecto muy interesado en integraciones.";
+  mockContacts[1].crmStatus = "Pitch"; mockContacts[1].crmNotes = "Enviado PDF del producto.";
+  mockContacts[2].crmStatus = "Conversacion"; mockContacts[2].crmNotes = "Me contestó hoy pidiendo precios.";
+  mockContacts[3].crmStatus = "Reunion"; mockContacts[3].crmNotes = "Demo el jueves a las 10am.";
+  mockContacts[4].crmStatus = "Cerrado"; mockContacts[4].crmNotes = "Contrato firmado anualmente.";
+  mockContacts[5].crmStatus = "Descartado"; mockContacts[5].crmNotes = "No tienen presupuesto hasta 2027.";
+  
+  S.contacts = mockContacts;
+  
+  // Dummy messages
+  S.messages = [];
+  for(let i=0; i<45; i++) {
+    S.messages.push({ "CONVERSATION ID": "C"+i, "From": i%3===0?"Usuario Demo":"Lead", "Content": "Mensaje de prueba "+i });
+  }
+  
+  S.loadedParts = { connections: true, positions: true, messages: true, profile: true };
+  
+  // Recalculate scores and populate
+  S.contacts.forEach(c => { c.score = scoreContact(c); });
+  
+  setTimeout(() => {
+    finalize();
+    alert("Datos de prueba cargados con éxito.");
+  }, 300);
 }
 
 // ═══════════════════════════════════════════════════════════════════════
