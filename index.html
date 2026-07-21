@@ -2658,10 +2658,15 @@ function renderConversationsList() {
         </div>
         
         <div id="ai-results-${c.id}" style="display:${aiResult ? 'block' : 'none'}; margin-top:8px; padding:10px; background:rgba(0,0,0,0.2); border:1px solid rgba(79,70,229,0.3); border-radius:8px; font-size:11px; box-shadow: 0 4px 15px rgba(0,0,0,0.1) inset;"></div>
-      </div>
-    `;
-  }).join('');
-}
+        
+        ${isExpanded ? `
+          <div class="chat-history-container" style="margin-top:8px; border-top:1px solid var(--border); padding-top:10px; display:flex; flex-direction:column; gap:10px; max-height:350px; overflow-y:auto; padding-right:4px;">
+            ${c.msgs.map(m => {
+              const me = S.isMe(m.sender);
+              const align = me ? 'flex-end' : 'flex-start';
+              const bg = me ? 'rgba(59,130,246,0.06)' : 'var(--bg)';
+              const borderCol = me ? 'rgba(59,130,246,0.18)' : 'var(--border)';
+              const senderColor = me ? '#60a5fa' : 'var(--muted2)';
               
               let displayContent = m.content;
               if (searchVal) {
