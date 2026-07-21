@@ -3140,27 +3140,37 @@ async function analyzeConversationWithAI(convId) {
   });
   
   const systemPrompt = `Eres un Director de Ventas (RevOps) y Experto B2B (MEDDIC / Challenger Sale) analizando una conversación de prospección en LinkedIn.
-Tu objetivo es analizar la semántica, lingüística y heurística de la interacción entre el VENDEDOR y el PROSPECTO.
+El usuario de la plataforma (TÚ) es quien proporciona el historial. El otro participante es el contacto externo.
 
 INSTRUCCIONES DE ANÁLISIS:
-1. Heurística (Trust Scoring): Evalúa la fricción y velocidad. ¿Quién invierte más esfuerzo? ¿El prospecto da respuestas cortas (bajo interés) o elaboradas?
-2. Lingüística y Semántica (Ego Ratio): Mide si el vendedor usa demasiado "Yo/Nosotros" en lugar de enfocarse en el "Tú/Problema" del cliente. Detecta palabras de duda o fricción en el prospecto.
-3. Frameworks B2B: Evalúa si el vendedor logró "desafiar" el status quo (Challenger) o si descubrió algún dolor/métrica (MEDDIC).
+PRIMERO: Determina la DIRECCIÓN de la venta (tipo_conversacion). 
+- "Outbound - Tú Vendes": El usuario de la plataforma inició el acercamiento comercial.
+- "Inbound Pitch - Te Venden a ti": El contacto externo está intentando venderle algo al usuario (spam, agencias, cursos).
+- "Networking": Solo cruce casual sin venta.
 
-Responde ESTRICTAMENTE con un objeto JSON válido (sin markdown, sin texto adicional) en el siguiente formato exacto:
+SEGUNDO: Si es "Inbound Pitch", evalúa si parece una plantilla genérica, promesas desmesuradas de gurús ("Te consigo 30 leads"), o spam automatizado (alerta_guru = true).
+
+TERCERO: Si es "Outbound - Tú Vendes", evalúa bajo rigor B2B:
+1. Heurística (Trust Scoring): Evalúa la fricción y velocidad (esfuerzo, monosílabos).
+2. Lingüística (Ego Ratio): ¿El vendedor usa demasiado "Yo/Nosotros" o se enfoca en el "Tú/Problema"?
+3. Frameworks B2B: ¿Desafió el status quo (Challenger)? ¿Descubrió algún dolor/métrica (MEDDIC)?
+
+Responde ESTRICTAMENTE con un objeto JSON válido (sin markdown) en el siguiente formato exacto:
 {
-  "score_general": <número_del_1_al_10>,
-  "resumen_pitch": "<Resumen breve de qué valor se intentó vender>",
+  "tipo_conversacion": "<Outbound - Tú Vendes | Inbound Pitch - Te Venden a ti | Networking>",
+  "alerta_guru": <true o false>,
+  "score_general": <número_del_1_al_10 (Pon 0 si es Inbound Pitch)>,
+  "resumen_pitch": "<Resumen breve de qué valor se intentó vender y quién a quién>",
   "analisis_linguistico": {
     "enfoque_cliente": "<Alto | Medio | Bajo>",
-    "observacion_lenguaje": "<Ej: Habla demasiado del producto en 1ra persona, falta empatía.>"
+    "observacion_lenguaje": "<Ej: Habla demasiado del producto en 1ra persona, o el Spammer usa plantillas baratas.>"
   },
   "framework_b2b": {
     "dolor_detectado": "<Dolor de negocio descubierto o 'Ninguno'>",
     "objeciones_reales": "<Objeciones implícitas o explícitas>"
   },
   "heuristica_interaccion": "<Ej: El prospecto responde con monosílabos, denota fatiga.>",
-  "next_action": "<El paso accionable sugerido para el vendedor>"
+  "next_action": "<El paso accionable sugerido para el usuario>"
 }`;
   
   const resDiv = document.getElementById(`ai-results-${convId}`);
@@ -3223,36 +3233,56 @@ Responde ESTRICTAMENTE con un objeto JSON válido (sin markdown, sin texto adici
     let cleanText = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
     const result = JSON.parse(cleanText);
     
-    resDiv.innerHTML = `
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:8px;">
-        <div style="font-size:14px; font-weight:700; color:var(--accent);">🤖 AI RevOps Analysis <span style="font-size:10px; color:var(--text-muted); font-weight:400;">(${provider})</span></div>
-        <div class="badge" style="font-size:12px; font-weight:700; padding:4px 8px; background:${result.score_general >= 7 ? 'rgba(16,185,129,0.2)' : 'rgba(217,119,6,0.2)'}; color:${result.score_general >= 7 ? '#6ee7b7' : '#fcd34d'}; border: 1px solid ${result.score_general >= 7 ? 'rgba(16,185,129,0.5)' : 'rgba(217,119,6,0.5)'}">Score: ${result.score_general}/10</div>
-      </div>
-      
-      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px;">
-        <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; border:1px solid var(--border2);">
-          <div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Semántica y Lingüística</div>
-          <div style="margin-bottom:6px;"><strong>Enfoque en Cliente:</strong> <span style="color:${result.analisis_linguistico.enfoque_cliente === 'Alto' ? 'var(--green)' : 'var(--amber)'}">${result.analisis_linguistico.enfoque_cliente}</span></div>
-          <div style="color:var(--text-muted); line-height:1.4;">${result.analisis_linguistico.observacion_lenguaje}</div>
+    if (result.tipo_conversacion && result.tipo_conversacion.includes('Inbound')) {
+      resDiv.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:8px;">
+          <div style="font-size:14px; font-weight:700; color:var(--red);">🚨 Inbound Pitch (Spam / Ventas Externas) <span style="font-size:10px; color:var(--text-muted); font-weight:400;">(${provider})</span></div>
+          ${result.alerta_guru ? `<div class="badge" style="font-size:10px; font-weight:700; padding:4px 8px; background:rgba(239,68,68,0.2); color:#fca5a5; border: 1px solid rgba(239,68,68,0.5)">🚩 ALERTA VENDE HUMOS</div>` : ''}
         </div>
         
-        <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; border:1px solid var(--border2);">
-          <div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Dinámica (Heurística)</div>
-          <div style="color:var(--text-muted); line-height:1.4;">${result.heuristica_interaccion}</div>
+        <div style="background:rgba(239,68,68,0.05); padding:10px; border-radius:6px; border:1px solid rgba(239,68,68,0.2); margin-bottom:12px;">
+          <div style="margin-bottom:6px;"><strong>Análisis de la agresión comercial:</strong> <span style="color:var(--text-muted)">${result.resumen_pitch}</span></div>
+          <div style="margin-bottom:6px;"><strong>Táctica detectada:</strong> <span style="color:var(--text-muted)">${result.analisis_linguistico.observacion_lenguaje}</span></div>
+          <div><strong>Dinámica:</strong> <span style="color:var(--text-muted)">${result.heuristica_interaccion}</span></div>
         </div>
-      </div>
 
-      <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; border:1px solid var(--border2); margin-bottom:12px;">
-        <div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Evaluación B2B (MEDDIC / Challenger)</div>
-        <div style="margin-bottom:6px;"><strong>Dolor Detectado:</strong> <span style="color:var(--text-muted)">${result.framework_b2b.dolor_detectado}</span></div>
-        <div style="margin-bottom:4px;"><strong>Objeciones:</strong> <span style="color:var(--text-muted)">${result.framework_b2b.objeciones_reales}</span></div>
-      </div>
+        <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; border:1px solid var(--border2);">
+          <div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Sugerencia de Manejo</div>
+          <div style="color:var(--text); font-weight:500; line-height:1.4;">${result.next_action}</div>
+        </div>
+      `;
+    } else {
+      resDiv.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:8px;">
+          <div style="font-size:14px; font-weight:700; color:var(--accent);">🤖 AI RevOps Analysis <span style="font-size:10px; color:var(--text-muted); font-weight:400;">(${provider})</span> <span style="font-size:10px; color:var(--muted); font-weight:400; margin-left:6px;">[${result.tipo_conversacion || 'Outbound'}]</span></div>
+          <div class="badge" style="font-size:12px; font-weight:700; padding:4px 8px; background:${result.score_general >= 7 ? 'rgba(16,185,129,0.2)' : 'rgba(217,119,6,0.2)'}; color:${result.score_general >= 7 ? '#6ee7b7' : '#fcd34d'}; border: 1px solid ${result.score_general >= 7 ? 'rgba(16,185,129,0.5)' : 'rgba(217,119,6,0.5)'}">Score: ${result.score_general}/10</div>
+        </div>
+        
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px;">
+          <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; border:1px solid var(--border2);">
+            <div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Semántica y Lingüística</div>
+            <div style="margin-bottom:6px;"><strong>Enfoque en Cliente:</strong> <span style="color:${result.analisis_linguistico.enfoque_cliente === 'Alto' ? 'var(--green)' : 'var(--amber)'}">${result.analisis_linguistico.enfoque_cliente}</span></div>
+            <div style="color:var(--text-muted); line-height:1.4;">${result.analisis_linguistico.observacion_lenguaje}</div>
+          </div>
+          
+          <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; border:1px solid var(--border2);">
+            <div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Dinámica (Heurística)</div>
+            <div style="color:var(--text-muted); line-height:1.4;">${result.heuristica_interaccion}</div>
+          </div>
+        </div>
 
-      <div style="background:rgba(79,70,229,0.1); padding:10px; border-radius:6px; border:1px solid rgba(79,70,229,0.3);">
-        <div style="font-size:10px; text-transform:uppercase; color:#a5b4fc; margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Estrategia Sugerida (Next Action)</div>
-        <div style="color:var(--text); font-weight:500; line-height:1.4;">${result.next_action}</div>
-      </div>
-    `;
+        <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; border:1px solid var(--border2); margin-bottom:12px;">
+          <div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Evaluación B2B (MEDDIC / Challenger)</div>
+          <div style="margin-bottom:6px;"><strong>Dolor Detectado:</strong> <span style="color:var(--text-muted)">${result.framework_b2b.dolor_detectado}</span></div>
+          <div style="margin-bottom:4px;"><strong>Objeciones:</strong> <span style="color:var(--text-muted)">${result.framework_b2b.objeciones_reales}</span></div>
+        </div>
+
+        <div style="background:rgba(79,70,229,0.1); padding:10px; border-radius:6px; border:1px solid rgba(79,70,229,0.3);">
+          <div style="font-size:10px; text-transform:uppercase; color:#a5b4fc; margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Estrategia Sugerida (Next Action)</div>
+          <div style="color:var(--text); font-weight:500; line-height:1.4;">${result.next_action}</div>
+        </div>
+      `;
+    }
     
   } catch (err) {
     console.error(err);
