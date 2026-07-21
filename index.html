@@ -3139,11 +3139,29 @@ async function analyzeConversationWithAI(convId) {
     chatText += `[${m.date}] ${m.sender}: ${m.content}\n`;
   });
   
-  const systemPrompt = `Eres un experto Sales Strategist B2B analizando una conversación de LinkedIn.
-El vendedor (prospectando) está interactuando con un lead.
-Extrae el pitch de ventas real, evalúa la calidad del acercamiento B2B (del 1 al 10), detecta objeciones (o pon "Ninguna") y aconseja un "next step".
-Responde ESTRICTAMENTE con un objeto JSON (sin markdown) en este formato:
-{"pitch_resumen": "...", "score": 8, "objeciones": "...", "next_action": "..."}`;
+  const systemPrompt = `Eres un Director de Ventas (RevOps) y Experto B2B (MEDDIC / Challenger Sale) analizando una conversación de prospección en LinkedIn.
+Tu objetivo es analizar la semántica, lingüística y heurística de la interacción entre el VENDEDOR y el PROSPECTO.
+
+INSTRUCCIONES DE ANÁLISIS:
+1. Heurística (Trust Scoring): Evalúa la fricción y velocidad. ¿Quién invierte más esfuerzo? ¿El prospecto da respuestas cortas (bajo interés) o elaboradas?
+2. Lingüística y Semántica (Ego Ratio): Mide si el vendedor usa demasiado "Yo/Nosotros" en lugar de enfocarse en el "Tú/Problema" del cliente. Detecta palabras de duda o fricción en el prospecto.
+3. Frameworks B2B: Evalúa si el vendedor logró "desafiar" el status quo (Challenger) o si descubrió algún dolor/métrica (MEDDIC).
+
+Responde ESTRICTAMENTE con un objeto JSON válido (sin markdown, sin texto adicional) en el siguiente formato exacto:
+{
+  "score_general": <número_del_1_al_10>,
+  "resumen_pitch": "<Resumen breve de qué valor se intentó vender>",
+  "analisis_linguistico": {
+    "enfoque_cliente": "<Alto | Medio | Bajo>",
+    "observacion_lenguaje": "<Ej: Habla demasiado del producto en 1ra persona, falta empatía.>"
+  },
+  "framework_b2b": {
+    "dolor_detectado": "<Dolor de negocio descubierto o 'Ninguno'>",
+    "objeciones_reales": "<Objeciones implícitas o explícitas>"
+  },
+  "heuristica_interaccion": "<Ej: El prospecto responde con monosílabos, denota fatiga.>",
+  "next_action": "<El paso accionable sugerido para el vendedor>"
+}`;
   
   const resDiv = document.getElementById(`ai-results-${convId}`);
   resDiv.style.display = 'block';
@@ -3206,11 +3224,34 @@ Responde ESTRICTAMENTE con un objeto JSON (sin markdown) en este formato:
     const result = JSON.parse(cleanText);
     
     resDiv.innerHTML = `
-      <div style="font-size:12px; font-weight:700; margin-bottom:6px; color:var(--accent);">🤖 AI Insights (${provider})</div>
-      <div style="margin-bottom:6px;"><strong>Score:</strong> <span class="badge" style="background:${result.score >= 7 ? 'rgba(16,185,129,0.2)' : 'rgba(217,119,6,0.2)'}; color:${result.score >= 7 ? '#6ee7b7' : '#fcd34d'}">${result.score}/10</span></div>
-      <div style="margin-bottom:6px;"><strong>Pitch:</strong> <span style="color:var(--text-muted)">${result.pitch_resumen}</span></div>
-      <div style="margin-bottom:6px;"><strong>Objeciones:</strong> <span style="color:var(--text-muted)">${result.objeciones}</span></div>
-      <div><strong>Siguiente Acción:</strong> <span style="color:var(--text-muted)">${result.next_action}</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:8px;">
+        <div style="font-size:14px; font-weight:700; color:var(--accent);">🤖 AI RevOps Analysis <span style="font-size:10px; color:var(--text-muted); font-weight:400;">(${provider})</span></div>
+        <div class="badge" style="font-size:12px; font-weight:700; padding:4px 8px; background:${result.score_general >= 7 ? 'rgba(16,185,129,0.2)' : 'rgba(217,119,6,0.2)'}; color:${result.score_general >= 7 ? '#6ee7b7' : '#fcd34d'}; border: 1px solid ${result.score_general >= 7 ? 'rgba(16,185,129,0.5)' : 'rgba(217,119,6,0.5)'}">Score: ${result.score_general}/10</div>
+      </div>
+      
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px;">
+        <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; border:1px solid var(--border2);">
+          <div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Semántica y Lingüística</div>
+          <div style="margin-bottom:6px;"><strong>Enfoque en Cliente:</strong> <span style="color:${result.analisis_linguistico.enfoque_cliente === 'Alto' ? 'var(--green)' : 'var(--amber)'}">${result.analisis_linguistico.enfoque_cliente}</span></div>
+          <div style="color:var(--text-muted); line-height:1.4;">${result.analisis_linguistico.observacion_lenguaje}</div>
+        </div>
+        
+        <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; border:1px solid var(--border2);">
+          <div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Dinámica (Heurística)</div>
+          <div style="color:var(--text-muted); line-height:1.4;">${result.heuristica_interaccion}</div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; border:1px solid var(--border2); margin-bottom:12px;">
+        <div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Evaluación B2B (MEDDIC / Challenger)</div>
+        <div style="margin-bottom:6px;"><strong>Dolor Detectado:</strong> <span style="color:var(--text-muted)">${result.framework_b2b.dolor_detectado}</span></div>
+        <div style="margin-bottom:4px;"><strong>Objeciones:</strong> <span style="color:var(--text-muted)">${result.framework_b2b.objeciones_reales}</span></div>
+      </div>
+
+      <div style="background:rgba(79,70,229,0.1); padding:10px; border-radius:6px; border:1px solid rgba(79,70,229,0.3);">
+        <div style="font-size:10px; text-transform:uppercase; color:#a5b4fc; margin-bottom:4px; font-family:'JetBrains Mono',monospace;">Estrategia Sugerida (Next Action)</div>
+        <div style="color:var(--text); font-weight:500; line-height:1.4;">${result.next_action}</div>
+      </div>
     `;
     
   } catch (err) {
