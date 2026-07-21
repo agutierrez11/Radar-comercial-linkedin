@@ -2601,7 +2601,8 @@ function renderConversationsList() {
     const isExpanded = S.expandedChats && S.expandedChats.has(c.id);
     const lastMsg = c.msgs[c.msgs.length - 1];
     const oppScore = calculateOpportunityScore(c);
-    const aiResult = (S.aiResults && S.aiResults[c.id]) ? S.aiResults[c.id] : null;
+    const aiResult = getAiResultFromCache(c.id, c.participant);
+    if (aiResult && S.aiResults) { S.aiResults[c.id] = aiResult; }
     
     let previewText = lastMsg ? lastMsg.content : '';
     if (searchVal) {
@@ -3579,8 +3580,33 @@ document.addEventListener('DOMContentLoaded', () => {
   updateIndustryBench('tech');
 });
 // ═══════════════════════════════════════════════════════════════════════
-// AI PITCH ANALYZER LOGIC
+// AI PITCH ANALYZER CACHE LOGIC (PERSISTENCE)
 // ═══════════════════════════════════════════════════════════════════════
+function getAiResultFromCache(convId, participantName) {
+  try {
+    const raw = localStorage.getItem('radar_ai_cache');
+    if (!raw) return null;
+    const cache = JSON.parse(raw);
+    if (cache[convId]) return cache[convId];
+    if (participantName) {
+      const key = norm(participantName);
+      if (cache[key]) return cache[key];
+    }
+  } catch(e) {}
+  return null;
+}
+
+function saveAiResultToCache(convId, result, participantName) {
+  try {
+    const raw = localStorage.getItem('radar_ai_cache');
+    let cache = raw ? JSON.parse(raw) : {};
+    cache[convId] = result;
+    if (participantName) {
+      cache[norm(participantName)] = result;
+    }
+    localStorage.setItem('radar_ai_cache', JSON.stringify(cache));
+  } catch(e) {}
+}
 
 function openAIConfigModal() {
   const provider = localStorage.getItem('radar_ai_provider') || 'claude';
@@ -3726,6 +3752,7 @@ Responde ESTRICTAMENTE con un objeto JSON válido (sin markdown) en el siguiente
     
     if (!S.aiResults) S.aiResults = {};
     S.aiResults[convId] = result;
+    saveAiResultToCache(convId, result, conv.participant);
     
     if (result.tipo_conversacion && result.tipo_conversacion.includes('Inbound')) {
       resDiv.innerHTML = `
