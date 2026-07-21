@@ -750,7 +750,10 @@
     <!-- ── MESSAGES ── -->
     <div class="section" id="sec-messages">
       <div class="section-header">
-        <div><div class="section-title">💬 Análisis de Mensajes</div><div class="section-sub">Tus aperturas, tasas de respuesta y conversaciones comerciales</div></div>
+        <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+          <div><div class="section-title">💬 Análisis de Mensajes</div><div class="section-sub">Tus aperturas, tasas de respuesta y conversaciones comerciales</div></div>
+          <button class="mini-btn primary" onclick="openAIConfigModal()" style="padding: 6px 12px; font-size: 11px;">⚙️ Configurar IA</button>
+        </div>
       </div>
       <div id="messages-content">
         <div class="locked-state"><div class="lock-icon">🔒</div><p>Sube el ZIP completo de LinkedIn para desbloquear el análisis de mensajes.<br><span style="color:var(--muted);font-size:10px">El ZIP debe contener el archivo messages.csv</span></p></div>
@@ -962,6 +965,43 @@
     <div class="modal-actions" style="margin-top:14px; border-top:1px solid var(--border); padding-top:12px;">
       <button class="mini-btn primary" onclick="copyPitch()" style="flex:1">📋 Copiar mensaje</button>
       <button class="mini-btn" onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- AI Config Modal -->
+<div class="modal-overlay" id="ai-config-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <div style="flex:1;">
+        <div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Model Agnostic</div>
+        <div style="font-size:16px;font-weight:700">⚙️ Configuración de IA</div>
+      </div>
+      <button class="modal-close" onclick="closeAIConfigModal()" style="align-self:flex-start;">✕</button>
+    </div>
+    
+    <div class="disclaimer" style="margin-bottom:12px">
+      <span class="disclaimer-icon">🔒</span>
+      <span><strong>Zero-Knowledge:</strong> Tu API Key se guarda únicamente en el almacenamiento local de tu navegador. Nunca se envía a nuestros servidores.</span>
+    </div>
+
+    <div style="margin-top:14px; text-align:left;">
+      <label style="display:block; font-size:11px; font-weight:600; margin-bottom:4px; color:var(--text-muted);">Proveedor de IA</label>
+      <select id="ai-provider-select" style="width:100%; padding:8px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:inherit; margin-bottom:12px;">
+        <option value="claude">Claude (Anthropic) - Recomendado</option>
+        <option value="gemini">Gemini (Google)</option>
+        <option value="openai">ChatGPT (OpenAI)</option>
+      </select>
+      
+      <label style="display:block; font-size:11px; font-weight:600; margin-bottom:4px; color:var(--text-muted);">API Key</label>
+      <input type="password" id="ai-api-key" placeholder="sk-..." style="width:100%; padding:8px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:inherit;">
+      <div id="ai-cors-warning" style="font-size:9px; color:var(--amber); margin-top:6px; display:none;">⚠️ Claude y OpenAI pueden bloquear peticiones directas por CORS. En caso de error, usa Gemini o una extensión de CORS.</div>
+    </div>
+
+    <div class="modal-actions" style="margin-top:14px; border-top:1px solid var(--border); padding-top:12px;">
+      <button class="mini-btn primary" onclick="saveAIConfig()" style="flex:1">💾 Guardar</button>
+      <button class="mini-btn" onclick="closeAIConfigModal()">Cancelar</button>
     </div>
   </div>
 </div>
@@ -2312,11 +2352,16 @@ function renderConversationsList() {
           "${previewHtml}"
         </div>
         
-        <div style="display:flex; justify-content:flex-end; gap:6px; margin-top:2px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
+          <button class="mini-btn primary" onclick="analyzeConversationWithAI('${c.id}')" style="font-size:10px; padding:3px 8px; border: 1px solid var(--accent); background: rgba(79,70,229,0.1); color: #a5b4fc;">
+            🤖 Analizar Pitch
+          </button>
           <button class="mini-btn" onclick="toggleChatExpand('${c.id}')" style="font-size:10px; padding:3px 8px;">
             ${isExpanded ? '▲ Ocultar chat' : '▼ Ver chat completo'}
           </button>
         </div>
+        
+        <div id="ai-results-${c.id}" style="display:none; margin-top:8px; padding:10px; background:rgba(0,0,0,0.2); border:1px solid rgba(79,70,229,0.3); border-radius:8px; font-size:11px; box-shadow: 0 4px 15px rgba(0,0,0,0.1) inset;"></div>
         
         ${isExpanded ? `
           <div class="chat-history-container" style="margin-top:8px; border-top:1px solid var(--border); padding-top:10px; display:flex; flex-direction:column; gap:10px; max-height:350px; overflow-y:auto; padding-right:4px;">
@@ -3042,6 +3087,137 @@ document.addEventListener('DOMContentLoaded', () => {
   updateSim();
   updateIndustryBench('tech');
 });
+// ═══════════════════════════════════════════════════════════════════════
+// AI PITCH ANALYZER LOGIC
+// ═══════════════════════════════════════════════════════════════════════
+
+function openAIConfigModal() {
+  const provider = localStorage.getItem('radar_ai_provider') || 'claude';
+  const key = localStorage.getItem('radar_ai_key') || '';
+  
+  document.getElementById('ai-provider-select').value = provider;
+  document.getElementById('ai-api-key').value = key;
+  
+  checkCorsWarning();
+  document.getElementById('ai-provider-select').addEventListener('change', checkCorsWarning);
+  
+  document.getElementById('ai-config-modal').style.display = 'flex';
+}
+
+function checkCorsWarning() {
+  const prov = document.getElementById('ai-provider-select').value;
+  document.getElementById('ai-cors-warning').style.display = (prov === 'claude' || prov === 'openai') ? 'block' : 'none';
+}
+
+function closeAIConfigModal() {
+  document.getElementById('ai-config-modal').style.display = 'none';
+}
+
+function saveAIConfig() {
+  const prov = document.getElementById('ai-provider-select').value;
+  const key = document.getElementById('ai-api-key').value.trim();
+  localStorage.setItem('radar_ai_provider', prov);
+  localStorage.setItem('radar_ai_key', key);
+  closeAIConfigModal();
+  alert('✅ Configuración de IA guardada localmente.');
+}
+
+async function analyzeConversationWithAI(convId) {
+  const provider = localStorage.getItem('radar_ai_provider');
+  const key = localStorage.getItem('radar_ai_key');
+  
+  if (!key) {
+    openAIConfigModal();
+    return;
+  }
+  
+  const conv = S.conversations.find(c => c.id === convId);
+  if (!conv) return;
+  
+  let chatText = "";
+  conv.msgs.forEach(m => {
+    chatText += `[${m.date}] ${m.sender}: ${m.content}\n`;
+  });
+  
+  const systemPrompt = `Eres un experto Sales Strategist B2B analizando una conversación de LinkedIn.
+El vendedor (prospectando) está interactuando con un lead.
+Extrae el pitch de ventas real, evalúa la calidad del acercamiento B2B (del 1 al 10), detecta objeciones (o pon "Ninguna") y aconseja un "next step".
+Responde ESTRICTAMENTE con un objeto JSON (sin markdown) en este formato:
+{"pitch_resumen": "...", "score": 8, "objeciones": "...", "next_action": "..."}`;
+  
+  const resDiv = document.getElementById(`ai-results-${convId}`);
+  resDiv.style.display = 'block';
+  resDiv.innerHTML = `<span style="color:var(--accent);">Analizando con ${provider}...</span>`;
+  
+  try {
+    let responseText = "";
+    if (provider === 'gemini') {
+      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          system_instruction: { parts: [{ text: systemPrompt }] },
+          contents: [{ parts: [{ text: chatText }] }]
+        })
+      });
+      if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
+      const data = await res.json();
+      responseText = data.candidates[0].content.parts[0].text;
+    } else if (provider === 'claude') {
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': key,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-direct-browser-access': 'true'
+        },
+        body: JSON.stringify({
+          model: 'claude-3-5-sonnet-20241022',
+          max_tokens: 1000,
+          system: systemPrompt,
+          messages: [{ role: 'user', content: chatText }]
+        })
+      });
+      if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
+      const data = await res.json();
+      responseText = data.content[0].text;
+    } else if (provider === 'openai') {
+      const res = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${key}`
+        },
+        body: JSON.stringify({
+          model: 'gpt-4o-mini',
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: chatText }
+          ]
+        })
+      });
+      if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
+      const data = await res.json();
+      responseText = data.choices[0].message.content;
+    }
+    
+    let cleanText = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
+    const result = JSON.parse(cleanText);
+    
+    resDiv.innerHTML = `
+      <div style="font-size:12px; font-weight:700; margin-bottom:6px; color:var(--accent);">🤖 AI Insights (${provider})</div>
+      <div style="margin-bottom:6px;"><strong>Score:</strong> <span class="badge" style="background:${result.score >= 7 ? 'rgba(16,185,129,0.2)' : 'rgba(217,119,6,0.2)'}; color:${result.score >= 7 ? '#6ee7b7' : '#fcd34d'}">${result.score}/10</span></div>
+      <div style="margin-bottom:6px;"><strong>Pitch:</strong> <span style="color:var(--text-muted)">${result.pitch_resumen}</span></div>
+      <div style="margin-bottom:6px;"><strong>Objeciones:</strong> <span style="color:var(--text-muted)">${result.objeciones}</span></div>
+      <div><strong>Siguiente Acción:</strong> <span style="color:var(--text-muted)">${result.next_action}</span></div>
+    `;
+    
+  } catch (err) {
+    console.error(err);
+    resDiv.innerHTML = `<span style="color:var(--red);">Error al analizar: ${err.message}. ¿CORS o API Key inválida?</span>`;
+  }
+}
 </script>
 </body>
 </html>
