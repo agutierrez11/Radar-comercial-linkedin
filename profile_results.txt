@@ -1,0 +1,41 @@
+Searching Profile/Position files...
+
+
+=== Positions.csv ===
+Header: ['Company Name', 'Title', 'Description', 'Location', 'Started On', 'Finished On']
+Row 1:
+LATAM Commerce | Co-creador  | LATAM Commerce representa a un grupo dinámico de innovadores, empresarios y especialistas que están transformando el panorama del comercio electrónico en Latinoamérica. Nuestro objetivo es compartir ideas, crear relaciones valiosas y mostrar los avances más importantes en comercio electrónico, métodos de pago, logística, tecnología y experiencia de usuario. Únete a nosotros, trabajemos juntos y crezcamos en conjunto. | Канкун, ROO | Mar 2024 | 
+--------------------------------------------------------------------------------
+Row 2:
+Fiserv | Business Sales Consultant | ·   Diseñé un modelo de diagnóstico personal en Power BI para monitorear el comportamiento transaccional MoM (mes a mes) de mi cartera asignada de 80+ clientes, logrando identificar de manera preventiva cuentas en riesgo de abandono.    ·  Programé un flujo propio (Power Automate + Excel + Outlook) para automatizar campañas de reactivación a contactos inactivos de mi cartera, incrementando mi alcance diario de contacto comercial de forma independiente.    ·  Diseñé una plantilla optimizada de registro y control de oportunidades en Excel con validaciones y bloqueos de seguridad, evitando la sobreescritura accidental y garantizando la integridad de los datos de mi embudo comercial.    ·  Configuré tableros personalizados en Salesforce para el monitoreo de mis indicadores y pipeline MoM, logrando una visibilidad clara de mis oportunidades activas y optimizando mi toma de decisiones comerciales.    ·  Administré el flujo de nuevos negocios provenientes de la alianza bancaria asignada y mantuve un pipeline autogenerado de más de 15 oportunidades activas mensuales. | Канкун, ROO | Mar 2025 | Oct 2025
+--------------------------------------------------------------------------------
+Row 3:
+Clip |  Acquisition Executive | BDR | Sales |   | · Adquirí y consolidé cuentas clave (eCommerce y Retail) con volúmenes de facturación mensual de entre $500k y $2M MXN, acumulando una facturación anual recurrente (ARR) superior a los $10M MXN y logrando un promedio del 90% de cumplimiento de cuota.    · Analicé de forma independiente el histórico de ventas de 3 años para cruzar canal (Inbound, Outbound, LinkedIn, pautas), vertical transaccional y tiempo de permanencia, descubriendo que las cuentas con mayor transaccionalidad presentaban la tasa de retención (LTV) más alta.    · Promoví y coordiné la integración con sistemas satélites de nicho clave (Bistrosoft para sector restaurantero y Profitroom para hotelería en Riviera Maya) para eliminar fricciones técnicas en el proceso de venta de cuentas corporativas.    · Propuse y lideré comercialmente el desarrollo de la integración de Clip con Odoo ERP, coordinando la presentación oficial de la solución ante partners tecnológicos en el evento *Odoo Days*.    · Realicé la investigación de mercado y el estudio de viabilidad para integrar Pix (método de pago brasileño instantáneo) en terminales Clip físicas del área de Cancún y Riviera Maya, buscando capturar el mercado de turismo brasileño.    · Implementé procesos de scraping de datos, Sales Navigator y Apollo para automatizar y filtrar directorios de prospección comercial, reduciendo el tiempo de calificación de tomadores de decisión.   **Auditoría de Control Interno (Encargo Especial):** Diseñé y ejecuté, bajo mandato confidencial de la VP de Ventas, un diagnóstico de control de procesos comerciales y validación de flujos de asignación de cuentas, mitigando riesgos operativos en la gestión del pipeline comercial. | Quintana Roo, México | Jul 2021 | Mar 2025
+--------------------------------------------------------------------------------
+Row 4:
+ENFA DELIVERY | Ejecutivo de desarrollo del negocio | Adaptando los negocios a la nueva era digital, acercando a la tecnología con los negocios/clientes en servicios de entrega, transformación digital, last mile.  Apertura de mercado en Península de Yucatán, | Cancún, Quintana Roo, México | Jul 2020 | Oct 2020
+--------------------------------------------------------------------------------
+Row 5:
+JTI (Japan Tobacco International) | Ejecutivo Desarrollador Canal HORECA | Ejecución de la estrategia comercial enfocada en canal HORECA en la zona de Cancún y Riviera Maya | Cancún y alrededores, México | Jul 2018 | Dec 2019
+--------------------------------------------------------------------------------
+Row 6:
+Conagra Brands | Ejecutivo de ventas |  | Cancún y alrededores, México | Apr 2017 | Dec 2017
+--------------------------------------------------------------------------------
+Row 7:
+Prosegur | Controlador de operaciones |  | Cancún y alrededores, México | Oct 2015 | Apr 2017
+--------------------------------------------------------------------------------
+Row 8:
+Liverpool | Ingeniero de aprovisionamiento | Surtidor de mercancía vendida en piso de venta y ventas por internet | Cancún y alrededores, México | Sep 2011 | Apr 2015
+--------------------------------------------------------------------------------
+
+=== Profile.csv ===
+Header: ['First Name', 'Last Name', 'Maiden Name', 'Address', 'Birth Date', 'Headline', 'Summary', 'Industry', 'Zip Code', 'Geo Location', 'Twitter Handles', 'Websites', 'Instant Messengers']
+Row 1:
+💳Antonio | Gutiérrez  Jiménez💳 |  |  |  | Ejecutivo de Ventas B2B | Enterprise Sales | Experto en Fintech & Medios de Pago | Creador de Nerv & LATAM Payments | +5 Años Impulsando el Crecimiento Comercial | Ejecutivo de ventas B2B y especialista en el ecosistema de Medios de Pago y Fintech en LATAM, con más de 5 años de trayectoria en el sector comercial en empresas líderes como Clip y Fiserv.Mi enfoque comercial combina la prospección inteligente con habilidades digitales y análisis de datos. Me apasiona ir más allá del proceso tradicional: busco entender cómo las integraciones tecnológicas y la automatización pueden resolver los cuellos de botella reales en el embudo de ventas.Como fundador de Nerv (MVP) y co-fundador de la comunidad LATAM Payments &amp; eCommerce (+500 profesionales), utilizo herramientas avanzadas (Scraping, Sales Navigator, Apollo) para diseñar estrategias Go-to-Market que eliminen la prospección a ciegas. Mi trayectoria respalda una fuerte orientación a la adquisición de clientes, cumplimiento de cuotas de venta e identificación de oportunidades de integración con partners (ISVs).📩 ¿Buscas conectar o charlar de adquirencia, automatizaciones o el ecosistema Fintech? Escríbeme a:&nbsp;antoniogtzjimenez@gmail.com | Financial Services | 77539 | Cancún, Quintana Roo, México |  |  | 
+--------------------------------------------------------------------------------
+
+=== Profile Summary.csv ===
+Header: ['Profile Summary']
+Row 1:
+
+--------------------------------------------------------------------------------

@@ -1,0 +1,501 @@
+Scanning through 92 blocks...
+
+--- MATCH 1 ---
+Row 24670 | From: LinkedIn Member | Date: 2021-07-20 18:19:09 UTC
+Content: Muchas felicidades enhorabuena.... y  a darle duro, demostrar de lo que podemos.. Saludos
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 2 ---
+Row 8850 | From: Oscar Caamal | Date: 2021-07-26 22:31:42 UTC
+Content: Igual las metas
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 3 ---
+Row 24698 | From: LinkedIn Member | Date: 2021-08-02 18:44:35 UTC
+Content: Hola %FIRSTNAME%! ,
+
+Actualmente estamos ofreciendo una Beca de hasta el 65% en México para nuestro Máster en Máster en Data Science y Business Analytics, codesarrollado por Indra.
+
+Es el único máster de big data en español que ha recibido un premio por su planteamiento y calidad, otorgado por el diario La Razón.
+
+¿Qué te parece? ¿Quieres más información?
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 4 ---
+Row 16628 | From: Gabriela Córdova | Date: 2021-09-07 22:38:34 UTC
+Content: Muchas Felicidades!
+Estoy a tus ordenes
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 5 ---
+Row 24648 | From: HP | Date: 2021-10-02 11:23:25 UTC
+Content: <p class="spinmail-quill-editor__spin-break">Hola Antonio,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Con un nuevo diseño compacto, la laptop HP EliteBook 845 G7 ofrece rendimiento empresarial, seguridad y durabilidad a los profesionales de negocios en crecimiento que llevan la oficina a todos lados, gracias a su chasis compacto, ligero y delgado.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Realiza las tareas diarias con el procesador AMD Ryzen™ PRO y memoria de alto rendimiento, así como batería de larga duración y unidades de estado sólido de alta velocidad.</p><p class="spinmail-quill-editor__spin-break"><br></p>
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 6 ---
+Row 11299 | From: Mauricio N Ferrari | Date: 2021-10-08 17:22:16 UTC
+Content: Siempre se seguro tu mandas no el cliente, si el. Cliente te dice deja pensarlo, nos hablamos, lo. Analizó siempre a fuerzas dile que día y que hora forzarlo a que se comprometa
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 7 ---
+Row 15930 | From: Cristopher Díaz Leal Estrada | Date: 2021-10-12 17:49:45 UTC
+Content: Comercial.coordinador@anconaautopartes.com
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 8 ---
+Row 25107 | From: DAMON BAKER | Date: 2022-02-04 08:29:02 UTC
+Content: Antonio,
+
+I hope you are doing well. I noticed we share similar topic interests related to continuous improvement, as we are both members of the same LinkedIn group: Chief Executives I CEO, COO, CFO, CTO, & CXO’s (Startups, Investors, Blockchain & Dealflow). I thought you might be interested in following our LinkedIn company page, as we routinely publish lean articles, share best practices, post open jobs, and hold discussions on lean with subject matter experts such as yourself.
+ 
+https://www.linkedin.com/company/lean-focus-llc
+ 
+I look forward to continuing the discussion!
+ 
+All the best,
+Damon
+ 
+Damon Baker, CEO | Lean Focus
+Damon.baker@leanfocus.com
+https://www.leanfocus.com
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 9 ---
+Row 14641 | From: Gregorio G Pardueles | Date: 2022-06-18 01:02:46 UTC
+Content: Gracias por tu interés en Expo Pyme Internacional
+
+Esta maravillosa red LinkedIn proporciona una excelente oportunidad para desarrollar negocio, te ofrecemos una plática inicial que dimos y un entrenamiento que te ayudará a llevar tu perfil al éxito. https://www.expopymeint.com/linkedlnpower
+
+Igual si gustas tendremos un networking ejecutivo que te dará la oportunidad de conocer lo practico y novedoso que es un metaverso https://www.expopymeint.com/
+
+Yo quedo como siempre a tus ordenes
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 10 ---
+Row 14934 | From: Paulina Guerrero Carrasco | Date: 2022-08-19 14:19:48 UTC
+Content: Es metalmecanica
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 11 ---
+Row 169 | From: Marcelo Cortez  | Date: 2022-09-09 13:56:29 UTC
+Content: Oye felicidades, se ven buenos los dolores, le hizo sentido al prospecto por lo que veo?
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 12 ---
+Row 24615 | From: LinkedIn Member | Date: 2022-09-19 05:40:19 UTC
+Content: Entrevistamos a cientos de vendedores que superaron sus metas en un 50 % o más en el último año.
+
+Al compararlos con vendedores que apenas alcanzaron sus metas, descubrimos que un 76 % de los mejores vendedores siempre investigan a los potenciales clientes antes de ponerse en contacto con ellos. En el grupo con los otros vendedores, el porcentaje fue solo del 44 %.
+
+Haz un clic y descarga el informe gratis "El panorama de ventas en México - Edición 2022" para descubrir para descubrir qué hacen de manera diferente los mejores vendedores.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 13 ---
+Row 14621 | From: Raimond Perez Dubrova | Date: 2022-09-24 14:43:32 UTC
+Content: Hola, lo prometido es deuda 🤣, como el tiempo es fugaz, seguramente ya ni te acuerdes... pero me pediste que te invitara al live de este miércoles Datos, Ventas y Linkedin, así que aquí va el link: https://www.linkedin.com/posts/raimond-perez_datos-ventas-y-linkedin-live-2809-activity-6978080881903038465-sXhX?utm_source=share&utm_medium=member_desktop
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 14 ---
+Row 14482 | From: Ángel de la Mata | Date: 2022-10-14 15:31:15 UTC
+Content: Te toca hacer trabajo de top of mind fuera de temporada para que cuando sea temporada, se acuerden de ti..
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 15 ---
+Row 14464 | From: Sara Contreras Godoy | Date: 2022-10-18 15:30:40 UTC
+Content: Hola Antonio! Desde Finnovating nos gustaría ayudar a Clip con vuestros proyectos de innovación. Somos una plataforma digital abierta que reúne a los top players del sector tech a nivel global.. Sabes con quién debería hablar de esto? Gracias!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 16 ---
+Row 12449 | From: Edgar Morales Sosa | Date: 2022-11-09 17:00:24 UTC
+Content: Antonio, gracias por aceptarme en tu red. De acuerdo a mi compromiso te comparto mi mas reciente publicación espero sea de valor y si es así agradeceré puedas compartirla:
+https://www.linkedin.com/posts/edgarmoralessosa_ventas-sandler-sales-activity-6986458030280249345-OzQq?utm_source=share&utm_medium=member_desktop
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 17 ---
+Row 3705 | From: Andrés Bruzzoni | Date: 2022-11-15 16:07:03 UTC
+Content: FElicidades Antonio! Ganaste el sorteo
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 18 ---
+Row 3047 | From: gerardo teijeira ♾️ | Date: 2022-11-25 20:52:03 UTC
+Content: Bueno pues por empezar felicitaciones por la oportunidad!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 19 ---
+Row 13986 | From: Celeste Nadia Masnicoff | Date: 2023-01-19 16:35:34 UTC
+Content: Buenos días Antonio, espero que te encuentres muy bien.
+
+Te contacto porque actualmente estoy llevando el reclutamiento de la empresa turística líder en Latinoamérica, y estamos en búsqueda de Representante de Ventas (Cancún). Te comparto a continuación la info:
+
+Para empresa líder del sector turístico, estamos en búsqueda de ***Representante de ventas*** (Cancún)
+
+Perfil:
+
+* Tienes que ser un@ apasianad@ de las ventas. No necesariamente tienes que venir del sector turístico u hotelero, lo que importa es que hayas vendido, mostrado o negociado un producto (ej., tiendas de ropa, servicio al cliente, venta de tours, hostess, etc.).
+
+
+* Se requiere muy buen nivel de inglés, para mantener una conversación con pasajeros de Estados Unidos y Canadá, principalmente.
+
+* Debes tener disponibilidad horaria, ya que en algunas ocasiones podrían rotar horarios, trabajar fines de semana y/o festivos. Contar con movilidad propia (auto o moto) es un plus.
+
+
+Qué se ofrece:
+
+* El esquema es 100% comisionista, con excelentes comisiones (no topadas/ sin límite de comisiones). Asimismo, los primeros 3 meses hay un fijo asegurado, además de todas las comisiones que generes.
+
+* Todas las Prestaciones de Ley, Seguro de vida, Seguro de Gastos Médicos Menores, Vales de despensa y Reparto de utilidades.
+
+* Productos seleccionados de la empresa al costo.
+
+* Capacitación continua para que puedas alcanzar los objetivos y a beneficios adicionales (incremento en comisiones, beneficios de proveedores, estadías gratis, etc.).
+
+* Pertenecer a la empresa líder del sector.
+
+En caso de cumplir con el perfil y que te interese la vacante, puedes compartirme tu CV por esta vía o a mi mail celeste@dpersonas.com .
+
+Saludos y excelente jornada,
+
+Celeste Nadia Masnicoff
+HR Manager Latin America and Caribbean
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 20 ---
+Row 13790 | From: Merle Gaytan | Date: 2023-02-03 15:31:20 UTC
+Content: Otra duda, también recuerdo que la meta incrementaba gradualmente dependiendo el trismestre pero no recuerdo en q porcentaje
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 21 ---
+Row 13804 | From: Merle Gaytan | Date: 2023-02-03 14:32:01 UTC
+Content: Entonces me he topado con algunas entrevistas en dónde me preguntan cuáles eran mis kpi’s y no lo recuerdo
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 22 ---
+Row 6265 | From: Rafa Gandia | Date: 2023-02-16 08:45:13 UTC
+Content: no a tope pero no le vi muchísima utilidad para lo que estoy haciendo, es interesantisimo y puede que incluso lo parcheen
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 23 ---
+Row 6238 | From: Rafa Gandia | Date: 2023-02-28 15:25:54 UTC
+Content: utilizándolo a tope
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 24 ---
+Row 12403 | From: Edgar Morales Sosa | Date: 2023-03-04 00:31:24 UTC
+Content: Antonio! agradeceré mucho tu interacción en mi mas reciente publicación y si gustas compartirla:
+
+https://www.linkedin.com/posts/edgarmoralessosa_sandler-activity-7037495544528740352-OgT3?utm_source=share&utm_medium=member_desktop
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 25 ---
+Row 6174 | From: Rafa Gandia | Date: 2023-03-14 20:55:59 UTC
+Content: a tope!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 26 ---
+Row 4212 | From: Héctor Torres | Date: 2023-04-25 17:37:01 UTC
+Content: Felicitaciones amigo!!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 27 ---
+Row 3632 | From: Andrés Bruzzoni | Date: 2023-04-26 15:13:58 UTC
+Content: https://www.linkedin.com/posts/andresbruzzoni_de-la-mano-de-chatgpt-lleg%C3%B3-la-ai-a-revolucionar-activity-7055179405974732800-9pRx?utm_source=share&utm_medium=member_desktop
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 28 ---
+Row 4075 | From: Martin Gelpi | Date: 2023-05-05 15:59:38 UTC
+Content: Jajaja sos un crack
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 29 ---
+Row 6110 | From: Rafa Gandia | Date: 2023-05-09 17:08:12 UTC
+Content: genial! currando a tope
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 30 ---
+Row 12370 | From: Edgar Morales Sosa | Date: 2023-05-16 18:09:12 UTC
+Content: Toño me acordé de ti. Te comparto esta publicación. Espero te sea de utilidad y puedas compartirla si así lo consideras:
+
+https://www.linkedin.com/posts/edgarmoralessosa_para-ti-es-importante-la-prospecci%C3%B3n-activity-7064275813487022080-b4Ue?utm_source=share&utm_medium=member_desktop
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 31 ---
+Row 6084 | From: Rafa Gandia | Date: 2023-06-01 11:56:05 UTC
+Content: a tope con junio! mes clave
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 32 ---
+Row 11917 | From: Ricardo Aguilar Alvarez | Date: 2023-07-05 14:21:37 UTC
+Content: Muchas felicidades amigo!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 33 ---
+Row 24545 | From: LinkedIn Member | Date: 2023-07-13 15:16:00 UTC
+Content: Felicidades !
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 34 ---
+Row 841 | From: Leonardo Cabrera | Date: 2023-07-18 05:50:20 UTC
+Content: Te veo muy activo e interesado en aprender. Eso es una bendición también. Felicidades porque no cualquiera se prepara constantemente.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 35 ---
+Row 844 | From: Leonardo Cabrera | Date: 2023-07-18 04:23:49 UTC
+Content: Hola Antonio, felicidades por seguir aprendiendo. 
+
+Por cierto, ya no me respondiste si te interesa nos reunamos para mostrarte qué hacemos y cómo lo hacemos.
+
+Quizá te interese.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 36 ---
+Row 4262 | From: Fernando García Castro | Date: 2023-07-26 17:45:34 UTC
+Content: Las metas son inalcanzablemente altas, mejor me dedico a buscar algo que es más lo mío
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 37 ---
+Row 10401 | From: Karen  Zhang | Date: 2023-11-15 03:16:19 UTC
+Content: "K@renZh@ng invites you to join Tencent Meeting
+Meeting Topic: Meeting scheduled by K@renZh@ng
+Meeting Time: 2023/11/15 11:30-12:00 (GMT+08:00) China Standard Time - Beijing
+
+Click the link to join or add to your meeting list:
+https://meeting.tencent.com/dm/BPVZNNJgtOln
+
+#TencentMeeting: 781-844-425
+
+Copy this information, open Tencent Meeting on your phone, and you can participate."
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 38 ---
+Row 10421 | From: Karen  Zhang | Date: 2023-11-15 02:47:10 UTC
+Content: I think you are responsible with stop/merchant consumer, you don't have KA client, right? such as Bank or other  dealer channel?
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 39 ---
+Row 7818 | From: Alfredo Rodríguez Flores | Date: 2024-01-09 22:15:05 UTC
+Content: Muchas gracias Antonio por tus felicitaciones!!!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 40 ---
+Row 9130 | From: Alma Campos | Date: 2024-02-16 02:29:41 UTC
+Content: estoy segura que si te animas al inglés puedes lograrlo, eres un hombre de metas , bueno es lo que veo en tu perfil a grandes rasgos
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 41 ---
+Row 9224 | From: Alan Ruchtein | Date: 2024-02-20 14:45:29 UTC
+Content: Lo enteindo perfectamente, lo he vivido tambien! Es como un bucle o circulo vicioso tal cual!
+
+Si crees o estas pensando en que quizas ayuda te vendria bien para empujar esos conocimientos y poder destacar como top performer, quizas sería interesante analizar la idea de que pueda trabajar contigo?
+
+Es algo que has pensado Antonio? Tener un mentor o guia?
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 42 ---
+Row 693 | From: Alejandra Feregrino P | Date: 2024-02-27 03:41:33 UTC
+Content: Mil gracias por tu recomendación Antonio, lo valoro mucho en verdad
+
+Por cierto, ya no me contestaste pero por si las dudas te cuento que tengo una sesión de dos horas cuyo costo es de 3mil 500 pesos mexicanos, es exhaustiva orientada a darte consejos puntuales y analizar tu perfil para que aumente tu visibilidad en linkedIn.
+
+Te comparto también un post que puede ser de tu interés :)
+
+https://www.linkedin.com/posts/alejandra-feregrino-consultora-datos_ventas-marcapersonal-conexiones-activity-7168084427997196288-uqKa?utm_source=share&utm_medium=member_desktop
+
+Espero no te moleste el mensaje, es con la mejor intención
+👏
+👍
+👎
+😊
+😞
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 43 ---
+Row 2540 | From: Alejandra Diaz | Date: 2024-04-23 00:01:02 UTC
+Content: Hola hola!
+ayudame dandole like a mi post https://www.linkedin.com/posts/alejandra-diaz-740044b2_firmaelectraejnica-activity-7188320284817473536-pwyh?utm_source=share&utm_medium=member_desktop
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 44 ---
+Row 4431 | From: Alejandra Cisneros | Date: 2024-07-03 11:33:59 UTC
+Content: O  último evento CX do ano ainda não tem tema. Você topa nos ajudar a identificá-lo?
+Uma única pergunta aqui > https://babel.team/cx-17102024-pesquisa. Muito obrigada!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 45 ---
+Row 24467 | From: Lisa Lines | Date: 2024-07-04 00:01:25 UTC
+Content: <p class="spinmail-quill-editor__spin-break">Hola 💳Antonio,&nbsp;</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Mi nombre es Lisa Lines, de la&nbsp;Oxentia Foundation. Hemos lanzado junto a Banco Santander, <a rel="noopener" href="https://app.santanderx.com/calls/santander-x-global-challenge-innovation-in-healthcare?utm_source=Linkedin&utm_medium=Paid_Social&utm_campaign=InnovationHealthcare2024_Oxentia_inscription_lkd_mx&li_fat_id=21079b98-8174-4155-bfbc-fdffb32354a4" target="_blank">Santander X Global Challenge | Innovation in Healthcare</a>, una convocatoria para empresas de 11 países con soluciones innovadoras que pueden revolucionar el sector healthcare.&nbsp;</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Estoy convencida que tu empresa podría ser una gran candidata para postular en esta convocatoria.&nbsp;&nbsp;</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Estamos buscamos startups y scaleups que tengan soluciones en cualquiera de las siguientes categorías:&nbsp;</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">•	<strong>Tecnología y automatización</strong> que apoyen la eficacia y los avances de los profesionales de la salud.&nbsp;</p><p class="spinmail-quill-editor__spin-break">•	Soluciones innovadoras que contribuyan a la <strong>eficiencia operacional</strong> de los centros de atención hospitalaria.&nbsp;&nbsp;</p><p class="spinmail-quill-editor__spin-break">•	Soluciones enfocadas a la<strong> atención al paciente</strong> para ofrecerle una experiencia cómoda y eficiente.&nbsp;</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Seis ganadores se repartirán un premio de 120.000 euros y pasarán a formar parte de&nbsp;Santander X 100, la comunidad global con las startups y scaleups más destacadas de Santander X, y podrán acceder a otros beneficios.&nbsp;</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Inscríbete antes del 11 de julio de 2024.</p>
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 46 ---
+Row 4203 | From: Héctor Torres | Date: 2024-07-05 15:16:23 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 47 ---
+Row 4596 | From: Plinio Fernando Rivera Valenzuela | Date: 2024-07-05 20:52:51 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 48 ---
+Row 7461 | From: Osher Shalom | Date: 2024-07-05 11:40:26 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 49 ---
+Row 7472 | From: Oswaldo Meza Sanchez | Date: 2024-07-05 16:03:34 UTC
+Content: ¡Felicidades Toño por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 50 ---
+Row 7482 | From: Hector Miguel Gonzalez Campos | Date: 2024-07-05 14:47:04 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 51 ---
+Row 7486 | From: José Arturo Contreras Pelayo | Date: 2024-07-05 14:37:36 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 52 ---
+Row 7084 | From: Sol Cortés | Date: 2024-07-06 16:46:36 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 53 ---
+Row 7446 | From: ADRIANA URIBE  Galardón FRACTALES DEL CAMBIO | Date: 2024-07-06 10:01:51 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 54 ---
+Row 7464 | From: Angel Diaz Valadez | Date: 2024-07-06 00:57:34 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 55 ---
+Row 3808 | From: Veronika Kincova | Date: 2024-07-23 07:53:55 UTC
+Content: As use case of client facing solution -we just published very a nice article about chargebacks -https://www.tapix.io/resources/post/tackling-chargebacks-in-digital-banking-with-a-clear-payment-history
+
+If I am talking about analylical use case I would like to share our blog post about Risk scoring and how our data detail can leverage this topic- https://www.tapix.io/resources/post/enhancing-credit-scoring-with-smart-data
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 56 ---
+Row 6526 | From: Johary Randriamandranto | Date: 2024-08-15 09:06:07 UTC
+Content: Hi Antonio,
+
+I saw your comment on a post from Vlastimil about scraping likes + comments to find qualified leads → I’m currently building a company on this topic and looking to get feedbacks 🙏
+
+Quick questions if you have 2mn:
+
+#1 - Are you scraping posts?
+#2 - If yes → which kind of posts?
+#3 - If yes → which tool are using to do that?
+
+Thanks!
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 57 ---
+Row 6531 | From: Guillermo Romero Aguilar  | Date: 2024-08-30 19:25:41 UTC
+Content: Hola Antonio, te comparto algunas tendencias de 2024 en cuanto UX/UI.
+Si te gustaría aplicar alguna, con gusto podemos ayudarlos, buen fin de semana.
+https://www.linkedin.com/posts/guillermo-romero-aguilar-6b281520_ux-ui-digitaldesign-activity-7223774507205902336-2LLw?utm_source=share&utm_medium=member_desktop
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 58 ---
+Row 4923 | From: Adolfo Díaz Gramont | Date: 2025-02-25 19:02:56 UTC
+Content: Hola Antonio,
+
+Muy interesante tu background, noté también que actualmente sos Acquisition Executive, BDR en Clip, que bien.
+
+Gracias también por aceptar mi solicitud de contacto.
+
+Paso por aquí a invitarte personalmente al Live Masterclass gratuito de InspirAcción Podcast, este jueves con Andrés Nájera, https://www.linkedin.com/in/andresnajerap/, crack de México que escaló comercialmente la startup México Jeeves a $2.1B. También es mentor de startups B2B en Seedstars, 500 LatAm y Growth Rockstar.
+
+La semana pasada lancé la primera entrevista de InspirAcción Podcast, con Santiago y Gabriel García da Rosa, quienes escalaron Nowports de México a Unicornio, $1.1B. Link al newsletter: https://www.inspiraaccion.com/p/inspiraccion-5-hermanos-uruguayos-que-escalaron-unicornio-hoy-construyen-startups
+
+La 3a entrevista será a mediados de marzo con Nicole Carranza, peruana que lideró comercialmente a unicornio a Betterfly de Chile.
+
+La 4a entrevista será a fin de marzo con Juan José Behrend, lideró ingeniería en startups como Pedidos Ya, Dlocal, y Pomelo.
+
+Si te gustaría recibir las entrevistas directamente en tu correo, puedes suscribirte gratuitamente en la web de InspirAcción Podcast: www.inspiraaccion.com.
+
+Muchas gracias. Saludos,
+Adolfo - Fito
+Fundador y Host
+InspirAcción Podcast
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 59 ---
+Row 4413 | From: Chris Payne | Date: 2025-03-03 16:27:29 UTC
+Content: Wow, súper, felicidades por tu nuevo trabajo :-)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 60 ---
+Row 4387 | From: Chris Payne | Date: 2025-03-10 21:41:42 UTC
+Content: pues, yo diría que no pasa nada si nos vemos antes. Podemos alinear tus metas con el nuevo perfil.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 61 ---
+Row 24434 | From: LinkedIn Member | Date: 2025-03-10 00:44:55 UTC
+Content: <p class="spinmail-quill-editor__spin-break">Embark on a transformative journey at a global top-10 university with our one-year MBA. Immerse yourself in a cutting-edge ecosystem of technology and innovation, addressing the world's pivotal challenges. The Full-Time MBA seamlessly blends essential business knowledge with the latest technological insights, positioning you to shape your career and influence your industry on a global scale.</p>
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+

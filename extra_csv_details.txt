@@ -1,0 +1,50 @@
+=== File: Certifications.csv ===
+Header: Name | Url | Authority | Started On | Finished On | License Number
+
+Row 1: Aprende LinkedIn Learning | https://www.linkedin.com/learning/certificates/d632c187288a0f6d885588e0065a67c67e7473bb6899cf9bead490714bc7e23f?trk=backfilled_certificate | LinkedIn | Jun 2017 |  | 
+Row 2: Fred Kofman y la gestión de conflictos | https://www.linkedin.com/learning/certificates/4977331ddf878f9b5ffabe22be00a402db3537232d4a6655bcedbf19261346a8?trk=backfilled_certificate | LinkedIn | Jun 2017 |  | 
+Row 3: Excel 2013: Tablas dinámicas | https://www.linkedin.com/learning/certificates/a0038c17a9b35351b3d377177636bd2e04db576d3e9da499f77698eb153b4b29?trk=backfilled_certificate | LinkedIn | Jul 2017 |  | 
+Row 4: McKinsey.org Forward Program | https://www.credly.com/badges/6e70dbb0-7695-4a46-a19e-6bc684256715/linked_in_profile | McKinsey & Company | Jul 2025 |  | 
+--------------------------------------------------------------------------------
+
+=== File: Endorsement_Received_Info.csv ===
+Header: Endorsement Date | Skill Name | Endorser First Name | Endorser Last Name | Endorser Public Url | Endorsement Status
+
+Row 1: 2025/06/27 21:20:12 UTC | Asociaciones estratégicas | Erick  | Schwember  | www.linkedin.com/in/erickschwember | ACCEPTED
+Row 2: 2025/06/27 21:20:12 UTC | Planificación estratégica | Erick  | Schwember  | www.linkedin.com/in/erickschwember | ACCEPTED
+Row 3: 2025/04/04 13:56:52 UTC | Generación de contactos | Andrés | Ospina | www.linkedin.com/in/andresospina | ACCEPTED
+Row 4: 2025/04/04 13:56:35 UTC | Planificación estratégica | Andrés | Ospina | www.linkedin.com/in/andresospina | ACCEPTED
+Row 5: 2025/04/04 13:56:19 UTC | Asociaciones estratégicas | Andrés | Ospina | www.linkedin.com/in/andresospina | ACCEPTED
+Row 6: 2024/03/01 09:30:49 UTC | Ventas internas | Anant | Gupta | www.linkedin.com/in/iamanantgupta | ACCEPTED
+Row 7: 2024/02/19 17:56:39 UTC | Leadership | Hairys | Cordero Fajardo | www.linkedin.com/in/hairyscordero | ACCEPTED
+Row 8: 2024/02/19 17:56:38 UTC | SAP Retail | Hairys | Cordero Fajardo | www.linkedin.com/in/hairyscordero | ACCEPTED
+Row 9: 2024/02/19 17:56:36 UTC | LinkedIn | Hairys | Cordero Fajardo | www.linkedin.com/in/hairyscordero | ACCEPTED
+Row 10: 2023/07/27 23:34:09 UTC | lead gen | Tomás | Pando  | www.linkedin.com/in/tomaspando | ACCEPTED
+Row 11: 2023/01/09 13:44:10 UTC | Leadership | Juan Ma | Perals | www.linkedin.com/in/juanmaperals | ACCEPTED
+Row 12: 2023/01/09 13:44:09 UTC | Dirección | Juan Ma | Perals | www.linkedin.com/in/juanmaperals | ACCEPTED
+Row 13: 2023/01/09 13:44:05 UTC | SAP Retail | Juan Ma | Perals | www.linkedin.com/in/juanmaperals | ACCEPTED
+Row 14: 2023/01/09 13:44:05 UTC | LinkedIn | Juan Ma | Perals | www.linkedin.com/in/juanmaperals | ACCEPTED
+Row 15: 2023/01/09 13:43:59 UTC | Servicio de atención al cliente | Juan Ma | Perals | www.linkedin.com/in/juanmaperals | ACCEPTED
+Row 16: 2023/01/09 13:43:59 UTC | Aprendizaje electrónico | Juan Ma | Perals | www.linkedin.com/in/juanmaperals | ACCEPTED
+Row 17: 2023/01/09 13:43:58 UTC | Habilidad numérica | Juan Ma | Perals | www.linkedin.com/in/juanmaperals | ACCEPTED
+Row 18: 2021/11/23 14:15:23 UTC | LinkedIn | Leticia | Castillo | www.linkedin.com/in/leticia-castillo | ACCEPTED
+Row 19: 2021/02/11 18:26:03 UTC | Leadership | Angel | Mendoza Jesus | www.linkedin.com/in/angel-mendoza-project-manager | ACCEPTED
+Row 20: 2021/02/11 18:25:59 UTC | LinkedIn | Angel | Mendoza Jesus | www.linkedin.com/in/angel-mendoza-project-manager | ACCEPTED
+Row 21: 2021/02/11 18:25:46 UTC | SAP Retail | Angel | Mendoza Jesus | www.linkedin.com/in/angel-mendoza-project-manager | ACCEPTED
+Row 22: 2020/10/20 00:41:37 UTC | Aprendizaje electrónico | Víctor Jorge | Avalos Tello | www.linkedin.com/in/víctor-jorge-avalos-tello | ACCEPTED
+Row 23: 2020/10/20 00:41:34 UTC | Habilidad numérica | Víctor Jorge | Avalos Tello | www.linkedin.com/in/víctor-jorge-avalos-tello | ACCEPTED
+Row 24: 2020/10/20 00:41:31 UTC | Servicio de atención al cliente | Víctor Jorge | Avalos Tello | www.linkedin.com/in/víctor-jorge-avalos-tello | ACCEPTED
+Row 25: 2020/10/09 00:35:50 UTC | Dirección | Ingeniero Federico | Campos | www.linkedin.com/in/ingeniero-federico-campos-045a83b7 | ACCEPTED
+Row 26: 2020/10/09 00:35:42 UTC | Ventas | Ingeniero Federico | Campos | www.linkedin.com/in/ingeniero-federico-campos-045a83b7 | ACCEPTED
+Row 27: 2020/10/09 00:35:38 UTC | Aprendizaje electrónico | Ingeniero Federico | Campos | www.linkedin.com/in/ingeniero-federico-campos-045a83b7 | ACCEPTED
+Row 28: 2020/10/09 00:35:33 UTC | Habilidad numérica | Ingeniero Federico | Campos | www.linkedin.com/in/ingeniero-federico-campos-045a83b7 | ACCEPTED
+Row 29: 2020/10/09 00:35:29 UTC | Servicio de atención al cliente | Ingeniero Federico | Campos | www.linkedin.com/in/ingeniero-federico-campos-045a83b7 | ACCEPTED
+Row 30: 2020/06/26 16:35:54 UTC | Servicio de atención al cliente | Víctor Francisco | González Cancino | www.linkedin.com/in/víctor-francisco-gonzález-cancino-190b2a98 | ACCEPTED
+--------------------------------------------------------------------------------
+
+=== File: Recommendations_Given.csv ===
+Header: First Name | Last Name | Company | Job Title | Text | Creation Date | Status
+
+Row 1: Valentina | Cortina | CleverTap | Account Manager | Hispanic LATAM | Valentina es una profesional muy comprometida, su permanencia reflejala estabilidad y su buen trabajo.Está a la vanguardi y procura estar en constante aprendizaje, escucha nuevas ideas y enfocada a lograr sus objetivos. | 02/22/24, 03:24 AM | 
+--------------------------------------------------------------------------------
+

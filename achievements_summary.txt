@@ -1,0 +1,484 @@
+Found 47 relevant performance matches:
+
+--- MATCH 1 ---
+Row 2399 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Carolina Samsing | Date: 2023-12-28 16:50:52 UTC
+Content: Detailed Summary for [Como Escalar Equipos de Venta con Caro Samsing](https://www.youtube.com/watch?v=m1gFyuNUHXQ&ab_channel=PrimeraReuni%C3%B3n) by [Monica](https://monica.im)
+
+[00:00]En este fragmento, Caro Samsing habla sobre los desafíos que enfrentan las empresas al tratar de crecer y cómo organizar los equipos de ventas de manera más productiva.
+- Caro Samsing ha liderado equipos de ingresos durante mucho tiempo y tiene experiencia en el crecimiento de empresas.
+- Menciona que estamos en una transición en la que las demandas han disminuido y las ventas deben ser más consultivas.
+- Destaca el desafío de estructurar equipos de ventas para mantener la productividad sin incurrir en altos costos de adquisición (CAC).
+    
+[07:13] Caro Samsing habla sobre cómo escalar equipos de venta y menciona la importancia de construir canales de crecimiento que no dependan únicamente de agregar CAC a tu negocio.
+- Destaca la importancia de tener socios estratégicos en el ciclo de ventas para ayudar a crecer.
+- Menciona que los contadores fueron socios clave en Nubox, ya que al usar la misma herramienta, podían compartir información con sus clientes.
+- Habla sobre la integración de productos con otras plataformas para aumentar la eficiencia de los clientes y generar ventas sin depender completamente del CAC.
+- Explica el modelo de afiliados como una forma de generar volumen y conciencia de marca a través de recomendaciones orgánicas.
+    
+[14:26] En este fragmento, Caro Samsing habla sobre la importancia de enfocarse en una venta consultiva y personalizada, adaptando el pitch de venta a las necesidades del cliente y especializando los equipos de venta según el tipo de cliente.
+- Se debe dar mayor soporte y atención al cliente en las llamadas, adaptando el pitch de venta a las necesidades y dolores del cliente.
+- El enfoque debe estar en la identificación del ajuste (fit) y la intención del cliente, para cerrar oportunidades de venta.
+- Es fundamental que el equipo de marketing identifique el ajuste (fit) con el cliente ideal y que se revise esta definición periódicamente.
+- Se recomienda estructurar los equipos de venta según el tipo de cliente, en lugar de dividirlos en outbound e inbound, para poder agregar valor y captar la atención del cliente desde los primeros segundos.
+    
+[21:39]La recomendación principal es estructurar los equipos de venta según el tipo de cliente y especializarse a medida que se crece.
+- Es importante segmentar los equipos de venta según el tipo de cliente, como Enterprise o SMB.
+- También se recomienda segmentar por estrategia de ventas, como cazadores y cultivadores.
+- Los equipos de cultivadores son cruciales para retener a los clientes actuales y generar más ingresos.
+- Se debe prestar atención a la métrica de Retención de Ingresos Netos para asegurar la supervivencia en momentos difíciles.
+    
+[28:52] Carolina Samson explica que la filosofía de los equipos de éxito del cliente debe ser enfocarse en hacer que el cliente tenga éxito y utilizar métricas como NPS y CSAT.
+- Los equipos de éxito del cliente deben enfocarse en hacer que el cliente tenga éxito y utilizar métricas como NPS y CSAT.
+- En general, las empresas que venden a grandes empresas tienen equipos de éxito del cliente más comerciales, mientras que las empresas más pequeñas tienden a tener equipos más enfocados en el soporte y la satisfacción del cliente.
+- Las grandes cuentas pueden tener un equipo de gestión de cuentas clave que combine elementos de éxito del cliente y ventas.
+- Es importante comunicarse de manera diferente con los clientes nuevos y los clientes existentes, y se espera que surjan roles de Marketing de Clientes para enfocarse en la base instalada.
+    
+[36:05]El coaching analítico implica analizar los números de ventas y brindar retroalimentación concreta sobre las llamadas telefónicas.
+- El coaching analítico se basa en analizar los números de ventas, como la tasa de cierre y el ciclo de ventas.
+- También implica brindar retroalimentación sobre las llamadas telefónicas y mejorar las habilidades de los ejecutivos de ventas.
+- Los gerentes de ventas deben escuchar al menos una llamada de un ejecutivo de ventas cada semana para proporcionar coaching efectivo.
+- Los gerentes de ventas también tienen la responsabilidad de contratar, capacitar y establecer metas para su equipo.
+    
+[43:18]El papel del gerente de ventas incluye escuchar las llamadas de los ejecutivos de ventas, promover al mejor vendedor como gerente, y cerrar ventas para no perder la comisión.
+- El gerente de ventas debe ser un experto en el cliente y en el producto o servicio.
+- Existe una desconexión entre el trabajo individual de un ejecutivo de cuentas y el trabajo en equipo.
+- El equipo de operaciones de ventas es importante para optimizar los flujos y el equipo de habilitación de ventas ayuda a mejorar las ventas por teléfono.
+- La habilitación de ventas proporciona herramientas como tarjetas de batalla y materiales de marketing para ayudar a los ejecutivos de ventas a cerrar ventas.
+    
+[50:31] Durante la fase de inicio de una startup, es recomendable que el fundador se encargue de las ventas y documente todo el proceso de aprendizaje.
+- Durante esta fase, es importante aprender sobre el tipo de cliente ideal, el ciclo de ventas y la capacidad de ventas.
+- Se recomienda grabar las llamadas de ventas y documentar las mejores llamadas para crear un playbook de ventas.
+- Es fundamental documentar toda la información para poder transferirla fácilmente cuando se contrate al primer ejecutivo de ventas.
+--------------------------------------------------------------------------------
+
+--- MATCH 2 ---
+Row 2968 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: gerardo teijeira ♾️ | Date: 2024-02-02 15:25:29 UTC
+Content: O metas que quizá ni en el mejor mes lo han logrado y pues quieren magia o un milagro verdad
+--------------------------------------------------------------------------------
+
+--- MATCH 3 ---
+Row 3603 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Andrés Bruzzoni | Date: 2023-12-28 17:57:13 UTC
+Content: [00:00] En este fragmento, Caro Samsing habla sobre los desafíos que enfrentan las empresas al tratar de crecer y cómo organizar los equipos de ventas de manera más productiva.
+- Caro Samsing ha liderado equipos de ingresos durante mucho tiempo y tiene experiencia en el crecimiento de empresas.
+- Menciona que estamos en una transición en la que las demandas han disminuido y las ventas deben ser más consultivas.
+- Destaca el desafío de estructurar equipos de ventas para mantener la productividad sin incurrir en altos costos de adquisición (CAC).
+
+[07:13] Caro Samsing habla sobre cómo escalar equipos de venta y menciona la importancia de construir canales de crecimiento que no dependan únicamente de agregar CAC a tu negocio.
+- Destaca la importancia de tener socios estratégicos en el ciclo de ventas para ayudar a crecer.
+- Menciona que los contadores fueron socios clave en Nubox, ya que al usar la misma herramienta, podían compartir información con sus clientes.
+- Habla sobre la integración de productos con otras plataformas para aumentar la eficiencia de los clientes y generar ventas sin depender completamente del CAC.
+- Explica el modelo de afiliados como una forma de generar volumen y conciencia de marca a través de recomendaciones orgánicas.
+
+[14:26] En este fragmento, Caro Samsing habla sobre la importancia de enfocarse en una venta consultiva y personalizada, adaptando el pitch de venta a las necesidades del cliente y especializando los equipos de venta según el tipo de cliente.
+- Se debe dar mayor soporte y atención al cliente en las llamadas, adaptando el pitch de venta a las necesidades y dolores del cliente.
+- El enfoque debe estar en la identificación del ajuste (fit) y la intención del cliente, para cerrar oportunidades de venta.
+- Es fundamental que el equipo de marketing identifique el ajuste (fit) con el cliente ideal y que se revise esta definición periódicamente.
+- Se recomienda estructurar los equipos de venta según el tipo de cliente, en lugar de dividirlos en outbound e inbound, para poder agregar valor y captar la atención del cliente desde los primeros segundos.
+
+[21:39] La recomendación principal es estructurar los equipos de venta según el tipo de cliente y especializarse a medida que se crece.
+- Es importante segmentar los equipos de venta según el tipo de cliente, como Enterprise o SMB.
+- También se recomienda segmentar por estrategia de ventas, como cazadores y cultivadores.
+- Los equipos de cultivadores son cruciales para retener a los clientes actuales y generar más ingresos.
+- Se debe prestar atención a la métrica de Retención de Ingresos Netos para asegurar la supervivencia en momentos difíciles.
+
+[28:52] Carolina Samson explica que la filosofía de los equipos de éxito del cliente debe ser enfocarse en hacer que el cliente tenga éxito y utilizar métricas como NPS y CSAT.
+- Los equipos de éxito del cliente deben enfocarse en hacer que el cliente tenga éxito y utilizar métricas como NPS y CSAT.
+- En general, las empresas que venden a grandes empresas tienen equipos de éxito del cliente más comerciales, mientras que las empresas más pequeñas tienden a tener equipos más enfocados en el soporte y la satisfacción del cliente.
+- Las grandes cuentas pueden tener un equipo de gestión de cuentas clave que combine elementos de éxito del cliente y ventas.
+- Es importante comunicarse de manera diferente con los clientes nuevos y los clientes existentes, y se espera que surjan roles de Marketing de Clientes para enfocarse en la base instalada.
+
+[36:05] El coaching analítico implica analizar los números de ventas y brindar retroalimentación concreta sobre las llamadas telefónicas.
+- El coaching analítico se basa en analizar los números de ventas, como la tasa de cierre y el ciclo de ventas.
+- También implica brindar retroalimentación sobre las llamadas telefónicas y mejorar las habilidades de los ejecutivos de ventas.
+- Los gerentes de ventas deben escuchar al menos una llamada de un ejecutivo de ventas cada semana para proporcionar coaching efectivo.
+- Los gerentes de ventas también tienen la responsabilidad de contratar, capacitar y establecer metas para su equipo.
+
+[43:18] El papel del gerente de ventas incluye escuchar las llamadas de los ejecutivos de ventas, promover al mejor vendedor como gerente, y cerrar ventas para no perder la comisión.
+- El gerente de ventas debe ser un experto en el cliente y en el producto o servicio.
+- Existe una desconexión entre el trabajo individual de un ejecutivo de cuentas y el trabajo en equipo.
+- El equipo de operaciones de ventas es importante para optimizar los flujos y el equipo de habilitación de ventas ayuda a mejorar las ventas por teléfono.
+- La habilitación de ventas proporciona herramientas como tarjetas de batalla y materiales de marketing para ayudar a los ejecutivos de ventas a cerrar ventas.
+
+[50:31] Durante la fase de inicio de una startup, es recomendable que el fundador se encargue de las ventas y documente todo el proceso de aprendizaje.
+- Durante esta fase, es importante aprender sobre el tipo de cliente ideal, el ciclo de ventas y la capacidad de ventas.
+- Se recomienda grabar las llamadas de ventas y documentar las mejores llamadas para crear un playbook de ventas.
+- Es fundamental documentar toda la información para poder transferirla fácilmente cuando se contrate al primer ejecutivo de ventas.
+--------------------------------------------------------------------------------
+
+--- MATCH 4 ---
+Row 3609 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Andrés Bruzzoni | Date: 2023-12-28 17:53:14 UTC
+Content: [00:00]En este fragmento, Caro Samsing habla sobre los desafíos que enfrentan las empresas al tratar de crecer y cómo organizar los equipos de ventas de manera más productiva.
+- Caro Samsing ha liderado equipos de ingresos durante mucho tiempo y tiene experiencia en el crecimiento de empresas.
+- Menciona que estamos en una transición en la que las demandas han disminuido y las ventas deben ser más consultivas.
+- Destaca el desafío de estructurar equipos de ventas para mantener la productividad sin incurrir en altos costos de adquisición (CAC).
+    
+[07:13] Caro Samsing habla sobre cómo escalar equipos de venta y menciona la importancia de construir canales de crecimiento que no dependan únicamente de agregar CAC a tu negocio.
+- Destaca la importancia de tener socios estratégicos en el ciclo de ventas para ayudar a crecer.
+- Menciona que los contadores fueron socios clave en Nubox, ya que al usar la misma herramienta, podían compartir información con sus clientes.
+- Habla sobre la integración de productos con otras plataformas para aumentar la eficiencia de los clientes y generar ventas sin depender completamente del CAC.
+- Explica el modelo de afiliados como una forma de generar volumen y conciencia de marca a través de recomendaciones orgánicas.
+    
+[14:26] En este fragmento, Caro Samsing habla sobre la importancia de enfocarse en una venta consultiva y personalizada, adaptando el pitch de venta a las necesidades del cliente y especializando los equipos de venta según el tipo de cliente.
+- Se debe dar mayor soporte y atención al cliente en las llamadas, adaptando el pitch de venta a las necesidades y dolores del cliente.
+- El enfoque debe estar en la identificación del ajuste (fit) y la intención del cliente, para cerrar oportunidades de venta.
+- Es fundamental que el equipo de marketing identifique el ajuste (fit) con el cliente ideal y que se revise esta definición periódicamente.
+- Se recomienda estructurar los equipos de venta según el tipo de cliente, en lugar de dividirlos en outbound e inbound, para poder agregar valor y captar la atención del cliente desde los primeros segundos.
+    
+[21:39]La recomendación principal es estructurar los equipos de venta según el tipo de cliente y especializarse a medida que se crece.
+- Es importante segmentar los equipos de venta según el tipo de cliente, como Enterprise o SMB.
+- También se recomienda segmentar por estrategia de ventas, como cazadores y cultivadores.
+- Los equipos de cultivadores son cruciales para retener a los clientes actuales y generar más ingresos.
+- Se debe prestar atención a la métrica de Retención de Ingresos Netos para asegurar la supervivencia en momentos difíciles.
+    
+[28:52] Carolina Samson explica que la filosofía de los equipos de éxito del cliente debe ser enfocarse en hacer que el cliente tenga éxito y utilizar métricas como NPS y CSAT.
+- Los equipos de éxito del cliente deben enfocarse en hacer que el cliente tenga éxito y utilizar métricas como NPS y CSAT.
+- En general, las empresas que venden a grandes empresas tienen equipos de éxito del cliente más comerciales, mientras que las empresas más pequeñas tienden a tener equipos más enfocados en el soporte y la satisfacción del cliente.
+- Las grandes cuentas pueden tener un equipo de gestión de cuentas clave que combine elementos de éxito del cliente y ventas.
+- Es importante comunicarse de manera diferente con los clientes nuevos y los clientes existentes, y se espera que surjan roles de Marketing de Clientes para enfocarse en la base instalada.
+    
+[36:05]El coaching analítico implica analizar los números de ventas y brindar retroalimentación concreta sobre las llamadas telefónicas.
+- El coaching analítico se basa en analizar los números de ventas, como la tasa de cierre y el ciclo de ventas.
+- También implica brindar retroalimentación sobre las llamadas telefónicas y mejorar las habilidades de los ejecutivos de ventas.
+- Los gerentes de ventas deben escuchar al menos una llamada de un ejecutivo de ventas cada semana para proporcionar coaching efectivo.
+- Los gerentes de ventas también tienen la responsabilidad de contratar, capacitar y establecer metas para su equipo.
+    
+[43:18]El papel del gerente de ventas incluye escuchar las llamadas de los ejecutivos de ventas, promover al mejor vendedor como gerente, y cerrar ventas para no perder la comisión.
+- El gerente de ventas debe ser un experto en el cliente y en el producto o servicio.
+- Existe una desconexión entre el trabajo individual de un ejecutivo de cuentas y el trabajo en equipo.
+- El equipo de operaciones de ventas es importante para optimizar los flujos y el equipo de habilitación de ventas ayuda a mejorar las ventas por teléfono.
+- La habilitación de ventas proporciona herramientas como tarjetas de batalla y materiales de marketing para ayudar a los ejecutivos de ventas a cerrar ventas.
+    
+[50:31] Durante la fase de inicio de una startup, es recomendable que el fundador se encargue de las ventas y documente todo el proceso de aprendizaje.
+- Durante esta fase, es importante aprender sobre el tipo de cliente ideal, el ciclo de ventas y la capacidad de ventas.
+- Se recomienda grabar las llamadas de ventas y documentar las mejores llamadas para crear un playbook de ventas.
+- Es fundamental documentar toda la información para poder transferirla fácilmente cuando se contrate al primer ejecutivo de ventas.
+--------------------------------------------------------------------------------
+
+--- MATCH 5 ---
+Row 4015 | From: Martin Gelpi | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-08-29 18:45:30 UTC
+Content: el performance rank lo hice con jorge.. he participado en charlas del ecommerce institute en mexico de la mano de hector
+--------------------------------------------------------------------------------
+
+--- MATCH 6 ---
+Row 4159 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Martin Gelpi | Date: 2023-03-16 21:53:44 UTC
+Content: y mi meta en $$$ este mes es de 100,000 usd
+--------------------------------------------------------------------------------
+
+--- MATCH 7 ---
+Row 4203 | From: Héctor Torres | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 15:16:23 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+
+--- MATCH 8 ---
+Row 4262 | From: Fernando García Castro | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-07-26 17:45:34 UTC
+Content: Las metas son inalcanzablemente altas, mejor me dedico a buscar algo que es más lo mío
+--------------------------------------------------------------------------------
+
+--- MATCH 9 ---
+Row 4387 | From: Chris Payne | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2025-03-10 21:41:42 UTC
+Content: pues, yo diría que no pasa nada si nos vemos antes. Podemos alinear tus metas con el nuevo perfil.
+--------------------------------------------------------------------------------
+
+--- MATCH 10 ---
+Row 4596 | From: Plinio Fernando Rivera Valenzuela | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 20:52:51 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+
+--- MATCH 11 ---
+Row 4923 | From: Adolfo Díaz Gramont | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2025-02-25 19:02:56 UTC
+Content: Hola Antonio,
+
+Muy interesante tu background, noté también que actualmente sos Acquisition Executive, BDR en Clip, que bien.
+
+Gracias también por aceptar mi solicitud de contacto.
+
+Paso por aquí a invitarte personalmente al Live Masterclass gratuito de InspirAcción Podcast, este jueves con Andrés Nájera, https://www.linkedin.com/in/andresnajerap/, crack de México que escaló comercialmente la startup México Jeeves a $2.1B. También es mentor de startups B2B en Seedstars, 500 LatAm y Growth Rockstar.
+
+La semana pasada lancé la primera entrevista de InspirAcción Podcast, con Santiago y Gabriel García da Rosa, quienes escalaron Nowports de México a Unicornio, $1.1B. Link al newsletter: https://www.inspiraaccion.com/p/inspiraccion-5-hermanos-uruguayos-que-escalaron-unicornio-hoy-construyen-startups
+
+La 3a entrevista será a mediados de marzo con Nicole Carranza, peruana que lideró comercialmente a unicornio a Betterfly de Chile.
+
+La 4a entrevista será a fin de marzo con Juan José Behrend, lideró ingeniería en startups como Pedidos Ya, Dlocal, y Pomelo.
+
+Si te gustaría recibir las entrevistas directamente en tu correo, puedes suscribirte gratuitamente en la web de InspirAcción Podcast: www.inspiraaccion.com.
+
+Muchas gracias. Saludos,
+Adolfo - Fito
+Fundador y Host
+InspirAcción Podcast
+--------------------------------------------------------------------------------
+
+--- MATCH 12 ---
+Row 6082 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Rafa Gandia | Date: 2023-06-01 12:08:49 UTC
+Content: Nuevas metas
+--------------------------------------------------------------------------------
+
+--- MATCH 13 ---
+Row 7084 | From: Sol Cortés | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-06 16:46:36 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+
+--- MATCH 14 ---
+Row 7446 | From: ADRIANA URIBE  Galardón FRACTALES DEL CAMBIO | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-06 10:01:51 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+
+--- MATCH 15 ---
+Row 7458 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Osher Shalom | Date: 2024-07-05 15:08:06 UTC
+Content: Y gracias B'H por dejarme cumplir tres años
+--------------------------------------------------------------------------------
+
+--- MATCH 16 ---
+Row 7461 | From: Osher Shalom | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 11:40:26 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+
+--- MATCH 17 ---
+Row 7464 | From: Angel Diaz Valadez | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-06 00:57:34 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+
+--- MATCH 18 ---
+Row 7472 | From: Oswaldo Meza Sanchez | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 16:03:34 UTC
+Content: ¡Felicidades Toño por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+
+--- MATCH 19 ---
+Row 7482 | From: Hector Miguel Gonzalez Campos | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 14:47:04 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+
+--- MATCH 20 ---
+Row 7486 | From: José Arturo Contreras Pelayo | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 14:37:36 UTC
+Content: ¡Felicidades por cumplir 3 años en Clip!
+--------------------------------------------------------------------------------
+
+--- MATCH 21 ---
+Row 8850 | From: Oscar Caamal | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-26 22:31:42 UTC
+Content: Igual las metas
+--------------------------------------------------------------------------------
+
+--- MATCH 22 ---
+Row 9130 | From: Alma Campos | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-02-16 02:29:41 UTC
+Content: estoy segura que si te animas al inglés puedes lograrlo, eres un hombre de metas , bueno es lo que veo en tu perfil a grandes rasgos
+--------------------------------------------------------------------------------
+
+--- MATCH 23 ---
+Row 9224 | From: Alan Ruchtein | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-02-20 14:45:29 UTC
+Content: Lo enteindo perfectamente, lo he vivido tambien! Es como un bucle o circulo vicioso tal cual!
+
+Si crees o estas pensando en que quizas ayuda te vendria bien para empujar esos conocimientos y poder destacar como top performer, quizas sería interesante analizar la idea de que pueda trabajar contigo?
+
+Es algo que has pensado Antonio? Tener un mentor o guia?
+--------------------------------------------------------------------------------
+
+--- MATCH 24 ---
+Row 10354 | From: Alejandra Gabriela Enriquez  Solis | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-11-17 03:21:11 UTC
+Content: Mira para formar parte de nuestra red de proveedores es primero saber si está tu documentación al cien, desde opinión de cumplimiento positiva, etc ... 
+
+*Para ser proveedor*
+Nosotros tenemos una metodología es la siguiente 
+
+Lanzamos nuestros requerimientos a través de un grupo de empresarios 
+Por medio de un grupo que se te crea a nombre de tu empresa nos indicas si es de tu interés 
+Comenzamos a coordinar agendas con el prospecto 
+Te agendamos ya sea levantamiento o en su defecto videollamada
+Se te hace llegar la ficha de contacto 
+Una vez enlazado el vínculo ustedes nos realizan un pago de $750 por enlace este debe ser en un lapso no mayor de 24 horas 
+Si cierras el proyecto nos brindas una comisión sobre utilidad 
+
+*Si tienes un requerimiento*
+
+Nos indicas cuál es tu requerimiento de manera privada 
+Se lanza el requerimiento en el grupo 
+Nos brindas espacios en tu agenda de 15 a 30 minutos dependiendo tu proyecto ya que nosotros ganamos sobre enlace y comisión si hay un cierre 
+Nuestro servicio no tiene ningún costo de cara a las personas que buscan nuevos proveedores solo les pedimos por favor que nos avisen cuando se cierre el proyecto 
+
+Atentamente
+Alejandra Enriquez
+👩🏻‍💻🤓
+
+
+
+--------------------
+--------------------------------------------------------------------------------
+
+--- MATCH 25 ---
+Row 10527 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Rogelio SANTOYO | Date: 2023-11-10 21:21:01 UTC
+Content: Para que te metas
+--------------------------------------------------------------------------------
+
+--- MATCH 26 ---
+Row 10804 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Gabriel Hanono | Date: 2023-10-09 19:35:32 UTC
+Content: O al ya cumplir el tiempo de servicio ya no te llaman
+--------------------------------------------------------------------------------
+
+--- MATCH 27 ---
+Row 10854 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Martha Enith Lopez Ocampo | Date: 2023-07-27 15:56:56 UTC
+Content: renunció la semana pasada porque dice que las metas estaban inalcanzables
+--------------------------------------------------------------------------------
+
+--- MATCH 28 ---
+Row 11299 | From: Mauricio N Ferrari | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-10-08 17:22:16 UTC
+Content: Siempre se seguro tu mandas no el cliente, si el. Cliente te dice deja pensarlo, nos hablamos, lo. Analizó siempre a fuerzas dile que día y que hora forzarlo a que se comprometa
+--------------------------------------------------------------------------------
+
+--- MATCH 29 ---
+Row 11852 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Karla  Valadez | Date: 2023-07-07 00:58:41 UTC
+Content: veo en tu experiencia cosas que me gustaría aprender y sobre todo llevar a la práctica, honestamente cuando estás cumpliendo un rol en una organización no hay como espacios de aprendizaje o "demos" de roles que quisieras desempeñar, así que me gusta vivirlo y aprenderlo como a través de las personas que ya lo desempeñan
+--------------------------------------------------------------------------------
+
+--- MATCH 30 ---
+Row 12330 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Darbel Gustavo Valdez Almanza | Date: 2023-02-23 19:55:43 UTC
+Content: Pusiste o quitaste que eras metalero amigo jejeje
+--------------------------------------------------------------------------------
+
+--- MATCH 31 ---
+Row 12647 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Daniela Garrido Alfáro | Date: 2023-05-05 17:21:20 UTC
+Content: Lo último que supe eran 30 base más bono mensual por meta
+--------------------------------------------------------------------------------
+
+--- MATCH 32 ---
+Row 13787 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Merle Gaytan | Date: 2023-02-03 15:58:20 UTC
+Content: En las metas y kpi
+--------------------------------------------------------------------------------
+
+--- MATCH 33 ---
+Row 13790 | From: Merle Gaytan | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-02-03 15:31:20 UTC
+Content: Otra duda, también recuerdo que la meta incrementaba gradualmente dependiendo el trismestre pero no recuerdo en q porcentaje
+--------------------------------------------------------------------------------
+
+--- MATCH 34 ---
+Row 13986 | From: Celeste Nadia Masnicoff | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-01-19 16:35:34 UTC
+Content: Buenos días Antonio, espero que te encuentres muy bien.
+
+Te contacto porque actualmente estoy llevando el reclutamiento de la empresa turística líder en Latinoamérica, y estamos en búsqueda de Representante de Ventas (Cancún). Te comparto a continuación la info:
+
+Para empresa líder del sector turístico, estamos en búsqueda de ***Representante de ventas*** (Cancún)
+
+Perfil:
+
+* Tienes que ser un@ apasianad@ de las ventas. No necesariamente tienes que venir del sector turístico u hotelero, lo que importa es que hayas vendido, mostrado o negociado un producto (ej., tiendas de ropa, servicio al cliente, venta de tours, hostess, etc.).
+
+
+* Se requiere muy buen nivel de inglés, para mantener una conversación con pasajeros de Estados Unidos y Canadá, principalmente.
+
+* Debes tener disponibilidad horaria, ya que en algunas ocasiones podrían rotar horarios, trabajar fines de semana y/o festivos. Contar con movilidad propia (auto o moto) es un plus.
+
+
+Qué se ofrece:
+
+* El esquema es 100% comisionista, con excelentes comisiones (no topadas/ sin límite de comisiones). Asimismo, los primeros 3 meses hay un fijo asegurado, además de todas las comisiones que generes.
+
+* Todas las Prestaciones de Ley, Seguro de vida, Seguro de Gastos Médicos Menores, Vales de despensa y Reparto de utilidades.
+
+* Productos seleccionados de la empresa al costo.
+
+* Capacitación continua para que puedas alcanzar los objetivos y a beneficios adicionales (incremento en comisiones, beneficios de proveedores, estadías gratis, etc.).
+
+* Pertenecer a la empresa líder del sector.
+
+En caso de cumplir con el perfil y que te interese la vacante, puedes compartirme tu CV por esta vía o a mi mail celeste@dpersonas.com .
+
+Saludos y excelente jornada,
+
+Celeste Nadia Masnicoff
+HR Manager Latin America and Caribbean
+--------------------------------------------------------------------------------
+
+--- MATCH 35 ---
+Row 14133 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Israel Huston 🟢 | Date: 2022-12-22 21:01:25 UTC
+Content: Nuestras metas están en adquirir 5 negocios al mes y una facturación exponencial mes a mes
+--------------------------------------------------------------------------------
+
+--- MATCH 36 ---
+Row 14350 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Pablo Pefaur C. | Date: 2022-11-07 18:50:45 UTC
+Content: no sé si has visto pero me dedico al tema de métodos de pago, sé que Paypal es caro en sus cuotas por transacción, quizá te podría interesar algunas de las soluciones de Clip para el comercio digital
+--------------------------------------------------------------------------------
+
+--- MATCH 37 ---
+Row 14353 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Pablo Pefaur C. | Date: 2022-11-07 16:08:02 UTC
+Content: Hola Pablo, me anotaré para este 29, solo que honestamente yo creo que la cuota la cubriré el 25 de este mes, no sé si por la diferencia de días se pueda
+--------------------------------------------------------------------------------
+
+--- MATCH 38 ---
+Row 14641 | From: Gregorio G Pardueles | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-06-18 01:02:46 UTC
+Content: Gracias por tu interés en Expo Pyme Internacional
+
+Esta maravillosa red LinkedIn proporciona una excelente oportunidad para desarrollar negocio, te ofrecemos una plática inicial que dimos y un entrenamiento que te ayudará a llevar tu perfil al éxito. https://www.expopymeint.com/linkedlnpower
+
+Igual si gustas tendremos un networking ejecutivo que te dará la oportunidad de conocer lo practico y novedoso que es un metaverso https://www.expopymeint.com/
+
+Yo quedo como siempre a tus ordenes
+--------------------------------------------------------------------------------
+
+--- MATCH 39 ---
+Row 14733 | From: 💳Antonio Gutiérrez  Jiménez💳 | To: Laura Dávalos | Date: 2021-09-20 22:05:12 UTC
+Content: Ya sin uñas por las metas y el tiempo encima jejeje
+--------------------------------------------------------------------------------
+
+--- MATCH 40 ---
+Row 14934 | From: Paulina Guerrero Carrasco | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-08-19 14:19:48 UTC
+Content: Es metalmecanica
+--------------------------------------------------------------------------------
+
+--- MATCH 41 ---
+Row 15326 | From: Isaul Leon | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-04-27 18:34:04 UTC
+Content: Lo qué pasa es qué acaba de cumplir 18 el jueves
+--------------------------------------------------------------------------------
+
+--- MATCH 42 ---
+Row 15737 | From: Roger Martinez Mora | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-02-11 00:30:36 UTC
+Content: Hola Antonio, gusto en saludarte, a cotinuacion te dejo mis recomendaciones cuando un prospecto te dice "Dejame revisar la propuesta y te comento" :
+
+Lo primero que debemos considerar es presentar siempre nuestra propuesta a través de una reunión presencial que nos permita dar contexto y aclarar dudas en vivo y directo con el prospecto, eso evitará demoras y posibles objeciones a futuro.
+
+Así que recomendación número 1: Evita enviar propuestas por correo y procura agendar un encuentro en vivo destinado a presentación de propuestas.
+
+Ahora bien, si es demasiado tarde y el prospecto te ha dado una respuesta similar a "Voy a revisarlo bien y te aviso" puedes responder:
+
+Opción A. Muy bien, claro que sí. ¿Una semana le parece tiempo adecuado para tomar una decisión?
+De esta forma creas el compromiso de contacto en el lapso de tiempo que tú y el prospecto acuerden, y no te dejará abierta y dilatada la respuesta, además tu próximo contacto de seguimiento estará informado y no le caerá por sorpresa.
+
+Opción B. Ok entiendo. Me gustaría saber si ¿Hay algo en particular que te preocupe? y te gustaría aclarar de la propuesta, así podemos aprovechar este contacto.
+
+De esta manera y en algunos casos el prospecto te liberará su principal preocupación y podrás derribar esa excusa que tiene en su cabeza a la brevedad.
+
+La opción a escoger dependerá de la forma en que percibas al prospecto. ¿Realmente lo notaste apurado al responder y con falta de tiempo, o por lo contrario te dijo que debía revisarla con cierto tono de incomodidad y preocupación?. En el manejo de las sutilezas se encuentra el éxito en ventas.
+
+¿Te invito a aplicar alguna de estas recomendaciones y coméntame qué tal te fue?
+
+¡Éxito y muchas ventas para ti!
+
+Roger M.
+--------------------------------------------------------------------------------
+
+--- MATCH 43 ---
+Row 15761 | From: Roger Martinez Mora | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-08-05 19:54:22 UTC
+Content: Entiendo Antonio,para entender mejor el negocio en el cual trabajas y la forma e que desarrollas tu labor comercial, tendríamos que sentarnos a conversar un poco más a profundidad. Por ahora solo puedo comentarte que recuerdes que el cierre de la venta es la ultima etapa del proceso comercial, para un cierre exitoso debes cumplir con un conjunto de pasos que vayan "preparando el terreno" para que ese cliente diga "SI"
+--------------------------------------------------------------------------------
+
+--- MATCH 44 ---
+Row 16056 | From: María Luisa Uribe | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-11-23 19:29:26 UTC
+Content: yo entré a finales de septiembre, apenas estoy cumpliendo dos meses
+--------------------------------------------------------------------------------
+
+--- MATCH 45 ---
+Row 17155 | From: Alejandro Valencia | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-08-23 17:13:16 UTC
+Content: Yo en rappi la rompí durisimo me moví por que me ofrecieron más dinero, pero en rappi yo traía en 120 o 130 de cumplimiento y en Clip fue mi salida por que me ofrecieron como Sales manager para México y Perú de una startup
+--------------------------------------------------------------------------------
+
+--- MATCH 46 ---
+Row 24508 | From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-12-01 13:15:34 UTC
+Content: <p class="spinmail-quill-editor__spin-break">Hola %FIRSTNAME%,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Mi nombre es Felipe Otalora, fundador de Treble AI.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Estoy buscando empresas que deseen probar nuestra <strong>integración entre HubSpot y WhatsApp</strong> la cual permite a líderes de comerciales <strong>incrementar la eficiencia de sus equipos y de sus campañas.</strong></p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Sé que generas mucho impacto en tu organización y nuestro producto te ayudara a <strong>superar tus metas de ventas en 2023 - 2024. </strong></p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Tu tiempo es muy importante, por eso nos gustaría ofrecerte <strong>75 USD por tener una llamada de exploración con nosotros.</strong></p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Agenda tu llamada, sin compromiso&nbsp;⬇️</p>
+--------------------------------------------------------------------------------
+
+--- MATCH 47 ---
+Row 24615 | From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-09-19 05:40:19 UTC
+Content: Entrevistamos a cientos de vendedores que superaron sus metas en un 50 % o más en el último año.
+
+Al compararlos con vendedores que apenas alcanzaron sus metas, descubrimos que un 76 % de los mejores vendedores siempre investigan a los potenciales clientes antes de ponerse en contacto con ellos. En el grupo con los otros vendedores, el porcentaje fue solo del 44 %.
+
+Haz un clic y descarga el informe gratis "El panorama de ventas en México - Edición 2022" para descubrir para descubrir qué hacen de manera diferente los mejores vendedores.
+--------------------------------------------------------------------------------
+

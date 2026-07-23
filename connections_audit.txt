@@ -1,0 +1,306 @@
+==================================================
+     AUDITORÍA OFFLINE DE CONEXIONES DE LINKEDIN  
+==================================================
+
+Fecha de Auditoría: 2026-07-12 02:52:23
+Total de conexiones analizadas: 3039
+
+ESTADÍSTICAS CLAVE:
+- Conexiones con las que HAS CHATEADO (al menos 1 mensaje): 1455 (47.9%)
+- Conexiones con las que NUNCA HAS CHATEADO (0 mensajes): 1584 (52.1%)
+
+ANTIGÜEDAD DE CONEXIONES CON LAS QUE NUNCA HAS HABLADO (0 Mensajes):
+  * Año 2017: 15 contactos
+  * Año 2018: 19 contactos
+  * Año 2019: 12 contactos
+  * Año 2020: 284 contactos
+  * Año 2021: 116 contactos
+  * Año 2022: 101 contactos
+  * Año 2023: 167 contactos
+  * Año 2024: 276 contactos
+  * Año 2025: 296 contactos
+  * Año 2026: 298 contactos
+
+==================================================
+TOP 30 CONEXIONES CON MAYOR INTERACCIÓN (Mensajes):
+==================================================
+1. Rafa Gandia (Clientify - Growth Marketing y SEO Manager)
+   Mensajes: 456 | Último: 2024-09-19
+   Último fragmento: "Estoy esperando el sorteo jejeejeje"
+
+2. Cristina Langarica (Euromonitor International - Sales Manager - Corporates)
+   Mensajes: 337 | Último: 2024-07-09
+   Último fragmento: "Hola Cristina, años sin escribir "
+
+3. Martin Gelpi (Relck - Digital Sales Manager)
+   Mensajes: 282 | Último: 2025-05-08
+   Último fragmento: "Buenísimo, lo estaré esperando "
+
+4. Antonio Navarro (Vixiees - Full Cycle Inbound Account Executive)
+   Mensajes: 278 | Último: 2025-02-26
+   Último fragmento: "🤣"
+
+5. Ana Leslye Ochoa  (IROX IT MEXICO - Analista de automatización de procesos (HDI Seguros))
+   Mensajes: 217 | Último: 2023-09-13
+   Último fragmento: "Gracias Antonio"
+
+6. Leonardo Cabrera (Atom - Account Executive)
+   Mensajes: 216 | Último: 2026-04-14
+   Último fragmento: "998 119 1903"
+
+7. Luciana Paola  Albar Diaz Clavel  (Finding Solutions - Profesora)
+   Mensajes: 200 | Último: 2021-09-01
+   Último fragmento: "es para que le contestes directamente a Marcela , por favor , ella es mi team leader"
+
+8. Oscar Caamal (DiDi - CKA DiDi Food)
+   Mensajes: 185 | Último: 2024-03-11
+   Último fragmento: "Sí"
+
+9. Alonso Escamilla Islas (Profesional Independiente - Director de unidad de negocios estratégicos)
+   Mensajes: 183 | Último: 2021-01-19
+   Último fragmento: "Gracias"
+
+10. Harumi Makita (Buo - RevOps)
+   Mensajes: 163 | Último: 2024-02-01
+   Último fragmento: "https://www.linkedin.com/in/victor-velazquez-patron-transformingorganizationsonepersonatatime?miniPr"
+
+11. Marely Carbajal (Brang - Directora)
+   Mensajes: 161 | Último: 2024-05-04
+   Último fragmento: "Es solo agarrar el plug in y listo"
+
+12. Alejandra Diaz (Auco.ai - Commercial & customer experience Manager LATAM)
+   Mensajes: 157 | Último: 2025-08-26
+   Último fragmento: "Por lo mismo "
+
+13. gerardo teijeira ♾️ (LoopGTM - Co-Founder)
+   Mensajes: 149 | Último: 2025-07-18
+   Último fragmento: "Apollo hasta me costó encontrar de nuevo por el cambio de logo"
+
+14. Fabiana Moura (Protect Group - Partnerships Director - Hospitality)
+   Mensajes: 134 | Último: 2025-02-12
+   Último fragmento: "+ 1 817 705 3411"
+
+15. Yahel Gutiérrez (Giesecke+Devrient - KAD)
+   Mensajes: 133 | Último: 2023-06-16
+   Último fragmento: "Vas!!!!"
+
+16. Laura Dávalos (Uber - Sr Enterprise Account Manager)
+   Mensajes: 133 | Último: 2022-09-15
+   Último fragmento: "Así es"
+
+17. Javier Villanazul (Grupo Peñafiel - Direct Sales Manager)
+   Mensajes: 122 | Último: 2021-05-24
+   Último fragmento: "Echa un vistazo a este empleo en Bepensa: https://www.linkedin.com/jobs/view/2563451128"
+
+18. Andrés Bruzzoni (Primera Reunión - Founder)
+   Mensajes: 117 | Último: 2025-05-29
+   Último fragmento: "https://academia.samu.ai/valuetanaro"
+
+19. Anaid Ortiz (Be74 - Gerente comercial)
+   Mensajes: 111 | Último: 2025-06-12
+   Último fragmento: "Hola Anaid"
+
+20. Ana Sordo (Check Point Software - Sales Development Representative )
+   Mensajes: 106 | Último: 2026-03-25
+   Último fragmento: "ni lo he pasado , tranquilo"
+
+21. Jorge Guillen Alatriste (GRUPO VEERKAMP - Coordinador de marketing)
+   Mensajes: 103 | Último: 2024-11-21
+   Último fragmento: "Me gustaría que entraras a la página y me dieras tu opinión https://www.goni.mx/"
+
+22. Raul Touza David (SYNERGY NEXUS - Cofundador)
+   Mensajes: 101 | Último: 2026-05-01
+   Último fragmento: "Hola Antonio
+te paso enlace a meet
+me lleva fallando el teams toda la mañana"
+
+23. Marcelo Cortez  (Hunter Prospecta  - Founder)
+   Mensajes: 100 | Último: 2026-06-28
+   Último fragmento: "Se supone que traen con 🧀 "
+
+24. Edgar Morales Sosa (Krauthammer México - Sales Consultant)
+   Mensajes: 92 | Último: 2023-05-17
+   Último fragmento: "Muchas gracias si me sirven los correos por favor. Gracias por el dato
+ "
+
+25. Guadalupe Contreras (Independiente  - Agente inmobiliario Independiente )
+   Mensajes: 91 | Último: 2020-10-20
+   Último fragmento: "Gracias Guadalupe"
+
+26. Marco Rodriguez (Astroline - Director of BPO Channel Development | Mexico & LATAM)
+   Mensajes: 91 | Último: 2020-11-30
+   Último fragmento: "De cual quieres adquirir "
+
+27. Alfredo  Le Pera (Minders - Account Executive)
+   Mensajes: 90 | Último: 2024-05-07
+   Último fragmento: "Hola Antonio, como andas?
+
+Te comparto el formulario para que recibas el listado de eventos!
+https:/"
+
+28. Alfonzo Tocuyo Guite (Select Sound - Ecommerce Director)
+   Mensajes: 85 | Último: 2025-06-26
+   Último fragmento: "Yo ya no estoy en Clip"
+
+29. Manny Escalona (ejecutive de trafico - ejecutivo de trafico)
+   Mensajes: 84 | Último: 2021-02-16
+   Último fragmento: "Nada más"
+
+30. Ellen Araya Fernández (Buk - Sales Manager )
+   Mensajes: 80 | Último: 2023-04-12
+   Último fragmento: "Lo más seguro es que sea para mexico "
+
+
+==================================================
+TOP 50 CONEXIONES ANTIGUAS SIN INTERACCIÓN (Candidatos a Purga):
+==================================================
+1. lilia velarde | Conectado el: 14 Apr 2017
+   Empresa: Altum tecnologic | Cargo: Representante legal
+
+2. DANIEL MUÑOZ PEÑA | Conectado el: 14 Apr 2017
+   Empresa: Liverpool | Cargo: Ingeniero de procesos
+
+3. Felipe Guzman | Conectado el: 14 Apr 2017
+   Empresa: Prosegur | Cargo: Jefe de operaciones
+
+4. Rosario Coromoto Guerra Gil | Conectado el: 16 Apr 2017
+   Empresa: Elektra | Cargo: Scrum Master  Consultor proyectos digitales Ecommerce
+
+5. Jacobo Tavashi Levy | Conectado el: 16 Apr 2017
+   Empresa: CAPRICHO | Cargo: Director
+
+6. Olga Valls | Conectado el: 19 Apr 2017
+   Empresa: Bridgewhat | Cargo: Senior Advisor / Asesor Experto
+
+7. Isaac Diaz Bobadilla | Conectado el: 20 Apr 2017
+   Empresa: Grupo Autofin México | Cargo: Consultor Ejecutivo de Negocios
+
+8. Marco Antonio Cetz Canche | Conectado el: 28 Apr 2017
+   Empresa:  | Cargo: 
+
+9. Alejandro Ruiz Vega | Conectado el: 09 May 2017
+   Empresa: Alejandro Ruiz Cortador | Cargo: Cortador profesional de jamón
+
+10. Vanessa Ramirez Rico | Conectado el: 16 May 2017
+   Empresa: DataCRM | Cargo: Directora general
+
+11. ⭐ Liliana  Vargas | Conectado el: 19 May 2017
+   Empresa: Progeox | Cargo: Ventas PROGEOX APP
+
+12. Sandra Miriam Acosta Tafoya | Conectado el: 13 Jun 2017
+   Empresa: ConAgra Foods | Cargo: Gerente de planeación, materiales y almacén 
+
+13. Diana Milena Moreno Alarcón | Conectado el: 28 Jun 2017
+   Empresa: Promundo MAR | Cargo: Investigadora de Mercado
+
+14. Carlos Otero | Conectado el: 09 Aug 2017
+   Empresa: indigitall | Cargo: Head of Partners - Florida 
+
+15. Valerie Michel Herrera | Conectado el: 11 Aug 2017
+   Empresa: Unlimited Vacation Club | Cargo: Analista de datos
+
+16. Roger Zuñiga | Conectado el: 29 Jan 2018
+   Empresa: Madison | Cargo: Community Manager
+
+17. Luis Enrique Bonilla Mejia | Conectado el: 31 Jan 2018
+   Empresa: imagen Profunda | Cargo: Supervisor de Ventas
+
+18. Nahuel Cellini | Conectado el: 08 Feb 2018
+   Empresa: Grupo Mirgor | Cargo: Analista de Proyectos Industriales - IT
+
+19. Hugo Hernández Cuahutle | Conectado el: 08 Feb 2018
+   Empresa: TRYDAN O&M | Cargo: Ingeniero de planta
+
+20. Luis Ernesto Hernández Palomares | Conectado el: 24 Feb 2018
+   Empresa: The Home Depot México | Cargo: Stores Manager
+
+21. JAVIER MENDEZ TRUJILLO | Conectado el: 05 Mar 2018
+   Empresa: EDIC Educación, Innovación y Creatividad SA de CV | Cargo: Director de ventas
+
+22. Octavio Matías Arenas | Conectado el: 22 Mar 2018
+   Empresa: El Puerto de Liverpool | Cargo: Jefe de Departamento
+
+23. Vianney López Morales | Conectado el: 15 Apr 2018
+   Empresa:  | Cargo: 
+
+24. Valentín  Martinez | Conectado el: 07 May 2018
+   Empresa: Cuenta Propia | Cargo: Especialista comercial
+
+25. Beatríz Calderón | Conectado el: 31 May 2018
+   Empresa: Galdisa | Cargo: Ejecutivo de Ventas Mayoreo
+
+26. Jonathan  Valerio Sanchez | Conectado el: 13 Aug 2018
+   Empresa: Liverpool | Cargo: Jefe de Recepcion y Envios Pottery Barn Antea
+
+27. Luis Alberto Aguilar Piñuelos | Conectado el: 17 Sep 2018
+   Empresa: Marcas Extraordinarias | Cargo: Gerente Regional Multicanal Sureste-Centroamerica
+
+28. Miguel Antonio Gutierrez Mollinedo | Conectado el: 01 Oct 2018
+   Empresa: bia | Cargo: Gerente regional de ventas
+
+29. Isi Rodríguez | Conectado el: 03 Oct 2018
+   Empresa: Construrama | Cargo: Jefe de compras
+
+30. Carlos Valdez | Conectado el: 24 Oct 2018
+   Empresa: bia | Cargo: National Traditional Trade Sr Manager
+
+31. IRAIS LOPEZ GARCIA | Conectado el: 27 Oct 2018
+   Empresa: Mi Bodega Aurrera San Antonino | Cargo: Auxiliar de sistemas y facturación
+
+32. Déborah Holtz | Conectado el: 05 Nov 2018
+   Empresa: Trilce Ediciones/ Sensacional de Diseno Mexicano | Cargo: Owner
+
+33. Michelle Cuéllar Aguilar | Conectado el: 25 Nov 2018
+   Empresa:  | Cargo: 
+
+34. Adriana Valdez | Conectado el: 13 Dec 2018
+   Empresa: JTI (Japan Tobacco International) | Cargo: Total Rewards Manager
+
+35. Mario Isaac Carcaño | Conectado el: 08 Jan 2019
+   Empresa: Nadro | Cargo: Head of eCommerce & digital marketing
+
+36. Patricia Fernández Aguilar (ella/she) | Conectado el: 03 Feb 2019
+   Empresa: FIFCO | Cargo: Jefe de Compras Regional: Materias primas-material de empaque & Producto terminado
+
+37. Juan Manuel Carera Pérez | Conectado el: 24 Mar 2019
+   Empresa:  | Cargo: 
+
+38. Scott Ivins | Conectado el: 01 Apr 2019
+   Empresa: K Opportunities | Cargo: Founder
+
+39. Julio Cesar Camacho | Conectado el: 20 Apr 2019
+   Empresa: REXA Co | Cargo: CEO Rexa Company BTL, Digital & Trade Agency
+
+40. Pamela Salazar | Conectado el: 20 Jun 2019
+   Empresa: Avanti | Cargo: Asesor comercial
+
+41. Yoalli Román López | Conectado el: 26 Jun 2019
+   Empresa: GRUPO FEROMO SA DE CV | Cargo: Ejecutivo de cuenta 
+
+42. IVAN Vasquez | Conectado el: 28 Jun 2019
+   Empresa: Bank of China | Cargo: Internal Control Manager
+
+43. Angélica López | Conectado el: 14 Aug 2019
+   Empresa: AP LATAM | Cargo: Analista de Reclutamiento SR
+
+44. Martha Flores | Conectado el: 19 Sep 2019
+   Empresa: Grupo carwo | Cargo: Contralor
+
+45. ADRIANA URIBE  Galardón FRACTALES DEL CAMBIO | Conectado el: 04 Dec 2019
+   Empresa: Zen Estratégico | Cargo: DIRECTORA DE RRHH / PEOPLE
+
+46. Allison Salazar | Conectado el: 05 Dec 2019
+   Empresa: CRH Talento en IT | Cargo: Lead Technical Recruiter
+
+47. Israel Cordova Segura | Conectado el: 10 Jan 2020
+   Empresa: MG Computación y Electrónica S de RL de CV | Cargo: Supervisor de central
+
+48. Talento Estratégico | Conectado el: 10 Jan 2020
+   Empresa: Talento Estrategico | Cargo: Dirección de Reclutamiento y Selección
+
+49. Fernanda Orvañanos | Conectado el: 22 Feb 2020
+   Empresa: Uber | Cargo: Sr Account Manager
+
+50. Jorge Gutiérrez Nava | Conectado el: 14 Mar 2020
+   Empresa: CAPITAL FOR GOOD USA | Cargo: Growth Marketing Consultant
+

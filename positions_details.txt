@@ -1,0 +1,74 @@
+Positions Header: Company Name | Title | Description | Location | Started On | Finished On
+
+Row 1:
+  Company Name: LATAM Commerce
+  Title: Co-creador 
+  Location: LATAM Commerce representa a un grupo dinámico de innovadores, empresarios y especialistas que están transformando el panorama del comercio electrónico en Latinoamérica. Nuestro objetivo es compartir ideas, crear relaciones valiosas y mostrar los avances más importantes en comercio electrónico, métodos de pago, logística, tecnología y experiencia de usuario. Únete a nosotros, trabajemos juntos y crezcamos en conjunto.
+  Start Date: Канкун, ROO
+  End Date: Mar 2024
+  Description: 
+--------------------------------------------------------------------------------
+
+Row 2:
+  Company Name: Fiserv
+  Title: Business Sales Consultant
+  Location: ·   Diseñé un modelo de diagnóstico personal en Power BI para monitorear el comportamiento transaccional MoM (mes a mes) de mi cartera asignada de 80+ clientes, logrando identificar de manera preventiva cuentas en riesgo de abandono.    ·  Programé un flujo propio (Power Automate + Excel + Outlook) para automatizar campañas de reactivación a contactos inactivos de mi cartera, incrementando mi alcance diario de contacto comercial de forma independiente.    ·  Diseñé una plantilla optimizada de registro y control de oportunidades en Excel con validaciones y bloqueos de seguridad, evitando la sobreescritura accidental y garantizando la integridad de los datos de mi embudo comercial.    ·  Configuré tableros personalizados en Salesforce para el monitoreo de mis indicadores y pipeline MoM, logrando una visibilidad clara de mis oportunidades activas y optimizando mi toma de decisiones comerciales.    ·  Administré el flujo de nuevos negocios provenientes de la alianza bancaria asignada y mantuve un pipeline autogenerado de más de 15 oportunidades activas mensuales.
+  Start Date: Канкун, ROO
+  End Date: Mar 2025
+  Description: Oct 2025
+--------------------------------------------------------------------------------
+
+Row 3:
+  Company Name: Clip
+  Title:  Acquisition Executive | BDR | Sales |  
+  Location: · Adquirí y consolidé cuentas clave (eCommerce y Retail) con volúmenes de facturación mensual de entre $500k y $2M MXN, acumulando una facturación anual recurrente (ARR) superior a los $10M MXN y logrando un promedio del 90% de cumplimiento de cuota.    · Analicé de forma independiente el histórico de ventas de 3 años para cruzar canal (Inbound, Outbound, LinkedIn, pautas), vertical transaccional y tiempo de permanencia, descubriendo que las cuentas con mayor transaccionalidad presentaban la tasa de retención (LTV) más alta.    · Promoví y coordiné la integración con sistemas satélites de nicho clave (Bistrosoft para sector restaurantero y Profitroom para hotelería en Riviera Maya) para eliminar fricciones técnicas en el proceso de venta de cuentas corporativas.    · Propuse y lideré comercialmente el desarrollo de la integración de Clip con Odoo ERP, coordinando la presentación oficial de la solución ante partners tecnológicos en el evento *Odoo Days*.    · Realicé la investigación de mercado y el estudio de viabilidad para integrar Pix (método de pago brasileño instantáneo) en terminales Clip físicas del área de Cancún y Riviera Maya, buscando capturar el mercado de turismo brasileño.    · Implementé procesos de scraping de datos, Sales Navigator y Apollo para automatizar y filtrar directorios de prospección comercial, reduciendo el tiempo de calificación de tomadores de decisión.   **Auditoría de Control Interno (Encargo Especial):** Diseñé y ejecuté, bajo mandato confidencial de la VP de Ventas, un diagnóstico de control de procesos comerciales y validación de flujos de asignación de cuentas, mitigando riesgos operativos en la gestión del pipeline comercial.
+  Start Date: Quintana Roo, México
+  End Date: Jul 2021
+  Description: Mar 2025
+--------------------------------------------------------------------------------
+
+Row 4:
+  Company Name: ENFA DELIVERY
+  Title: Ejecutivo de desarrollo del negocio
+  Location: Adaptando los negocios a la nueva era digital, acercando a la tecnología con los negocios/clientes en servicios de entrega, transformación digital, last mile.  Apertura de mercado en Península de Yucatán,
+  Start Date: Cancún, Quintana Roo, México
+  End Date: Jul 2020
+  Description: Oct 2020
+--------------------------------------------------------------------------------
+
+Row 5:
+  Company Name: JTI (Japan Tobacco International)
+  Title: Ejecutivo Desarrollador Canal HORECA
+  Location: Ejecución de la estrategia comercial enfocada en canal HORECA en la zona de Cancún y Riviera Maya
+  Start Date: Cancún y alrededores, México
+  End Date: Jul 2018
+  Description: Dec 2019
+--------------------------------------------------------------------------------
+
+Row 6:
+  Company Name: Conagra Brands
+  Title: Ejecutivo de ventas
+  Location: 
+  Start Date: Cancún y alrededores, México
+  End Date: Apr 2017
+  Description: Dec 2017
+--------------------------------------------------------------------------------
+
+Row 7:
+  Company Name: Prosegur
+  Title: Controlador de operaciones
+  Location: 
+  Start Date: Cancún y alrededores, México
+  End Date: Oct 2015
+  Description: Apr 2017
+--------------------------------------------------------------------------------
+
+Row 8:
+  Company Name: Liverpool
+  Title: Ingeniero de aprovisionamiento
+  Location: Surtidor de mercancía vendida en piso de venta y ventas por internet
+  Start Date: Cancún y alrededores, México
+  End Date: Sep 2011
+  Description: Apr 2015
+--------------------------------------------------------------------------------
+

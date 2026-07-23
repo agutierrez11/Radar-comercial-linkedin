@@ -1,0 +1,1120 @@
+Searching messages.csv...
+
+Row 169 - Matches: ['felicida']
+  From: Marcelo Cortez  | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-09-09 13:56:29 UTC
+  Content: 2-OGJjZGZkYzYtNjNlZS00Zjc5LWExOWQtNDUyNzdmZjZhZWYyXzAxMg== |  | Marcelo Cortez  | https://www.linkedin.com/in/marcelocortezb2b | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2022-09-09 13:56:29 UTC |  | Oye felicidades, se ven buenos los dolores, le hizo sentido al prospecto por lo que veo? | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 281 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Cristian Serrano | Date: 2024-01-25 01:06:08 UTC
+  Content: 2-MGY1NzFhZTEtYzdmNC00ZGY2LTgyNjMtMjk5MzEyNDk2ZDE5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Cristian Serrano | https://www.linkedin.com/in/cist84 | 2024-01-25 01:06:08 UTC |  | Cristian, estimado, muchas felicidades, nuevamente participando en eventos relevantes de la industria | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 312 - Matches: ['felicida']
+  From: FEDERICO GARCIA | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-19 14:32:05 UTC
+  Content: 2-MTkxZGQ2ZDQtMzI3ZS00Y2I5LWEyMjMtMjY1NTYyMjZhZjc4XzAxMg== |  | FEDERICO GARCIA | https://www.linkedin.com/in/federico-garcia-jobsempleo | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-19 14:32:05 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 314 - Matches: ['felicida']
+  From: FEDERICO GARCIA | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 01:25:01 UTC
+  Content: 2-MTkxZGQ2ZDQtMzI3ZS00Y2I5LWEyMjMtMjY1NTYyMjZhZjc4XzAxMg== |  | FEDERICO GARCIA | https://www.linkedin.com/in/federico-garcia-jobsempleo | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 01:25:01 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 317 - Matches: ['felicida']
+  From: FEDERICO GARCIA | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 05:23:22 UTC
+  Content: 2-MTkxZGQ2ZDQtMzI3ZS00Y2I5LWEyMjMtMjY1NTYyMjZhZjc4XzAxMg== |  | FEDERICO GARCIA | https://www.linkedin.com/in/federico-garcia-jobsempleo | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 05:23:22 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 500 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Fabiola Cubría  | Date: 2026-05-18 19:30:40 UTC
+  Content: 2-OWJiMWI0NDItNDAzNi00Zjg3LWJkOTUtY2FmNjQzMzdkN2MzXzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Fabiola Cubría  | https://www.linkedin.com/in/fabcub | 2026-05-18 19:30:40 UTC |  | Muchas felicidades, no tardaste nada  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 841 - Matches: ['felicida']
+  From: Leonardo Cabrera | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-07-18 05:50:20 UTC
+  Content: 2-NmY5MjNlZGMtMmMwYS00ZTQ1LWI4ZmItM2VhZDk2ZjI2ZjI5XzAxMg== |  | Leonardo Cabrera | https://www.linkedin.com/in/leonardo-cabrera-e | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-18 05:50:20 UTC |  | Te veo muy activo e interesado en aprender. Eso es una bendición también. Felicidades porque no cualquiera se prepara constantemente. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 844 - Matches: ['felicida']
+  From: Leonardo Cabrera | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-07-18 04:23:49 UTC
+  Content: 2-NmY5MjNlZGMtMmMwYS00ZTQ1LWI4ZmItM2VhZDk2ZjI2ZjI5XzAxMg== |  | Leonardo Cabrera | https://www.linkedin.com/in/leonardo-cabrera-e | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-18 04:23:49 UTC |  | Hola Antonio, felicidades por seguir aprendiendo. 
+
+Por cierto, ya no me respondiste si te interesa nos reunamos para mostrarte qué hacemos y cómo lo hacemos.
+
+Quizá te interese. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 1096 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Jan Heinvirta | Date: 2021-07-21 17:16:31 UTC
+  Content: 2-YmVjYTQ4MDEtOWU5MS00MWI0LTlhOGMtYTc5NjIxOTdiYzJiXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jan Heinvirta | https://www.linkedin.com/in/janheinvirta | 2021-07-21 17:16:31 UTC |  | Oye Jan, primero que todo muchas felicidades por el proyecto de Perfekto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 1152 - Matches: ['reconocimiento']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Ariana (sin D) González  | Date: 2026-02-06 21:57:42 UTC
+  Content: 2-ZmYzZjM5MWEtMmQ5ZC00NmI4LWFiZDMtN2UzNTM2Yjc3NzlmXzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ariana (sin D) González  | https://www.linkedin.com/in/ariana-sin-d | 2026-02-06 21:57:42 UTC |  | mil mil gracias y excelente fin de semana, hoy que vi tu reconocimiento me llenó de orgullo | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 1158 - Matches: ['felicida', 'reconocimiento']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Ariana (sin D) González  | Date: 2026-02-06 21:21:20 UTC
+  Content: 2-ZmYzZjM5MWEtMmQ5ZC00NmI4LWFiZDMtN2UzNTM2Yjc3NzlmXzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ariana (sin D) González  | https://www.linkedin.com/in/ariana-sin-d | 2026-02-06 21:21:20 UTC |  | Primero que todo muchas felicidades por el reconocimiento  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 1367 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Luis Castillejos Ordaz | Date: 2026-03-20 01:00:06 UTC
+  Content: 2-ZWIxZWZiMDMtNzdjZC00ZTI0LTgxNzEtN2UwODE2NzQyOWEwXzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Luis Castillejos Ordaz | https://www.linkedin.com/in/luiscastillejosordaz | 2026-03-20 01:00:06 UTC |  | Luis muy buena tarde y felicidades por la noticia con Airwallex, seguro era eventual con la experiencia e infraestructura., entiendo que tras la integración de MexPago, la misión de Airwallex es dominar la infraestructura transfronteriza del SME mexicano. Además de que ayer vi la vacante que tienen actualmente, no me he postulado porque requieren en CDMX y yo estoy en Cancún.
+
+En lugar de enviarte un currículum genérico, te comparto un Strategic Assessment que generé usando NERV (un motor de GTM que estoy construyendo).
+
+Identifiqué que empresas como Nowports son vuestro ICP ideal: mueven billones en carga pero su sangre operativa (el FX) sigue atrapada en rieles bancarios lentos. Airwallex es la única cura para ese 'resfriado' sistémico.
+
+Me encantaría mostrarte el 'brain' de NERV y cómo planeo usar esta tecnología para que Airwallex gane el mercado de SME en México desde First Principles." | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 1465 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Miguel Gonzalez | Date: 2025-08-05 21:04:32 UTC
+  Content: 2-MTRkZmIzNTEtOGIzMC00MGE3LWJiMDctYjdhZTczNTJjYWI3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Miguel Gonzalez | https://www.linkedin.com/in/miguel-gonzalez-92117819b | 2025-08-05 21:04:32 UTC |  | Felicidades por el evento del Fintech Summit | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 1688 - Matches: ['congrat']
+  From: Kaan Kırlı | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2026-01-26 20:55:59 UTC
+  Content: 2-ZWRkNTUwN2QtNTI2Yi00OGFkLTg0ZmEtOWU5YTc5MDIyMjIyXzEwMA== |  | Kaan Kırlı | https://www.linkedin.com/in/kaankırlı | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2026-01-26 20:55:59 UTC |  | Hi Antonio,
+
+Thank you to accept my invitation. Congratulations for your Forward Graduation! I'm happy to connect with you as a Forward Alumni. 
+
+Sincerely, 
+Kaan | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 1847 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Erika Argüelles | Date: 2024-02-12 19:44:57 UTC
+  Content: 2-OGNhNGJjMmMtODZlZS00NzkyLTliNGMtZTFjNTFmZmVlNjc3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Erika Argüelles | https://www.linkedin.com/in/erika-argüelles-49692145 | 2024-02-12 19:44:57 UTC |  | Muchas felicidades por la participación en  Gala | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 1914 - Matches: ['felicida']
+  From: Tomás Volonté | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2025-12-23 23:05:45 UTC
+  Content: 2-ODg4ZDZiNTktNmNhYS00NTBlLTliMDEtMGY4MDNmZGRkZGE5XzEwMA== |  | Tomás Volonté | https://www.linkedin.com/in/tomas-volonte | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-12-23 23:05:45 UTC |  | Felicidades!! Y
+ ese premio que es lo que te ofrece? | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 1984 - Matches: ['felicida']
+  From: Gerardo Fragoso | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-20 20:44:18 UTC
+  Content: 2-ZGEyODBhMmEtYjEwNy00NjhlLTllZjYtZTczYzhlOGQ1OTIzXzAxMA== |  | Gerardo Fragoso | https://www.linkedin.com/in/gerardo-fragoso-a24949a | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-20 20:44:18 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 2120 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Kathia Ramirez | Date: 2025-11-13 14:57:26 UTC
+  Content: 2-YjZjZDJjYWUtYjM0OC00MjhjLWJmYTAtYmY4ODJhMjE1OTdjXzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Kathia Ramirez | https://www.linkedin.com/in/kathia-ramirez-1950a0a1 | 2025-11-13 14:57:26 UTC |  | Muchas felicidades Kathia, todo el éxito. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 2300 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Ariatna Dominguez 🏳️‍🌈 | Date: 2025-10-01 14:37:46 UTC
+  Content: 2-MTlmYmY5MmItNzJlNS00MDBkLTgwZDEtYTJhYWFmMjA0OWFjXzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ariatna Dominguez 🏳️‍🌈 | https://www.linkedin.com/in/ariatnadominguez | 2025-10-01 14:37:46 UTC |  | Ariatna muy buen día, muchas felicidades por el nuevo reto.  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 2305 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Jonatan Flores Lagarda | Date: 2025-09-23 20:47:33 UTC
+  Content: 2-MjZhYzZkOTctMWM5My00YzZkLWI5ZjAtODMzNTBhMzNkNGI3XzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jonatan Flores Lagarda | https://www.linkedin.com/in/jonatan-flores-lagarda- | 2025-09-23 20:47:33 UTC |  | Jonathan, buena tarde y muchas felicidades. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 2397 - Matches: ['top performance']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Carolina Samsing | Date: 2025-08-28 14:23:18 UTC
+  Content: 2-ZTViMTQyZTYtZWM4NS00MTVhLWExZTctODlhNmJkYjk0M2VlXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Carolina Samsing | https://www.linkedin.com/in/carolinasamsing | 2025-08-28 14:23:18 UTC |  | Es más, le dije que siento que si trato de depende de si uno va bien o no en la meta y que no me gustaría ser tratado así, creo que son cosas diferentes, no sé tú perspectiva. Y si tú filosofía es que eres tan bueno como tú último resultado, imagínate. Más en en área comercial, imagina que 11 meses fuiste top performance, y el mes 12 te va mal y van a considerar ese último mes para una promoción. Hay demasiado sesgo. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 2468 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Alejandra Diaz | Date: 2025-08-04 15:24:47 UTC
+  Content: 2-ZDNmYTNjNDYtOTIwYS00OTQ0LTlhNzUtNTNkY2IyOTc0OTUxXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alejandra Diaz | https://www.linkedin.com/in/alejandra-d-740044b2 | 2025-08-04 15:24:47 UTC |  | Muchas felicidades 🥳 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 2582 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Alejandra Diaz | Date: 2023-08-23 14:33:30 UTC
+  Content: 2-ZDNmYTNjNDYtOTIwYS00OTQ0LTlhNzUtNTNkY2IyOTc0OTUxXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alejandra Diaz | https://www.linkedin.com/in/alejandra-d-740044b2 | 2023-08-23 14:33:30 UTC |  | Muchas felicidades,  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 2685 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Guillermo Muñoz V. | Date: 2025-08-05 23:14:04 UTC
+  Content: 2-YWNjNDliMzUtYTkyNC00YWI3LWFjMzYtOWJkOTA2NTQzOWY5XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Guillermo Muñoz V. | https://www.linkedin.com/in/guillermo-muñoz-v-2924b15b | 2025-08-05 23:14:04 UTC |  | Felicidades por el nuevo reto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 2773 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Estefania Sanchez | Date: 2025-07-23 13:40:27 UTC
+  Content: 2-MzYwNzE5NjktZmJiMi00OWRkLWExYzktODE1Y2VjMTYwZDY3XzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Estefania Sanchez | https://www.linkedin.com/in/estefania-sanchez-380ab619a | 2025-07-23 13:40:27 UTC |  | Muchas Felicidades por los dos años en Nuvei por cierto:) | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 2861 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Angela Nanô | Date: 2025-07-22 02:03:50 UTC
+  Content: 2-NWVhZTY2MmQtN2I4OS00ZTYyLTlkZWUtYzIyOTM0YWVlNzE3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Angela Nanô | https://www.linkedin.com/in/angelanano | 2025-07-22 02:03:50 UTC |  | Muchas Felicidades Angela, wooooow | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 3047 - Matches: ['felicit']
+  From: gerardo teijeira ♾️ | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-11-25 20:52:03 UTC
+  Content: 2-OWExZTE0MmEtNTMzMy00YzBhLWE3YjItZjVkZTAzYzhmNDgxXzAxMg== |  | gerardo teijeira ♾️ | https://www.linkedin.com/in/gteijeira | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2022-11-25 20:52:03 UTC |  | Bueno pues por empezar felicitaciones por la oportunidad! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 3173 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Ana Pak | Date: 2024-07-17 14:53:09 UTC
+  Content: 2-NDc0Y2NkZmQtMDY1NC00ZGU1LTg0ZGYtZmUxYWViNTM0Y2QyXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ana Pak | https://www.linkedin.com/in/ana-pak-b531b18b | 2024-07-17 14:53:09 UTC |  | Ana, muy buen miércoles, primero que todo muchas felicidades por el nuevo reto  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 3192 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: May  Torres Córdoba  | Date: 2019-02-03 22:57:48 UTC
+  Content: 2-ZWVkMDY0MDktYTI3ZS01NzNhLTk5OGItZjIyY2YwOGI5OTBkXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | May  Torres Córdoba  | https://www.linkedin.com/in/maria-del-mar-torres-cordoba | 2019-02-03 22:57:48 UTC |  | ¡Muchas felicidades!, no sabía que era tu cumpleaños | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 3371 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Tania Garcia | Date: 2024-04-26 15:48:28 UTC
+  Content: 2-MjdjNGUyOWYtYjg5ZS00ODhlLWEzMzgtNTdhNmRkMDQ0ZjlhXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Tania Garcia | https://www.linkedin.com/in/tania-gach | 2024-04-26 15:48:28 UTC |  | Primero que todo muchas felicidades por la nueva posición, nuevo reto  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 3463 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: AMAURY JOFFRE VILCHIS | Date: 2025-06-13 18:16:28 UTC
+  Content: 2-YzRlMGUzZWItODlkYi00ZGVjLWE1ZGMtZDZjMDhhNDNlNzczXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | AMAURY JOFFRE VILCHIS | https://www.linkedin.com/in/amauryjoffrevilchis | 2025-06-13 18:16:28 UTC |  | Muchas felicidades  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 3571 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Anaid Ortiz | Date: 2022-08-16 19:58:16 UTC
+  Content: 2-YjhhMDhmOWYtYjJjNy00NGZmLWIxZmUtOTA0YzM2OWM4MTYzXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Anaid Ortiz | https://www.linkedin.com/in/anaidortiz | 2022-08-16 19:58:16 UTC |  | Hola Anaid, muchas felicidades | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 3573 - Matches: ['felicida']
+  From: Anaid Ortiz | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-17 13:18:03 UTC
+  Content: 2-YjhhMDhmOWYtYjJjNy00NGZmLWIxZmUtOTA0YzM2OWM4MTYzXzAxMg== |  | Anaid Ortiz | https://www.linkedin.com/in/anaidortiz | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 13:18:03 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 3705 - Matches: ['felicida']
+  From: Andrés Bruzzoni | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-11-15 16:07:03 UTC
+  Content: 2-YjMxZjA4YzQtMzZmZi00N2Y1LTk5YTUtNzU3MTZkNTc0MTc3XzAxMg== |  | Andrés Bruzzoni | https://www.linkedin.com/in/andresbruzzoni | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2022-11-15 16:07:03 UTC |  | FElicidades Antonio! Ganaste el sorteo | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 3889 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Marisol Medinilla Granados | Date: 2024-11-06 18:46:09 UTC
+  Content: 2-ZTc2ZTAxMGEtOTk3My00MzkwLWI1MDItN2I0OGNjMDhlZTNjXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Marisol Medinilla Granados | https://www.linkedin.com/in/marisol-medinilla-granados-0243ab244 | 2024-11-06 18:46:09 UTC |  | Felicidades por el nuevo reto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 3892 - Matches: ['felicida']
+  From: Marisol Medinilla Granados | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-07-06 15:28:45 UTC
+  Content: 2-ZTc2ZTAxMGEtOTk3My00MzkwLWI1MDItN2I0OGNjMDhlZTNjXzAxMg== |  | Marisol Medinilla Granados | https://www.linkedin.com/in/marisol-medinilla-granados-0243ab244 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-06 15:28:45 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 4203 - Matches: ['felicida']
+  From: Héctor Torres | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 15:16:23 UTC
+  Content: 2-NzY5MmI0YTYtNWJlMy00YWEyLWIwNDItNzAxNWFlZjhkYmZjXzAxMg== |  | Héctor Torres | https://www.linkedin.com/in/héctor-torres-59761789 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-07-05 15:16:23 UTC |  | ¡Felicidades por cumplir 3 años en Clip! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 4212 - Matches: ['felicit']
+  From: Héctor Torres | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-04-25 17:37:01 UTC
+  Content: 2-NzY5MmI0YTYtNWJlMy00YWEyLWIwNDItNzAxNWFlZjhkYmZjXzAxMg== |  | Héctor Torres | https://www.linkedin.com/in/héctor-torres-59761789 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-04-25 17:37:01 UTC |  | Felicitaciones amigo!! | INBOX | https://www.linkedin.com/dms/prv/vid/v2/D4E06AQE1bfxdWb2EAg/messaging-attachmentFile/messaging-attachmentFile/0/1682444214362?m=AQJAhIk32ZlcxgAAAZ8vZ3gjYRR2ROKrz_NatZyxR8FsVj2rKzgIoyhUoA&ne=1&v=beta&t=d0n0gt_AmBYPCZxtWo-LR3wPAYzj8UpZ0i5oSuFlurc | No | No
+--------------------------------------------------------------------------------
+
+Row 4227 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Diego Alcántara Muñoz | Date: 2023-10-03 15:56:21 UTC
+  Content: 2-ODdkZjgxNTctYzQ3MS00NzdlLWFhNDctZTQyZThmNWVjMmJjXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Diego Alcántara Muñoz | https://www.linkedin.com/in/dieyoalc | 2023-10-03 15:56:21 UTC |  | Felicidades por el emprendimiento de las rentas  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 4250 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Fernando García Castro | Date: 2023-09-14 23:49:37 UTC
+  Content: 2-Yjg2ZDA3M2UtNTUwZS00ODJmLWE0NmItODE2OTZlYzM5NDE1XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Fernando García Castro | https://www.linkedin.com/in/fernando-garcia-castro | 2023-09-14 23:49:37 UTC |  | Felicidades Fernando, andas con todo  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 4302 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Vladimir Ortiz | Date: 2025-04-23 02:29:56 UTC
+  Content: 2-MWQwNWUyZDQtYjNjNS00NTUzLWE2ZWMtOTRhY2QyMWRmYTU5XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Vladimir Ortiz | https://www.linkedin.com/in/vladimir-ortiz-5592122a | 2025-04-23 02:29:56 UTC |  | Muchas felicidades por el movimiento  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 4308 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: João Cláudio Ribeiro | Date: 2025-04-23 00:28:19 UTC
+  Content: 2-YmJjMmJjY2EtODkzNi00MjAzLTg0NjctNmFiZTEyMGFiNDNlXzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | João Cláudio Ribeiro | https://www.linkedin.com/in/joaoclaudioribeiro | 2025-04-23 00:28:19 UTC |  | João buena tarde, muchas gracias por aceptar, felicidades por el aterrizaje en México  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 4413 - Matches: ['felicida']
+  From: Chris Payne | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2025-03-03 16:27:29 UTC
+  Content: 2-NjlkYzc0YmUtN2NhOS00OGI4LTlkMzAtYzIzNjQ2Yjk5ZGU1XzEwMA== |  | Chris Payne | https://www.linkedin.com/in/chrispayneb2b | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-03-03 16:27:29 UTC |  | Wow, súper, felicidades por tu nuevo trabajo :-) | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 4592 - Matches: ['felicida']
+  From: Rodolfo Adrian Sanchez Hernandez | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2025-03-07 15:06:07 UTC
+  Content: 2-OGYwMTQ1ZTUtODdhYy00OGZmLTk1MGItZjg2NGM3N2NhZTk4XzEwMA== |  | Rodolfo Adrian Sanchez Hernandez | https://www.linkedin.com/in/rodolfo-adrian-sanchez-hernandez-a58409166 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-03-07 15:06:07 UTC |  | ¡Felicidades por tu nuevo puesto en Fiserv! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 4594 - Matches: ['felicida']
+  From: Plinio Fernando Rivera Valenzuela | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2025-03-07 14:35:46 UTC
+  Content: 2-MTA5Y2I0NzEtNWU1Yy00ZjdiLTkyYTItNjUyNmFhYzgxMWQ2XzAxMg== |  | Plinio Fernando Rivera Valenzuela | https://www.linkedin.com/in/pliniorivera | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-03-07 14:35:46 UTC |  | ¡Felicidades por tu nuevo puesto en Fiserv! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 4596 - Matches: ['felicida']
+  From: Plinio Fernando Rivera Valenzuela | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 20:52:51 UTC
+  Content: 2-MTA5Y2I0NzEtNWU1Yy00ZjdiLTkyYTItNjUyNmFhYzgxMWQ2XzAxMg== |  | Plinio Fernando Rivera Valenzuela | https://www.linkedin.com/in/pliniorivera | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-07-05 20:52:51 UTC |  | ¡Felicidades por cumplir 3 años en Clip! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 4598 - Matches: ['felicida']
+  From: Plinio Fernando Rivera Valenzuela | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-07-06 14:45:11 UTC
+  Content: 2-MTA5Y2I0NzEtNWU1Yy00ZjdiLTkyYTItNjUyNmFhYzgxMWQ2XzAxMg== |  | Plinio Fernando Rivera Valenzuela | https://www.linkedin.com/in/pliniorivera | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-06 14:45:11 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 4698 - Matches: ['felicida']
+  From: Antonio Navarro | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-07-05 11:58:44 UTC
+  Content: 2-ODc3ZDJmZjUtM2I1Ni00NzBiLWI0MzctNzg4MWIwNjhkMTUyXzAxMg== |  | Antonio Navarro | https://www.linkedin.com/in/antoniojnavarro | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-05 11:58:44 UTC |  | ¡Felicidades por tu aniversario de trabajo!
+
+Un abrazo señor | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 5224 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Alejandro Palomeque Lizarraga | Date: 2022-08-31 21:19:24 UTC
+  Content: 2-MzdlYmVhY2EtMTJiMC00ZTlhLTk5N2ItZDhlZTg5M2Y0NjNkXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alejandro Palomeque Lizarraga | https://www.linkedin.com/in/alejandro-palomeque-lizarraga-698134b3 | 2022-08-31 21:19:24 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 5272 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Jorge Guillen Alatriste | Date: 2024-05-14 17:41:03 UTC
+  Content: 2-NGY5ZWI5ZWYtNjM5MC00NjY5LThkNzktZGI5YzI1MzE3ZWQxXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jorge Guillen Alatriste | https://www.linkedin.com/in/jorge-guillen-alatriste-157736187 | 2024-05-14 17:41:03 UTC |  | Felicidades por el nuevo reto 😁 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 5434 - Matches: ['felicit']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Manuel Oswaldo Quiroz Campos | Date: 2024-11-15 23:41:59 UTC
+  Content: 2-OGQwZTQwOWEtZTk4NS00MTE0LWFiZjktNmU0ODYxYTQzZmFhXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Manuel Oswaldo Quiroz Campos | https://www.linkedin.com/in/manuelquirozhoy | 2024-11-15 23:41:59 UTC |  | Felicitarte por el nuevo proyecto de la reserva de yates, quiero preguntar si solo gestionas agendas o también ves el procesamiento de pagos? | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 5587 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Cecilia (Cecy) González Vela | Date: 2023-09-28 20:11:19 UTC
+  Content: 2-N2U4MjUzYWEtMjJjNS00NWZhLTkzNDMtMTc3ZDQzZGU5ODI2XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Cecilia (Cecy) González Vela | https://www.linkedin.com/in/cecy-gonzález-vela | 2023-09-28 20:11:19 UTC |  | Oye muhcs felicidades por el Podcast he | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 5628 - Matches: ['felicida']
+  From: Leticia Castillo | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 17:13:34 UTC
+  Content: 2-ZWNkZjRlYTQtMDEyYS00NzQ4LTk1MDctY2JhNzFhZGZlZmYzXzAxMg== |  | Leticia Castillo | https://www.linkedin.com/in/leticia-castillo | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 17:13:34 UTC |  | ¡Felicidades por tu nuevo puesto! Mucho éxito | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 5873 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Mariana Leon, CMS, CITP | Date: 2024-10-04 05:48:59 UTC
+  Content: 2-ZDAzZjFmMzktN2VhMy00YzU1LWE1N2ItZTBkOTBjMmJmZjg0XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Mariana Leon, CMS, CITP | https://www.linkedin.com/in/mariana-leon-cms-citp | 2024-10-04 05:48:59 UTC |  | Muchas felicidades por el nuevo reto  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 5915 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Raúl Eduardo Ríos Sauceda | Date: 2022-12-15 18:12:50 UTC
+  Content: 2-ZWVhYjUwOTEtNWVmOC00YjZhLTgwYTItMWVhZGUwMzcyM2I4XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Raúl Eduardo Ríos Sauceda | https://www.linkedin.com/in/raulrios23 | 2022-12-15 18:12:50 UTC |  | Y Felicidades por lo logrado con la iniciativa de e-commerce  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 5953 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Karla  Hernández | Date: 2024-09-26 00:27:44 UTC
+  Content: 2-NWY1MzdhMjAtNjBhNS00MDM1LWIxOGUtMDYxMmU1NmNmZTg0XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Karla  Hernández | https://www.linkedin.com/in/karla-ivonne-hernández-mendoza-0592 | 2024-09-26 00:27:44 UTC |  | Felicidades  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 6558 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Iris Díaz Trejo | Date: 2024-08-26 17:04:00 UTC
+  Content: 2-ODUzY2MwMDgtNDI2Ny00MDBiLWJhYTItZGJmOTQ3NGM3NmI1XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Iris Díaz Trejo | https://www.linkedin.com/in/bertha-iris-diaz-trejo | 2024-08-26 17:04:00 UTC |  | Bertha, muchas felicidades por el nuevo reto profesional  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 6591 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Jorge Luis Guzmán Mejía | Date: 2023-09-21 22:22:10 UTC
+  Content: 2-ZWYzMjc4NDEtNDYyNi00MTBiLTk5ZTgtMzBjZTgyZWYxZGQzXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jorge Luis Guzmán Mejía | https://www.linkedin.com/in/jlgmr | 2023-09-21 22:22:10 UTC |  | Jorge excelente tarde, muchas felicidades por el evento con OYR | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 6746 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Milagros Evelia  Ramos Hernández | Date: 2024-07-24 17:46:12 UTC
+  Content: 2-ZWEwZmY2YTYtZjRhYy00OGM3LWI4NmEtY2Q2MGI2YTdlY2I4XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Milagros Evelia  Ramos Hernández | https://www.linkedin.com/in/milagros-evelia-ramos-hernández-8165831b9 | 2024-07-24 17:46:12 UTC |  | Milagros, muy buena tarde y muchas gracias por conectar. Felicidades por la nueva posición también | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 6799 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Sandra Michelle Gasca Pimentel | Date: 2024-07-03 20:16:33 UTC
+  Content: 2-OTczZWYyMTMtNGNjNy00YmMxLWEwNTgtOWViNDQwMDYyOGNlXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Sandra Michelle Gasca Pimentel | https://www.linkedin.com/in/sandra-michelle-gasca-pimentel-303b25167 | 2024-07-03 20:16:33 UTC |  | Felicidades por la nueva posición  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 6827 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Michelle Gonzalez Vazquez | Date: 2023-10-06 23:07:49 UTC
+  Content: 2-MDMzZGZiZTAtNmYyZi00MWI3LTljYjAtNTg1YzU1NjVlMTM3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Michelle Gonzalez Vazquez | https://www.linkedin.com/in/michelle-gonzalez-vazquez-mx | 2023-10-06 23:07:49 UTC |  | Muchas felicidades Michelle | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7084 - Matches: ['felicida']
+  From: Sol Cortés | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-06 16:46:36 UTC
+  Content: 2-NDExZGU5ZDEtMTgyMi00ZjBlLWIyYjUtYmM0NTE2NGMyMGYyXzAxMg== |  | Sol Cortés | https://www.linkedin.com/in/solanyicortes | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-07-06 16:46:36 UTC |  | ¡Felicidades por cumplir 3 años en Clip! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7144 - Matches: ['felicida']
+  From: Cristina Langarica | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2019-07-23 18:27:14 UTC
+  Content: 2-MzkwNDcwZDEtNDQxMy01ZDQyLWJiOTctZWM2NjRjODYwYjdhXzAxMA== |  | Cristina Langarica | https://www.linkedin.com/in/cristinalangarica | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2019-07-23 18:27:14 UTC |  | que bien! muchas felicidades | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7446 - Matches: ['felicida']
+  From: ADRIANA URIBE  Galardón FRACTALES DEL CAMBIO | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-06 10:01:51 UTC
+  Content: 2-NzYyZDc2NWQtMmRiNi01ZWFjLTljZDItN2MwZjBhYzZiOTEyXzAxMg== |  | ADRIANA URIBE  Galardón FRACTALES DEL CAMBIO | https://www.linkedin.com/in/adriana-uribe-galardón-fractales-del-cambio-3327a722 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-07-06 10:01:51 UTC |  | ¡Felicidades por cumplir 3 años en Clip! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7461 - Matches: ['felicida']
+  From: Osher Shalom | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 11:40:26 UTC
+  Content: 2-NDY3MTdlMDktZGE3ZC00OTg1LWJkYTItNmYzNmY4MTMyZjA4XzAxMg== |  | Osher Shalom | https://www.linkedin.com/in/oshershalom | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-07-05 11:40:26 UTC |  | ¡Felicidades por cumplir 3 años en Clip! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7464 - Matches: ['felicida']
+  From: Angel Diaz Valadez | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-06 00:57:34 UTC
+  Content: 2-OWQxMWYzYzctZWEwZi00ZDNiLThlODAtNmVmNjU0OGUyZjgzXzAxMg== |  | Angel Diaz Valadez | https://www.linkedin.com/in/angeldiaz | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-07-06 00:57:34 UTC |  | ¡Felicidades por cumplir 3 años en Clip! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7472 - Matches: ['felicida']
+  From: Oswaldo Meza Sanchez | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 16:03:34 UTC
+  Content: 2-NGVjOTllNzAtZWFjNi00Y2NiLTkxOTQtM2IzYmM5MWJlYTVhXzAxMA== |  | Oswaldo Meza Sanchez | https://www.linkedin.com/in/oswaldo-meza-sanchez-b289588b | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-07-05 16:03:34 UTC |  | ¡Felicidades Toño por cumplir 3 años en Clip! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7482 - Matches: ['felicida']
+  From: Hector Miguel Gonzalez Campos | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 14:47:04 UTC
+  Content: 2-ZmI4YTIxNjAtZTYwMi00YTI5LWE3NzMtZjUwNWQ5NzQ1Y2Q2XzAxMg== |  | Hector Miguel Gonzalez Campos | https://www.linkedin.com/in/hector-miguel-gonzalez-campos-b103824b | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-07-05 14:47:04 UTC |  | ¡Felicidades por cumplir 3 años en Clip! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7486 - Matches: ['felicida']
+  From: José Arturo Contreras Pelayo | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-07-05 14:37:36 UTC
+  Content: 2-NTk2NDUzYmItODQzOS00Y2NiLWI4NzctMDJiM2JlNjAyMTEwXzAxMA== |  | José Arturo Contreras Pelayo | https://www.linkedin.com/in/josé-arturo-contreras-pelayo-7929743b | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-07-05 14:37:36 UTC |  | ¡Felicidades por cumplir 3 años en Clip! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7501 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Juan Miguel Guerra Dávila | Date: 2024-07-04 14:40:16 UTC
+  Content: 2-ZDYyZDdlNWEtNWNkZC00NWQ2LTljZmMtNTFlMTcxMmVjMWNhXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Juan Miguel Guerra Dávila | https://www.linkedin.com/in/juanmiguelguerra | 2024-07-04 14:40:16 UTC |  | Felicidades por todo lo que han conseguido, honestamente veía publicaciones de Revolut en Europa y desconocía la operación en México  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7505 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Gina Leon | Date: 2024-07-02 19:49:02 UTC
+  Content: 2-N2RhOWM5YmYtZGNhMS00ODAxLWJhNGYtMTNiZTNiZTRhZWZkXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Gina Leon | https://www.linkedin.com/in/gina-leon | 2024-07-02 19:49:02 UTC |  | Gina, muchas felicidades por el artículo en la revista Informa BTL :) | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7520 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Marta Cid Sanz | Date: 2024-06-07 05:34:20 UTC
+  Content: 2-ZTQwZWZkZmYtMjI1MS00NDNjLTg4MTAtNGVhZmJlZDY0ZmI1XzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Marta Cid Sanz | https://www.linkedin.com/in/martacidsanz | 2024-06-07 05:34:20 UTC |  | Hola buen día Marta, espero te encuentres muy bien y de nuevo muchas felicidades, quiero preguntarte ¿Cuándo te re incorporas a las actividades de oficina? Para ver si podemos seguir platicando al respecto 😃 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7521 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Marta Cid Sanz | Date: 2024-04-18 18:18:33 UTC
+  Content: 2-ZTQwZWZkZmYtMjI1MS00NDNjLTg4MTAtNGVhZmJlZDY0ZmI1XzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Marta Cid Sanz | https://www.linkedin.com/in/martacidsanz | 2024-04-18 18:18:33 UTC |  | No sabía, una disculpa y también muchas felicidades, 😃 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7818 - Matches: ['felicit']
+  From: Alfredo Rodríguez Flores | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-01-09 22:15:05 UTC
+  Content: 2-MThjNDljYTEtZWEwNy00MjgxLWFjMGUtMmZlMzg5NGUyMTg3XzAxMw== |  | Alfredo Rodríguez Flores | https://www.linkedin.com/in/alfredrodgz | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-01-09 22:15:05 UTC |  | Muchas gracias Antonio por tus felicitaciones!!! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 7820 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Alfredo Rodríguez Flores | Date: 2024-01-09 19:53:00 UTC
+  Content: 2-MThjNDljYTEtZWEwNy00MjgxLWFjMGUtMmZlMzg5NGUyMTg3XzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alfredo Rodríguez Flores | https://www.linkedin.com/in/alfredrodgz | 2024-01-09 19:53:00 UTC |  | Alfredo muy buena tarde, estimado muchas felicidades por el nuevo reto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 8020 - Matches: ['felicit']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Marlene Garayzar | Date: 2022-07-20 22:12:41 UTC
+  Content: 2-MDZmMDZlMDItOGVkZi00ODdmLWJjNjEtYTY2MzQ4NzFmOTRhXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Marlene Garayzar | https://www.linkedin.com/in/marlene-garayzar-2b81085 | 2022-07-20 22:12:41 UTC |  | Hola Marlene, ya he visto lo que han logrado y de verdad los felicito, mi esposa y yo estamos muy contentos con nuestras tarjetas y lo flexible, fácil y ágil, no por nada han conseguido llegar hasta donde están.  
+Qué sigan los éxitos | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 8141 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Marely Carbajal | Date: 2024-01-10 00:01:21 UTC
+  Content: 2-NzExYjk1NzMtMDZkMC00OTNjLTliODgtNzRjOTA1Mjc4N2Q3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Marely Carbajal | https://www.linkedin.com/in/marely-carbajal | 2024-01-10 00:01:21 UTC |  | Muchas felicidades por el crecimiento, se viene un 2024 con mucho trabajo | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 8569 - Matches: ['felicida']
+  From: Beatríz Calderón | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-07-05 09:47:22 UTC
+  Content: 2-NDdhNmRkNzQtOTVhNC01NTE1LWFjNzYtMDIyYzU1ZGVlMDAyXzAwMA== |  | Beatríz Calderón | https://www.linkedin.com/in/beatríz-calderón-b900a3b8 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2022-07-05 09:47:22 UTC |  | ¡Felicidades por tu aniversario de trabajo! Un abrazo amigo. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 8647 - Matches: ['felicida']
+  From: Beatríz Calderón | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2018-11-13 16:40:24 UTC
+  Content: 2-NDdhNmRkNzQtOTVhNC01NTE1LWFjNzYtMDIyYzU1ZGVlMDAyXzAwMA== |  | Beatríz Calderón | https://www.linkedin.com/in/beatríz-calderón-b900a3b8 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2018-11-13 16:40:24 UTC |  | Que participativo amigo, felicidades!! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 8648 - Matches: ['felicida']
+  From: Beatríz Calderón | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2018-11-13 16:39:47 UTC
+  Content: 2-NDdhNmRkNzQtOTVhNC01NTE1LWFjNzYtMDIyYzU1ZGVlMDAyXzAwMA== |  | Beatríz Calderón | https://www.linkedin.com/in/beatríz-calderón-b900a3b8 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2018-11-13 16:39:47 UTC |  | Que participativo amigo, felicidades!! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9149 - Matches: ['felicit']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Alma Campos | Date: 2020-10-14 14:00:23 UTC
+  Content: 2-OGM0NTIyYTEtYjNjNi00ZjM4LWFkMzItMWNjYTQ1NmY5NzAxXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alma Campos | https://www.linkedin.com/in/alma-campos | 2020-10-14 14:00:23 UTC |  | Hola Alma muy buen día, te agradezco la invitación y además te felicito por está iniciativa ya que me parece de gran ayuda en estos tiempos difíciles | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9224 - Matches: ['top performer']
+  From: Alan Ruchtein | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-02-20 14:45:29 UTC
+  Content: 2-MWQ0NzNmMTEtODgzNi00NTFmLTk5NzUtOTZmYzM3YTdmZTc4XzAxMw== |  | Alan Ruchtein | https://www.linkedin.com/in/alanruchtein | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-02-20 14:45:29 UTC |  | Lo enteindo perfectamente, lo he vivido tambien! Es como un bucle o circulo vicioso tal cual!
+
+Si crees o estas pensando en que quizas ayuda te vendria bien para empujar esos conocimientos y poder destacar como top performer, quizas sería interesante analizar la idea de que pueda trabajar contigo?
+
+Es algo que has pensado Antonio? Tener un mentor o guia? | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9325 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: David Josias Uicab Garcia | Date: 2024-02-22 02:57:15 UTC
+  Content: 2-ZDcxZDMyODctNzFjMS00Y2QwLWJlMzYtMDZkM2IwZjIzMTg0XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | David Josias Uicab Garcia | https://www.linkedin.com/in/david-josias-uicab-garcia-451856108 | 2024-02-22 02:57:15 UTC |  | Hola David, muchas felicidades por el cambio y nuevo reto  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9355 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Oriana Rivero Perdomo | Date: 2024-02-19 21:17:39 UTC
+  Content: 2-Y2FiMWQxYjYtZTVjMi00OTRlLTkyYjUtNGVhNGQyMDRkYzQ1XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Oriana Rivero Perdomo | https://www.linkedin.com/in/oriana-rivero-perdomo-36baa9b8 | 2024-02-19 21:17:39 UTC |  | Muchas felicidades por el nuevo reto Oriana, que sigan los éxitos  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9381 - Matches: ['felicit']
+  From: Esteban Yanischevsky | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-02-14 13:27:12 UTC
+  Content: 2-NWI0NDQ2YzEtOTgzZi00OWRhLWIyZjgtZjAwMzQ0YjFhYjBjXzAxMg== |  | Esteban Yanischevsky | https://www.linkedin.com/in/esteban-yanischevsky-199ab6173 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-02-14 13:27:12 UTC |  | ah que bien te felicito,ojala consigas el puesto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9472 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Harumi Makita | Date: 2023-11-21 20:35:32 UTC
+  Content: 2-YzgyZThhOGEtNDIyOC00OWQ1LWE5YzItNDZhZmQyYjY1ZjI3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Harumi Makita | https://www.linkedin.com/in/harumimakita | 2023-11-21 20:35:32 UTC |  | Por cierto, muchas felicidades, atrasadas pero muchas felicidades | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9477 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Harumi Makita | Date: 2023-05-04 21:51:30 UTC
+  Content: 2-YzgyZThhOGEtNDIyOC00OWQ1LWE5YzItNDZhZmQyYjY1ZjI3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Harumi Makita | https://www.linkedin.com/in/harumimakita | 2023-05-04 21:51:30 UTC |  | Felicidades 🎊 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9692 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Zuleica Martínez Manzo | Date: 2023-09-08 22:47:26 UTC
+  Content: 2-YzA3YTRkY2UtOWIxOS00YzA4LThlMmEtZTkyZTk3NWQ0MzgwXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Zuleica Martínez Manzo | https://www.linkedin.com/in/hr-zmm | 2023-09-08 22:47:26 UTC |  | Muchas felicidades por su tienda #100 acá en Cancún, estuve escuchando de la apertura en la semana 😃 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9710 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Valeria Frias Quintero | Date: 2024-01-25 20:57:15 UTC
+  Content: 2-ODdlOTM1NzgtMmJhYy00YTA4LWFmMDAtOGNkZmJkZTdkNGY5XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Valeria Frias Quintero | https://www.linkedin.com/in/valeria-frias-quintero | 2024-01-25 20:57:15 UTC |  | Felicidades Val, con todo en parrot | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9730 - Matches: ['felicit']
+  From: Karla Chávez  aDOGtantes Founder | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-01-23 01:40:25 UTC
+  Content: 2-MmE3MTQ4YzQtMjA3Zi00YjZlLThjNTUtNWY4M2RiZWZhOWFhXzAxMg== |  | Karla Chávez  aDOGtantes Founder | https://www.linkedin.com/in/karlaechavezb | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-01-23 01:40:25 UTC |  | Antonio te cuento que me atreví a salir un video musical 🎶 para romper mis miedo, quieres verlo 👀? Si puedes compartirlo en LinkedIn , comentar, recomendar, felicitar y todo lo que me pueda hacer famosa mis bendiciones 🐶 te lo van a agradecer 🫶 https://www.linkedin.com/posts/b2bq_sweeping-away-the-official-video-activity-7155341572165824513-1-sV?utm_source=share&utm_medium=member_ios | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9732 - Matches: ['felicida']
+  From: Karla Chávez  aDOGtantes Founder | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-01-10 13:48:13 UTC
+  Content: 2-MmE3MTQ4YzQtMjA3Zi00YjZlLThjNTUtNWY4M2RiZWZhOWFhXzAxMg== |  | Karla Chávez  aDOGtantes Founder | https://www.linkedin.com/in/karlaechavezb | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-01-10 13:48:13 UTC |  | Este inicio de año  cierra capítulos, agradeciendo y abre puertas a nuevas posibilidades.¡Feliz año  Antonio 🪩 y un futuro lleno de buenas vibras y felicidad! 🪄 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9752 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Diana Sánchez Maldonado | Date: 2022-12-13 00:54:32 UTC
+  Content: 2-YjRjYTE1YzctOTRiMi00NzZmLTgzNGEtNjU2ZjQ4ZGY4YTFkXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Diana Sánchez Maldonado | https://www.linkedin.com/in/dianasánchezmaldonado | 2022-12-13 00:54:32 UTC |  | Oye, primero que todo felicidades por lo del Máster  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 9927 - Matches: ['felicit']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Andrés Gómez | Date: 2023-12-29 20:30:56 UTC
+  Content: 2-YmUyY2EyMjItYWZiYS00MzE4LTg0NWUtNDY0ZWYwMmRlYzI3XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Andrés Gómez | https://www.linkedin.com/in/andresgomezbarrera | 2023-12-29 20:30:56 UTC |  | Oye por cierto, Feliz cumpleaños, todavía al menos estoy dentro de mes y del año para la felicitación. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 10302 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Jorge Morales | Date: 2021-08-02 22:38:35 UTC
+  Content: 2-NWRkMGM0YjctMmQ1My00NTE1LThjODgtM2E3NWJhMTNjODc3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jorge Morales | https://www.linkedin.com/in/jorgemorales-sm | 2021-08-02 22:38:35 UTC |  | Muchas Felicidades Jorge, a seguir avanzando. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 10910 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Ana Leslye Ochoa  | Date: 2023-09-13 19:31:42 UTC
+  Content: 2-Y2U5MDk5ZDQtOTU4ZS00ODBlLWI0YjYtOGMwYmQzZjJiODk3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ana Leslye Ochoa  | https://www.linkedin.com/in/analeslye | 2023-09-13 19:31:42 UTC |  | Hola, muchas felicidades, nuevo reto nueva oportunidad | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 11431 - Matches: ['felicida']
+  From: Carlos  Rospigliosi C. | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-07-05 15:12:01 UTC
+  Content: 2-NDRkOWNmNjgtYjFmNS00ZWE2LTk0MjgtOTBjYmRhOTVlZWU3XzAxMg== |  | Carlos  Rospigliosi C. | https://www.linkedin.com/in/carlos-rospigliosi-c-79a73364 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-05 15:12:01 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 11654 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Adriana Berenice Mendiola Ruiz | Date: 2023-05-02 23:27:58 UTC
+  Content: 2-YmI5ZjY0NjItYTQ5Ny00MDVhLWJkMGEtNjdiNzk3ODU5OWQ3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Adriana Berenice Mendiola Ruiz | https://www.linkedin.com/in/adriana-berenice-mendiola-ruiz-82966037 | 2023-05-02 23:27:58 UTC |  | Felicidades Adriana  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 11694 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Javier Perez Irueste | Date: 2022-11-29 16:15:48 UTC
+  Content: 2-NTRhNGViYWEtZWU4MC00YzI1LTljYzAtYWIwZTc4ZmU0YmEyXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Javier Perez Irueste | https://www.linkedin.com/in/javier-perez-irueste-9a4a6a117 | 2022-11-29 16:15:48 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 11746 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Roberto Peña  | Date: 2023-07-13 22:52:55 UTC
+  Content: 2-NTAzYmQ0MWEtOTI2Zi00MTk2LWE2ZDEtMzcxYzM1NGQ5ZjVlXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Roberto Peña  | https://www.linkedin.com/in/roberto-peña-57555a182 | 2023-07-13 22:52:55 UTC |  | Roberto, felicidades  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 11917 - Matches: ['felicida']
+  From: Ricardo Aguilar Alvarez | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-07-05 14:21:37 UTC
+  Content: 2-M2E4OWJjNzUtYTk1Zi00ZjQ4LTlkMDktNjA5MWE4YjM5YzZhXzAxMg== |  | Ricardo Aguilar Alvarez | https://www.linkedin.com/in/ricardo-aguilar-alvarez-003baa122 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-05 14:21:37 UTC |  | Muchas felicidades amigo!  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 11952 - Matches: ['felicida']
+  From: Juan José Tavera Jaramillo (Él/He/Him)  Regional North POS  | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-07-05 13:56:41 UTC
+  Content: 2-OWMwMzAzZTYtY2RhNC00MDMzLTk1N2EtNzcwY2U1ZTEwZDQyXzAxMA== |  | Juan José Tavera Jaramillo (Él/He/Him)  Regional North POS  | https://www.linkedin.com/in/juan-josé-tavera-jaramillo-él-he-him-regional-north-pos-52431645 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-05 13:56:41 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 11954 - Matches: ['felicida']
+  From: Alejandra  Escobedo Reyna | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-07-05 04:00:18 UTC
+  Content: 2-Y2Q0ODUyNWMtZWJiYi00MTA2LTgxNjktMGI0Yjc3MDE4MmUyXzAxMA== |  | Alejandra  Escobedo Reyna | https://www.linkedin.com/in/alejandra-escobedo-reyna-868137143 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-05 04:00:18 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 11957 - Matches: ['felicida']
+  From: Alejandra  Escobedo Reyna | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 13:34:19 UTC
+  Content: 2-Y2Q0ODUyNWMtZWJiYi00MTA2LTgxNjktMGI0Yjc3MDE4MmUyXzAxMA== |  | Alejandra  Escobedo Reyna | https://www.linkedin.com/in/alejandra-escobedo-reyna-868137143 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 13:34:19 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 12343 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Daniel Lampert | Date: 2023-05-18 23:15:54 UTC
+  Content: 2-MDlkNjc3NmMtNTEwYi00ZjZkLThiMTAtZWYzMTRhNzdhYzdkXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Daniel Lampert | https://www.linkedin.com/in/daniel-lampert | 2023-05-18 23:15:54 UTC |  | Felicidades Daniel | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 12782 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Jorge Alberto González Bello | Date: 2023-05-03 16:28:28 UTC
+  Content: 2-OTViYThmODUtYWU1MC00Njk0LThkOWUtOTIwY2ZlZWViNTg0XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jorge Alberto González Bello | https://www.linkedin.com/in/jorge-alberto-gonzález-bello-0a8269185 | 2023-05-03 16:28:28 UTC |  | Hola Jorge, muchas felicidades por tu nuevo reto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 12901 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Itzel Patricia Vigil Trejo | Date: 2023-04-19 23:09:59 UTC
+  Content: 2-ZTIzZTI2MmQtZDA1OC00OTczLWJiMTQtYjhhYzUyOWYzMjRhXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Itzel Patricia Vigil Trejo | https://www.linkedin.com/in/itzel-patricia-vigil-trejo-38851614b | 2023-04-19 23:09:59 UTC |  | Muchas felicidades por esa nueva apertura  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 13035 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Jose Hector Tejada Shaar | Date: 2023-04-04 21:03:19 UTC
+  Content: 2-YzkyMjgwNDgtNjY5YS00MjlmLWJmMDYtYzIwMWM3MGEyMTExXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jose Hector Tejada Shaar | https://www.linkedin.com/in/jose-hector-tejada-shaar-093b4a180 | 2023-04-04 21:03:19 UTC |  | José buena tarde, felicidades por la Presidencia en CONCANACO y por el foro de e-commerce que tendrán.  José quisiera me pudieras orientar qué canales seguir para por ejemplo poner a su alcance productos o servicios en este caso enfocados a e-commerce y métodos de pago. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 13050 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Rafael Ramírez | Date: 2023-04-03 23:25:34 UTC
+  Content: 2-MmE4MDEzOGEtMWU2NC00ODQ2LWI4ZTQtNTJjZjMzNDYzZWQ5XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Rafael Ramírez | https://www.linkedin.com/in/rafael-ramírez-43483613 | 2023-04-03 23:25:34 UTC |  | Rafa buena tarde, muchas felicidades por el gran paso en la industria Hotelera  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 13191 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Miguel Florido | Date: 2023-03-28 15:47:15 UTC
+  Content: 2-ZTc0YmI2MTAtZTJjNC00ZDZjLWFhM2MtYzc0MzBlZWExYzMzXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Miguel Florido | https://www.linkedin.com/in/miguelangelflorido | 2023-03-28 15:47:15 UTC |  | Hola Miguel muy buena tarde, te escribo para un asuntito, pero primero Mchas felicidades por tu Cumpleaños | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 13196 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Greg Easthouse | Date: 2023-03-28 21:48:26 UTC
+  Content: 2-YWNlNDI5NTgtOGRmYy00MjliLThiNGMtOGUyYzU5N2IzYTQxXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Greg Easthouse | https://www.linkedin.com/in/greg-easthouse-a025595 | 2023-03-28 21:48:26 UTC |  | Felicidades por tu nuevo reto, sigue en pie si aún gustas un café virtual 😃 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 13240 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Mario Romero | Date: 2023-03-28 01:37:24 UTC
+  Content: 2-NGE5ZDBhNTgtOGQyOS00Zjk4LThiYTMtZDkzNDIxZWNjODBiXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Mario Romero | https://www.linkedin.com/in/marose | 2023-03-28 01:37:24 UTC |  | Felicidades por cada proyecto,  andas con TODo | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 14443 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Karla Valenzuela | Date: 2022-10-26 00:59:27 UTC
+  Content: 2-YWI5YTgyNTMtOGFiNC00MmFiLTgwNjQtMGUyNGVlNTU4NGVmXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Karla Valenzuela | https://www.linkedin.com/in/kavalenzuela | 2022-10-26 00:59:27 UTC |  | Muchas felicidades por este nuevo reto Karla | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 14666 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Laura Dávalos | Date: 2022-09-15 18:01:36 UTC
+  Content: 2-ZWU5NmNmN2QtMjU3Mi00NWU3LWE0NzYtNjdlNWFkYjEzMWFjXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Laura Dávalos | https://www.linkedin.com/in/laura-davalos-romero | 2022-09-15 18:01:36 UTC |  | Hola Laura, muchas felicidades  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 14887 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Ulises Navarrete | Date: 2022-08-29 21:26:37 UTC
+  Content: 2-ZjJlZWQ2YjktN2Y2MS00MzYxLWFiZmMtN2YzZTNkMjJiOThkXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ulises Navarrete | https://www.linkedin.com/in/ulises-navarrete-380a141b | 2022-08-29 21:26:37 UTC |  | Felicidades por este nuevo reto, creo que te has movido bastante en estos últimos meses o es mi impresión jeje | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15020 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Mayra Garcia Peña | Date: 2022-07-05 04:37:44 UTC
+  Content: 2-MTAyNTllOTQtZjI4Ni00M2U2LThjNmUtMWRkMjFmZWI2NDQxXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Mayra Garcia Peña | https://www.linkedin.com/in/mayra-garcia-peña-03a637208 | 2022-07-05 04:37:44 UTC |  | Muchas felicidades Mayra y que sean muchos años más. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15021 - Matches: ['felicida']
+  From: Mayra Garcia Peña | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-07-05 02:21:59 UTC
+  Content: 2-MTAyNTllOTQtZjI4Ni00M2U2LThjNmUtMWRkMjFmZWI2NDQxXzAxMA== |  | Mayra Garcia Peña | https://www.linkedin.com/in/mayra-garcia-peña-03a637208 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2022-07-05 02:21:59 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15027 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Andy Uriel Hernandez | Date: 2022-07-28 12:27:23 UTC
+  Content: 2-OGJhNTY3MmMtM2IyNi00NWE4LTg2ZGUtNDU4NzlkMTNiMDIxXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Andy Uriel Hernandez | https://www.linkedin.com/in/andy-uriel-h-290a4739 | 2022-07-28 12:27:23 UTC |  | Felicidades por tu aniversario  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15072 - Matches: ['felicida']
+  From: Francisco Miguel  Daniel Rodríguez | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-17 13:50:15 UTC
+  Content: 2-MTRjZmI2YWMtOWUyOS00MTUxLWJmZmYtNDFiNGJiOWUzYWQ2XzAxMA== |  | Francisco Miguel  Daniel Rodríguez | https://www.linkedin.com/in/francisco-miguel-d-b009b8160 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 13:50:15 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15074 - Matches: ['felicida']
+  From: Francisco Miguel  Daniel Rodríguez | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-21 18:45:08 UTC
+  Content: 2-MTRjZmI2YWMtOWUyOS00MTUxLWJmZmYtNDFiNGJiOWUzYWQ2XzAxMA== |  | Francisco Miguel  Daniel Rodríguez | https://www.linkedin.com/in/francisco-miguel-d-b009b8160 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-21 18:45:08 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15077 - Matches: ['felicida']
+  From: Francisco Miguel  Daniel Rodríguez | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-25 00:33:22 UTC
+  Content: 2-MTRjZmI2YWMtOWUyOS00MTUxLWJmZmYtNDFiNGJiOWUzYWQ2XzAxMA== |  | Francisco Miguel  Daniel Rodríguez | https://www.linkedin.com/in/francisco-miguel-d-b009b8160 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-25 00:33:22 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15087 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Stephanie Hernández Sosa  | Date: 2022-07-18 18:51:13 UTC
+  Content: 2-OWY3ZjUwYTAtOTMxZC00NGU4LWI3ZjQtZjM3MjViYzE5NTE3XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Stephanie Hernández Sosa  | https://www.linkedin.com/in/stephaniehernándezrrhh | 2022-07-18 18:51:13 UTC |  | Excelente inicio de semana y felicidades por tu movimiento  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15130 - Matches: ['felicida']
+  From: Miriam de la Puente | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-07-07 00:52:22 UTC
+  Content: 2-OWIyOGI1NzYtNjk0MS00ZTEzLWFiZDQtODU4YTQ5YjA4MjFiXzAxMg== |  | Miriam de la Puente | https://www.linkedin.com/in/miriam-de-la-puente-2a72b917 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2022-07-07 00:52:22 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15132 - Matches: ['felicida']
+  From: Miriam de la Puente | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 16:32:25 UTC
+  Content: 2-OWIyOGI1NzYtNjk0MS00ZTEzLWFiZDQtODU4YTQ5YjA4MjFiXzAxMg== |  | Miriam de la Puente | https://www.linkedin.com/in/miriam-de-la-puente-2a72b917 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 16:32:25 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15157 - Matches: ['felicida']
+  From: Bernardo Portillo Pineda | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2022-07-05 13:35:10 UTC
+  Content: 2-YzNkM2JkZjMtYzIzZC00MmJlLWI3YzgtZDc5M2EwOTc4M2ZkXzAxMg== |  | Bernardo Portillo Pineda | https://www.linkedin.com/in/bernardo-portillo-pineda-9760313a | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2022-07-05 13:35:10 UTC |  | ¡Felicidades por tu aniversario de trabajo Toño!
+Un abrazo  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15181 - Matches: ['felicida']
+  From: Bernardo Portillo Pineda | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 00:54:26 UTC
+  Content: 2-YzNkM2JkZjMtYzIzZC00MmJlLWI3YzgtZDc5M2EwOTc4M2ZkXzAxMg== |  | Bernardo Portillo Pineda | https://www.linkedin.com/in/bernardo-portillo-pineda-9760313a | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 00:54:26 UTC |  | ¡Felicidades por tu nuevo puesto! Un abrazo  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15225 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Martín Williams | Date: 2022-06-05 06:10:29 UTC
+  Content: 2-MjdlMjA5NmUtYjVkNC00NjA0LWIyMDgtYWFjZmExOWM1YTZhXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Martín Williams | https://www.linkedin.com/in/mbamw | 2022-06-05 06:10:29 UTC |  | Muchas felicidades Martín, éxito en este nuevo reto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15248 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Alejandro  Pascual Soto | Date: 2022-05-12 18:07:23 UTC
+  Content: 2-NDhmYzk4ODQtYTVlMy00NTlmLTgwNmEtM2JlMmYxZGFkNWFiXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alejandro  Pascual Soto | https://www.linkedin.com/in/alejandro-pascual-soto-b1748940 | 2022-05-12 18:07:23 UTC |  | Muchas felicidades por tu nueva posición y nuevo reto Alejandro | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15467 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Jorge Alejandro Hernandez Anisz  | Date: 2022-04-06 01:30:44 UTC
+  Content: 2-NjdjYTUzOWItYzI4Ni00ZDViLTk1NzAtMjI3MDRmMDIzM2E5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jorge Alejandro Hernandez Anisz  | https://www.linkedin.com/in/gerentehotelero | 2022-04-06 01:30:44 UTC |  | Muchas felicidades Jorge, valió la pena la espera. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15588 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Laura Chavez Luna | Date: 2022-03-04 18:47:47 UTC
+  Content: 2-NjY1ZmNmNWMtYjY1NS00ODRkLTkzZTctM2E5Yjc4YTg2NTA5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Laura Chavez Luna | https://www.linkedin.com/in/laura-beatriz-chávez-luna | 2022-03-04 18:47:47 UTC |  | Hola Laura buena tarde, muchas gracias y felicidades y éxito en tu nuevo reto. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15781 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Fabian Ramos Caballero | Date: 2022-01-04 21:07:06 UTC
+  Content: 2-OGEzYzgxYjktZjEwMS00OTcyLTk1ZGQtNjNiNTg0NjgzYmM4XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Fabian Ramos Caballero | https://www.linkedin.com/in/fabian-ramos-caballero-15011284 | 2022-01-04 21:07:06 UTC |  | Muchas felicidades Fabián, muchas cocas grandes se vienen. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15787 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Miguel Isabal | Date: 2022-02-04 00:08:02 UTC
+  Content: 2-NmYwYjk2NjItYWZlZC00YWI1LTlmZWQtZTZhOWMzZjNkZmIxXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Miguel Isabal | https://www.linkedin.com/in/miguel-isabal | 2022-02-04 00:08:02 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15825 - Matches: ['felicit']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Luis Mario Garcia | Date: 2022-02-02 00:18:36 UTC
+  Content: 2-OWY4MTlhNTAtNzI1ZS00MWVlLThhMDItZDRmOGE5YjQ4ZGIyXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Luis Mario Garcia | https://www.linkedin.com/in/luismariogarcia | 2022-02-02 00:18:36 UTC |  | Hola Luis espero te encuentres muy bien, te sigo hace poco y te felicito por todo lo que has logrado | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15863 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Madai Vargas | Date: 2021-11-08 20:02:40 UTC
+  Content: 2-MzUzNjlkMDYtN2ZkYy00MTQ3LWJkZGItMGFiODU3YzU0MDZiXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Madai Vargas | https://www.linkedin.com/in/madai-vargas-4425976a | 2021-11-08 20:02:40 UTC |  | Hola Madai, Muchas Felicidades | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 15972 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Yazmín Castillo | Date: 2021-12-06 16:05:46 UTC
+  Content: 2-MGYwNTFjZmYtYmRiYi00YzA3LTk5YmMtMmNlN2I0Zjk1ZDFhXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Yazmín Castillo | https://www.linkedin.com/in/yazmín-castillo-m | 2021-12-06 16:05:46 UTC |  | Muchas felicidades Yazmín, que te sigan los éxitos | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 16089 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Roberto Carlos Castillo Medina | Date: 2021-08-25 21:14:15 UTC
+  Content: 2-YThkZmQxMjctYTFiZi00MjFiLTgyZGItOWY1ZTFiOTFlZTFiXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Roberto Carlos Castillo Medina | https://www.linkedin.com/in/rcastillom | 2021-08-25 21:14:15 UTC |  | Hola Roberto muy buena tarde, antes que todo muchas felicidades por el proyecto y la innovación. Me gustaría platicarte de las nuevas opciones que Clip tiene para el sector empresarial y sobre todo en movilidad. Saludos!! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 16232 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Valeria Godiño Flaniguen | Date: 2021-10-14 17:18:34 UTC
+  Content: 2-MTA3MzllYmQtYzUwNC00N2QyLWExMGMtNTdhYWRiZmU0Y2NiXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Valeria Godiño Flaniguen | https://www.linkedin.com/in/valeria-godiño-flaniguen-89798815b | 2021-10-14 17:18:34 UTC |  | Muchas felicidades 🥳 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 16383 - Matches: ['felicida']
+  From: Fernando Coletti Ghezzi | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-17 14:06:50 UTC
+  Content: 2-MGYwMjBjNzItYTk0Yy00MmQzLTk5YTUtNmZmNDAzNDY4M2UwXzAxMg== |  | Fernando Coletti Ghezzi | https://www.linkedin.com/in/fercoletti | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 14:06:50 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 16459 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Brenda Verenice Ramirez Guillen | Date: 2021-09-02 21:41:09 UTC
+  Content: 2-YjJmMmFmMzEtYjEzMS00ZTAxLWIzMDgtZGQwYjM2NGY2ZmU5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Brenda Verenice Ramirez Guillen | https://www.linkedin.com/in/brenda-verenice-ramirez-guillen-98b6b9132 | 2021-09-02 21:41:09 UTC |  | Felicidades por tu nuevo puesto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 16609 - Matches: ['felicida']
+  From: Arturo Santacruz | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 12:09:10 UTC
+  Content: 2-MTRlZDI4MmEtNmY3ZS00NTA3LWFlYjItYTE2ZWJiNTNhM2UxXzAxMw== |  | Arturo Santacruz | https://www.linkedin.com/in/arturo-santacruz-012b5123 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 12:09:10 UTC |  | ¡Felicidades por tu nuevo puesto! Mucho éxito 👍👏 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 16628 - Matches: ['felicida']
+  From: Gabriela Córdova | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-09-07 22:38:34 UTC
+  Content: 2-OGEwNTYwNTctNGRhZC00Mzc1LTlkMTMtZjFiZDA5ZjZhYWE0XzAxMw== |  | Gabriela Córdova | https://www.linkedin.com/in/gabriela-corma | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-09-07 22:38:34 UTC |  | Muchas Felicidades!
+Estoy a tus ordenes | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 16673 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Bárbara Cristina  Garcia Armenta | Date: 2021-09-02 21:24:47 UTC
+  Content: 2-MzJiM2E4MjEtM2IyNS00MDNkLThlYWItMjAyYzNmZWZlMDkxXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Bárbara Cristina  Garcia Armenta | https://www.linkedin.com/in/bárbara-cristina-garcia-armenta-575599aa | 2021-09-02 21:24:47 UTC |  | Bárbara mucho gusto y muchas gracias, muchas felicidades por tu trabajo | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 16793 - Matches: ['felicida']
+  From: Luciana Paola  Albar Diaz Clavel  | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-08-30 05:07:18 UTC
+  Content: 2-YzY2MmU0NTgtMWI0YS00MTFlLWJhODAtZDY0NmI1Nzc1YThlXzAxMg== |  | Luciana Paola  Albar Diaz Clavel  | https://www.linkedin.com/in/luciana-paola-albar-diaz-clavel-a444101b8 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-08-30 05:07:18 UTC |  | Comprendo. Fue la felicidad  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17084 - Matches: ['felicit']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Juan Carlos Mayol Hernandez | Date: 2021-08-09 16:19:59 UTC
+  Content: 2-OWFhODQ4ZjAtNzlkNy00ZTk5LTg2MDQtMmRlMzRhZjA0MjBjXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Juan Carlos Mayol Hernandez | https://www.linkedin.com/in/juan-carlos-mayol-hernandez-30508396 | 2021-08-09 16:19:59 UTC |  | Primero que todo, quisiera felicitarlos por el Gran trabajo de expansión que están haciendo sobre todo acá en sureste | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17215 - Matches: ['felicida']
+  From: Leonardo Romero | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 14:12:37 UTC
+  Content: 2-N2M1MTkwNDctMDZhMS00ZjY0LTljZmMtMmIzZjE0NmY2MDI4XzAxMg== |  | Leonardo Romero | https://www.linkedin.com/in/leonardoromerohdz | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 14:12:37 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17370 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Ernesto Veraza | Date: 2020-12-16 16:45:09 UTC
+  Content: 2-NzcyZmQwM2YtOTg5OC00YjEzLTg2NmEtNTlhOWU4ODY0ZDQyXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ernesto Veraza | https://www.linkedin.com/in/ernestoveraza | 2020-12-16 16:45:09 UTC |  | ¡Felicidades Ernesto! Nuevas metas | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17431 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Sergio Anaya Rodríguez | Date: 2021-08-10 21:21:04 UTC
+  Content: 2-NDY3YjM3MTMtMWIwYi00ODdiLWFmNGYtODkyNWVlNzJkMDQzXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Sergio Anaya Rodríguez | https://www.linkedin.com/in/sergio-anaya-rodríguez-812a8582 | 2021-08-10 21:21:04 UTC |  | Buena tarde Sergio, recibe un cordial saludo, primero que todo felicidades por el esfuerzo y los logros de la marca | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17478 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Carlos Cornejo | Date: 2021-08-04 20:14:19 UTC
+  Content: 2-NmQzYjFlMzQtOWUxMC00ZjdiLThjZTktMmJhNjlmOTkwZWE1XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Carlos Cornejo | https://www.linkedin.com/in/carlos-cornejo-b45b36185 | 2021-08-04 20:14:19 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17488 - Matches: ['felicit', 'felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Ingrid Aguilar  | Date: 2021-08-06 00:45:49 UTC
+  Content: 2-NDZhNzQxYTUtOTFmYy00NmVkLWJmZTAtZWM1YjM3OTBhNmViXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ingrid Aguilar  | https://www.linkedin.com/in/ingrid-aguilar-592a98124 | 2021-08-06 00:45:49 UTC |  | Espero no molestar, oye Ingrid primero que todo te quiero felicitar por tus logros, ya lo vimos en la junta de verdad muchas felicidades | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17780 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Pedro Morales Aguillon | Date: 2021-07-25 17:42:35 UTC
+  Content: 2-NjNmZjU5NzItMWYwZC00ZTBiLWFmMDctZTg5OWQ3MzgzM2E5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Pedro Morales Aguillon | https://www.linkedin.com/in/pedromoralesaguillon | 2021-07-25 17:42:35 UTC |  | ¡Muchas felicidades Pedro, un año más de vida y con más éxitos por delante! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17783 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Pedro Morales Aguillon | Date: 2020-07-25 15:43:40 UTC
+  Content: 2-NjNmZjU5NzItMWYwZC00ZTBiLWFmMDctZTg5OWQ3MzgzM2E5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Pedro Morales Aguillon | https://www.linkedin.com/in/pedromoralesaguillon | 2020-07-25 15:43:40 UTC |  | Felicidades Pedro, un año más de vida para celebrarlo | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17785 - Matches: ['felicida']
+  From: Pedro Morales Aguillon | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 10:19:57 UTC
+  Content: 2-NjNmZjU5NzItMWYwZC00ZTBiLWFmMDctZTg5OWQ3MzgzM2E5XzAxMg== |  | Pedro Morales Aguillon | https://www.linkedin.com/in/pedromoralesaguillon | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 10:19:57 UTC |  | Muchas felicidades! Por tu nuevo trabajo Antonio, a echarle ganas, espero sea lo que buscabas.
+Saludos! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17808 - Matches: ['congrat']
+  From: Antonio Trozzo | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-24 13:53:46 UTC
+  Content: 2-M2FjNzk0MzQtZjVmOS00NjJkLThjMDItZTZkMTBhZTk2MmNhXzAxMA== |  | Antonio Trozzo | https://www.linkedin.com/in/antonio-trozzo-4962942 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-24 13:53:46 UTC |  | Congrats on the new role! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17815 - Matches: ['felicida']
+  From: Iñaki Alcaraz | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-21 09:22:25 UTC
+  Content: 2-ODQ4MjgyMzItODg3Yi00ZjA1LThhNzMtZTQ1MTExY2I3MDkzXzAxMA== |  | Iñaki Alcaraz | https://www.linkedin.com/in/inakialcaraz | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-21 09:22:25 UTC |  | ¡Felicidades por tu nuevo puesto, Antonio! Seguro que tendrás tanto éxito como hasta ahora, en esta nueva etapa profesional. ¿Cuántos cambios en los últimos meses, no? Estoy seguro de que después de estas desafiantes circunstancias, seremos mejores profesionales, así que… ¡¡En 2021 tendrás grandes éxitos con tus proyectos!! Comparto contigo una reflexión que espero que te guste y cuenta conmigo en lo que necesites para lograr tus primeros hitos. ¡Un abrazo y seguimos en contacto! Iñaki
+
+https://bit.ly/DeayunoB2BconLinkedIn | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17834 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Jonathan Hernández | Date: 2021-07-21 22:43:06 UTC
+  Content: 2-NjgzZDdmNGItMDM1NS00YWI1LTgzOGMtZmFlNTdhODI1MDZlXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jonathan Hernández | https://www.linkedin.com/in/jonathan-hernández-b0580a186 | 2021-07-21 22:43:06 UTC |  | Qué tal mucho gusto estimado, oye primero que todo muchas felicidades por tu nuevo rol | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17880 - Matches: ['felicida']
+  From: Jose Rodriguez Garfias | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-20 22:08:20 UTC
+  Content: 2-MTEwMzBmMGYtMjA2NC00NmVjLTg2ZGUtMDY3MWI4ODBhYzEzXzAxMA== |  | Jose Rodriguez Garfias | https://www.linkedin.com/in/jose-rodriguez-garfias-63722324 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-20 22:08:20 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17884 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Raul Omar Ledesma Rivera | Date: 2021-07-20 22:30:55 UTC
+  Content: 2-ZWM4YjlkNTUtNjRiNS00OTYyLWJkZmEtNTYxNDBkM2JmN2MzXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Raul Omar Ledesma Rivera | https://www.linkedin.com/in/raul-omar-ledesma-rivera-057b3b73 | 2021-07-20 22:30:55 UTC |  | Estimado muchas felicidades por su proceso de expansión, por ahí le pasé tu contacto a un primo en Mérida ojalá te haya podido contactar | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17933 - Matches: ['congrat']
+  From: Jesus Reyes Garza. | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-17 16:45:18 UTC
+  Content: 2-ZWIwZTU2YjctNDhhNC00YzkxLTgwNDUtMWM4M2NhYTMxM2FjXzAxMg== |  | Jesus Reyes Garza. | https://www.linkedin.com/in/jesus-reyes-garza-773064a6 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 16:45:18 UTC |  | Congrats on the new role! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17939 - Matches: ['felicida']
+  From: Lizbeth Vera | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-17 14:37:37 UTC
+  Content: 2-NTVmYjQwODQtNDJmMC00Nzg0LWIyYTAtODkwYmQwMDRkNTliXzAxMg== |  | Lizbeth Vera | https://www.linkedin.com/in/lizbeth-vera-b718b251 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 14:37:37 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17942 - Matches: ['felicida']
+  From: Raul Emmanuel Pedrin Cota | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-19 19:23:22 UTC
+  Content: 2-MzZiNDYyNDEtY2VhYi00ZWVlLWI2ZjktNzgwMzE2NGY3ZGJjXzAxMA== |  | Raul Emmanuel Pedrin Cota | https://www.linkedin.com/in/raulpedrin | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-19 19:23:22 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17945 - Matches: ['felicida']
+  From: MARTIN ISRAEL CORREA RANGEL | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-19 16:40:54 UTC
+  Content: 2-ZTRiY2Q3ZDctZmRkNi00MGRhLTliOWQtZjhkNWEwNDE2ZjU1XzAxMg== |  | MARTIN ISRAEL CORREA RANGEL | https://www.linkedin.com/in/martin-israel-correa-rangel-048a99111 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-19 16:40:54 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17946 - Matches: ['felicida']
+  From:  Chung  Zu Jan 鍾如傑 (钟如杰)      | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-18 22:38:01 UTC
+  Content: 2-MWI2ZjI5MGQtZDFkYy01ZWM0LTkyYjMtNDQ4ZmQ4ZDNmNGMzXzAxMA== |  |  Chung  Zu Jan 鍾如傑 (钟如杰)      | https://www.linkedin.com/in/chung-zu-jan-鍾如傑-钟如杰-4a0458133 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-18 22:38:01 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17949 - Matches: ['felicida']
+  From:  Chung  Zu Jan 鍾如傑 (钟如杰)      | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 00:44:25 UTC
+  Content: 2-MWI2ZjI5MGQtZDFkYy01ZWM0LTkyYjMtNDQ4ZmQ4ZDNmNGMzXzAxMA== |  |  Chung  Zu Jan 鍾如傑 (钟如杰)      | https://www.linkedin.com/in/chung-zu-jan-鍾如傑-钟如杰-4a0458133 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 00:44:25 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17951 - Matches: ['felicida']
+  From:  Chung  Zu Jan 鍾如傑 (钟如杰)      | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 12:14:19 UTC
+  Content: 2-MWI2ZjI5MGQtZDFkYy01ZWM0LTkyYjMtNDQ4ZmQ4ZDNmNGMzXzAxMA== |  |  Chung  Zu Jan 鍾如傑 (钟如杰)      | https://www.linkedin.com/in/chung-zu-jan-鍾如傑-钟如杰-4a0458133 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 12:14:19 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17961 - Matches: ['congrat']
+  From: Waebuesa Yukipli | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-17 19:37:08 UTC
+  Content: 2-YTA5YWYzMTYtZTI1Zi00ZDc5LTgwYTUtNTM3ZDIwMzg2ODU3XzAxMg== |  | Waebuesa Yukipli | https://www.linkedin.com/in/waebuesa-yukipli-27342519a | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 19:37:08 UTC |  | Congrats on the new role! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17963 - Matches: ['congrat']
+  From: Waebuesa Yukipli | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 09:57:11 UTC
+  Content: 2-YTA5YWYzMTYtZTI1Zi00ZDc5LTgwYTUtNTM3ZDIwMzg2ODU3XzAxMg== |  | Waebuesa Yukipli | https://www.linkedin.com/in/waebuesa-yukipli-27342519a | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 09:57:11 UTC |  | Congrats on the new role! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17967 - Matches: ['congrat']
+  From: Waebuesa Yukipli | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 05:35:33 UTC
+  Content: 2-YTA5YWYzMTYtZTI1Zi00ZDc5LTgwYTUtNTM3ZDIwMzg2ODU3XzAxMg== |  | Waebuesa Yukipli | https://www.linkedin.com/in/waebuesa-yukipli-27342519a | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 05:35:33 UTC |  | Congrats on the new role! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 17994 - Matches: ['felicit', 'felicida']
+  From: Antonio Ortega Velázquez | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-17 12:53:49 UTC
+  Content: 2-Njc1NjVkNjUtNGQxNy00YjI0LWFkY2QtMDMwY2VhOTg4MDE5XzAxMg== |  | Antonio Ortega Velázquez | https://www.linkedin.com/in/84000commx | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 12:53:49 UTC |  | Antonio, sí en estos momentos es una bendición conservar y tener un trabajo; es una doble bendición tener nuevo puesto, muchas felicidades por ese logro.
+
+También espero espero que Tu y toda tu familia gocen de excelente salud.
+
+Saludos y felicitaciones nuevamente. 👍 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 18020 - Matches: ['felicida']
+  From: Angel Mendoza Jesus | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-17 06:26:28 UTC
+  Content: 2-NzU0MTE1NWMtYzIwOC00YmY4LWI2NmEtNWVkMWFjMDA5NmVkXzAxMg== |  | Angel Mendoza Jesus | https://www.linkedin.com/in/angel-mendoza-project-manager | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 06:26:28 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 18028 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Benjamín Mateos Díaz | Date: 2021-07-09 00:37:55 UTC
+  Content: 2-OTZjNWM4YjItMWQ3OS00NmMwLWFlNjktYTYzZjVlOTdiYjE4XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Benjamín Mateos Díaz | https://www.linkedin.com/in/benjamin-mateos-diaz- | 2021-07-09 00:37:55 UTC |  | Muchas felicidades Benjamín y Bienvenido al Caribe | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 18367 - Matches: ['reconocimiento']
+  From: Karina  Granados | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-05-05 03:12:33 UTC
+  Content: 2-ZDBiNTNjMTUtZmI5Yy00Njc5LWFkMzctYTYxZmU4ZjZlMWJkXzAxMg== |  | Karina  Granados | https://www.linkedin.com/in/karina-granados | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-05-05 03:12:33 UTC |  | Ahí te dan un reconocimiento al finalizar tu curso  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 18426 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Jose Rincon | Date: 2021-05-04 15:07:54 UTC
+  Content: 2-NWYzZGE4N2MtNmViYy00MGU2LTk4MmMtZTkzOTg0YjVlYjM3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jose Rincon | https://www.linkedin.com/in/jose-rincon-3b220264 | 2021-05-04 15:07:54 UTC |  | Buenos días Pepe, muchas felicidades canijo y éxito | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 18902 - Matches: ['congrat']
+  From: Fahad Hizam | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-02-17 17:40:46 UTC
+  Content: 2-ODI4YzhhZGYtYTFlMC00ZDFlLWEzZTEtNTdjNmVlODlmNGE0XzAxMg== |  | Fahad Hizam | https://www.linkedin.com/in/fahadhizam | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-02-17 17:40:46 UTC |  | Perdón, acabo de ver tu mensaje anterior. Muchas gracias por aceptar mi conexión, me congratula unirme a tu red de contactos. Saludos cordiales, Fahad | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 18904 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Fahad Hizam | Date: 2021-02-05 21:06:26 UTC
+  Content: 2-ODI4YzhhZGYtYTFlMC00ZDFlLWEzZTEtNTdjNmVlODlmNGE0XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Fahad Hizam | https://www.linkedin.com/in/fahadhizam | 2021-02-05 21:06:26 UTC |  | ¡Felicidades por tu aniversario de trabajo! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19045 - Matches: ['felicit']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Juan Valles | Date: 2021-02-05 02:39:31 UTC
+  Content: 2-ZTVlNGZhMmEtYzRjMS00NTlkLTg2NTItZjVjNDUyNzEyZDU1XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Juan Valles | https://www.linkedin.com/in/juanvalles | 2021-02-05 02:39:31 UTC |  | Y también aprovecho para felicitarte y agradecer el tiempo que inviertes | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19062 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Manuel Gonzalez Moles | Date: 2020-07-24 21:11:55 UTC
+  Content: 2-YmQ1YjI4M2UtMjZiNC00MWEyLThhODktMDY3Y2I0M2ViZWE3XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Manuel Gonzalez Moles | https://www.linkedin.com/in/mgmoles | 2020-07-24 21:11:55 UTC |  | Estimado Manuel, muchas felicidades por tus proyectos y te deseo el mayor de los éxito por acá en Tierra Azteca | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19553 - Matches: ['felicida']
+  From: Alvaro Miranda | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-28 13:45:52 UTC
+  Content: 2-OWY5MzQ0ZTItYjU0OC00OGQzLWEzYzEtZGYwOWRhZWM5ZmYzXzAxMA== |  | Alvaro Miranda | https://www.linkedin.com/in/alvaro-mirandao | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-28 13:45:52 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19555 - Matches: ['felicit']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Alvaro Miranda | Date: 2020-07-29 17:45:09 UTC
+  Content: 2-OWY5MzQ0ZTItYjU0OC00OGQzLWEzYzEtZGYwOWRhZWM5ZmYzXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alvaro Miranda | https://www.linkedin.com/in/alvaro-mirandao | 2020-07-29 17:45:09 UTC |  | Gracias Álvaro, por tus felicitaciones | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19556 - Matches: ['felicida']
+  From: Alvaro Miranda | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-29 16:50:46 UTC
+  Content: 2-OWY5MzQ0ZTItYjU0OC00OGQzLWEzYzEtZGYwOWRhZWM5ZmYzXzAxMA== |  | Alvaro Miranda | https://www.linkedin.com/in/alvaro-mirandao | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-29 16:50:46 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19560 - Matches: ['felicida']
+  From: Jose Ramos Sanguino | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-21 07:28:57 UTC
+  Content: 2-NDRmMWQ3MzgtMTY1ZS00NGYxLTgwYzktZWM5MGEwYmRlNzE1XzAxMA== |  | Jose Ramos Sanguino | https://www.linkedin.com/in/jose-ramos-sanguino-81939533 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-21 07:28:57 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19577 - Matches: ['felicida']
+  From: María Ixchelt Abreu Silva | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 14:22:36 UTC
+  Content: 2-MjNiYzUyNjctZGY5MS00ZTQ0LTg4OTEtN2M1NTFjNDE3NDBmXzAxMw== |  | María Ixchelt Abreu Silva | https://www.linkedin.com/in/maría-ixchelt-abreu-silva-5653ab194 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 14:22:36 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19600 - Matches: ['congrat']
+  From: Sohail Khan | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 10:37:01 UTC
+  Content: 2-MWFhZWY1MDYtNmRjMS00YzQ0LTk0MDEtMjM2ZTUyNTQwZTBmXzAxMw== |  | Sohail Khan | https://www.linkedin.com/in/sohail-khan-0380a224 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 10:37:01 UTC |  | Congrats on your new job! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19607 - Matches: ['felicida']
+  From: rafael toledo diaz | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 02:23:59 UTC
+  Content: 2-NjA1ZWIyMmMtMjAwNy00NGY3LWE1MDgtMWMwNWIxMWZiZDEwXzAxMg== |  | rafael toledo diaz | https://www.linkedin.com/in/rafael-toledo-diaz-3062b138 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 02:23:59 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19621 - Matches: ['felicida']
+  From: Víctor Jorge Avalos Tello | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 00:38:01 UTC
+  Content: 2-ZDg1ZjJmYTYtNzZlMC00ZTcxLWIyYjUtNjkwMWNhNzkzYmVjXzAxMg== |  | Víctor Jorge Avalos Tello | https://www.linkedin.com/in/víctor-jorge-avalos-tello | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 00:38:01 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19653 - Matches: ['felicida']
+  From: Víctor Jorge Avalos Tello | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-09-21 13:51:58 UTC
+  Content: 2-ZDg1ZjJmYTYtNzZlMC00ZTcxLWIyYjUtNjkwMWNhNzkzYmVjXzAxMg== |  | Víctor Jorge Avalos Tello | https://www.linkedin.com/in/víctor-jorge-avalos-tello | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-09-21 13:51:58 UTC |  | Hola, buenos días.
+Te comparto esta publicación esperando que te sea de utilidad
+
+https://www.linkedin.com/posts/v%C3%ADctor-jorge-avalos-tello_psicologiapositiva-felicidad-desarrollopersonal-activity-6709821015599452160-P29A | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19655 - Matches: ['felicida']
+  From: Guadalupe Contreras | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 00:41:36 UTC
+  Content: 2-OTNkOGVhZDctNWRiOC00YjgzLTgzYjktMjJjNWZmNjViNjE3XzAxMw== |  | Guadalupe Contreras | https://www.linkedin.com/in/guadalupe-contreras-880a01b6 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 00:41:36 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19985 - Matches: ['felicit']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Ricardo Pinheiro | Date: 2020-08-28 23:39:30 UTC
+  Content: 2-ZTAzMGYwMTAtNWI3Ni00MDZkLWJlZGQtYzM5NTY3ODEwNmI5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ricardo Pinheiro | https://www.linkedin.com/in/ricardo-pinheiro-52812b30 | 2020-08-28 23:39:30 UTC |  | Primero que todo felicitarte y a su empresa por el logro aquí en nuestro país, mi esposa es una gran fan de sus productos | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 19989 - Matches: ['felicida']
+  From: Felipe Iván  Campos García | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-09-19 02:40:37 UTC
+  Content: 2-OGEzMDkyMWYtNTJmOC00MzNjLTk4ODMtMTEzNTIxZTIzNTUzXzAxMg== |  | Felipe Iván  Campos García | https://www.linkedin.com/in/felipe-iván-campos-garcía-b22a2040 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-09-19 02:40:37 UTC |  | Gracias Antonio, felicidades!! Cancún es una bella ciudad en medio del paraiso.
+
+En un inicio la oferta será limitada por código postal en la ciudad de México y la expansión será gradual. Espero pronto puedas diafrutar de IKEA en Cancún 🙂 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 20126 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Rodolfo Carrillo | Date: 2020-09-14 16:27:16 UTC
+  Content: 2-YzNiMWU2MjYtODZlZi00ZGFmLWI4MzQtYzQzYWFiYzVjZDkxXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Rodolfo Carrillo | https://www.linkedin.com/in/rodolfocarrillo | 2020-09-14 16:27:16 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 20405 - Matches: ['felicida']
+  From: Hilda Rico | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 14:03:26 UTC
+  Content: 2-MTU1NGM0OTgtZTAxNC00ODhlLTgxZmQtZDBiMTgwZDVjN2RmXzAxMg== |  | Hilda Rico | https://www.linkedin.com/in/hildarico | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 14:03:26 UTC |  | Wow!! Felicidades amogo | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 20411 - Matches: ['felicida']
+  From: Hilda Rico | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 05:07:42 UTC
+  Content: 2-MTU1NGM0OTgtZTAxNC00ODhlLTgxZmQtZDBiMTgwZDVjN2RmXzAxMg== |  | Hilda Rico | https://www.linkedin.com/in/hildarico | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 05:07:42 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 20503 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Jorge Maldonado Treviño | Date: 2020-08-20 21:54:39 UTC
+  Content: 2-M2Q2NzQwNjctYjAwOC00YTdmLWIyNzgtMTA5ZGJiMjdhYmUwXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jorge Maldonado Treviño | https://www.linkedin.com/in/jorgemaldonadotrevino | 2020-08-20 21:54:39 UTC |  | Felicidades por tu nueva posición Jorge, a seguir cosechando éxitos | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 20784 - Matches: ['felicida']
+  From: Daniela Fernández Díaz | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-08-14 19:48:04 UTC
+  Content: 2-MGZiYWM0ZjQtMTIwYy00YWY5LThkOTUtY2FkYzhlNjI4ZjVlXzAxMg== |  | Daniela Fernández Díaz | https://www.linkedin.com/in/dani-fernández | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-08-14 19:48:04 UTC |  | ¡Me alegra que estén adaptándose y felicidades por tu nueva oportunidad, suena muy interesante! Si ha sido una época de mucho reto y de reinventarse, pero ante todo la buena actitud :)
+
+Me interesa platicar contigo un momento para explorar una posible colaboración ¿podrías proporcionarme tu celular?
+
+De igual manera te dejo el mío por si puedes mandarme un WhatsApp +5214442384852
+
+Saludos! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 21064 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Adrian Milian | Date: 2020-07-30 22:00:35 UTC
+  Content: 2-OTIzMTE5NDQtZGIxZS00Y2ZmLWFmNTctMzAyZDllMzc4ZjVhXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Adrian Milian | https://www.linkedin.com/in/adrian-milian-726768152 | 2020-07-30 22:00:35 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 21288 - Matches: ['felicit']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Miguel Robles | Date: 2020-07-26 16:56:40 UTC
+  Content: 2-YmVmNDlhZjEtNjNiNi00ZDU2LWFhYTQtYmIwOWNjZGQ4ZTJlXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Miguel Robles | https://www.linkedin.com/in/miguel-robles-27869070 | 2020-07-26 16:56:40 UTC |  | Te felicito por tus proyectos y quería preguntar si la foto que subiste de Akumal en qué parte de la república es? | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 21309 - Matches: ['felicida']
+  From: Mario Alberto Aguilar Manzanilla | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 21:00:01 UTC
+  Content: 2-N2E0ZDYxMjQtYmIyMy00N2E0LWJmN2MtNjQ2MzYzNTZlYTI1XzAxMg== |  | Mario Alberto Aguilar Manzanilla | https://www.linkedin.com/in/mario-alberto-aguilar-manzanilla | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 21:00:01 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 21364 - Matches: ['felicida']
+  From: Evestt Optimizador | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 16:30:03 UTC
+  Content: 2-NGU3NmUxMjAtY2I5My00NTUzLWJhOGQtZTBkMDkwMjUzYTlhXzAxMg== |  | Evestt Optimizador | https://www.linkedin.com/in/evestt-optimizador-0262a21b | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 16:30:03 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 21366 - Matches: ['felicida']
+  From: Lorea Arrizabalaga Alvarez | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 16:10:49 UTC
+  Content: 2-MTJlNTdiOWEtMzdmMS00OTIzLWJmMWUtZWFhYjI2ZmQwODZmXzAxMg== |  | Lorea Arrizabalaga Alvarez | https://www.linkedin.com/in/lorea-arrizabalaga-alvarez-consultora | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 16:10:49 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 21401 - Matches: ['felicida']
+  From: JULIAN JOSUE ORTEGA PAZ | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 12:05:16 UTC
+  Content: 2-NGYwZjAwZDUtZmQ3Ni00NjQ0LTk5MTAtZGNkYWM1MTQ0NWMwXzAxMw== |  | JULIAN JOSUE ORTEGA PAZ | https://www.linkedin.com/in/julian-ortega-paz | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 12:05:16 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 21420 - Matches: ['felicida']
+  From: Roberto Rafael Ramirez Iniestra | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 05:29:04 UTC
+  Content: 2-MzdlMjYwNzEtZTEzMy00OThjLWE4MjktMTE5YmFjNzM0ZDBlXzAxMg== |  | Roberto Rafael Ramirez Iniestra | https://www.linkedin.com/in/roberto-rafael-ramirez-iniestra-68655654 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 05:29:04 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 21437 - Matches: ['felicida']
+  From: Alejandro Aramburu | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 04:12:20 UTC
+  Content: 2-NTJjNmIyNzEtMmUwNC00MWZmLWEzNjYtNGVjZjljN2VkZDFhXzAxMw== |  | Alejandro Aramburu | https://www.linkedin.com/in/aarambur | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 04:12:20 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24301 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Angélica López | Date: 2020-03-16 23:47:19 UTC
+  Content: 2-YjUzNzI4YjMtN2YwNi01NWE2LWJjNWItNGY3NDBlYTBiNzMwXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Angélica López | https://www.linkedin.com/in/angélica-lópez-192701ba | 2020-03-16 23:47:19 UTC |  | Hola Norma buenas tardes, muchas felicidades por tu nuevo proyecto  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24347 - Matches: ['felicit']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To: Nancy Burelo | Date: 2019-02-28 14:53:47 UTC
+  Content: 2-ODBlNDA3MjktMjUzMy01MDg1LWI1ZmYtNDZiNzhlZWVlMjkwXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Nancy Burelo | https://www.linkedin.com/in/nancyburelo | 2019-02-28 14:53:47 UTC |  | Primero que todo y aunque no te conozco te felicito por cada uno de tus logros | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24390 - Matches: ['reconocimiento']
+  From: Jesús Jacinto Barragán | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2026-01-02 05:47:52 UTC
+  Content: 2-YzYzNDJmZGItOGMzYy00MzEyLWJiZDItMDk5MzdiNmU4ZmNiXzEwMA== | Tienes el perfil para estudiar una Maestría en PRL | Jesús Jacinto Barragán |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2026-01-02 05:47:52 UTC |  | <p class="spinmail-quill-editor__spin-break">Hola 💳Antonio,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Un gusto saludarte. Soy Jesús Jacinto Barragán, <strong>coordinador de la Maestría en Prevención de Riesgos Laborales de UNIR México</strong>.</p><p class="spinmail-quill-editor__spin-break">Gracias a tu trayectoria como profesional, creemos que eres un candidato ideal para <strong>nuestra beca del 50%</strong>. A lo largo de 18 meses te prepararás para:</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">🔹Dominar la aplicación y el cumplimiento de las Normas Oficiales dentro del marco legal en seguridad y salud en el trabajo.</p><p class="spinmail-quill-editor__spin-break">🔹Gestionar el riesgo bajo el enfoque de la norma ISO 31000, aplicando metodologías especializadas para su análisis y evaluación.</p><p class="spinmail-quill-editor__spin-break">🔹Diseñar estrategias preventivas de higiene industrial y desarrollar intervenciones ergonómicas y psicosociales efectivas.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">¿Qué beneficios tendrás por estudiar con nosotros?</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break"><strong>🌎Podrás certificarte como Auditor Interno ISO 45001</strong>: Implementarás el modelo ISO para diseñar un sistema de gestión de seguridad y salud en el trabajo (prevención de lesiones y el deterioro de la salud de los trabajadores y fomento de lugares de trabajo seguros y saludables)</p><p class="spinmail-quill-editor__spin-break">🎓Si estás certificado, puedes <strong>combinar tu Maestría con un curso en Calidad y Auditorías de los Sistemas de Gestión </strong>(con experiencia práctica en normas internacionales como ISO 9001, ISO 14001 e ISO 45001).</p><p class="spinmail-quill-editor__spin-break">🎓<strong>Te ofrecemos</strong> <strong>respaldo y reconocimiento oficial</strong>: Máxima acreditación FIMPES, oficialidad RVOE y prestigio internacional de la Universidad Internacional de La Rioja.</p><p class="spinmail-quill-editor__spin-break">📚<strong>Obtendrás calidad académica y flexibilidad en tus estudios</strong>: Claustro con experiencia, clases 100% en línea y seguimiento personalizado adaptado a tu ritmo.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Tendrás <strong>acceso sin costo adicional</strong> a diferentes cursos, entre ellos a uno en gestión de proyectos ágiles valorado en 10,000 MXN.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Mejora <strong>tu futuro laboral como </strong>Gerente de Salud y Seguridad, Coordinador de Seguridad Industrial, Auditor Interno en seguridad y salud laboral o Capacitador en higiene y seguridad, entre otros.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Descubre cómo esta <strong>beca del 50%</strong> puede ayudarte a dar el siguiente gran paso en tu carrera.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Un cordial saludo,</p><p class="spinmail-quill-editor__spin-break">Jesús Jacinto Barragán</p> | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24403 - Matches: ['reconocimiento']
+  From: Gerardo Bocanegra García | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2025-10-02 00:35:15 UTC
+  Content: 2-MjE2YmNkOGYtMTcwNC00Y2JkLTgzZGYtNzg0NDFjY2U0MDk1XzEwMA== | ¿Listo para armar el futuro de la tecnología?  | Gerardo Bocanegra García |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-10-02 00:35:15 UTC |  | <p class="spinmail-quill-editor__spin-break">Hola 💳Antonio,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Un gusto saludarte. Soy Gerardo Bocanegra, <strong>coordinador de la Maestría en Diseño y Gestión de Proyectos Tecnológicos de UNIR México</strong>.</p><p class="spinmail-quill-editor__spin-break">Gracias a tu trayectoria como Business Sales Consultant, eres un candidato ideal para nuestra <strong>beca del 50%</strong>.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Con esta Maestría aprenderás a <strong>liderar proyectos tecnológicos</strong>, a <strong>gestionar equipos</strong> siguiendo estándares PMI® y a <strong>dominar el entorno tecnológico y legal de las TIC</strong>.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Beneficios UNIR México:</p><p class="spinmail-quill-editor__spin-break">🌎 Posibilidad de combinar tu Maestría con un <strong>certificado estadonunidense </strong>en Digital Project Management (MIU City University Miami) con el que te prepararás para obtener la <strong>certificación internacional PMP.</strong></p><p class="spinmail-quill-editor__spin-break">🎓 <strong>Reconocimiento oficial</strong> (FIMPES y RVOE).</p><p class="spinmail-quill-editor__spin-break">📚 <strong>Clases online</strong> y flexibles con <strong>cursos extra sin costo</strong>.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Te invito a descubrir como esta <strong>beca del 50%</strong> puede ayudarte a dar el siguiente paso en tu carrera.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Un cordial saludo,</p><p class="spinmail-quill-editor__spin-break">Gerardo Bocanegra</p> | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24409 - Matches: ['reconocimiento']
+  From: Gerardo Bocanegra García | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2025-08-20 14:21:06 UTC
+  Content: 2-NTFjNjYxMzYtMTFmYy00NWY5LTlmMjUtOGNhODU2OTNhNjY2XzEwMA== | ¿Listo para armar el futuro de la tecnología?  | Gerardo Bocanegra García |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-08-20 14:21:06 UTC |  | <p class="spinmail-quill-editor__spin-break">Hola 💳Antonio,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Un gusto saludarte. Soy Gerardo Bocanegra, <strong>coordinador de la Maestría en Diseño y Gestión de Proyectos Tecnológicos de UNIR México</strong>.</p><p class="spinmail-quill-editor__spin-break">Gracias a tu trayectoria como Business Sales Consultant, eres un candidato ideal para nuestra <strong>beca del 50%</strong>.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Con esta Maestría aprenderás a <strong>liderar proyectos tecnológicos</strong>, a <strong>gestionar equipos</strong> siguiendo estándares PMI® y a <strong>dominar el entorno tecnológico y legal de las TIC</strong>.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Beneficios UNIR México:</p><p class="spinmail-quill-editor__spin-break">🌎 Posibilidad de combinar tu Maestría con un <strong>certificado estadonunidense </strong>en Digital Project Management (MIU City University Miami) con el que te prepararás para obtener la <strong>certificación internacional PMP.</strong></p><p class="spinmail-quill-editor__spin-break">🎓 <strong>Reconocimiento oficial</strong> (FIMPES y RVOE).</p><p class="spinmail-quill-editor__spin-break">📚 <strong>Clases online</strong> y flexibles con <strong>cursos extra sin costo</strong>.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Te invito a descubrir como esta <strong>beca del 50%</strong> puede ayudarte a dar el siguiente paso en tu carrera.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Un cordial saludo,</p><p class="spinmail-quill-editor__spin-break">Gerardo Bocanegra</p> | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24469 - Matches: ['reconocimiento']
+  From: Brian Klahr | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2024-06-22 07:25:56 UTC
+  Content: 2-NWU3NjBmMjAtMWYxYi00NTVlLWJjMjktNjM2MGI3MTU0NGE0XzAxMg== | Supermercado bonificado! | Brian Klahr |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-06-22 07:25:56 UTC |  | <p class="spinmail-quill-editor__spin-break">Hola 💳Antonio, ayudar a tus colaboradores a hacer rendir su salario es una buena estrategia de retención.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Por eso te cuento que con <a rel="noopener" href="https://www.bonda.com/es-mx/?li_fat_id=21079b98-8174-4155-bfbc-fdffb32354a4" target="_blank">Bonda</a>, puedes bonificarles el supermercado todos los meses.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">👉 Con nuestro Programa de reconocimientos, puedes obsequiarles puntos para que canjeen en GiftCards de más de 200 marcas, entre ellas: Chedraui,&nbsp;Justo, Soriana, Walmart y más.</p><p class="spinmail-quill-editor__spin-break"><br></p><ul><li>Es un beneficio no remunerativo para la empresa.</li><li>Es deducible de impuestos.</li><li>El costo de la plataforma se ajusta a la cantidad de empleados que tengan.</li><li>Nuestros beneficios no tienen límite de uso y tienen alcance nacional.</li></ul><p class="spinmail-quill-editor__spin-break">Si quieres más información déjame tus datos debajo y te ofrezco una demostración gratuita.</p> | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24545 - Matches: ['felicida']
+  From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2023-07-13 15:16:00 UTC
+  Content: 2-OTkxYjNjZDAtYjg4MC00YmQ2LTgzY2ItYzA1NmJlMzQ1NTQzXzAxMg== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-13 15:16:00 UTC |  | Felicidades ! | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24670 - Matches: ['felicida']
+  From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-20 18:19:09 UTC
+  Content: 2-N2NlNTYwZGQtMmE4Yi00OTlkLTk1YTMtMDA3ZDgxYzMxNTI3XzAxMA== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-20 18:19:09 UTC |  | Muchas felicidades enhorabuena.... y  a darle duro, demostrar de lo que podemos.. Saludos | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24672 - Matches: ['felicida']
+  From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2021-07-20 17:45:59 UTC
+  Content: 2-N2NlNTYwZGQtMmE4Yi00OTlkLTk1YTMtMDA3ZDgxYzMxNTI3XzAxMA== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-20 17:45:59 UTC |  | ¡Felicidades por tu nuevo puesto! | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24675 - Matches: ['felicida']
+  From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-20 22:17:56 UTC
+  Content: 2-N2NlNTYwZGQtMmE4Yi00OTlkLTk1YTMtMDA3ZDgxYzMxNTI3XzAxMA== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-20 22:17:56 UTC |  | ¡Felicidades por tu nuevo puesto! | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24680 - Matches: ['felicida']
+  From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-29 15:46:00 UTC
+  Content: 2-N2NlNTYwZGQtMmE4Yi00OTlkLTk1YTMtMDA3ZDgxYzMxNTI3XzAxMA== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-29 15:46:00 UTC |  | ¡Felicidades por tu nuevo puesto! | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24703 - Matches: ['felicida']
+  From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳,LinkedIn Member | Date: 2021-07-17 14:44:40 UTC
+  Content: 2-MTRhZjJiZTgtMDgzNy00NDc0LWIwNDctYzdkYjVjNjhmZTllXzAxMA== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳,LinkedIn Member | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 14:44:40 UTC |  | ¡Felicidades por tu nuevo puesto! | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24716 - Matches: ['felicida']
+  From: 💳Antonio Gutiérrez  Jiménez💳 | To:  | Date: 2021-05-06 04:22:21 UTC
+  Content: 2-M2EyNTJiMWItZWYyZC00ZGEzLWI4OWEtMTQzYzEyMTBjM2E4XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj |  |  | 2021-05-06 04:22:21 UTC |  | Veo que terminaste el curso de Power BI, muchas felicidades, yo lo estoy cursando actualmente | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24748 - Matches: ['felicida']
+  From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-10-21 01:16:41 UTC
+  Content: 2-NDZkZmYzYmMtM2JmZS00ODdiLTgwZGQtNTg3MmI0ZDgyMzA2XzAxMw== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-10-21 01:16:41 UTC |  | ¡Felicidades por tu nuevo puesto! | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+Row 24750 - Matches: ['felicida']
+  From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳 | Date: 2020-07-24 12:22:35 UTC
+  Content: 2-NDZkZmYzYmMtM2JmZS00ODdiLTgwZGQtNTg3MmI0ZDgyMzA2XzAxMw== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2020-07-24 12:22:35 UTC |  | ¡Felicidades por tu nuevo puesto! | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+

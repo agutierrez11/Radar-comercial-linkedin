@@ -1,0 +1,1217 @@
+Found 231 relevant performance/congratulatory matches in V2:
+
+--- MATCH 1 ---
+Searching ALL CSVs inside the ZIP for Expanded Keywords...
+
+[messages.csv] Row 169 - Matches: ['felicidades']
+  Content: 2-OGJjZGZkYzYtNjNlZS00Zjc5LWExOWQtNDUyNzdmZjZhZWYyXzAxMg== |  | Marcelo Cortez  | https://www.linkedin.com/in/marcelocortezb2b | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2022-09-09 13:56:29 UTC |  | Oye felicidades, se ven buenos los dolores, le hizo sentido al prospecto por lo que veo? | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 2 ---
+[messages.csv] Row 281 - Matches: ['felicidades']
+  Content: 2-MGY1NzFhZTEtYzdmNC00ZGY2LTgyNjMtMjk5MzEyNDk2ZDE5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Cristian Serrano | https://www.linkedin.com/in/cist84 | 2024-01-25 01:06:08 UTC |  | Cristian, estimado, muchas felicidades, nuevamente participando en eventos relevantes de la industria | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 3 ---
+[messages.csv] Row 312 - Matches: ['felicidades']
+  Content: 2-MTkxZGQ2ZDQtMzI3ZS00Y2I5LWEyMjMtMjY1NTYyMjZhZjc4XzAxMg== |  | FEDERICO GARCIA | https://www.linkedin.com/in/federico-garcia-jobsempleo | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-19 14:32:05 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 4 ---
+[messages.csv] Row 841 - Matches: ['felicidades']
+  Content: 2-NmY5MjNlZGMtMmMwYS00ZTQ1LWI4ZmItM2VhZDk2ZjI2ZjI5XzAxMg== |  | Leonardo Cabrera | https://www.linkedin.com/in/leonardo-cabrera-e | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-18 05:50:20 UTC |  | Te veo muy activo e interesado en aprender. Eso es una bendición también. Felicidades porque no cualquiera se prepara constantemente. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 5 ---
+[messages.csv] Row 844 - Matches: ['felicidades']
+  Content: 2-NmY5MjNlZGMtMmMwYS00ZTQ1LWI4ZmItM2VhZDk2ZjI2ZjI5XzAxMg== |  | Leonardo Cabrera | https://www.linkedin.com/in/leonardo-cabrera-e | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-18 04:23:49 UTC |  | Hola Antonio, felicidades por seguir aprendiendo. 
+
+Por cierto, ya no me respondiste si te interesa nos reunamos para mostrarte qué hacemos y cómo lo hacemos.
+
+Quizá te interese. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 6 ---
+[messages.csv] Row 856 - Matches: ['bono']
+  Content: 2-NmY5MjNlZGMtMmMwYS00ZTQ1LWI4ZmItM2VhZDk2ZjI2ZjI5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Leonardo Cabrera | https://www.linkedin.com/in/leonardo-cabrera-e | 2023-01-13 19:19:18 UTC |  | Sueldo base más bonos | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 7 ---
+[messages.csv] Row 887 - Matches: ['ganador']
+  Content: 2-NmY5MjNlZGMtMmMwYS00ZTQ1LWI4ZmItM2VhZDk2ZjI2ZjI5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Leonardo Cabrera | https://www.linkedin.com/in/leonardo-cabrera-e | 2023-01-13 17:55:38 UTC |  | Oye y en el mundial no te enterabas horas después de quién había sido el ganador jjajajaj | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 8 ---
+[messages.csv] Row 1096 - Matches: ['felicidades']
+  Content: 2-YmVjYTQ4MDEtOWU5MS00MWI0LTlhOGMtYTc5NjIxOTdiYzJiXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jan Heinvirta | https://www.linkedin.com/in/janheinvirta | 2021-07-21 17:16:31 UTC |  | Oye Jan, primero que todo muchas felicidades por el proyecto de Perfekto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 9 ---
+[messages.csv] Row 1465 - Matches: ['felicidades']
+  Content: 2-MTRkZmIzNTEtOGIzMC00MGE3LWJiMDctYjdhZTczNTJjYWI3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Miguel Gonzalez | https://www.linkedin.com/in/miguel-gonzalez-92117819b | 2025-08-05 21:04:32 UTC |  | Felicidades por el evento del Fintech Summit | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 10 ---
+[messages.csv] Row 1847 - Matches: ['felicidades']
+  Content: 2-OGNhNGJjMmMtODZlZS00NzkyLTliNGMtZTFjNTFmZmVlNjc3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Erika Argüelles | https://www.linkedin.com/in/erika-argüelles-49692145 | 2024-02-12 19:44:57 UTC |  | Muchas felicidades por la participación en  Gala | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 11 ---
+[messages.csv] Row 1914 - Matches: ['premio', 'felicidades']
+  Content: 2-ODg4ZDZiNTktNmNhYS00NTBlLTliMDEtMGY4MDNmZGRkZGE5XzEwMA== |  | Tomás Volonté | https://www.linkedin.com/in/tomas-volonte | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-12-23 23:05:45 UTC |  | Felicidades!! Y
+ ese premio que es lo que te ofrece? | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 12 ---
+[messages.csv] Row 1928 - Matches: ['ganador']
+  Content: 2-ODg4ZDZiNTktNmNhYS00NTBlLTliMDEtMGY4MDNmZGRkZGE5XzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Tomás Volonté | https://www.linkedin.com/in/tomas-volonte | 2025-12-23 19:57:37 UTC |  | Y sigo esperando que Patricia actualice con los ganadores  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 13 ---
+[messages.csv] Row 1984 - Matches: ['felicidades']
+  Content: 2-ZGEyODBhMmEtYjEwNy00NjhlLTllZjYtZTczYzhlOGQ1OTIzXzAxMA== |  | Gerardo Fragoso | https://www.linkedin.com/in/gerardo-fragoso-a24949a | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-20 20:44:18 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 14 ---
+[messages.csv] Row 2120 - Matches: ['felicidades']
+  Content: 2-YjZjZDJjYWUtYjM0OC00MjhjLWJmYTAtYmY4ODJhMjE1OTdjXzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Kathia Ramirez | https://www.linkedin.com/in/kathia-ramirez-1950a0a1 | 2025-11-13 14:57:26 UTC |  | Muchas felicidades Kathia, todo el éxito. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 15 ---
+[messages.csv] Row 2300 - Matches: ['felicidades']
+  Content: 2-MTlmYmY5MmItNzJlNS00MDBkLTgwZDEtYTJhYWFmMjA0OWFjXzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ariatna Dominguez 🏳️‍🌈 | https://www.linkedin.com/in/ariatnadominguez | 2025-10-01 14:37:46 UTC |  | Ariatna muy buen día, muchas felicidades por el nuevo reto.  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 16 ---
+[messages.csv] Row 2305 - Matches: ['felicidades']
+  Content: 2-MjZhYzZkOTctMWM5My00YzZkLWI5ZjAtODMzNTBhMzNkNGI3XzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jonatan Flores Lagarda | https://www.linkedin.com/in/jonatan-flores-lagarda- | 2025-09-23 20:47:33 UTC |  | Jonathan, buena tarde y muchas felicidades. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 17 ---
+[messages.csv] Row 2468 - Matches: ['felicidades']
+  Content: 2-ZDNmYTNjNDYtOTIwYS00OTQ0LTlhNzUtNTNkY2IyOTc0OTUxXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alejandra Diaz | https://www.linkedin.com/in/alejandra-d-740044b2 | 2025-08-04 15:24:47 UTC |  | Muchas felicidades 🥳 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 18 ---
+[messages.csv] Row 2582 - Matches: ['felicidades']
+  Content: 2-ZDNmYTNjNDYtOTIwYS00OTQ0LTlhNzUtNTNkY2IyOTc0OTUxXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alejandra Diaz | https://www.linkedin.com/in/alejandra-d-740044b2 | 2023-08-23 14:33:30 UTC |  | Muchas felicidades,  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 19 ---
+[messages.csv] Row 2685 - Matches: ['felicidades']
+  Content: 2-YWNjNDliMzUtYTkyNC00YWI3LWFjMzYtOWJkOTA2NTQzOWY5XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Guillermo Muñoz V. | https://www.linkedin.com/in/guillermo-muñoz-v-2924b15b | 2025-08-05 23:14:04 UTC |  | Felicidades por el nuevo reto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 20 ---
+[messages.csv] Row 2773 - Matches: ['felicidades']
+  Content: 2-MzYwNzE5NjktZmJiMi00OWRkLWExYzktODE1Y2VjMTYwZDY3XzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Estefania Sanchez | https://www.linkedin.com/in/estefania-sanchez-380ab619a | 2025-07-23 13:40:27 UTC |  | Muchas Felicidades por los dos años en Nuvei por cierto:) | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 21 ---
+[messages.csv] Row 2861 - Matches: ['felicidades']
+  Content: 2-NWVhZTY2MmQtN2I4OS00ZTYyLTlkZWUtYzIyOTM0YWVlNzE3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Angela Nanô | https://www.linkedin.com/in/angelanano | 2025-07-22 02:03:50 UTC |  | Muchas Felicidades Angela, wooooow | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 22 ---
+[messages.csv] Row 3047 - Matches: ['felicitaciones']
+  Content: 2-OWExZTE0MmEtNTMzMy00YzBhLWE3YjItZjVkZTAzYzhmNDgxXzAxMg== |  | gerardo teijeira ♾️ | https://www.linkedin.com/in/gteijeira | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2022-11-25 20:52:03 UTC |  | Bueno pues por empezar felicitaciones por la oportunidad! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 23 ---
+[messages.csv] Row 3173 - Matches: ['felicidades']
+  Content: 2-NDc0Y2NkZmQtMDY1NC00ZGU1LTg0ZGYtZmUxYWViNTM0Y2QyXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ana Pak | https://www.linkedin.com/in/ana-pak-b531b18b | 2024-07-17 14:53:09 UTC |  | Ana, muy buen miércoles, primero que todo muchas felicidades por el nuevo reto  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 24 ---
+[messages.csv] Row 3292 - Matches: ['logro']
+  Content: 2-Y2M2MmExMmItZmUyZi00ODZiLWFjNGEtZGY3NTYzMDRjOTNiXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alfonzo Tocuyo Guite | https://www.linkedin.com/in/alfonzotocuyoguite | 2023-09-11 21:34:53 UTC |  | oye una consulta, no logro ver el check out en la tienda de Rocket House | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 25 ---
+[messages.csv] Row 3371 - Matches: ['felicidades']
+  Content: 2-MjdjNGUyOWYtYjg5ZS00ODhlLWEzMzgtNTdhNmRkMDQ0ZjlhXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Tania Garcia | https://www.linkedin.com/in/tania-gach | 2024-04-26 15:48:28 UTC |  | Primero que todo muchas felicidades por la nueva posición, nuevo reto  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 26 ---
+[messages.csv] Row 3463 - Matches: ['felicidades']
+  Content: 2-YzRlMGUzZWItODlkYi00ZGVjLWE1ZGMtZDZjMDhhNDNlNzczXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | AMAURY JOFFRE VILCHIS | https://www.linkedin.com/in/amauryjoffrevilchis | 2025-06-13 18:16:28 UTC |  | Muchas felicidades  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 27 ---
+[messages.csv] Row 3571 - Matches: ['felicidades']
+  Content: 2-YjhhMDhmOWYtYjJjNy00NGZmLWIxZmUtOTA0YzM2OWM4MTYzXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Anaid Ortiz | https://www.linkedin.com/in/anaidortiz | 2022-08-16 19:58:16 UTC |  | Hola Anaid, muchas felicidades | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 28 ---
+[messages.csv] Row 3573 - Matches: ['felicidades']
+  Content: 2-YjhhMDhmOWYtYjJjNy00NGZmLWIxZmUtOTA0YzM2OWM4MTYzXzAxMg== |  | Anaid Ortiz | https://www.linkedin.com/in/anaidortiz | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 13:18:03 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 29 ---
+[messages.csv] Row 3889 - Matches: ['felicidades']
+  Content: 2-ZTc2ZTAxMGEtOTk3My00MzkwLWI1MDItN2I0OGNjMDhlZTNjXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Marisol Medinilla Granados | https://www.linkedin.com/in/marisol-medinilla-granados-0243ab244 | 2024-11-06 18:46:09 UTC |  | Felicidades por el nuevo reto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 30 ---
+[messages.csv] Row 3894 - Matches: ['rank']
+  Content: 2-YTcyMWEyMGYtNDliNi00MzM1LWI2NGYtNDcxMTkxZmJjZWIwXzAxMA== |  | Martin Gelpi | https://www.linkedin.com/in/martinfg | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-05-08 11:16:28 UTC |  | Pero muy pronto vuelve el perforank con todos sus países y está México entre ellos | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 31 ---
+[messages.csv] Row 4015 - Matches: ['rank']
+  Content: 2-YTcyMWEyMGYtNDliNi00MzM1LWI2NGYtNDcxMTkxZmJjZWIwXzAxMA== |  | Martin Gelpi | https://www.linkedin.com/in/martinfg | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-08-29 18:45:30 UTC |  | el performance rank lo hice con jorge.. he participado en charlas del ecommerce institute en mexico de la mano de hector | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 32 ---
+[messages.csv] Row 4212 - Matches: ['felicitaciones']
+  Content: 2-NzY5MmI0YTYtNWJlMy00YWEyLWIwNDItNzAxNWFlZjhkYmZjXzAxMg== |  | Héctor Torres | https://www.linkedin.com/in/héctor-torres-59761789 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-04-25 17:37:01 UTC |  | Felicitaciones amigo!! | INBOX | https://www.linkedin.com/dms/prv/vid/v2/D4E06AQE1bfxdWb2EAg/messaging-attachmentFile/messaging-attachmentFile/0/1682444214362?m=AQJAhIk32ZlcxgAAAZ8vZ3gjYRR2ROKrz_NatZyxR8FsVj2rKzgIoyhUoA&ne=1&v=beta&t=d0n0gt_AmBYPCZxtWo-LR3wPAYzj8UpZ0i5oSuFlurc | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 33 ---
+[messages.csv] Row 4227 - Matches: ['felicidades']
+  Content: 2-ODdkZjgxNTctYzQ3MS00NzdlLWFhNDctZTQyZThmNWVjMmJjXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Diego Alcántara Muñoz | https://www.linkedin.com/in/dieyoalc | 2023-10-03 15:56:21 UTC |  | Felicidades por el emprendimiento de las rentas  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 34 ---
+[messages.csv] Row 4250 - Matches: ['felicidades']
+  Content: 2-Yjg2ZDA3M2UtNTUwZS00ODJmLWE0NmItODE2OTZlYzM5NDE1XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Fernando García Castro | https://www.linkedin.com/in/fernando-garcia-castro | 2023-09-14 23:49:37 UTC |  | Felicidades Fernando, andas con todo  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 35 ---
+[messages.csv] Row 4302 - Matches: ['felicidades']
+  Content: 2-MWQwNWUyZDQtYjNjNS00NTUzLWE2ZWMtOTRhY2QyMWRmYTU5XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Vladimir Ortiz | https://www.linkedin.com/in/vladimir-ortiz-5592122a | 2025-04-23 02:29:56 UTC |  | Muchas felicidades por el movimiento  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 36 ---
+[messages.csv] Row 4308 - Matches: ['felicidades']
+  Content: 2-YmJjMmJjY2EtODkzNi00MjAzLTg0NjctNmFiZTEyMGFiNDNlXzEwMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | João Cláudio Ribeiro | https://www.linkedin.com/in/joaoclaudioribeiro | 2025-04-23 00:28:19 UTC |  | João buena tarde, muchas gracias por aceptar, felicidades por el aterrizaje en México  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 37 ---
+[messages.csv] Row 4413 - Matches: ['felicidades']
+  Content: 2-NjlkYzc0YmUtN2NhOS00OGI4LTlkMzAtYzIzNjQ2Yjk5ZGU1XzEwMA== |  | Chris Payne | https://www.linkedin.com/in/chrispayneb2b | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-03-03 16:27:29 UTC |  | Wow, súper, felicidades por tu nuevo trabajo :-) | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 38 ---
+[messages.csv] Row 4425 - Matches: ['destacado']
+  Content: 2-YTIwZDEwOWMtYzI1OS00NDY5LTk4ZDMtYzA2MjQ0ZjU3NTY0XzAxMA== |  | Alejandra Cisneros | https://www.linkedin.com/in/alejandra-cisneros | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-12-14 03:38:57 UTC |  | 🎥 ¿Te perdiste la presentación de Ayni? ¡No te preocupes! Aquí tienes el video completo para verlo cuando gustes o para repasar los momentos más destacados si ya participaste.
+El video comienza realmente a partir del minuto 13:45, y aquí te dejo los momentos clave:
+📌 25:00: Constanza Moreno (Museo Interactivo Mirador) compartiendo su visión. 
+📌 29:40: Francisca
+--------------------------------------------------------------------------------
+
+--- MATCH 39 ---
+[messages.csv] Row 4592 - Matches: ['felicidades']
+  Content: 2-OGYwMTQ1ZTUtODdhYy00OGZmLTk1MGItZjg2NGM3N2NhZTk4XzEwMA== |  | Rodolfo Adrian Sanchez Hernandez | https://www.linkedin.com/in/rodolfo-adrian-sanchez-hernandez-a58409166 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-03-07 15:06:07 UTC |  | ¡Felicidades por tu nuevo puesto en Fiserv! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 40 ---
+[messages.csv] Row 4594 - Matches: ['felicidades']
+  Content: 2-MTA5Y2I0NzEtNWU1Yy00ZjdiLTkyYTItNjUyNmFhYzgxMWQ2XzAxMg== |  | Plinio Fernando Rivera Valenzuela | https://www.linkedin.com/in/pliniorivera | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-03-07 14:35:46 UTC |  | ¡Felicidades por tu nuevo puesto en Fiserv! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 41 ---
+[messages.csv] Row 4624 - Matches: ['ganador']
+  Content: 2-OWUyYTU2ODgtZjEzZC00NjZhLWI1NWMtZTZiNzVmOTBiMmM5XzAxMg== |  | Gonzalo Figueroa ★ | https://www.linkedin.com/in/gonzaloefigueroa | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-03-03 20:53:38 UTC |  | Antonio, te quería comentar.
+
+El lunes 17 de marzo tenemos un Workshop de Networking Agil en Sales Hackers.
+
+Me encantaría tenerte presente. Tendremos
+
+👉 Crea tu pitch ganador en menos de un minuto.
+👉 Estrategias para que tus eventos de Networking generen vínculos y negocios
+👉 Salas de Networking Agil para que conozcas a los miembros de SH y generar aprendizaje, p
+--------------------------------------------------------------------------------
+
+--- MATCH 42 ---
+[messages.csv] Row 4803 - Matches: ['ganador']
+  Content: 2-ODc3ZDJmZjUtM2I1Ni00NzBiLWI0MzctNzg4MWIwNjhkMTUyXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Antonio Navarro | https://www.linkedin.com/in/antoniojnavarro | 2022-12-05 14:07:02 UTC |  | Pues aún no está concedida, de hecho el form es para elegir a los candidatos y de ahí a sacar al ganador  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 43 ---
+[messages.csv] Row 5272 - Matches: ['felicidades']
+  Content: 2-NGY5ZWI5ZWYtNjM5MC00NjY5LThkNzktZGI5YzI1MzE3ZWQxXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jorge Guillen Alatriste | https://www.linkedin.com/in/jorge-guillen-alatriste-157736187 | 2024-05-14 17:41:03 UTC |  | Felicidades por el nuevo reto 😁 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 44 ---
+[messages.csv] Row 5399 - Matches: ['ganador']
+  Content: 2-YTZjMjdjNjctZDdmMi00NWRmLWJmMjAtNThhNTM5N2ViMzNkXzAxMg== |  |  |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-11-04 16:57:39 UTC |  | Buenas tardes Antonio! 
+
+En breve anunciaremos los ganadores😊
+
+Saludos, | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 45 ---
+[messages.csv] Row 5520 - Matches: ['logro']
+  Content: 2-M2ZlMzRkZGUtZTdjYS00ZDMxLTk2OTQtZDEzNjljZDNkY2U5XzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Yesenia Avila | https://www.linkedin.com/in/yesenia-avila-627ab049 | 2024-10-22 15:31:43 UTC |  | Si logro colarme te busco en el stand jajaja aunque lo dudo | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 46 ---
+[messages.csv] Row 5587 - Matches: ['felicidades']
+  Content: 2-N2U4MjUzYWEtMjJjNS00NWZhLTkzNDMtMTc3ZDQzZGU5ODI2XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Cecilia (Cecy) González Vela | https://www.linkedin.com/in/cecy-gonzález-vela | 2023-09-28 20:11:19 UTC |  | Oye muhcs felicidades por el Podcast he | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 47 ---
+[messages.csv] Row 5873 - Matches: ['felicidades']
+  Content: 2-ZDAzZjFmMzktN2VhMy00YzU1LWE1N2ItZTBkOTBjMmJmZjg0XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Mariana Leon, CMS, CITP | https://www.linkedin.com/in/mariana-leon-cms-citp | 2024-10-04 05:48:59 UTC |  | Muchas felicidades por el nuevo reto  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 48 ---
+[messages.csv] Row 5915 - Matches: ['felicidades']
+  Content: 2-ZWVhYjUwOTEtNWVmOC00YjZhLTgwYTItMWVhZGUwMzcyM2I4XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Raúl Eduardo Ríos Sauceda | https://www.linkedin.com/in/raulrios23 | 2022-12-15 18:12:50 UTC |  | Y Felicidades por lo logrado con la iniciativa de e-commerce  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 49 ---
+[messages.csv] Row 5953 - Matches: ['felicidades']
+  Content: 2-NWY1MzdhMjAtNjBhNS00MDM1LWIxOGUtMDYxMmU1NmNmZTg0XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Karla  Hernández | https://www.linkedin.com/in/karla-ivonne-hernández-mendoza-0592 | 2024-09-26 00:27:44 UTC |  | Felicidades  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 50 ---
+[messages.csv] Row 6558 - Matches: ['felicidades']
+  Content: 2-ODUzY2MwMDgtNDI2Ny00MDBiLWJhYTItZGJmOTQ3NGM3NmI1XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Iris Díaz Trejo | https://www.linkedin.com/in/bertha-iris-diaz-trejo | 2024-08-26 17:04:00 UTC |  | Bertha, muchas felicidades por el nuevo reto profesional  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 51 ---
+[messages.csv] Row 6591 - Matches: ['felicidades']
+  Content: 2-ZWYzMjc4NDEtNDYyNi00MTBiLTk5ZTgtMzBjZTgyZWYxZGQzXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jorge Luis Guzmán Mejía | https://www.linkedin.com/in/jlgmr | 2023-09-21 22:22:10 UTC |  | Jorge excelente tarde, muchas felicidades por el evento con OYR | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 52 ---
+[messages.csv] Row 6746 - Matches: ['felicidades']
+  Content: 2-ZWEwZmY2YTYtZjRhYy00OGM3LWI4NmEtY2Q2MGI2YTdlY2I4XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Milagros Evelia  Ramos Hernández | https://www.linkedin.com/in/milagros-evelia-ramos-hernández-8165831b9 | 2024-07-24 17:46:12 UTC |  | Milagros, muy buena tarde y muchas gracias por conectar. Felicidades por la nueva posición también | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 53 ---
+[messages.csv] Row 6799 - Matches: ['felicidades']
+  Content: 2-OTczZWYyMTMtNGNjNy00YmMxLWEwNTgtOWViNDQwMDYyOGNlXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Sandra Michelle Gasca Pimentel | https://www.linkedin.com/in/sandra-michelle-gasca-pimentel-303b25167 | 2024-07-03 20:16:33 UTC |  | Felicidades por la nueva posición  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 54 ---
+[messages.csv] Row 6827 - Matches: ['felicidades']
+  Content: 2-MDMzZGZiZTAtNmYyZi00MWI3LTljYjAtNTg1YzU1NjVlMTM3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Michelle Gonzalez Vazquez | https://www.linkedin.com/in/michelle-gonzalez-vazquez-mx | 2023-10-06 23:07:49 UTC |  | Muchas felicidades Michelle | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 55 ---
+[messages.csv] Row 7501 - Matches: ['felicidades']
+  Content: 2-ZDYyZDdlNWEtNWNkZC00NWQ2LTljZmMtNTFlMTcxMmVjMWNhXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Juan Miguel Guerra Dávila | https://www.linkedin.com/in/juanmiguelguerra | 2024-07-04 14:40:16 UTC |  | Felicidades por todo lo que han conseguido, honestamente veía publicaciones de Revolut en Europa y desconocía la operación en México  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 56 ---
+[messages.csv] Row 7505 - Matches: ['felicidades']
+  Content: 2-N2RhOWM5YmYtZGNhMS00ODAxLWJhNGYtMTNiZTNiZTRhZWZkXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Gina Leon | https://www.linkedin.com/in/gina-leon | 2024-07-02 19:49:02 UTC |  | Gina, muchas felicidades por el artículo en la revista Informa BTL :) | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 57 ---
+[messages.csv] Row 7520 - Matches: ['felicidades']
+  Content: 2-ZTQwZWZkZmYtMjI1MS00NDNjLTg4MTAtNGVhZmJlZDY0ZmI1XzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Marta Cid Sanz | https://www.linkedin.com/in/martacidsanz | 2024-06-07 05:34:20 UTC |  | Hola buen día Marta, espero te encuentres muy bien y de nuevo muchas felicidades, quiero preguntarte ¿Cuándo te re incorporas a las actividades de oficina? Para ver si podemos seguir platicando al respecto 😃 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 58 ---
+[messages.csv] Row 7521 - Matches: ['felicidades']
+  Content: 2-ZTQwZWZkZmYtMjI1MS00NDNjLTg4MTAtNGVhZmJlZDY0ZmI1XzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Marta Cid Sanz | https://www.linkedin.com/in/martacidsanz | 2024-04-18 18:18:33 UTC |  | No sabía, una disculpa y también muchas felicidades, 😃 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 59 ---
+[messages.csv] Row 7818 - Matches: ['felicitaciones']
+  Content: 2-MThjNDljYTEtZWEwNy00MjgxLWFjMGUtMmZlMzg5NGUyMTg3XzAxMw== |  | Alfredo Rodríguez Flores | https://www.linkedin.com/in/alfredrodgz | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-01-09 22:15:05 UTC |  | Muchas gracias Antonio por tus felicitaciones!!! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 60 ---
+[messages.csv] Row 7820 - Matches: ['felicidades']
+  Content: 2-MThjNDljYTEtZWEwNy00MjgxLWFjMGUtMmZlMzg5NGUyMTg3XzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alfredo Rodríguez Flores | https://www.linkedin.com/in/alfredrodgz | 2024-01-09 19:53:00 UTC |  | Alfredo muy buena tarde, estimado muchas felicidades por el nuevo reto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 61 ---
+[messages.csv] Row 8141 - Matches: ['felicidades']
+  Content: 2-NzExYjk1NzMtMDZkMC00OTNjLTliODgtNzRjOTA1Mjc4N2Q3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Marely Carbajal | https://www.linkedin.com/in/marely-carbajal | 2024-01-10 00:01:21 UTC |  | Muchas felicidades por el crecimiento, se viene un 2024 con mucho trabajo | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 62 ---
+[messages.csv] Row 8870 - Matches: ['bono']
+  Content: 2-MGFkY2JjZDMtZGZkNS00ZjhmLTkxZjQtYmNhNWJjZTY2NjJiXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Oscar Caamal | https://www.linkedin.com/in/oscar-caamal-6a65021b3 | 2021-07-17 16:00:42 UTC |  | Es base y bono trimestral y si prácticamente todo México | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 63 ---
+[messages.csv] Row 9325 - Matches: ['felicidades']
+  Content: 2-ZDcxZDMyODctNzFjMS00Y2QwLWJlMzYtMDZkM2IwZjIzMTg0XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | David Josias Uicab Garcia | https://www.linkedin.com/in/david-josias-uicab-garcia-451856108 | 2024-02-22 02:57:15 UTC |  | Hola David, muchas felicidades por el cambio y nuevo reto  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 64 ---
+[messages.csv] Row 9355 - Matches: ['felicidades']
+  Content: 2-Y2FiMWQxYjYtZTVjMi00OTRlLTkyYjUtNGVhNGQyMDRkYzQ1XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Oriana Rivero Perdomo | https://www.linkedin.com/in/oriana-rivero-perdomo-36baa9b8 | 2024-02-19 21:17:39 UTC |  | Muchas felicidades por el nuevo reto Oriana, que sigan los éxitos  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 65 ---
+[messages.csv] Row 9472 - Matches: ['felicidades']
+  Content: 2-YzgyZThhOGEtNDIyOC00OWQ1LWE5YzItNDZhZmQyYjY1ZjI3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Harumi Makita | https://www.linkedin.com/in/harumimakita | 2023-11-21 20:35:32 UTC |  | Por cierto, muchas felicidades, atrasadas pero muchas felicidades | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 66 ---
+[messages.csv] Row 9477 - Matches: ['felicidades']
+  Content: 2-YzgyZThhOGEtNDIyOC00OWQ1LWE5YzItNDZhZmQyYjY1ZjI3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Harumi Makita | https://www.linkedin.com/in/harumimakita | 2023-05-04 21:51:30 UTC |  | Felicidades 🎊 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 67 ---
+[messages.csv] Row 9692 - Matches: ['felicidades']
+  Content: 2-YzA3YTRkY2UtOWIxOS00YzA4LThlMmEtZTkyZTk3NWQ0MzgwXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Zuleica Martínez Manzo | https://www.linkedin.com/in/hr-zmm | 2023-09-08 22:47:26 UTC |  | Muchas felicidades por su tienda #100 acá en Cancún, estuve escuchando de la apertura en la semana 😃 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 68 ---
+[messages.csv] Row 9710 - Matches: ['felicidades']
+  Content: 2-ODdlOTM1NzgtMmJhYy00YTA4LWFmMDAtOGNkZmJkZTdkNGY5XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Valeria Frias Quintero | https://www.linkedin.com/in/valeria-frias-quintero | 2024-01-25 20:57:15 UTC |  | Felicidades Val, con todo en parrot | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 69 ---
+[messages.csv] Row 9752 - Matches: ['felicidades']
+  Content: 2-YjRjYTE1YzctOTRiMi00NzZmLTgzNGEtNjU2ZjQ4ZGY4YTFkXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Diana Sánchez Maldonado | https://www.linkedin.com/in/dianasánchezmaldonado | 2022-12-13 00:54:32 UTC |  | Oye, primero que todo felicidades por lo del Máster  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 70 ---
+[messages.csv] Row 10302 - Matches: ['felicidades']
+  Content: 2-NWRkMGM0YjctMmQ1My00NTE1LThjODgtM2E3NWJhMTNjODc3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jorge Morales | https://www.linkedin.com/in/jorgemorales-sm | 2021-08-02 22:38:35 UTC |  | Muchas Felicidades Jorge, a seguir avanzando. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 71 ---
+[messages.csv] Row 10910 - Matches: ['felicidades']
+  Content: 2-Y2U5MDk5ZDQtOTU4ZS00ODBlLWI0YjYtOGMwYmQzZjJiODk3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ana Leslye Ochoa  | https://www.linkedin.com/in/analeslye | 2023-09-13 19:31:42 UTC |  | Hola, muchas felicidades, nuevo reto nueva oportunidad | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 72 ---
+[messages.csv] Row 11632 - Matches: ['ganador']
+  Content: 2-OTA3NjM2YTYtZDY4MC00OWJlLWI2MjEtMjAzZDM3MTNkNjQ5XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Marina Álvaro Castejón | https://www.linkedin.com/in/marinaalvaro | 2023-07-12 16:05:20 UTC |  | Uno de los ganadores del curso :) | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 73 ---
+[messages.csv] Row 11654 - Matches: ['felicidades']
+  Content: 2-YmI5ZjY0NjItYTQ5Ny00MDVhLWJkMGEtNjdiNzk3ODU5OWQ3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Adriana Berenice Mendiola Ruiz | https://www.linkedin.com/in/adriana-berenice-mendiola-ruiz-82966037 | 2023-05-02 23:27:58 UTC |  | Felicidades Adriana  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 74 ---
+[messages.csv] Row 11746 - Matches: ['felicidades']
+  Content: 2-NTAzYmQ0MWEtOTI2Zi00MTk2LWE2ZDEtMzcxYzM1NGQ5ZjVlXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Roberto Peña  | https://www.linkedin.com/in/roberto-peña-57555a182 | 2023-07-13 22:52:55 UTC |  | Roberto, felicidades  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 75 ---
+[messages.csv] Row 11917 - Matches: ['felicidades']
+  Content: 2-M2E4OWJjNzUtYTk1Zi00ZjQ4LTlkMDktNjA5MWE4YjM5YzZhXzAxMg== |  | Ricardo Aguilar Alvarez | https://www.linkedin.com/in/ricardo-aguilar-alvarez-003baa122 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-05 14:21:37 UTC |  | Muchas felicidades amigo!  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 76 ---
+[messages.csv] Row 12343 - Matches: ['felicidades']
+  Content: 2-MDlkNjc3NmMtNTEwYi00ZjZkLThiMTAtZWYzMTRhNzdhYzdkXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Daniel Lampert | https://www.linkedin.com/in/daniel-lampert | 2023-05-18 23:15:54 UTC |  | Felicidades Daniel | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 77 ---
+[messages.csv] Row 12647 - Matches: ['bono']
+  Content: 2-MTU4MjYzMTItNmViMi00NjJkLTg4MWItYjc4ODdiZTliMjI2XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Daniela Garrido Alfáro | https://www.linkedin.com/in/daniela-garrido-alfáro | 2023-05-05 17:21:20 UTC |  | Lo último que supe eran 30 base más bono mensual por meta | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 78 ---
+[messages.csv] Row 12782 - Matches: ['felicidades']
+  Content: 2-OTViYThmODUtYWU1MC00Njk0LThkOWUtOTIwY2ZlZWViNTg0XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jorge Alberto González Bello | https://www.linkedin.com/in/jorge-alberto-gonzález-bello-0a8269185 | 2023-05-03 16:28:28 UTC |  | Hola Jorge, muchas felicidades por tu nuevo reto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 79 ---
+[messages.csv] Row 12803 - Matches: ['logro']
+  Content: 2-NmZhZGZmYjEtNWNhZC00NTdlLThiZGQtZGU3MWIzMzMwNGRjXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jose Esses Cohén | https://www.linkedin.com/in/yoesco | 2023-04-28 17:09:52 UTC |  | o eso me pareció porque ahora mismo no logro entrar al sitio | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 80 ---
+[messages.csv] Row 12901 - Matches: ['felicidades']
+  Content: 2-ZTIzZTI2MmQtZDA1OC00OTczLWJiMTQtYjhhYzUyOWYzMjRhXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Itzel Patricia Vigil Trejo | https://www.linkedin.com/in/itzel-patricia-vigil-trejo-38851614b | 2023-04-19 23:09:59 UTC |  | Muchas felicidades por esa nueva apertura  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 81 ---
+[messages.csv] Row 13035 - Matches: ['felicidades']
+  Content: 2-YzkyMjgwNDgtNjY5YS00MjlmLWJmMDYtYzIwMWM3MGEyMTExXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jose Hector Tejada Shaar | https://www.linkedin.com/in/jose-hector-tejada-shaar-093b4a180 | 2023-04-04 21:03:19 UTC |  | José buena tarde, felicidades por la Presidencia en CONCANACO y por el foro de e-commerce que tendrán.  José quisiera me pudieras orientar qué canales seguir para por ejemplo poner a su alcance productos o servicios en este caso enfocados a e-commerce y métodos de pago. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 82 ---
+[messages.csv] Row 13050 - Matches: ['felicidades']
+  Content: 2-MmE4MDEzOGEtMWU2NC00ODQ2LWI4ZTQtNTJjZjMzNDYzZWQ5XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Rafael Ramírez | https://www.linkedin.com/in/rafael-ramírez-43483613 | 2023-04-03 23:25:34 UTC |  | Rafa buena tarde, muchas felicidades por el gran paso en la industria Hotelera  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 83 ---
+[messages.csv] Row 13191 - Matches: ['felicidades']
+  Content: 2-ZTc0YmI2MTAtZTJjNC00ZDZjLWFhM2MtYzc0MzBlZWExYzMzXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Miguel Florido | https://www.linkedin.com/in/miguelangelflorido | 2023-03-28 15:47:15 UTC |  | Hola Miguel muy buena tarde, te escribo para un asuntito, pero primero Mchas felicidades por tu Cumpleaños | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 84 ---
+[messages.csv] Row 13196 - Matches: ['felicidades']
+  Content: 2-YWNlNDI5NTgtOGRmYy00MjliLThiNGMtOGUyYzU5N2IzYTQxXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Greg Easthouse | https://www.linkedin.com/in/greg-easthouse-a025595 | 2023-03-28 21:48:26 UTC |  | Felicidades por tu nuevo reto, sigue en pie si aún gustas un café virtual 😃 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 85 ---
+[messages.csv] Row 13240 - Matches: ['felicidades']
+  Content: 2-NGE5ZDBhNTgtOGQyOS00Zjk4LThiYTMtZDkzNDIxZWNjODBiXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Mario Romero | https://www.linkedin.com/in/marose | 2023-03-28 01:37:24 UTC |  | Felicidades por cada proyecto,  andas con TODo | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 86 ---
+[messages.csv] Row 14443 - Matches: ['felicidades']
+  Content: 2-YWI5YTgyNTMtOGFiNC00MmFiLTgwNjQtMGUyNGVlNTU4NGVmXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Karla Valenzuela | https://www.linkedin.com/in/kavalenzuela | 2022-10-26 00:59:27 UTC |  | Muchas felicidades por este nuevo reto Karla | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 87 ---
+[messages.csv] Row 14666 - Matches: ['felicidades']
+  Content: 2-ZWU5NmNmN2QtMjU3Mi00NWU3LWE0NzYtNjdlNWFkYjEzMWFjXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Laura Dávalos | https://www.linkedin.com/in/laura-davalos-romero | 2022-09-15 18:01:36 UTC |  | Hola Laura, muchas felicidades  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 88 ---
+[messages.csv] Row 14887 - Matches: ['felicidades']
+  Content: 2-ZjJlZWQ2YjktN2Y2MS00MzYxLWFiZmMtN2YzZTNkMjJiOThkXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ulises Navarrete | https://www.linkedin.com/in/ulises-navarrete-380a141b | 2022-08-29 21:26:37 UTC |  | Felicidades por este nuevo reto, creo que te has movido bastante en estos últimos meses o es mi impresión jeje | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 89 ---
+[messages.csv] Row 15020 - Matches: ['felicidades']
+  Content: 2-MTAyNTllOTQtZjI4Ni00M2U2LThjNmUtMWRkMjFmZWI2NDQxXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Mayra Garcia Peña | https://www.linkedin.com/in/mayra-garcia-peña-03a637208 | 2022-07-05 04:37:44 UTC |  | Muchas felicidades Mayra y que sean muchos años más. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 90 ---
+[messages.csv] Row 15027 - Matches: ['felicidades']
+  Content: 2-OGJhNTY3MmMtM2IyNi00NWE4LTg2ZGUtNDU4NzlkMTNiMDIxXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Andy Uriel Hernandez | https://www.linkedin.com/in/andy-uriel-h-290a4739 | 2022-07-28 12:27:23 UTC |  | Felicidades por tu aniversario  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 91 ---
+[messages.csv] Row 15072 - Matches: ['felicidades']
+  Content: 2-MTRjZmI2YWMtOWUyOS00MTUxLWJmZmYtNDFiNGJiOWUzYWQ2XzAxMA== |  | Francisco Miguel  Daniel Rodríguez | https://www.linkedin.com/in/francisco-miguel-d-b009b8160 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 13:50:15 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 92 ---
+[messages.csv] Row 15087 - Matches: ['felicidades']
+  Content: 2-OWY3ZjUwYTAtOTMxZC00NGU4LWI3ZjQtZjM3MjViYzE5NTE3XzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Stephanie Hernández Sosa  | https://www.linkedin.com/in/stephaniehernándezrrhh | 2022-07-18 18:51:13 UTC |  | Excelente inicio de semana y felicidades por tu movimiento  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 93 ---
+[messages.csv] Row 15225 - Matches: ['felicidades']
+  Content: 2-MjdlMjA5NmUtYjVkNC00NjA0LWIyMDgtYWFjZmExOWM1YTZhXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Martín Williams | https://www.linkedin.com/in/mbamw | 2022-06-05 06:10:29 UTC |  | Muchas felicidades Martín, éxito en este nuevo reto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 94 ---
+[messages.csv] Row 15248 - Matches: ['felicidades']
+  Content: 2-NDhmYzk4ODQtYTVlMy00NTlmLTgwNmEtM2JlMmYxZGFkNWFiXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Alejandro  Pascual Soto | https://www.linkedin.com/in/alejandro-pascual-soto-b1748940 | 2022-05-12 18:07:23 UTC |  | Muchas felicidades por tu nueva posición y nuevo reto Alejandro | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 95 ---
+[messages.csv] Row 15401 - Matches: ['bono']
+  Content: 2-YTA5MThmMWMtZDc4My00ODZlLWE0MWMtNjBhNjQ5ZDVkYWNkXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Tito Zúñiga Bello | https://www.linkedin.com/in/diodoro-tito-zuniga-bello | 2022-04-14 02:44:49 UTC |  | Sueldo fijo y aparte bonos trimestral | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 96 ---
+[messages.csv] Row 15467 - Matches: ['felicidades']
+  Content: 2-NjdjYTUzOWItYzI4Ni00ZDViLTk1NzAtMjI3MDRmMDIzM2E5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jorge Alejandro Hernandez Anisz  | https://www.linkedin.com/in/gerentehotelero | 2022-04-06 01:30:44 UTC |  | Muchas felicidades Jorge, valió la pena la espera. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 97 ---
+[messages.csv] Row 15588 - Matches: ['felicidades']
+  Content: 2-NjY1ZmNmNWMtYjY1NS00ODRkLTkzZTctM2E5Yjc4YTg2NTA5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Laura Chavez Luna | https://www.linkedin.com/in/laura-beatriz-chávez-luna | 2022-03-04 18:47:47 UTC |  | Hola Laura buena tarde, muchas gracias y felicidades y éxito en tu nuevo reto. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 98 ---
+[messages.csv] Row 15762 - Matches: ['logro']
+  Content: 2-ZTQ5ODY4MzUtYzNhZS00ODMxLTk4YmYtOWVlNWM4MmQxNThmXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Roger Martinez Mora | https://www.linkedin.com/in/roger-martinez-mora | 2021-08-05 18:48:33 UTC |  | por supuesto y creo que me va a servir muchísimo en este momento justo, a pesar de tener demasiados contactos aparentes en bases de datos y prospecto, no logro concretar | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 99 ---
+[messages.csv] Row 15781 - Matches: ['felicidades']
+  Content: 2-OGEzYzgxYjktZjEwMS00OTcyLTk1ZGQtNjNiNTg0NjgzYmM4XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Fabian Ramos Caballero | https://www.linkedin.com/in/fabian-ramos-caballero-15011284 | 2022-01-04 21:07:06 UTC |  | Muchas felicidades Fabián, muchas cocas grandes se vienen. | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 100 ---
+[messages.csv] Row 15863 - Matches: ['felicidades']
+  Content: 2-MzUzNjlkMDYtN2ZkYy00MTQ3LWJkZGItMGFiODU3YzU0MDZiXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Madai Vargas | https://www.linkedin.com/in/madai-vargas-4425976a | 2021-11-08 20:02:40 UTC |  | Hola Madai, Muchas Felicidades | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 101 ---
+[messages.csv] Row 15872 - Matches: ['logro']
+  Content: 2-MzUzNjlkMDYtN2ZkYy00MTQ3LWJkZGItMGFiODU3YzU0MDZiXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Madai Vargas | https://www.linkedin.com/in/madai-vargas-4425976a | 2021-11-03 20:56:28 UTC |  | oye disculpa que te moleste por aquí, te comento que llevo algunas semanas atrás llamando a su corporativo aquí en Puerto cancún pero no logro contactar | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 102 ---
+[messages.csv] Row 15972 - Matches: ['felicidades']
+  Content: 2-MGYwNTFjZmYtYmRiYi00YzA3LTk5YmMtMmNlN2I0Zjk1ZDFhXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Yazmín Castillo | https://www.linkedin.com/in/yazmín-castillo-m | 2021-12-06 16:05:46 UTC |  | Muchas felicidades Yazmín, que te sigan los éxitos | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 103 ---
+[messages.csv] Row 16089 - Matches: ['felicidades']
+  Content: 2-YThkZmQxMjctYTFiZi00MjFiLTgyZGItOWY1ZTFiOTFlZTFiXzAxMA== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Roberto Carlos Castillo Medina | https://www.linkedin.com/in/rcastillom | 2021-08-25 21:14:15 UTC |  | Hola Roberto muy buena tarde, antes que todo muchas felicidades por el proyecto y la innovación. Me gustaría platicarte de las nuevas opciones que Clip tiene para el sector empresarial y sobre todo en movilidad. Saludos!! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 104 ---
+[messages.csv] Row 16232 - Matches: ['felicidades']
+  Content: 2-MTA3MzllYmQtYzUwNC00N2QyLWExMGMtNTdhYWRiZmU0Y2NiXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Valeria Godiño Flaniguen | https://www.linkedin.com/in/valeria-godiño-flaniguen-89798815b | 2021-10-14 17:18:34 UTC |  | Muchas felicidades 🥳 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 105 ---
+[messages.csv] Row 16383 - Matches: ['felicidades']
+  Content: 2-MGYwMjBjNzItYTk0Yy00MmQzLTk5YTUtNmZmNDAzNDY4M2UwXzAxMg== |  | Fernando Coletti Ghezzi | https://www.linkedin.com/in/fercoletti | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 14:06:50 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 106 ---
+[messages.csv] Row 16459 - Matches: ['felicidades']
+  Content: 2-YjJmMmFmMzEtYjEzMS00ZTAxLWIzMDgtZGQwYjM2NGY2ZmU5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Brenda Verenice Ramirez Guillen | https://www.linkedin.com/in/brenda-verenice-ramirez-guillen-98b6b9132 | 2021-09-02 21:41:09 UTC |  | Felicidades por tu nuevo puesto | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 107 ---
+[messages.csv] Row 16628 - Matches: ['felicidades']
+  Content: 2-OGEwNTYwNTctNGRhZC00Mzc1LTlkMTMtZjFiZDA5ZjZhYWE0XzAxMw== |  | Gabriela Córdova | https://www.linkedin.com/in/gabriela-corma | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-09-07 22:38:34 UTC |  | Muchas Felicidades!
+Estoy a tus ordenes | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 108 ---
+[messages.csv] Row 16673 - Matches: ['felicidades']
+  Content: 2-MzJiM2E4MjEtM2IyNS00MDNkLThlYWItMjAyYzNmZWZlMDkxXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Bárbara Cristina  Garcia Armenta | https://www.linkedin.com/in/bárbara-cristina-garcia-armenta-575599aa | 2021-09-02 21:24:47 UTC |  | Bárbara mucho gusto y muchas gracias, muchas felicidades por tu trabajo | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 109 ---
+[messages.csv] Row 17431 - Matches: ['logro', 'felicidades']
+  Content: 2-NDY3YjM3MTMtMWIwYi00ODdiLWFmNGYtODkyNWVlNzJkMDQzXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Sergio Anaya Rodríguez | https://www.linkedin.com/in/sergio-anaya-rodríguez-812a8582 | 2021-08-10 21:21:04 UTC |  | Buena tarde Sergio, recibe un cordial saludo, primero que todo felicidades por el esfuerzo y los logros de la marca | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 110 ---
+[messages.csv] Row 17438 - Matches: ['bono']
+  Content: 2-YjY1NjAxYmQtZWI5NS00N2M5LTg1ZWMtYzk0ZWMyYmM3M2Q4XzAxMg== |  | Lucero Rodríguez | https://www.linkedin.com/in/lucero-rodriguez- | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-08-06 23:27:00 UTC |  | Hola! soy Lucero de Cyberpuerta, empresa de tecnología por expansión tenemos vacantes en ventas empresariales el SB es de $12,000+bonos mensuales, horario 9 a 7, puedes darle un vistazo,si te interesa aplica en el link https://cyberpuerta.breezy.hr/f210, | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 111 ---
+[messages.csv] Row 17488 - Matches: ['logro', 'felicidades']
+  Content: 2-NDZhNzQxYTUtOTFmYy00NmVkLWJmZTAtZWM1YjM3OTBhNmViXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Ingrid Aguilar  | https://www.linkedin.com/in/ingrid-aguilar-592a98124 | 2021-08-06 00:45:49 UTC |  | Espero no molestar, oye Ingrid primero que todo te quiero felicitar por tus logros, ya lo vimos en la junta de verdad muchas felicidades | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 112 ---
+[messages.csv] Row 17780 - Matches: ['felicidades']
+  Content: 2-NjNmZjU5NzItMWYwZC00ZTBiLWFmMDctZTg5OWQ3MzgzM2E5XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Pedro Morales Aguillon | https://www.linkedin.com/in/pedromoralesaguillon | 2021-07-25 17:42:35 UTC |  | ¡Muchas felicidades Pedro, un año más de vida y con más éxitos por delante! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 113 ---
+[messages.csv] Row 17815 - Matches: ['felicidades']
+  Content: 2-ODQ4MjgyMzItODg3Yi00ZjA1LThhNzMtZTQ1MTExY2I3MDkzXzAxMA== |  | Iñaki Alcaraz | https://www.linkedin.com/in/inakialcaraz | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-21 09:22:25 UTC |  | ¡Felicidades por tu nuevo puesto, Antonio! Seguro que tendrás tanto éxito como hasta ahora, en esta nueva etapa profesional. ¿Cuántos cambios en los últimos meses, no? Estoy seguro de que después de estas desafiantes circunstancias, seremos mejores profesionales, así que… ¡¡En 2021 tendrás grandes éxitos con tus proyectos!! Comparto contigo una reflexión que espero que te
+--------------------------------------------------------------------------------
+
+--- MATCH 114 ---
+[messages.csv] Row 17834 - Matches: ['felicidades']
+  Content: 2-NjgzZDdmNGItMDM1NS00YWI1LTgzOGMtZmFlNTdhODI1MDZlXzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jonathan Hernández | https://www.linkedin.com/in/jonathan-hernández-b0580a186 | 2021-07-21 22:43:06 UTC |  | Qué tal mucho gusto estimado, oye primero que todo muchas felicidades por tu nuevo rol | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 115 ---
+[messages.csv] Row 17880 - Matches: ['felicidades']
+  Content: 2-MTEwMzBmMGYtMjA2NC00NmVjLTg2ZGUtMDY3MWI4ODBhYzEzXzAxMA== |  | Jose Rodriguez Garfias | https://www.linkedin.com/in/jose-rodriguez-garfias-63722324 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-20 22:08:20 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 116 ---
+[messages.csv] Row 17884 - Matches: ['felicidades']
+  Content: 2-ZWM4YjlkNTUtNjRiNS00OTYyLWJkZmEtNTYxNDBkM2JmN2MzXzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Raul Omar Ledesma Rivera | https://www.linkedin.com/in/raul-omar-ledesma-rivera-057b3b73 | 2021-07-20 22:30:55 UTC |  | Estimado muchas felicidades por su proceso de expansión, por ahí le pasé tu contacto a un primo en Mérida ojalá te haya podido contactar | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 117 ---
+[messages.csv] Row 17939 - Matches: ['felicidades']
+  Content: 2-NTVmYjQwODQtNDJmMC00Nzg0LWIyYTAtODkwYmQwMDRkNTliXzAxMg== |  | Lizbeth Vera | https://www.linkedin.com/in/lizbeth-vera-b718b251 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 14:37:37 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 118 ---
+[messages.csv] Row 17942 - Matches: ['felicidades']
+  Content: 2-MzZiNDYyNDEtY2VhYi00ZWVlLWI2ZjktNzgwMzE2NGY3ZGJjXzAxMA== |  | Raul Emmanuel Pedrin Cota | https://www.linkedin.com/in/raulpedrin | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-19 19:23:22 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 119 ---
+[messages.csv] Row 17945 - Matches: ['felicidades']
+  Content: 2-ZTRiY2Q3ZDctZmRkNi00MGRhLTliOWQtZjhkNWEwNDE2ZjU1XzAxMg== |  | MARTIN ISRAEL CORREA RANGEL | https://www.linkedin.com/in/martin-israel-correa-rangel-048a99111 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-19 16:40:54 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 120 ---
+[messages.csv] Row 17946 - Matches: ['felicidades']
+  Content: 2-MWI2ZjI5MGQtZDFkYy01ZWM0LTkyYjMtNDQ4ZmQ4ZDNmNGMzXzAxMA== |  |  Chung  Zu Jan 鍾如傑 (钟如杰)      | https://www.linkedin.com/in/chung-zu-jan-鍾如傑-钟如杰-4a0458133 | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-18 22:38:01 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 121 ---
+[messages.csv] Row 17994 - Matches: ['logro', 'felicidades', 'felicitaciones']
+  Content: 2-Njc1NjVkNjUtNGQxNy00YjI0LWFkY2QtMDMwY2VhOTg4MDE5XzAxMg== |  | Antonio Ortega Velázquez | https://www.linkedin.com/in/84000commx | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 12:53:49 UTC |  | Antonio, sí en estos momentos es una bendición conservar y tener un trabajo; es una doble bendición tener nuevo puesto, muchas felicidades por ese logro.
+
+También espero espero que Tu y toda tu familia gocen de excelente salud.
+
+Saludos y felicitaciones nuevamente. 👍 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 122 ---
+[messages.csv] Row 18020 - Matches: ['felicidades']
+  Content: 2-NzU0MTE1NWMtYzIwOC00YmY4LWI2NmEtNWVkMWFjMDA5NmVkXzAxMg== |  | Angel Mendoza Jesus | https://www.linkedin.com/in/angel-mendoza-project-manager | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 06:26:28 UTC |  | ¡Felicidades por tu nuevo puesto! | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 123 ---
+[messages.csv] Row 18028 - Matches: ['felicidades']
+  Content: 2-OTZjNWM4YjItMWQ3OS00NmMwLWFlNjktYTYzZjVlOTdiYjE4XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Benjamín Mateos Díaz | https://www.linkedin.com/in/benjamin-mateos-diaz- | 2021-07-09 00:37:55 UTC |  | Muchas felicidades Benjamín y Bienvenido al Caribe | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 124 ---
+[messages.csv] Row 18098 - Matches: ['rank']
+  Content: 2-NzI4ZGRlZjQtNDExMy00ZjUyLWJjZTMtMTFiZjAwYWM1OTA1XzAxMw== |  | Franklin Morales | https://www.linkedin.com/in/franklinrenemorales | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-06-17 21:11:31 UTC |  | Hola Antonio. Mucho gusto. Saludos desde Nicaragua 🇳🇮 | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 125 ---
+[messages.csv] Row 18099 - Matches: ['rank']
+  Content: 2-NzI4ZGRlZjQtNDExMy00ZjUyLWJjZTMtMTFiZjAwYWM1OTA1XzAxMw== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Franklin Morales | https://www.linkedin.com/in/franklinrenemorales | 2021-06-17 20:33:42 UTC |  | Buena tarde Franklin, muchas gracias por conectar. Saludos | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 126 ---
+[messages.csv] Row 18367 - Matches: ['reconocimiento']
+  Content: 2-ZDBiNTNjMTUtZmI5Yy00Njc5LWFkMzctYTYxZmU4ZjZlMWJkXzAxMg== |  | Karina  Granados | https://www.linkedin.com/in/karina-granados | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-05-05 03:12:33 UTC |  | Ahí te dan un reconocimiento al finalizar tu curso  | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 127 ---
+[messages.csv] Row 18426 - Matches: ['felicidades']
+  Content: 2-NWYzZGE4N2MtNmViYy00MGU2LTk4MmMtZTkzOTg0YjVlYjM3XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | Jose Rincon | https://www.linkedin.com/in/jose-rincon-3b220264 | 2021-05-04 15:07:54 UTC |  | Buenos días Pepe, muchas felicidades canijo y éxito | INBOX |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 128 ---
+[messages.csv] Row 24403 - Matches: ['reconocimiento']
+  Content: 2-MjE2YmNkOGYtMTcwNC00Y2JkLTgzZGYtNzg0NDFjY2U0MDk1XzEwMA== | ¿Listo para armar el futuro de la tecnología?  | Gerardo Bocanegra García |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-10-02 00:35:15 UTC |  | <p class="spinmail-quill-editor__spin-break">Hola 💳Antonio,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Un gusto saludarte. Soy Gerardo Bocanegra, <strong>coordinador de la Maestría en Diseño y Gestión de Proyectos Tecnológicos de UNIR México</strong>.</p><p class="spinmail-quill-editor__spin-break">
+--------------------------------------------------------------------------------
+
+--- MATCH 129 ---
+[messages.csv] Row 24409 - Matches: ['reconocimiento']
+  Content: 2-NTFjNjYxMzYtMTFmYy00NWY5LTlmMjUtOGNhODU2OTNhNjY2XzEwMA== | ¿Listo para armar el futuro de la tecnología?  | Gerardo Bocanegra García |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-08-20 14:21:06 UTC |  | <p class="spinmail-quill-editor__spin-break">Hola 💳Antonio,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Un gusto saludarte. Soy Gerardo Bocanegra, <strong>coordinador de la Maestría en Diseño y Gestión de Proyectos Tecnológicos de UNIR México</strong>.</p><p class="spinmail-quill-editor__spin-break">
+--------------------------------------------------------------------------------
+
+--- MATCH 130 ---
+[messages.csv] Row 24436 - Matches: ['rank']
+  Content: 2-MzI2YTZmODEtZmY0YS00M2M1LTlkYzMtOTJmMTUxOTEwOWI2XzEwMA== | Sponsored Conversation | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-03-10 00:04:22 UTC |  | <p class="spinmail-quill-editor__spin-break">Hi %FIRSTNAME%,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">I hope you are well.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">My name is Lucy, and I'm a Student Recruitment Manager at Imperial College Business School.</p><p class="sp
+--------------------------------------------------------------------------------
+
+--- MATCH 131 ---
+[messages.csv] Row 24440 - Matches: ['rank']
+  Content: 2-OWI0OGI5MWQtY2Q2NC00NjUxLTgxMWMtYzMzMDZjZWUyOGQ4XzEwMA== | Sponsored Conversation | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2025-02-15 04:27:46 UTC |  | <p class="spinmail-quill-editor__spin-break">Hola %FIRSTNAME%</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Soy Ricardo Piqué , Director de Admisiones de<strong> EAE Business School</strong>. Me pongo en contacto contigo para explicarte los beneficios que tiene nuestra escuela. <strong>Nuestro Máster en Marketing y gestión comercial</
+--------------------------------------------------------------------------------
+
+--- MATCH 132 ---
+[messages.csv] Row 24456 - Matches: ['rank']
+  Content: 2-MjYxMmJjNzgtNWJiNi00N2M0LWEwM2YtYTAyZDA2OTA3NDQ2XzAxMg== | Sponsored Conversation | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-09-30 19:43:19 UTC |  | <p class="spinmail-quill-editor__spin-break">Hola, %FIRSTNAME%. </p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Te damos la bienvenida a Premium. Soy Franklin, del equipo de LinkedIn Premium, y te escribo porque nos gustaría ayudarte a sacarle el mayor partido a tu suscripción a Premium. </p><p class="spinmail-quill-editor__spin-break"
+--------------------------------------------------------------------------------
+
+--- MATCH 133 ---
+[messages.csv] Row 24467 - Matches: ['premio', 'ganador']
+  Content: 2-ZGNhODVkNTYtY2E0Yi00YjE4LWJhYjItZmQ0NGE4OWE0YjlmXzAxMg== | Una oportunidad para impulsar tu innovación en Healthcare | Lisa Lines |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-07-04 00:01:25 UTC |  | <p class="spinmail-quill-editor__spin-break">Hola 💳Antonio,&nbsp;</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Mi nombre es Lisa Lines, de la&nbsp;Oxentia Foundation. Hemos lanzado junto a Banco Santander, <a rel="noopener" href="https://app.santanderx.com/calls/santander-x-global-challenge-innovation-in
+--------------------------------------------------------------------------------
+
+--- MATCH 134 ---
+[messages.csv] Row 24469 - Matches: ['reconocimiento']
+  Content: 2-NWU3NjBmMjAtMWYxYi00NTVlLWJjMjktNjM2MGI3MTU0NGE0XzAxMg== | Supermercado bonificado! | Brian Klahr |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2024-06-22 07:25:56 UTC |  | <p class="spinmail-quill-editor__spin-break">Hola 💳Antonio, ayudar a tus colaboradores a hacer rendir su salario es una buena estrategia de retención.</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Por eso te cuento que con <a rel="noopener" href="https://www.bonda.com/es-mx/?li_fat_id=21079b98-8174-4155-bfbc-fdffb32354a4" target="_blank
+--------------------------------------------------------------------------------
+
+--- MATCH 135 ---
+[messages.csv] Row 24505 - Matches: ['premio', 'bono']
+  Content: 2-MzI0MDY0NDktNjY3Yy00ZmZhLWJlMDktMjZmNTBmZWU0YmExXzAxMA== | Sponsored Conversation | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-12-26 11:44:55 UTC |  | <p class="spinmail-quill-editor__spin-break">Hola %FIRSTNAME%,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">¡Maximiza tus ingresos y beneficios potenciales con el <strong>Programa de</strong> <strong>Introducing Broker </strong>de MultiBank Group!</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor
+--------------------------------------------------------------------------------
+
+--- MATCH 136 ---
+[messages.csv] Row 24506 - Matches: ['premio', 'bono']
+  Content: 2-MzhlYTYwM2QtYWQ3NC00OWFkLThhZDEtOTNjM2Y2MWEzY2I0XzAxMA== | Sponsored Conversation | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-12-19 01:39:22 UTC |  | <p class="spinmail-quill-editor__spin-break">¡Hola %FIRSTNAME%,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Conviértete en Introducing Broker con MultiBank Group y descubre las ventajas de asociarse con un líder mundial en el sector FX:</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-bre
+--------------------------------------------------------------------------------
+
+--- MATCH 137 ---
+[messages.csv] Row 24545 - Matches: ['felicidades']
+  Content: 2-OTkxYjNjZDAtYjg4MC00YmQ2LTgzY2ItYzA1NmJlMzQ1NTQzXzAxMg== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2023-07-13 15:16:00 UTC |  | Felicidades ! | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 138 ---
+[messages.csv] Row 24670 - Matches: ['felicidades']
+  Content: 2-N2NlNTYwZGQtMmE4Yi00OTlkLTk1YTMtMDA3ZDgxYzMxNTI3XzAxMA== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-20 18:19:09 UTC |  | Muchas felicidades enhorabuena.... y  a darle duro, demostrar de lo que podemos.. Saludos | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 139 ---
+[messages.csv] Row 24672 - Matches: ['felicidades']
+  Content: 2-N2NlNTYwZGQtMmE4Yi00OTlkLTk1YTMtMDA3ZDgxYzMxNTI3XzAxMA== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-20 17:45:59 UTC |  | ¡Felicidades por tu nuevo puesto! | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 140 ---
+[messages.csv] Row 24698 - Matches: ['premio']
+  Content: 2-OGNlMzI0N2YtY2U5Yi00ZjJiLThmNzMtMDNjZmQxMmE5YjM1XzAxMg== | Sponsored Conversation | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-08-02 18:44:35 UTC |  | Hola %FIRSTNAME%! ,
+
+Actualmente estamos ofreciendo una Beca de hasta el 65% en México para nuestro Máster en Máster en Data Science y Business Analytics, codesarrollado por Indra.
+
+Es el único máster de big data en español que ha recibido un premio por su planteamiento y calidad, otorgado por el diario La Razón.
+
+¿Qué te parece? ¿Quieres más información?
+ | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 141 ---
+[messages.csv] Row 24703 - Matches: ['felicidades']
+  Content: 2-MTRhZjJiZTgtMDgzNy00NDc0LWIwNDctYzdkYjVjNjhmZTllXzAxMA== |  | LinkedIn Member |  | 💳Antonio Gutiérrez  Jiménez💳,LinkedIn Member | https://www.linkedin.com/in/antoniogtzj | 2021-07-17 14:44:40 UTC |  | ¡Felicidades por tu nuevo puesto! | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 142 ---
+[messages.csv] Row 24704 - Matches: ['bono']
+  Content: 2-MmJhMzM5NTItZDA3OS00MWM2LTgzZDQtODE3NWNlZmMwZmNhXzAxMg== | Haz que los pagos de tu Negocio te den más por tu dinero. | American Express México |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-07-03 17:33:37 UTC |  | <p class="spinmail-quill-editor__spin-break">Estimado (a) Antonio,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Conoce La Tarjeta para Profesionistas Independientes, Pequeñas y Medianas Empresas que te permite enfocarte en la operación de tu Negocio al ofrecerte:</p><p class="spinmail-qui
+--------------------------------------------------------------------------------
+
+--- MATCH 143 ---
+[messages.csv] Row 24705 - Matches: ['bono']
+  Content: 2-MjBkOTcxOTYtYjdjMC00NzI5LWFlNGMtNWQ2NzNlMTAzOWMyXzAxMg== | Genera flujo de efectivo para lo que tu Negocio necesita. | American Express México |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj | 2021-06-03 12:18:58 UTC |  | <p class="spinmail-quill-editor__spin-break">Estimado (a) Antonio,</p><p class="spinmail-quill-editor__spin-break"><br></p><p class="spinmail-quill-editor__spin-break">Conoce La Tarjeta para Profesionistas Independientes, Pequeñas y Medianas Empresas que te permite enfocarte en la operación de tu Negocio al ofrecerte:</p><p class="spinmail-quil
+--------------------------------------------------------------------------------
+
+--- MATCH 144 ---
+[messages.csv] Row 24716 - Matches: ['felicidades']
+  Content: 2-M2EyNTJiMWItZWYyZC00ZGEzLWI4OWEtMTQzYzEyMTBjM2E4XzAxMg== |  | 💳Antonio Gutiérrez  Jiménez💳 | https://www.linkedin.com/in/antoniogtzj |  |  | 2021-05-06 04:22:21 UTC |  | Veo que terminaste el curso de Power BI, muchas felicidades, yo lo estoy cursando actualmente | ARCHIVE |  | No | No
+--------------------------------------------------------------------------------
+
+--- MATCH 145 ---
+[Comments_577732310.csv] Row 266 - Matches: ['felicidades']
+  Content: 2025-12-19 18:58:15 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7407852885977300992 | ¡Felicidades! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 146 ---
+[Comments_577732310.csv] Row 281 - Matches: ['felicidades']
+  Content: 2025-11-21 15:17:12 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7397509136474832896 | ¡Felicidades! 🎉🥳
+--------------------------------------------------------------------------------
+
+--- MATCH 147 ---
+[Comments_577732310.csv] Row 286 - Matches: ['felicidades']
+  Content: 2025-11-13 02:29:39 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7394553228832501760 | ¡Felicidades! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 148 ---
+[Comments_577732310.csv] Row 310 - Matches: ['felicidades']
+  Content: 2025-09-23 20:23:58 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7376349669230112768 | ¡Felicidades! 🎉 Samantha Beltran .
+--------------------------------------------------------------------------------
+
+--- MATCH 149 ---
+[Comments_577732310.csv] Row 317 - Matches: ['felicidades']
+  Content: 2025-09-09 17:26:40 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7371227760855314432 | Muchas Felicidades Karina Rodríguez Peña.
+--------------------------------------------------------------------------------
+
+--- MATCH 150 ---
+[Comments_577732310.csv] Row 320 - Matches: ['felicidades']
+  Content: 2025-09-04 22:00:06 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7369469566290206721 | Es correcto Alfredo Bernacchi. Recuerdo una frase que escuché en una ponencia de John Maxwell, no sé si sea el autor, pero decía que los líderes ven antes y ven más. Felicidades a Fiserv Clover.
+--------------------------------------------------------------------------------
+
+--- MATCH 151 ---
+[Comments_577732310.csv] Row 325 - Matches: ['felicidades']
+  Content: 2025-08-18 18:19:56 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7363264308522221569 | ¡Felicidades, Brenda! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 152 ---
+[Comments_577732310.csv] Row 332 - Matches: ['felicidades']
+  Content: 2025-08-13 04:27:59 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7361240064267276289 | \En Dios Confiamos |  todos los demás deben traer datos\". Edward Deming. Felicidades"
+--------------------------------------------------------------------------------
+
+--- MATCH 153 ---
+[Comments_577732310.csv] Row 338 - Matches: ['felicidades']
+  Content: 2025-08-01 13:02:54 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7356847777345093632 | ¡Felicidades! 🎉 Con todo Ricardo Rebolledo Vivas cuesta
+--------------------------------------------------------------------------------
+
+--- MATCH 154 ---
+[Comments_577732310.csv] Row 346 - Matches: ['logro', 'felicitaciones']
+  Content: 2025-07-24 01:31:06 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7353903902125162496 | Xavier Martí muy interesante y Felicitaciones por el logro. Intenté entrar al link y no me abrió, también creo que cargaste una foto y no se cargó, sale el nombre del archivo y la extensión.png.  Saludos y que sigan los éxitos.
+--------------------------------------------------------------------------------
+
+--- MATCH 155 ---
+[Comments_577732310.csv] Row 356 - Matches: ['felicidades']
+  Content: 2025-07-22 02:22:15 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7350660225919561728 | ¡Felicidades Estefania Sanchez ! 🎉 Gran ejemplo el mantenerse en constante aprendizaje y a la vanguardia.
+--------------------------------------------------------------------------------
+
+--- MATCH 156 ---
+[Comments_577732310.csv] Row 361 - Matches: ['felicidades']
+  Content: 2025-07-20 19:21:04 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7352775619031515136 | ¡Felicidades, Santa Esmeralda Gómez Guadarrama  🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 157 ---
+[Comments_577732310.csv] Row 365 - Matches: ['felicidades']
+  Content: 2025-07-16 22:37:54 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7347234024567832576 | ¡Felicidades, Víctor! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 158 ---
+[Comments_577732310.csv] Row 373 - Matches: ['felicidades']
+  Content: 2025-07-13 06:01:33 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7350040502227869696 | ¡Felicidades, Sascha Alexander! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 159 ---
+[Comments_577732310.csv] Row 379 - Matches: ['felicidades']
+  Content: 2025-07-08 18:12:25 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7348360911255969793 | ¡Felicidades, Fernanda! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 160 ---
+[Comments_577732310.csv] Row 387 - Matches: ['rank']
+  Content: 2025-06-27 21:16:35 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7344409890339106816 | Erick Schwember estoy armando un \Frankenstein\" con toda la información |  algo debe resultar |  cuando me funcione lo comparto |  mientras voy pensando 🤔 en qué frase usar para que me lo pidan jajajajajaja"
+--------------------------------------------------------------------------------
+
+--- MATCH 161 ---
+[Comments_577732310.csv] Row 392 - Matches: ['felicidades']
+  Content: 2025-06-26 23:06:08 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7344103852280844288 | ¡Felicidades! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 162 ---
+[Comments_577732310.csv] Row 393 - Matches: ['felicidades']
+  Content: 2025-06-26 22:55:38 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7344103852280844288 | ¡Felicidades! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 163 ---
+[Comments_577732310.csv] Row 394 - Matches: ['felicidades']
+  Content: 2025-06-25 15:59:10 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7343632551204253696 | Muchas Felicidades Aarón Lugo , Todo el éxito en este reto
+--------------------------------------------------------------------------------
+
+--- MATCH 164 ---
+[Comments_577732310.csv] Row 400 - Matches: ['felicidades']
+  Content: 2025-06-18 18:28:34 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7341166796827213824 | ¡Felicidades, Armando! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 165 ---
+[Comments_577732310.csv] Row 404 - Matches: ['felicidades']
+  Content: 2025-06-16 15:04:35 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7340387404467367937 | ¡Felicidades, Andrea! Todo lo mejor en este nuevo reto y viaje ✈️
+--------------------------------------------------------------------------------
+
+--- MATCH 166 ---
+[Comments_577732310.csv] Row 405 - Matches: ['felicidades']
+  Content: 2025-06-13 18:13:07 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7339353099750240256 | ¡Felicidades, AMAURY! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 167 ---
+[Comments_577732310.csv] Row 419 - Matches: ['felicidades']
+  Content: 2025-05-06 18:44:50 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7325579081482149889 | ¡Felicidades, Ana ! 🎉 Con todo.
+--------------------------------------------------------------------------------
+
+--- MATCH 168 ---
+[Comments_577732310.csv] Row 424 - Matches: ['felicidades']
+  Content: 2025-04-28 22:58:23 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7322740742299246592 | ¡Felicidades! Juan Jose Behrend y a todos en el equipo
+--------------------------------------------------------------------------------
+
+--- MATCH 169 ---
+[Comments_577732310.csv] Row 431 - Matches: ['felicidades']
+  Content: 2025-04-12 01:41:03 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7316633566140923904 | ¡Felicidades, Mauricio! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 170 ---
+[Comments_577732310.csv] Row 433 - Matches: ['felicidades']
+  Content: 2025-04-08 17:05:10 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7315417276499795970 | ¡Felicidades, Vladimir! 🎉, que sigan los éxitos 😃
+--------------------------------------------------------------------------------
+
+--- MATCH 171 ---
+[Comments_577732310.csv] Row 434 - Matches: ['felicidades']
+  Content: 2025-04-07 14:58:08 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7315012334454792193 | ¡Felicidades, Germán! 🎉 Todo el Éxito 👌
+--------------------------------------------------------------------------------
+
+--- MATCH 172 ---
+[Comments_577732310.csv] Row 444 - Matches: ['felicidades']
+  Content: 2025-03-19 04:06:31 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7307975547727368192 | ¡Felicidades, Angel! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 173 ---
+[Comments_577732310.csv] Row 445 - Matches: ['felicidades']
+  Content: 2025-03-18 17:48:53 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7307809221373288449 | ¡Felicidades, Antonio! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 174 ---
+[Comments_577732310.csv] Row 450 - Matches: ['felicidades']
+  Content: 2025-03-14 15:24:19 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7306331730133614593 | ¡Felicidades, Santiago! 🎉, 🥂, próxima visita a CDMX vamos a celebrar 🍾
+--------------------------------------------------------------------------------
+
+--- MATCH 175 ---
+[Comments_577732310.csv] Row 452 - Matches: ['felicidades']
+  Content: 2025-03-13 02:52:08 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7305682238539448320 | ¡Felicidades Adrian Valencia Palafox ! 🎉 Grandes éxitos por delante
+--------------------------------------------------------------------------------
+
+--- MATCH 176 ---
+[Comments_577732310.csv] Row 453 - Matches: ['felicidades']
+  Content: 2025-03-11 06:52:21 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7302591152895967234 | En LATAM faltan mis amigos de OrkestaPay de la mano de Heber Lazcano , felicidades a Mauricio Madrigal
+--------------------------------------------------------------------------------
+
+--- MATCH 177 ---
+[Comments_577732310.csv] Row 461 - Matches: ['felicidades']
+  Content: 2025-03-07 16:10:59 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7303801916004663296 | ¡Felicidades, Pablo! 🎉, muchos más éxitos
+--------------------------------------------------------------------------------
+
+--- MATCH 178 ---
+[Comments_577732310.csv] Row 473 - Matches: ['felicidades']
+  Content: 2025-03-07 04:48:20 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7300709023203422209 | WOW ¡Felicidades, Maria Jose.  ¡Mucho éxito en esta nueva aventura!. Un gran cambio :)
+--------------------------------------------------------------------------------
+
+--- MATCH 179 ---
+[Comments_577732310.csv] Row 474 - Matches: ['felicidades']
+  Content: 2025-03-07 04:37:54 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7303632918365569025 | UZZIEL JACOB SALAS CARRETO gracias primo, también Felicidades por tu nuevo reto, vamos a empezar este viaje juntos por decirlo así.
+--------------------------------------------------------------------------------
+
+--- MATCH 180 ---
+[Comments_577732310.csv] Row 476 - Matches: ['felicidades']
+  Content: 2025-03-03 03:33:52 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7302169188150693888 | ¡Felicidades, Sam! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 181 ---
+[Comments_577732310.csv] Row 479 - Matches: ['felicidades']
+  Content: 2025-02-26 22:47:48 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7300603571308220416 | ¡Felicidades, María Fernanda! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 182 ---
+[Comments_577732310.csv] Row 483 - Matches: ['felicidades']
+  Content: 2025-02-24 21:46:39 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7299894079184613377 | ¡Felicidades, Edmée! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 183 ---
+[Comments_577732310.csv] Row 484 - Matches: ['felicidades']
+  Content: 2025-02-23 15:31:41 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7298911494795051009 | Felicidades Manuel Quijano por este nuevo reto, comenzando el año con todo
+--------------------------------------------------------------------------------
+
+--- MATCH 184 ---
+[Comments_577732310.csv] Row 499 - Matches: ['felicidades']
+  Content: 2025-01-31 23:46:08 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7291095419911065602 | Felicidades por todo el tiempo, grandes aportaciones y aprendizajes seguro hubo en el camino.
+--------------------------------------------------------------------------------
+
+--- MATCH 185 ---
+[Comments_577732310.csv] Row 503 - Matches: ['felicidades']
+  Content: 2025-01-02 19:39:09 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7280660568875704322 | ¡Felicidades, Tifanny! 🎉
+--------------------------------------------------------------------------------
+
+--- MATCH 186 ---
+[Comments_577732310.csv] Row 511 - Matches: ['felicidades']
+  Content: 2024-11-26 22:53:56 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7267216799132274688 | Muchas felicidades Alejandro De la Cruz y Odoo
+--------------------------------------------------------------------------------
+
+--- MATCH 187 ---
+[Comments_577732310.csv] Row 514 - Matches: ['bono']
+  Content: 2024-11-22 06:35:42 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7265426373802934274 | Fernando Bazan abono un poco de información al tema que trajiste a la mesa: 
+
+-75% de los negocios mexicanos han adoptado canales de mensajería en el recorrido de compra.
+-67% de los consumidores en México se sienten más cómodos usando aplicaciones de mensajería.
+-81% de las empresas utilizan canales de mensajería para generar ventas.
+-85% de las empresas los usan para promover la lealtad de los clientes.
+-71% de las PYMES han tenido alta tasa de adopción de mensajería.
+-75% reporta eficacia e
+--------------------------------------------------------------------------------
+
+--- MATCH 188 ---
+[Comments_577732310.csv] Row 539 - Matches: ['felicidades']
+  Content: 2024-10-31 04:21:18 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7257600670059421696 | Fanny Lozano gracias por la pronta respuesta, ya me dejó. Felicidades
+--------------------------------------------------------------------------------
+
+--- MATCH 189 ---
+[Comments_577732310.csv] Row 549 - Matches: ['felicidades']
+  Content: 2024-10-18 03:24:48 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7252842258608058369 | Hola Déborah, muchas felicidades, tiempo sin saber de ti. Saludos
+--------------------------------------------------------------------------------
+
+--- MATCH 190 ---
+[Comments_577732310.csv] Row 552 - Matches: ['felicidades']
+  Content: 2024-10-06 19:26:38 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7248747395948101633 | ¡Felicidades, Sergio! 🎉, gran oportunidad para seguir aprendiendo de un gran profesional como tú.
+--------------------------------------------------------------------------------
+
+--- MATCH 191 ---
+[Comments_577732310.csv] Row 555 - Matches: ['felicidades']
+  Content: 2024-09-29 19:44:24 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7246239268992335872 | Buenísimo Marco Antonio Hernández Tovar , muchas felicidades.
+--------------------------------------------------------------------------------
+
+--- MATCH 192 ---
+[Comments_577732310.csv] Row 557 - Matches: ['felicidades']
+  Content: 2024-09-25 22:13:26 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7237281471202246657 | El PODER de los datos, y pensar que conozco gente que cree que no hay valor y qué resultados pasados no se pueden repetir o predecir. FELICIDADES. Por cierto, no sé si ya leyeron Ingresos Predecibles.Annick Olimón Vivot
+--------------------------------------------------------------------------------
+
+--- MATCH 193 ---
+[Comments_577732310.csv] Row 558 - Matches: ['felicidades']
+  Content: 2024-09-19 15:44:21 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7242548364418990080 | Uff, que panel, Muchas felicidades 🎉 Fernando Estevez Vazquez
+--------------------------------------------------------------------------------
+
+--- MATCH 194 ---
+[Comments_577732310.csv] Row 563 - Matches: ['felicidades']
+  Content: 2024-08-28 07:12:21 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7234279849513611264 | Natella Imamova buenísimo. Felicidades y éxitos para ti y tu equipo.
+--------------------------------------------------------------------------------
+
+--- MATCH 195 ---
+[Comments_577732310.csv] Row 609 - Matches: ['felicidades']
+  Content: 2024-07-15 01:22:59 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7218411955164700673 | Muchas felicidades 🎉 Christian Ariana Garcia Hernandez
+--------------------------------------------------------------------------------
+
+--- MATCH 196 ---
+[Comments_577732310.csv] Row 630 - Matches: ['felicidades']
+  Content: 2024-05-13 13:35:35 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7195685029568561152 | Muchas felicidades Fernando Estevez Vazquez , otro gran reto y sin duda que puedes con este y lo que siga. Saludos
+--------------------------------------------------------------------------------
+
+--- MATCH 197 ---
+[Comments_577732310.csv] Row 641 - Matches: ['felicidades']
+  Content: 2024-04-13 02:02:28 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7184716360059383808 | ¡Felicidades, Javier!
+--------------------------------------------------------------------------------
+
+--- MATCH 198 ---
+[Comments_577732310.csv] Row 655 - Matches: ['felicidades']
+  Content: 2024-03-18 22:12:50 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7175580810316500992 | Muchas felicidades Nhomar Hernández
+--------------------------------------------------------------------------------
+
+--- MATCH 199 ---
+[Comments_577732310.csv] Row 661 - Matches: ['felicidades']
+  Content: 2024-03-13 01:11:11 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7173461485317156864 | ¡Felicidades, Valentina!
+--------------------------------------------------------------------------------
+
+--- MATCH 200 ---
+[Comments_577732310.csv] Row 667 - Matches: ['felicidades']
+  Content: 2024-03-07 02:07:28 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7171324771878576128 | Muchas Felicidades Luis, empezando el año y con nuevos retos.
+--------------------------------------------------------------------------------
+
+--- MATCH 201 ---
+[Comments_577732310.csv] Row 699 - Matches: ['felicidades']
+  Content: 2024-02-12 16:23:49 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7162814080628547585 | Muchas felicidades Natalia Herrera , con todo en este nuevo reto.
+--------------------------------------------------------------------------------
+
+--- MATCH 202 ---
+[Comments_577732310.csv] Row 705 - Matches: ['felicidades']
+  Content: 2024-02-02 16:49:33 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7155628073906806785 | Muchas felicidades Mariela, estoy seguro que seguirás fortaleciendo y apoyando a más mexicanas y mexicanos desde tu nueva \trinchera\""
+--------------------------------------------------------------------------------
+
+--- MATCH 203 ---
+[Comments_577732310.csv] Row 791 - Matches: ['felicidades']
+  Content: 2023-12-28 21:11:45 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7145827004586627072 | Felicidades Gabriela Morales
+--------------------------------------------------------------------------------
+
+--- MATCH 204 ---
+[Comments_577732310.csv] Row 902 - Matches: ['felicidades']
+  Content: 2023-08-31 18:05:26 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7103065737212125184 | Felicidades Ferdinando Garcia
+--------------------------------------------------------------------------------
+
+--- MATCH 205 ---
+[Comments_577732310.csv] Row 929 - Matches: ['felicidades']
+  Content: 2023-07-27 23:41:07 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7090475544235970561 | Muchas Felicidades Marimar, muchos éxitos.
+--------------------------------------------------------------------------------
+
+--- MATCH 206 ---
+[Comments_577732310.csv] Row 942 - Matches: ['felicidades']
+  Content: 2023-07-24 19:52:13 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7089326637036531712 | Felicidades por sus nuevos retos Oscar Axel Gil Correa y Ana Laura Corona Bejarano y arriba la ESCA jeje
+--------------------------------------------------------------------------------
+
+--- MATCH 207 ---
+[Comments_577732310.csv] Row 954 - Matches: ['bono']
+  Content: 2023-07-20 11:55:27 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7087680278298525698 | Se llama 6 sombreros para pensar de Edward de Bono
+--------------------------------------------------------------------------------
+
+--- MATCH 208 ---
+[Comments_577732310.csv] Row 972 - Matches: ['felicidades']
+  Content: 2023-07-13 22:51:35 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7085389869245427713 | Muchas felicidades Roberto, nuevo reto y nueva oportunidad.
+--------------------------------------------------------------------------------
+
+--- MATCH 209 ---
+[Comments_577732310.csv] Row 1071 - Matches: ['felicidades']
+  Content: 2023-03-31 15:35:26 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7047570971993489408 | Felicidades Federico Barboni
+--------------------------------------------------------------------------------
+
+--- MATCH 210 ---
+[Comments_577732310.csv] Row 1095 - Matches: ['felicidades']
+  Content: 2023-03-16 21:23:30 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7042230737806184448 | Felicidades Darbel Gustavo Valdez Almanza, que gusto.  Luego platicamos de los Caballeros del Zodiaco también jejeje.
+--------------------------------------------------------------------------------
+
+--- MATCH 211 ---
+[Comments_577732310.csv] Row 1099 - Matches: ['logro', 'felicidades']
+  Content: 2023-03-14 18:26:05 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7041466019621568512 | Felicidades por el gran logro David y que sigas avanzando.
+--------------------------------------------------------------------------------
+
+--- MATCH 212 ---
+[Comments_577732310.csv] Row 1197 - Matches: ['felicidades']
+  Content: 2023-01-12 13:55:54 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7019258843595444224 | Felicidades por este nuevo reto Regi, a darle.
+--------------------------------------------------------------------------------
+
+--- MATCH 213 ---
+[Comments_577732310.csv] Row 1360 - Matches: ['felicidades']
+  Content: 2022-08-30 02:03:04 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6968763755149099008 | ¡Huelum! Gabriela, muchas felicidades
+--------------------------------------------------------------------------------
+
+--- MATCH 214 ---
+[Comments_577732310.csv] Row 1388 - Matches: ['felicidades']
+  Content: 2022-08-16 15:57:21 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6965328445375401984 | Muchas Felicidades y muchos más éxitos Anaid Ortiz
+--------------------------------------------------------------------------------
+
+--- MATCH 215 ---
+[Comments_577732310.csv] Row 1498 - Matches: ['felicidades']
+  Content: 2022-04-12 15:54:20 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6919672229555277826 | Muchas felicidades ALITZEL ADAYA MUÑOZ
+--------------------------------------------------------------------------------
+
+--- MATCH 216 ---
+[Comments_577732310.csv] Row 1510 - Matches: ['reconocimiento']
+  Content: 2022-03-25 17:09:17 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6913157394269188096 | GRANDE ⭐ Liliana Vargas, de verdad mis respetos y reconocimiento por tu experiencia y por los retos que has tenido que superar, también me siento muy afortunado de conocerte en persona.
+
+Saludos y muchos éxitos más.
+--------------------------------------------------------------------------------
+
+--- MATCH 217 ---
+[Comments_577732310.csv] Row 1512 - Matches: ['felicidades']
+  Content: 2022-03-19 03:52:54 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A6910687821993283585 | Muchas felicidades José Luis Duarte - Metrología Industrial y Automatización, todo el éxito.
+--------------------------------------------------------------------------------
+
+--- MATCH 218 ---
+[Comments_577732310.csv] Row 1545 - Matches: ['felicidades']
+  Content: 2022-02-10 03:44:17 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A6897357422101356544 | Muchas Felicidades Penélope, una gran persona, éxito en este nuevo reto
+--------------------------------------------------------------------------------
+
+--- MATCH 219 ---
+[Comments_577732310.csv] Row 1564 - Matches: ['felicidades']
+  Content: 2021-11-20 18:20:40 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6866752719575691264 | HUELUM! Perla Escobedo , muchas felicidades.
+--------------------------------------------------------------------------------
+
+--- MATCH 220 ---
+[Comments_577732310.csv] Row 1566 - Matches: ['felicidades']
+  Content: 2021-11-19 22:08:49 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6867550040844574720 | Muchas felicidades Gabriel, excelente iniciativa.
+--------------------------------------------------------------------------------
+
+--- MATCH 221 ---
+[Comments_577732310.csv] Row 1568 - Matches: ['felicidades']
+  Content: 2021-11-19 01:45:47 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6867221586471084032 | Muchas felicidades, ojalá tuvieran esa excelente atención al cliente, llevo desde marzo atorado con un tema de contracargo y mi cuenta bloqueada, no ha habido un HUMANO que me pueda atender, todos sus mensajes internos con la misma respuesta, perdón por ensuciar este post, pero he contactado personas de la organización y hasta me han eliminado los comentarios, espero aquí no me pase igual, solo requiero que me apoyen con mi caso.
+--------------------------------------------------------------------------------
+
+--- MATCH 222 ---
+[Comments_577732310.csv] Row 1611 - Matches: ['felicidades']
+  Content: 2021-08-27 18:09:47 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6836479049095806976 | Alejandra Cebada Fernández excelente iniciativa, muchas felicidades.
+--------------------------------------------------------------------------------
+
+--- MATCH 223 ---
+[Comments_577732310.csv] Row 1627 - Matches: ['felicidades']
+  Content: 2021-08-06 03:03:25 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6829219276164014080 | Felicidades Santiago Iriarte , los esperamos con los brazos abiertos y el estómago listo por acá en Cancún
+--------------------------------------------------------------------------------
+
+--- MATCH 224 ---
+[Comments_577732310.csv] Row 1706 - Matches: ['felicidades']
+  Content: 2021-02-22 19:06:38 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6769638549693235200 | Muchas felicidades Victoria Pedroza, con tu experiencia y capacidades es un éxito garantizado.
+Saludos
+--------------------------------------------------------------------------------
+
+--- MATCH 225 ---
+[Comments_577732310.csv] Row 1793 - Matches: ['felicidades']
+  Content: 2021-01-05 03:34:56 | https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6751936820403159040 | ¡Felicidades, Hatzidi, empezando el año con el pie derecho!
+--------------------------------------------------------------------------------
+
+--- MATCH 226 ---
+[Shares_577732310.csv] Row 61 - Matches: ['bono']
+  Content: 2024-11-22 06:40:26 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7265615092703014912 | Fernando Bazan abono un poco de información al tema que trajiste a la mesa: 75% de los negocios mexicanos han adoptado canales de mensajería en el recorrido de compra."
+"67% de los consumidores en México se sienten más cómodos usando aplicaciones de mensajería."
+"81% de las empresas utilizan canales de mensajería para generar ventas."
+"85% de las empresas los usan para promover la lealtad de los clientes."
+"71% de las PYMES han tenido alta tasa de adopción de mensajería."
+"75% reporta eficacia
+--------------------------------------------------------------------------------
+
+--- MATCH 227 ---
+[Shares_577732310.csv] Row 74 - Matches: ['felicitaciones']
+  Content: 2024-11-08 23:33:05 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7260796503433035776 | Vale la pena compartir este tipo de información. Mis Felicitaciones a las personas que se preocupan por personas sea cual sea la circunstancia. |  |  | MEMBER_NETWORK
+--------------------------------------------------------------------------------
+
+--- MATCH 228 ---
+[Shares_577732310.csv] Row 104 - Matches: ['logro']
+  Content: 2024-07-26 06:13:40 | https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7222484198295506944 | ¡Hoy gané mi badge "Introducción a la compilación con Power BI"! ¡Me llena de orgullo celebrar este logro y espero que esto te inspire a comenzar tu propio viaje de @MicrosoftLearn! |  |  | MEMBER_NETWORK
+--------------------------------------------------------------------------------
+
+--- MATCH 229 ---
+[Shares_577732310.csv] Row 282 - Matches: ['podio']
+  Content: 2023-04-25 02:02:48 | https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7056447421832146944 | #OrangePower "
+""
+"Honrado de estar en el podio junto a estos #cracks Aldevaran Alarcón Hernándezy David Mancera Lemus."
+""
+"No es casualidad, es el resultado del trabajo y el apoyo de TODOS como #equipo."
+""
+"GRACIAS por la confianza y el apoyo y a continuar trabajando y cosechando éxitos."
+""
+"Continuamos mostrando #TodoelPoderdeClip #b2b #trabajo "
+""
+"#TodoelPoderdeClip #InclusiónFinanciera #PagosDigitales "
+"#fintechstartup #b2b2c #sales #achievement #goal #market |  |  | MEMBER_NETWORK
+--------------------------------------------------------------------------------
+
+--- MATCH 230 ---
+[Shares_577732310.csv] Row 701 - Matches: ['reconocimiento']
+  Content: 2021-03-03 04:34:35 | https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A6772735923756040192 | JAZMIN SALAZAR #reconocimiento Agradezco muchísimo tu #entregaal100 %, tu compromiso por ayudar a las personas por su propio bienestar te destaca. |  |  | MEMBER_NETWORK
+--------------------------------------------------------------------------------
+
+--- MATCH 231 ---
+[Learning.csv] Row 135 - Matches: ['reconocimiento', 'logro']
+  Content: Cómo superar el síndrome del impostor en 10 pasos | Enfrenta el síndrome del impostor y refuerza tu confianza profesional con un enfoque práctico en 10 pasos. Este curso te guía en la identificación de los momentos en los que surgen estas dudas, el reconocimiento de tu propio valor y la redefinición del éxito y el fracaso. Descubre estrategias para dejar de atribuir tus logros a la suerte y rodearte de un entorno que impulse tu crecimiento. Además, incluye un módulo especial para mujeres que enfrentan este síndrome y sus desafíos específicos en el mundo laboral. | Course | 2025-11-04 11:48 UTC
+--------------------------------------------------------------------------------
+

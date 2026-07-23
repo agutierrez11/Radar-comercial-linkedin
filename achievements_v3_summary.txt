@@ -1,0 +1,176 @@
+Found 29 highly relevant Clip-era performance messages:
+
+--- MATCH 1 (INCOMING (Others -> Antonio)) ---
+Date: 2022-09-09 13:56:29 UTC
+From: Marcelo Cortez | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: Oye felicidades, se ven buenos los dolores, le hizo sentido al prospecto por lo que veo?
+--------------------------------------------------------------------------------
+
+--- MATCH 2 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-19 14:32:05 UTC
+From: FEDERICO GARCIA | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 3 (INCOMING (Others -> Antonio)) ---
+Date: 2023-07-18 05:50:20 UTC
+From: Leonardo Cabrera | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: Te veo muy activo e interesado en aprender. Eso es una bendición también. Felicidades porque no cualquiera se prepara constantemente.
+--------------------------------------------------------------------------------
+
+--- MATCH 4 (INCOMING (Others -> Antonio)) ---
+Date: 2023-07-18 04:23:49 UTC
+From: Leonardo Cabrera | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: Hola Antonio, felicidades por seguir aprendiendo.
+--------------------------------------------------------------------------------
+
+--- MATCH 5 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-20 20:44:18 UTC
+From: Gerardo Fragoso | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 6 (INCOMING (Others -> Antonio)) ---
+Date: 2022-11-25 20:52:03 UTC
+From: gerardo teijeira ♾️ | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: Bueno pues por empezar felicitaciones por la oportunidad!
+--------------------------------------------------------------------------------
+
+--- MATCH 7 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-17 13:18:03 UTC
+From: Anaid Ortiz | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 8 (INCOMING (Others -> Antonio)) ---
+Date: 2023-08-29 18:45:30 UTC
+From: Martin Gelpi | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: el performance rank lo hice con jorge.. he participado en charlas del ecommerce institute en mexico de la mano de hector
+--------------------------------------------------------------------------------
+
+--- MATCH 9 (INCOMING (Others -> Antonio)) ---
+Date: 2023-04-25 17:37:01 UTC
+From: Héctor Torres | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: Felicitaciones amigo!!
+--------------------------------------------------------------------------------
+
+--- MATCH 10 (INCOMING (Others -> Antonio)) ---
+Date: 2025-03-03 16:27:29 UTC
+From: Chris Payne | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: Wow, súper, felicidades por tu nuevo trabajo :-)
+--------------------------------------------------------------------------------
+
+--- MATCH 11 (INCOMING (Others -> Antonio)) ---
+Date: 2025-03-07 15:06:07 UTC
+From: Rodolfo Adrian Sanchez Hernandez | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto en Fiserv!
+--------------------------------------------------------------------------------
+
+--- MATCH 12 (INCOMING (Others -> Antonio)) ---
+Date: 2025-03-07 14:35:46 UTC
+From: Plinio Fernando Rivera Valenzuela | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto en Fiserv!
+--------------------------------------------------------------------------------
+
+--- MATCH 13 (INCOMING (Others -> Antonio)) ---
+Date: 2024-01-09 22:15:05 UTC
+From: Alfredo Rodríguez Flores | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: Muchas gracias Antonio por tus felicitaciones!!!
+--------------------------------------------------------------------------------
+
+--- MATCH 14 (INCOMING (Others -> Antonio)) ---
+Date: 2023-07-05 14:21:37 UTC
+From: Ricardo Aguilar Alvarez | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: Muchas felicidades amigo!
+--------------------------------------------------------------------------------
+
+--- MATCH 15 (OUTGOING (Antonio -> Others)) ---
+Date: 2023-05-05 17:21:20 UTC
+From: 💳Antonio Gutiérrez  Jiménez💳 | To: Daniela Garrido Alfáro
+Message: Lo último que supe eran 30 base más bono mensual por meta
+--------------------------------------------------------------------------------
+
+--- MATCH 16 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-17 13:50:15 UTC
+From: Francisco Miguel  Daniel Rodríguez | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 17 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-17 14:06:50 UTC
+From: Fernando Coletti Ghezzi | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 18 (INCOMING (Others -> Antonio)) ---
+Date: 2021-09-07 22:38:34 UTC
+From: Gabriela Córdova | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: Muchas Felicidades!
+--------------------------------------------------------------------------------
+
+--- MATCH 19 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-21 09:22:25 UTC
+From: Iñaki Alcaraz | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto, Antonio! Seguro que tendrás tanto éxito como hasta ahora, en esta nueva etapa profesional. ¿Cuántos cambios en los últimos meses, no? Estoy seguro de que después de estas desafiantes circunstancias, seremos mejores profesionales, así que… ¡¡En 2021 tendrás grandes éxitos con tus proyectos!! Comparto contigo una reflexión que espero que te
+--------------------------------------------------------------------------------
+
+--- MATCH 20 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-20 22:08:20 UTC
+From: Jose Rodriguez Garfias | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 21 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-17 14:37:37 UTC
+From: Lizbeth Vera | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 22 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-19 19:23:22 UTC
+From: Raul Emmanuel Pedrin Cota | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 23 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-19 16:40:54 UTC
+From: MARTIN ISRAEL CORREA RANGEL | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 24 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-18 22:38:01 UTC
+From: Chung  Zu Jan 鍾如傑 (钟如杰) | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 25 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-17 06:26:28 UTC
+From: Angel Mendoza Jesus | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 26 (INCOMING (Others -> Antonio)) ---
+Date: 2023-07-13 15:16:00 UTC
+From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: Felicidades !
+--------------------------------------------------------------------------------
+
+--- MATCH 27 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-20 18:19:09 UTC
+From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: Muchas felicidades enhorabuena.... y  a darle duro, demostrar de lo que podemos.. Saludos
+--------------------------------------------------------------------------------
+
+--- MATCH 28 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-20 17:45:59 UTC
+From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
+--- MATCH 29 (INCOMING (Others -> Antonio)) ---
+Date: 2021-07-17 14:44:40 UTC
+From: LinkedIn Member | To: 💳Antonio Gutiérrez  Jiménez💳,LinkedIn Member
+Message: ¡Felicidades por tu nuevo puesto!
+--------------------------------------------------------------------------------
+
