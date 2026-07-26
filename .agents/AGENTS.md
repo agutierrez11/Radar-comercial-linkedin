@@ -35,4 +35,6 @@ Este archivo define las reglas persistentes, contexto de negocio y arquitectura 
 - `/extension/` - Extensión de Google Chrome (Manifest V3) para extracción/interacción.
 - `/backend/` - API REST en FastAPI/Node.js para procesamiento de ZIP, matching semántico y conexión OAuth con CRMs.
 - `/frontend/` - Interfaz web interactiva del Dashboard en React/Vite.
+- `plantillas_dms_notion.md` - Colección estructurada de 10 DMs de prospección B2B (Apertura, Cualificación, Transición a Llamada, Seguimiento y Objeciones) extraídos de Notion para ser integrados en los motores de generación de mensajes y playbooks del producto.
 - `README.md` - Resumen del proyecto, arquitectura y comandos de inicio.
+
