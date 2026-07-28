@@ -1162,7 +1162,6 @@ function norm(t) {
   if (!t) return '';
   return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').trim();
 }
-
 function inferCountry(email, company, position) {
   const key = `${(company||'').trim()} | ${(position||'').trim()}`;
   if (window.normalizedLocations && window.normalizedLocations[key]) {
@@ -1172,6 +1171,7 @@ function inferCountry(email, company, position) {
   
   const e = (email||'').toLowerCase();
   const b = norm(`${company} ${position}`);
+
   if (e.endsWith('.mx')) return 'México';
   if (e.endsWith('.cl')) return 'Chile';
   if (e.endsWith('.co')) return 'Colombia';
@@ -1179,14 +1179,22 @@ function inferCountry(email, company, position) {
   if (e.endsWith('.br')) return 'Brasil';
   if (e.endsWith('.ar')) return 'Argentina';
   if (e.endsWith('.es')) return 'España';
-  if (/\b(mexico|cdmx|monterrey|guadalajara|cancun|queretaro)\b/.test(b)) return 'México';
-  if (/\b(chile|santiago)\b/.test(b)) return 'Chile';
-  if (/\b(colombia|bogota|medellin)\b/.test(b)) return 'Colombia';
-  if (/\b(peru|lima)\b/.test(b)) return 'Perú';
-  if (/\b(brasil|brazil|sao paulo|rio)\b/.test(b)) return 'Brasil';
-  if (/\b(argentina|buenos aires|cordoba)\b/.test(b)) return 'Argentina';
-  if (/\b(espana|spain|madrid|barcelona)\b/.test(b)) return 'España';
-  if (/\b(usa|united states|new york|san francisco|chicago|houston)\b/.test(b)) return 'USA';
+  if (e.endsWith('.ec')) return 'Ecuador';
+  if (e.endsWith('.uy')) return 'Uruguay';
+  if (e.endsWith('.cr')) return 'Costa Rica';
+
+  if (/\b(mexico|cdmx|monterrey|guadalajara|cancun|queretaro|puebla|tijuana|merida|leon|toluca|zapopan|san luis potosi|aguascalientes|hermosillo|veracruz|mx)\b/.test(b)) return 'México';
+  if (/\b(chile|santiago|valparaiso|concepcion|antofagasta|temuco|cl)\b/.test(b)) return 'Chile';
+  if (/\b(colombia|bogota|medellin|cali|barranquilla|cartagena|bucaramanga|co)\b/.test(b)) return 'Colombia';
+  if (/\b(peru|lima|arequipa|trujillo|cusco|pe)\b/.test(b)) return 'Perú';
+  if (/\b(brasil|brazil|sao paulo|rio de janeiro|curitiba|belo horizonte|porto alegre|br)\b/.test(b)) return 'Brasil';
+  if (/\b(argentina|buenos aires|cordoba|rosario|mendoza|la plata|ar)\b/.test(b)) return 'Argentina';
+  if (/\b(espana|spain|madrid|barcelona|valencia|sevilla|bilbao|malaga|es)\b/.test(b)) return 'España';
+  if (/\b(usa|united states|new york|san francisco|chicago|houston|miami|austin|seattle|boston|los angeles|us)\b/.test(b)) return 'USA';
+  if (/\b(equador|ecuador|quito|guayaquil|cuenca)\b/.test(b)) return 'Ecuador';
+  if (/\b(uruguay|montevideo)\b/.test(b)) return 'Uruguay';
+  if (/\b(costa rica|san jose)\b/.test(b)) return 'Costa Rica';
+
   return 'Desconocido';
 }
 
