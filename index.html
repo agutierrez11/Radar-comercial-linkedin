@@ -95,6 +95,23 @@
     ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 
+    /* ── EMIL KOWALSKI MOTION & TOAST ── */
+    #ui-toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 1000;
+      background: var(--surface-glass); border: 1px solid var(--accent);
+      color: var(--text); padding: 12px 18px; border-radius: 10px;
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5), var(--shadow-glow);
+      font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 600;
+      display: flex; align-items: center; gap: 10px;
+      transform: translateY(100px); opacity: 0;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+    }
+    #ui-toast.show {
+      transform: translateY(0); opacity: 1; pointer-events: auto;
+    }
+
     /* ── HEADER ── */
     #app-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -1174,6 +1191,31 @@ document.addEventListener('DOMContentLoaded', () => {
 function norm(t) {
   if (!t) return '';
   return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').trim();
+}
+
+function showToast(msg, icon = '✨') {
+  let toast = document.getElementById('ui-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'ui-toast';
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML = `<span style="font-size:16px">${icon}</span><span>${msg}</span>`;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2800);
+}
+
+function copyPitch() {
+  const textElem = document.getElementById('modal-pitch-text');
+  if (!textElem) return;
+  const text = textElem.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    showToast('¡Pitch copiado al portapapeles! Listo para enviar en LinkedIn.', '📋');
+  }).catch(() => {
+    showToast('Copiado al portapapeles', '📋');
+  });
 }
 function inferCountry(email, company, position) {
   const key = `${(company||'').trim()} | ${(position||'').trim()}`;
