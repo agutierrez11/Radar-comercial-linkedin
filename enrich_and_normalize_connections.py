@@ -133,7 +133,7 @@ def infer_location_and_status(first_name, last_name, company, position, connecte
         elif "chile" in full_text or "santiago" in full_text:
             country = "Chile"
             city = "Santiago"
-        elif "us" in full_text or "usa" in full_text or "united states" in full_text or "miami" in full_text or "new york" in full_text:
+        elif re.search(r'\b(usa|united states|miami|new york|california|texas|florida)\b', full_text):
             country = "Estados Unidos"
             city = "Miami"
             
