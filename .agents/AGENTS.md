@@ -38,3 +38,27 @@ Este archivo define las reglas persistentes, contexto de negocio y arquitectura 
 - `plantillas_dms_notion.md` - Colección estructurada de 10 DMs de prospección B2B (Apertura, Cualificación, Transición a Llamada, Seguimiento y Objeciones) extraídos de Notion para ser integrados en los motores de generación de mensajes y playbooks del producto.
 - `README.md` - Resumen del proyecto, arquitectura y comandos de inicio.
 
+---
+
+## 🎨 Principios de Frontend Design & UI/UX Engineering (Skills de Referencia)
+
+Este proyecto adopta los estándares de las mejores librerías de diseño para agentes de IA:
+
+1. **Bespoke Visual Identity (`anthropics/frontend-design`):**
+   - Evitar soluciones cliché/plantilladas. Diseñar con personalidad orientada a *Intelligence Sales & Relationship Mining*.
+   - Paleta HSL en Slate 950 base con acentos Indigo/Violeta, bordes luminosos subtle glassmorphism y tipografías `Outfit` (display) + `JetBrains Mono` (datos).
+
+2. **Web Interface Guidelines (`vercel-labs/web-design-guidelines`):**
+   - Jerarquía visual rigurosa, contraste alto de accesibilidad WCAG AA/AAA, navegación por teclado y responsividad total.
+
+3. **Design System & Spacing (`nextlevelbuilder/ui-ux-pro-max`):**
+   - Reglas estrictas de espaciado, escalas tipográficas y badges informativos con estados coherentes.
+
+4. **UI Micro-Interactions & Motion Polish (`emilkowalski/skills`):**
+   - Transiciones físicas y micro-interacciones sutiles con `cubic-bezier(0.4, 0, 0.2, 1)`.
+   - Re-fit automático de mapas vectoriales (`invalidateSize()`) al navegar entre pestañas.
+
+5. **Presentation & High-Fidelity Artifacts (`alchaincyf/huashu-design`):**
+   - Modales interactivos de pitch B2B, tarjetas de prospección con botones de acción rápida de 1-clic y visualización espacial de clústeres.
+
+
