@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Radar Comercial — Intelligence Dashboard</title>
   <meta name="description" content="Minería inteligente de relaciones de LinkedIn. 100% local, sin servidor.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script>window.JSZip || document.write('<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"><\/script>')</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
@@ -83,7 +83,7 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; transition: background 0.2s, color 0.2s; position: relative; z-index: 0; }
+    body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; transition: background 0.2s, color 0.2s; position: relative; z-index: 0; }
     body::before {
       content: ""; position: fixed; top: -50%; left: -50%; width: 200%; height: 200%;
       background: radial-gradient(circle at 40% 10%, rgba(79, 70, 229, 0.08), transparent 40%),
@@ -1645,64 +1645,145 @@ function resetAllData() {
   }
 }
 
-function loadDemoData() {
-  if (!confirm("Esto cargará datos ficticios para explorar el Dashboard sin necesidad de un ZIP. ¿Continuar?")) return;
-  
+async function loadDemoData() {
   setLoading(true, 50);
-  
-  S.ownerName = "Usuario Demo";
-  S.positions = [
-    { company: "TechCorp SaaS", title: "VP of Sales", start: "2020", end: "Actual" }
-  ];
-  
-  const mockContacts = [];
-  const companies = ["Stripe", "Vercel", "Fintech X", "Banco Y", "Retail Z", "HealthCorp", "Acme", "Globex"];
-  const titles = ["CEO", "Director de Ventas", "CTO", "Gerente de Producto", "CFO", "Marketing Lead"];
-  const countries = ["México", "España", "Colombia", "Desconocido", "USA"];
-  const h = ["C-Level", "Director", "C-Level", "Gerente", "C-Level", "Gerente"];
-  
-  for(let i=0; i<185; i++) {
-    const fn = "Lead " + i;
-    const ln = "Demo";
-    const comp = companies[i % companies.length];
-    const tit = titles[i % titles.length];
-    const ctry = countries[i % countries.length];
-    const isOld = (i % 5 === 0);
+  try {
+    const res = await fetch("enriched_connections.json");
+    if (!res.ok) throw new Error("No se pudo cargar enriched_connections.json");
+    const data = await res.json();
     
-    mockContacts.push({
-      id: i,
-      name: fn + " " + ln, company: comp, position: tit, originalName: fn + " " + ln,
-      originalCompany: comp, originalPosition: tit, email: "lead"+i+"@"+comp.replace(/\s+/g,'').toLowerCase()+".com",
-      url: "https://linkedin.com", connectedOn: isOld ? "10 Jan 2018" : "15 May 2024", connectedYearsAgo: isOld ? 8 : (0.5 + (i%2)),
-      country: ctry, hierarchy: h[i%h.length], sector: inferSector(tit, comp), score: 0
+    S.ownerName = "Antonio Gutiérrez";
+    S.positions = [
+      { company: "Radar Comercial", title: "VP of Sales & Growth", start: "2024", end: "Actual" }
+    ];
+
+    S.contacts = data.map(item => ({
+      id: item.id,
+      name: item.full_name,
+      first_name: item.first_name,
+      last_name: item.last_name,
+      company: item.company,
+      position: item.position,
+      originalName: item.full_name,
+      originalCompany: item.company,
+      originalPosition: item.position,
+      url: item.url,
+      email: item.email || "",
+      connectedOn: item.connected_on,
+      connectedYearsAgo: connectedYearsAgo(item.connected_on),
+      country: item.country || "Desconocido",
+      city: item.city || "Desconocido",
+      lat: item.lat || 19.4326,
+      lng: item.lng || -99.1332,
+      jobStatus: item.job_status || "🟢 Vigente Confirmado",
+      hierarchy: inferHierarchy(item.position),
+      sector: inferSector(item.position, item.company),
+      score: 0
+    }));
+
+    S.contacts.forEach(c => { c.score = scoreContact(c); });
+    S.loadedParts = { connections: true, positions: true, messages: true, profile: true };
+
+    setTimeout(() => {
+      finalize();
+      initGisMap(S.contacts);
+      alert("🎉 ¡150+ Contactos Enriquecidos con Coordenadas y Recencia Cargados!");
+    }, 300);
+  } catch(e) {
+    setLoading(false);
+    alert("Error al cargar datos enriquecidos: " + e.message);
+  }
+}
+
+let gisMap = null;
+let gisLayerGroup = null;
+
+function initGisMap(contacts) {
+  const mapContainer = document.getElementById('gis-map-container');
+  const mapCard = document.getElementById('map-gis-card');
+  if (!mapContainer || !mapCard) return;
+
+  mapCard.style.display = 'block';
+
+  if (!gisMap) {
+    gisMap = L.map('gis-map-container', {
+      center: [20, -60],
+      zoom: 2.5,
+      zoomControl: true
     });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(gisMap);
+
+    gisLayerGroup = L.layerGroup().addTo(gisMap);
   }
-  
-  // Set random CRM status to some to populate the Kanban
-  mockContacts[0].crmStatus = "Lead"; mockContacts[0].crmNotes = "Prospecto muy interesado en integraciones.";
-  mockContacts[1].crmStatus = "Pitch"; mockContacts[1].crmNotes = "Enviado PDF del producto.";
-  mockContacts[2].crmStatus = "Conversacion"; mockContacts[2].crmNotes = "Me contestó hoy pidiendo precios.";
-  mockContacts[3].crmStatus = "Reunion"; mockContacts[3].crmNotes = "Demo el jueves a las 10am.";
-  mockContacts[4].crmStatus = "Cerrado"; mockContacts[4].crmNotes = "Contrato firmado anualmente.";
-  mockContacts[5].crmStatus = "Descartado"; mockContacts[5].crmNotes = "No tienen presupuesto hasta 2027.";
-  
-  S.contacts = mockContacts;
-  
-  // Dummy messages
-  S.messages = [];
-  for(let i=0; i<45; i++) {
-    S.messages.push({ "CONVERSATION ID": "C"+i, "From": i%3===0?"Usuario Demo":"Lead", "Content": "Mensaje de prueba "+i });
+
+  gisLayerGroup.clearLayers();
+
+  const locationGroups = {};
+  contacts.forEach(c => {
+    if (!c.lat || !c.lng || c.country === 'Desconocido') return;
+    const key = `${c.country}_${c.city || 'Desconocido'}`;
+    if (!locationGroups[key]) {
+      locationGroups[key] = {
+        country: c.country,
+        city: c.city,
+        lat: c.lat,
+        lng: c.lng,
+        contacts: []
+      };
+    }
+    locationGroups[key].contacts.push(c);
+  });
+
+  let mappedCount = 0;
+
+  Object.values(locationGroups).forEach(group => {
+    const count = group.contacts.length;
+    mappedCount += count;
+    const radius = Math.min(22, Math.max(8, 6 + Math.log2(count) * 4));
+
+    const circle = L.circleMarker([group.lat, group.lng], {
+      radius: radius,
+      fillColor: '#4f46e5',
+      color: '#a5b4fc',
+      weight: 1.5,
+      opacity: 0.9,
+      fillOpacity: 0.65
+    });
+
+    const tooltipContent = `
+      <div style="font-size:11px; font-family:'Outfit',sans-serif; color:#f8fafc; padding:2px;">
+        <strong style="font-size:12px; color:#a5b4fc;">📍 ${group.city}, ${group.country}</strong><br>
+        <span style="color:#10b981; font-weight:700;">${count} Contactos Cálidos</span><br>
+        <span style="font-size:9px; color:#94a3b8;">Haz clic para filtrar la lista por este país</span>
+      </div>
+    `;
+
+    circle.bindPopup(tooltipContent);
+
+    circle.on('click', () => {
+      const countrySelect = document.getElementById('net-country');
+      if (countrySelect) {
+        countrySelect.value = group.country;
+        applyNetworkFilters();
+      }
+    });
+
+    gisLayerGroup.addLayer(circle);
+  });
+
+  const countBadge = document.getElementById('map-contact-count');
+  if (countBadge) {
+    countBadge.textContent = `${mappedCount} contactos mapeados`;
   }
-  
-  S.loadedParts = { connections: true, positions: true, messages: true, profile: true };
-  
-  // Recalculate scores and populate
-  S.contacts.forEach(c => { c.score = scoreContact(c); });
-  
+
   setTimeout(() => {
-    finalize();
-    alert("Datos de prueba cargados con éxito.");
-  }, 300);
+    if (gisMap) gisMap.invalidateSize();
+  }, 200);
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -2106,7 +2187,10 @@ function renderNetworkTable() {
           <td style="padding-left:24px;">
             <div style="display:flex; align-items:center; gap:10px;">
               <div style="width:24px; height:24px; border-radius:50%; background:${avatarColor}20; color:${avatarColor}; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:800; flex-shrink:0;">${ini}</div>
-              <div class="td-name">${c.name}</div>
+              <div class="td-name" style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
+                <span>${c.name}</span>
+                <span class="badge ${c.jobStatus && c.jobStatus.includes('🟢') ? 'badge-green' : (c.jobStatus && c.jobStatus.includes('🟡') ? 'badge-amber' : 'badge-muted')}" style="font-size:8px; padding:1px 5px;">${c.jobStatus || '🟢 Vigente'}</span>
+              </div>
             </div>
           </td>
           <td><div class="td-sub" title="${c.position}">${c.position||'—'}</div></td>
