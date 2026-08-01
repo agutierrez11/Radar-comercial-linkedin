@@ -1800,6 +1800,12 @@ function navigate(sec) {
   document.getElementById('sec-' + sec).classList.add('active');
   document.querySelector(`[data-section="${sec}"]`).classList.add('active');
 
+  if (sec === 'network') {
+    setTimeout(() => {
+      if (gisMapInstance) gisMapInstance.invalidateSize();
+    }, 150);
+  }
+
   if (sec === 'crm') {
     const board = document.getElementById('crm-kanban-board');
     if (board) board.style.display = 'grid';
@@ -2054,27 +2060,27 @@ function renderGISMap(identifiedCountries, allContacts) {
   const mapCard = document.getElementById('map-gis-card');
   if (!mapCard) return;
 
-  if (identifiedCountries.length === 0) {
+  const validContacts = allContacts.filter(c => c.lat && c.lng && c.country !== 'Desconocido');
+
+  if (validContacts.length === 0 && identifiedCountries.length === 0) {
     mapCard.style.display = 'none';
     return;
   }
   mapCard.style.display = 'block';
 
-  const totalIdentified = identifiedCountries.reduce((acc, [, v]) => acc + v, 0);
-  document.getElementById('map-contact-count').textContent = `${totalIdentified.toLocaleString()} contactos geolocalizados`;
+  document.getElementById('map-contact-count').textContent = `${validContacts.length.toLocaleString()} contactos geolocalizados`;
 
   if (typeof L === 'undefined') return;
 
-  const isDark = !document.body.classList.contains('light');
-  const tileUrl = isDark 
-    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-    : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+  const tileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
 
   if (!gisMapInstance) {
     gisMapInstance = L.map('gis-map-container', {
+      center: [20.0, -40.0],
+      zoom: 2.5,
       zoomControl: true,
       attributionControl: false
-    }).setView([15.0, -40.0], 2);
+    });
 
     L.tileLayer(tileUrl, { maxZoom: 18 }).addTo(gisMapInstance);
   } else {
@@ -2085,34 +2091,46 @@ function renderGISMap(identifiedCountries, allContacts) {
     });
   }
 
-  // Clear existing markers
   gisMapMarkers.forEach(m => gisMapInstance.removeLayer(m));
   gisMapMarkers = [];
 
-  identifiedCountries.forEach(([country, count]) => {
-    const coords = COUNTRY_COORDS[country];
-    if (!coords) return;
+  const locationGroups = {};
+  allContacts.forEach(c => {
+    if (!c.lat || !c.lng || c.country === 'Desconocido') return;
+    const key = `${c.country}_${c.city || 'Desconocido'}`;
+    if (!locationGroups[key]) {
+      locationGroups[key] = {
+        country: c.country,
+        city: c.city,
+        lat: c.lat,
+        lng: c.lng,
+        contacts: []
+      };
+    }
+    locationGroups[key].contacts.push(c);
+  });
 
-    // Radius scale based on count
-    const radius = Math.min(30, Math.max(10, Math.sqrt(count) * 4));
-    const clevelCount = allContacts.filter(c => c.country === country && c.hierarchy === 'C-Level').length;
+  Object.values(locationGroups).forEach(group => {
+    const count = group.contacts.length;
+    const radius = Math.min(26, Math.max(8, 6 + Math.log2(count) * 4));
+    const clevelCount = group.contacts.filter(c => c.hierarchy === 'C-Level').length;
 
-    const circle = L.circleMarker(coords, {
+    const circle = L.circleMarker([group.lat, group.lng], {
       radius: radius,
       fillColor: clevelCount > 0 ? '#7c3aed' : '#4f46e5',
       color: '#10b981',
-      weight: 2,
+      weight: 1.5,
       opacity: 0.9,
-      fillOpacity: 0.6
+      fillOpacity: 0.65
     }).addTo(gisMapInstance);
 
     const popupHtml = `
-      <div style="font-family:'Inter',sans-serif; padding:4px; font-size:12px; color:#0f172a;">
-        <div style="font-weight:700; font-size:13px; margin-bottom:4px;">${countryFlag(country)}</div>
+      <div style="font-family:'Outfit',sans-serif; padding:4px; font-size:12px; color:#f8fafc;">
+        <div style="font-weight:700; font-size:13px; margin-bottom:4px; color:#a5b4fc;">📍 ${group.city}, ${group.country}</div>
         <div><strong>Total Contactos:</strong> ${count}</div>
-        <div><strong>C-Levels:</strong> ${clevelCount}</div>
-        <button onclick="filterNetworkByCountry('${country}')" style="margin-top:6px; background:#4f46e5; color:white; border:none; padding:4px 8px; border-radius:4px; font-size:10px; cursor:pointer; width:100%;">
-          Filtrar por ${country}
+        <div><strong>C-Levels / Ejecutivos:</strong> ${clevelCount}</div>
+        <button onclick="filterNetworkByCountry('${group.country}')" style="margin-top:8px; background:#4f46e5; color:white; border:none; padding:5px 10px; border-radius:6px; font-size:10px; cursor:pointer; width:100%; font-weight:700;">
+          Filtrar por ${group.country}
         </button>
       </div>
     `;
@@ -2123,7 +2141,7 @@ function renderGISMap(identifiedCountries, allContacts) {
 
   setTimeout(() => {
     if (gisMapInstance) gisMapInstance.invalidateSize();
-  }, 200);
+  }, 250);
 }
 
 function filterNetworkByCountry(countryName) {
