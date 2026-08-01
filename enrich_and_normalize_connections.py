@@ -7,8 +7,9 @@ import unicodedata
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-# Diccionario de sedes de empresas conocidas (LATAM y Globales)
+# Diccionario de sedes de empresas conocidas (LATAM, Europa y Globales)
 COMPANY_LOCATION_DB = {
+    # LATAM
     "clip": {"country": "México", "city": "CDMX", "lat": 19.4326, "lng": -99.1332},
     "konfío": {"country": "México", "city": "CDMX", "lat": 19.4326, "lng": -99.1332},
     "konfio": {"country": "México", "city": "CDMX", "lat": 19.4326, "lng": -99.1332},
@@ -19,9 +20,6 @@ COMPANY_LOCATION_DB = {
     "nu mexico": {"country": "México", "city": "CDMX", "lat": 19.4326, "lng": -99.1332},
     "exante": {"country": "México", "city": "CDMX", "lat": 19.4326, "lng": -99.1332},
     "go4more": {"country": "México", "city": "CDMX", "lat": 19.4326, "lng": -99.1332},
-    "ve commercial vehicles ltd.": {"country": "India", "city": "Gurugram", "lat": 28.4595, "lng": 77.0266},
-    "data mechanics pvt ltd": {"country": "Pakistán", "city": "Lahore", "lat": 31.5204, "lng": 74.3587},
-    "itio innovex pvt. ltd.": {"country": "India", "city": "Noida", "lat": 28.5355, "lng": 77.3910},
     "kavak": {"country": "México", "city": "CDMX", "lat": 19.4326, "lng": -99.1332},
     "rappi": {"country": "Colombia", "city": "Bogotá", "lat": 4.7110, "lng": -74.0721},
     "clara": {"country": "México", "city": "CDMX", "lat": 19.4326, "lng": -99.1332},
@@ -29,30 +27,69 @@ COMPANY_LOCATION_DB = {
     "stori": {"country": "México", "city": "CDMX", "lat": 19.4326, "lng": -99.1332},
     "platzi": {"country": "Colombia", "city": "Bogotá", "lat": 4.7110, "lng": -74.0721},
     "globant": {"country": "Argentina", "city": "Buenos Aires", "lat": -34.6037, "lng": -58.3816},
-    "banco santander": {"country": "España", "city": "Madrid", "lat": 40.4168, "lng": -3.7038},
     "bbva": {"country": "México", "city": "CDMX", "lat": 19.4326, "lng": -99.1332},
     "banorte": {"country": "México", "city": "Monterrey", "lat": 25.6866, "lng": -100.3161},
     "femsa": {"country": "México", "city": "Monterrey", "lat": 25.6866, "lng": -100.3161},
     "bancolombia": {"country": "Colombia", "city": "Medellín", "lat": 6.2442, "lng": -75.5812},
     "falabella": {"country": "Chile", "city": "Santiago", "lat": -33.4489, "lng": -70.6693},
-    "copec": {"country": "Chile", "city": "Santiago", "lat": -33.4489, "lng": -70.6693},
-    "stoneco": {"country": "Brasil", "city": "Rio de Janeiro", "lat": -22.9068, "lng": -43.1729},
-    "pagseguro": {"country": "Brasil", "city": "São Paulo", "lat": -23.5505, "lng": -46.6333},
+
+    # EUROPA
+    "banco santander": {"country": "España", "city": "Madrid", "lat": 40.4168, "lng": -3.7038},
+    "revolut": {"country": "Reino Unido", "city": "Londres", "lat": 51.5074, "lng": -0.1278},
+    "klarna": {"country": "Suecia", "city": "Estocolmo", "lat": 59.3293, "lng": 18.0686},
+    "n26": {"country": "Alemania", "city": "Berlín", "lat": 52.5200, "lng": 13.4050},
+    "sap": {"country": "Alemania", "city": "Walldorf", "lat": 49.2936, "lng": 8.6416},
+    "spotify": {"country": "Suecia", "city": "Estocolmo", "lat": 59.3293, "lng": 18.0686},
+    "asml": {"country": "Países Bajos", "city": "Veldhoven", "lat": 51.4173, "lng": 5.4072},
+    "adyen": {"country": "Países Bajos", "city": "Ámsterdam", "lat": 52.3676, "lng": 4.9041},
+    "delivery hero": {"country": "Alemania", "city": "Berlín", "lat": 52.5200, "lng": 13.4050},
+    "siemens": {"country": "Alemania", "city": "Múnich", "lat": 48.1351, "lng": 11.5820},
+    "airbus": {"country": "Francia", "city": "Toulouse", "lat": 43.6047, "lng": 1.4442},
+    "l'oréal": {"country": "Francia", "city": "París", "lat": 48.8566, "lng": 2.3522},
+    "loreal": {"country": "Francia", "city": "París", "lat": 48.8566, "lng": 2.3522},
+    "nestlé": {"country": "Suiza", "city": "Vevey", "lat": 46.4628, "lng": 6.8419},
+    "nestle": {"country": "Suiza", "city": "Vevey", "lat": 46.4628, "lng": 6.8419},
+
+    # ASIA / OTROS
+    "ve commercial vehicles ltd.": {"country": "India", "city": "Gurugram", "lat": 28.4595, "lng": 77.0266},
+    "data mechanics pvt ltd": {"country": "Pakistán", "city": "Lahore", "lat": 31.5204, "lng": 74.3587},
+    "itio innovex pvt. ltd.": {"country": "India", "city": "Noida", "lat": 28.5355, "lng": 77.3910},
 }
 
 COUNTRY_COORDS = {
+    # América
     "México": {"lat": 23.6345, "lng": -102.5528},
     "Colombia": {"lat": 4.5709, "lng": -74.2973},
     "Argentina": {"lat": -38.4161, "lng": -63.6167},
     "Chile": {"lat": -35.6751, "lng": -71.5430},
     "Brasil": {"lat": -14.2350, "lng": -51.9253},
-    "España": {"lat": 40.4637, "lng": -3.7492},
     "Estados Unidos": {"lat": 37.0902, "lng": -95.7129},
-    "India": {"lat": 20.5937, "lng": 78.9629},
-    "Pakistán": {"lat": 30.3753, "lng": 69.3451},
     "Perú": {"lat": -9.1900, "lng": -75.0152},
     "Ecuador": {"lat": -1.8312, "lng": -78.1834},
     "Uruguay": {"lat": -32.5228, "lng": -55.7658},
+    "Costa Rica": {"lat": 9.7489, "lng": -83.7534},
+
+    # Europa
+    "España": {"lat": 40.4637, "lng": -3.7492},
+    "Reino Unido": {"lat": 55.3781, "lng": -3.4360},
+    "Alemania": {"lat": 51.1657, "lng": 10.4515},
+    "Francia": {"lat": 46.2276, "lng": 2.2137},
+    "Italia": {"lat": 41.8719, "lng": 12.5674},
+    "Países Bajos": {"lat": 52.1326, "lng": 5.2913},
+    "Suiza": {"lat": 46.8182, "lng": 8.2275},
+    "Suecia": {"lat": 60.1282, "lng": 18.6435},
+    "Portugal": {"lat": 39.3999, "lng": -8.2245},
+    "Irlanda": {"lat": 53.4129, "lng": -8.2439},
+    "Bélgica": {"lat": 50.5039, "lng": 4.4699},
+    "Austria": {"lat": 47.5162, "lng": 14.5501},
+    "Polonia": {"lat": 51.9194, "lng": 19.1451},
+    "Dinamarca": {"lat": 56.2639, "lng": 9.5018},
+    "Noruega": {"lat": 60.4720, "lng": 8.4689},
+    "Finlandia": {"lat": 61.9241, "lng": 25.7482},
+
+    # Asia & Global
+    "India": {"lat": 20.5937, "lng": 78.9629},
+    "Pakistán": {"lat": 30.3753, "lng": 69.3451},
     "Desconocido": {"lat": 19.4326, "lng": -99.1332}
 }
 
@@ -72,6 +109,7 @@ def infer_location_and_status(first_name, last_name, company, position, connecte
     lat = 19.4326
     lng = -99.1332
     
+    # 1. Match en BD de Sedes
     for key, val in COMPANY_LOCATION_DB.items():
         if key in company_clean:
             country = val["country"]
@@ -80,7 +118,9 @@ def infer_location_and_status(first_name, last_name, company, position, connecte
             lng = val["lng"]
             break
             
+    # 2. Match por palabras clave geográficas en América, Europa, Asia
     if country == "Desconocido":
+        # América
         if "mexico" in full_text or "cdmx" in full_text or "cancun" in full_text or "monterrey" in full_text or "guadalajara" in full_text:
             country = "México"
             city = "CDMX" if "cdmx" in full_text else ("Cancún" if "cancun" in full_text else "Ciudad")
@@ -93,23 +133,55 @@ def infer_location_and_status(first_name, last_name, company, position, connecte
         elif "chile" in full_text or "santiago" in full_text:
             country = "Chile"
             city = "Santiago"
-        elif "espana" in full_text or "madrid" in full_text or "barcelona" in full_text:
-            country = "España"
-            city = "Madrid"
         elif "us" in full_text or "usa" in full_text or "united states" in full_text or "miami" in full_text or "new york" in full_text:
             country = "Estados Unidos"
             city = "Miami"
+            
+        # Europa
+        elif "espana" in full_text or "spain" in full_text or "madrid" in full_text or "barcelona" in full_text:
+            country = "España"
+            city = "Madrid" if "madrid" in full_text else "Barcelona"
+        elif "uk" in full_text or "united kingdom" in full_text or "london" in full_text or "londres" in full_text or "manchester" in full_text:
+            country = "Reino Unido"
+            city = "Londres"
+        elif "germany" in full_text or "alemania" in full_text or "berlin" in full_text or "munich" in full_text or "frankfurt" in full_text:
+            country = "Alemania"
+            city = "Berlín"
+        elif "france" in full_text or "francia" in full_text or "paris" in full_text or "lyon" in full_text:
+            country = "Francia"
+            city = "París"
+        elif "italy" in full_text or "italia" in full_text or "rome" in full_text or "milan" in full_text or "roma" in full_text:
+            country = "Italia"
+            city = "Milán"
+        elif "netherlands" in full_text or "paises bajos" in full_text or "amsterdam" in full_text or "rotterdam" in full_text:
+            country = "Países Bajos"
+            city = "Ámsterdam"
+        elif "switzerland" in full_text or "suiza" in full_text or "zurich" in full_text or "geneva" in full_text:
+            country = "Suiza"
+            city = "Zúrich"
+        elif "sweden" in full_text or "suecia" in full_text or "stockholm" in full_text:
+            country = "Suecia"
+            city = "Estocolmo"
+        elif "portugal" in full_text or "lisbon" in full_text or "lisboa" in full_text:
+            country = "Portugal"
+            city = "Lisboa"
+        elif "ireland" in full_text or "irlanda" in full_text or "dublin" in full_text:
+            country = "Irlanda"
+            city = "Dublín"
+
+        # Asia
         elif "india" in full_text:
             country = "India"
             city = "Delhi"
         elif "pakistan" in full_text:
             country = "Pakistán"
             city = "Lahore"
-            
+
+    # Coordenadas de respaldo por país
     if country in COUNTRY_COORDS and (lat == 19.4326 and lng == -99.1332 and country != "México"):
         lat = COUNTRY_COORDS[country]["lat"]
         lng = COUNTRY_COORDS[country]["lng"]
-        
+
     recency_status = "🟢 Vigente Confirmado"
     if "2026" in connected_on_str:
         recency_status = "🟢 Vigente Confirmado"
@@ -117,10 +189,10 @@ def infer_location_and_status(first_name, last_name, company, position, connecte
         recency_status = "🟡 Vigente Probable"
     else:
         recency_status = "🔍 Por Corroborar"
-        
+
     if not company:
         recency_status = "⚠️ Sin Empresa Registrada"
-        
+
     return {
         "country": country,
         "city": city,
@@ -174,12 +246,11 @@ def process_all_connections():
             }
             enriched_data.append(item)
             
-    print(f"✅ Procesadas {len(enriched_data)} conexiones sin costo alguno (Zero Cost).")
+    print(f"✅ Procesadas {len(enriched_data)} conexiones con soporte extendido para Europa y América.")
     
     with open(output_json, "w", encoding="utf-8") as f_out:
         json.dump(enriched_data, f_out, ensure_ascii=False, indent=2)
         
-    print(f" Archivo listo: '{output_json}' con coordenadas, recencia y ubicaciones normalizadas.")
     return enriched_data
 
 if __name__ == "__main__":
