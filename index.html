@@ -1155,21 +1155,18 @@ function toggleTheme() {
   }
 }
 
-// Load theme on startup without flash
 (function() {
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  if (savedTheme === 'light') {
-    document.body.classList.add('light');
-    document.addEventListener('DOMContentLoaded', () => {
-      const icon = document.getElementById('theme-icon');
-      const text = document.getElementById('theme-text');
-      if (icon && text) {
-        icon.textContent = '🌙';
-        text.textContent = 'Modo Oscuro';
-      }
-    });
-  }
+  // Forzar Dark Theme por defecto (Slate 950)
+  document.body.classList.remove('light');
+  localStorage.setItem('theme', 'dark');
 })();
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Carga automática de los 150+ contactos enriquecidos al iniciar
+  if (typeof loadDemoData === 'function') {
+    loadDemoData();
+  }
+});
 
 // ═══════════════════════════════════════════════════════════════════════
 // HELPERS
