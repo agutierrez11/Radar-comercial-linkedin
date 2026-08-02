@@ -1811,29 +1811,39 @@ async function loadDemoData(autoNavigate = false) {
       { company: "Radar Comercial", title: "B2B Sales Executive & Payments Specialist", start: "2024", end: "Actual" }
     ];
 
-    S.contacts = data.map(item => ({
-      id: item.id,
-      name: item.full_name,
-      first_name: item.first_name,
-      last_name: item.last_name,
-      company: item.company_zip || item.company || "",
-      position: item.position_current || item.position || "",
-      originalName: item.full_name,
-      originalCompany: item.company,
-      originalPosition: item.position,
-      url: item.url,
-      email: item.email || "",
-      connectedOn: item.connected_on,
-      connectedYearsAgo: connectedYearsAgo(item.connected_on),
-      country: item.country || "Desconocido",
-      city: item.city || "Desconocido",
-      lat: item.lat || 19.4326,
-      lng: item.lng || -99.1332,
-      jobStatus: item.job_status || "🟢 Vigente Confirmado",
-      hierarchy: inferHierarchy(item.position_current || item.position || ""),
-      sector: inferSector(item.position_current || item.position || "", item.company || ""),
-      score: 0
-    }));
+    S.contacts = data.map(item => {
+      const company = item.company_zip || item.company || "";
+      const position = item.position_current || item.position || "";
+      let country = item.country;
+      if (!country || country === "Desconocido") {
+        country = inferCountry(item.email || "", company, position);
+      }
+      const coords = getCoordsForContact(country, company, position);
+
+      return {
+        id: item.id,
+        name: item.full_name,
+        first_name: item.first_name,
+        last_name: item.last_name,
+        company: company,
+        position: position,
+        originalName: item.full_name,
+        originalCompany: item.company,
+        originalPosition: item.position,
+        url: item.url,
+        email: item.email || "",
+        connectedOn: item.connected_on,
+        connectedYearsAgo: connectedYearsAgo(item.connected_on),
+        country: coords.country,
+        city: coords.city,
+        lat: coords.lat,
+        lng: coords.lng,
+        jobStatus: item.job_status || "🟢 Vigente Confirmado",
+        hierarchy: inferHierarchy(position),
+        sector: inferSector(position, company),
+        score: 0
+      };
+    });
 
     S.contacts.forEach(c => { c.score = scoreContact(c); });
     icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
