@@ -3413,11 +3413,51 @@ function setPitchApproach(a) {
   updatePitchModal();
 }
 
+function getDiscProfileLocal(position, company, country) {
+  const p = (position || '').toLowerCase();
+  const c = (company || '').toLowerCase();
+  const cnt = (country || '').toLowerCase();
+  
+  if (/\b(ceo|cfo|cro|coo|owner|founder|director general|director de ventas|vp of sales|vp|head of sales|country manager)\b/i.test(p) || cnt.includes('asia')) {
+    return {
+      type: 'D (Dominante)',
+      archetype: 'Ejecutivo de Alto Impacto',
+      advice: 'Sé directo (2 líneas máx.), enfócate en métricas/ROI y propuesta de valor inmediata. No uses saludos largos.',
+      badgeClass: 'badge-red',
+      scriptModifier: (name, pos, comp, role, myComp) => `Hola ${name},\n\nVi tu rol como ${pos} en ${comp}. En ${myComp} ayudamos a líderes a escalar métricas clave sin fricción.\n\n1. Eficiencia directa\n2. Cero fricción de integración\n\n¿Tienes 10 min esta semana para ver los números?`
+    };
+  }
+  if (/\b(cto|tech|developer|architect|ingeniero|desarrollador|lead|software|security|infra|data)\b/i.test(p)) {
+    return {
+      type: 'C (Concienzudo / Analítico)',
+      archetype: 'Arquitecto Técnico & Datos',
+      advice: 'Proporciona datos concretos, arquitectura limpia, métricas empíricas y evita lenguaje de marketing vacíos.',
+      badgeClass: 'badge-blue',
+      scriptModifier: (name, pos, comp, role, myComp) => `Hola ${name},\n\nAnalizando los retos de infraestructura e integración en ${comp}, desarrollamos una solución de baja latencia con APIs robustas.\n\n¿Te enviaría sentido revisar la documentación y benchmarking técnico?`
+    };
+  }
+  if (/\b(hr|talent|people|marketing|cmo|brand|comunicacion|comunidad|growth)\b/i.test(p)) {
+    return {
+      type: 'I (Influyente / Social)',
+      archetype: 'Líder de Relaciones y Marca',
+      advice: 'Usa un tono entusiasta, enfocado en personas, colaboración, cultura e impacto visual.',
+      badgeClass: 'badge-amber',
+      scriptModifier: (name, pos, comp, role, myComp) => `¡Hola ${name}!\n\nMe encanta el trabajo de cultura y crecimiento que están haciendo en ${comp}.\n\nMe encantaría conectar para intercambiar perspectivas y explorar cómo colaborar juntos. ¿Conversamos 10 min?`
+    };
+  }
+  return {
+    type: 'S (Estable / Procesos)',
+    archetype: 'Especialista de Operaciones y Cumplimiento',
+    advice: 'Transmite confianza, muestra casos de éxito probados, reducción de riesgo y estabilidad.',
+    badgeClass: 'badge-green',
+    scriptModifier: (name, pos, comp, role, myComp) => `Hola ${name},\n\nSabemos que en ${comp} la estabilidad y el cumplimiento de procesos son fundamentales.\n\nContamos con casos de éxito comprobados reduciendo riesgos operativos. ¿Te gustaría conocer la metodología?`
+  };
+}
+
 function updatePitchModal() {
   const c = S.pitchLead;
   if (!c) return;
 
-  // Usar valores editados si existen en el modal, sino los del contacto
   const name = document.getElementById('modal-crm-name-input').value.trim() || c.name;
   const position = document.getElementById('modal-crm-pos-input').value.trim() || c.position;
   const company = document.getElementById('modal-crm-comp-input').value.trim() || c.company;
@@ -3432,6 +3472,24 @@ function updatePitchModal() {
   document.getElementById('modal-name').textContent = name;
   document.getElementById('modal-details').textContent = `${position} @ ${company}`;
   
+  const disc = getDiscProfileLocal(position, company, c.country);
+  
+  let discBanner = document.getElementById('modal-disc-banner');
+  if (!discBanner) {
+    discBanner = document.createElement('div');
+    discBanner.id = 'modal-disc-banner';
+    discBanner.style.cssText = 'background:rgba(79,70,229,0.08); border:1px solid rgba(79,70,229,0.25); border-radius:8px; padding:8px 12px; margin-top:8px; font-size:11px;';
+    const parent = document.getElementById('modal-details').parentNode;
+    parent.appendChild(discBanner);
+  }
+  discBanner.innerHTML = `
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+      <span style="font-weight:700; color:var(--text);">🧠 Perfil de Personalidad DISC (Motor Heurístico Gratuito):</span>
+      <span class="badge ${disc.badgeClass}">${disc.type} - ${disc.archetype}</span>
+    </div>
+    <div style="color:var(--text-muted); font-size:10px;">💡 <strong>Estrategia Recomendada:</strong> ${disc.advice}</div>
+  `;
+
   const lnkBtn = document.getElementById('modal-linkedin-url');
   if (c.url && c.url.trim()) {
     lnkBtn.href = c.url.trim();
@@ -3442,7 +3500,7 @@ function updatePitchModal() {
 
   let pitch = '';
   if (S.pitchApproach === 'directo') {
-    pitch = `Hola ${firstName},\n\nVi que estás en ${position} en ${company}${countryCtx}. Desde mi experiencia como ${myRole} en ${myCompany}, he trabajado con equipos similares enfrentando retos de [personaliza con el pain point específico].\n\n¿Te hace sentido explorar si hay sinergia? Serían 15 minutos.`;
+    pitch = disc.scriptModifier(firstName, position, company, myRole, myCompany);
   } else if (S.pitchApproach === 'valor') {
     pitch = `Hola ${firstName},\n\nTe comparto un recurso que armé sobre los principales retos en ${c.sector}${countryCtx}. Basado en mi trayectoria en ${myCompany}, creo que puede ser útil para alguien en tu posición.\n\n¿Te lo dejo sin costo? Si después quieres platicarlo, con gusto agendamos 10 minutos.`;
   } else {
@@ -3450,6 +3508,7 @@ function updatePitchModal() {
   }
   document.getElementById('modal-pitch-text').textContent = pitch;
 }
+
 
 function copyPitch() {
   const text = document.getElementById('modal-pitch-text').textContent;
