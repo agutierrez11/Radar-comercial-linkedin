@@ -1836,6 +1836,7 @@ async function loadDemoData(autoNavigate = false) {
     }));
 
     S.contacts.forEach(c => { c.score = scoreContact(c); });
+    icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
     S.loadedParts = { connections: true, positions: true, messages: true, profile: true };
 
     finalize();
@@ -1850,6 +1851,14 @@ async function loadDemoData(autoNavigate = false) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light');
+    const icon = document.getElementById('theme-icon');
+    const text = document.getElementById('theme-text');
+    if (icon) icon.textContent = '🌙';
+    if (text) text.textContent = 'Modo Oscuro';
+  }
   loadDemoData(true);
 });
 
