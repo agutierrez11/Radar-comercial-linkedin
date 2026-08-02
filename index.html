@@ -1153,7 +1153,8 @@ const S = {
     { id: 'no_position',  label: 'Sin cargo registrado',             on: true,  fn: c => !c.position },
     { id: 'no_name',      label: 'Nombre incompleto (<4 chars)',     on: true,  fn: c => c.name.length < 4 },
     { id: 'generic_pos',  label: 'Cargo genérico (student/unemployed)', on: true, fn: c => /\b(student|estudiante|desempleado|unemployed|—)\b/i.test(c.position) },
-    { id: 'old_contact',  label: 'Conexión >4 años sin interacción', on: true,  fn: c => c.connectedYearsAgo > 4 },
+    { id: 'old_contact',  label: 'Conexión >4 años sin interacción', on: true,  fn: c => c.connectedYearsAgo > 4 && (!c.msg_count || c.msg_count === 0) },
+
     { id: 'no_country',   label: 'País no identificado',             on: false, fn: c => c.country === 'Desconocido' },
   ]
 };
