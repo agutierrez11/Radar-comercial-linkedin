@@ -2032,14 +2032,17 @@ function renderHeader() {
   document.getElementById('header-kpis').style.display = 'flex';
 
   document.getElementById('nb-network').textContent = total.toLocaleString();
-  document.getElementById('nb-icp').textContent = icpContacts.length;
+  document.getElementById('nb-icp').textContent = icpContacts.length.toLocaleString();
   const purgeCount = S.contacts.filter(c => isPurgeCandidate(c)).length;
-  document.getElementById('nb-purge').textContent = purgeCount;
-  document.getElementById('nb-msgs').textContent = S.messages.length > 0 ? S.messages.length.toLocaleString() : '–';
+  document.getElementById('nb-purge').textContent = purgeCount.toLocaleString();
+  
+  const msgsCount = S.contacts.filter(c => c.msg_count && c.msg_count > 0).length;
+  document.getElementById('nb-msgs').textContent = msgsCount > 0 ? msgsCount.toLocaleString() : (S.messages.length > 0 ? S.messages.length.toLocaleString() : '–');
   
   const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno').length;
   document.getElementById('nb-crm').textContent = crmCount;
 }
+
 
 // ═══════════════════════════════════════════════════════════════════════
 // PROFILE
