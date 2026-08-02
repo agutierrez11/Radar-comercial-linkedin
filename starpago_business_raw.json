@@ -1,0 +1,2097 @@
+[
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAACrSRcB0sPbaau_-prZ1sHJ6nDJjSnXuFo,urn:li:activity:7487393230792126464,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAACrSRcB0sPbaau_-prZ1sHJ6nDJjSnXuFo",
+      "name": "Fred Amaya",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAACrSRcB0sPbaau_-prZ1sHJ6nDJjSnXuFo",
+      "position": "Founder of Biome Health | Making Gut-Brain Health, Wellness & Longevity Easier to Understand | Reaching 700K+ Professionals wkly | via Health Education",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEop2zBOt7_rg/profile-displayphoto-crop_800_800/B4EZkHwRv7GYAI-/0/1756771720647?e=1787184000&v=beta&t=XIUyp2v_P9pZ6bnvH1yrp81KRrE0JnVQB75OxnpUOPY",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D4E03AQEop2zBOt7_rg/profile-displayphoto-crop_800_800/B4EZkHwRv7GYAI-/0/1756771720647?e=1787184000&v=beta&t=XIUyp2v_P9pZ6bnvH1yrp81KRrE0JnVQB75OxnpUOPY",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7487393230792126464",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_paymentsolutions-globalpayments-fintech-activity-7487393230792126464-5EXN"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7487393230792126464",
+    "linkedinUrl": "https://www.linkedin.com/posts/starpagobusiness_paymentsolutions-globalpayments-fintech-activity-7487393230792126464-5EXN",
+    "content": "🌍 Connecting Global Markets, Simplifying Payments \nStarpago provides secure, efficient, and localized payment solutions to help global businesses expand faster and connect with worldwide users. \n🌐 Supported Markets:\n🇵🇰 Pakistan ｜ 🇧🇩 Bangladesh ｜ 🇮🇩 Indonesia ｜ 🇮🇳 India ｜ 🇵🇭 Philippines\n🇧🇷 Brazil ｜ 🇨🇴 Colombia ｜ 🇲🇽 Mexico ｜ 🇵🇪 Peru ｜ 🇨🇱 Chile\n🚀 Why Starpago?\n✅ One API connecting multiple markets\n✅ Local payment methods & multi-currency support\n✅ Stable channels with fast processing\n✅ Flexible settlement solutions\n✅ Smart risk control for business growth From Southeast Asia to Latin America, Starpago simplifies payments and empowers businesses to grow globally. \n🌎 Starpago — Your Global Payment Partner\n#PaymentSolutions #GlobalPayments #Fintech #DigitalPayments #PaymentGateway #CrossBorderPayments #LocalPayments",
+    "contentAttributes": [],
+    "author": {
+      "id": "100970834",
+      "universalName": "starpagobusiness",
+      "publicIdentifier": null,
+      "type": "company",
+      "name": "Starpago",
+      "linkedinUrl": "https://www.linkedin.com/company/starpagobusiness/posts",
+      "info": "1,715 followers",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D0BAQEsxDZDXG4YQA/company-logo_400_400/company-logo_400_400/0/1724084304262/starpagobusiness_logo?e=1787184000&v=beta&t=e8-vARPRc9JAcDNoFoIkY_-EQNhOxnY2H0xcoN3c6E0",
+        "width": 400,
+        "height": 400
+      },
+      "urn": "100970834"
+    },
+    "postedAt": {
+      "timestamp": 1785133655260,
+      "date": "2026-07-27T06:27:35.260Z",
+      "postedAgoShort": "5d",
+      "postedAgoText": "5 days ago • Edited • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQGfsXzqyCcXxA/feedshare-shrink_1280/B56Z.iQdo2HUAM-/0/1785133653692?e=1787184000&v=beta&t=lW2SkUT0XEXXhy7oR6Sx0Ddfsgk7SILdit2G7lQPT_s",
+        "width": 1080,
+        "height": 1080
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/starpagobusiness_paymentsolutions-globalpayments-fintech-activity-7487393230792126464-5EXN?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7487393230792126464",
+    "shareUrn": "urn:li:share:7487393229936455680",
+    "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:share:7487393229936455680",
+    "engagement": {
+      "id": "7487393230792126464",
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAACrSRcB0sPbaau_-prZ1sHJ6nDJjSnXuFo,urn:li:activity:7487393230792126464,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAACrSRcB0sPbaau_-prZ1sHJ6nDJjSnXuFo",
+          "name": "Fred Amaya",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAACrSRcB0sPbaau_-prZ1sHJ6nDJjSnXuFo",
+          "position": "Founder of Biome Health | Making Gut-Brain Health, Wellness & Longevity Easier to Understand | Reaching 700K+ Professionals wkly | via Health Education",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEop2zBOt7_rg/profile-displayphoto-crop_800_800/B4EZkHwRv7GYAI-/0/1756771720647?e=1787184000&v=beta&t=XIUyp2v_P9pZ6bnvH1yrp81KRrE0JnVQB75OxnpUOPY",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D4E03AQEop2zBOt7_rg/profile-displayphoto-crop_800_800/B4EZkHwRv7GYAI-/0/1756771720647?e=1787184000&v=beta&t=XIUyp2v_P9pZ6bnvH1yrp81KRrE0JnVQB75OxnpUOPY",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7487393230792126464"
+      }
+    ],
+    "reactionIds": [
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAACrSRcB0sPbaau_-prZ1sHJ6nDJjSnXuFo,urn:li:activity:7487393230792126464,0)"
+    ],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "targetUrl": "https://www.linkedin.com/company/starpagobusiness/",
+      "sessionId": "652a64d9-4a8d-4cd7-a1ad-e25b494661a6"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7484957979159666688,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7484957979159666688",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_latinamerica-latampayments-fintech-activity-7484957979159666688-VESL"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7484957979159666688",
+    "linkedinUrl": "https://www.linkedin.com/posts/starpagobusiness_latinamerica-latampayments-fintech-activity-7484957979159666688-VESL",
+    "content": "July 2026 Latin America Payments Market Update: Digital Payments & Cross-Border Ecosystem Continue to Grow\n🇧🇷 Brazil\nThe fintech sector continues to expand, with digital banks and payment companies strengthening capabilities in digital payments, open finance, and cross-border services, driving market innovation.\n🇲🇽 Mexico\nNu Mexico received CNBV approval to operate as a bank, expanding its digital accounts, payment, and financial services while accelerating Mexico’s digital finance development.\n🇦🇷 Argentina\nThe digital payment ecosystem continues to evolve, with QR payment networks becoming more connected. Alipay+ integration further improves cross-border payment accessibility and ecosystem connectivity.\n🌎 All the countries mentioned above are markets where we have active operations. Feel free to contact us for more information.\n#LatinAmerica #LATAMPayments #FinTech #DigitalPayments #CrossBorderPayments #PaymentSolutions #PaymentGateway",
+    "contentAttributes": [],
+    "author": {
+      "id": "100970834",
+      "universalName": "starpagobusiness",
+      "publicIdentifier": null,
+      "type": "company",
+      "name": "Starpago",
+      "linkedinUrl": "https://www.linkedin.com/company/starpagobusiness/posts",
+      "info": "1,715 followers",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D0BAQEsxDZDXG4YQA/company-logo_400_400/company-logo_400_400/0/1724084304262/starpagobusiness_logo?e=1787184000&v=beta&t=e8-vARPRc9JAcDNoFoIkY_-EQNhOxnY2H0xcoN3c6E0",
+        "width": 400,
+        "height": 400
+      },
+      "urn": "100970834"
+    },
+    "postedAt": {
+      "timestamp": 1784553046026,
+      "date": "2026-07-20T13:10:46.026Z",
+      "postedAgoShort": "1w",
+      "postedAgoText": "1 week ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQEy-Y6eYvbU7Q/feedshare-shrink_1280/B56Z9_pnpjKgAM-/0/1784553044920?e=1787184000&v=beta&t=_jw1TJl9k6d__LXPDu07WhGQ7FKM4HGG6VEC7hPxH6Q",
+        "width": 1080,
+        "height": 1350
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/starpagobusiness_latinamerica-latampayments-fintech-activity-7484957979159666688-VESL?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7484957979159666688",
+    "shareUrn": "urn:li:share:7484957978316447744",
+    "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:share:7484957978316447744",
+    "engagement": {
+      "id": "7484957979159666688",
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7484957979159666688,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7484957979159666688"
+      }
+    ],
+    "reactionIds": [
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7484957979159666688,0)"
+    ],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "targetUrl": "https://www.linkedin.com/company/starpagobusiness/",
+      "sessionId": "652a64d9-4a8d-4cd7-a1ad-e25b494661a6"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAADa5Bv4B4flOdrBHpWZSahAVqLp7rz0I0tw,urn:li:activity:7482394773765480448,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAADa5Bv4B4flOdrBHpWZSahAVqLp7rz0I0tw",
+      "name": "Stanislav Titov",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAADa5Bv4B4flOdrBHpWZSahAVqLp7rz0I0tw",
+      "position": "Fintech | Payment gateway | Payment solutions | Processing | PSP | B2B",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHJqUcBH92nQw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692633976171?e=1787184000&v=beta&t=33fWqIpaInTgCgHrX7ZPI-sPB3tFJhXBugm9NelAvnY",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHJqUcBH92nQw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692633976171?e=1787184000&v=beta&t=33fWqIpaInTgCgHrX7ZPI-sPB3tFJhXBugm9NelAvnY",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7482394773765480448",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_payments-digitalpayments-fintech-activity-7482394773765480448-Zflf"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7482394773765480448,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+      "name": "Antonio Ruíz",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+      "position": "Head of Operations / Business Development / Project Manager / Customer Service Manager / Ex Nubank",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7482394773765480448",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_payments-digitalpayments-fintech-activity-7482394773765480448-Zflf"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7482394773765480448",
+    "linkedinUrl": "https://www.linkedin.com/posts/starpagobusiness_payments-digitalpayments-fintech-activity-7482394773765480448-Zflf",
+    "content": "South Asia & Southeast Asia Payment Ecosystems Continue to Accelerate🌍\n🇮🇳India — The UPI ecosystem continues to grow rapidly, with expanding real-time payment infrastructure providing stronger support for a wider range of business payment scenarios.\n🇮🇩Indonesia — QRIS and digital payment systems continue to expand internationally, with stronger cross-border payment cooperation creating more opportunities for local payments and global merchants.\n🇵🇰Pakistan — The country continues to advance its cashless economy initiatives, with upgraded digital payment infrastructure supporting the growth of wallets, bank transfers, and online commercial payments.\n🤝We have established business operations in all the above markets. Feel free to contact us for more information.\n#Payments #DigitalPayments #Fintech #PaymentSolutions #GlobalPayments #UPI #QRIS #SouthAsia #SoutheastAsia",
+    "contentAttributes": [],
+    "author": {
+      "id": "100970834",
+      "universalName": "starpagobusiness",
+      "publicIdentifier": null,
+      "type": "company",
+      "name": "Starpago",
+      "linkedinUrl": "https://www.linkedin.com/company/starpagobusiness/posts",
+      "info": "1,715 followers",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D0BAQEsxDZDXG4YQA/company-logo_400_400/company-logo_400_400/0/1724084304262/starpagobusiness_logo?e=1787184000&v=beta&t=e8-vARPRc9JAcDNoFoIkY_-EQNhOxnY2H0xcoN3c6E0",
+        "width": 400,
+        "height": 400
+      },
+      "urn": "100970834"
+    },
+    "postedAt": {
+      "timestamp": 1783941930238,
+      "date": "2026-07-13T11:25:30.238Z",
+      "postedAgoShort": "2w",
+      "postedAgoText": "2 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQGq45rkK6t02Q/feedshare-image-high-res/B56Z9bOZhhGQAU-/0/1783941929303?e=1787184000&v=beta&t=gtB8ACCv9GWyM2b06XudvUb-ZJ4L72y196k7XA5dA9A",
+        "width": 1080,
+        "height": 1080
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/starpagobusiness_payments-digitalpayments-fintech-activity-7482394773765480448-Zflf?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7482394773765480448",
+    "shareUrn": "urn:li:share:7482394772792373249",
+    "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:share:7482394772792373249",
+    "engagement": {
+      "id": "7482394773765480448",
+      "likes": 2,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAADa5Bv4B4flOdrBHpWZSahAVqLp7rz0I0tw,urn:li:activity:7482394773765480448,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAADa5Bv4B4flOdrBHpWZSahAVqLp7rz0I0tw",
+          "name": "Stanislav Titov",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAADa5Bv4B4flOdrBHpWZSahAVqLp7rz0I0tw",
+          "position": "Fintech | Payment gateway | Payment solutions | Processing | PSP | B2B",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHJqUcBH92nQw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692633976171?e=1787184000&v=beta&t=33fWqIpaInTgCgHrX7ZPI-sPB3tFJhXBugm9NelAvnY",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQHJqUcBH92nQw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692633976171?e=1787184000&v=beta&t=33fWqIpaInTgCgHrX7ZPI-sPB3tFJhXBugm9NelAvnY",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7482394773765480448"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7482394773765480448,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+          "name": "Antonio Ruíz",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+          "position": "Head of Operations / Business Development / Project Manager / Customer Service Manager / Ex Nubank",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7482394773765480448"
+      }
+    ],
+    "reactionIds": [
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAADa5Bv4B4flOdrBHpWZSahAVqLp7rz0I0tw,urn:li:activity:7482394773765480448,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7482394773765480448,0)"
+    ],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "targetUrl": "https://www.linkedin.com/company/starpagobusiness/",
+      "sessionId": "652a64d9-4a8d-4cd7-a1ad-e25b494661a6"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c,urn:li:activity:7479872066586955776,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c",
+      "name": "Honey Dang",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c",
+      "position": "Business Development Manager | Sales Growth | Client Acquisition | IT Services | Technical Support | Strategic Partnerships",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5635AQENrgF-A6Od4w/profile-framedphoto-shrink_800_800/B56Z6rjLPCKAAY-/0/1780994585971?e=1786251600&v=beta&t=ZD4mGYVEg-_9In2iDrEUmIvfkYTVRnqzRVOnV-R7YX0",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5635AQENrgF-A6Od4w/profile-framedphoto-shrink_800_800/B56Z6rjLPCKAAY-/0/1780994585971?e=1786251600&v=beta&t=ZD4mGYVEg-_9In2iDrEUmIvfkYTVRnqzRVOnV-R7YX0",
+        "width": 720,
+        "height": 720
+      }
+    },
+    "postId": "7479872066586955776",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_latam-igaming-payments-activity-7479872066586955776-gj5X"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAAFJPYwB1umTFd-HlCpchPw3mZ7n3LgFfBc,urn:li:activity:7479872066586955776,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAAFJPYwB1umTFd-HlCpchPw3mZ7n3LgFfBc",
+      "name": "Romina Marquez",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAAFJPYwB1umTFd-HlCpchPw3mZ7n3LgFfBc",
+      "position": "Helping Startups Scale Across Borders Transforming regulatory compliance, and risk management into a competitive advantage that accelerates commercial growth and secures complex financial operations across Latin America",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQH4q5EIdK7PHw/profile-displayphoto-crop_800_800/B4DZqSbbWdKUAI-/0/1763393259933?e=1787184000&v=beta&t=twYzswz5J5r8bK76F_D3vdovA9ohZfctAlcHZOk5l08",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQH4q5EIdK7PHw/profile-displayphoto-crop_800_800/B4DZqSbbWdKUAI-/0/1763393259933?e=1787184000&v=beta&t=twYzswz5J5r8bK76F_D3vdovA9ohZfctAlcHZOk5l08",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7479872066586955776",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_latam-igaming-payments-activity-7479872066586955776-gj5X"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7479872066586955776",
+    "linkedinUrl": "https://www.linkedin.com/posts/starpagobusiness_latam-igaming-payments-activity-7479872066586955776-gj5X",
+    "content": "Latin America iGaming, Payments & FX Overview (H1 2026 )\n🇨🇱 Chile: Fintech regulation is relatively mature (Fintech Law 21.521), with continued development of bank transfers and digital payment adoption. Online gambling is still in the legislative process, and a nationwide licensing framework has not yet been established.\n🇵🇪 Peru: A regulated online gambling licensing framework has been established and is now in operational compliance. Digital payments and instant transfers continue to grow, with the industry gradually becoming more structured.\n🇦🇷 Argentina: Gambling regulation operates under a provincial-level framework, resulting in a fragmented but active market. Digital wallets and local payment methods continue to expand amid foreign exchange controls and macroeconomic volatility.\nWe operate across all the above markets and welcome any inquiries.\n#LATAM #iGaming #Payments #FX #Fintech #DigitalPayments #OnlineGambling #PeruGaming #ChileFintech #ArgentinaPayments",
+    "contentAttributes": [],
+    "author": {
+      "id": "100970834",
+      "universalName": "starpagobusiness",
+      "publicIdentifier": null,
+      "type": "company",
+      "name": "Starpago",
+      "linkedinUrl": "https://www.linkedin.com/company/starpagobusiness/posts",
+      "info": "1,715 followers",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D0BAQEsxDZDXG4YQA/company-logo_400_400/company-logo_400_400/0/1724084304262/starpagobusiness_logo?e=1787184000&v=beta&t=e8-vARPRc9JAcDNoFoIkY_-EQNhOxnY2H0xcoN3c6E0",
+        "width": 400,
+        "height": 400
+      },
+      "urn": "100970834"
+    },
+    "postedAt": {
+      "timestamp": 1783340469977,
+      "date": "2026-07-06T12:21:09.977Z",
+      "postedAgoShort": "3w",
+      "postedAgoText": "3 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQFbatmWWAOdgg/feedshare-image-high-res/B56Z83YAeDHcAU-/0/1783340468457?e=1787184000&v=beta&t=o2cn2ovGEU-ruYcGgk_Tr09yi85OcuugJqA7hf84w7E",
+        "width": 1080,
+        "height": 1350
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/starpagobusiness_latam-igaming-payments-activity-7479872066586955776-gj5X?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7479872066586955776",
+    "shareUrn": "urn:li:share:7479872065655959552",
+    "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:share:7479872065655959552",
+    "engagement": {
+      "id": "7479872066586955776",
+      "likes": 2,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c,urn:li:activity:7479872066586955776,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c",
+          "name": "Honey Dang",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c",
+          "position": "Business Development Manager | Sales Growth | Client Acquisition | IT Services | Technical Support | Strategic Partnerships",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5635AQENrgF-A6Od4w/profile-framedphoto-shrink_800_800/B56Z6rjLPCKAAY-/0/1780994585971?e=1786251600&v=beta&t=ZD4mGYVEg-_9In2iDrEUmIvfkYTVRnqzRVOnV-R7YX0",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5635AQENrgF-A6Od4w/profile-framedphoto-shrink_800_800/B56Z6rjLPCKAAY-/0/1780994585971?e=1786251600&v=beta&t=ZD4mGYVEg-_9In2iDrEUmIvfkYTVRnqzRVOnV-R7YX0",
+            "width": 720,
+            "height": 720
+          }
+        },
+        "postId": "7479872066586955776"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAAFJPYwB1umTFd-HlCpchPw3mZ7n3LgFfBc,urn:li:activity:7479872066586955776,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAAFJPYwB1umTFd-HlCpchPw3mZ7n3LgFfBc",
+          "name": "Romina Marquez",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAAFJPYwB1umTFd-HlCpchPw3mZ7n3LgFfBc",
+          "position": "Helping Startups Scale Across Borders Transforming regulatory compliance, and risk management into a competitive advantage that accelerates commercial growth and secures complex financial operations across Latin America",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQH4q5EIdK7PHw/profile-displayphoto-crop_800_800/B4DZqSbbWdKUAI-/0/1763393259933?e=1787184000&v=beta&t=twYzswz5J5r8bK76F_D3vdovA9ohZfctAlcHZOk5l08",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D4D03AQH4q5EIdK7PHw/profile-displayphoto-crop_800_800/B4DZqSbbWdKUAI-/0/1763393259933?e=1787184000&v=beta&t=twYzswz5J5r8bK76F_D3vdovA9ohZfctAlcHZOk5l08",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7479872066586955776"
+      }
+    ],
+    "reactionIds": [
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c,urn:li:activity:7479872066586955776,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAAFJPYwB1umTFd-HlCpchPw3mZ7n3LgFfBc,urn:li:activity:7479872066586955776,0)"
+    ],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "targetUrl": "https://www.linkedin.com/company/starpagobusiness/",
+      "sessionId": "652a64d9-4a8d-4cd7-a1ad-e25b494661a6"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7477317036650520576,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7477317036650520576",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_southasiapayments-southeastasiapayments-igaming-activity-7477317036650520576-6PS2"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7477317036650520576,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+      "name": "Antonio Ruíz",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+      "position": "Head of Operations / Business Development / Project Manager / Customer Service Manager / Ex Nubank",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7477317036650520576",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_southasiapayments-southeastasiapayments-igaming-activity-7477317036650520576-6PS2"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAABC3c6YBtDH9QRW2qaR4uEj6Qtm9Bx_hEbc,urn:li:activity:7477317036650520576,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAABC3c6YBtDH9QRW2qaR4uEj6Qtm9Bx_hEbc",
+      "name": "Mizanur Rahman",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAABC3c6YBtDH9QRW2qaR4uEj6Qtm9Bx_hEbc",
+      "position": "Fintech AML Compliance | Business Development | Cross-Border Payments | Fraud Investigation & Transaction Monitoring | Enterprise Client Onboarding | Priyo Pay | USA-Bangladesh.",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQGWGnjy5ETOUg/profile-displayphoto-shrink_800_800/B56ZYjBYuOGoAo-/0/1744344288660?e=1787184000&v=beta&t=sb_QDoDXWqRrS8P7kRx0OznGJ-vWApxVUMingGAol00",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGWGnjy5ETOUg/profile-displayphoto-shrink_800_800/B56ZYjBYuOGoAo-/0/1744344288660?e=1787184000&v=beta&t=sb_QDoDXWqRrS8P7kRx0OznGJ-vWApxVUMingGAol00",
+        "width": 600,
+        "height": 600
+      }
+    },
+    "postId": "7477317036650520576",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_southasiapayments-southeastasiapayments-igaming-activity-7477317036650520576-6PS2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7477317036650520576",
+    "linkedinUrl": "https://www.linkedin.com/posts/starpagobusiness_southasiapayments-southeastasiapayments-igaming-activity-7477317036650520576-6PS2",
+    "content": "South Asia & Southeast Asia Payments, iGaming & FX Market Overview (2026)\n🇧🇩 Bangladesh：Remittance-driven liquidity and expanding mobile financial services continue to support steady growth in digital payments and merchant adoption.\n🇵🇭 Philippines：Strong remittance inflows and rapid e-wallet and real-time payment expansion are accelerating the shift toward a cashless digital economy.\n🇵🇰 Pakistan：Sustained remittance inflows and ongoing digital payment infrastructure development are gradually strengthening financial inclusion and cross-border payment demand.\nWe have business coverage in all the above countries. Feel free to contact us for more information.\n#SouthAsiaPayments #SoutheastAsiaPayments #iGaming #Fintech",
+    "contentAttributes": [],
+    "author": {
+      "id": "100970834",
+      "universalName": "starpagobusiness",
+      "publicIdentifier": null,
+      "type": "company",
+      "name": "Starpago",
+      "linkedinUrl": "https://www.linkedin.com/company/starpagobusiness/posts",
+      "info": "1,715 followers",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D0BAQEsxDZDXG4YQA/company-logo_400_400/company-logo_400_400/0/1724084304262/starpagobusiness_logo?e=1787184000&v=beta&t=e8-vARPRc9JAcDNoFoIkY_-EQNhOxnY2H0xcoN3c6E0",
+        "width": 400,
+        "height": 400
+      },
+      "urn": "100970834"
+    },
+    "postedAt": {
+      "timestamp": 1782731303370,
+      "date": "2026-06-29T11:08:23.370Z",
+      "postedAgoShort": "1mo",
+      "postedAgoText": "1 month ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQEQhqa42hy29g/feedshare-image-high-res/B56Z8TEOQ0G4AY-/0/1782731302223?e=1787184000&v=beta&t=Pp6VtBzFQ0-8DanmRIlhiS2TaxS0PnB9yauhhp-4UIU",
+        "width": 1080,
+        "height": 1350
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/starpagobusiness_southasiapayments-southeastasiapayments-igaming-activity-7477317036650520576-6PS2?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7477317036650520576",
+    "shareUrn": "urn:li:share:7477317035811590144",
+    "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:share:7477317035811590144",
+    "engagement": {
+      "id": "7477317036650520576",
+      "likes": 3,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 3
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7477317036650520576,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+          "name": "Antonio Ruíz",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+          "position": "Head of Operations / Business Development / Project Manager / Customer Service Manager / Ex Nubank",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7477317036650520576"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7477317036650520576,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7477317036650520576"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAABC3c6YBtDH9QRW2qaR4uEj6Qtm9Bx_hEbc,urn:li:activity:7477317036650520576,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAABC3c6YBtDH9QRW2qaR4uEj6Qtm9Bx_hEbc",
+          "name": "Mizanur Rahman",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAABC3c6YBtDH9QRW2qaR4uEj6Qtm9Bx_hEbc",
+          "position": "Fintech AML Compliance | Business Development | Cross-Border Payments | Fraud Investigation & Transaction Monitoring | Enterprise Client Onboarding | Priyo Pay | USA-Bangladesh.",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQGWGnjy5ETOUg/profile-displayphoto-shrink_800_800/B56ZYjBYuOGoAo-/0/1744344288660?e=1787184000&v=beta&t=sb_QDoDXWqRrS8P7kRx0OznGJ-vWApxVUMingGAol00",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQGWGnjy5ETOUg/profile-displayphoto-shrink_800_800/B56ZYjBYuOGoAo-/0/1744344288660?e=1787184000&v=beta&t=sb_QDoDXWqRrS8P7kRx0OznGJ-vWApxVUMingGAol00",
+            "width": 600,
+            "height": 600
+          }
+        },
+        "postId": "7477317036650520576"
+      }
+    ],
+    "reactionIds": [
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7477317036650520576,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7477317036650520576,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAABC3c6YBtDH9QRW2qaR4uEj6Qtm9Bx_hEbc,urn:li:activity:7477317036650520576,0)"
+    ],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "targetUrl": "https://www.linkedin.com/company/starpagobusiness/",
+      "sessionId": "652a64d9-4a8d-4cd7-a1ad-e25b494661a6"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAF-kYcQBUKVAtkCCO5YXmOrEvL5Q8K4jeW4,urn:li:activity:7472952481950351360,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAF-kYcQBUKVAtkCCO5YXmOrEvL5Q8K4jeW4",
+      "name": "Juls J.",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAF-kYcQBUKVAtkCCO5YXmOrEvL5Q8K4jeW4",
+      "position": "Helping iGaming Businesses Scale Payments | Fintech Sales Manager @ VeloPay | India • Thailand • Vietnam | Pay-In • Payout • USDT",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQFazNeaV6B8RQ/profile-displayphoto-crop_800_800/B56Z9zDkAtHYAM-/0/1784341746160?e=1787184000&v=beta&t=4l-R44ukMzamTUx_qlMhR0nhHJT28mmvOEMHKWMMTPc",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQFazNeaV6B8RQ/profile-displayphoto-crop_800_800/B56Z9zDkAtHYAM-/0/1784341746160?e=1787184000&v=beta&t=4l-R44ukMzamTUx_qlMhR0nhHJT28mmvOEMHKWMMTPc",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7472952481950351360",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_igaming-payments-latammarkets-activity-7472952481950351360-Wb_5"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7472952481950351360,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7472952481950351360",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_igaming-payments-latammarkets-activity-7472952481950351360-Wb_5"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7472952481950351360,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+      "name": "Elius Molla",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+      "position": "B2B Lead Generation Specialist | LinkedIn Research | Email List Building | Web Research | Data Entry | CRM | Email Verification",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7472952481950351360",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_igaming-payments-latammarkets-activity-7472952481950351360-Wb_5"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_company:11820131,urn:li:activity:7472952481950351360,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "11820131",
+      "name": "BetStarters",
+      "linkedinUrl": "https://www.linkedin.com/company/betstarters1/",
+      "position": "16,960 followers"
+    },
+    "postId": "7472952481950351360",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_igaming-payments-latammarkets-activity-7472952481950351360-Wb_5"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAFLvx3cBfrXjOPskMxUGPG_AmXzp-QNUj7k,urn:li:activity:7472952481950351360,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAFLvx3cBfrXjOPskMxUGPG_AmXzp-QNUj7k",
+      "name": "Jerome B.",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAFLvx3cBfrXjOPskMxUGPG_AmXzp-QNUj7k",
+      "position": "Finance Team Leader  | iGaming Payments Orchestration Expert. | Daypay Global Payment Infrastructure High-Risk Payment Solutions for iGaming | Philippines • Bangladesh • Vietnam | TG: @DayPGL_Jer202313",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHQd-pFn7XMfg/profile-displayphoto-crop_800_800/B56Z7ajREAGcAI-/0/1781783141938?e=1787184000&v=beta&t=HSr-upvffnt4WYlyP7McSE2aeo8M0uhiUX8tdrPsKKU",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHQd-pFn7XMfg/profile-displayphoto-crop_800_800/B56Z7ajREAGcAI-/0/1781783141938?e=1787184000&v=beta&t=HSr-upvffnt4WYlyP7McSE2aeo8M0uhiUX8tdrPsKKU",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7472952481950351360",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_igaming-payments-latammarkets-activity-7472952481950351360-Wb_5"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c,urn:li:activity:7472952481950351360,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c",
+      "name": "Honey Dang",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c",
+      "position": "Business Development Manager | Sales Growth | Client Acquisition | IT Services | Technical Support | Strategic Partnerships",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5635AQENrgF-A6Od4w/profile-framedphoto-shrink_800_800/B56Z6rjLPCKAAY-/0/1780994585971?e=1786251600&v=beta&t=ZD4mGYVEg-_9In2iDrEUmIvfkYTVRnqzRVOnV-R7YX0",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5635AQENrgF-A6Od4w/profile-framedphoto-shrink_800_800/B56Z6rjLPCKAAY-/0/1780994585971?e=1786251600&v=beta&t=ZD4mGYVEg-_9In2iDrEUmIvfkYTVRnqzRVOnV-R7YX0",
+        "width": 720,
+        "height": 720
+      }
+    },
+    "postId": "7472952481950351360",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_igaming-payments-latammarkets-activity-7472952481950351360-Wb_5"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7472952481950351360",
+    "linkedinUrl": "https://www.linkedin.com/posts/starpagobusiness_igaming-payments-latammarkets-activity-7472952481950351360-Wb_5",
+    "content": "Latin America iGaming Payment & Regulatory Structure Overview (2026):\n🇧🇷 Brazil: PIX has become the core infrastructure for iGaming payments. Credit cards are gradually being phased out from deposit scenarios under regulatory restrictions, while oversight continues to strengthen compliance and taxation frameworks across the industry.\n🇲🇽 Mexico: The iGaming market continues to grow steadily, but the regulatory framework remains fragmented. Local payments are still dominated by bank transfers and regional payment methods, resulting in significant structural differences across the market.\n🇨🇴 Colombia: The iGaming regulatory system is relatively mature, with ongoing tightening of tax and compliance requirements. The industry is entering a phase of stable growth alongside improving operational efficiency.\nWe operate across all the above markets and welcome any inquiries.\n#iGaming #Payments #LATAMMarkets #PaymentGateway",
+    "contentAttributes": [],
+    "author": {
+      "id": "100970834",
+      "universalName": "starpagobusiness",
+      "publicIdentifier": null,
+      "type": "company",
+      "name": "Starpago",
+      "linkedinUrl": "https://www.linkedin.com/company/starpagobusiness/posts",
+      "info": "1,715 followers",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D0BAQEsxDZDXG4YQA/company-logo_400_400/company-logo_400_400/0/1724084304262/starpagobusiness_logo?e=1787184000&v=beta&t=e8-vARPRc9JAcDNoFoIkY_-EQNhOxnY2H0xcoN3c6E0",
+        "width": 400,
+        "height": 400
+      },
+      "urn": "100970834"
+    },
+    "postedAt": {
+      "timestamp": 1781690712440,
+      "date": "2026-06-17T10:05:12.440Z",
+      "postedAgoShort": "1mo",
+      "postedAgoText": "1 month ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQHqhqSRaaIliQ/feedshare-shrink_800/B56Z7VCrhsGQAg-/0/1781690710338?e=1787184000&v=beta&t=J3YE0wqj1Z-du-Ejx7MQUr7_1xEn74Qk0bWAEdg3rMc",
+        "width": 656,
+        "height": 820
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/starpagobusiness_igaming-payments-latammarkets-activity-7472952481950351360-Wb_5?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7472952481950351360",
+    "shareUrn": "urn:li:share:7472952478934691840",
+    "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:share:7472952478934691840",
+    "engagement": {
+      "id": "7472952481950351360",
+      "likes": 6,
+      "comments": 0,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 6
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAF-kYcQBUKVAtkCCO5YXmOrEvL5Q8K4jeW4,urn:li:activity:7472952481950351360,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAF-kYcQBUKVAtkCCO5YXmOrEvL5Q8K4jeW4",
+          "name": "Juls J.",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAF-kYcQBUKVAtkCCO5YXmOrEvL5Q8K4jeW4",
+          "position": "Helping iGaming Businesses Scale Payments | Fintech Sales Manager @ VeloPay | India • Thailand • Vietnam | Pay-In • Payout • USDT",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQFazNeaV6B8RQ/profile-displayphoto-crop_800_800/B56Z9zDkAtHYAM-/0/1784341746160?e=1787184000&v=beta&t=4l-R44ukMzamTUx_qlMhR0nhHJT28mmvOEMHKWMMTPc",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQFazNeaV6B8RQ/profile-displayphoto-crop_800_800/B56Z9zDkAtHYAM-/0/1784341746160?e=1787184000&v=beta&t=4l-R44ukMzamTUx_qlMhR0nhHJT28mmvOEMHKWMMTPc",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7472952481950351360"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7472952481950351360,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7472952481950351360"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7472952481950351360,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+          "name": "Elius Molla",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+          "position": "B2B Lead Generation Specialist | LinkedIn Research | Email List Building | Web Research | Data Entry | CRM | Email Verification",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7472952481950351360"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_company:11820131,urn:li:activity:7472952481950351360,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "11820131",
+          "name": "BetStarters",
+          "linkedinUrl": "https://www.linkedin.com/company/betstarters1/",
+          "position": "16,960 followers"
+        },
+        "postId": "7472952481950351360"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAFLvx3cBfrXjOPskMxUGPG_AmXzp-QNUj7k,urn:li:activity:7472952481950351360,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAFLvx3cBfrXjOPskMxUGPG_AmXzp-QNUj7k",
+          "name": "Jerome B.",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAFLvx3cBfrXjOPskMxUGPG_AmXzp-QNUj7k",
+          "position": "Finance Team Leader  | iGaming Payments Orchestration Expert. | Daypay Global Payment Infrastructure High-Risk Payment Solutions for iGaming | Philippines • Bangladesh • Vietnam | TG: @DayPGL_Jer202313",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHQd-pFn7XMfg/profile-displayphoto-crop_800_800/B56Z7ajREAGcAI-/0/1781783141938?e=1787184000&v=beta&t=HSr-upvffnt4WYlyP7McSE2aeo8M0uhiUX8tdrPsKKU",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQHQd-pFn7XMfg/profile-displayphoto-crop_800_800/B56Z7ajREAGcAI-/0/1781783141938?e=1787184000&v=beta&t=HSr-upvffnt4WYlyP7McSE2aeo8M0uhiUX8tdrPsKKU",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7472952481950351360"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c,urn:li:activity:7472952481950351360,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c",
+          "name": "Honey Dang",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c",
+          "position": "Business Development Manager | Sales Growth | Client Acquisition | IT Services | Technical Support | Strategic Partnerships",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5635AQENrgF-A6Od4w/profile-framedphoto-shrink_800_800/B56Z6rjLPCKAAY-/0/1780994585971?e=1786251600&v=beta&t=ZD4mGYVEg-_9In2iDrEUmIvfkYTVRnqzRVOnV-R7YX0",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5635AQENrgF-A6Od4w/profile-framedphoto-shrink_800_800/B56Z6rjLPCKAAY-/0/1780994585971?e=1786251600&v=beta&t=ZD4mGYVEg-_9In2iDrEUmIvfkYTVRnqzRVOnV-R7YX0",
+            "width": 720,
+            "height": 720
+          }
+        },
+        "postId": "7472952481950351360"
+      }
+    ],
+    "reactionIds": [
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAF-kYcQBUKVAtkCCO5YXmOrEvL5Q8K4jeW4,urn:li:activity:7472952481950351360,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7472952481950351360,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7472952481950351360,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_company:11820131,urn:li:activity:7472952481950351360,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAFLvx3cBfrXjOPskMxUGPG_AmXzp-QNUj7k,urn:li:activity:7472952481950351360,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAABUR4rsByJwWftINaXini-LLMoJkRN2533c,urn:li:activity:7472952481950351360,0)"
+    ],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "targetUrl": "https://www.linkedin.com/company/starpagobusiness/",
+      "sessionId": "652a64d9-4a8d-4cd7-a1ad-e25b494661a6"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7468633738751664128,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+      "name": "Elius Molla",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+      "position": "B2B Lead Generation Specialist | LinkedIn Research | Email List Building | Web Research | Data Entry | CRM | Email Verification",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7468633738751664128",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-payments-fintech-activity-7468633738751664128-bR7r"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGptghoBKqJU9l9LHNiqd2Z9exZl2-63ZKY,urn:li:activity:7468633738751664128,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAGptghoBKqJU9l9LHNiqd2Z9exZl2-63ZKY",
+      "name": "Muhammad Hanzala",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAGptghoBKqJU9l9LHNiqd2Z9exZl2-63ZKY",
+      "position": "Business Development Officer at TyconPay",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQE4MfI8Z4hDhQ/profile-displayphoto-crop_800_800/B4DZ8Qnx2NI8AI-/0/1782690292356?e=1787184000&v=beta&t=VOWotzsIuus-l1lFF2cY9TkynxfB6sVgopLuivenLHo",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQE4MfI8Z4hDhQ/profile-displayphoto-crop_800_800/B4DZ8Qnx2NI8AI-/0/1782690292356?e=1787184000&v=beta&t=VOWotzsIuus-l1lFF2cY9TkynxfB6sVgopLuivenLHo",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7468633738751664128",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-payments-fintech-activity-7468633738751664128-bR7r"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE6z0CgBgTyv4r4bmt2Ob4MUkHLtieo-Vds,urn:li:activity:7468633738751664128,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAE6z0CgBgTyv4r4bmt2Ob4MUkHLtieo-Vds",
+      "name": "Amanda ma",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAE6z0CgBgTyv4r4bmt2Ob4MUkHLtieo-Vds",
+      "position": "StarPago HRD & Deefinch HRD 📧Please Send your cv to: hr@starpaybank.com/hrd@starpago.com"
+    },
+    "postId": "7468633738751664128",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-payments-fintech-activity-7468633738751664128-bR7r"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7468633738751664128,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7468633738751664128",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-payments-fintech-activity-7468633738751664128-bR7r"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo,urn:li:activity:7468633738751664128,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+      "name": "Ada Chan",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+      "position": "Let’s meet me at Sigma Manila, Philippines | Payment Solution | FinTech | Trading and Brokerage | iGaming",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7468633738751664128",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-payments-fintech-activity-7468633738751664128-bR7r"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7468633738751664128,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+      "name": "Antonio Ruíz",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+      "position": "Head of Operations / Business Development / Project Manager / Customer Service Manager / Ex Nubank",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7468633738751664128",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-payments-fintech-activity-7468633738751664128-bR7r"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7468633738751664128",
+    "linkedinUrl": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-payments-fintech-activity-7468633738751664128-bR7r",
+    "content": "🌟 SiGMA Asia 2026 Has Successfully Concluded\nA big thank you to everyone who visited the Starpago booth! It was a pleasure meeting you in person, exchanging insights, and exploring payment market trends and partnership opportunities together.\nWe truly appreciate every conversation and every vote of confidence. We look forward to turning the connections made during the event into meaningful collaborations.\nIf you were unable to attend, feel free to connect with us online anytime. We look forward to building new partnerships and creating more opportunities together.\n🌍 Supported Markets:\n🇵🇰 Pakistan ｜ 🇧🇩 Bangladesh ｜ 🇮🇩 Indonesia ｜ 🇮🇳 India ｜ 🇵🇭 Philippines ｜ 🇷🇺 Russia\n🇧🇷 Brazil ｜ 🇨🇴 Colombia ｜ 🇲🇽 Mexico ｜ 🇵🇪 Peru ｜ 🇨🇱 Chile ｜ 🇺🇸 United States ｜ 🇹🇷 Turkey\nSee you at the next exhibition! 🤝\n#SiGMAAsia2026 #Payments #Fintech #DigitalPayments #GlobalBusiness",
+    "contentAttributes": [],
+    "author": {
+      "id": "100970834",
+      "universalName": "starpagobusiness",
+      "publicIdentifier": null,
+      "type": "company",
+      "name": "Starpago",
+      "linkedinUrl": "https://www.linkedin.com/company/starpagobusiness/posts",
+      "info": "1,715 followers",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D0BAQEsxDZDXG4YQA/company-logo_400_400/company-logo_400_400/0/1724084304262/starpagobusiness_logo?e=1787184000&v=beta&t=e8-vARPRc9JAcDNoFoIkY_-EQNhOxnY2H0xcoN3c6E0",
+        "width": 400,
+        "height": 400
+      },
+      "urn": "100970834"
+    },
+    "postedAt": {
+      "timestamp": 1780661043823,
+      "date": "2026-06-05T12:04:03.823Z",
+      "postedAgoShort": "1mo",
+      "postedAgoText": "1 month ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQGiWh03jAw4Ow/feedshare-shrink_1280/B56Z6XqzvsHIAM-/0/1780661042987?e=1787184000&v=beta&t=oea_5iaB3S7kz-s5CYBHsIT9oRXCtqPY8ZyUa30KyyY",
+        "width": 1280,
+        "height": 1706
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-payments-fintech-activity-7468633738751664128-bR7r?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7468633738751664128",
+    "shareUrn": "urn:li:share:7468633737841344512",
+    "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:share:7468633737841344512",
+    "engagement": {
+      "id": "7468633738751664128",
+      "likes": 6,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 6
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGptghoBKqJU9l9LHNiqd2Z9exZl2-63ZKY,urn:li:activity:7468633738751664128,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAGptghoBKqJU9l9LHNiqd2Z9exZl2-63ZKY",
+          "name": "Muhammad Hanzala",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAGptghoBKqJU9l9LHNiqd2Z9exZl2-63ZKY",
+          "position": "Business Development Officer at TyconPay",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQE4MfI8Z4hDhQ/profile-displayphoto-crop_800_800/B4DZ8Qnx2NI8AI-/0/1782690292356?e=1787184000&v=beta&t=VOWotzsIuus-l1lFF2cY9TkynxfB6sVgopLuivenLHo",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D4D03AQE4MfI8Z4hDhQ/profile-displayphoto-crop_800_800/B4DZ8Qnx2NI8AI-/0/1782690292356?e=1787184000&v=beta&t=VOWotzsIuus-l1lFF2cY9TkynxfB6sVgopLuivenLHo",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7468633738751664128"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7468633738751664128,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+          "name": "Elius Molla",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+          "position": "B2B Lead Generation Specialist | LinkedIn Research | Email List Building | Web Research | Data Entry | CRM | Email Verification",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7468633738751664128"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7468633738751664128,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7468633738751664128"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE6z0CgBgTyv4r4bmt2Ob4MUkHLtieo-Vds,urn:li:activity:7468633738751664128,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAE6z0CgBgTyv4r4bmt2Ob4MUkHLtieo-Vds",
+          "name": "Amanda ma",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAE6z0CgBgTyv4r4bmt2Ob4MUkHLtieo-Vds",
+          "position": "StarPago HRD & Deefinch HRD 📧Please Send your cv to: hr@starpaybank.com/hrd@starpago.com"
+        },
+        "postId": "7468633738751664128"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo,urn:li:activity:7468633738751664128,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+          "name": "Ada Chan",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+          "position": "Let’s meet me at Sigma Manila, Philippines | Payment Solution | FinTech | Trading and Brokerage | iGaming",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7468633738751664128"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7468633738751664128,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+          "name": "Antonio Ruíz",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+          "position": "Head of Operations / Business Development / Project Manager / Customer Service Manager / Ex Nubank",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7468633738751664128"
+      }
+    ],
+    "reactionIds": [
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGptghoBKqJU9l9LHNiqd2Z9exZl2-63ZKY,urn:li:activity:7468633738751664128,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7468633738751664128,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7468633738751664128,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE6z0CgBgTyv4r4bmt2Ob4MUkHLtieo-Vds,urn:li:activity:7468633738751664128,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo,urn:li:activity:7468633738751664128,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7468633738751664128,0)"
+    ],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "targetUrl": "https://www.linkedin.com/company/starpagobusiness/",
+      "sessionId": "652a64d9-4a8d-4cd7-a1ad-e25b494661a6"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7467494520381808642,0)",
+    "reactionType": "APPRECIATION",
+    "actor": {
+      "id": "ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+      "name": "Elius Molla",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+      "position": "B2B Lead Generation Specialist | LinkedIn Research | Email List Building | Web Research | Data Entry | CRM | Email Verification",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7467494520381808642",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-sigmaasia-payments-activity-7467494520381808642-Dr21"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo,urn:li:activity:7467494520381808642,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+      "name": "Ada Chan",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+      "position": "Let’s meet me at Sigma Manila, Philippines | Payment Solution | FinTech | Trading and Brokerage | iGaming",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7467494520381808642",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-sigmaasia-payments-activity-7467494520381808642-Dr21"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7467494520381808642,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+      "name": "Antonio Ruíz",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+      "position": "Head of Operations / Business Development / Project Manager / Customer Service Manager / Ex Nubank",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7467494520381808642",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-sigmaasia-payments-activity-7467494520381808642-Dr21"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAA0kWNcBWEKzL4z9L-dw2zU-JHVuqa5sZqM,urn:li:activity:7467494520381808642,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAA0kWNcBWEKzL4z9L-dw2zU-JHVuqa5sZqM",
+      "name": "Sebastián Casas Zavala",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAA0kWNcBWEKzL4z9L-dw2zU-JHVuqa5sZqM",
+      "position": "CEO DE KIKI & ATENEA COMPANY",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D4E03AQFnCFfNhnNR1A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1700718306812?e=1787184000&v=beta&t=GY2Mdy0OSqcESfI9MeRkuE5etsLY6pwk6n_0KrFWgO4",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D4E03AQFnCFfNhnNR1A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1700718306812?e=1787184000&v=beta&t=GY2Mdy0OSqcESfI9MeRkuE5etsLY6pwk6n_0KrFWgO4",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7467494520381808642",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-sigmaasia-payments-activity-7467494520381808642-Dr21"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7467494520381808642",
+    "linkedinUrl": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-sigmaasia-payments-activity-7467494520381808642-Dr21",
+    "content": "☕️ SiGMA Asia Day 1 | Nothing Beats Meeting Face-to-Face\n\nSiGMA Asia 2026 has officially kicked off!\n\nToday at Booth 1180, we had the pleasure of connecting with partners from the global payments and gaming industries. From market trends and payment needs to localization strategies and global business expansion, every conversation gave us deeper insights into industry developments and our partners’ evolving needs.\n\nMore than simply introducing our products and services, we value the opportunity to meet face-to-face. Meaningful partnerships often begin with open and productive conversations—understanding each other’s challenges and exploring the right solutions together.\n\n📢 The exhibition is still ongoing, and you'll find us right here at Booth 1180.\n\nIf you haven’t stopped by yet:\n👉 Come talk to us about your payment needs\n👉 Or simply drop by for a break and a chat\n\nThe Starpago team is here and ready to connect with you throughout the event.\n\n📍 SMX Convention Center, Manila\n🎯 Booth 1180\n#SiGMAAsia2026 #SiGMAAsia #Payments #CrossBorderPayments #Fintech #PaymentSolutions #iGaming #DigitalPayments #Manila #SMXManila",
+    "contentAttributes": [],
+    "author": {
+      "id": "100970834",
+      "universalName": "starpagobusiness",
+      "publicIdentifier": null,
+      "type": "company",
+      "name": "Starpago",
+      "linkedinUrl": "https://www.linkedin.com/company/starpagobusiness/posts",
+      "info": "1,715 followers",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D0BAQEsxDZDXG4YQA/company-logo_400_400/company-logo_400_400/0/1724084304262/starpagobusiness_logo?e=1787184000&v=beta&t=e8-vARPRc9JAcDNoFoIkY_-EQNhOxnY2H0xcoN3c6E0",
+        "width": 400,
+        "height": 400
+      },
+      "urn": "100970834"
+    },
+    "postedAt": {
+      "timestamp": 1780389432998,
+      "date": "2026-06-02T08:37:12.998Z",
+      "postedAgoShort": "1mo",
+      "postedAgoText": "1 month ago • Edited • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQFicOd0Mh4MBg/feedshare-image-high-res/B56Z6HesRDHcAU-/0/1780389431114?e=1787184000&v=beta&t=6s7MG5zuRfSkfZoxcdzlNTqh7Md0M7YYI7ey5rgffA0",
+        "width": 2048,
+        "height": 1536
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-sigmaasia-payments-activity-7467494520381808642-Dr21?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7467494520381808642",
+    "shareUrn": "urn:li:share:7467494517403922432",
+    "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:share:7467494517403922432",
+    "engagement": {
+      "id": "7467494520381808642",
+      "likes": 4,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 3
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7467494520381808642,0)",
+        "reactionType": "APPRECIATION",
+        "actor": {
+          "id": "ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+          "name": "Elius Molla",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+          "position": "B2B Lead Generation Specialist | LinkedIn Research | Email List Building | Web Research | Data Entry | CRM | Email Verification",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7467494520381808642"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo,urn:li:activity:7467494520381808642,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+          "name": "Ada Chan",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+          "position": "Let’s meet me at Sigma Manila, Philippines | Payment Solution | FinTech | Trading and Brokerage | iGaming",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7467494520381808642"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7467494520381808642,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+          "name": "Antonio Ruíz",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+          "position": "Head of Operations / Business Development / Project Manager / Customer Service Manager / Ex Nubank",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7467494520381808642"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAA0kWNcBWEKzL4z9L-dw2zU-JHVuqa5sZqM,urn:li:activity:7467494520381808642,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAA0kWNcBWEKzL4z9L-dw2zU-JHVuqa5sZqM",
+          "name": "Sebastián Casas Zavala",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAA0kWNcBWEKzL4z9L-dw2zU-JHVuqa5sZqM",
+          "position": "CEO DE KIKI & ATENEA COMPANY",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D4E03AQFnCFfNhnNR1A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1700718306812?e=1787184000&v=beta&t=GY2Mdy0OSqcESfI9MeRkuE5etsLY6pwk6n_0KrFWgO4",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D4E03AQFnCFfNhnNR1A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1700718306812?e=1787184000&v=beta&t=GY2Mdy0OSqcESfI9MeRkuE5etsLY6pwk6n_0KrFWgO4",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7467494520381808642"
+      }
+    ],
+    "reactionIds": [
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7467494520381808642,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo,urn:li:activity:7467494520381808642,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7467494520381808642,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAA0kWNcBWEKzL4z9L-dw2zU-JHVuqa5sZqM,urn:li:activity:7467494520381808642,0)"
+    ],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "targetUrl": "https://www.linkedin.com/company/starpagobusiness/",
+      "sessionId": "652a64d9-4a8d-4cd7-a1ad-e25b494661a6"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7467120146256396288,0)",
+    "reactionType": "APPRECIATION",
+    "actor": {
+      "id": "ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+      "name": "Elius Molla",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+      "position": "B2B Lead Generation Specialist | LinkedIn Research | Email List Building | Web Research | Data Entry | CRM | Email Verification",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7467120146256396288",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-fintech-payments-activity-7467120146256396288-jE3w"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7467120146256396288,0)",
+    "reactionType": "PRAISE",
+    "actor": {
+      "id": "ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+      "name": "Antonio Ruíz",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+      "position": "Head of Operations / Business Development / Project Manager / Customer Service Manager / Ex Nubank",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7467120146256396288",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-fintech-payments-activity-7467120146256396288-jE3w"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7467120146256396288,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7467120146256396288",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-fintech-payments-activity-7467120146256396288-jE3w"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7467120146256396288",
+    "linkedinUrl": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-fintech-payments-activity-7467120146256396288-jE3w",
+    "content": "🔥 SiGMA Asia 2026 is Ready — We’re Waiting for You!\nTomorrow, in Manila! 🥳 The doors to SiGMA Asia 2026 are about to open, and the Starpago team is ready to welcome you.\nOur team is on-site, our booth is fully set up, and all that's missing is you!\n📍 Find Us Here:\n📍 Venue: SMX Convention Center, Manila, Philippines\n🎯 Booth: 1180\n✨ Why should you visit Booth 1180?\n👉 Discuss the latest payment challenges and explore new opportunities together.\n👉 Discover our localized payment solutions across multiple countries in Latin America and Southeast Asia, with customizable services designed to help your business expand efficiently.\nDon't miss the chance to connect with us! Make Starpago Booth 1180 your first stop at SiGMA Asia 2026.\nSee you tomorrow! 👋 🚀\n#SiGMAAsia2026 #Fintech #Payments #CrossBorderPayments #Manila #SiGMAAsia",
+    "contentAttributes": [],
+    "author": {
+      "id": "100970834",
+      "universalName": "starpagobusiness",
+      "publicIdentifier": null,
+      "type": "company",
+      "name": "Starpago",
+      "linkedinUrl": "https://www.linkedin.com/company/starpagobusiness/posts",
+      "info": "1,715 followers",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D0BAQEsxDZDXG4YQA/company-logo_400_400/company-logo_400_400/0/1724084304262/starpagobusiness_logo?e=1787184000&v=beta&t=e8-vARPRc9JAcDNoFoIkY_-EQNhOxnY2H0xcoN3c6E0",
+        "width": 400,
+        "height": 400
+      },
+      "urn": "100970834"
+    },
+    "postedAt": {
+      "timestamp": 1780300175251,
+      "date": "2026-06-01T07:49:35.251Z",
+      "postedAgoShort": "2mo",
+      "postedAgoText": "2 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQHZtKIdS6rx9Q/feedshare-image-high-res/B56Z6CKM8HIUAU-/0/1780300173526?e=1787184000&v=beta&t=AapOTCWJgFavpEsKAnFCSiTI3gw2mIZ9tcZtn7b8ABY",
+        "width": 958,
+        "height": 1182
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/starpagobusiness_sigmaasia2026-fintech-payments-activity-7467120146256396288-jE3w?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7467120146256396288",
+    "shareUrn": "urn:li:share:7467120144499179520",
+    "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:share:7467120144499179520",
+    "engagement": {
+      "id": "7467120146256396288",
+      "likes": 3,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "PRAISE",
+          "count": 1
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 1
+        },
+        {
+          "type": "LIKE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7467120146256396288,0)",
+        "reactionType": "APPRECIATION",
+        "actor": {
+          "id": "ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+          "name": "Elius Molla",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4",
+          "position": "B2B Lead Generation Specialist | LinkedIn Research | Email List Building | Web Research | Data Entry | CRM | Email Verification",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQHagiLYkrO2rA/profile-displayphoto-crop_800_800/B56Z7kA5WJIgAI-/0/1781941903958?e=1787184000&v=beta&t=Q9cyMx1aRQRxcYfRq-zbCkktHAVqXf6PDtjgoEQ1pdA",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7467120146256396288"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7467120146256396288,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7467120146256396288"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7467120146256396288,0)",
+        "reactionType": "PRAISE",
+        "actor": {
+          "id": "ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+          "name": "Antonio Ruíz",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek",
+          "position": "Head of Operations / Business Development / Project Manager / Customer Service Manager / Ex Nubank",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQEqUEQWTgAnvg/profile-displayphoto-crop_800_800/B56Z9JXdVOHYAI-/0/1783642316945?e=1787184000&v=beta&t=RSkbxoZPwvyysiALQVhIXTgT_EqV0nV9akDaJSghqTk",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7467120146256396288"
+      }
+    ],
+    "reactionIds": [
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAGonWdIBpbUkU_8ytXwqiLanRNoq1tFClz4,urn:li:activity:7467120146256396288,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7467120146256396288,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACYTikoBr4JgvmPSUwIqB6GdFbsXMbqKzek,urn:li:activity:7467120146256396288,0)"
+    ],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "targetUrl": "https://www.linkedin.com/company/starpagobusiness/",
+      "sessionId": "652a64d9-4a8d-4cd7-a1ad-e25b494661a6"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAADazn_EB_FYlY6guY1GjBttaBhpC-3QgiEY,urn:li:activity:7464591478519042048,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAADazn_EB_FYlY6guY1GjBttaBhpC-3QgiEY",
+      "name": "Syaripuddin Udin",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAADazn_EB_FYlY6guY1GjBttaBhpC-3QgiEY",
+      "position": "SUPERVISOR PT.HOME CENTER INDONESIA RETAIL",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQF7_O4AmaBSkw/profile-displayphoto-crop_800_800/B56Z8CKTJ7KgAI-/0/1782447682903?e=1787184000&v=beta&t=aCVm_libIIj2idwmRb1y-kp-RpnB7jOeptUDafv6_ZY",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQF7_O4AmaBSkw/profile-displayphoto-crop_800_800/B56Z8CKTJ7KgAI-/0/1782447682903?e=1787184000&v=beta&t=aCVm_libIIj2idwmRb1y-kp-RpnB7jOeptUDafv6_ZY",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7464591478519042048",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_latinamerica-payments-paymentsolutions-activity-7464591478519042048-wPC5"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo,urn:li:activity:7464591478519042048,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+      "name": "Ada Chan",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+      "position": "Let’s meet me at Sigma Manila, Philippines | Payment Solution | FinTech | Trading and Brokerage | iGaming",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7464591478519042048",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_latinamerica-payments-paymentsolutions-activity-7464591478519042048-wPC5"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7464591478519042048,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+      "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7464591478519042048",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_latinamerica-payments-paymentsolutions-activity-7464591478519042048-wPC5"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAADnfnR0BHJGTyy0wH3cowUT1t0zaw3x6Xho,urn:li:activity:7464591478519042048,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAADnfnR0BHJGTyy0wH3cowUT1t0zaw3x6Xho",
+      "name": "Ivan Garcia",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAADnfnR0BHJGTyy0wH3cowUT1t0zaw3x6Xho",
+      "position": "Payment Partnership Officer @ IUX | PSP Relations & Local Payments | Strategic Partnerships | FX Brokerage | FinTech",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQFxsxtOxSgX0Q/profile-displayphoto-crop_800_800/B56Z2aIi9ZKIAI-/0/1776407425665?e=1787184000&v=beta&t=wlHxnBVJfwojp9NWl2cD3rtXgiuopEGHb9oOxwdHgHA",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQFxsxtOxSgX0Q/profile-displayphoto-crop_800_800/B56Z2aIi9ZKIAI-/0/1776407425665?e=1787184000&v=beta&t=wlHxnBVJfwojp9NWl2cD3rtXgiuopEGHb9oOxwdHgHA",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7464591478519042048",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_latinamerica-payments-paymentsolutions-activity-7464591478519042048-wPC5"
+    }
+  },
+  {
+    "type": "reaction",
+    "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACjkv74BSBLw42JPM3GPqvNDuJVsOhJCAcg,urn:li:activity:7464591478519042048,0)",
+    "reactionType": "LIKE",
+    "actor": {
+      "id": "ACoAACjkv74BSBLw42JPM3GPqvNDuJVsOhJCAcg",
+      "name": "Ralph Salita",
+      "linkedinUrl": "https://www.linkedin.com/in/ACoAACjkv74BSBLw42JPM3GPqvNDuJVsOhJCAcg",
+      "position": "Fintech | Payments | Banking | Head of Sales at Spoynt | VP of Sales at Spush",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHuX1O_VO72UA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683888439030?e=1787184000&v=beta&t=9_N7L3w0iQGNKMKToZnsItFirzcEzFo3UfXboHaRlz8",
+      "picture": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHuX1O_VO72UA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683888439030?e=1787184000&v=beta&t=9_N7L3w0iQGNKMKToZnsItFirzcEzFo3UfXboHaRlz8",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "postId": "7464591478519042048",
+    "query": {
+      "post": "https://www.linkedin.com/posts/starpagobusiness_latinamerica-payments-paymentsolutions-activity-7464591478519042048-wPC5"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7464591478519042048",
+    "linkedinUrl": "https://www.linkedin.com/posts/starpagobusiness_latinamerica-payments-paymentsolutions-activity-7464591478519042048-wPC5",
+    "content": "🇲🇽 Mexico — In 2026, multiple financial and FX industry exhibitions will be held in Mexico City, with continued growth in activity across payments, trading, and FX markets.\n🇨🇱 Chile — The country continues to advance its online gambling regulatory framework, driving increasing demand for compliant payment solutions, local bank transfers, and card acquiring services.\n🇧🇷 Brazil — As one of the largest digital payment markets in Latin America, Brazil’s PIX instant payment ecosystem continues to expand, with steady growth in transactions across gambling, e-commerce, and digital entertainment platforms.\nWe have established business coverage across the above markets and welcome partnership discussions.\nWe will be attending: \n📍 SiGMA Asia 2026\n 🗓 01 – 03 JUN 2026 \n📍 SMX Convention Center Manila \n❣️ Booth 1180\n#LatinAmerica #Payments #PaymentSolutions #Fintech #SiGMAAsia2026",
+    "contentAttributes": [],
+    "author": {
+      "id": "100970834",
+      "universalName": "starpagobusiness",
+      "publicIdentifier": null,
+      "type": "company",
+      "name": "Starpago",
+      "linkedinUrl": "https://www.linkedin.com/company/starpagobusiness/posts",
+      "info": "1,715 followers",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D0BAQEsxDZDXG4YQA/company-logo_400_400/company-logo_400_400/0/1724084304262/starpagobusiness_logo?e=1787184000&v=beta&t=e8-vARPRc9JAcDNoFoIkY_-EQNhOxnY2H0xcoN3c6E0",
+        "width": 400,
+        "height": 400
+      },
+      "urn": "100970834"
+    },
+    "postedAt": {
+      "timestamp": 1779697293882,
+      "date": "2026-05-25T08:21:33.882Z",
+      "postedAgoShort": "2mo",
+      "postedAgoText": "2 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQF0oqj_Qa4APg/feedshare-shrink_1280/B56Z5eOZJzHsAM-/0/1779697292966?e=1787184000&v=beta&t=Ec60OfzI8cryG52sa3cLvxFLgSJVwxmF_Z4YqASG9-I",
+        "width": 1280,
+        "height": 1656
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/starpagobusiness_latinamerica-payments-paymentsolutions-activity-7464591478519042048-wPC5?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7464591478519042048",
+    "shareUrn": "urn:li:share:7464591477722128384",
+    "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:share:7464591477722128384",
+    "engagement": {
+      "id": "7464591478519042048",
+      "likes": 5,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 5
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo,urn:li:activity:7464591478519042048,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+          "name": "Ada Chan",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo",
+          "position": "Let’s meet me at Sigma Manila, Philippines | Payment Solution | FinTech | Trading and Brokerage | iGaming",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQHlqrgGtIAn4Q/profile-displayphoto-crop_800_800/B56ZzJHkDNHAAI-/0/1772900730023?e=1787184000&v=beta&t=bSXvBV6DhmbyNRzyLMTFrq4GQw2Q5mqx00MsQHC5KpY",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7464591478519042048"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAADazn_EB_FYlY6guY1GjBttaBhpC-3QgiEY,urn:li:activity:7464591478519042048,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAADazn_EB_FYlY6guY1GjBttaBhpC-3QgiEY",
+          "name": "Syaripuddin Udin",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAADazn_EB_FYlY6guY1GjBttaBhpC-3QgiEY",
+          "position": "SUPERVISOR PT.HOME CENTER INDONESIA RETAIL",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQF7_O4AmaBSkw/profile-displayphoto-crop_800_800/B56Z8CKTJ7KgAI-/0/1782447682903?e=1787184000&v=beta&t=aCVm_libIIj2idwmRb1y-kp-RpnB7jOeptUDafv6_ZY",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQF7_O4AmaBSkw/profile-displayphoto-crop_800_800/B56Z8CKTJ7KgAI-/0/1782447682903?e=1787184000&v=beta&t=aCVm_libIIj2idwmRb1y-kp-RpnB7jOeptUDafv6_ZY",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7464591478519042048"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7464591478519042048,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "name": "Deepak Sethi ( 迪帕克·塞蒂 )",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE",
+          "position": "\"Crypto-Fiat Exchange Specialist & International Payment Gateway Facilitator. Expert in USDT conversion & bank account provision for global transactions.\"",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D4D03AQFKThGvv9AQnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684233044263?e=1787184000&v=beta&t=U2nWAOqS2bJJNv1INX1S7Vj8YWUTK9L8I_gYXTbVxVE",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7464591478519042048"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAADnfnR0BHJGTyy0wH3cowUT1t0zaw3x6Xho,urn:li:activity:7464591478519042048,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAADnfnR0BHJGTyy0wH3cowUT1t0zaw3x6Xho",
+          "name": "Ivan Garcia",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAADnfnR0BHJGTyy0wH3cowUT1t0zaw3x6Xho",
+          "position": "Payment Partnership Officer @ IUX | PSP Relations & Local Payments | Strategic Partnerships | FX Brokerage | FinTech",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQFxsxtOxSgX0Q/profile-displayphoto-crop_800_800/B56Z2aIi9ZKIAI-/0/1776407425665?e=1787184000&v=beta&t=wlHxnBVJfwojp9NWl2cD3rtXgiuopEGHb9oOxwdHgHA",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQFxsxtOxSgX0Q/profile-displayphoto-crop_800_800/B56Z2aIi9ZKIAI-/0/1776407425665?e=1787184000&v=beta&t=wlHxnBVJfwojp9NWl2cD3rtXgiuopEGHb9oOxwdHgHA",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7464591478519042048"
+      },
+      {
+        "id": "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACjkv74BSBLw42JPM3GPqvNDuJVsOhJCAcg,urn:li:activity:7464591478519042048,0)",
+        "reactionType": "LIKE",
+        "actor": {
+          "id": "ACoAACjkv74BSBLw42JPM3GPqvNDuJVsOhJCAcg",
+          "name": "Ralph Salita",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAACjkv74BSBLw42JPM3GPqvNDuJVsOhJCAcg",
+          "position": "Fintech | Payments | Banking | Head of Sales at Spoynt | VP of Sales at Spush",
+          "pictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQHuX1O_VO72UA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683888439030?e=1787184000&v=beta&t=9_N7L3w0iQGNKMKToZnsItFirzcEzFo3UfXboHaRlz8",
+          "picture": {
+            "url": "https://media.licdn.com/dms/image/v2/D5603AQHuX1O_VO72UA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683888439030?e=1787184000&v=beta&t=9_N7L3w0iQGNKMKToZnsItFirzcEzFo3UfXboHaRlz8",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "postId": "7464591478519042048"
+      }
+    ],
+    "reactionIds": [
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAE8NPwcBKTOQ4l6N-MFl5u_YLgZCSo-o9zo,urn:li:activity:7464591478519042048,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAADazn_EB_FYlY6guY1GjBttaBhpC-3QgiEY,urn:li:activity:7464591478519042048,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAAChTbB8B3Dv2yECsMaZDxbVFJ_ntZ7kUQZE,urn:li:activity:7464591478519042048,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAADnfnR0BHJGTyy0wH3cowUT1t0zaw3x6Xho,urn:li:activity:7464591478519042048,0)",
+      "urn:li:fsd_reaction:(urn:li:fsd_profile:ACoAACjkv74BSBLw42JPM3GPqvNDuJVsOhJCAcg,urn:li:activity:7464591478519042048,0)"
+    ],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "targetUrl": "https://www.linkedin.com/company/starpagobusiness/",
+      "sessionId": "652a64d9-4a8d-4cd7-a1ad-e25b494661a6"
+    }
+  }
+]
