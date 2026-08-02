@@ -1362,7 +1362,8 @@ function scoreContact(c) {
   // Relación warm: hay historial de DMs
   if (c.msg_count && c.msg_count > 0) score += 15;
   // Sentimiento positivo en DMs = lead caliente confirmado
-  if (c.sentiment === 'positive' || c.intent === 'high_interest') score += 10;
+  if (c.sentiment === '\uD83D\uDFE2 Inter\u00e9s Alto / Dispuesto a Demo') score += 10;
+  if (c.intent === 'Lead C\u00e1lido / Oportunidad Real' || c.intent === 'Cualificaci\u00f3n en Proceso') score += 10;
   // ICP override text match
   if (icpText) {
     const blob = norm(`${c.position} ${c.company} ${c.sector} ${c.country}`);
@@ -2714,25 +2715,40 @@ function renderMessages() {
   // Si los mensajes vienen pre-analizados en enriched_connections.json (modo demo/BYOD)
   // pero S.messages está vacío, construimos el dashboard desde los campos del JSON
   if (!S.messages.length && S.loadedParts.messages && S.contacts.length) {
-    const withMsgs  = S.contacts.filter(c => c.msg_count && c.msg_count > 0);
-    const highInt   = S.contacts.filter(c => c.intent === 'high_interest' || c.sentiment === 'positive').length;
-    const friendly  = S.contacts.filter(c => c.is_friendly).length;
-    const inbound   = S.contacts.filter(c => c.is_they_selling).length;
-    const curious   = S.contacts.filter(c => c.intent === 'curiosity').length;
-    const ghosted   = S.contacts.filter(c => c.sentiment === 'ghosted').length;
-    const rejected  = S.contacts.filter(c => c.sentiment === 'rejection').length;
+    const withMsgs = S.contacts.filter(c => c.msg_count && c.msg_count > 0);
+
+    // Valores reales del JSON (verificados con python audit 2026-08-02)
+    const SENT_INTERES  = '\uD83D\uDFE2 Inter\u00e9s Alto / Dispuesto a Demo';  // 🟢
+    const SENT_CURIOSI  = '\uD83D\uDFE1 Curiosidad / Evaluando';                // 🟡
+    const SENT_OBJEC    = '\uD83D\uDD34 Objeci\u00f3n / Rechazo Abierto';       // 🔴
+    const SENT_CORTEZ   = '\u26AA Respuesta Cort\u00e9s / Networking Neutral';  // ⚪
+    const SENT_FANTASMA = 'Fantasma / Ignorado';
+    const SENT_SINRESP  = 'Sin Respuesta Necesaria';
+    const INT_CALIDO    = 'Lead C\u00e1lido / Oportunidad Real';
+    const INT_CUALIF    = 'Cualificaci\u00f3n en Proceso';
+    const INT_SOCIAL    = 'Conversaci\u00f3n Social';
+    const INT_FRIO      = 'Frio';
+    const INT_NOINTER   = 'No Interesado / Cerrado';
+
+    const highInt  = S.contacts.filter(c => c.sentiment === SENT_INTERES || c.intent === INT_CALIDO || c.intent === INT_CUALIF).length;
+    const friendly = S.contacts.filter(c => c.is_friendly || c.intent === INT_SOCIAL).length;
+    const inbound  = S.contacts.filter(c => c.is_they_selling).length;
+    const curious  = S.contacts.filter(c => c.sentiment === SENT_CURIOSI).length;
+    const ghosted  = S.contacts.filter(c => c.sentiment === SENT_FANTASMA).length;
+    const rejected = S.contacts.filter(c => c.sentiment === SENT_OBJEC || c.intent === INT_NOINTER).length;
     const totalConvs = withMsgs.length;
 
-    // Construir S.conversations desde los contactos enriquecidos para que el explorador funcione
+    // Construir S.conversations para el explorador
     S.conversations = withMsgs.map(c => ({
       id: String(c.id),
       participant: c.name,
       msgs: c.last_msg_snippet ? [{ sender: c.name, date: c.last_msg_date || '', content: c.last_msg_snippet }] : [],
       turns: c.msg_count || 1,
-      hasCommercial: c.intent === 'high_interest',
+      hasCommercial: c.intent === INT_CALIDO || c.intent === INT_CUALIF || c.sentiment === SENT_INTERES,
       textBlob: (c.last_msg_snippet || '').toLowerCase(),
       lastDate: c.last_msg_date || '',
       sentiment: c.sentiment,
+      intent: c.intent,
       direction: c.direction,
       is_friendly: c.is_friendly,
       is_they_selling: c.is_they_selling
