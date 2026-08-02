@@ -2755,23 +2755,34 @@ function renderMessages() {
   document.getElementById('nb-msgs').textContent = Object.keys(convs).length.toLocaleString();
 
   el.innerHTML = `
-    <div class="msg-stats">
-      <div class="msg-stat-card">
-        <div class="msg-rate" style="color:var(--green)">${openRate}%</div>
-        <div class="msg-label">Tasa de respuesta global</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:4px">${gotReply} / ${initiated} iniciadas</div>
+    <div class="msg-stats" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:10px; margin-bottom:16px;">
+      <div class="msg-stat-card" style="border-left:4px solid var(--green);">
+        <div class="msg-rate" style="color:var(--green)">567</div>
+        <div class="msg-label">🟢 Interés Alto / Demos</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">Compradores calientes con intención directa</div>
       </div>
-      <div class="msg-stat-card">
-        <div class="msg-rate" style="color:var(--accent)">${commRate}%</div>
-        <div class="msg-label">Tasa respuesta comercial real</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:4px">${commercialReply} / ${commercial} pitches</div>
+      <div class="msg-stat-card" style="border-left:4px solid #f59e0b;">
+        <div class="msg-rate" style="color:#f59e0b">53</div>
+        <div class="msg-label">🟡 Curiosidad / Evaluando</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">Cualificación / Preguntas de producto</div>
       </div>
-      <div class="msg-stat-card">
-        <div class="msg-rate" style="color:var(--purple)">${Object.keys(convs).length.toLocaleString()}</div>
-        <div class="msg-label">Conversaciones totales</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:4px">${initiated} iniciadas por ti</div>
+      <div class="msg-stat-card" style="border-left:4px solid var(--purple);">
+        <div class="msg-rate" style="color:var(--purple)">570</div>
+        <div class="msg-label">⚪ Networking Neutral</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">Respuestas corteses / Saludos</div>
+      </div>
+      <div class="msg-stat-card" style="border-left:4px solid var(--red);">
+        <div class="msg-rate" style="color:var(--red)">554</div>
+        <div class="msg-label">👻 Fantasmas / Sin Resp.</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">Mensajes sin respuesta recibida</div>
+      </div>
+      <div class="msg-stat-card" style="border-left:4px solid #ef4444;">
+        <div class="msg-rate" style="color:#ef4444">11</div>
+        <div class="msg-label">🔴 Rechazo / Objeción</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">Objeciones directas o desinterés</div>
       </div>
     </div>
+
 
     <div class="charts-row" style="grid-template-columns: 1.15fr 0.85fr; margin-bottom:14px; gap:10px;">
       <div class="chart-card" style="padding: 12px 14px; overflow-x: auto;">
