@@ -1277,8 +1277,8 @@ function inferHierarchy(pos) {
 
 function inferSector(pos, company) {
   const b = norm(`${pos} ${company}`);
-  if (/\b(fintech|pago|pay|cobro|treasury|tesoreria|banking|bank|banco|credito|credit|adquirente|pos|terminal|finance|financiero|wallet|card|tarjeta|gateway)\b/.test(b)) return 'Fintech/Pagos';
-  if (/\b(retail|ecommerce|commerce|tienda|store|marketplace|comercio)\b/.test(b)) return 'Retail/eCommerce';
+  if (/\b(fintech|pago|pay|cobro|treasury|tesoreria|banking|bank|banco|credito|credit|adquirente|pos|terminal|finance|financiero|wallet|card|tarjeta|gateway|clip|fiserv|conekta|kueski|konfio|coppel|banamex|bbva|santander|hsbc|visa|mastercard|amex|stripe|paypal|mercadopago|kushki|culqi|wompi|transbank|getnet|cielo|stone|pagseguro|nuvei|openpay|spei|acquiring|issuing|payment)\b/.test(b)) return 'Fintech/Pagos';
+  if (/\b(retail|ecommerce|commerce|tienda|store|marketplace|comercio|liverpool|palacio|elektra|walmart|costco)\b/.test(b)) return 'Retail/eCommerce';
   if (/\b(software|saas|tech|platform|developer|engineer|startup|digital|cloud|system|it|ti|tecnologia|technology|cyber|seguridad|security|ai|ia|analytics|data)\b/.test(b)) return 'SaaS/Tech';
   if (/\b(manufactura|industrial|planta|supply|logistic|transport|delivery)\b/.test(b)) return 'Manufactura/Logística';
   if (/\b(health|salud|pharma|hospital|medico|clinica)\b/.test(b)) return 'Salud';
@@ -1286,23 +1286,33 @@ function inferSector(pos, company) {
   if (/\b(gobierno|municipal|federal|secretaria|publico)\b/.test(b)) return 'Gobierno';
   if (/\b(consulting|consultor|advisory|strategy|consultoria)\b/.test(b)) return 'Consultoría';
   if (/\b(media|marketing|publicidad|advertising|agencia|agency)\b/.test(b)) return 'Marketing/Media';
-  if (/\b(cpg|fmcg|consumo|alimento|food|bebida|drink|beverage|tobacco|tabaco|cigarette|cigarro|dulce|candy|snack|panaderia|bakery|leche|dairy|brand|marca|distribuidora|importadora|cosmetic|belleza|beauty|perfume|jabón|soap|shampoo|higiene|personal care)\b/.test(b)) return 'Consumo Masivo/CPG';
+  if (/\b(cpg|fmcg|consumo|alimento|food|bebida|drink|beverage|tobacco|tabaco|cigarette|cigarro|dulce|candy|snack|panaderia|bakery|leche|dairy|brand|marca|distribuidora|importadora|cosmetic|belleza|beauty|perfume|soap|shampoo|higiene)\b/.test(b)) return 'Consumo Masivo/CPG';
   return 'Otro';
 }
 
+
 function scoreContact(c) {
-  const icpText = norm(document.getElementById('icp-override').value);
+  const icpText = norm(document.getElementById('icp-override')?.value || '');
   const activePos = S.positions.length ? S.positions[S.activePositionIndex || 0] : null;
   const ownerSector = activePos ? inferSector(activePos.title, activePos.company) : '';
   let score = 0;
+  // Jerarquía
   if (c.hierarchy === 'C-Level') score += 35;
   else if (c.hierarchy === 'Director') score += 20;
   else if (c.hierarchy === 'Gerente') score += 10;
+  // Geografía conocida
   if (c.country !== 'Desconocido') score += 15;
+  // Sector alineado con el tuyo
   if (c.sector === ownerSector && ownerSector && ownerSector !== 'Otro') score += 25;
+  // Datos de contacto
   if (c.email) score += 10;
+  // Conexión reciente = más caliente
   if (c.connectedYearsAgo < 2) score += 10;
   if (c.connectedYearsAgo < 1) score += 5;
+  // Relación warm: hay historial de DMs
+  if (c.msg_count && c.msg_count > 0) score += 15;
+  // Sentimiento positivo en DMs = lead caliente confirmado
+  if (c.sentiment === 'positive' || c.intent === 'high_interest') score += 10;
   // ICP override text match
   if (icpText) {
     const blob = norm(`${c.position} ${c.company} ${c.sector} ${c.country}`);
