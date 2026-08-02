@@ -670,8 +670,8 @@ window.ENRICHED_CONNECTIONS_DATA = [{"id": 1, "first_name": "Rahul", "last_name"
         <input class="filter-input search" id="icp-search" type="text" placeholder="Buscar...">
         <select class="filter-input" id="icp-min-score">
           <option value="0">Todos los scores</option>
-          <option value="40">Score ≥ 40</option>
-          <option value="60" selected>Score ≥ 60</option>
+          <option value="40" selected>Score ≥ 40</option>
+          <option value="60">Score ≥ 60</option>
           <option value="80">Score ≥ 80</option>
         </select>
       </div>
@@ -1851,7 +1851,7 @@ async function loadDemoData(autoNavigate = false) {
     });
 
     S.contacts.forEach(c => { c.score = scoreContact(c); });
-    icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
+    icpContacts = S.contacts.filter(c => c.score >= 40).sort((a,b) => b.score - a.score);
     S.loadedParts = { connections: true, positions: true, messages: true, profile: true };
 
     finalize();
@@ -2066,7 +2066,7 @@ function selectActivePosition(idx) {
   S.activePositionIndex = idx;
   // Recalculate scores based on the new active position
   S.contacts.forEach(c => { c.score = scoreContact(c); });
-  icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
+  icpContacts = S.contacts.filter(c => c.score >= 40).sort((a,b) => b.score - a.score);
   
   // Re-render and update UI
   renderProfile();
