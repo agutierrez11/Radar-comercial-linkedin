@@ -280,8 +280,9 @@
     "position_zip": "VP of Enterprise Sales",
     "company": "saava.io",
     "position": "VP of Enterprise Sales",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 17,
@@ -312,8 +313,9 @@
     "position_zip": "Founder and Partner",
     "company": "Iceberg Investments",
     "position": "Founder and Partner",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 19,
@@ -380,8 +382,10 @@
     "position_zip": "Strategy and Compliance Consultant",
     "company": "Deloitte",
     "position": "Strategy and Compliance Consultant",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Licenciado en Estrategia y Transformación de Negocios"
   },
   {
     "id": 23,
@@ -394,8 +398,10 @@
     "position_zip": "Senior Talent Acquisition Specialist",
     "company": "Capsoft",
     "position": "Senior Talent Acquisition Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "LATAM Senior Tech Recruiter | Marketing/Sales Recruiting | Remote Hiring | Connecting SaaS Companies with LATAM Tech Talent | Supporting LATAM professionals in their remote career | English & Spanish | Let’s Talk"
   },
   {
     "id": 24,
@@ -408,8 +414,10 @@
     "position_zip": "Ejecutivo de marketing comercial",
     "company": "CANOFIL SA DE CV",
     "position": "Ejecutivo de marketing comercial",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Ejecutivo de marketing comercial en CANOFIL SA DE CV"
   },
   {
     "id": 25,
@@ -422,8 +430,10 @@
     "position_zip": "Business Development Specialist",
     "company": "Red B2B",
     "position": "Business Development Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "118,057 followers"
   },
   {
     "id": 26,
@@ -436,8 +446,9 @@
     "position_zip": "CEO Fundador Elite Servicios Financieros",
     "company": "Elite Servicios Financieros SL",
     "position": "CEO Fundador Elite Servicios Financieros",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 27,
@@ -450,8 +461,9 @@
     "position_zip": "Marketing Manager & Brand Strategy in Kombo AI",
     "company": "KomboAI",
     "position": "Marketing Manager & Brand Strategy in Kombo AI",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 28,
@@ -464,8 +476,10 @@
     "position_zip": "Marca Personal - Hijo de Circe",
     "company": "Instagram",
     "position": "Marca Personal - Hijo de Circe",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Escritor y divulgador | Derecho y Filosofía | Comunicación"
   },
   {
     "id": 29,
@@ -1306,8 +1320,9 @@
     "position_zip": "Asesor Publicitario",
     "company": "Grupo Pazos",
     "position": "Asesor Publicitario",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 76,
@@ -1554,8 +1569,9 @@
     "position_zip": "Gerente de sucursal",
     "company": "HSBC BANK ARGENTINA",
     "position": "Gerente de sucursal",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 91,
@@ -1676,8 +1692,10 @@
     "position_zip": "Enterprise Sales & Partnership Manager - LATAM",
     "company": "Darwin AI",
     "position": "Enterprise Sales & Partnership Manager - LATAM",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Key Account Executive | Key Account Manager | AI | Commercial | Desarrollo de clientes | B2B | B2C | Cierre de Contratos | Ventas Consultivas | SalesForce | Tech | Consultoría | Hubspot"
   },
   {
     "id": 98,
@@ -1870,8 +1888,9 @@
     "position_zip": "Vendedor",
     "company": "Vitahub",
     "position": "Vendedor",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 109,
@@ -2064,8 +2083,9 @@
     "position_zip": "Key Account Manager",
     "company": "Servnet Mexico",
     "position": "Key Account Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 120,
@@ -2456,8 +2476,9 @@
     "position_zip": "Gerente de productos",
     "company": "TakeFortyTwo",
     "position": "Gerente de productos",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 143,
@@ -3010,8 +3031,10 @@
     "position_zip": "Key Account Manager B2B",
     "company": "Global66",
     "position": "Key Account Manager B2B",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "80,113 followers"
   },
   {
     "id": 174,
@@ -3222,8 +3245,10 @@
     "position_zip": "Sales Director Banking and Payment - México y Centroamérica",
     "company": "Thales",
     "position": "Sales Director Banking and Payment - México y Centroamérica",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Director de Ventas Banca | Especialista en Fintech y Pagos Digitales para México y Centroamérica | Líder en Soluciones Innovadoras"
   },
   {
     "id": 186,
@@ -4280,8 +4305,10 @@
     "position_zip": "Associate Team Lead - Marketing",
     "company": "Grazitti Interactive",
     "position": "Associate Team Lead - Marketing",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "B2B Growth Architect | Helping SaaS & Tech Companies Build Predictable Revenue Engines | SEO • AI Search • Analytics • Marketing Automation"
   },
   {
     "id": 245,
@@ -4312,8 +4339,9 @@
     "position_zip": "Gerente General Suzuki Poza Rica",
     "company": "GRUPO DIEZ-FÉNIX",
     "position": "Gerente General Suzuki Poza Rica",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 247,
@@ -4524,8 +4552,9 @@
     "position_zip": "Regional Managing Director Latam",
     "company": "GTCFX",
     "position": "Regional Managing Director Latam",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 259,
@@ -5078,8 +5107,9 @@
     "position_zip": "Redactora y estratega digital",
     "company": "CEMSA Comercial de Especialidades Médicas S.A de C.V.",
     "position": "Redactora y estratega digital",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 291,
@@ -5884,8 +5914,9 @@
     "position_zip": "Lead GTM for Financial Institutions",
     "company": "Toku",
     "position": "Lead GTM for Financial Institutions",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 336,
@@ -6150,8 +6181,10 @@
     "position_zip": "Jefe de Ventas CTS CO",
     "company": "Organización Carvajal",
     "position": "Jefe de Ventas CTS CO",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "MBA | Directora Comercial | Gerente Comercial | Head of Sales| Factura Electronica | EDI | E-comercce | Tecnologia | Logistica | Startup | Hubspot | Marketing | Bre-B"
   },
   {
     "id": 351,
@@ -6524,8 +6557,9 @@
     "position_zip": "Sales & Outreach Coordinator",
     "company": "Elevate Clients Inc",
     "position": "Sales & Outreach Coordinator",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 372,
@@ -6700,8 +6734,10 @@
     "position_zip": "Senior Talent Acquisition Partner",
     "company": "Paylocity",
     "position": "Senior Talent Acquisition Partner",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Senior Technical Recruiter | 10+ years experience"
   },
   {
     "id": 382,
@@ -6966,8 +7002,10 @@
     "position_zip": "Growth Specialist-Key Account Sales Specialist",
     "company": "IA-Solutions",
     "position": "Growth Specialist-Key Account Sales Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Estrategia Comercial y Alianzas Tecnológicas | Transformación Digital | LATAM"
   },
   {
     "id": 397,
@@ -7250,8 +7288,10 @@
     "position_zip": "Gerente de impuestos",
     "company": "Bissú, Cosméticos.",
     "position": "Gerente de impuestos",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Finance & Strategy | Project Manager (PMP Candidate) | Chief of Staff | Contador Público en Finanzas | Master’s in Finance | Financial Analyst | Financial Reporting | Cost Analysis |"
   },
   {
     "id": 414,
@@ -7552,8 +7592,10 @@
     "position_zip": "Head Hunter",
     "company": "SELECTION BOOK",
     "position": "Head Hunter",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Headhunter | Career Coach detrás de Impulsa | Optimiza tu CV (ATS), Linkedin y destaca en entrevistas"
   },
   {
     "id": 431,
@@ -8016,8 +8058,9 @@
     "position_zip": "Business Development Manager",
     "company": "Linkwatcher",
     "position": "Business Development Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 457,
@@ -8066,8 +8109,10 @@
     "position_zip": "Brand Communications and Public Relations",
     "company": "Tiara Hana",
     "position": "Brand Communications and Public Relations",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "461,205 followers"
   },
   {
     "id": 460,
@@ -8080,8 +8125,9 @@
     "position_zip": "Executive Search Recruiter",
     "company": "L&P Group",
     "position": "Executive Search Recruiter",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 461,
@@ -9480,8 +9526,9 @@
     "position_zip": "Technical Solutions Manager",
     "company": "VEKTORIAL",
     "position": "Technical Solutions Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 540,
@@ -9908,8 +9955,10 @@
     "position_zip": "Workplace Manager",
     "company": "Amundi",
     "position": "Workplace Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Health & Wellbeing Lead | Benefits Manager | Workplace & Employee Experience | Culture | Learning & Development | Community Building"
   },
   {
     "id": 564,
@@ -10174,8 +10223,10 @@
     "position_zip": "KAE",
     "company": "El Economista",
     "position": "KAE",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "APO"
   },
   {
     "id": 579,
@@ -10710,8 +10761,9 @@
     "position_zip": "Commercial Systems & RevOps Consultant",
     "company": "Self Employed",
     "position": "Commercial Systems & RevOps Consultant",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 609,
@@ -11030,8 +11082,10 @@
     "position_zip": "Licensing Manager",
     "company": "Gairet / Grupo Bestway",
     "position": "Licensing Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Licensing & Product Development | Brand Strategy | Retail Growth"
   },
   {
     "id": 627,
@@ -11080,8 +11134,9 @@
     "position_zip": "Coordinadora de grupos",
     "company": "Destination mexico",
     "position": "Coordinadora de grupos",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 630,
@@ -11220,8 +11275,9 @@
     "position_zip": "Gerente Nacional Comercial",
     "company": "BIGAUTO",
     "position": "Gerente Nacional Comercial",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 638,
@@ -12008,8 +12064,9 @@
     "position_zip": "Founder",
     "company": "KaME Real Estate",
     "position": "Founder",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 682,
@@ -12094,8 +12151,10 @@
     "position_zip": "Head of Marketing & Partnerships",
     "company": "RollingFunds",
     "position": "Head of Marketing & Partnerships",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "LinkedIn Top Voice | FinTech | Marketing & Growth Expert | Thought Leader | Leadership"
   },
   {
     "id": 689,
@@ -12126,8 +12185,10 @@
     "position_zip": "Coordinador de proyectos",
     "company": "ITBS Business Solutions",
     "position": "Coordinador de proyectos",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Ayudamos a empresas con soluciones tecnológicas a la medida y gestión ágil de proyectos | Coordinador de Proyectos | Managed Services Lead & Project Manager | Scrum Master | IT Management"
   },
   {
     "id": 691,
@@ -12140,8 +12201,10 @@
     "position_zip": "Latam Retail Sales Specialist",
     "company": "Belltech",
     "position": "Latam Retail Sales Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Ayudando a empresas a mejorar su CX, omnicanalidad y agilidad en sus negocios."
   },
   {
     "id": 692,
@@ -12154,8 +12217,10 @@
     "position_zip": "Senior Credit Risk Analyst",
     "company": "HBX Group",
     "position": "Senior Credit Risk Analyst",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "AML Administrator and Risk Analyst at Santander"
   },
   {
     "id": 693,
@@ -12168,8 +12233,10 @@
     "position_zip": "Corporate Sales Representative B2B",
     "company": "Consumidores Anónimos, S. C.",
     "position": "Corporate Sales Representative B2B",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Corporate Sales Representative B2B"
   },
   {
     "id": 694,
@@ -12182,8 +12249,10 @@
     "position_zip": "CEO & Founder",
     "company": "Simple Studio®",
     "position": "CEO & Founder",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "CEO & Founder @ Simple Studio®"
   },
   {
     "id": 695,
@@ -12196,8 +12265,10 @@
     "position_zip": "Founder",
     "company": "Sourcing Up",
     "position": "Founder",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Founder @ SourcingUp | Builder • Hacker • AI-Native Engineer | Building AI products that solve real business problem"
   },
   {
     "id": 696,
@@ -12210,8 +12281,10 @@
     "position_zip": "Customer Success Director",
     "company": "Openpay México",
     "position": "Customer Success Director",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Couldn’t join the FBI, but could join the fight against Payment Fraud 🕵️ | e-commerce | Payment |"
   },
   {
     "id": 697,
@@ -12224,8 +12297,10 @@
     "position_zip": "Vice President Legal, North LAC - Mexico, Central America and the Caribbean",
     "company": "Mastercard",
     "position": "Vice President Legal, North LAC - Mexico, Central America and the Caribbean",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Vice President Legal, Mastercard, North LAC. General Counsel, Chief Legal Officer, VP of Legal, Legal Director."
   },
   {
     "id": 698,
@@ -12310,8 +12385,10 @@
     "position_zip": "CEO & Founder",
     "company": "Wava",
     "position": "CEO & Founder",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Founder & CEO @ Wava.co | Latitud Fellow | Fintech & Payments | Innovating in Digital Wallets & Real-Time Payment Solutions | E-Commerce | Alternative Payment Methods"
   },
   {
     "id": 703,
@@ -12324,8 +12401,10 @@
     "position_zip": "Directora de alianzas",
     "company": "Puntored",
     "position": "Directora de alianzas",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "33,212 followers"
   },
   {
     "id": 704,
@@ -12554,8 +12633,10 @@
     "position_zip": "Head Comercial of Digital Ad Sales",
     "company": "TelevisaUnivision",
     "position": "Head Comercial of Digital Ad Sales",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Directora General Digital Televisa Univisión"
   },
   {
     "id": 717,
@@ -13036,8 +13117,10 @@
     "position_zip": "Head of Sales",
     "company": "Unired",
     "position": "Head of Sales",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Head of Sales | Payments | Business Development | Fintech"
   },
   {
     "id": 744,
@@ -13338,8 +13421,9 @@
     "position_zip": "Pricing, US Western Region",
     "company": "Western Union",
     "position": "Pricing, US Western Region",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 761,
@@ -14306,8 +14390,9 @@
     "position_zip": "Business Development Executive",
     "company": "Viamericas Corporation",
     "position": "Business Development Executive",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 816,
@@ -14896,8 +14981,9 @@
     "position_zip": "Freelance",
     "company": "Upwork",
     "position": "Freelance",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 849,
@@ -15000,8 +15086,10 @@
     "position_zip": "Senior Strategic Account Manager",
     "company": "Visa",
     "position": "Senior Strategic Account Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Senior Strategic Account E-com specialist Manager en Visa"
   },
   {
     "id": 855,
@@ -15176,8 +15264,9 @@
     "position_zip": "Growth Expert",
     "company": "Datafactory",
     "position": "Growth Expert",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 865,
@@ -15208,8 +15297,10 @@
     "position_zip": "Commercial, Jr. Manager MSI",
     "company": "Vive Plus®",
     "position": "Commercial, Jr. Manager MSI",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "370 followers"
   },
   {
     "id": 867,
@@ -15474,8 +15565,10 @@
     "position_zip": "Co-Founder & CEO",
     "company": "Lab10",
     "position": "Co-Founder & CEO",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Co-Founder & CEO @ LAB10"
   },
   {
     "id": 883,
@@ -15542,8 +15635,10 @@
     "position_zip": "Head of Business Development, Partnerships & Marketing",
     "company": "KOMOJU by Degica",
     "position": "Head of Business Development, Partnerships & Marketing",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "10,180 followers"
   },
   {
     "id": 887,
@@ -15556,8 +15651,10 @@
     "position_zip": "Presidente - Cofundador",
     "company": "Refácil",
     "position": "Presidente - Cofundador",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "CEO & Founder en Refácil | Pagos digitales, recaudos y servicios financieros para empresas en Colombia"
   },
   {
     "id": 888,
@@ -15570,8 +15667,10 @@
     "position_zip": "Director of Product Engineering",
     "company": "Ualá",
     "position": "Director of Product Engineering",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Director of Product Engineering @ Ualá | MBA @ IAE"
   },
   {
     "id": 889,
@@ -15584,8 +15683,10 @@
     "position_zip": "Coordinadora de ventas",
     "company": "ComunidadFeliz.com",
     "position": "Coordinadora de ventas",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Country Manager at ComunidadFeliz.mx | Trying to make the world a better place"
   },
   {
     "id": 890,
@@ -15598,8 +15699,10 @@
     "position_zip": "Product Manager",
     "company": "WebBeds",
     "position": "Product Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Online Travel Experience | Account Management | Tech | Hospitality"
   },
   {
     "id": 891,
@@ -15612,8 +15715,10 @@
     "position_zip": "Lead Talent Acquisition Specialist",
     "company": "Rappi",
     "position": "Lead Talent Acquisition Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "LinkedIn Top Voice /Top #1 en Habla Hispana/Líder de opinión en RRHH/Conferencista/ ¿Buscas empleo? Envíame WhatsApp al 5546679394/Generación de Leads B2B especializado en RRHH// Sígueme 🔔"
   },
   {
     "id": 892,
@@ -15626,8 +15731,10 @@
     "position_zip": "VP of Growth Americas",
     "company": "Unlimit",
     "position": "VP of Growth Americas",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Head of Risk at Unlimit"
   },
   {
     "id": 893,
@@ -15640,8 +15747,10 @@
     "position_zip": "Chief Product and Technology Officer & Co-Founder",
     "company": "Akua",
     "position": "Chief Product and Technology Officer & Co-Founder",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "CPTO & Co-Founder at Akua | Reinventing Payments Infra with AI 🌎 | Professor , Endeavor Mentor & Startup Advisor | Cloud-AI-Native Fintech Builder 🚀"
   },
   {
     "id": 894,
@@ -15654,8 +15763,10 @@
     "position_zip": "Business Development Manager",
     "company": "Omnibees",
     "position": "Business Development Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Líder en Ventas, Crecimiento Empresarial e Inteligencia Artificial | Ayudo a Líderes a Llevar sus Negocios a 7 y 8 Cifras con Estrategia y Foco"
   },
   {
     "id": 895,
@@ -16082,8 +16193,9 @@
     "position_zip": "Analista de producto TC - TD",
     "company": "Banco de Bogotá",
     "position": "Analista de producto TC - TD",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 919,
@@ -16204,8 +16316,10 @@
     "position_zip": "Director of Stores & Retail Operations | Xcaret Group",
     "company": "Grupo Xcaret",
     "position": "Director of Stores & Retail Operations | Xcaret Group",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Retail Director | Scaling 75+ Stores Across Parks, Hotels & High-Traffic Retail Environments| Profitability, Experience & Product Strategy"
   },
   {
     "id": 926,
@@ -16344,8 +16458,9 @@
     "position_zip": "IT Business Manager",
     "company": "Capitole",
     "position": "IT Business Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 934,
@@ -16628,8 +16743,9 @@
     "position_zip": "Analista de selección de personal",
     "company": "TP",
     "position": "Analista de selección de personal",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 950,
@@ -16642,8 +16758,9 @@
     "position_zip": "CEO & founder",
     "company": "Bloowatch",
     "position": "CEO & founder",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 951,
@@ -17412,8 +17529,9 @@
     "position_zip": "Search Engine Optimization Specialist",
     "company": "Electronic Arts (EA)",
     "position": "Search Engine Optimization Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 994,
@@ -17534,8 +17652,9 @@
     "position_zip": "Sales Development Representative",
     "company": "Poka Inc.",
     "position": "Sales Development Representative",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1001,
@@ -18070,8 +18189,10 @@
     "position_zip": "Ejecutivo de cuentas",
     "company": "Paraty Tech",
     "position": "Ejecutivo de cuentas",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "🇲🇽🇺🇸 Reclutando ingenieros mexicanos para trabajar en Estados Unidos | Especialista en Visa TN | Automatización | Mantenimiento | Manufactura | Entrevistas directas | Escríbeme por DM o WhatsApp 📲 55 2662 6071"
   },
   {
     "id": 1031,
@@ -18624,8 +18745,9 @@
     "position_zip": "Enterprise Sales Development",
     "company": "ZoomInfo",
     "position": "Enterprise Sales Development",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1063,
@@ -18710,8 +18832,10 @@
     "position_zip": "Talent Acquisition Specialist",
     "company": "Clip",
     "position": "Talent Acquisition Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Talent Acquisition Specialist at CLIP"
   },
   {
     "id": 1068,
@@ -18724,8 +18848,10 @@
     "position_zip": "Senior Analyst",
     "company": "Ridgetop Research",
     "position": "Senior Analyst",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Senior Analyst at Ridgetop Research"
   },
   {
     "id": 1069,
@@ -18738,8 +18864,10 @@
     "position_zip": "Supervisora e-commerce",
     "company": "Baleine Group",
     "position": "Supervisora e-commerce",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "24,399 followers"
   },
   {
     "id": 1070,
@@ -18752,8 +18880,10 @@
     "position_zip": "Fundador - Consultor de transformación de negocio",
     "company": "Motor LabShop",
     "position": "Fundador - Consultor de transformación de negocio",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Oscar Hernandez Moreno • 3rd+"
   },
   {
     "id": 1071,
@@ -18766,8 +18896,10 @@
     "position_zip": "Senior manager",
     "company": "Nuek",
     "position": "Senior manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Producción de eventos, ambientación"
   },
   {
     "id": 1072,
@@ -18780,8 +18912,10 @@
     "position_zip": "Founder & Ecommerce Growth Advisor",
     "company": "Archundia Digital Strategy",
     "position": "Founder & Ecommerce Growth Advisor",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Ecommerce Director | 14 Years Scaling DTC, Marketplace & P&L Across LATAM and APAC | Founder @ Archundia Digital Strategy | Ex-Pandora, Clip"
   },
   {
     "id": 1073,
@@ -18794,8 +18928,10 @@
     "position_zip": "Head of Marketing",
     "company": "Cosign",
     "position": "Head of Marketing",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Marketing Director / Ex BBVA - Ex Amex - Fintech Expert"
   },
   {
     "id": 1074,
@@ -18808,8 +18944,10 @@
     "position_zip": "Digital Product Manager  | Regional Manager",
     "company": "Boostic.cloud",
     "position": "Digital Product Manager  | Regional Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "."
   },
   {
     "id": 1075,
@@ -19398,8 +19536,10 @@
     "position_zip": "Senior Director LatAm",
     "company": "I2B Tech",
     "position": "Senior Director LatAm",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "LATAM Business Leader | Enterprise Growth, Regional P&L & Strategic Accounts | AI Driven Business Strategy & Transformation"
   },
   {
     "id": 1108,
@@ -19628,8 +19768,10 @@
     "position_zip": "Head of Implementation, Latin America",
     "company": "Yuno",
     "position": "Head of Implementation, Latin America",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Head of Implementation | Head of Agile | Project Manager LATAM | Process Analysis | Innovation"
   },
   {
     "id": 1121,
@@ -20002,8 +20144,10 @@
     "position_zip": "Senior Customer Technical Services Analyst",
     "company": "Mastercard",
     "position": "Senior Customer Technical Services Analyst",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Payments Operations Lead | Authorization, 3DS & Fraud SME | ISO-8583 | End-to-End Payments Lifecycle (LATAM/Caribbean)"
   },
   {
     "id": 1142,
@@ -20196,8 +20340,9 @@
     "position_zip": "",
     "company": "",
     "position": "",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1155,
@@ -20264,8 +20409,9 @@
     "position_zip": "Consultor Jr",
     "company": "ALTREGY Consulting",
     "position": "Consultor Jr",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1159,
@@ -20458,8 +20604,10 @@
     "position_zip": "AI Commerce Architect Infrastructure",
     "company": "AION Venture M",
     "position": "AI Commerce Architect Infrastructure",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Abogado Corporativo, Gerente Jurídico, In House Lawyer, en búsqueda de nuevos retos laborales."
   },
   {
     "id": 1170,
@@ -21444,8 +21592,9 @@
     "position_zip": "Blogger",
     "company": "YouTube",
     "position": "Blogger",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1226,
@@ -21818,8 +21967,10 @@
     "position_zip": "Business Advisor",
     "company": "Odoo",
     "position": "Business Advisor",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Head of Direct Sales @ Odoo Spain 🇪🇸 | SaaS & ERP | Sales Manager"
   },
   {
     "id": 1247,
@@ -21868,8 +22019,10 @@
     "position_zip": "Dirección Comercial",
     "company": "Microsip",
     "position": "Dirección Comercial",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Dirección Comercial en Microsip"
   },
   {
     "id": 1250,
@@ -22116,8 +22269,9 @@
     "position_zip": "Senior Director - Middle Market",
     "company": "Clip",
     "position": "Senior Director - Middle Market",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1264,
@@ -23264,8 +23418,9 @@
     "position_zip": "Senior Business Development Advisor",
     "company": "Van Van Atelier",
     "position": "Senior Business Development Advisor",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1331,
@@ -23674,8 +23829,9 @@
     "position_zip": "Senior Manager of e-Commerce and Digital Marketing",
     "company": "Ninja México",
     "position": "Senior Manager of e-Commerce and Digital Marketing",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1355,
@@ -23976,8 +24132,10 @@
     "position_zip": "Director",
     "company": "Exteria Outdoor Reasons",
     "position": "Director",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Ernesto Ramírez • 3rd+"
   },
   {
     "id": 1372,
@@ -23990,8 +24148,10 @@
     "position_zip": "Owner",
     "company": "APS - Automatic Payment Systems",
     "position": "Owner",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Diseño, fabrico y opero soluciones de autocobro en México | Aplicaciones y Soluciones de Pago APS · Quickpay · Quickpaymini · Oasis Microtiendas"
   },
   {
     "id": 1373,
@@ -24526,8 +24686,9 @@
     "position_zip": "FP&A Manager",
     "company": "R2",
     "position": "FP&A Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1404,
@@ -24792,8 +24953,9 @@
     "position_zip": "Administrador de Producto Ecommerce",
     "company": "Converse",
     "position": "Administrador de Producto Ecommerce",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1419,
@@ -25292,8 +25454,10 @@
     "position_zip": "Compradora Estratégica",
     "company": "Carnot Laboratorios",
     "position": "Compradora Estratégica",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Gerente de producto"
   },
   {
     "id": 1447,
@@ -25306,8 +25470,10 @@
     "position_zip": "Director de Marketing & Revenue Operations (RevOps), Co-Founder SMD Growth",
     "company": "SMDmx",
     "position": "Director de Marketing & Revenue Operations (RevOps), Co-Founder SMD Growth",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Marketing Director & Revenue Operations | Marketing Trainer | Conecto Marketing, Ventas y Tecnología de Empresas B2B para Maximizar su Rentabilidad con Estrategia, Automatización y Optimización del Ciclo Comercial"
   },
   {
     "id": 1448,
@@ -25356,8 +25522,9 @@
     "position_zip": "Marketing & E-commerce Director",
     "company": "General Procurement, Inc.",
     "position": "Marketing & E-commerce Director",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1451,
@@ -25568,8 +25735,9 @@
     "position_zip": "Palace Elite Ecommerce Manager",
     "company": "Palace Resorts",
     "position": "Palace Elite Ecommerce Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1463,
@@ -25618,8 +25786,10 @@
     "position_zip": "Regional Head of Channels, Partner Recruitment & Alliances | Mexico, Colombia, Chile & Peru",
     "company": "Odoo",
     "position": "Regional Head of Channels, Partner Recruitment & Alliances | Mexico, Colombia, Chile & Peru",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Director México at Odoo"
   },
   {
     "id": 1466,
@@ -25632,8 +25802,10 @@
     "position_zip": "Gerente Comercial Retail Media",
     "company": "El Puerto de Liverpool",
     "position": "Gerente Comercial Retail Media",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Subdirector de Retail Media en El Puerto de Liverpool"
   },
   {
     "id": 1467,
@@ -25646,8 +25818,10 @@
     "position_zip": "Coordinador de marketing",
     "company": "GRUPO VEERKAMP",
     "position": "Coordinador de marketing",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Gerente de Mercadotecnia"
   },
   {
     "id": 1468,
@@ -25660,8 +25834,10 @@
     "position_zip": "Business Development",
     "company": "Go Bravo | Resuelve tu deuda",
     "position": "Business Development",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "169 followers"
   },
   {
     "id": 1469,
@@ -25674,8 +25850,10 @@
     "position_zip": "Cofounder / Ecommerce Growth",
     "company": "Ideadora.",
     "position": "Cofounder / Ecommerce Growth",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Co-Founder | Ecommerce & Marketplace Growth"
   },
   {
     "id": 1470,
@@ -25688,8 +25866,10 @@
     "position_zip": "Key Account Manager",
     "company": "IDESAA",
     "position": "Key Account Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Consultant collaborating with companies to transform their training and talent development into a strategic investment, measuring impact through KPIs and ROI. Director of IDESAA."
   },
   {
     "id": 1471,
@@ -25702,8 +25882,10 @@
     "position_zip": "Gerente de Marketing",
     "company": "Blackhawk Network",
     "position": "Gerente de Marketing",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Gerente de Marketing"
   },
   {
     "id": 1472,
@@ -25716,8 +25898,10 @@
     "position_zip": "Managing Director",
     "company": "OCN",
     "position": "Managing Director",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "5,220 followers"
   },
   {
     "id": 1473,
@@ -25730,8 +25914,10 @@
     "position_zip": "Directora General",
     "company": "Hey U",
     "position": "Directora General",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "E-Commerce Manager"
   },
   {
     "id": 1474,
@@ -25816,8 +26002,10 @@
     "position_zip": "Commercial & Revenue Director",
     "company": "The Beach Tulum Hotel",
     "position": "Commercial & Revenue Director",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "17 followers"
   },
   {
     "id": 1479,
@@ -26388,8 +26576,9 @@
     "position_zip": "Business Intelligence Manager - LatAm Payments",
     "company": "Amazon",
     "position": "Business Intelligence Manager - LatAm Payments",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1511,
@@ -26564,8 +26753,9 @@
     "position_zip": "Commercial Manager",
     "company": "Samsung Electronics",
     "position": "Commercial Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1521,
@@ -26902,8 +27092,10 @@
     "position_zip": "Marketplaces Operations Specialist",
     "company": "Fender Musical Instruments Corporation",
     "position": "Marketplaces Operations Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Marketplaces Operations Specialist"
   },
   {
     "id": 1540,
@@ -27132,8 +27324,9 @@
     "position_zip": "Gerente Administrativo",
     "company": "Restaurante La Lunita de Akumal",
     "position": "Gerente Administrativo",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1553,
@@ -27506,8 +27699,9 @@
     "position_zip": "Human Resources Specialist",
     "company": "EYERIDE LLC",
     "position": "Human Resources Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1574,
@@ -28636,8 +28830,9 @@
     "position_zip": "Ejecutivo de cuenta premier",
     "company": "HSBC",
     "position": "Ejecutivo de cuenta premier",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1640,
@@ -29280,8 +29475,10 @@
     "position_zip": "Marketplace coordinator",
     "company": "Reebok",
     "position": "Marketplace coordinator",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "KAM Reebok México"
   },
   {
     "id": 1676,
@@ -29312,8 +29509,9 @@
     "position_zip": "Account Representative",
     "company": "Advantage Logistics, Inc.",
     "position": "Account Representative",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1678,
@@ -30100,8 +30298,9 @@
     "position_zip": "Analista corporativo",
     "company": "Menzies Aviation",
     "position": "Analista corporativo",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1723,
@@ -30618,8 +30817,10 @@
     "position_zip": "Gerente Senior de Ecommerce",
     "company": "Abbott",
     "position": "Gerente Senior de Ecommerce",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Gerente Senior de Ecommerce en Abbott"
   },
   {
     "id": 1752,
@@ -30884,8 +31085,10 @@
     "position_zip": "Financiación para Startups mediante Foros - Responsable de  Startups",
     "company": "Keiretsu Forum Spain",
     "position": "Financiación para Startups mediante Foros - Responsable de  Startups",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Responsable de Startups en Keiretsu Forum Spain"
   },
   {
     "id": 1767,
@@ -30898,8 +31101,10 @@
     "position_zip": "Sales Manager | Conversational AI & Revenue Growth",
     "company": "S1",
     "position": "Sales Manager | Conversational AI & Revenue Growth",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Sales Manager en S1 | Ayudo a grandes empresas en LATAM a escalar su atención multicanal con IA sin multiplicar costos operativos humanos | Ecosistemas Conversacionales No-Code"
   },
   {
     "id": 1768,
@@ -31686,8 +31891,10 @@
     "position_zip": "Customer Success Manager",
     "company": "Beanstalk Consulting",
     "position": "Customer Success Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "CSM & Content Strategist @ Beanstalk | Proud Mom | Logistics Engineer👩🏼‍💻"
   },
   {
     "id": 1814,
@@ -32186,8 +32393,10 @@
     "position_zip": "AI Business Process Specialist",
     "company": "Microsoft",
     "position": "AI Business Process Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "AI Business Process Specialist @ Microsoft | ex-Gartner | Low Code | Business Applications"
   },
   {
     "id": 1843,
@@ -32290,8 +32499,9 @@
     "position_zip": "Especialista en atención al cliente",
     "company": "Innovative Management by Theron, Inc.",
     "position": "Especialista en atención al cliente",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1849,
@@ -32484,8 +32694,9 @@
     "position_zip": "Brazilian Customer Service Supervisor",
     "company": "Royal Holiday",
     "position": "Brazilian Customer Service Supervisor",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1860,
@@ -33002,8 +33213,9 @@
     "position_zip": "Business Development B2B",
     "company": "DiDi",
     "position": "Business Development B2B",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1891,
@@ -33070,8 +33282,9 @@
     "position_zip": "Analista Revenue Accounting",
     "company": "Viva Aerobus",
     "position": "Analista Revenue Accounting",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1895,
@@ -33120,8 +33333,9 @@
     "position_zip": "Maestro",
     "company": "CORDINACION SECTORIAL NÚMERO 3 DEL COLEGIO DE BACHILLERES DE ESTADO DE MICHOACÁN",
     "position": "Maestro",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1898,
@@ -33512,8 +33726,10 @@
     "position_zip": "CEO",
     "company": "Zacua México",
     "position": "CEO",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "I´m Nazareth Black"
   },
   {
     "id": 1921,
@@ -34102,8 +34318,10 @@
     "position_zip": "Representante de marca",
     "company": "Siegfried Rhein México",
     "position": "Representante de marca",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Experiencia en control total en la operación administrativa y financiera de equipos comerciales, optimización de procesos, calidad, orientado al crecimiento del negocio y en búsqueda de mejora de experiencias comerciales"
   },
   {
     "id": 1955,
@@ -34332,8 +34550,9 @@
     "position_zip": "Area Manager",
     "company": "ONE TACO, LLC",
     "position": "Area Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1968,
@@ -34382,8 +34601,9 @@
     "position_zip": "Director de finanzas y administración",
     "company": "CICOVISA, S.A. DE C.V.",
     "position": "Director de finanzas y administración",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 1971,
@@ -35062,8 +35282,10 @@
     "position_zip": "Head of B2B Sales",
     "company": "Yuhu",
     "position": "Head of B2B Sales",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "7,213 followers"
   },
   {
     "id": 2009,
@@ -35076,8 +35298,9 @@
     "position_zip": "Administrador de Prospectos Digitales",
     "company": "JAVER",
     "position": "Administrador de Prospectos Digitales",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2010,
@@ -35954,8 +36177,9 @@
     "position_zip": "Merchandising Executive",
     "company": "Hanesbrands Inc.",
     "position": "Merchandising Executive",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2061,
@@ -37516,8 +37740,10 @@
     "position_zip": "Director cadenas de autoservicio, mayoristas, canales tradicionales México, USA,Centroamérica Europa",
     "company": "Proalmex",
     "position": "Director cadenas de autoservicio, mayoristas, canales tradicionales México, USA,Centroamérica Europa",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "CEO | Dirección de Operaciones | Director Comercial para MX USA Europa | Retail | Gestión de Multiunidades Especialista en crecimiento, operación multiformato, expansión comercial en empresas de retail, consumo masivo."
   },
   {
     "id": 2150,
@@ -37674,8 +37900,9 @@
     "position_zip": "Gerente general",
     "company": "Grupo Fisher´s",
     "position": "Gerente general",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2159,
@@ -37976,8 +38203,9 @@
     "position_zip": "Senior Logistics Manager",
     "company": "Tiendas 3B",
     "position": "Senior Logistics Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2176,
@@ -38620,8 +38848,10 @@
     "position_zip": "Gerente Comercial",
     "company": "Secure Title Latin America",
     "position": "Gerente Comercial",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "PR Director | Luxury Storytelling for Iconic Fashion, Jewelry & Hospitality Brands | Integrating AI to Build Emotional Brand Narratives"
   },
   {
     "id": 2212,
@@ -38760,8 +38990,9 @@
     "position_zip": "Sales manager",
     "company": "LXT LOGISTIC&TRADING(GUANGZHOU) CO.,LTD",
     "position": "Sales manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2221,
@@ -38774,8 +39005,9 @@
     "position_zip": "Gestión de Comunidad",
     "company": "datdata",
     "position": "Gestión de Comunidad",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2222,
@@ -38842,8 +39074,10 @@
     "position_zip": "Ejecutivo de ventas",
     "company": "USIMECA México",
     "position": "Ejecutivo de ventas",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "151 followers"
   },
   {
     "id": 2227,
@@ -39198,8 +39432,9 @@
     "position_zip": "Becario de producción",
     "company": "Liconsa",
     "position": "Becario de producción",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2247,
@@ -39644,8 +39879,9 @@
     "position_zip": "Coordinadora de Reclutamiento y Selección",
     "company": "Biofarma Natural CMD",
     "position": "Coordinadora de Reclutamiento y Selección",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2272,
@@ -39730,8 +39966,10 @@
     "position_zip": "Reclutador TI Senior",
     "company": "Capgemini",
     "position": "Reclutador TI Senior",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "IT Recruiter en Capgemini"
   },
   {
     "id": 2277,
@@ -39834,8 +40072,9 @@
     "position_zip": "Director comercial",
     "company": "NUBAC",
     "position": "Director comercial",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2284,
@@ -40208,8 +40447,10 @@
     "position_zip": "Commissioning Engineer",
     "company": "FieldCore",
     "position": "Commissioning Engineer",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Mentor & Career Coach con más de una década de experiencia en corporativo | +200 profesionales impactados 🚀"
   },
   {
     "id": 2306,
@@ -40492,8 +40733,10 @@
     "position_zip": "Technical Coordinator metro Monorriel",
     "company": "TRIA INGENIERIA MÉXICO",
     "position": "Technical Coordinator metro Monorriel",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Desde 1940, a Revista Ferroviária é referência na América do Sul, com conteúdo estratégico sobre ferrovias e metrô, ideal para planos de marketing voltados ao setor e decisões de mercado."
   },
   {
     "id": 2323,
@@ -40632,8 +40875,9 @@
     "position_zip": "Gerente Transporte de Personal",
     "company": "MOBILITY ADO",
     "position": "Gerente Transporte de Personal",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2331,
@@ -41546,8 +41790,10 @@
     "position_zip": "HRSC",
     "company": "The Coca-Cola Company",
     "position": "HRSC",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "President Coca-Cola México"
   },
   {
     "id": 2384,
@@ -41812,8 +42058,10 @@
     "position_zip": "Lider de Servicios Generales y logística",
     "company": "Grupo Techint",
     "position": "Lider de Servicios Generales y logística",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Servicios Generales / Operaciones de logistica / Construcción Industrial"
   },
   {
     "id": 2401,
@@ -41898,8 +42146,9 @@
     "position_zip": "Gerente Inglés Individual",
     "company": "INGLÉS INDIVIDUAL",
     "position": "Gerente Inglés Individual",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2406,
@@ -42128,8 +42377,10 @@
     "position_zip": "Senior Program Manager SSD",
     "company": "Amazon",
     "position": "Senior Program Manager SSD",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Sr SSD Program Manager | Director Operaciones y Logística eCommerce | Director Ecommerce I Consultoría | Drop Shipping | Omnicanalidad | Ultima milla | Emprendedor, Mejora de KPIs, IA e Innovación"
   },
   {
     "id": 2419,
@@ -42970,8 +43221,9 @@
     "position_zip": "CEO",
     "company": "Self-employed",
     "position": "CEO",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2469,
@@ -43380,8 +43632,10 @@
     "position_zip": "OFFICCE COMPLIANCE",
     "company": "SAIA INTERNACIONAL CORP",
     "position": "OFFICCE COMPLIANCE",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "I Help Organizations Build Resilient, Future-Ready Infrastructure | Civil & HSE Engineering Leadership | Driving ROI through High-Performance Safety | Scaling Projects Safely | Bridging Engineering & Sustainable Growth."
   },
   {
     "id": 2496,
@@ -43970,8 +44224,10 @@
     "position_zip": "Gerente de importaciones y logística",
     "company": "Ubic Center",
     "position": "Gerente de importaciones y logística",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Gerente de Importaciones y logística"
   },
   {
     "id": 2529,
@@ -44038,8 +44294,10 @@
     "position_zip": "Ceo",
     "company": "Fernandes & Fernandes Importação e Exportação do Brasil S.A",
     "position": "Ceo",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Analista de Comércio Exterior | Importação | Exportação | Compliance Aduaneiro | Classificação Fiscal (NCM) | Base Fiscal Estratégica"
   },
   {
     "id": 2533,
@@ -44052,8 +44310,10 @@
     "position_zip": "Catedrática",
     "company": "ISEADE - FEPADE",
     "position": "Catedrática",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Executive Coach @Ely_Machado | Public speaker and professor with 20+ years of experience | ANAHUAC"
   },
   {
     "id": 2534,
@@ -44120,8 +44380,9 @@
     "position_zip": "Ecommerce Manager",
     "company": "Koblenz Eléctrica, S.A. de C.V.",
     "position": "Ecommerce Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2538,
@@ -44764,8 +45025,10 @@
     "position_zip": "Director Of Sales Marketing",
     "company": "Somy Technology Co., Ltd",
     "position": "Director Of Sales Marketing",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Director of Marketing @ Somy Times Technology Mobiles: OPPO, iPhone, Xiaomi, Honor, Motorola Gaming : Nintendo, Xbox, SteamDeck Audio Products: JBL, BOSE, Marshall Others: DJI,Insta360,Logitech, Fujifilm"
   },
   {
     "id": 2575,
@@ -45732,8 +45995,9 @@
     "position_zip": "COORDINADOR DE CUENTAS POR PAGAR",
     "company": "TIA OFILIA",
     "position": "COORDINADOR DE CUENTAS POR PAGAR",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2632,
@@ -46196,8 +46460,9 @@
     "position_zip": "IT Specialist",
     "company": "ComputER",
     "position": "IT Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2658,
@@ -46408,8 +46673,10 @@
     "position_zip": "Embajador de marca",
     "company": "OLR LEASING",
     "position": "Embajador de marca",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "LinkedIn Top Voice /Top #1 en Habla Hispana/Líder de opinión en RRHH/Conferencista/ ¿Buscas empleo? Envíame WhatsApp al 5546679394/Generación de Leads B2B especializado en RRHH// Sígueme 🔔"
   },
   {
     "id": 2670,
@@ -46890,8 +47157,9 @@
     "position_zip": "General Manager Administration",
     "company": "BCR Consultores S.C.",
     "position": "General Manager Administration",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2700,
@@ -48560,8 +48828,9 @@
     "position_zip": "Gerente Regional México: Distribuidores DTS/DSD",
     "company": "Campari Group",
     "position": "Gerente Regional México: Distribuidores DTS/DSD",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2797,
@@ -48592,8 +48861,9 @@
     "position_zip": "海外销售经理",
     "company": "I trusty Ltd",
     "position": "海外销售经理",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2799,
@@ -49920,8 +50190,9 @@
     "position_zip": "Director de relaciones",
     "company": "Kam suministros",
     "position": "Director de relaciones",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2877,
@@ -50600,8 +50871,9 @@
     "position_zip": "Direccion",
     "company": "Director en empresa líder en tecnología de la región.",
     "position": "Direccion",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 2921,
@@ -50686,8 +50958,10 @@
     "position_zip": "Principal CEO",
     "company": "Miros Transportes y MM Chatarrera S.A. de C.V.",
     "position": "Principal CEO",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Consultora de Programas Ambientales Y Proyectos Sostenibles Conferencista y Emprendedora …"
   },
   {
     "id": 2926,
@@ -50970,8 +51244,10 @@
     "position_zip": "Principal CEO",
     "company": "Scarthread",
     "position": "Principal CEO",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Negocios Internacionales"
   },
   {
     "id": 2943,
@@ -51434,8 +51710,10 @@
     "position_zip": "kam",
     "company": "Passline",
     "position": "kam",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "13,131 followers"
   },
   {
     "id": 2971,
@@ -51466,8 +51744,10 @@
     "position_zip": "Administrador de obra",
     "company": "Coppel",
     "position": "Administrador de obra",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "HR Director | Career Coach | Talent Consultant | I certify HR Professionals in People Management | Head Hunter | +30 years in HR | Director of Escala tu Carrera, a community for growing executives"
   },
   {
     "id": 2974,
@@ -51678,8 +51958,10 @@
     "position_zip": "Cybersecurity Key Account Manager",
     "company": "Scitum",
     "position": "Cybersecurity Key Account Manager",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "7,170 followers"
   },
   {
     "id": 2986,
@@ -51764,8 +52046,10 @@
     "position_zip": "Site Intelligence Specialist",
     "company": "Pfizer",
     "position": "Site Intelligence Specialist",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01",
+    "position_current": "Site Intelligence Specialist en Pfizer"
   },
   {
     "id": 2992,
@@ -52048,8 +52332,9 @@
     "position_zip": "Director de desarrollo empresarial",
     "company": "Concentra BPO",
     "position": "Director de desarrollo empresarial",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3008,
@@ -52764,8 +53049,9 @@
     "position_zip": "Asesor comercial",
     "company": "Avanti",
     "position": "Asesor comercial",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3048,
@@ -52832,8 +53118,9 @@
     "position_zip": "",
     "company": "",
     "position": "",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3052,
@@ -53098,8 +53385,9 @@
     "position_zip": "",
     "company": "",
     "position": "",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3068,
@@ -53130,8 +53418,9 @@
     "position_zip": "Auxiliar de sistemas y facturación",
     "company": "Mi Bodega Aurrera San Antonino",
     "position": "Auxiliar de sistemas y facturación",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3070,
@@ -53270,8 +53559,9 @@
     "position_zip": "Jefe de Recepcion y Envios Pottery Barn Antea",
     "company": "Liverpool",
     "position": "Jefe de Recepcion y Envios Pottery Barn Antea",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3078,
@@ -53320,8 +53610,9 @@
     "position_zip": "",
     "company": "",
     "position": "",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3081,
@@ -53478,8 +53769,9 @@
     "position_zip": "Supervisor de Ventas",
     "company": "imagen Profunda",
     "position": "Supervisor de Ventas",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3090,
@@ -53618,8 +53910,9 @@
     "position_zip": "Gerente de planeación, materiales y almacén",
     "company": "ConAgra Foods",
     "position": "Gerente de planeación, materiales y almacén",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3098,
@@ -53686,8 +53979,9 @@
     "position_zip": "",
     "company": "",
     "position": "",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3102,
@@ -53880,8 +54174,9 @@
     "position_zip": "Representante legal",
     "company": "Altum tecnologic",
     "position": "Representante legal",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3113,
@@ -53912,8 +54207,9 @@
     "position_zip": "Ingeniero de procesos",
     "company": "Liverpool",
     "position": "Ingeniero de procesos",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   },
   {
     "id": 3115,
@@ -53926,7 +54222,8 @@
     "position_zip": "Jefe de operaciones",
     "company": "Prosegur",
     "position": "Jefe de operaciones",
-    "audit_status": "Pendiente Auditoria",
-    "job_status": "Vigente ZIP"
+    "audit_status": "Activo Auditado",
+    "job_status": "Vigente ZIP",
+    "last_updated_apify": "2026-08-01"
   }
 ]
