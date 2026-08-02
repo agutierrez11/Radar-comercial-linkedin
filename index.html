@@ -466,6 +466,9 @@ window.ENRICHED_CONNECTIONS_DATA = [{"id": 1, "first_name": "Rahul", "last_name"
   <button class="mini-btn" id="theme-toggle" onclick="toggleTheme()" style="margin-left:auto; display:flex; align-items:center; gap:6px; padding:4px 10px; font-weight:600; font-family:'Outfit', sans-serif;">
     <span id="theme-icon">☀️</span> <span id="theme-text">Modo Claro</span>
   </button>
+  <button class="mini-btn" id="demo-mode-toggle" onclick="toggleDemoMode()" style="margin-left:8px; display:flex; align-items:center; gap:6px; padding:4px 10px; font-weight:600; font-family:'Outfit', sans-serif;">
+    <span id="demo-mode-icon">👁️</span> <span id="demo-mode-text">Ocultar Datos</span>
+  </button>
   <div class="privacy-badge" style="margin-left:12px">
     <div class="privacy-dot"></div>
     <span>100% LOCAL</span>
@@ -1148,6 +1151,7 @@ const S = {
     messages: false,
     profile: false
   },
+  isDemoMode: false,
   criteria: [
     {
       id: 'no_company',
@@ -1252,6 +1256,40 @@ document.addEventListener('DOMContentLoaded', () => {
 // ═══════════════════════════════════════════════════════════════════════
 // HELPERS
 // ═══════════════════════════════════════════════════════════════════════
+function getDisplayName(c, idx) {
+  if (!S.isDemoMode) return c.name || 'Sin nombre';
+  const prefix = c.name ? c.name[0].toUpperCase() : 'X';
+  return `Contacto ${prefix}*** (Anonimizado)`;
+}
+
+function getDisplayCompany(c) {
+  if (!S.isDemoMode) return c.company || 'Sin empresa';
+  if (!c.company) return 'Sin empresa';
+  return 'Empresa Anonimizada SA';
+}
+
+function toggleDemoMode() {
+  S.isDemoMode = !S.isDemoMode;
+  const btn = document.getElementById('demo-mode-toggle');
+  if (S.isDemoMode) {
+    btn.innerHTML = '<span id="demo-mode-icon">🕵️</span> <span id="demo-mode-text">Modo Público</span>';
+    btn.style.background = 'var(--red)';
+    btn.style.color = '#fff';
+    btn.style.borderColor = 'var(--red)';
+  } else {
+    btn.innerHTML = '<span id="demo-mode-icon">👁️</span> <span id="demo-mode-text">Ocultar Datos</span>';
+    btn.style.background = 'transparent';
+    btn.style.color = 'inherit';
+    btn.style.borderColor = 'var(--border)';
+  }
+  
+  if (S.contacts.length) {
+    renderNetwork();
+    if (document.getElementById('purge-tbody').innerHTML !== '') renderPurge();
+    if (typeof renderConversationsListEnriched === 'function') renderConversationsListEnriched();
+  }
+}
+
 function norm(t) {
   if (!t) return '';
   return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').trim();
@@ -2468,7 +2506,7 @@ function renderNetworkTable() {
   // Agrupar por empresa
   const grouped = {};
   filteredContacts.forEach(c => {
-    const comp = (c.company || 'Sin Empresa').trim();
+    const comp = (getDisplayCompany(c)).trim();
     if (!grouped[comp]) grouped[comp] = [];
     grouped[comp].push(c);
   });
@@ -2486,11 +2524,12 @@ function renderNetworkTable() {
       </tr>
     `;
     
-    html += contacts.map(c => {
-      const parts = c.name.split(' ').filter(p => p.length > 0);
+    html += contacts.map((c, idx) => {
+      const dName = getDisplayName(c, idx);
+      const parts = dName.split(' ').filter(p => p.length > 0);
       const ini = (parts.length > 1 ? parts[0][0] + parts[1][0] : (parts[0] ? parts[0][0] : '?')).toUpperCase();
       const colors = ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ef4444', '#06b6d4'];
-      const avatarColor = colors[c.name.length % colors.length];
+      const avatarColor = colors[(c.name||'x').length % colors.length];
 
       return `
         <tr>
@@ -2498,7 +2537,7 @@ function renderNetworkTable() {
             <div style="display:flex; align-items:center; gap:10px;">
               <div style="width:24px; height:24px; border-radius:50%; background:${avatarColor}20; color:${avatarColor}; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:800; flex-shrink:0;">${ini}</div>
               <div class="td-name" style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
-                <span>${c.name}</span>
+                <span>${dName}</span>
                 <span class="badge ${c.jobStatus && c.jobStatus.includes('🟢') ? 'badge-green' : (c.jobStatus && c.jobStatus.includes('🟡') ? 'badge-amber' : 'badge-muted')}" style="font-size:8px; padding:1px 5px;">${c.jobStatus || '🟢 Vigente'}</span>
               </div>
             </div>
@@ -2580,8 +2619,8 @@ function renderICPTable() {
       : '';
     return `
       <tr>
-        <td><div class="td-name">${c.name}</div></td>
-        <td><div class="td-sub">${c.position||'—'}</div><div class="td-sub" style="color:var(--muted)">${c.company||'—'}</div></td>
+        <td><div class="td-name">${getDisplayName(c)}</div></td>
+        <td><div class="td-sub">${c.position||'—'}</div><div class="td-sub" style="color:var(--muted)">${getDisplayCompany(c)}</div></td>
         <td style="font-size:11px">${countryFlag(c.country)}</td>
         <td><div class="score-wrap">
           <div class="score-bar" style="width:80px"><div class="score-fill" style="width:${c.score}%;background:${scoreColor(c.score)}"></div></div>
@@ -2668,8 +2707,8 @@ function renderPurge() {
     const checked = S.purgeChecked.has(c.id) ? 'checked' : '';
     return `<tr>
       <td><input type="checkbox" ${checked} onchange="togglePurgeCheck(${c.id},this.checked)"></td>
-      <td><div class="td-name">${c.name||'—'}</div></td>
-      <td><div class="td-sub">${c.position||'Sin cargo'}</div><div class="td-sub" style="color:var(--muted)">${c.company||'Sin empresa'}</div></td>
+      <td><div class="td-name">${getDisplayName(c)}</div></td>
+      <td><div class="td-sub">${c.position||'Sin cargo'}</div><div class="td-sub" style="color:var(--muted)">${getDisplayCompany(c)}</div></td>
       <td style="font-size:11px">${c.country==='Desconocido'?'📍 —':countryFlag(c.country)}</td>
       <td>${reasons.map(r=>`<span class="badge badge-red" style="margin-right:3px;margin-bottom:2px">${r}</span>`).join('')}</td>
     </tr>`;
@@ -3392,7 +3431,7 @@ function renderConversationsListEnriched() {
       <div class="kpi-card" style="margin-bottom:6px; display:flex; flex-direction:column; gap:6px; border-left:4px solid ${sl.color}">
         <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:6px;">
           <div style="font-weight:700; font-size:12px; color:var(--text);">
-            👤 ${c.participant}
+            👤 ${getDisplayName({name: c.participant})}
             ${c.is_they_selling ? '<span class="badge" style="font-size:8px; background:rgba(236,72,153,0.15); color:#f472b6; border:1px solid rgba(236,72,153,0.3)">📥 Inbound Pitch</span>' : ''}
             ${c.is_friendly ? '<span class="badge" style="font-size:8px; background:rgba(59,130,246,0.15); color:#60a5fa; border:1px solid rgba(59,130,246,0.3)">🤝 Social</span>' : ''}
           </div>
@@ -3417,9 +3456,9 @@ function openModal(id) {
   S.pitchApproach = 'directo';
 
   // Rellenar campos del CRM & Edición
-  document.getElementById('modal-crm-name-input').value = c.customName || c.name || '';
+  document.getElementById('modal-crm-name-input').value = getDisplayName(c);
   document.getElementById('modal-crm-pos-input').value = c.customPosition || c.position || '';
-  document.getElementById('modal-crm-comp-input').value = c.customCompany || c.company || '';
+  document.getElementById('modal-crm-comp-input').value = getDisplayCompany(c);
   document.getElementById('modal-crm-status').value = c.crmStatus || 'Ninguno';
   document.getElementById('modal-crm-notes').value = c.crmNotes || '';
 
