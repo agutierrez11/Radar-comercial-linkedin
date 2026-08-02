@@ -1283,9 +1283,12 @@ function toggleDemoMode() {
     btn.style.borderColor = 'var(--border)';
   }
   
-  if (S.contacts.length) {
-    renderNetwork();
-    if (document.getElementById('purge-tbody').innerHTML !== '') renderPurge();
+  if (S.contacts && S.contacts.length > 0) {
+    if (typeof renderProfile === 'function') renderProfile();
+    if (typeof renderHeader === 'function') renderHeader();
+    if (typeof renderNetwork === 'function') renderNetwork();
+    if (typeof renderICP === 'function') renderICP();
+    if (typeof renderPurge === 'function') renderPurge();
     if (typeof renderConversationsListEnriched === 'function') renderConversationsListEnriched();
   }
 }
@@ -2185,10 +2188,13 @@ function renderHeader() {
 function renderProfile() {
   if (!S.positions.length && !S.ownerName) return;
   const el = document.getElementById('profile-content');
-  const name = S.ownerName || 'Propietario';
+  const name = S.isDemoMode ? 'Propietario Anonimizado' : (S.ownerName || 'Propietario');
   const activeIdx = S.activePositionIndex || 0;
   let html = `<div style="margin-bottom:16px"><div style="font-size:18px;font-weight:700">${name}</div>`;
-  if (S.positions[activeIdx]) html += `<div style="font-size:12px;color:var(--muted2);margin-top:3px">Contexto Activo para Pitches: <strong>${S.positions[activeIdx].title} @ ${S.positions[activeIdx].company}</strong></div>`;
+  if (S.positions[activeIdx]) {
+    const compName = S.isDemoMode ? 'Empresa Anonimizada SA' : S.positions[activeIdx].company;
+    html += `<div style="font-size:12px;color:var(--muted2);margin-top:3px">Contexto Activo para Pitches: <strong>${S.positions[activeIdx].title} @ ${compName}</strong></div>`;
+  }
   html += `</div><div class="timeline">`;
   S.positions.forEach((p, i) => {
     const isActive = i === activeIdx;
@@ -2196,7 +2202,7 @@ function renderProfile() {
     const endLabel = p.end || 'Actual';
     html += `<div class="tl-item ${activeClass}" style="cursor:pointer;" onclick="selectActivePosition(${i})">
       <div class="tl-dot"></div>
-      <div class="tl-company">${p.company}</div>
+      <div class="tl-company">${S.isDemoMode ? 'Empresa Anonimizada SA' : p.company}</div>
       <div class="tl-role">${p.title}</div>
       <div class="tl-period">${p.start} → ${endLabel}</div>
       ${isActive ? `<span class="badge badge-green tl-toggle">● Contexto activo para pitches y scoring</span>` : `<span class="badge badge-muted tl-toggle">Hacer contexto activo</span>`}
