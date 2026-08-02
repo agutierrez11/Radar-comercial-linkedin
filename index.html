@@ -1621,11 +1621,17 @@ function buildContacts(rows) {
     const fn = (row['First Name'] || '').trim();
     const ln = (row['Last Name'] || '').trim();
     const name = `${fn} ${ln}`.trim();
-    const company = (row['Company'] || '').trim();
-    const position = (row['Position'] || '').trim();
-    const email = (row['Email Address'] || '').trim();
-    const url = (row['URL'] || '').trim();
-    const connectedOn = (row['Connected On'] || '').trim();
+    let company = (row['Company'] || row['company'] || '').trim();
+    let position = (row['Position'] || row['position'] || '').trim();
+    if (/\b\d+[\d,.]*\s*(followers?|seguidores?)\b/i.test(company) || company.toLowerCase().includes('follower')) {
+      company = '';
+    }
+    if (/\b\d+[\d,.]*\s*(followers?|seguidores?)\b/i.test(position) || position.toLowerCase().includes('follower')) {
+      position = '';
+    }
+    const email = (row['Email Address'] || row['email'] || '').trim();
+    const url = (row['URL'] || row['url'] || '').trim();
+    const connectedOn = (row['Connected On'] || row['connectedOn'] || '').trim();
     const yearsAgo = connectedYearsAgo(connectedOn);
     
     const initialCountry = inferCountry(email, company, position);
