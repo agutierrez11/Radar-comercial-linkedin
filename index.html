@@ -1149,14 +1149,64 @@ const S = {
     profile: false
   },
   criteria: [
-    { id: 'no_company',   label: 'Sin empresa registrada',          on: true,  fn: c => !c.company },
-    { id: 'no_position',  label: 'Sin cargo registrado',             on: true,  fn: c => !c.position },
-    { id: 'no_name',      label: 'Nombre incompleto (<4 chars)',     on: true,  fn: c => c.name.length < 4 },
-    { id: 'generic_pos',  label: 'Cargo genérico (student/unemployed)', on: true, fn: c => /\b(student|estudiante|desempleado|unemployed|—)\b/i.test(c.position) },
-    { id: 'old_contact',  label: 'Conexión >4 años sin interacción', on: true,  fn: c => c.connectedYearsAgo > 4 && (!c.msg_count || c.msg_count === 0) },
-
-    { id: 'no_country',   label: 'País no identificado',             on: false, fn: c => c.country === 'Desconocido' },
+    {
+      id: 'no_company',
+      label: 'Sin empresa registrada',
+      on: true,
+      fn: c => !c.company
+    },
+    {
+      id: 'no_position',
+      label: 'Sin cargo registrado',
+      on: true,
+      fn: c => !c.position
+    },
+    {
+      id: 'no_name',
+      label: 'Nombre incompleto (<4 chars)',
+      on: true,
+      fn: c => c.name.length < 4
+    },
+    {
+      id: 'generic_pos',
+      label: 'Cargo genérico (student/unemployed)',
+      on: true,
+      fn: c => /\b(student|estudiante|desempleado|unemployed|—)\b/i.test(c.position)
+    },
+    {
+      // Contacto frío real: viejo + sin DMs + sin valor estratégico
+      // Se rescata si: tiene cargo de valor, sector alineado, o tiene email
+      id: 'old_cold',
+      label: 'Conexión >4 años, sin DMs y sin valor estratégico',
+      on: true,
+      fn: c => {
+        if (c.msg_count && c.msg_count > 0) return false;           // 🛡️ tiene historial de DMs
+        if (c.connectedYearsAgo <= 4) return false;                  // 🛡️ es relativamente reciente
+        if (c.hierarchy === 'C-Level') return false;                 // 🛡️ C-Level = pipeline potencial
+        if (c.hierarchy === 'Director') return false;                // 🛡️ Director = influencia
+        if (c.hierarchy === 'Gerente') return false;                 // 🛡️ Gerente = decisor operativo
+        if (c.email) return false;                                   // 🛡️ tiene email = dato valioso
+        if (c.sector === 'Fintech/Pagos') return false;             // 🛡️ tu industria actual
+        if (c.sector === 'SaaS/Tech') return false;                 // 🛡️ ecosistema aliado
+        if (c.sector === 'Retail/eCommerce') return false;          // 🛡️ clientes potenciales
+        return true; // No hay escudo: candidato real a purga
+      }
+    },
+    {
+      // Spam / inbound pitch detectado sin reciprocidad real
+      id: 'inbound_spam',
+      label: 'Inbound pitch sin respuesta tuya (vendedor sin relación)',
+      on: false,
+      fn: c => c.is_they_selling === true && (!c.msg_count || c.msg_count <= 1)
+    },
+    {
+      id: 'no_country',
+      label: 'País no identificado (activar solo como filtro adicional)',
+      on: false,
+      fn: c => c.country === 'Desconocido'
+    },
   ]
+
 };
 
 let filteredContacts = [];
