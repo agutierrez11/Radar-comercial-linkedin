@@ -1193,9 +1193,9 @@ function toggleTheme() {
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Carga automática de los 150+ contactos enriquecidos al iniciar
+  // Carga automática de los datos enriquecidos y navega directo a Mi Red
   if (typeof loadDemoData === 'function') {
-    loadDemoData();
+    loadDemoData(true);
   }
 });
 
@@ -1332,10 +1332,29 @@ function countryFlag(c) {
 function connectedYearsAgo(str) {
   if (!str) return 99;
   try {
+    // Formato ISO: "2021-07-15" o "2021-07"
+    if (/^\d{4}-\d{2}/.test(str.trim())) {
+      const d = new Date(str.trim());
+      if (!isNaN(d)) return (Date.now() - d) / (365.25 * 86400 * 1000);
+    }
+    // Formato LinkedIn export: "15 Jul 2021" o "Jul 2021"
     const months = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
     const parts = str.trim().split(' ');
     if (parts.length === 3) {
       const d = new Date(parseInt(parts[2]), months[parts[1].toLowerCase().slice(0,3)], parseInt(parts[0]));
+      if (!isNaN(d)) return (Date.now() - d) / (365.25 * 86400 * 1000);
+    }
+    if (parts.length === 2) {
+      const monthKey = parts[0].toLowerCase().slice(0,3);
+      const year = parseInt(parts[1]);
+      if (months[monthKey] !== undefined && !isNaN(year)) {
+        const d = new Date(year, months[monthKey], 1);
+        return (Date.now() - d) / (365.25 * 86400 * 1000);
+      }
+    }
+    // Último recurso: solo año
+    if (/^\d{4}$/.test(str.trim())) {
+      const d = new Date(parseInt(str.trim()), 0, 1);
       return (Date.now() - d) / (365.25 * 86400 * 1000);
     }
   } catch(e) {}
@@ -1806,7 +1825,7 @@ function resetAllData() {
   }
 }
 
-async function loadDemoData(autoNavigate = false) {
+async function loadDemoData(autoNavigate = true) {
   setLoading(true, 50);
   try {
     const res = await fetch("enriched_connections.json");
@@ -1831,8 +1850,10 @@ async function loadDemoData(autoNavigate = false) {
         country = inferCountry(item.email || "", company, position);
       }
       const coords = getCoordsForContact(country, company, position);
+      const yearsAgo = connectedYearsAgo(item.connected_on);
 
       return {
+        // --- Identidad ---
         id: item.id,
         name: item.full_name,
         first_name: item.first_name,
@@ -1844,16 +1865,30 @@ async function loadDemoData(autoNavigate = false) {
         originalPosition: item.position,
         url: item.url,
         email: item.email || "",
+        // --- Conexión ---
         connectedOn: item.connected_on,
-        connectedYearsAgo: connectedYearsAgo(item.connected_on),
+        connectedYearsAgo: yearsAgo,
+        // --- Geografía ---
         country: coords.country,
         city: coords.city,
         lat: coords.lat,
         lng: coords.lng,
+        // --- Clasificación ---
         jobStatus: item.job_status || "🟢 Vigente Confirmado",
         hierarchy: inferHierarchy(position),
         sector: inferSector(position, company),
-        score: 0
+        score: 0,
+        // --- Campos enriquecidos Apify (NO SOBREESCRIBIR) ---
+        audit_status: item.audit_status || null,
+        msg_count: item.msg_count || 0,
+        last_msg_date: item.last_msg_date || null,
+        last_msg_snippet: item.last_msg_snippet || null,
+        sentiment: item.sentiment || null,
+        intent: item.intent || null,
+        direction: item.direction || null,
+        sentiment_detail: item.sentiment_detail || null,
+        is_they_selling: !!item.is_they_selling,
+        is_friendly: !!item.is_friendly
       };
     });
 
