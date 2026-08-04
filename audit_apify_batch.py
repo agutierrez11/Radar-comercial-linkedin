@@ -60,7 +60,7 @@ def load_progress():
         except Exception:
             pass
     return {
-        "processed_urls": {},  # url -> {status, last_post_date, last_post_text}
+        "processed_urls": {},  # url -> {status, location, industry}
         "errors": {}           # url -> error_msg
     }
 
@@ -177,7 +177,7 @@ def main():
     print(f"    Esto consumirá aproximadamente {len(run_batch) / BATCH_SIZE * 0.1:.2f} Compute Units de Apify.")
     
     # 6. Procesar en lotes (Batching)
-    actor_id = "harvestapi~linkedin-profile-posts"
+    actor_id = "harvestapi~linkedin-profile-scraper"
     
     for i in range(0, len(run_batch), BATCH_SIZE):
         batch = run_batch[i:i+BATCH_SIZE]
@@ -188,10 +188,9 @@ def main():
             print(f"  * {u}")
             
         payload = {
-            "targetUrls": batch_urls,
-            "maxPosts": 3,
-            "scrapeComments": False,
-            "scrapeReactions": False
+            "urls": batch_urls,
+            "minDelay": 1,
+            "maxDelay": 5
         }
         
         data_bytes = json.dumps(payload).encode("utf-8")
@@ -208,76 +207,52 @@ def main():
                 res_body = response.read().decode("utf-8")
                 items = json.loads(res_body)
                 
-                # Agrupar los posts por la URL del perfil para analizar su fecha máxima
-                # El formato de item tiene: query.targetUrl (que nos dice de qué perfil es el post)
-                profile_posts = {}
-                for url in batch_urls:
-                    profile_posts[url.strip().lower().split('?')[0].rstrip('/')] = []
-                    
+                # Guardar items brutos
+                os.makedirs('raw_apify_profiles', exist_ok=True)
+                with open(f'raw_apify_profiles/batch_{i//BATCH_SIZE + 1}.json', 'w', encoding='utf-8') as f:
+                    json.dump(items, f, indent=2, ensure_ascii=False)
+                
+                # Mapear los resultados
+                profile_data = {}
                 for item in items:
                     if not item or not isinstance(item, dict):
                         continue
-                    q = item.get("query", {})
-                    target_url = q.get("targetUrl")
+                    # Obtener la url solicitada a través de "originalQuery"
+                    orig_query = item.get("originalQuery", {})
+                    target_url = orig_query.get("url") or item.get("linkedinUrl")
+                    
                     if target_url:
                         target_url_clean = target_url.strip().lower().split('?')[0].rstrip('/')
-                        if target_url_clean in profile_posts:
-                            profile_posts[target_url_clean].append(item)
+                        profile_data[target_url_clean] = item
                 
                 # Clasificar cada perfil del lote
                 for c in batch:
                     c_url_clean = c["url"].strip().lower().split('?')[0].rstrip('/')
-                    posts = profile_posts.get(c_url_clean, [])
+                    profile = profile_data.get(c_url_clean)
                     
-                    if not posts:
-                        # No tiene posts
+                    if not profile or profile.get('error'):
+                        # No tiene perfil o dio error
                         progress["processed_urls"][c_url_clean] = {
-                            "status": "Inactivo",
-                            "last_post_date": "Nunca o Privado",
-                            "last_post_text": "Sin publicaciones recientes encontradas por el scraper"
+                            "status": "No Encontrado",
+                            "location": "Desconocido",
+                            "industry": "Desconocido"
                         }
                     else:
-                        # Encontrar la fecha del post más reciente
-                        max_date = None
-                        max_date_str = ""
-                        max_text = ""
+                        # Encontrar ubicación e industria
+                        loc = profile.get('location', {})
+                        loc_text = loc.get('linkedinText', 'Desconocido') if isinstance(loc, dict) else (loc or "Desconocido")
                         
-                        for p in posts:
-                            posted_at_obj = p.get("postedAt") or {}
-                            p_date_str = posted_at_obj.get("date")
-                            p_text = p.get("content") or "Sin texto"
-                            
-                            if p_date_str:
-                                try:
-                                    # Formato: 2026-07-11T15:01:10.378Z
-                                    # Cortar a YYYY-MM-DD
-                                    p_date = datetime.strptime(p_date_str[:10], "%Y-%m-%d")
-                                    if not max_date or p_date > max_date:
-                                        max_date = p_date
-                                        max_date_str = p_date_str[:10]
-                                        max_text = p_text
-                                except Exception:
-                                    if not max_date_str:
-                                        max_date_str = p_date_str[:10]
-                                        max_text = p_text
-                                        
-                        # Decidir si está activo (ej. publicó en los últimos 90 días del año de auditoría)
-                        # Nota: Dado que la fecha del sistema es Julio 2026, consideramos el año 2026
-                        limite = datetime.now() - timedelta(days=ACTIVO_DIAS)
+                        industry = profile.get('industry')
+                        if not industry and profile.get('experience'):
+                            industry = profile['experience'][0].get('companyName')
                         
-                        is_active = "Inactivo"
-                        if max_date and max_date >= limite:
-                            is_active = "Activo"
-                        elif max_date_str and "2026" in max_date_str:
-                            is_active = "Activo" # Fallback sencillo
-                            
                         progress["processed_urls"][c_url_clean] = {
-                            "status": is_active,
-                            "last_post_date": max_date_str or "Desconocida",
-                            "last_post_text": max_text[:150]
+                            "status": "Extraído",
+                            "location": loc_text,
+                            "industry": industry or "Desconocido"
                         }
                         
-                    print(f"  -> Resultado {c['first_name']} {c['last_name']}: {progress['processed_urls'][c_url_clean]['status']} (Último post: {progress['processed_urls'][c_url_clean]['last_post_date']})")
+                    print(f"  -> Resultado {c['first_name']} {c['last_name']}: {progress['processed_urls'][c_url_clean]['status']} (Loc: {progress['processed_urls'][c_url_clean]['location']})")
                     
         except urllib.error.HTTPError as e:
             err_msg = f"HTTP Error {e.code}"
@@ -302,10 +277,10 @@ def write_final_csv(progress, connections_map):
     """Writes the final consolidated audited list to audited_connections.csv."""
     with open(output_csv, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["First Name", "Last Name", "URL", "Connected On", "Company", "Position", "Audit Status", "Last Post Date", "Last Post Preview"])
+        writer.writerow(["First Name", "Last Name", "URL", "Connected On", "Company", "Position", "Audit Status", "Location", "Industry"])
         
-        activos = 0
-        inactivos = 0
+        extraidos = 0
+        no_encontrados = 0
         
         for url_clean, data in progress["processed_urls"].items():
             conn = connections_map.get(url_clean)
@@ -318,17 +293,17 @@ def write_final_csv(progress, connections_map):
                     conn["company"],
                     conn["position"],
                     data["status"],
-                    data["last_post_date"],
-                    data["last_post_text"]
+                    data.get("location", "Desconocido"),
+                    data.get("industry", "Desconocido")
                 ])
-                if data["status"] == "Activo":
-                    activos += 1
+                if data["status"] == "Extraído":
+                    extraidos += 1
                 else:
-                    inactivos += 1
+                    no_encontrados += 1
                     
         print(f"\n[+] Auditoría terminada. CSV exportado a: {output_csv}")
-        print(f"    - Contactos activos identificados: {activos}")
-        print(f"    - Contactos inactivos identificados: {inactivos}")
+        print(f"    - Perfiles extraídos: {extraidos}")
+        print(f"    - Perfiles no encontrados: {no_encontrados}")
 
 if __name__ == "__main__":
     main()

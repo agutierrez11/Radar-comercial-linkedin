@@ -2505,18 +2505,118 @@ let gisMapInstance = null;
 let gisMapMarkers = [];
 
 const COUNTRY_COORDS = {
-  'México': [23.6345, -102.5528],
+  'México': [23.6345, -102.5528], 'Mexico': [23.6345, -102.5528],
   'Chile': [-35.6751, -71.5430],
   'Colombia': [4.5709, -74.2973],
-  'Perú': [-9.1900, -75.0152],
-  'Brasil': [-14.2350, -51.9253],
+  'Perú': [-9.1900, -75.0152], 'Peru': [-9.1900, -75.0152],
+  'Brasil': [-14.2350, -51.9253], 'Brazil': [-14.2350, -51.9253],
   'Argentina': [-38.4161, -63.6167],
-  'España': [40.4637, -3.7492],
-  'USA': [37.0902, -95.7129],
+  'España': [40.4637, -3.7492], 'Spain': [40.4637, -3.7492],
+  'United States': [37.0902, -95.7129], 'USA': [37.0902, -95.7129],
   'Ecuador': [-1.8312, -78.1834],
   'Uruguay': [-32.5228, -55.7658],
-  'Costa Rica': [9.7489, -83.7534]
+  'Costa Rica': [9.7489, -83.7534],
+  'Panama': [8.9824, -79.5199], 'Panamá': [8.9824, -79.5199],
+  'Venezuela': [6.4238, -66.5897],
+  'Dominican Republic': [18.7357, -70.1627],
+  'Portugal': [39.3999, -8.2245],
+  'United Kingdom': [55.3781, -3.4360], 'UK': [55.3781, -3.4360],
+  'Kenya': [-0.0236, 37.9062],
+  'India': [20.5937, 78.9629],
+  'United Arab Emirates': [23.4241, 53.8478],
+  'Hong Kong': [22.3193, 114.1694],
+  'Germany': [51.1657, 10.4515],
+  'France': [46.2276, 2.2137],
+  'Netherlands': [52.1326, 5.2913]
 };
+
+// Coordenadas por CIUDAD — usadas cuando metadata.city está disponible
+const CITY_COORDS = {
+  // México
+  'mexico city': [19.4326, -99.1332], 'ciudad de mexico': [19.4326, -99.1332],
+  'cdmx': [19.4326, -99.1332], 'ciudad de méxico': [19.4326, -99.1332],
+  'guadalajara': [20.6597, -103.3496],
+  'monterrey': [25.6866, -100.3161],
+  'merida': [20.9674, -89.5926], 'mérida': [20.9674, -89.5926],
+  'puebla': [19.0414, -98.2063],
+  'tijuana': [32.5149, -117.0382],
+  'cancun': [21.1619, -86.8515], 'cancún': [21.1619, -86.8515],
+  'queretaro': [20.5888, -100.3899], 'querétaro': [20.5888, -100.3899],
+  'leon': [21.1221, -101.6824], 'león': [21.1221, -101.6824],
+  'jalisco': [20.6597, -103.3496],
+  'michoacan': [19.7021, -101.1844], 'michoacán': [19.7021, -101.1844],
+  'tonala': [20.6228, -103.2358], 'tonalá': [20.6228, -103.2358],
+  'faja de oro': [21.1166, -97.6833],
+  'colonia alvaro obregon': [19.3602, -99.1944],
+  'ecatepec de morelos': [19.6010, -99.0451],
+  'pueblo hidalgo': [19.4326, -99.1332],
+  // Colombia
+  'bogota': [4.7110, -74.0721], 'bogotá': [4.7110, -74.0721],
+  'medellin': [6.2442, -75.5812], 'medellín': [6.2442, -75.5812],
+  'cali': [3.4516, -76.5320],
+  'cartagena': [10.3910, -75.4794],
+  'colombia': [4.5709, -74.2973],
+  // Argentina
+  'buenos aires': [-34.6037, -58.3816],
+  'cordoba': [-31.4201, -64.1888], 'córdoba': [-31.4201, -64.1888],
+  'rosario': [-32.9442, -60.6505],
+  'san miguel de tucuman': [-26.8083, -65.2176],
+  // Brasil
+  'sao paulo': [-23.5505, -46.6333], 'são paulo': [-23.5505, -46.6333],
+  'rio de janeiro': [-22.9068, -43.1729],
+  'porto alegre': [-30.0346, -51.2177],
+  // Chile
+  'santiago': [-33.4489, -70.6693],
+  // Perú
+  'lima': [-12.0464, -77.0428],
+  // Ecuador
+  'quito': [-0.1807, -78.4678],
+  'guayaquil': [-2.1894, -79.8891],
+  // Uruguay
+  'montevideo': [-34.9011, -56.1645],
+  // Costa Rica
+  'san jose': [9.9281, -84.0907], 'san josé': [9.9281, -84.0907],
+  // Panamá
+  'panama': [8.9942, -79.5188], 'panamá': [8.9942, -79.5188],
+  // España
+  'madrid': [40.4168, -3.7038],
+  'barcelona': [41.3851, 2.1734],
+  // Portugal
+  'lisbon': [38.7223, -9.1393], 'lisboa': [38.7223, -9.1393],
+  'porto': [41.1579, -8.6291],
+  // US
+  'new york city': [40.7128, -74.0060], 'new york': [40.7128, -74.0060],
+  'miami': [25.7617, -80.1918],
+  'san francisco': [37.7749, -122.4194],
+  // UK
+  'london': [51.5074, -0.1278], 'londres': [51.5074, -0.1278],
+  // Kenya
+  'nairobi': [-1.2921, 36.8219],
+  // India
+  'mumbai': [19.0760, 72.8777],
+  // UAE
+  'dubai': [25.2048, 55.2708],
+  // Venezuela
+  'caracas': [10.4806, -66.9036],
+  // Dominican Republic
+  'santo domingo': [18.4861, -69.9312],
+  // Hong Kong
+  'hong kong': [22.3193, 114.1694]
+};
+
+function getCityCoords(city, country) {
+  if (city && city !== 'Desconocido' && city !== '') {
+    const key = city.toLowerCase().trim();
+    if (CITY_COORDS[key]) return CITY_COORDS[key];
+    // Try partial match
+    for (const [k, v] of Object.entries(CITY_COORDS)) {
+      if (key.includes(k) || k.includes(key)) return v;
+    }
+  }
+  // Fallback to country centroid
+  if (country && COUNTRY_COORDS[country]) return COUNTRY_COORDS[country];
+  return null;
+}
 
 function renderGISMap(identifiedCountries, allContacts) {
   const mapCard = document.getElementById('map-gis-card');
@@ -2538,68 +2638,123 @@ function renderGISMap(identifiedCountries, allContacts) {
 
   if (!gisMapInstance) {
     gisMapInstance = L.map('gis-map-container', {
-      center: [20.0, -40.0],
-      zoom: 2.5,
+      center: [15.0, -70.0],
+      zoom: 3,
       zoomControl: true,
-      attributionControl: false
+      attributionControl: false,
+      maxBounds: [[-90, -200], [90, 200]],
+      maxBoundsViscosity: 1.0
     });
 
-    L.tileLayer(tileUrl, { maxZoom: 18 }).addTo(gisMapInstance);
-  } else {
-    gisMapInstance.eachLayer(layer => {
-      if (layer instanceof L.TileLayer) {
-        layer.setUrl(tileUrl);
-      }
-    });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_no_labels/{z}/{x}/{y}{r}.png', {
+      maxZoom: 14,
+      noWrap: true,
+      bounds: [[-90, -180], [90, 180]]
+    }).addTo(gisMapInstance);
+
+    // Overlay sutil de labels sin repetición
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
+      maxZoom: 14,
+      noWrap: true,
+      bounds: [[-90, -180], [90, 180]],
+      opacity: 0.7
+    }).addTo(gisMapInstance);
   }
 
-  gisMapMarkers.forEach(m => gisMapInstance.removeLayer(m));
-  gisMapMarkers = [];
-
+  // Agrupar por ciudad usando getCityCoords()
   const locationGroups = {};
   allContacts.forEach(c => {
-    if (!c.lat || !c.lng || c.country === 'Desconocido') return;
-    const key = `${c.country}_${c.city || 'Desconocido'}`;
-    if (!locationGroups[key]) {
-      locationGroups[key] = {
-        country: c.country,
-        city: c.city,
-        lat: c.lat,
-        lng: c.lng,
+    const country = c.country;
+    const city = c.city || '';
+    if (!country || country === 'Desconocido') return;
+
+    const coords = getCityCoords(city, country);
+    if (!coords) return;
+
+    // Key: ciudad normalizada o country si no hay ciudad
+    const cityKey = (city && city !== 'Desconocido' && city !== '') ? city.toLowerCase().trim() : country;
+    const groupKey = `${country}__${cityKey}`;
+
+    if (!locationGroups[groupKey]) {
+      locationGroups[groupKey] = {
+        country: country,
+        city: (city && city !== 'Desconocido') ? city : country,
+        lat: coords[0],
+        lng: coords[1],
         contacts: []
       };
     }
-    locationGroups[key].contacts.push(c);
+    locationGroups[groupKey].contacts.push(c);
   });
 
+  // También incluir contactos con lat/lng explícitos del legacy
+  allContacts.forEach(c => {
+    if (!c.lat || !c.lng || c.country === 'Desconocido') return;
+    if (c.lat === 19.4326 && c.lng === -99.1332 && c.city === 'Desconocido') return; // skip defaults
+    const groupKey = `legacy__${c.country}__${c.city}`;
+    if (!locationGroups[groupKey]) {
+      locationGroups[groupKey] = { country: c.country, city: c.city, lat: c.lat, lng: c.lng, contacts: [] };
+    }
+    if (!locationGroups[groupKey].contacts.find(x => x.id === c.id)) {
+      locationGroups[groupKey].contacts.push(c);
+    }
+  });
+
+  let totalMapped = 0;
   Object.values(locationGroups).forEach(group => {
     const count = group.contacts.length;
-    const radius = Math.min(26, Math.max(8, 6 + Math.log2(count) * 4));
+    totalMapped += count;
+    const radius = Math.min(30, Math.max(7, 5 + Math.log2(count + 1) * 5));
     const clevelCount = group.contacts.filter(c => c.hierarchy === 'C-Level').length;
+    const hasClevel = clevelCount > 0;
 
     const circle = L.circleMarker([group.lat, group.lng], {
       radius: radius,
-      fillColor: clevelCount > 0 ? '#7c3aed' : '#4f46e5',
-      color: '#10b981',
-      weight: 1.5,
-      opacity: 0.9,
-      fillOpacity: 0.65
+      fillColor: hasClevel ? '#7c3aed' : '#4f46e5',
+      color: hasClevel ? '#c4b5fd' : '#818cf8',
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 0.7
     }).addTo(gisMapInstance);
 
+    // Label con número dentro del círculo
+    if (count > 1) {
+      L.marker([group.lat, group.lng], {
+        icon: L.divIcon({
+          className: '',
+          html: `<div style="color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:${count>9?9:10}px;text-align:center;line-height:${radius*2}px;width:${radius*2}px;margin-left:-${radius}px;margin-top:-${radius}px;pointer-events:none;text-shadow:0 1px 3px rgba(0,0,0,0.8);">${count}</div>`,
+          iconSize: [radius*2, radius*2]
+        })
+      }).addTo(gisMapInstance);
+    }
+
+    const topContacts = group.contacts
+      .sort((a,b) => (b.score||0)-(a.score||0))
+      .slice(0,3)
+      .map(c => `<div style="font-size:10px;color:#cbd5e1;margin-top:2px">• ${c.name} <span style="color:#94a3b8;">(${c.position||'—'})</span></div>`)
+      .join('');
+
     const popupHtml = `
-      <div style="font-family:'Outfit',sans-serif; padding:4px; font-size:12px; color:#f8fafc;">
-        <div style="font-weight:700; font-size:13px; margin-bottom:4px; color:#a5b4fc;">📍 ${group.city}, ${group.country}</div>
-        <div><strong>Total Contactos:</strong> ${count}</div>
-        <div><strong>C-Levels / Ejecutivos:</strong> ${clevelCount}</div>
-        <button onclick="filterNetworkByCountry('${group.country}')" style="margin-top:8px; background:#4f46e5; color:white; border:none; padding:5px 10px; border-radius:6px; font-size:10px; cursor:pointer; width:100%; font-weight:700;">
-          Filtrar por ${group.country}
+      <div style="font-family:'Outfit',sans-serif;padding:6px;min-width:180px;">
+        <div style="font-weight:700;font-size:13px;margin-bottom:6px;color:#a5b4fc;">
+          ${group.city !== group.country ? group.city + ', ' : ''}${group.country}
+        </div>
+        <div style="display:flex;gap:12px;margin-bottom:6px;">
+          <span style="color:#10b981;font-weight:700;font-size:14px;">${count}</span>
+          <span style="color:#94a3b8;font-size:11px;align-self:center;">contactos cálidos</span>
+        </div>
+        ${clevelCount > 0 ? `<div style="font-size:10px;color:#c4b5fd;margin-bottom:4px;">★ ${clevelCount} C-Level / Ejecutivo</div>` : ''}
+        ${topContacts}
+        <button onclick="filterNetworkByCountry('${group.country}')" style="margin-top:8px;background:#4f46e5;color:white;border:none;padding:5px 10px;border-radius:6px;font-size:10px;cursor:pointer;width:100%;font-weight:700;">
+          Ver todos en ${group.country}
         </button>
       </div>
     `;
-
     circle.bindPopup(popupHtml);
     gisMapMarkers.push(circle);
   });
+
+  document.getElementById('map-contact-count').textContent = `${totalMapped.toLocaleString()} contactos geolocalizados`;
 
   setTimeout(() => {
     if (gisMapInstance) gisMapInstance.invalidateSize();

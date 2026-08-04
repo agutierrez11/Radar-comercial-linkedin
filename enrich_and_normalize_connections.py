@@ -68,6 +68,11 @@ COUNTRY_COORDS = {
     "Ecuador": {"lat": -1.8312, "lng": -78.1834},
     "Uruguay": {"lat": -32.5228, "lng": -55.7658},
     "Costa Rica": {"lat": 9.7489, "lng": -83.7534},
+    "Panamá": {"lat": 8.5379, "lng": -80.7821},
+    "El Salvador": {"lat": 13.7941, "lng": -88.8965},
+    "Guatemala": {"lat": 15.7834, "lng": -90.2307},
+    "Honduras": {"lat": 15.1999, "lng": -86.2419},
+    "Nicaragua": {"lat": 12.8654, "lng": -85.2072},
 
     # Europa
     "España": {"lat": 40.4637, "lng": -3.7492},
@@ -98,6 +103,30 @@ def remove_diacritics(text):
         return ""
     nfkd_form = unicodedata.normalize('NFD', text)
     return "".join([c for c in nfkd_form if not unicodedata.combining(c)]).lower().strip()
+
+def infer_seniority(position):
+    if not position:
+        return "Desconocido"
+    pos = remove_diacritics(position)
+    
+    # C-Level / Founder
+    if re.search(r'\b(founder|co-founder|ceo|cfo|coo|cto|cmo|cio|ciso|cro|chro|chief|presidente|president|owner|dueno|socio|partner)\b', pos):
+        return "C-Level / Founder"
+    
+    # VP / Director
+    if re.search(r'\b(vp|vice president|vicepresidente|director|head|jefe)\b', pos):
+        return "VP / Director"
+        
+    # Manager
+    if re.search(r'\b(manager|gerente|lead|leader|supervisor|coordinator|coordinador)\b', pos):
+        return "Manager"
+        
+    # Entry Level / IC
+    if re.search(r'\b(analyst|analista|specialist|especialista|engineer|ingeniero|developer|desarrollador|consultant|consultor|executive|ejecutivo|associate|asociado|assistant|asistente)\b', pos):
+        return "Individual Contributor"
+        
+    return "Desconocido"
+
 
 def infer_location_and_status(first_name, last_name, company, position, connected_on_str):
     company_clean = remove_diacritics(company)
@@ -136,6 +165,33 @@ def infer_location_and_status(first_name, last_name, company, position, connecte
         elif re.search(r'\b(usa|united states|miami|new york|california|texas|florida)\b', full_text):
             country = "Estados Unidos"
             city = "Miami"
+        elif "panama" in full_text:
+            country = "Panamá"
+            city = "Panamá"
+        elif "costa rica" in full_text or "san jose" in full_text:
+            country = "Costa Rica"
+            city = "San José"
+        elif "el salvador" in full_text or "san salvador" in full_text:
+            country = "El Salvador"
+            city = "San Salvador"
+        elif "guatemala" in full_text:
+            country = "Guatemala"
+            city = "Guatemala"
+        elif "honduras" in full_text or "tegucigalpa" in full_text or "san pedro sula" in full_text:
+            country = "Honduras"
+            city = "Tegucigalpa"
+        elif "nicaragua" in full_text or "managua" in full_text:
+            country = "Nicaragua"
+            city = "Managua"
+        elif "peru" in full_text or "lima" in full_text:
+            country = "Perú"
+            city = "Lima"
+        elif "ecuador" in full_text or "quito" in full_text or "guayaquil" in full_text:
+            country = "Ecuador"
+            city = "Quito"
+        elif "uruguay" in full_text or "montevideo" in full_text:
+            country = "Uruguay"
+            city = "Montevideo"
             
         # Europa
         elif "espana" in full_text or "spain" in full_text or "madrid" in full_text or "barcelona" in full_text:

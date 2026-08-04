@@ -37,21 +37,19 @@ def main():
     test_profile = "https://www.linkedin.com/in/rahulnaidu9"
     print(f"\nPerfil de prueba seleccionado: {test_profile}")
     
-    # 3. Configurar payload de entrada
+    # 3. Configurar payload de entrada para linkedin-profile-scraper
     payload = {
-        "targetUrls": [test_profile],
-        "maxPosts": 3,
-        "scrapeComments": False,
-        "scrapeReactions": False
+        "urls": [test_profile],
+        "minDelay": 1,
+        "maxDelay": 5
     }
     
     data_bytes = json.dumps(payload).encode("utf-8")
     
-    # Usamos la ejecución síncrona para que retorne los resultados directamente en una sola petición
-    actor_id = "harvestapi~linkedin-profile-posts"
+    # Usamos harvestapi~linkedin-profile-scraper
+    actor_id = "harvestapi~linkedin-profile-scraper"
     url = f"https://api.apify.com/v2/acts/{actor_id}/run-sync-get-dataset-items?token={token}"
 
-    
     req = urllib.request.Request(
         url,
         data=data_bytes,
@@ -68,48 +66,30 @@ def main():
             items = json.loads(res_body)
             
             print(f"\n[+] ÉXITO: Petición respondida por Apify. Se obtuvieron {len(items)} registros.")
-            print("\nRESULTADOS DE PUBLICACIONES:")
+            print("\nRESULTADOS DE PERFILES:")
             
             if not items:
-                print("No se encontraron publicaciones recientes para este perfil o el perfil está inactivo/privado.")
+                print("No se encontraron datos para este perfil.")
             else:
-                # Imprimir el primer registro completo para inspeccionar su estructura real
-                print("\nEstructura de datos devuelta por el scraper (Muestra del primer ítem):")
-                print(json.dumps(items[0], indent=2, ensure_ascii=False))
-                print("-" * 50)
+                profile = items[0]
+                print("\nEstructura de datos devuelta por el scraper (Muestra):")
                 
-                for idx, item in enumerate(items, 1):
-                    if not item or not isinstance(item, dict):
-                        continue
-                        
-                    # Extraer campos reales según la estructura de harvestapi
-                    content_val = item.get("content")
-                    text = str(content_val) if content_val else "Sin texto (Solo Multimedia o Compartido)"
-                    
-                    # Extraer fecha del objeto anidado postedAt
-                    posted_at_obj = item.get("postedAt") or {}
-                    post_date = posted_at_obj.get("date")
-                    posted_ago = posted_at_obj.get("postedAgoText")
-                    
-                    if post_date and posted_ago:
-                        date_display = f"{post_date} ({posted_ago})"
-                    elif post_date:
-                        date_display = post_date
-                    elif posted_ago:
-                        date_display = posted_ago
-                    else:
-                        date_display = "Fecha desconocida"
-                    
-                    # Enlace
-                    post_url = item.get("linkedinUrl") or item.get("shareLinkedinUrl")
-                    post_url = str(post_url) if post_url else "Sin URL"
-                    
-                    print(f"\n--- Post {idx} ---")
-                    print(f"Fecha: {date_display}")
-                    print(f"Enlace: {post_url}")
-                    print(f"Texto: {text[:150].replace(chr(10), ' ')}...")
-
-
+                print(f"Name: {profile.get('firstName')} {profile.get('lastName')}")
+                print(f"Headline: {profile.get('headline')}")
+                loc = profile.get('location', {})
+                print(f"Location: {loc.get('linkedinText', 'Desconocido') if isinstance(loc, dict) else loc}")
+                
+                # Intentamos extraer industria de la experiencia actual si no está a nivel raíz
+                industry = profile.get('industry')
+                if not industry and profile.get('experience'):
+                    # A veces la industria está implícita o podemos tomar la empresa actual
+                    industry = profile['experience'][0].get('companyName')
+                print(f"Industry (or Current Company): {industry}")
+                
+                # Save raw json for debug
+                with open('verify_apify_raw.json', 'w', encoding='utf-8') as f:
+                    json.dump(profile, f, indent=2, ensure_ascii=False)
+                print("\nJSON crudo guardado en 'verify_apify_raw.json'")
             
     except urllib.error.HTTPError as e:
         print(f"\n[!] ERROR HTTP de Apify (Código {e.code}):")
