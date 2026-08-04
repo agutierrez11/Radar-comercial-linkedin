@@ -109,3 +109,80 @@
 *   **Neutraliza el prejuicio técnico:** *"Es cierto que en Clip vendía a retail, pero el cierre de alianzas API con Odoo y Profitroom demuestra que entiendo perfectamente las ventas consultivas B2B de integración de software."*
 *   **Transfiere el valor de High-Risk y Cross-Border:** *"Administrar The Yacht Experiences (14.5M) en Fiserv exige la misma mitigación de fraude y chargebacks que un casino europeo. Además, acabo de diseñar la estrategia de entrada Cross-Border y Anti-Fraude para un adquirente mexicano expandiéndose a Perú, Colombia y Argentina. Entiendo perfectamente la fricción regulatoria regional y cómo mitigarlo con el equipo de Riesgos y Compliance."*
 *   **El Gancho de Cierre (Velocidad):** *"El ciclo de ventas corporativo de iGaming es de 6 a 9 meses. Por eso mi plan de 90 días no depende de tocar puertas frías en Europa, sino de atacar directamente las carteras de AIEJA, IBJR, y redes como Affpapa donde los operadores locales ya están desesperados por una solución PIX/SPEI inmediata. Traigo caja mientras sembramos las cuentas corporativas a largo plazo."*
+
+---
+
+## 8. Ecosistema, Alianzas de Co-Selling & Inteligencia de Riesgo
+*Usa esta matriz para demostrar que dominas el ecosistema completo de pagos, riesgo, KYC y competencia en LATAM.*
+
+### 🔍 Matriz de Jugadores Clave
+
+| Entidad / Partner | Rol en el Ecosistema | Estrategia Comercial Starpago |
+| :--- | :--- | :--- |
+| **Unlimit** | 🔴 Competencia Directa (Cross-Border) | Desbancarlos ofreciendo liquidación local e instantánea (PIX/SPEI) y payouts sin fricción de FX. |
+| **Paycash / Paynau** | 🟡 Competencia / Aliado (Vouchers) | Integración como riel de cobro en efectivo (OXXO/Efecty) para usuarios no bancarizados. |
+| **Riskified** | 🟢 Co-Selling (Anti-Fraude Guarantee) | **Referral cruzado:** E-commerce enterprise protegidos por Riskified procesan con Starpago en LATAM. |
+| **Sumsub** | 🟢 Co-Selling / RegTech (iGaming/Crypto) | Integración KYC/AML agilizada para acelerar el onboarding de casinos sin riesgo legal. |
+| **Truora** | 🟢 Tech Partner (KYC & WhatsApp Auth) | Verificación de identidad sin fricción para el mercado de México y Colombia. |
+| **Unico (ex Trully)** | 🟢 Tech Partner (Biometría Fraud Prevention) | Autenticación biométrica para prevención de suplantación de identidad en tickets altos. |
+| **Incode** | 🟢 Tech Partner (Identidad Enterprise) | Verificación biométrica de grado bancario para cuentas corporativas. |
+| **Koin** | 🟡 Co-Selling / BNPL LATAM | Starpago procesa Tarjetas/Pix y Koin añade la capa de crédito (BNPL) en e-commerce/viajes. |
+
+---
+
+## 9. Executive Commercial Roadmap (GTM 30-60-90-180 Días)
+*Este es tu plan de ejecución auditable para presentar al CEO / VP de Ventas durante la entrevista.*
+
+```mermaid
+timeline
+    title Starpago LATAM Go-To-Market Execution Roadmap
+    section 0-30 Días : Quick-Wins & Setup
+        : Onboarding Técnico & Compliance
+        : Conexión con padrones AIEJA (MX) e IBJR (BR)
+        : Pipeline inmediato Tier 1 (Winner, Brazino777, Betway)
+    section 30-60 Días : Cierre Local & Alianzas
+        : Activación de Payouts locales (SPEI / PIX)
+        : Acuerdos Co-Selling con Riskified & Sumsub
+        : Prospección en SBC Summit & SiGMA
+    section 60-90 Días : Escalamiento High-Risk
+        : Cierre de primeros 5 casinos iGaming
+        : Asistencia a Incocrédito (CO) & FEBRABAN (BR)
+        : Estabilización de flujo de caja Q1
+    section 90-180 Días : Land & Expand
+        : Polinización a E-Sports (LVP, KRÜ, Infinity)
+        : Rieles de efectivo vía Paycash (OXXO/Efecty)
+        : Cross-border expansion Peru/Colombia/Argentina
+```
+
+### 🎯 Fases de Ejecución
+
+1. **Fase 1: Días 1 a 30 (Quick-Wins & Lead Mining Institucional)**
+   * **Objetivo:** No improvisar. Mapear y activar el padrón de **AIEJA** (México) e **IBJR/ANJL** (Brasil).
+   * **Acción:** Contactar directamente a los VP de Pagos de operadores Tier 1 locales (Winner, Brazino777, Betway) ofreciendo payouts instantáneos vía PIX/SPEI.
+
+2. **Fase 2: Días 30 a 60 (Alianzas de Co-Selling & RegTech)**
+   * **Objetivo:** Destrabar cuellos de botella de onboarding y acelerar la captación Enterprise.
+   * **Acción:** Activar canal de referidos cruzados con **Riskified** (para e-commerce enterprise) e integración de onboarding agilizado KYC/AML con **Sumsub y Truora**.
+
+3. **Fase 3: Días 60 a 90 (Presencia Presencial & Consolidación)**
+   * **Objetivo:** Cierre de contratos y posicionamiento institucional en eventos clave.
+   * **Acción:** Participación quirúrgica en **SBC Summit**, **SiGMA Americas**, **Incocrédito (Colombia)** y **FEBRABAN (Brasil)** para cerrar cuentas corporativas en persona.
+
+4. **Fase 4: Días 90 a 180 (Land & Expand a Nuevas Verticales)**
+   * **Objetivo:** Bajar el CAC vendiendo la misma infraestructura a otros océanos.
+   * **Acción:** Reutilizar los rieles de payouts de iGaming para venderle a **Ligas de E-Sports (LVP, KRÜ)** y cobros en efectivo con **Paycash (OXXO/Efecty)**, expandiendo hacia Perú, Colombia y Argentina.
+
+---
+
+## 10. Dossier & Tácticas de Entrevista: Senior BDM Evaluador
+*Tu entrevistador lleva 8 meses como Senior BDM en Starpago. Su fondo NO es de vendedor tradicional, sino de **Operaciones de Escala (ex-Urbvan, ex-Oplay)**. En Starpago lidera la adquisición de canales de pago (bancos, PSPs, wallets), optimización de costos/márgenes, estrategias de ruteo redundante y monitoreo de aprobación (approval rates, uptime, latency).*
+
+### 🎯 La Sinergia Perfecta (Tu Rol vs. Su Rol):
+* **Su Rol (Channel Architecture & Operations):** Él construye y optimiza los rieles de pago (adquirencia local, tasas de aprobación, ruteo inteligente, negociación de costos con adquirentes).
+* **Tu Rol (Merchant Sales Hunter):** Tú llenas esos rieles con volumen masivo de comerciantes de alto ticket ($69.4M TPV YTD, $2.39M ticket promedio).
+* **El Mensaje Clave:** Tú no vienes a chocar con su trabajo de canales; vienes a ser su mejor aliado trayendo comerciantes técnicamente listos y filtrados por riesgo que **no tiren sus tasas de aprobación ni generen incidentes operacionales**.
+
+### 💬 Frases Clave en su Mismo Lenguaje Técnico-Operativo:
+1. **Sinergia Canal-Merchant:** *"Tú estás optimizando la infraestructura, el ruteo redundante y las tasas de aprobación de Starpago con bancos y adquirentes locales. Mi trabajo es traer merchants de alto volumen que aprovechen ese ruteo y maximicen el margen por transacción."*
+2. **Control Operativo & SLAs:** *"Con tu experiencia en LiveOps y SLA compliance, entiendes que un cliente de iGaming o Crypto no perdona 5 minutos de latencia o caídas en la tasa de aprobación durante un pico de apuestas. Mis integraciones API previas (Odoo, Profitroom) se hicieron con el área de operaciones para garantizar cero fricción de integración."*
+3. **Protección del Riel Adquirente:** *"Traigo cuentas grandes ($2.39M ticket neto), pero con un filtrado previo de KYC y anti-fraude (Sumsub, Riskified, Truora) para asegurar que el volumen que entra no degrade la reputación de los canales que tú negocias con los bancos."*
