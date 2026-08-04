@@ -1,7 +1,7 @@
 """
 enrich_harvestapi_v2.py
 =======================
-Con $0.9936 de saldo en HarvestAPI ($0.0064/perfil = 155 perfiles max).
+Con $20.00 de saldo en HarvestAPI ($0.0064/perfil = 3125 perfiles max).
 Estrategia: priorizar perfiles de empresas Fintech/Pagos/Cross-border.
 
 Actualiza metadata JSONB con:
@@ -27,14 +27,14 @@ if hasattr(sys.stderr, 'reconfigure'):
 
 load_dotenv()
 
-HARVEST_API_KEY = "PLoaTJMcDvVpKu085uNjWvjavIGYnphM"
+HARVEST_API_KEY = os.getenv("HARVEST_API_KEY")
 HARVEST_BASE_URL = "https://api.harvestapi.io"
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 
 COST_PER_CALL = 0.0064
-BUDGET = 0.9936  # Cuenta nueva: $1 completo
-MAX_PROFILES = int(BUDGET / COST_PER_CALL)  # 155 perfiles
+BUDGET = 20.00  # $20 plan
+MAX_PROFILES = int(BUDGET / COST_PER_CALL)
 
 SLEEP_BETWEEN = 1.3  # free tier: 1 concurrencia
 
@@ -76,16 +76,16 @@ def score_profile(row: dict) -> int:
     return score
 
 
-def fetch_all_profiles(supabase: Client) -> list:
-    """Trae todos los perfiles con linkedin_url. Los sortea por prioridad."""
+def fetch_all_profiles(supabase: Client) -> dict:
+    """Trae todos los perfiles, agrupa por linkedin_url y sortea por prioridad."""
     print("[INFO] Descargando perfiles de Supabase...")
     rows = []
     offset = 0
-    PAGE = 500
+    PAGE = 1000
     while True:
         r = (
             supabase.table("connections")
-            .select("id, first_name, last_name, current_company, current_position, linkedin_url, metadata")
+            .select("id, linkedin_url, current_company, current_position, metadata")
             .neq("linkedin_url", "")
             .not_.is_("linkedin_url", None)
             .range(offset, offset + PAGE - 1)
@@ -98,16 +98,21 @@ def fetch_all_profiles(supabase: Client) -> list:
         offset += PAGE
         print(f"  Descargados: {len(rows)}...", end="\r")
 
-    print(f"\n[INFO] {len(rows)} perfiles con URL de LinkedIn.")
-
-    # Filtrar los que ya fueron enriquecidos
-    pending = [r for r in rows if not (r.get("metadata") or {}).get("harvest_enriched")]
-    print(f"[INFO] {len(pending)} sin enriquecer aún.")
-
-    # Sortear por score (pagos primero)
-    pending.sort(key=lambda x: score_profile(x), reverse=True)
-    print(f"[INFO] Tomando top {MAX_PROFILES} por relevancia fintech/pagos...")
-    return pending[:MAX_PROFILES]
+    # Agrupar IDs por linkedin_url
+    grouped = {}
+    for row in rows:
+        meta = row.get("metadata") or {}
+        if meta.get("harvest_enriched"):
+            continue
+            
+        url = row["linkedin_url"]
+        if url not in grouped:
+            grouped[url] = {"ids": [], "row": row, "score": score_profile(row)}
+        grouped[url]["ids"].append(row["id"])
+    
+    # Sortear por score y limitar
+    sorted_urls = sorted(grouped.keys(), key=lambda x: grouped[x]["score"], reverse=True)
+    return {url: grouped[url] for url in sorted_urls[:MAX_PROFILES]}
 
 
 def call_harvest(linkedin_url: str) -> dict | None:
@@ -176,14 +181,13 @@ def main():
 
     print("=" * 60)
     print(f"[*] HarvestAPI Enricher v2 - Radar Comercial")
-    print(f"   Presupuesto: ${BUDGET} | ${COST_PER_CALL}/perfil | Max: {MAX_PROFILES} perfiles")
-    print(f"   Dry-run: {args.dry_run}")
+    print(f"   Presupuesto: ${BUDGET} | ${COST_PER_CALL}/perfil")
     print("=" * 60)
 
     supabase = get_supabase()
-    profiles = fetch_all_profiles(supabase)
+    grouped_profiles = fetch_all_profiles(supabase)
 
-    if not profiles:
+    if not grouped_profiles:
         print("[INFO] No hay perfiles pendientes de enriquecimiento.")
         return
 
@@ -191,18 +195,11 @@ def main():
     skipped = 0
     spend = 0.0
 
-    for i, profile in enumerate(profiles, 1):
-        name = f"{profile.get('first_name','')} {profile.get('last_name','')}".strip()
-        url = profile.get("linkedin_url", "")
-        pid = profile.get("id")
-        company = profile.get("current_company", "N/A")
-        priority = score_profile(profile)
-
-        print(f"\n[{i}/{len(profiles)}] {name} | {company} (score={priority})")
-        print(f"   URL: {url}")
+    for i, (url, data) in enumerate(grouped_profiles.items(), 1):
+        print(f"\n[{i}/{len(grouped_profiles)}] URL: {url}")
 
         if args.dry_run:
-            print(f"   [DRY] Perfil seleccionado - NO se llama a la API")
+            print(f"   [DRY] Proceso de {len(data['ids'])} registros - NO se llama a la API")
             enriched += 1
         else:
             element = call_harvest(url)
@@ -211,30 +208,24 @@ def main():
                 print(f"   [--] Sin datos de API")
                 skipped += 1
             else:
-                existing_meta = profile.get("metadata") or {}
-                new_meta = build_metadata_update(existing_meta, element)
-
-                country = new_meta.get("country", "N/D")
-                city = new_meta.get("city", "")
-                h_company = new_meta.get("harvest_company", "")
-                h_position = new_meta.get("harvest_position", "")
-
-                print(f"   [LOC] {city}, {country}")
-                print(f"   [JOB] {h_position[:60]} @ {h_company[:40]}")
-
-                supabase.table("connections").update({"metadata": new_meta}).eq("id", pid).execute()
+                for pid in data["ids"]:
+                    # Obtener row actual para mantener metadata previo
+                    resp = supabase.table("connections").select("metadata").eq("id", pid).single().execute()
+                    existing_meta = resp.data.get("metadata") or {}
+                    new_meta = build_metadata_update(existing_meta, element)
+                    supabase.table("connections").update({"metadata": new_meta}).eq("id", pid).execute()
 
                 enriched += 1
                 spend += COST_PER_CALL
+                print(f"   [OK] Actualizados {len(data['ids'])} registros asociados.")
 
             print(f"   [$$] Gasto: ${spend:.4f} / ${BUDGET:.4f} restante: ${BUDGET - spend:.4f}")
             time.sleep(SLEEP_BETWEEN)
 
     print("\n" + "=" * 60)
-    print(f"[OK] Enriquecidos: {enriched}")
-    print(f"[--] Skipped:     {skipped}")
-    print(f"[$$] Gasto total: ${spend:.4f} USD")
-    print(f"[$$] Saldo aprox: ${BUDGET - spend:.4f} USD")
+    print(f"[OK] Grupos procesados: {enriched}")
+    print(f"[--] Skipped:           {skipped}")
+    print(f"[$$] Gasto total:      ${spend:.4f} USD")
     print("=" * 60)
 
 
