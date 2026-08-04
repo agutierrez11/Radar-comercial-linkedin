@@ -464,8 +464,8 @@
     var position = row.current_position || '';
     var connectedOn = m.connected_on || '';
     var jobStatus = m.job_status || 'Por Corroborar';
-    var lat = (m.lat !== undefined ? m.lat : 19.4326);
-    var lng = (m.lng !== undefined ? m.lng : -99.1332);
+    var lat = m.lat !== undefined ? m.lat : null;
+    var lng = m.lng !== undefined ? m.lng : null;
     var country = m.country || 'Desconocido';
     var city = m.city || 'Desconocido';
     return {
@@ -2645,13 +2645,35 @@ const CITY_COORDS = {
   'hong kong': [22.3193, 114.1694]
 };
 
+function normalizeCityName(city) {
+  if (!city || city === 'Desconocido') return '';
+  let norm = city.toLowerCase().trim()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // quitar acentos
+    .replace(/^(area metropolitana de|ciudad de|distrito federal de|d\.f\.|df|d\.c\.)\s+/g, '');
+  
+  if (norm.includes('cdmx') || norm.includes('mexico city') || norm.includes('mexico') || norm.includes('alvaro obregon') || norm.includes('ecatepec') || norm.includes('hidalgo')) {
+    return 'cdmx';
+  }
+  if (norm.includes('guadalajara') || norm.includes('jalisco') || norm.includes('tonala')) return 'guadalajara';
+  if (norm.includes('monterrey') || norm.includes('nuevo leon')) return 'monterrey';
+  if (norm.includes('bogota')) return 'bogota';
+  if (norm.includes('medellin')) return 'medellin';
+  if (norm.includes('sao paulo')) return 'sao paulo';
+  if (norm.includes('buenos aires') || norm.includes('caba')) return 'buenos aires';
+  if (norm.includes('santiago')) return 'santiago';
+  if (norm.includes('lima')) return 'lima';
+  return norm;
+}
+
 function getCityCoords(city, country) {
-  if (city && city !== 'Desconocido' && city !== '') {
-    const key = city.toLowerCase().trim();
-    if (CITY_COORDS[key]) return CITY_COORDS[key];
+  const normCity = normalizeCityName(city);
+  const genericCities = ['ciudad', 'desconocido', 'pueblo', 'area', 'region', 'provincia', 'department', 'departamento'];
+
+  if (normCity && !genericCities.includes(normCity)) {
+    if (CITY_COORDS[normCity]) return CITY_COORDS[normCity];
     // Try partial match
     for (const [k, v] of Object.entries(CITY_COORDS)) {
-      if (key.includes(k) || k.includes(key)) return v;
+      if (normCity.includes(k) || k.includes(normCity)) return v;
     }
   }
   // Fallback to country centroid
@@ -2708,33 +2730,22 @@ function renderGISMap(identifiedCountries, allContacts) {
     const coords = getCityCoords(city, country);
     if (!coords) return;
 
-    // Key: ciudad normalizada o country si no hay ciudad
-    const cityKey = (city && city !== 'Desconocido' && city !== '') ? city.toLowerCase().trim() : country;
-    const groupKey = `${country}__${cityKey}`;
+    // Key: ciudad limpia normalizada o country si la ciudad es genérica/desconocida
+    const normCity = normalizeCityName(city);
+    const genericCities = ['ciudad', 'desconocido', 'pueblo', 'area', 'region', 'provincia', 'department', 'departamento', ''];
+    const displayCity = (!normCity || genericCities.includes(normCity)) ? country : (normCity === 'cdmx' ? 'CDMX' : city);
+    const groupKey = `${country}__${normCity || country.toLowerCase().trim()}`;
 
     if (!locationGroups[groupKey]) {
       locationGroups[groupKey] = {
         country: country,
-        city: (city && city !== 'Desconocido') ? city : country,
+        city: displayCity,
         lat: coords[0],
         lng: coords[1],
         contacts: []
       };
     }
     locationGroups[groupKey].contacts.push(c);
-  });
-
-  // También incluir contactos con lat/lng explícitos del legacy
-  allContacts.forEach(c => {
-    if (!c.lat || !c.lng || c.country === 'Desconocido') return;
-    if (c.lat === 19.4326 && c.lng === -99.1332 && c.city === 'Desconocido') return; // skip defaults
-    const groupKey = `legacy__${c.country}__${c.city}`;
-    if (!locationGroups[groupKey]) {
-      locationGroups[groupKey] = { country: c.country, city: c.city, lat: c.lat, lng: c.lng, contacts: [] };
-    }
-    if (!locationGroups[groupKey].contacts.find(x => x.id === c.id)) {
-      locationGroups[groupKey].contacts.push(c);
-    }
   });
 
   let totalMapped = 0;
