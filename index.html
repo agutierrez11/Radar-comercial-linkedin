@@ -433,6 +433,17 @@
       background: #111827;
     }
 
+    /* Leaflet Dark Map Container Override */
+    .leaflet-container {
+      background: #0f172a !important;
+    }
+    .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+      background: #1e293b !important;
+      color: #f8fafc !important;
+      border: 1px solid #334155;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+
   </style>
 
   <script>
@@ -2646,20 +2657,16 @@ function renderGISMap(identifiedCountries, allContacts) {
       maxBoundsViscosity: 1.0
     });
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_no_labels/{z}/{x}/{y}{r}.png', {
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
       maxZoom: 14,
       noWrap: true,
       bounds: [[-90, -180], [90, 180]]
     }).addTo(gisMapInstance);
-
-    // Overlay sutil de labels sin repetición
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
-      maxZoom: 14,
-      noWrap: true,
-      bounds: [[-90, -180], [90, 180]],
-      opacity: 0.7
-    }).addTo(gisMapInstance);
   }
+
+  // Limpiar marcadores anteriores para evitar duplicados en re-renders
+  gisMapMarkers.forEach(m => gisMapInstance.removeLayer(m));
+  gisMapMarkers = [];
 
   // Agrupar por ciudad usando getCityCoords()
   const locationGroups = {};
@@ -2717,15 +2724,18 @@ function renderGISMap(identifiedCountries, allContacts) {
       fillOpacity: 0.7
     }).addTo(gisMapInstance);
 
-    // Label con número dentro del círculo
+    // Label con número dentro del círculo (perfectamente centrado)
     if (count > 1) {
-      L.marker([group.lat, group.lng], {
+      const textMarker = L.marker([group.lat, group.lng], {
         icon: L.divIcon({
           className: '',
-          html: `<div style="color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:${count>9?9:10}px;text-align:center;line-height:${radius*2}px;width:${radius*2}px;margin-left:-${radius}px;margin-top:-${radius}px;pointer-events:none;text-shadow:0 1px 3px rgba(0,0,0,0.8);">${count}</div>`,
-          iconSize: [radius*2, radius*2]
-        })
+          html: `<div style="color:#ffffff; font-family:'Outfit',sans-serif; font-weight:800; font-size:${count > 99 ? 9 : (count > 9 ? 10 : 11)}px; text-align:center; line-height:${radius * 2}px; width:${radius * 2}px; pointer-events:none; text-shadow:0 1px 4px rgba(0,0,0,0.9);">${count}</div>`,
+          iconSize: [radius * 2, radius * 2],
+          iconAnchor: [radius, radius]
+        }),
+        interactive: false
       }).addTo(gisMapInstance);
+      gisMapMarkers.push(textMarker);
     }
 
     const topContacts = group.contacts
