@@ -17,9 +17,10 @@
 * "More importantly, my strategy was value over volume. I focused heavily on big-ticket outbound deals."
 
 **[RESULT - The Hard Numbers]**
-* "I ranked #28 out of 352 executives, placing me in the top 8% of the company."
-* "I closed over 75 million pesos in total processing volume."
-* "Over 50 million pesos came exclusively from my self-sourced outbound deals."
+* "Operating exclusively in the High Potential sales team, I generated **$69,478,459.30 MXN in total TPV YTD**—more than double the Top 10 company average ($32.8M)."
+* "My average net ticket per merchant reached **$2,395,808.94 MXN**, over twice the Top 10 benchmark ($1.1M)."
+* "I achieved an average closing cycle of **27.92 days** in High Potential (vs. 40.55 days for the Top 10), converting Inbound leads in a record **15.87 days** (vs. 43.04 days for Top 10)."
+* "My channel mix combined high-velocity Inbound conversion (40.54%) with self-driven Outbound hunting (59.46%)."
 
 **[DESTINATION - Why Starpago?]**
 * "Now, I want to apply this pure hunting and API partnership experience to Starpago’s cross-border expansion in LatAm."

@@ -27,7 +27,7 @@ if hasattr(sys.stderr, 'reconfigure'):
 
 load_dotenv()
 
-HARVEST_API_KEY = "Kq5RIwTpSfbvAluLO7hxLLvvcMGB9Blf"
+HARVEST_API_KEY = "PLoaTJMcDvVpKu085uNjWvjavIGYnphM"
 HARVEST_BASE_URL = "https://api.harvestapi.io"
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
