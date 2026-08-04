@@ -477,6 +477,7 @@
       connectedOn: connectedOn, connected_on: connectedOn, connectedYearsAgo: 0,
       country: country, city: city, lat: lat, lng: lng,
       jobStatus: jobStatus, job_status: jobStatus,
+      harvest_enriched: !!m.harvest_enriched, isHarvestEnriched: !!m.harvest_enriched,
       hierarchy: m.hierarchy || '', sector: m.sector || '', score: m.score || 0,
       audit_status: m.audit_status || 'Desconocido',
       last_post_date: m.last_post_date || '', last_post_text: m.last_post_text || '',
@@ -736,6 +737,9 @@
         <select class="filter-input" id="net-country"><option value="">🌎 Todos los países</option></select>
         <select class="filter-input" id="net-hier"><option value="">👑 Toda jerarquía</option><option>C-Level</option><option>Director</option><option>Gerente</option><option>Otros</option></select>
         <select class="filter-input" id="net-sector"><option value="">🏭 Todos los sectores</option></select>
+        <button type="button" class="filter-input" id="btn-filter-verified" onclick="toggleVerifiedFilter()" style="cursor:pointer; background:var(--surface); color:var(--green); border:1px solid var(--green); font-weight:700; font-size:11px; white-space:nowrap;">
+          ✨ Solo Verificados Live (HarvestAPI)
+        </button>
       </div>
       <div class="table-wrap">
         <div class="table-scroll">
@@ -2409,6 +2413,22 @@ function changeIcpActiveRole(val) {
   });
 });
 
+let filterVerifiedOnly = false;
+function toggleVerifiedFilter() {
+  filterVerifiedOnly = !filterVerifiedOnly;
+  const btn = document.getElementById('btn-filter-verified');
+  if (btn) {
+    if (filterVerifiedOnly) {
+      btn.style.background = 'var(--green)';
+      btn.style.color = '#fff';
+    } else {
+      btn.style.background = 'var(--surface)';
+      btn.style.color = 'var(--green)';
+    }
+  }
+  applyNetworkFilters();
+}
+
 function applyNetworkFilters() {
   const search = norm(document.getElementById('net-search').value);
   const country = document.getElementById('net-country').value;
@@ -2420,8 +2440,18 @@ function applyNetworkFilters() {
     if (hier && c.hierarchy !== hier) return false;
     if (sector && c.sector !== sector) return false;
     if (S.filterClassA && c.score < 60) return false;
+    if (filterVerifiedOnly && !c.harvest_enriched) return false;
     return true;
   });
+
+  // Priorizar perfiles verificados en vivo (HarvestAPI) primero, luego por score
+  filteredContacts.sort((a, b) => {
+    const aVer = a.harvest_enriched ? 1 : 0;
+    const bVer = b.harvest_enriched ? 1 : 0;
+    if (bVer !== aVer) return bVer - aVer;
+    return (b.score || 0) - (a.score || 0);
+  });
+
   renderNetworkTable();
 }
 
@@ -2832,7 +2862,7 @@ function renderNetworkTable() {
               <div style="width:24px; height:24px; border-radius:50%; background:${avatarColor}20; color:${avatarColor}; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:800; flex-shrink:0;">${ini}</div>
               <div class="td-name" style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
                 <span>${dName}</span>
-                <span class="badge ${c.jobStatus && c.jobStatus.includes('🟢') ? 'badge-green' : (c.jobStatus && c.jobStatus.includes('🟡') ? 'badge-amber' : 'badge-muted')}" style="font-size:8px; padding:1px 5px;">${c.jobStatus || '🟢 Vigente'}</span>
+                ${c.harvest_enriched ? '<span class="badge" style="font-size:8px; padding:2px 6px; background:rgba(16,185,129,0.18); color:#6ee7b7; border:1px solid rgba(16,185,129,0.4); font-weight:700;">✨ Verificado Live</span>' : `<span class="badge ${c.jobStatus && c.jobStatus.includes('🟢') ? 'badge-green' : (c.jobStatus && c.jobStatus.includes('🟡') ? 'badge-amber' : 'badge-muted')}" style="font-size:8px; padding:1px 5px;">${c.jobStatus || '🟢 Vigente'}</span>`}
               </div>
             </div>
           </td>
