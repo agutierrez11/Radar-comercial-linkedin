@@ -2558,6 +2558,13 @@ const COUNTRY_COORDS = {
   'Uruguay': [-32.5228, -55.7658],
   'Costa Rica': [9.7489, -83.7534],
   'Panama': [8.9824, -79.5199], 'Panamá': [8.9824, -79.5199],
+  'Guatemala': [15.7835, -90.2308],
+  'El Salvador': [13.7942, -88.8965], 'Salvador': [13.7942, -88.8965],
+  'Honduras': [15.2000, -86.2419],
+  'Nicaragua': [12.8654, -85.2072],
+  'República Dominicana': [18.7357, -70.1627], 'Dominican Republic': [18.7357, -70.1627],
+  'Puerto Rico': [18.2208, -66.5901],
+  'Belice': [17.1899, -88.4976], 'Belize': [17.1899, -88.4976],
   'Venezuela': [6.4238, -66.5897],
   'Dominican Republic': [18.7357, -70.1627],
   'Portugal': [39.3999, -8.2245],
@@ -2616,9 +2623,21 @@ const CITY_COORDS = {
   // Uruguay
   'montevideo': [-34.9011, -56.1645],
   // Costa Rica
-  'san jose': [9.9281, -84.0907], 'san josé': [9.9281, -84.0907],
+  'san jose': [9.9281, -84.0907], 'san josé': [9.9281, -84.0907], 'costa rica': [9.9281, -84.0907],
   // Panamá
-  'panama': [8.9942, -79.5188], 'panamá': [8.9942, -79.5188],
+  'panama': [8.9942, -79.5188], 'panamá': [8.9942, -79.5188], 'ciudad de panama': [8.9942, -79.5188], 'panama city': [8.9942, -79.5188],
+  // Guatemala
+  'guatemala': [14.6349, -90.5069], 'ciudad de guatemala': [14.6349, -90.5069], 'guatemala city': [14.6349, -90.5069],
+  // El Salvador
+  'san salvador': [13.6929, -89.2182], 'el salvador': [13.6929, -89.2182],
+  // Honduras
+  'tegucigalpa': [14.0723, -87.1921], 'honduras': [14.0723, -87.1921], 'san pedro sula': [15.5042, -88.0250],
+  // Nicaragua
+  'managua': [12.1149, -86.2362], 'nicaragua': [12.1149, -86.2362],
+  // República Dominicana
+  'santo domingo': [18.4861, -69.9312], 'república dominicana': [18.4861, -69.9312],
+  // Puerto Rico
+  'san juan': [18.4655, -66.1057], 'puerto rico': [18.4655, -66.1057],
   // España
   'madrid': [40.4168, -3.7038],
   'barcelona': [41.3851, 2.1734],
@@ -2662,6 +2681,13 @@ function normalizeCityName(city) {
   if (norm.includes('buenos aires') || norm.includes('caba')) return 'buenos aires';
   if (norm.includes('santiago')) return 'santiago';
   if (norm.includes('lima')) return 'lima';
+  if (norm.includes('san jose') || norm.includes('costa rica')) return 'san jose';
+  if (norm.includes('panama')) return 'panama';
+  if (norm.includes('guatemala')) return 'guatemala';
+  if (norm.includes('san salvador') || norm.includes('el salvador')) return 'san salvador';
+  if (norm.includes('tegucigalpa') || norm.includes('honduras')) return 'tegucigalpa';
+  if (norm.includes('managua') || norm.includes('nicaragua')) return 'managua';
+  if (norm.includes('santo domingo') || norm.includes('dominicana')) return 'santo domingo';
   return norm;
 }
 
