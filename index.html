@@ -513,8 +513,79 @@
     .leaflet-popup-content-wrapper, .leaflet-popup-tip {
       background: #1e293b !important;
       color: #f8fafc !important;
-      border: 1px solid #334155;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    /* ── TOOLTIPS INTERACTIVOS GUÍA DE APIS ── */
+    .info-tooltip-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      color: var(--accent);
+      font-size: 10px;
+      font-weight: 700;
+      cursor: help;
+      transition: all 0.2s ease;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+    .info-tooltip-wrap:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      box-shadow: 0 0 10px rgba(79,70,229,0.4);
+    }
+    .info-tooltip-box {
+      visibility: hidden;
+      opacity: 0;
+      width: 280px;
+      background: #0f172a;
+      color: var(--text);
+      text-align: left;
+      border-radius: 10px;
+      padding: 10px 14px;
+      position: absolute;
+      z-index: 1200;
+      bottom: 130%;
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 1px var(--accent);
+      border: 1px solid var(--border);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 11px;
+      line-height: 1.5;
+      font-weight: 400;
+      pointer-events: none;
+      white-space: normal;
+    }
+    .info-tooltip-box::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -6px;
+      border-width: 6px;
+      border-style: solid;
+      border-color: #0f172a transparent transparent transparent;
+    }
+    .info-tooltip-wrap:hover .info-tooltip-box {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .api-guide-card {
+      background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(124,58,237,0.08));
+      border: 1px solid rgba(79,70,229,0.25);
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 12px;
+      text-align: left;
+      font-size: 11px;
+      line-height: 1.5;
     }
 
   </style>
@@ -638,6 +709,9 @@
   </button>
   <button class="mini-btn" id="byok-btn" onclick="openAIConfigModal()" style="margin-left:8px; display:flex; align-items:center; gap:6px; padding:4px 10px; font-weight:600; font-family:'Outfit', sans-serif; border:1px solid var(--purple); color:var(--purple); background:rgba(124,58,237,0.08);">
     <span>🔑</span> <span>Mis API Keys (BYOK)</span>
+  </button>
+  <button class="mini-btn" onclick="openAIConfigModalGuide()" style="margin-left:4px; display:flex; align-items:center; gap:5px; padding:4px 9px; font-weight:600; font-family:'Outfit', sans-serif; border:1px solid var(--accent); color:var(--accent); background:rgba(79,70,229,0.08);" title="Guía: ¿Para qué sirve cada API y por qué las recomendamos?">
+    <span>❓</span> <span>Guía APIs</span>
   </button>
   <button class="mini-btn" onclick="exportVaultJson()" style="margin-left:8px; display:flex; align-items:center; gap:5px; padding:4px 9px; font-weight:600; font-family:'Outfit', sans-serif;" title="Descargar copia limpia y notas en archivo .json">
     <span>💾</span> <span>Bóveda</span>
@@ -1294,13 +1368,28 @@
     <div style="display:flex; gap:8px; margin:12px 0; border-bottom:1px solid var(--border); padding-bottom:8px;">
       <button class="mini-btn active" id="byok-tab-keys-btn" onclick="switchByokTab('keys')" style="flex:1; padding:6px; font-weight:700;">🔑 Configurar Mis Keys</button>
       <button class="mini-btn" id="byok-tab-calc-btn" onclick="switchByokTab('calc')" style="flex:1; padding:6px; font-weight:700;">📊 Calculadora de Costos</button>
+      <button class="mini-btn" id="byok-tab-guide-btn" onclick="toggleApiGuideBox()" style="padding:6px 12px; font-weight:700; border-color:var(--accent); color:var(--accent);" title="Ver explicación detallada de cada API">❓ ¿Para qué sirve cada API?</button>
     </div>
 
     <!-- PESTAÑA 1: FORMULARIO DE KEYS -->
     <div id="byok-view-keys">
-      <div class="disclaimer" style="margin-bottom:12px">
+      <div class="disclaimer" style="margin-bottom:10px">
         <span class="disclaimer-icon">🔒</span>
         <span><strong>Silo Zero-Knowledge:</strong> Tus claves se guardan solo en tu navegador (<code>localStorage</code>). Tú pagas directo a los proveedores sin intermediarios ni markup de tokens.</span>
+      </div>
+
+      <!-- GUÍA EXPANDIBLE DE APIS (DESPLEGABLE) -->
+      <div class="api-guide-card" id="byok-guide-box" style="display:none; margin-bottom:12px;">
+        <div style="font-weight:700; font-size:12px; color:var(--accent); margin-bottom:8px; display:flex; justify-content:space-between; align-items:center;">
+          <span>📘 Guía Rápida de APIs Recomendadas (Zero-Obligación)</span>
+          <button onclick="toggleApiGuideBox()" style="background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:12px;">✕ Cerrar</button>
+        </div>
+        <div style="font-size:11px; color:var(--text-muted); line-height:1.5;">
+          • <strong>¿Es obligatorio usar estas APIs?</strong> <span style="color:var(--text); font-weight:600;">No.</span> El sistema funciona 100% gratis importando solo tu ZIP de LinkedIn. Sin embargo, las APIs desbloquean la actualización en vivo y la IA.<br>
+          • <strong>⚡ HarvestAPI (Recomendada):</strong> LinkedIn exporta datos desactualizados (cargos de hace 3 a 8 años). HarvestAPI consulta el puesto real HOY y extrae el último post publicado. <strong style="color:var(--green)">Cero riesgo de baneo</strong> porque NO usa tu sesión de LinkedIn.<br>
+          • <strong>🧠 Qwen 3.8 / Gemini / OpenAI:</strong> El motor de IA que lee el perfil y último post para redactar mensajes de prospección hiperpersonalizados (DMs) en 1-clic.<br>
+          • <strong>📦 Apify Token:</strong> Para hacer scraping masivo en la nube en lotes cuando tienes más de 15,000 contactos.
+        </div>
       </div>
 
       <!-- SECCIÓN 1: COPILOTO IA -->
@@ -1308,6 +1397,15 @@
         <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:8px; display:flex; align-items:center; justify-content:space-between;">
           <div style="display:flex; align-items:center; gap:6px;">
             <span>🧠</span> <span>Motor de IA / Copiloto de Prospección</span>
+            <span class="info-tooltip-wrap">❓
+              <span class="info-tooltip-box">
+                <strong>🧠 Motor de IA / Copiloto</strong><br>
+                Analiza el cargo y último post del prospecto para redactar mensajes directos (DMs) hiperpersonalizados en 1-clic.<br><br>
+                <strong>¿Por qué lo recomendamos?</strong><br>
+                Qwen 3.8 y Gemini Flash ofrecen razonamiento profundo (Thinking) a un costo casi nulo (~$0.00025 USD/DM).<br><br>
+                <em>💡 Opcional: Si no agregas clave, el sistema redacta con plantillas estáticas.</em>
+              </span>
+            </span>
           </div>
           <a href="https://platform.openai.com/api-keys" target="_blank" style="font-size:10px; color:var(--purple); text-decoration:none; font-family:'JetBrains Mono',monospace;">Obtener Key ↗</a>
         </div>
@@ -1337,11 +1435,29 @@
       <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:12px; text-align:left;">
         <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
           <span>⚡</span> <span>Enriquecimiento de LinkedIn (Datos en Vivo)</span>
+          <span class="info-tooltip-wrap">❓
+            <span class="info-tooltip-box">
+              <strong>⚡ Enriquecimiento en Vivo</strong><br>
+              El ZIP de LinkedIn exporta una foto estática y vieja (muchas veces de cuando conectaron). Estas APIs leen el perfil real HOY.<br><br>
+              <strong>¿Por qué HarvestAPI?</strong><br>
+              NO usa tu sesión de LinkedIn. Cero riesgo de bloqueo de tu cuenta personal.<br><br>
+              <em>💡 Opcional: Si no agregas clave, trabajas solo con el CSV plano.</em>
+            </span>
+          </span>
         </div>
 
         <div style="margin-bottom:8px;">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
-            <label style="font-size:10px; font-weight:600; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">HarvestAPI Key (Recomendada)</label>
+            <div style="display:flex; align-items:center; gap:4px;">
+              <label style="font-size:10px; font-weight:600; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">HarvestAPI Key (Recomendada)</label>
+              <span class="info-tooltip-wrap">❓
+                <span class="info-tooltip-box">
+                  <strong>HarvestAPI (~$0.005 / perfil)</strong><br>
+                  Verifica si el contacto cambió de cargo a CEO/Director y extrae su último post para abrir la conversación.<br><br>
+                  <em>Garantía: Sin logins ni cookies de LinkedIn.</em>
+                </span>
+              </span>
+            </div>
             <a href="https://harvestapi.io/?ref=radarcomercial" target="_blank" style="font-size:10px; color:var(--green); text-decoration:none; font-family:'JetBrains Mono',monospace; font-weight:700;">Registrarse & Obtener Key ↗</a>
           </div>
           <input type="password" id="harvest-api-key" placeholder="API Key de HarvestAPI..." style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:'JetBrains Mono',monospace; font-size:11px;">
@@ -1349,7 +1465,15 @@
 
         <div>
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
-            <label style="font-size:10px; font-weight:600; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Apify Token (Scraping por Lotes)</label>
+            <div style="display:flex; align-items:center; gap:4px;">
+              <label style="font-size:10px; font-weight:600; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Apify Token (Scraping por Lotes)</label>
+              <span class="info-tooltip-wrap">❓
+                <span class="info-tooltip-box">
+                  <strong>Apify Token (~$0.004 / perfil)</strong><br>
+                  Utilizado para ejecutar scrapers masivos en la nube cuando procesas lotes de miles de contactos en segundo plano.
+                </span>
+              </span>
+            </div>
             <a href="https://apify.com?fpr=radarcomercial" target="_blank" style="font-size:10px; color:var(--accent); text-decoration:none; font-family:'JetBrains Mono',monospace; font-weight:700;">Crear Cuenta en Apify ↗</a>
           </div>
           <input type="password" id="apify-api-key" placeholder="apify_api_..." style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:'JetBrains Mono',monospace; font-size:11px;">
@@ -5421,6 +5545,19 @@ async function loadDataFromSupabase() {
 // ═══════════════════════════════════════════════════════════════════════
 // BYOK (BRING YOUR OWN KEY) & COPILOTO QWEN 3.8 LIVE GENERATOR
 // ═══════════════════════════════════════════════════════════════════════
+function toggleApiGuideBox() {
+  const box = document.getElementById('byok-guide-box');
+  if (box) {
+    box.style.display = box.style.display === 'none' ? 'block' : 'none';
+  }
+}
+
+function openAIConfigModalGuide() {
+  openAIConfigModal();
+  const box = document.getElementById('byok-guide-box');
+  if (box) box.style.display = 'block';
+}
+
 function openAIConfigModal() {
   const modal = document.getElementById('ai-config-modal');
   if (!modal) return;
