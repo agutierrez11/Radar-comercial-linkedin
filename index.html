@@ -885,6 +885,7 @@
               <option value="dark">🌙 Cyberpunk Oscuro</option>
               <option value="satellite">🛰️ Satelital Esri (HD)</option>
               <option value="voyager">🗺️ Carto Voyager</option>
+              <option value="osm">🌐 OpenStreetMap</option>
             </select>
             <div style="font-size:10px; color:var(--muted2); font-family:'JetBrains Mono', monospace;">
               Haz clic en cualquier nodo para filtrar
@@ -2579,7 +2580,8 @@ let currentTileLayer = null;
 const TILE_SERVERS = {
   dark: {
     url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-    attr: '&copy; CARTO &copy; OpenStreetMap'
+    attr: '&copy; CARTO &copy; OpenStreetMap',
+    subdomains: 'abcd'
   },
   satellite: {
     url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
@@ -2587,22 +2589,36 @@ const TILE_SERVERS = {
   },
   voyager: {
     url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    attr: '&copy; CARTO &copy; OpenStreetMap'
+    attr: '&copy; CARTO &copy; OpenStreetMap',
+    subdomains: 'abcd'
+  },
+  osm: {
+    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    attr: '&copy; OpenStreetMap contributors',
+    subdomains: ['a', 'b', 'c']
   }
 };
 
 function switchGisTileLayer(mode) {
   if (!gisMap) return;
   if (currentTileLayer) {
-    gisMap.removeLayer(currentTileLayer);
+    try { gisMap.removeLayer(currentTileLayer); } catch(e) {}
   }
   const config = TILE_SERVERS[mode] || TILE_SERVERS.dark;
-  currentTileLayer = L.tileLayer(config.url, {
+  const opts = {
     attribution: config.attr,
-    subdomains: 'abcd',
     noWrap: true,
     maxZoom: 18
-  }).addTo(gisMap);
+  };
+  if (config.subdomains) {
+    opts.subdomains = config.subdomains;
+  }
+  currentTileLayer = L.tileLayer(config.url, opts).addTo(gisMap);
+  currentTileLayer.bringToBack();
+  if (typeof showToast === 'function') {
+    const labelMap = { dark: 'Cyberpunk Oscuro', satellite: 'Satelital HD (Esri)', voyager: 'Carto Voyager', osm: 'OpenStreetMap' };
+    showToast(`Mapa cambiado: ${labelMap[mode] || mode}`, '🗺️');
+  }
 }
 
 function filterNetworkByCountry(country) {
