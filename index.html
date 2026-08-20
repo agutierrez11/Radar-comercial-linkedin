@@ -3915,15 +3915,15 @@ function renderMessages() {
         Para ver el explorador completo de DMs con IA, sube tu archivo <code style="color:var(--accent)">messages.csv</code> desde tu ZIP de LinkedIn.
       </div>
 
-      <div id="conversations-explorer" style="margin-top:12px;">
+      <div id="conversations-explorer-pre" style="margin-top:12px;">
         <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; align-items:center;">
-          <input class="filter-input" id="msg-search" type="text" placeholder="Buscar conversación..." style="flex:1;min-width:160px;" oninput="renderConversationsList()">
-          <select class="filter-input" id="msg-sort-mode" style="width:auto;" onchange="renderConversationsList()">
+          <input class="filter-input" id="msg-search-pre" type="text" placeholder="Buscar conversación..." style="flex:1;min-width:160px;" oninput="renderConversationsListEnriched()">
+          <select class="filter-input" id="msg-sort-pre" style="width:auto;" onchange="renderConversationsListEnriched()">
             <option value="rank">Ordenar: Relevancia</option>
             <option value="turns">Nro. de turnos</option>
             <option value="recent">Más reciente</option>
           </select>
-          <select class="filter-input" id="msg-filter-sentiment" style="width:auto;" onchange="renderConversationsList()">
+          <select class="filter-input" id="msg-filter-sentiment" style="width:auto;" onchange="renderConversationsListEnriched()">
             <option value="">Todos los sentimientos</option>
             <option value="positive">🟢 Interés Alto</option>
             <option value="ghosted">👻 Fantasma</option>
@@ -3931,7 +3931,7 @@ function renderMessages() {
             <option value="curiosity">🟡 Curiosidad</option>
           </select>
         </div>
-        <div id="conversations-explorer-list"></div>
+        <div id="conversations-explorer-pre-list"></div>
       </div>
     `;
     renderConversationsListEnriched();
@@ -4521,12 +4521,12 @@ function viewContactInNetwork(contactId) {
 }
 
 function renderConversationsListEnriched() {
-  const container = document.getElementById('conversations-explorer-list');
+  const container = document.getElementById('conversations-explorer-pre-list') || document.getElementById('conversations-explorer-list');
   if (!container || !S.conversations) return;
 
-  const searchVal = (document.getElementById('msg-search')?.value || '').trim().toLowerCase();
+  const searchVal = ((document.getElementById('msg-search-pre') || document.getElementById('msg-search'))?.value || '').trim().toLowerCase();
   const sentimentFilter = document.getElementById('msg-filter-sentiment')?.value || '';
-  const sortMode = document.getElementById('msg-sort-mode')?.value || 'rank';
+  const sortMode = ((document.getElementById('msg-sort-pre') || document.getElementById('msg-sort-mode'))?.value || 'rank');
 
   let filtered = [...S.conversations];
 
