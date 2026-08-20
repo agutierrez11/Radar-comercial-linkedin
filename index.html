@@ -2601,9 +2601,16 @@ const TILE_SERVERS = {
 
 function switchGisTileLayer(mode) {
   if (!gisMap) return;
-  if (currentTileLayer) {
-    try { gisMap.removeLayer(currentTileLayer); } catch(e) {}
-  }
+
+  S.activeGisTileMode = mode;
+
+  // Remove ALL existing tile layers to prevent overlap
+  gisMap.eachLayer(layer => {
+    if (layer instanceof L.TileLayer) {
+      try { gisMap.removeLayer(layer); } catch(e) {}
+    }
+  });
+
   const config = TILE_SERVERS[mode] || TILE_SERVERS.dark;
   const opts = {
     attribution: config.attr,
@@ -2613,8 +2620,15 @@ function switchGisTileLayer(mode) {
   if (config.subdomains) {
     opts.subdomains = config.subdomains;
   }
+
   currentTileLayer = L.tileLayer(config.url, opts).addTo(gisMap);
   currentTileLayer.bringToBack();
+
+  const sel = document.getElementById('gis-tile-select');
+  if (sel && sel.value !== mode) {
+    sel.value = mode;
+  }
+
   if (typeof showToast === 'function') {
     const labelMap = { dark: 'Cyberpunk Oscuro', satellite: 'Satelital HD (Esri)', voyager: 'Carto Voyager', osm: 'OpenStreetMap' };
     showToast(`Mapa cambiado: ${labelMap[mode] || mode}`, '🗺️');
@@ -2647,9 +2661,11 @@ function initGisMap(contacts) {
       worldCopyJump: false
     });
 
-    switchGisTileLayer('dark');
     gisLayerGroup = L.layerGroup().addTo(gisMap);
   }
+
+  const activeMode = S.activeGisTileMode || 'dark';
+  switchGisTileLayer(activeMode);
 
   gisLayerGroup.clearLayers();
 
