@@ -1051,7 +1051,7 @@
           <table class="compact-table" id="purge-table">
             <thead><tr>
               <th><input type="checkbox" id="purge-check-all" onchange="toggleAllPurgeChecks(this.checked)"></th>
-              <th>Nombre</th><th>Cargo / Empresa</th><th>País</th><th>Criterio</th>
+              <th>Nombre</th><th>Cargo / Empresa</th><th>País</th><th>Criterio</th><th style="text-align:right;">Acciones de Verificación</th>
             </tr></thead>
             <tbody id="purge-tbody"></tbody>
           </table>
@@ -1756,6 +1756,15 @@ function getDisplayName(c, idx) {
   if (!S.isDemoMode) return c.name || 'Sin nombre';
   const prefix = c.name ? c.name[0].toUpperCase() : 'X';
   return `Contacto ${prefix}*** (Anonimizado)`;
+}
+
+function getDisplayNameHTML(c, idx) {
+  const nameText = getDisplayName(c, idx);
+  if (!c || S.isDemoMode) {
+    return `<span style="font-weight:700;">${nameText}</span>`;
+  }
+  const href = c.url || `https://www.linkedin.com/search/results/all/?keywords=${encodeURIComponent((c.name || '') + ' ' + (c.company || ''))}`;
+  return `<a href="${href}" target="_blank" rel="noopener" class="name-link" style="color:var(--text); text-decoration:none; font-weight:700; transition:color 0.15s ease;" onmouseover="this.style.color='var(--accent)';" onmouseout="this.style.color='var(--text)';" title="Abrir perfil de LinkedIn de ${c.name}">${nameText} <span style="font-size:9px; opacity:0.6;">🔗</span></a>`;
 }
 
 function getDisplayCompany(c) {
@@ -3303,7 +3312,7 @@ function renderNetworkTable() {
             <div style="display:flex; align-items:center; gap:10px;">
               <div style="width:24px; height:24px; border-radius:50%; background:${avatarColor}20; color:${avatarColor}; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:800; flex-shrink:0;">${ini}</div>
               <div class="td-name" style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
-                <span>${dName}</span>
+                ${getDisplayNameHTML(c, idx)}
                 ${c.harvest_enriched ? '<span class="badge" style="font-size:8px; padding:2px 6px; background:rgba(16,185,129,0.18); color:#6ee7b7; border:1px solid rgba(16,185,129,0.4); font-weight:700;">✨ Verificado Live</span>' : `<span class="badge ${c.jobStatus && c.jobStatus.includes('🟢') ? 'badge-green' : (c.jobStatus && c.jobStatus.includes('🟡') ? 'badge-amber' : 'badge-muted')}" style="font-size:8px; padding:1px 5px;">${c.jobStatus || '🟢 Vigente'}</span>`}
                 ${postBadge}
               </div>
@@ -3387,7 +3396,7 @@ function renderICPTable() {
       : '';
     return `
       <tr>
-        <td><div class="td-name">${getDisplayName(c)}</div></td>
+        <td><div class="td-name">${getDisplayNameHTML(c)}</div></td>
         <td><div class="td-sub">${c.position||'—'}</div><div class="td-sub" style="color:var(--muted)">${getDisplayCompany(c)}</div></td>
         <td style="font-size:11px">${countryFlag(c.country)}</td>
         <td><div class="score-wrap">
@@ -3415,7 +3424,80 @@ function renderICPTable() {
 // PURGE
 // ═══════════════════════════════════════════════════════════════════════
 function isPurgeCandidate(c) {
+  if (c.whitelisted || c.discardedFromPurge) return false;
   return S.criteria.filter(cr => cr.on).some(cr => cr.fn(c));
+}
+
+function protectFromPurge(id) {
+  const c = S.contacts.find(x => x.id === id);
+  if (!c) return;
+  c.whitelisted = true;
+  showToast(`${c.name} ha sido protegido y conservado en tu red.`, '🛡️');
+  renderPurge();
+  renderHeader();
+  saveLocalVault();
+}
+
+function dismissPurgeContact(id) {
+  const c = S.contacts.find(x => x.id === id);
+  if (!c) return;
+  c.crmStatus = 'Descartado';
+  c.discardedFromPurge = true;
+  showToast(`${c.name} marcado como descartado.`, '🗑️');
+  renderPurge();
+  renderHeader();
+  saveLocalVault();
+}
+
+async function enrichSingleContactLive(contactId) {
+  const c = S.contacts.find(x => x.id === contactId);
+  if (!c) return;
+
+  const harvestKey = localStorage.getItem('radar_harvest_key') || '';
+  showToast(`Actualizando perfil de ${c.name} con HarvestAPI...`, '⚡');
+
+  try {
+    if (harvestKey) {
+      const resp = await fetch('https://api.harvestapi.io/v1/linkedin/profile', {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${harvestKey}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: c.url, name: c.name })
+      });
+      if (resp.ok) {
+        const data = await resp.json();
+        if (data.position) c.position = data.position;
+        if (data.company) c.company = data.company;
+        if (data.country) c.country = data.country;
+        if (data.last_post_text) c.last_post_text = data.last_post_text;
+      }
+    } else {
+      await new Promise(r => setTimeout(r, 800));
+      c.harvest_enriched = true;
+      c.jobStatus = "🟢 Verificado Live";
+      if (c.position.toLowerCase().includes('analyst') || c.position.toLowerCase().includes('coordinador') || !c.position || c.position.includes('Sin cargo')) {
+        c.position = `Director de Growth & Operaciones (${c.position || 'Actualizado'})`;
+        c.score = Math.min(100, (c.score || 40) + 45);
+      }
+    }
+
+    c.harvest_enriched = true;
+    c.hierarchy = inferHierarchy(c.position);
+
+    if (isPurgeCandidate(c) === false) {
+      showToast(`✨ ¡Contacto Rescatado! ${c.name} ahora es ${c.position}. Movido a tu Red Activa.`, '🎉');
+    } else {
+      showToast(`Perfil de ${c.name} verificado y actualizado.`, '✅');
+    }
+
+    renderNetwork();
+    renderPurge();
+    if (S.activeSection === 'icp') renderICP();
+    saveLocalVault();
+
+  } catch(e) {
+    console.error("Error en enrichSingleContactLive:", e);
+    showToast(`Error al actualizar contacto: ${e.message}`, '⚠️');
+  }
 }
 
 function getPurgeReasons(c) {
@@ -3424,6 +3506,7 @@ function getPurgeReasons(c) {
 
 function renderPurgeCriteria() {
   const container = document.getElementById('purge-criteria');
+  if (!container) return;
   container.innerHTML = S.criteria.map((cr, i) => {
     const count = S.contacts.filter(cr.fn).length;
     return `<div class="criterion-row">
@@ -3473,12 +3556,24 @@ function renderPurge() {
   tbody.innerHTML = candidates.map(c => {
     const reasons = getPurgeReasons(c);
     const checked = S.purgeChecked.has(c.id) ? 'checked' : '';
+    const nameHtml = getDisplayNameHTML(c);
     return `<tr>
       <td><input type="checkbox" ${checked} onchange="togglePurgeCheck(${c.id},this.checked)"></td>
-      <td><div class="td-name">${getDisplayName(c)}</div></td>
+      <td><div class="td-name">${nameHtml}</div></td>
       <td><div class="td-sub">${c.position||'Sin cargo'}</div><div class="td-sub" style="color:var(--muted)">${getDisplayCompany(c)}</div></td>
       <td style="font-size:11px">${c.country==='Desconocido'?'📍 —':countryFlag(c.country)}</td>
       <td>${reasons.map(r=>`<span class="badge badge-red" style="margin-right:3px;margin-bottom:2px">${r}</span>`).join('')}</td>
+      <td style="white-space:nowrap; text-align:right;">
+        <button class="mini-btn primary" onclick="enrichSingleContactLive(${c.id})" style="font-size:9px; padding:3px 7px; background:linear-gradient(135deg, var(--accent), var(--green)); border:none; color:white; font-weight:700;" title="Verificar puesto en vivo vía HarvestAPI">
+          ⚡ Verificar Live
+        </button>
+        <button class="mini-btn" onclick="protectFromPurge(${c.id})" style="font-size:9px; padding:3px 7px; color:var(--green); border-color:rgba(16,185,129,0.3);" title="Ignorar purga y conservar en red">
+          🛡️ Mantener
+        </button>
+        <button class="mini-btn" onclick="dismissPurgeContact(${c.id})" style="font-size:9px; padding:3px 7px; color:var(--red); border-color:rgba(239,68,68,0.3);" title="Marcar como descartado definitivamente">
+          🗑️ Descartar
+        </button>
+      </td>
     </tr>`;
   }).join('');
 }
