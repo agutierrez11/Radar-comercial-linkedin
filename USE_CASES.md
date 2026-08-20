@@ -53,3 +53,19 @@ Este documento detalla las tres configuraciones de adopción comercial y flujos 
 *   **Empresa:** Desbloquea la red de contactos acumulada de todo su equipo de ventas de forma legal y ética.
 *   **Vendedor:** Monetiza su red de contactos personal de forma segura sin perder su propiedad.
 *   **Fricción:** Alta inicial. Requiere adopción del equipo y configuración de políticas de privacidad claras.
+
+---
+
+## 🚀 Caso 4: Agencias de Generación de Demanda (Demand Gen & Executive Branding)
+*Agencias B2B que gestionan la prospección saliente y la marca personal ejecutiva de CEOs, VPs y Directores.*
+
+### Flujo de Usuario:
+1.  **Ingesta de la Red Ejecutiva:** La agencia solicita al VP/CEO su archivo ZIP de LinkedIn y lo sube al workspace corporativo de la agencia en **Radar Comercial**.
+2.  **Minería de Datos Enriquecida:** Radar Comercial depura los contactos, los actualiza en vivo (descubriendo quiénes ascendieron a CEOs/VPs) y los cruza contra la lista de cuentas objetivo (Target Accounts) del cliente de la agencia.
+3.  **Matriz de Campaña Focalizada:** La agencia selecciona los 100 o 200 contactos de máxima temperatura y genera secuencias de mensaje hiper-personalizadas estilo *Executive Touchpoint*.
+4.  **Aprobación en 5 Minutos (Human-In-The-Loop):** El VP/CEO ingresa 5 minutos a la semana a su panel de Radar, revisa los mensajes curados por la agencia y autoriza los envíos en 1-clic con cero riesgo de baneo de su cuenta.
+
+### Valor de Negocio:
+*   **Agencia B2B:** Multiplica 10x la productividad de su equipo de prospección. Pasa de tardar semanas filtrando en Excel a armar campañas ejecutivas en 30 minutos.
+*   **VP / CEO Cliente:** Logra de 30% a 50% de tasa de respuesta aprovechando sus relaciones históricas sin dedicar tiempo a vender ni arriesgar su cuenta con bots de spam.
+*   **Modelo de Monetización:** La agencia paga la licencia **Agency Workspace ($99 - $299 USD/mes)** y cobra fees retainers de $2,000 - $5,000 USD/mes a sus clientes.
