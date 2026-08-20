@@ -40,6 +40,25 @@ Este archivo define las reglas persistentes, contexto de negocio y arquitectura 
 
 ---
 
+## 💎 Tesis Fundamental de Enriquecimiento y Modelo BYOK (Grabado en Piedra)
+
+1. **La Tesis del Pipeline Histórico ("De Becario a CEO"):**
+   - El archivo ZIP de LinkedIn exporta una foto estática y desactualizada (muchas veces el cargo del año en que conectaron).
+   - En redes de 3k a 15k+ contactos, las conexiones de hace 3, 5 u 8 años que eran analistas/coordinadores **HOY son CEOs, VPs, Directores y Fundadores**.
+   - Por tanto, la prioridad #1 antes de prospectar es la **actualización de perfil vivo** (Cargo Actual, Empresa Vigente, País/Ciudad Real). Trabajar solo con el CSV plano omite el 70% de las oportunidades de venta.
+
+2. **Modelo BYOK (Bring Your Own Key) & Cero Costo para Antonio/Plataforma:**
+   - Antonio (la plataforma) jamás subsidia los costos de tokens ni llamadas de scraping de los usuarios.
+   - El cliente es el dueño de sus llaves y fondea su propio consumo.
+   - **Proveedores de Enriquecimiento:** **HarvestAPI** (perfiles en vivo sin riesgo de baneo) y **Apify** (lotes masivos).
+   - **Proveedores de IA:** **OpenAI** (GPT-4o mini), **Google Gemini** (Gemini 2.5 Flash), **Disier AI** (Qwen 3.8-27B Thinking).
+
+3. **Programa de Afiliados y Calculadora de Costos Integrada:**
+   - La interfaz incluye una calculadora dinámica de créditos y costos reales según el tamaño de la red (1k, 5k, 15k, 30k contactos).
+   - Los enlaces de registro a proveedores incorporan parámetros de referidos/afiliados (`ref=radarcomercial` / `fpr=radarcomercial`) para generar ingresos pasivos y créditos cuando los clientes adquieran sus paquetes de datos.
+
+---
+
 ## 🎨 Principios de Frontend Design & UI/UX Engineering (Skills de Referencia)
 
 Este proyecto adopta los estándares de las mejores librerías de diseño para agentes de IA:

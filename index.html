@@ -1198,69 +1198,157 @@
   </div>
 </div>
 
-<!-- AI & ENRICHMENT BYOK CONFIG MODAL -->
+<!-- AI & ENRICHMENT BYOK CONFIG & CALCULATOR MODAL -->
 <div class="modal-overlay" id="ai-config-modal">
-  <div class="modal" style="max-width:520px;">
-    <div class="modal-header">
+  <div class="modal" style="max-width:580px; max-height:90vh; overflow-y:auto;">
+    <div class="modal-header" style="border-bottom:1px solid var(--border); padding-bottom:10px;">
       <div style="flex:1;">
-        <div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--purple);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Bring Your Own Key (BYOK)</div>
-        <div style="font-size:16px;font-weight:700">🔑 Mis API Keys & Integraciones</div>
+        <div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--purple);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Bring Your Own Key (BYOK) & Transparencia</div>
+        <div style="font-size:16px;font-weight:700">🔑 Mis API Keys & Calculadora de Costos Reales</div>
       </div>
       <button class="modal-close" onclick="closeAIConfigModal()" style="align-self:flex-start;">✕</button>
     </div>
     
-    <div class="disclaimer" style="margin-bottom:14px">
-      <span class="disclaimer-icon">🔒</span>
-      <span><strong>Silo Zero-Knowledge:</strong> Tus API Keys se guardan exclusivamente en tu navegador (<code>localStorage</code>). La plataforma no almacena tus claves ni asume el costo de tus llamadas.</span>
+    <!-- PESTAÑAS DEL MODAL -->
+    <div style="display:flex; gap:8px; margin:12px 0; border-bottom:1px solid var(--border); padding-bottom:8px;">
+      <button class="mini-btn active" id="byok-tab-keys-btn" onclick="switchByokTab('keys')" style="flex:1; padding:6px; font-weight:700;">🔑 Configurar Mis Keys</button>
+      <button class="mini-btn" id="byok-tab-calc-btn" onclick="switchByokTab('calc')" style="flex:1; padding:6px; font-weight:700;">📊 Calculadora de Costos</button>
     </div>
 
-    <!-- SECCIÓN 1: COPILOTO IA -->
-    <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:12px; text-align:left;">
-      <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
-        <span>🧠</span> <span>Motor de IA / Copiloto de Prospección</span>
-      </div>
-      
-      <div style="margin-bottom:8px;">
-        <label style="display:block; font-size:10px; font-weight:600; margin-bottom:3px; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Proveedor de IA</label>
-        <select id="ai-provider-select" style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:inherit;" onchange="onAiProviderChange()">
-          <option value="qwen" selected>⚡ Qwen 3.8 (27B Thinking) - Disier AI</option>
-          <option value="gemini">Google Gemini 2.5 Flash (CORS Directo)</option>
-          <option value="claude">Claude (Anthropic)</option>
-          <option value="openai">OpenAI (GPT-4o)</option>
-        </select>
+    <!-- PESTAÑA 1: FORMULARIO DE KEYS -->
+    <div id="byok-view-keys">
+      <div class="disclaimer" style="margin-bottom:12px">
+        <span class="disclaimer-icon">🔒</span>
+        <span><strong>Silo Zero-Knowledge:</strong> Tus claves se guardan solo en tu navegador (<code>localStorage</code>). Tú pagas directo a los proveedores sin intermediarios ni markup de tokens.</span>
       </div>
 
-      <div style="margin-bottom:8px;" id="ai-base-url-wrap">
-        <label style="display:block; font-size:10px; font-weight:600; margin-bottom:3px; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Base URL (OpenAI-Compatible)</label>
-        <input type="text" id="ai-base-url" value="https://llm.disier.net/v1" style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:'JetBrains Mono',monospace; font-size:11px;">
+      <!-- SECCIÓN 1: COPILOTO IA -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:12px; text-align:left;">
+        <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:8px; display:flex; align-items:center; justify-content:space-between;">
+          <div style="display:flex; align-items:center; gap:6px;">
+            <span>🧠</span> <span>Motor de IA / Copiloto de Prospección</span>
+          </div>
+          <a href="https://platform.openai.com/api-keys" target="_blank" style="font-size:10px; color:var(--purple); text-decoration:none; font-family:'JetBrains Mono',monospace;">Obtener Key ↗</a>
+        </div>
+        
+        <div style="margin-bottom:8px;">
+          <label style="display:block; font-size:10px; font-weight:600; margin-bottom:3px; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Proveedor de IA</label>
+          <select id="ai-provider-select" style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:inherit;" onchange="onAiProviderChange()">
+            <option value="qwen" selected>⚡ Qwen 3.8 (27B Thinking) - Disier AI</option>
+            <option value="gemini">Google Gemini 2.5 Flash (CORS Directo)</option>
+            <option value="openai">OpenAI (GPT-4o / GPT-4o mini)</option>
+            <option value="claude">Claude (Anthropic)</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom:8px;" id="ai-base-url-wrap">
+          <label style="display:block; font-size:10px; font-weight:600; margin-bottom:3px; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Base URL (OpenAI-Compatible)</label>
+          <input type="text" id="ai-base-url" value="https://llm.disier.net/v1" style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:'JetBrains Mono',monospace; font-size:11px;">
+        </div>
+
+        <div>
+          <label style="display:block; font-size:10px; font-weight:600; margin-bottom:3px; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">API Key de IA</label>
+          <input type="password" id="ai-api-key" placeholder="sk-... o tu API Key" value="" style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:'JetBrains Mono',monospace; font-size:11px;">
+        </div>
       </div>
 
-      <div>
-        <label style="display:block; font-size:10px; font-weight:600; margin-bottom:3px; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">API Key de IA</label>
-        <input type="password" id="ai-api-key" placeholder="sk-... o tu API Key" value="" style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:'JetBrains Mono',monospace; font-size:11px;">
+      <!-- SECCIÓN 2: ENRIQUECIMIENTO LINKEDIN -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:12px; text-align:left;">
+        <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+          <span>⚡</span> <span>Enriquecimiento de LinkedIn (Datos en Vivo)</span>
+        </div>
+
+        <div style="margin-bottom:8px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
+            <label style="font-size:10px; font-weight:600; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">HarvestAPI Key (Recomendada)</label>
+            <a href="https://harvestapi.io/?ref=radarcomercial" target="_blank" style="font-size:10px; color:var(--green); text-decoration:none; font-family:'JetBrains Mono',monospace; font-weight:700;">Registrarse & Obtener Key ↗</a>
+          </div>
+          <input type="password" id="harvest-api-key" placeholder="API Key de HarvestAPI..." style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:'JetBrains Mono',monospace; font-size:11px;">
+        </div>
+
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
+            <label style="font-size:10px; font-weight:600; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Apify Token (Scraping por Lotes)</label>
+            <a href="https://apify.com?fpr=radarcomercial" target="_blank" style="font-size:10px; color:var(--accent); text-decoration:none; font-family:'JetBrains Mono',monospace; font-weight:700;">Crear Cuenta en Apify ↗</a>
+          </div>
+          <input type="password" id="apify-api-key" placeholder="apify_api_..." style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:'JetBrains Mono',monospace; font-size:11px;">
+        </div>
+      </div>
+
+      <div class="modal-actions" style="margin-top:10px; border-top:1px solid var(--border); padding-top:10px;">
+        <button class="mini-btn primary" onclick="saveAIConfig()" style="flex:1">💾 Guardar Mis Keys</button>
+        <button class="mini-btn" onclick="closeAIConfigModal()">Cerrar</button>
       </div>
     </div>
 
-    <!-- SECCIÓN 2: ENRIQUECIMIENTO LINKEDIN -->
-    <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:14px; text-align:left;">
-      <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
-        <span>⚡</span> <span>Enriquecimiento de LinkedIn (Datos en Vivo)</span>
+    <!-- PESTAÑA 2: CALCULADORA DE COSTOS REALES -->
+    <div id="byok-view-calc" style="display:none; text-align:left;">
+      <div style="font-size:11px; color:var(--text-muted); margin-bottom:12px; line-height:1.5;">
+        Calcula exactamente cuánto te costará actualizar toda tu red o solo a tus tomadores de decisión clave directamente con los proveedores:
       </div>
 
-      <div style="margin-bottom:8px;">
-        <label style="display:block; font-size:10px; font-weight:600; margin-bottom:3px; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">HarvestAPI Key (API de LinkedIn Sin Riesgo de Baneo)</label>
-        <input type="password" id="harvest-api-key" placeholder="API Key de HarvestAPI..." style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:'JetBrains Mono',monospace; font-size:11px;">
+      <!-- SELECTOR DE VOLUMEN -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:14px;">
+        <div style="font-size:11px; font-weight:700; color:var(--text); margin-bottom:8px; display:flex; justify-content:space-between;">
+          <span>📦 Contactos a Enriquecer:</span>
+          <span id="calc-count-display" style="font-family:'JetBrains Mono',monospace; color:var(--accent); font-size:13px; font-weight:800;">15,000 contactos</span>
+        </div>
+        <input type="range" id="calc-slider" min="500" max="30000" step="500" value="15000" style="width:100%; cursor:pointer; accent-color:var(--accent);" oninput="onCalcSliderChange(this.value)">
+        <div style="display:flex; gap:6px; margin-top:8px;">
+          <button class="mini-btn" style="flex:1; font-size:10px; padding:3px;" onclick="setCalcPreset(1000)">Top 1,000 (ICP)</button>
+          <button class="mini-btn" style="flex:1; font-size:10px; padding:3px;" onclick="setCalcPreset(5000)">5,000</button>
+          <button class="mini-btn active" style="flex:1; font-size:10px; padding:3px;" onclick="setCalcPreset(15000)">15,000 (Red Completa)</button>
+          <button class="mini-btn" style="flex:1; font-size:10px; padding:3px;" onclick="setCalcPreset(30000)">30,000 (Max)</button>
+        </div>
       </div>
 
-      <div>
-        <label style="display:block; font-size:10px; font-weight:600; margin-bottom:3px; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-transform:uppercase;">Apify Token (Scraping por Lotes)</label>
-        <input type="password" id="apify-api-key" placeholder="apify_api_..." style="width:100%; padding:7px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:'JetBrains Mono',monospace; font-size:11px;">
-      </div>
-    </div>
+      <!-- CUADRO COMPARATIVO DE PROVEEDORES -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px;">
+        <!-- HARVESTAPI -->
+        <div style="background:var(--bg); border:1px solid var(--green); border-radius:8px; padding:10px; position:relative;">
+          <div style="position:absolute; top:-8px; right:8px; background:var(--green); color:#fff; font-size:8px; font-weight:800; padding:1px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace;">RECOMENDADO</div>
+          <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:2px;">HarvestAPI</div>
+          <div style="font-size:10px; color:var(--text-muted); margin-bottom:8px;">Enriquecimiento Live (Puesto + Post)</div>
+          <div style="font-size:18px; font-weight:800; color:var(--green); font-family:'JetBrains Mono',monospace;" id="calc-harvest-cost">$75.00 USD</div>
+          <div style="font-size:9px; color:var(--text-muted); margin-top:4px;">~$0.005 / perfil actualizado</div>
+          <a href="https://harvestapi.io/?ref=radarcomercial" target="_blank" class="mini-btn" style="display:block; text-align:center; margin-top:8px; font-size:10px; text-decoration:none; background:rgba(16,185,129,0.1); border-color:var(--green); color:var(--green); font-weight:700;">Obtener Créditos ↗</a>
+        </div>
 
-    <div class="modal-actions" style="margin-top:14px; border-top:1px solid var(--border); padding-top:12px;">
-      <button class="mini-btn primary" onclick="saveAIConfig()" style="flex:1">💾 Guardar Mis Keys</button>
-      <button class="mini-btn" onclick="closeAIConfigModal()">Cerrar</button>
+        <!-- APIFY -->
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:10px;">
+          <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:2px;">Apify (Batch Scraper)</div>
+          <div style="font-size:10px; color:var(--text-muted); margin-bottom:8px;">Extracción por Lotes en la Nube</div>
+          <div style="font-size:18px; font-weight:800; color:var(--accent); font-family:'JetBrains Mono',monospace;" id="calc-apify-cost">$60.00 USD</div>
+          <div style="font-size:9px; color:var(--text-muted); margin-top:4px;">~$0.004 / perfil (Plan Starter)</div>
+          <a href="https://apify.com?fpr=radarcomercial" target="_blank" class="mini-btn" style="display:block; text-align:center; margin-top:8px; font-size:10px; text-decoration:none; font-weight:700;">Crear Cuenta ↗</a>
+        </div>
+      </div>
+
+      <!-- IA Y DMs -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:10px; margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <div style="font-size:11px; font-weight:700; color:var(--text);">🧠 Consumo de IA (DMs & Thinking)</div>
+          <div style="font-size:10px; color:var(--text-muted);">OpenAI GPT-4o mini / Gemini 2.5 Flash</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:14px; font-weight:800; color:var(--purple); font-family:'JetBrains Mono',monospace;" id="calc-ia-cost">~$3.50 USD</div>
+          <div style="font-size:9px; color:var(--text-muted);">para miles de mensajes</div>
+        </div>
+      </div>
+
+      <!-- TOTAL RESUMEN -->
+      <div style="background:linear-gradient(135deg, rgba(79,70,229,0.15), rgba(124,58,237,0.15)); border:1px solid var(--accent); border-radius:10px; padding:12px; text-align:center;">
+        <div style="font-size:10px; text-transform:uppercase; letter-spacing:.08em; font-family:'JetBrains Mono',monospace; color:var(--accent); margin-bottom:2px;">Inversión Total Estimada (Pago Único)</div>
+        <div style="font-size:24px; font-weight:800; color:var(--text); font-family:'JetBrains Mono',monospace;" id="calc-total-cost">$78.50 USD</div>
+        <div style="font-size:10px; color:var(--text-muted); margin-top:4px;">
+          💡 <em>Ahorras más de $1,200 USD al año frente a suscripciones corporativas como Apollo o Sales Navigator.</em>
+        </div>
+      </div>
+
+      <div class="modal-actions" style="margin-top:14px;">
+        <button class="mini-btn primary" onclick="switchByokTab('keys')" style="flex:1">👉 Ir a Configurar Mis Keys</button>
+        <button class="mini-btn" onclick="closeAIConfigModal()">Cerrar</button>
+      </div>
     </div>
   </div>
 </div>
@@ -5204,12 +5292,68 @@ function openAIConfigModal() {
   if (aInp) aInp.value = apifyKey;
 
   onAiProviderChange();
+  
+  // Inicializar calculadora con el total de contactos actual
+  const contactCount = (S.contacts && S.contacts.length) || 15000;
+  setCalcPreset(contactCount > 500 ? contactCount : 15000);
+  switchByokTab('keys');
+
   modal.style.display = 'flex';
 }
 
 function closeAIConfigModal() {
   const modal = document.getElementById('ai-config-modal');
   if (modal) modal.style.display = 'none';
+}
+
+function switchByokTab(tab) {
+  const keysView = document.getElementById('byok-view-keys');
+  const calcView = document.getElementById('byok-view-calc');
+  const keysBtn = document.getElementById('byok-tab-keys-btn');
+  const calcBtn = document.getElementById('byok-tab-calc-btn');
+
+  if (tab === 'keys') {
+    if (keysView) keysView.style.display = 'block';
+    if (calcView) calcView.style.display = 'none';
+    if (keysBtn) keysBtn.classList.add('active');
+    if (calcBtn) calcBtn.classList.remove('active');
+  } else {
+    if (keysView) keysView.style.display = 'none';
+    if (calcView) calcView.style.display = 'block';
+    if (keysBtn) keysBtn.classList.remove('active');
+    if (calcBtn) calcBtn.classList.add('active');
+  }
+}
+
+function onCalcSliderChange(val) {
+  updateCostCalculator(parseInt(val, 10));
+}
+
+function setCalcPreset(n) {
+  const slider = document.getElementById('calc-slider');
+  if (slider) slider.value = n;
+  updateCostCalculator(n);
+}
+
+function updateCostCalculator(n) {
+  const disp = document.getElementById('calc-count-display');
+  const hEl = document.getElementById('calc-harvest-cost');
+  const aEl = document.getElementById('calc-apify-cost');
+  const iaEl = document.getElementById('calc-ia-cost');
+  const totEl = document.getElementById('calc-total-cost');
+
+  if (disp) disp.textContent = `${Number(n).toLocaleString()} contactos`;
+
+  // Precios reales de mercado
+  const harvestCost = (n * 0.005).toFixed(2); // ~$0.005 por perfil
+  const apifyCost = Math.max(49, (n * 0.004)).toFixed(2); // ~$0.004 o Plan Base
+  const iaCost = (Math.max(0.5, n * 0.00025)).toFixed(2); // OpenAI GPT-4o mini tokens
+  const totalCost = (parseFloat(harvestCost) + parseFloat(iaCost)).toFixed(2);
+
+  if (hEl) hEl.textContent = `$${harvestCost} USD`;
+  if (aEl) aEl.textContent = `$${apifyCost} USD`;
+  if (iaEl) iaEl.textContent = `~$${iaCost} USD`;
+  if (totEl) totEl.textContent = `$${totalCost} USD`;
 }
 
 function onAiProviderChange() {
