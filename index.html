@@ -114,7 +114,7 @@
 
     /* ── HEADER ── */
     #app-header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10000 !important;
       height: 44px; background: var(--surface-glass);
       backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
@@ -506,9 +506,10 @@
       background: #111827;
     }
 
-    /* Leaflet Dark Map Container Override */
+    /* Leaflet Map Container Override */
     .leaflet-container {
-      background: #0f172a !important;
+      background: var(--surface) !important;
+      z-index: 1 !important;
     }
     .leaflet-popup-content-wrapper, .leaflet-popup-tip {
       background: #1e293b !important;
@@ -1809,13 +1810,15 @@ function toggleTheme() {
   if (isLight) {
     icon.textContent = '🌙';
     text.textContent = 'Modo Oscuro';
+    if (typeof switchGisTileLayer === 'function') {
+      switchGisTileLayer('voyager');
+    }
   } else {
     icon.textContent = '☀️';
     text.textContent = 'Modo Claro';
-  }
-  
-  if (S.contacts.length) {
-    renderNetwork();
+    if (typeof switchGisTileLayer === 'function') {
+      switchGisTileLayer('dark');
+    }
   }
 }
 
@@ -3459,11 +3462,15 @@ function sortTable(col) {
   renderNetworkTable();
 }
 
-function renderNetworkTable() {
+function renderNetworkTable(showMore = false) {
   const tbody = document.getElementById('net-tbody');
   const empty = document.getElementById('net-empty');
   if (!filteredContacts.length) { tbody.innerHTML=''; empty.style.display='block'; return; }
   empty.style.display = 'none';
+
+  if (!showMore) {
+    S.networkTableLimit = 40; // Mostrar 40 empresas principales inicialmente (rendimiento ultra-rápido)
+  }
 
   // Agrupar por empresa
   const grouped = {};
@@ -3475,9 +3482,11 @@ function renderNetworkTable() {
 
   // Ordenar empresas por volumen de contactos (descendente)
   const sortedCompanies = Object.entries(grouped).sort((a,b) => b[1].length - a[1].length);
+  const totalCompanies = sortedCompanies.length;
+  const visibleCompanies = sortedCompanies.slice(0, S.networkTableLimit || 40);
 
   let html = '';
-  sortedCompanies.forEach(([comp, contacts]) => {
+  visibleCompanies.forEach(([comp, contacts]) => {
     html += `
       <tr style="background:var(--surface);">
         <td colspan="8" style="padding: 8px 12px; font-weight: 700; color: var(--accent); border-top: 2px solid var(--border); border-bottom: 1px solid var(--border);">
@@ -3535,6 +3544,17 @@ function renderNetworkTable() {
     }).join('');
   });
 
+  if (totalCompanies > visibleCompanies.length) {
+    const remaining = totalCompanies - visibleCompanies.length;
+    html += `
+      <tr id="load-more-row">
+        <td colspan="8" style="text-align:center; padding:16px; background:var(--surface);">
+          <button class="mini-btn primary" onclick="S.networkTableLimit += 50; renderNetworkTable(true);" style="font-size:12px; padding:8px 20px; font-weight:700; background:linear-gradient(135deg, var(--accent), var(--purple)); border:none; color:white;">
+            ⚡ Cargar más conexiones (${remaining} empresas restantes)
+          </button>
+        </td>
+      </tr>
+    `;
   tbody.innerHTML = html;
 }
 
