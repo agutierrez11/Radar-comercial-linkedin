@@ -2262,6 +2262,7 @@ function finalize() {
   
   updateUploadStatusUI();
   setLoading(false);
+  saveLocalVault();
 }
 
 function updateUploadStatusUI() {
@@ -5988,6 +5989,91 @@ function processCopilotNaturalLanguage(query) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════
+// PERSISTENCIA AUTOMÁTICA DE BÓVEDA LOCAL (INDEXEDDB ZERO-KNOWLEDGE)
+// ═══════════════════════════════════════════════════════════════════════
+const DB_NAME = 'RadarBovedaDB';
+const DB_VERSION = 1;
+const STORE_NAME = 'vault_store';
+
+function openVaultDB() {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(DB_NAME, DB_VERSION);
+    request.onupgradeneeded = (e) => {
+      const db = e.target.result;
+      if (!db.objectStoreNames.contains(STORE_NAME)) {
+        db.createObjectStore(STORE_NAME);
+      }
+    };
+    request.onsuccess = (e) => resolve(e.target.result);
+    request.onerror = (e) => reject(e.target.error);
+  });
+}
+
+async function saveLocalVault() {
+  if (!S.contacts || S.contacts.length === 0 || S.isDemoLoaded) return;
+  try {
+    const db = await openVaultDB();
+    const tx = db.transaction(STORE_NAME, 'readwrite');
+    const store = tx.objectStore(STORE_NAME);
+    const dataToSave = {
+      timestamp: new Date().toISOString(),
+      ownerName: S.ownerName || '',
+      contacts: S.contacts,
+      positions: S.positions || [],
+      messages: S.messages || []
+    };
+    store.put(dataToSave, 'current_vault');
+    console.log(`[AutoVault] Bóveda guardada automáticamente (${S.contacts.length} contactos).`);
+  } catch (err) {
+    console.warn('[AutoVault Save Error]', err);
+  }
+}
+
+async function restoreLocalVault() {
+  try {
+    const db = await openVaultDB();
+    const tx = db.transaction(STORE_NAME, 'readonly');
+    const store = tx.objectStore(STORE_NAME);
+    const request = store.get('current_vault');
+
+    return new Promise((resolve) => {
+      request.onsuccess = (e) => {
+        const val = e.target.result;
+        if (val && val.contacts && val.contacts.length > 0) {
+          S.contacts = val.contacts;
+          S.positions = val.positions || [];
+          S.messages = val.messages || [];
+          S.ownerName = val.ownerName || '';
+          S.loadedParts.connections = true;
+          S.isDemoLoaded = false;
+          console.log(`[AutoVault] Bóveda restaurada desde IndexedDB (${S.contacts.length} contactos).`);
+          resolve(true);
+        } else {
+          resolve(false);
+        }
+      };
+      request.onerror = () => resolve(false);
+    });
+  } catch (err) {
+    console.warn('[AutoVault Restore Error]', err);
+    return false;
+  }
+}
+
+async function clearLocalVault() {
+  if (confirm("¿Deseas eliminar la Bóveda guardada automáticamente en tu navegador?")) {
+    try {
+      const db = await openVaultDB();
+      const tx = db.transaction(STORE_NAME, 'readwrite');
+      tx.objectStore(STORE_NAME).delete('current_vault');
+      location.reload();
+    } catch (e) {
+      location.reload();
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
 // PORTABILIDAD DE BÓVEDA (EXPORTAR / IMPORTAR .JSON)
 // ═══════════════════════════════════════════════════════════════════════
 function exportVaultJson() {
@@ -6060,39 +6146,51 @@ function importVaultJson(file) {
   reader.readAsText(file);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  // ── BOOTSTRAP DIRECTO CON SUPABASE (sin modal de login) ──────────────────
-  // Los datos se cargan via anon key. El loader en el <head> ya disparó la
-  // peticion; aqui esperamos la promesa y arrancamos el dashboard.
-  
-  // Inicializar cliente Supabase global (para CRM sync y auth futura)
+document.addEventListener('DOMContentLoaded', async () => {
+  // 1. Intentar auto-restaurar la bóveda privada guardada en el navegador (IndexedDB)
+  try {
+    const restored = await restoreLocalVault();
+    if (restored) {
+      updateStatus();
+      finalize();
+      if (typeof switchTab === 'function') switchTab('network');
+      const toast = document.getElementById('ui-toast');
+      if (toast) {
+        toast.innerHTML = `<span>⚡</span> <span>Bóveda local restaurada automáticamente (${S.contacts.length.toLocaleString()} contactos).</span>`;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3500);
+      }
+      return;
+    }
+  } catch (err) {
+    console.warn("[AutoVault Bootstrap]", err);
+  }
+
+  // 2. Si no hay bóveda local, cargar datos iniciales de Supabase / Demo
   if (!window.supabase) {
     console.warn("[Bootstrap] SDK Supabase no encontrado, esperando...");
   }
   
-  window.__supabaseDataPromise
-    .then(function(contacts) {
-      if (contacts && contacts.length > 0) {
-        console.log("[Bootstrap] Datos listos:", contacts.length, "contactos");
-        // El dashboard espera que haya window.ENRICHED_CONNECTIONS_DATA
-        // y que se llame a la funcion de procesamiento principal
-        if (typeof processData === 'function') {
-          processData(contacts);
-        } else if (typeof finalize === 'function') {
-          // Alternativa: disparar el flujo de finalizacion directamente
-          S.contacts = contacts;
-          S.loadedParts.connections = true;
-          updateStatus();
-          finalize();
-          if (typeof switchTab === 'function') switchTab('network');
+  if (window.__supabaseDataPromise) {
+    window.__supabaseDataPromise
+      .then(function(contacts) {
+        if (contacts && contacts.length > 0) {
+          console.log("[Bootstrap] Datos listos:", contacts.length, "contactos");
+          if (typeof processData === 'function') {
+            processData(contacts);
+          } else if (typeof finalize === 'function') {
+            S.contacts = contacts;
+            S.loadedParts.connections = true;
+            updateStatus();
+            finalize();
+            if (typeof switchTab === 'function') switchTab('network');
+          }
         }
-      } else {
-        console.warn("[Bootstrap] No se cargaron datos de Supabase.");
-      }
-    })
-    .catch(function(e) {
-      console.error("[Bootstrap] Error al cargar datos:", e);
-    });
+      })
+      .catch(function(e) {
+        console.error("[Bootstrap] Error al cargar datos:", e);
+      });
+  }
 });
 </script>
 </body>
