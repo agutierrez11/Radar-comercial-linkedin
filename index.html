@@ -3566,32 +3566,32 @@ function renderMessages() {
 
     el.innerHTML = `
       <div class="msg-stats" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap:10px; margin-bottom:16px;">
-        <div class="msg-stat-card" style="border-left:4px solid var(--green);">
+        <div class="msg-stat-card ${activeMessageCategoryFilter==='high_interest'?'active-card':''}" id="msg-card-high_interest" onclick="setMessagesCategoryFilter('high_interest')" style="border-left:4px solid var(--green);">
           <div class="msg-rate" style="color:var(--green)">${highInt}</div>
           <div class="msg-label">🟢 Tu Pitch → Interés Alto</div>
           <div style="font-size:10px;color:var(--muted);margin-top:4px">Le vendiste a ellos y aceptaron demo</div>
         </div>
-        <div class="msg-stat-card" style="border-left:4px solid #3b82f6;">
+        <div class="msg-stat-card ${activeMessageCategoryFilter==='friendly'?'active-card':''}" id="msg-card-friendly" onclick="setMessagesCategoryFilter('friendly')" style="border-left:4px solid #3b82f6;">
           <div class="msg-rate" style="color:#3b82f6">${friendly}</div>
           <div class="msg-label">🤝 Saludo Amistoso / Social</div>
           <div style="font-size:10px;color:var(--muted);margin-top:4px">Felicitaciones, cumpleaños y amistad</div>
         </div>
-        <div class="msg-stat-card" style="border-left:4px solid #ec4899;">
+        <div class="msg-stat-card ${activeMessageCategoryFilter==='inbound'?'active-card':''}" id="msg-card-inbound" onclick="setMessagesCategoryFilter('inbound')" style="border-left:4px solid #ec4899;">
           <div class="msg-rate" style="color:#ec4899">${inbound}</div>
           <div class="msg-label">📥 Te están Vendiendo a Ti</div>
           <div style="font-size:10px;color:var(--muted);margin-top:4px">Inbound Pitches de agencias/software</div>
         </div>
-        <div class="msg-stat-card" style="border-left:4px solid #f59e0b;">
+        <div class="msg-stat-card ${activeMessageCategoryFilter==='curiosity'?'active-card':''}" id="msg-card-curiosity" onclick="setMessagesCategoryFilter('curiosity')" style="border-left:4px solid #f59e0b;">
           <div class="msg-rate" style="color:#f59e0b">${curious}</div>
           <div class="msg-label">🟡 Curiosidad / Evaluando</div>
           <div style="font-size:10px;color:var(--muted);margin-top:4px">Preguntas sobre tus servicios</div>
         </div>
-        <div class="msg-stat-card" style="border-left:4px solid var(--red);">
+        <div class="msg-stat-card ${activeMessageCategoryFilter==='ghosted'?'active-card':''}" id="msg-card-ghosted" onclick="setMessagesCategoryFilter('ghosted')" style="border-left:4px solid var(--red);">
           <div class="msg-rate" style="color:var(--red)">${ghosted}</div>
           <div class="msg-label">👻 Fantasmas / Sin Resp.</div>
           <div style="font-size:10px;color:var(--muted);margin-top:4px">Tus DMs sin respuesta recibida</div>
         </div>
-        <div class="msg-stat-card" style="border-left:4px solid var(--muted);">
+        <div class="msg-stat-card ${activeMessageCategoryFilter==='rejection'?'active-card':''}" id="msg-card-rejection" onclick="setMessagesCategoryFilter('rejection')" style="border-left:4px solid var(--muted);">
           <div class="msg-rate" style="color:var(--muted)">${rejected}</div>
           <div class="msg-label">🔴 Rechazo / Objeción</div>
           <div style="font-size:10px;color:var(--muted);margin-top:4px">Respuestas negativas detectadas</div>
@@ -4134,6 +4134,23 @@ function renderConversationsList() {
                 </div>
               `;
             }).join('')}
+
+            <!-- ACCIONES RÁPIDAS DE RESPUESTA EN 1-CLIC -->
+            <div style="display:flex; gap:8px; margin-top:8px; padding-top:8px; border-top:1px dashed var(--border);">
+              ${(() => {
+                const contact = S.contacts.find(ct => norm(ct.name) === norm(c.participant));
+                return contact ? `
+                  <button class="mini-btn primary" onclick="openModal(${contact.id})" style="flex:1; font-weight:700; font-size:11px; padding:6px; background:linear-gradient(135deg, var(--accent), var(--purple)); border:none; color:white;">
+                    💬 Responder / Redactar Pitch con IA
+                  </button>
+                  <button class="mini-btn" onclick="viewContactInNetwork(${contact.id})" style="flex:1; font-weight:600; font-size:11px; padding:6px;">
+                    👤 Ver Perfil Completo en Mi Red
+                  </button>
+                ` : `
+                  <button class="mini-btn" style="flex:1; font-size:10px;" disabled>Contacto no indexado en red actual</button>
+                `;
+              })()}
+            </div>
           </div>
         ` : ''}
       </div>
@@ -4144,6 +4161,53 @@ function renderConversationsList() {
 // ═══════════════════════════════════════════════════════════════════════
 // CONVERSATIONS LIST (ENRIQUECIDA — sin messages.csv)
 // ═══════════════════════════════════════════════════════════════════════
+let activeMessageCategoryFilter = null;
+
+function setMessagesCategoryFilter(cat) {
+  if (activeMessageCategoryFilter === cat) {
+    activeMessageCategoryFilter = null; // Toggle off if clicked again
+  } else {
+    activeMessageCategoryFilter = cat;
+  }
+
+  // Update visual active state on top cards
+  document.querySelectorAll('.msg-stat-card').forEach(card => card.classList.remove('active-card'));
+  if (activeMessageCategoryFilter) {
+    const activeEl = document.getElementById(`msg-card-${activeMessageCategoryFilter}`);
+    if (activeEl) activeEl.classList.add('active-card');
+  }
+
+  // Sync dropdown if present
+  const sel = document.getElementById('msg-filter-sentiment');
+  if (sel) {
+    if (activeMessageCategoryFilter === 'high_interest') sel.value = 'positive';
+    else if (activeMessageCategoryFilter === 'friendly') sel.value = 'friendly';
+    else if (activeMessageCategoryFilter === 'inbound') sel.value = 'inbound';
+    else if (activeMessageCategoryFilter === 'curiosity') sel.value = 'curiosity';
+    else if (activeMessageCategoryFilter === 'ghosted') sel.value = 'ghosted';
+    else if (activeMessageCategoryFilter === 'rejection') sel.value = 'rejection';
+    else sel.value = '';
+  }
+
+  if (!S.messages.length && S.loadedParts.messages && S.contacts.length) {
+    renderConversationsListEnriched();
+  } else {
+    renderConversationsList();
+  }
+}
+
+function viewContactInNetwork(contactId) {
+  const c = S.contacts.find(x => String(x.id) === String(contactId));
+  navigate('network');
+  if (c) {
+    const search = document.getElementById('net-search');
+    if (search) {
+      search.value = c.name;
+      renderNetworkTable();
+    }
+  }
+}
+
 function renderConversationsListEnriched() {
   const container = document.getElementById('conversations-explorer-list');
   if (!container || !S.conversations) return;
@@ -4161,7 +4225,27 @@ function renderConversationsListEnriched() {
     );
   }
 
-  if (sentimentFilter) {
+  // Filtrado reactivo por la tarjeta KPI seleccionada
+  if (activeMessageCategoryFilter) {
+    const SENT_INTERES  = '\uD83D\uDFE2 Inter\u00e9s Alto / Dispuesto a Demo';
+    const SENT_CURIOSI  = '\uD83D\uDFE1 Curiosidad / Evaluando';
+    const SENT_OBJEC    = '\uD83D\uDD34 Objeci\u00f3n / Rechazo Abierto';
+    const SENT_FANTASMA = 'Fantasma / Ignorado';
+    const INT_CALIDO    = 'Lead C\u00e1lido / Oportunidad Real';
+    const INT_CUALIF    = 'Cualificaci\u00f3n en Proceso';
+    const INT_SOCIAL    = 'Conversaci\u00f3n Social';
+    const INT_NOINTER   = 'No Interesado / Cerrado';
+
+    filtered = filtered.filter(c => {
+      if (activeMessageCategoryFilter === 'high_interest') return c.sentiment === SENT_INTERES || c.intent === INT_CALIDO || c.intent === INT_CUALIF || c.sentiment === 'positive' || c.sentiment === 'high_interest';
+      if (activeMessageCategoryFilter === 'friendly') return c.is_friendly || c.intent === INT_SOCIAL || c.sentiment === 'friendly';
+      if (activeMessageCategoryFilter === 'inbound') return c.is_they_selling;
+      if (activeMessageCategoryFilter === 'curiosity') return c.sentiment === SENT_CURIOSI || c.sentiment === 'curiosity';
+      if (activeMessageCategoryFilter === 'ghosted') return c.sentiment === SENT_FANTASMA || c.sentiment === 'ghosted';
+      if (activeMessageCategoryFilter === 'rejection') return c.sentiment === SENT_OBJEC || c.intent === INT_NOINTER || c.sentiment === 'rejection';
+      return true;
+    });
+  } else if (sentimentFilter) {
     filtered = filtered.filter(c => c.sentiment === sentimentFilter);
   }
 
@@ -4170,7 +4254,6 @@ function renderConversationsListEnriched() {
   } else if (sortMode === 'recent') {
     filtered.sort((a, b) => b.lastDate.localeCompare(a.lastDate));
   } else {
-    // rank: high_interest first, then ghosted, then others
     const rank = { positive: 0, high_interest: 0, curiosity: 1, friendly: 2, ghosted: 3, rejection: 4 };
     filtered.sort((a, b) => (rank[a.sentiment] ?? 5) - (rank[b.sentiment] ?? 5));
   }
@@ -4185,20 +4268,21 @@ function renderConversationsListEnriched() {
   };
 
   if (!filtered.length) {
-    container.innerHTML = `<div class="no-results" style="padding:20px; text-align:center; color:var(--muted);">No hay conversaciones que coincidan con tu búsqueda.</div>`;
+    container.innerHTML = `<div class="no-results" style="padding:20px; text-align:center; color:var(--muted);">No hay conversaciones que coincidan con los filtros seleccionados. ${activeMessageCategoryFilter ? '<button class="mini-btn" style="margin-left:8px;" onclick="setMessagesCategoryFilter(null)">Ver Todas</button>' : ''}</div>`;
     return;
   }
 
   container.innerHTML = filtered.slice(0, 50).map(c => {
     const sl = sentimentLabel[c.sentiment] || { badge: '💬 Conversación', color: 'var(--border2)' };
-    const preview = c.last_msg_snippet || c.msgs?.[0]?.content || '—';
-    const cleanPreview = preview.length > 120 ? preview.slice(0, 120) + '...' : preview;
+    const preview = c.last_msg_snippet || (c.msgs && c.msgs[0] && c.msgs[0].content) || '—';
+    const cleanPreview = preview.length > 130 ? preview.slice(0, 130) + '...' : preview;
     const contact = S.contacts.find(ct => String(ct.id) === String(c.id));
+    const isExpanded = S.expandedChats && S.expandedChats.has(c.id);
 
     return `
-      <div class="kpi-card" style="margin-bottom:6px; display:flex; flex-direction:column; gap:6px; border-left:4px solid ${sl.color}">
+      <div class="kpi-card" style="margin-bottom:8px; display:flex; flex-direction:column; gap:8px; border-left:4px solid ${sl.color}">
         <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:6px;">
-          <div style="font-weight:700; font-size:12px; color:var(--text);">
+          <div style="font-weight:700; font-size:12px; color:var(--text); display:flex; align-items:center; gap:6px;">
             👤 ${getDisplayName({name: c.participant})}
             ${c.is_they_selling ? '<span class="badge" style="font-size:8px; background:rgba(236,72,153,0.15); color:#f472b6; border:1px solid rgba(236,72,153,0.3)">📥 Inbound Pitch</span>' : ''}
             ${c.is_friendly ? '<span class="badge" style="font-size:8px; background:rgba(59,130,246,0.15); color:#60a5fa; border:1px solid rgba(59,130,246,0.3)">🤝 Social</span>' : ''}
@@ -4207,10 +4291,57 @@ function renderConversationsListEnriched() {
             <span class="badge" style="font-size:9px; color:${sl.color}; background:rgba(0,0,0,0.1)">${sl.badge}</span>
             <span style="font-size:10px; color:var(--muted); font-family:'JetBrains Mono',monospace;">${c.turns} msg${c.turns !== 1 ? 's' : ''}</span>
             ${c.lastDate ? `<span style="font-size:9px; color:var(--muted);">${c.lastDate.slice(0,10)}</span>` : ''}
-            ${contact ? `<button class="mini-btn primary" style="font-size:9px; padding:3px 8px;" onclick="openModal(${contact.id})">Outreach</button>` : ''}
+            <button class="mini-btn" onclick="toggleChatExpand('${c.id}')" style="font-size:10px; padding:3px 8px;">
+              ${isExpanded ? '▲ Ocultar chat' : '▼ Ver chat completo'}
+            </button>
           </div>
         </div>
-        ${cleanPreview ? `<div style="font-size:11px; color:var(--muted2); line-height:1.5; font-style:italic;">"${cleanPreview}"</div>` : ''}
+
+        <div style="font-size:11px; color:var(--muted2); line-height:1.5; font-style:italic; background:var(--bg); padding:6px 10px; border-radius:6px; border:1px solid var(--border);">
+          "${cleanPreview}"
+        </div>
+
+        <!-- HILO DE CHAT COMPLETO DESPLEGADO IN-PLACE -->
+        ${isExpanded ? `
+          <div class="chat-history-container" style="margin-top:4px; border-top:1px solid var(--border); padding-top:10px; display:flex; flex-direction:column; gap:10px; max-height:350px; overflow-y:auto; padding-right:4px;">
+            ${(c.msgs && c.msgs.length > 0) ? c.msgs.map(m => {
+              const me = S.isMe(m.sender);
+              const align = me ? 'flex-end' : 'flex-start';
+              const bg = me ? 'rgba(59,130,246,0.12)' : 'var(--bg)';
+              const borderCol = me ? 'rgba(59,130,246,0.3)' : 'var(--border)';
+              const senderColor = me ? '#60a5fa' : 'var(--purple)';
+
+              return `
+                <div style="align-self:${align}; max-width:85%; background:${bg}; border:1px solid ${borderCol}; border-radius:10px; padding:8px 12px; font-size:11px;">
+                  <div style="font-size:9px; font-weight:700; color:${senderColor}; margin-bottom:4px; display:flex; justify-content:space-between; gap:12px;">
+                    <span>${m.sender}</span>
+                    <span>${m.date ? m.date.slice(0, 16) : ''}</span>
+                  </div>
+                  <div style="line-height:1.5; color:var(--text); white-space:pre-wrap;">${m.content}</div>
+                </div>
+              `;
+            }).join('') : `
+              <div style="background:var(--bg); padding:10px; border-radius:8px; border:1px solid var(--border); font-size:11px; color:var(--text-muted);">
+                <div style="font-weight:700; color:var(--text); margin-bottom:4px;">💬 Snippet de Conversación Registrada:</div>
+                <div style="font-style:italic;">"${c.last_msg_snippet || 'Sin fragmento disponible.'}"</div>
+              </div>
+            `}
+
+            <!-- ACCIONES RÁPIDAS DE RESPUESTA EN 1-CLIC -->
+            <div style="display:flex; gap:8px; margin-top:8px; padding-top:8px; border-top:1px dashed var(--border);">
+              ${contact ? `
+                <button class="mini-btn primary" onclick="openModal(${contact.id})" style="flex:1; font-weight:700; font-size:11px; padding:6px; background:linear-gradient(135deg, var(--accent), var(--purple)); border:none; color:white;">
+                  💬 Responder / Redactar Pitch con IA
+                </button>
+                <button class="mini-btn" onclick="viewContactInNetwork(${contact.id})" style="flex:1; font-weight:600; font-size:11px; padding:6px;">
+                  👤 Ver Perfil Completo en Mi Red
+                </button>
+              ` : `
+                <button class="mini-btn" style="flex:1; font-size:10px;" disabled>Contacto no indexado en red actual</button>
+              `}
+            </div>
+          </div>
+        ` : ''}
       </div>
     `;
   }).join('');
