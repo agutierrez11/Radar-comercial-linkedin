@@ -56,16 +56,16 @@ Este documento detalla las tres configuraciones de adopción comercial y flujos 
 
 ---
 
-## 🚀 Caso 4: Agencias de Generación de Demanda (Demand Gen & Executive Branding)
-*Agencias B2B que gestionan la prospección saliente y la marca personal ejecutiva de CEOs, VPs y Directores.*
+## 🚀 Caso 4: Agencias de Generación de Demanda (Demand Gen & Pure Lead Sourcing)
+*Agencias B2B que se dedican exclusivamente a buscar, filtrar y calificar Leads de Alta Probabilidad para sus clientes.*
 
-### Flujo de Usuario:
-1.  **Ingesta de la Red Ejecutiva:** La agencia solicita al VP/CEO su archivo ZIP de LinkedIn y lo sube al workspace corporativo de la agencia en **Radar Comercial**.
-2.  **Minería de Datos Enriquecida:** Radar Comercial depura los contactos, los actualiza en vivo (descubriendo quiénes ascendieron a CEOs/VPs) y los cruza contra la lista de cuentas objetivo (Target Accounts) del cliente de la agencia.
-3.  **Matriz de Campaña Focalizada:** La agencia selecciona los 100 o 200 contactos de máxima temperatura y genera secuencias de mensaje hiper-personalizadas estilo *Executive Touchpoint*.
-4.  **Aprobación en 5 Minutos (Human-In-The-Loop):** El VP/CEO ingresa 5 minutos a la semana a su panel de Radar, revisa los mensajes curados por la agencia y autoriza los envíos en 1-clic con cero riesgo de baneo de su cuenta.
+### Flujo de Usuario Ultra-Simple:
+1.  **Ingesta de la Red:** La agencia recibe el ZIP del cliente (VP/CEO) y lo procesa en su panel de **Radar Comercial**.
+2.  **Minería & Enriquecimiento:** Radar Comercial depura los contactos y los actualiza en vivo (descubriendo los ascensos a CEOs/VPs actuales).
+3.  **Entrega del Pipeline Calificado (Dossier de Leads Cálidos):** La agencia genera un **Reporte Ejecutivo de Oportunidades Cálidas** con los 100 mejores prospectos pertenecientes a la red del cliente, listos con su cargo vigente, empresa y ángulo de abridor.
+4.  **Cero Fricción en LinkedIn:** La agencia **NO entra a LinkedIn, NO envía mensajes y NO gestiona cuentas de nadie**. Solo le entrega el "oro molido" de leads calificados al equipo comercial del cliente para que ellos hagan el contacto a su ritmo.
 
 ### Valor de Negocio:
-*   **Agencia B2B:** Multiplica 10x la productividad de su equipo de prospección. Pasa de tardar semanas filtrando en Excel a armar campañas ejecutivas en 30 minutos.
-*   **VP / CEO Cliente:** Logra de 30% a 50% de tasa de respuesta aprovechando sus relaciones históricas sin dedicar tiempo a vender ni arriesgar su cuenta con bots de spam.
-*   **Modelo de Monetización:** La agencia paga la licencia **Agency Workspace ($99 - $299 USD/mes)** y cobra fees retainers de $2,000 - $5,000 USD/mes a sus clientes.
+*   **Agencia B2B:** Entrega reportes de leads cálidos de altísimo valor en **30 minutos** en lugar de gastar semanas filtrando bases de datos en Excel.
+*   **Cliente / VP:** Recibe una lista de leads calificados que ya están en su red de relaciones, con 0% de esfuerzo operativo.
+*   **Modelo de Monetización:** La agencia paga la licencia **Agency Workspace ($99 - $299 USD/mes)**.
