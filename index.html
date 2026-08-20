@@ -471,7 +471,6 @@
     @media (max-width: 640px) {
       #data-copilot-drawer { width: 100%; right: -100%; }
       #bulk-actions-bar { width: 90%; flex-wrap: wrap; justify-content: center; }
-    }
       :root { --sidebar: 48px; }
       .nav-item span { display: none; }
       .nav-badge { display: none; }
@@ -748,15 +747,15 @@
             <div style="display:flex; flex-direction:column; gap:8px;">
               <div id="status-connections" style="display:flex; align-items:center; gap:8px; font-size:11px;">
                 <span class="status-dot" style="width:8px; height:8px; border-radius:50%; background:var(--muted); flex-shrink:0;"></span>
-                <span>Contactos (Connections.csv): <strong style="color:var(--muted)">Pendiente</strong></span>
+                <span class="status-label">Contactos (Connections.csv): <strong style="color:var(--muted)">Pendiente</strong></span>
               </div>
               <div id="status-messages" style="display:flex; align-items:center; gap:8px; font-size:11px;">
                 <span class="status-dot" style="width:8px; height:8px; border-radius:50%; background:var(--muted); flex-shrink:0;"></span>
-                <span>Mensajes (messages.csv): <strong style="color:var(--muted)">Pendiente</strong></span>
+                <span class="status-label">Mensajes (messages.csv): <strong style="color:var(--muted)">Pendiente</strong></span>
               </div>
               <div id="status-positions" style="display:flex; align-items:center; gap:8px; font-size:11px;">
                 <span class="status-dot" style="width:8px; height:8px; border-radius:50%; background:var(--muted); flex-shrink:0;"></span>
-                <span>Cargos (Positions.csv): <strong style="color:var(--muted)">Pendiente</strong></span>
+                <span class="status-label">Cargos (Positions.csv): <strong style="color:var(--muted)">Pendiente</strong></span>
               </div>
             </div>
             <div style="margin-top:15px; display:flex; gap:8px;">
@@ -2271,7 +2270,7 @@ function updateUploadStatusUI() {
 
   // Connections
   const dotConn = document.querySelector('#status-connections .status-dot');
-  const textConn = document.querySelector('#status-connections span');
+  const textConn = document.querySelector('#status-connections .status-label');
   if (S.loadedParts.connections) {
     dotConn.style.background = 'var(--green)';
     textConn.innerHTML = `Contactos (Connections.csv): <strong style="color:var(--green)">Cargados (${S.contacts.length.toLocaleString()})</strong>`;
@@ -2282,7 +2281,7 @@ function updateUploadStatusUI() {
 
   // Messages
   const dotMsg = document.querySelector('#status-messages .status-dot');
-  const textMsg = document.querySelector('#status-messages span');
+  const textMsg = document.querySelector('#status-messages .status-label');
   if (S.loadedParts.messages) {
     dotMsg.style.background = 'var(--green)';
     textMsg.innerHTML = `Mensajes (messages.csv): <strong style="color:var(--green)">Cargados (${S.messages.length.toLocaleString()} mensajes)</strong>`;
@@ -2293,7 +2292,7 @@ function updateUploadStatusUI() {
 
   // Positions
   const dotPos = document.querySelector('#status-positions .status-dot');
-  const textPos = document.querySelector('#status-positions span');
+  const textPos = document.querySelector('#status-positions .status-label');
   if (S.loadedParts.positions) {
     dotPos.style.background = 'var(--green)';
     textPos.innerHTML = `Cargos (Positions.csv): <strong style="color:var(--green)">Cargados (${S.positions.length} posiciones)</strong>`;
