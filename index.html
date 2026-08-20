@@ -875,16 +875,23 @@
       
       <!-- 🗺️ MAPA ESPACIAL GIS (mapcn-gis-specialist) -->
       <div class="chart-card" id="map-gis-card" style="display:none; margin-bottom: 16px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
           <div class="chart-title" style="display:flex; align-items:center; gap:8px;">
             <span>🗺️ Mapa Espacial de Relaciones (Warm Territory Intelligence)</span>
             <span class="badge badge-green" id="map-contact-count">0 contactos mapeados</span>
           </div>
-          <div style="font-size:10px; color:var(--muted2); font-family:'JetBrains Mono', monospace;">
-            Haz clic en cualquier círculo para filtrar por país
+          <div style="display:flex; align-items:center; gap:8px;">
+            <select id="gis-tile-select" class="filter-input" style="font-size:10px; padding:3px 8px; width:auto; background:var(--bg); border:1px solid var(--border); color:var(--text); cursor:pointer;" onchange="switchGisTileLayer(this.value)">
+              <option value="dark">🌙 Cyberpunk Oscuro</option>
+              <option value="satellite">🛰️ Satelital Esri (HD)</option>
+              <option value="voyager">🗺️ Carto Voyager</option>
+            </select>
+            <div style="font-size:10px; color:var(--muted2); font-family:'JetBrains Mono', monospace;">
+              Haz clic en cualquier nodo para filtrar
+            </div>
           </div>
         </div>
-        <div id="gis-map-container" style="height: 320px; width: 100%; border-radius: 8px; border: 1px solid var(--border); overflow: hidden; background: var(--bg);"></div>
+        <div id="gis-map-container" style="height: 360px; width: 100%; border-radius: 8px; border: 1px solid var(--border); overflow: hidden; background: var(--bg);"></div>
       </div>
       <div class="filter-bar">
         <input class="filter-input search" id="net-search" type="text" placeholder="Buscar nombre, cargo, empresa...">
@@ -2568,6 +2575,45 @@ window.addEventListener('DOMContentLoaded', () => {
 let gisMap = null;
 let gisLayerGroup = null;
 
+let currentTileLayer = null;
+const TILE_SERVERS = {
+  dark: {
+    url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+    attr: '&copy; CARTO &copy; OpenStreetMap'
+  },
+  satellite: {
+    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    attr: 'Tiles &copy; Esri'
+  },
+  voyager: {
+    url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+    attr: '&copy; CARTO &copy; OpenStreetMap'
+  }
+};
+
+function switchGisTileLayer(mode) {
+  if (!gisMap) return;
+  if (currentTileLayer) {
+    gisMap.removeLayer(currentTileLayer);
+  }
+  const config = TILE_SERVERS[mode] || TILE_SERVERS.dark;
+  currentTileLayer = L.tileLayer(config.url, {
+    attribution: config.attr,
+    subdomains: 'abcd',
+    noWrap: true,
+    maxZoom: 18
+  }).addTo(gisMap);
+}
+
+function filterNetworkByCountry(country) {
+  const sel = document.getElementById('net-country');
+  if (sel) {
+    sel.value = country;
+    applyNetworkFilters();
+    showToast(`Filtrando red por ${country}`, '🌐');
+  }
+}
+
 function initGisMap(contacts) {
   const mapContainer = document.getElementById('gis-map-container');
   const mapCard = document.getElementById('map-gis-card');
@@ -2580,18 +2626,12 @@ function initGisMap(contacts) {
       center: [20, -10],
       zoom: 2,
       minZoom: 2,
-      maxZoom: 10,
+      maxZoom: 12,
       zoomControl: true,
       worldCopyJump: false
     });
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; CARTO &copy; OpenStreetMap',
-      subdomains: 'abcd',
-      noWrap: true,
-      bounds: [[-90, -180], [90, 180]]
-    }).addTo(gisMap);
-
+    switchGisTileLayer('dark');
     gisLayerGroup = L.layerGroup().addTo(gisMap);
   }
 
@@ -2618,46 +2658,55 @@ function initGisMap(contacts) {
   Object.values(locationGroups).forEach(group => {
     const count = group.contacts.length;
     mappedCount += count;
-    const radius = Math.min(22, Math.max(8, 6 + Math.log2(count) * 4));
+    
+    const isHigh = count >= 25;
+    const isMid = count >= 8 && count < 25;
+    const densityClass = isHigh ? 'high-density' : (isMid ? 'mid-density' : 'low-density');
+    const size = Math.min(36, Math.max(22, 18 + Math.log2(count) * 3.5));
 
-    const circle = L.circleMarker([group.lat, group.lng], {
-      radius: radius,
-      fillColor: '#4f46e5',
-      color: '#a5b4fc',
-      weight: 1.5,
-      opacity: 0.9,
-      fillOpacity: 0.65
+    const cLevels = group.contacts.filter(c => c.hierarchy === 'C-Level').length;
+    const directors = group.contacts.filter(c => c.hierarchy === 'Director').length;
+    const managers = group.contacts.filter(c => c.hierarchy === 'Gerente').length;
+
+    const icon = L.divIcon({
+      className: 'radar-marker-wrap',
+      html: `<div class="radar-marker-pin ${densityClass}" style="width:${size}px; height:${size}px;">${count}</div>`,
+      iconSize: [size, size],
+      iconAnchor: [size / 2, size / 2]
     });
 
-    const tooltipContent = `
-      <div style="font-size:11px; font-family:'Outfit',sans-serif; color:#f8fafc; padding:2px;">
-        <strong style="font-size:12px; color:#a5b4fc;">📍 ${group.city}, ${group.country}</strong><br>
-        <span style="color:#10b981; font-weight:700;">${count} Contactos Cálidos</span><br>
-        <span style="font-size:9px; color:#94a3b8;">Haz clic para filtrar la lista por este país</span>
+    const marker = L.marker([group.lat, group.lng], { icon });
+
+    const popupContent = `
+      <div style="font-family:'Outfit',sans-serif; padding:4px; font-size:12px; color:#f8fafc; min-width:180px;">
+        <div style="font-weight:800; color:#a5b4fc; margin-bottom:6px; font-size:13px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
+          📍 ${group.city}, ${group.country}
+        </div>
+        <div style="font-size:11px; margin-bottom:8px; line-height:1.6; color:#cbd5e1;">
+          <div>👑 <strong>C-Level:</strong> <span style="color:#c084fc;">${cLevels}</span></div>
+          <div>🎯 <strong>Directores:</strong> <span style="color:#60a5fa;">${directors}</span></div>
+          <div>🤝 <strong>Gerentes:</strong> <span style="color:#34d399;">${managers}</span></div>
+          <div style="color:#10b981; font-weight:700; margin-top:4px;">Total: ${count} contactos cálidos</div>
+        </div>
+        <button class="mini-btn primary" onclick="filterNetworkByCountry('${group.country}')" style="width:100%; font-size:10px; padding:4px; font-weight:700; background:linear-gradient(135deg, var(--accent), var(--green)); border:none; color:white;">
+          ⚡ Filtrar Mi Red por ${group.country}
+        </button>
       </div>
     `;
 
-    circle.bindPopup(tooltipContent);
+    marker.bindPopup(popupContent);
 
-    circle.on('click', () => {
-      const countrySelect = document.getElementById('net-country');
-      if (countrySelect) {
-        countrySelect.value = group.country;
-        applyNetworkFilters();
-      }
-    });
-
-    gisLayerGroup.addLayer(circle);
+    gisLayerGroup.addLayer(marker);
   });
 
   const countBadge = document.getElementById('map-contact-count');
   if (countBadge) {
-    countBadge.textContent = `${mappedCount} contactos mapeados`;
+    countBadge.textContent = `${mappedCount.toLocaleString()} contactos mapeados`;
   }
 
   setTimeout(() => {
     if (gisMap) gisMap.invalidateSize();
-  }, 200);
+  }, 250);
 }
 
 // ═══════════════════════════════════════════════════════════════════════
