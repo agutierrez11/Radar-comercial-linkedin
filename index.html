@@ -2699,7 +2699,7 @@ async function loadDemoData(autoNavigate = true) {
   }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
     document.body.classList.add('light');
@@ -2708,7 +2708,25 @@ window.addEventListener('DOMContentLoaded', () => {
     if (icon) icon.textContent = '🌙';
     if (text) text.textContent = 'Modo Oscuro';
   }
-  loadDemoData(true);
+
+  // 1. Restaurar Bóveda Local si el usuario ya subió su ZIP antes en esta computadora
+  try {
+    const restored = await restoreLocalVault();
+    if (restored && S.contacts && S.contacts.length > 0) {
+      finalize();
+      navigate('network');
+      return;
+    }
+  } catch(e) {}
+
+  // 2. Parámetros de URL: si trae ?demo=1 o ?owner=antonio, carga la demo
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('demo') === '1' || urlParams.get('owner') === 'antonio') {
+    loadDemoData(true);
+  } else {
+    // 3. Para cualquier visitante nuevo (como Giovanna): Muestra la pantalla limpia de carga (Zero-Knowledge)
+    navigate('upload');
+  }
 });
 
 let gisMap = null;
