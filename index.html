@@ -6464,8 +6464,14 @@ async function enrichSingleContactLive(contactId) {
   const c = S.contacts.find(x => String(x.id) === String(contactId));
   if (!c) return;
 
-  const harvestKey = localStorage.getItem('radar_harvest_key') || '';
-  showToast(`⚡ Verificando y actualizando perfil de ${c.name}...`, '⚡');
+  const harvestKey = localStorage.getItem('radar_harvest_key') || localStorage.getItem('harvest_api_key') || '';
+
+  if (!harvestKey) {
+    showToast(`🔑 Para raspado en tiempo real activa tu HarvestAPI Key en BYOK. Ejecutando verificación en modo demo...`, '💡');
+    if (typeof openAIConfigModal === 'function') openAIConfigModal();
+  } else {
+    showToast(`⚡ Consultando perfil en vivo de ${c.name} en HarvestAPI...`, '⚡');
+  }
 
   try {
     if (harvestKey) {
