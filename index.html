@@ -448,6 +448,19 @@
     .copilot-input-bar {
       padding: 12px 16px; border-top: 1px solid var(--border); display: flex; gap: 8px; background: var(--surface);
     }
+    .ai-filter-chip {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      background: rgba(124, 58, 237, 0.12); border: 1px solid rgba(167, 139, 250, 0.4);
+      color: #c084fc; padding: 10px 16px; border-radius: 8px; margin-bottom: 14px;
+      font-size: 12px; font-weight: 600; box-shadow: 0 0 12px rgba(124, 58, 237, 0.15);
+      animation: fadeIn 0.25s ease-out;
+    }
+    .ai-filter-chip button {
+      background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.5);
+      color: #fca5a5; border-radius: 6px; padding: 4px 10px; cursor: pointer;
+      font-size: 11px; font-weight: 700; transition: background 0.15s;
+    }
+    .ai-filter-chip button:hover { background: rgba(239, 68, 68, 0.4); }
     .copilot-input {
       flex: 1; background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
       padding: 8px 12px; font-size: 12px; color: var(--text); outline: none; font-family: inherit;
@@ -6508,56 +6521,124 @@ function sendCopilotMessage() {
   }, 400);
 }
 
+function showAiFilterChip(queryLabel, count) {
+  let chip = document.getElementById('ai-filter-chip');
+  if (!chip) {
+    chip = document.createElement('div');
+    chip.id = 'ai-filter-chip';
+    chip.className = 'ai-filter-chip';
+  }
+  chip.innerHTML = `
+    <span>🔍 <strong>Filtro IA Activo:</strong> "${queryLabel}" (${count} contactos coincidentes)</span>
+    <button onclick="clearAiFilter()">✖ Limpiar Filtro IA</button>
+  `;
+
+  const secId = 'sec-' + (S.activeSection || 'network');
+  const secEl = document.getElementById(secId);
+  if (secEl) {
+    const headerEl = secEl.querySelector('.section-header') || secEl.querySelector('.filter-bar') || secEl.firstChild;
+    secEl.insertBefore(chip, headerEl);
+  }
+}
+
+function clearAiFilter() {
+  const chip = document.getElementById('ai-filter-chip');
+  if (chip) chip.remove();
+  
+  filteredContacts = S.contacts.filter(c => c.crmStatus !== 'Descartado' && !c.discardedFromPurge);
+  renderNetworkTable();
+  if (S.activeSection === 'icp') renderICPTable();
+  if (S.activeSection === 'purge') renderPurge();
+  if (S.activeSection === 'crm') renderCRM();
+  showToast('Filtro de IA limpiado.', '🧹');
+}
+
 function processCopilotNaturalLanguage(query) {
   const q = norm(query);
-  let matches = [...S.contacts];
+  let matches = S.contacts.filter(c => c.crmStatus !== 'Descartado' && !c.discardedFromPurge);
+  let matchedTopics = [];
 
-  // 1. Detección de Rol / Demand Gen / ICP
-  let roleDesc = '';
-  if (q.includes('demand gen') || q.includes('marketing') || q.includes('crecimiento') || q.includes('growth')) {
-    roleDesc = 'Demand Generation / Marketing & Growth';
-    matches = matches.filter(c => {
-      const pos = norm(c.position);
-      return pos.includes('market') || pos.includes('growth') || pos.includes('demand') || pos.includes('comercial') || pos.includes('sales') || pos.includes('director') || pos.includes('vp') || pos.includes('ceo');
-    });
+  // Búsqueda profunda en DMs (messages.csv) si aplica
+  if (S.messages && S.messages.length > 0) {
+    const stopWords = ['de', 'la', 'el', 'los', 'las', 'un', 'una', 'con', 'para', 'por', 'que', 'en', 'contactos', 'mensajes', 'hable', 'hable', 'comparti', 'comparti', 'buscame', 'buscame', 'agrupame', 'agrupame', 'muestrame', 'muestrame', 'sobre', 'donde'];
+    const words = query.toLowerCase().split(/\s+/).map(w => norm(w)).filter(w => w.length > 2 && !stopWords.includes(w));
+    
+    if (words.length > 0) {
+      const matchingMessages = S.messages.filter(m => {
+        const text = norm(m.CONTENT || m.TEXT || m.content || '');
+        return words.some(w => text.includes(w));
+      });
+
+      if (matchingMessages.length > 0) {
+        matchedTopics = words;
+        const matchingNamesAndUrls = new Set();
+        matchingMessages.forEach(m => {
+          if (m.SENDER_NAME) matchingNamesAndUrls.add(norm(m.SENDER_NAME));
+          if (m.RECIPIENT_NAME) matchingNamesAndUrls.add(norm(m.RECIPIENT_NAME));
+          if (m.FROM) matchingNamesAndUrls.add(norm(m.FROM));
+          if (m.TO) matchingNamesAndUrls.add(norm(m.TO));
+          if (m.SENDER_URL) matchingNamesAndUrls.add(m.SENDER_URL);
+          if (m.TO_URL) matchingNamesAndUrls.add(m.TO_URL);
+        });
+
+        const msgMatchedContacts = matches.filter(c => 
+          matchingNamesAndUrls.has(norm(c.name)) || 
+          (c.url && matchingNamesAndUrls.has(c.url))
+        );
+
+        if (msgMatchedContacts.length > 0) {
+          matches = msgMatchedContacts;
+        }
+      }
+    }
   }
 
-  // 2. Detección de Jerarquía
-  if (q.includes('c-level') || q.includes('ceo') || q.includes('founder') || q.includes('fundador')) {
-    matches = matches.filter(c => c.hierarchy === 'C-Level');
-  } else if (q.includes('director') || q.includes('directores')) {
-    matches = matches.filter(c => c.hierarchy === 'Director' || c.hierarchy === 'C-Level');
-  } else if (q.includes('vp') || q.includes('vicepresidente')) {
-    matches = matches.filter(c => c.hierarchy === 'VP' || c.hierarchy === 'C-Level');
+  // Si no fue un match exclusivo por texto de DMs, aplicar reglas de metadatos
+  if (matchedTopics.length === 0) {
+    if (q.includes('demand gen') || q.includes('marketing') || q.includes('crecimiento') || q.includes('growth')) {
+      matches = matches.filter(c => {
+        const pos = norm(c.position);
+        return pos.includes('market') || pos.includes('growth') || pos.includes('demand') || pos.includes('comercial') || pos.includes('sales') || pos.includes('director') || pos.includes('vp') || pos.includes('ceo');
+      });
+    }
+
+    if (q.includes('c-level') || q.includes('ceo') || q.includes('founder') || q.includes('fundador')) {
+      matches = matches.filter(c => c.hierarchy === 'C-Level');
+    } else if (q.includes('director') || q.includes('directores')) {
+      matches = matches.filter(c => c.hierarchy === 'Director' || c.hierarchy === 'C-Level');
+    } else if (q.includes('vp') || q.includes('vicepresidente')) {
+      matches = matches.filter(c => c.hierarchy === 'VP' || c.hierarchy === 'C-Level');
+    }
+
+    if (q.includes('fintech') || q.includes('pagos') || q.includes('payment')) {
+      matches = matches.filter(c => c.sector === 'Fintech/Pagos' || norm(c.company).includes('pay') || norm(c.position).includes('fintech'));
+    } else if (q.includes('saas') || q.includes('tech') || q.includes('software')) {
+      matches = matches.filter(c => c.sector === 'SaaS/Tech' || norm(c.position).includes('tech'));
+    }
+
+    if (q.includes('mexico') || q.includes('cdmx')) {
+      matches = matches.filter(c => c.country === 'México');
+    } else if (q.includes('colombia') || q.includes('bogota')) {
+      matches = matches.filter(c => c.country === 'Colombia');
+    } else if (q.includes('chile') || q.includes('santiago')) {
+      matches = matches.filter(c => c.country === 'Chile');
+    } else if (q.includes('argentina')) {
+      matches = matches.filter(c => c.country === 'Argentina');
+    }
+
+    if (q.includes('frio') || q.includes('inactivo') || q.includes('sin hablar') || q.includes('anos') || q.includes('años')) {
+      matches = matches.filter(c => !c.msg_count || c.msg_count === 0);
+    }
   }
 
-  // 3. Detección de Sector
-  if (q.includes('fintech') || q.includes('pagos') || q.includes('payment')) {
-    matches = matches.filter(c => c.sector === 'Fintech/Pagos' || norm(c.company).includes('pay') || norm(c.position).includes('fintech'));
-  } else if (q.includes('saas') || q.includes('tech') || q.includes('software')) {
-    matches = matches.filter(c => c.sector === 'SaaS/Tech' || norm(c.position).includes('tech'));
-  }
+  // Aplicar el chip de filtro reactivo en la sección actual
+  showAiFilterChip(query, matches.length);
 
-  // 4. Detección de País
-  if (q.includes('mexico') || q.includes('cdmx')) {
-    matches = matches.filter(c => c.country === 'México');
-  } else if (q.includes('colombia') || q.includes('bogota')) {
-    matches = matches.filter(c => c.country === 'Colombia');
-  } else if (q.includes('chile') || q.includes('santiago')) {
-    matches = matches.filter(c => c.country === 'Chile');
-  } else if (q.includes('argentina')) {
-    matches = matches.filter(c => c.country === 'Argentina');
-  }
-
-  // 5. Detección de contactos inactivos / fríos
-  if (q.includes('frio') || q.includes('inactivo') || q.includes('sin hablar') || q.includes('anos') || q.includes('años')) {
-    matches = matches.filter(c => !c.msg_count || c.msg_count === 0);
-  }
-
-  // Actualizar tabla de Mi Red con los contactos filtrados
   filteredContacts = matches;
   renderNetworkTable();
-  navigate('network');
+  if (S.activeSection === 'icp') renderICPTable();
+  if (S.activeSection === 'purge') renderPurge();
+  if (S.activeSection === 'crm') renderCRM();
 
   const cLevelCount = matches.filter(c => c.hierarchy === 'C-Level').length;
   const directorCount = matches.filter(c => c.hierarchy === 'Director').length;
@@ -6565,15 +6646,17 @@ function processCopilotNaturalLanguage(query) {
 
   const top3 = matches.slice(0, 3).map(c => `• <strong>${c.name}</strong> (${c.position || '—'} @ ${c.company || '—'})`).join('<br>');
 
+  const topicNote = matchedTopics.length > 0 ? `<br>💬 <em>Menciones en conversaciones: "${matchedTopics.join(', ')}"</em>` : '';
+
   return {
     html: `
-      <strong>🎯 ICP Aplicado con Éxito:</strong><br>
-      Encontré <strong>${matches.length.toLocaleString()} contactos</strong> en tu red que coinciden con tu criterio:<br><br>
+      <strong>🔍 Filtro IA Aplicado con Éxito:</strong><br>
+      Encontré <strong>${matches.length.toLocaleString()} contactos</strong> que coinciden con tu consulta:${topicNote}<br><br>
       • 👑 <strong>${cLevelCount}</strong> C-Level / Fundadores<br>
       • 💼 <strong>${directorCount}</strong> Directores y VPs<br>
       • ✨ <strong>${verifiedCount}</strong> Verificados en vivo<br><br>
-      ${top3 ? `<strong>Top prospectos prioritarios:</strong><br>${top3}<br><br>` : ''}
-      <em>👉 He actualizado tu tabla de <strong>Mi Red</strong> con estos ${matches.length} prospectos listos para prospección.</em>
+      ${top3 ? `<strong>Prospectos prioritarios filtrados:</strong><br>${top3}<br><br>` : ''}
+      <em>👉 He aplicado el filtro reactivo en tu pantalla activa. Puedes removerlo haciendo clic en <strong>✖ Limpiar Filtro IA</strong>.</em>
     `
   };
 }
