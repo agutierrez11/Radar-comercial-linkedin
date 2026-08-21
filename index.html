@@ -7122,7 +7122,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     <div style="display:flex; gap:10px;">
       <button onclick="closeVaultSelectorModal()" class="mini-btn" style="flex:1; padding:10px; font-weight:700;">Cerrar</button>
-      <button onclick="switchToVault('giovanna'); closeVaultSelectorModal(); navigate('upload');" class="mini-btn primary" style="flex:2; padding:10px; font-weight:800; background:linear-gradient(135deg, #10b981, #6366f1); border:none; color:white;">
+      <button onclick="switchToVault('giovanna', true);" class="mini-btn primary" style="flex:2; padding:10px; font-weight:800; background:linear-gradient(135deg, #10b981, #6366f1); border:none; color:white; cursor:pointer;">
         📤 Cargar Nuevo ZIP en Bóveda Cliente
       </button>
     </div>
@@ -7136,7 +7136,7 @@ function openVaultSelectorModal() {
 function closeVaultSelectorModal() {
   document.getElementById('vault-selector-modal').style.display = 'none';
 }
-async function switchToVault(vaultType) {
+async function switchToVault(vaultType, triggerFilePicker = false) {
   if (vaultType === 'antonio') {
     localStorage.setItem('active_vault_type', 'antonio');
     document.getElementById('current-vault-label').innerText = "Bóveda: Antonio Gutiérrez";
@@ -7146,18 +7146,48 @@ async function switchToVault(vaultType) {
   } else if (vaultType === 'giovanna') {
     localStorage.setItem('active_vault_type', 'giovanna');
     document.getElementById('current-vault-label').innerText = "Bóveda: Cliente Privado (Giovanna)";
+    
+    // Si viene del botón explícito de cargar ZIP o la bóveda está vacía
+    if (triggerFilePicker) {
+      S.contacts = [];
+      S.positions = [];
+      S.messages = [];
+      S.loadedParts = { connections: false, positions: false, messages: false, profile: false };
+      S.ownerName = "Bóveda Cliente Privado";
+      closeVaultSelectorModal();
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      document.getElementById('sec-upload').classList.add('active');
+      document.querySelector('[data-section="upload"]').classList.add('active');
+      setTimeout(() => {
+        const inp = document.getElementById('zip-input');
+        if (inp) inp.click();
+      }, 150);
+      if (typeof showToast === 'function') showToast("Selecciona tu archivo ZIP de LinkedIn", "📂");
+      return;
+    }
+
     const restored = await restoreLocalVault();
     if (!restored || !S.contacts || S.contacts.length === 0) {
       S.contacts = [];
       S.positions = [];
       S.messages = [];
+      S.loadedParts = { connections: false, positions: false, messages: false, profile: false };
       S.ownerName = "Bóveda Cliente Privado";
-      navigate('upload');
+      closeVaultSelectorModal();
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      document.getElementById('sec-upload').classList.add('active');
+      document.querySelector('[data-section="upload"]').classList.add('active');
+      setTimeout(() => {
+        const inp = document.getElementById('zip-input');
+        if (inp) inp.click();
+      }, 150);
     } else {
       finalize();
       navigate('network');
+      closeVaultSelectorModal();
     }
-    closeVaultSelectorModal();
     if (typeof showToast === 'function') showToast("Cargada Bóveda Privada Cliente", "👩‍💼");
   }
 }
