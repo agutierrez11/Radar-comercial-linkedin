@@ -6621,9 +6621,40 @@ function processCopilotNaturalLanguage(query) {
 
   const isDmQuery = q.includes('hable') || q.includes('hablé') || q.includes('mensajes') || q.includes('dms') || q.includes('chat') || q.includes('comparti') || q.includes('dije') || rawWords.length > 0;
 
-  if (isDmQuery || (words.length > 0 && S.messages && S.messages.length > 0)) {
-    isMessageSearch = true;
+  if (isDmQuery) {
     matchedTopics = rawWords.length > 0 ? rawWords : words;
+
+    // Verificar si messages.csv no se ha cargado en la memoria activa
+    if (!S.messages || S.messages.length === 0) {
+      const noteMatches = activeBase.filter(c => {
+        const notes = norm(c.crmNotes || '');
+        const post = norm(c.last_post_text || '');
+        return words.some(w => notes.includes(w) || post.includes(w));
+      });
+
+      if (noteMatches.length > 0) {
+        showAiFilterChip(query, noteMatches.length);
+        filteredContacts = noteMatches;
+        renderNetworkTable();
+        return {
+          html: `
+            <strong>🎯 Filtro IA Aplicado (en Notas/Posts):</strong><br>
+            Encontré <strong>${noteMatches.length} contactos</strong> en tus notas o publicaciones con las palabras: <strong>"${matchedTopics.join(', ')}"</strong>.<br><br>
+            <em>👉 Nota: Para buscar dentro del historial completo de DMs en bruto, sube tu archivo <code>messages.csv</code> en <strong>Cargar ZIP</strong>.</em>
+          `
+        };
+      }
+
+      return {
+        html: `
+          <strong>🔒 Archivo de Mensajes (messages.csv) no cargado:</strong><br>
+          Para buscar dentro del contenido en bruto de tus conversaciones históricas (ej: <em>"${rawWords.join(' ')}"</em>), es necesario subir tu archivo <code>messages.csv</code> o tu ZIP completo de LinkedIn en la pestaña <strong>Cargar ZIP</strong>.<br><br>
+          <em>Actualmente tienes <strong>${S.contacts.length.toLocaleString()} contactos</strong> cargados, pero el archivo de DMs (messages.csv) no se ha cargado en la memoria de esta sesión.</em>
+        `
+      };
+    }
+
+    isMessageSearch = true;
 
     const matchingMessageSenders = [];
     if (S.messages && S.messages.length > 0) {
