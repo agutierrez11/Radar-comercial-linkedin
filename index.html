@@ -2173,28 +2173,31 @@ async function processZip(zip) {
   const files = Object.keys(zip.files);
   let foundAny = false;
 
-  // 1. Profile
-  const profileFile = files.find(f => f.includes('Profile.csv'));
+  // 1. Profile (Multilingüe: Profile.csv, Perfil.csv, etc.)
+  const profileFile = files.find(f => /profile|perfil/i.test(f) && f.endsWith('.csv'));
   if (profileFile) {
     const txt = await zip.files[profileFile].async('string');
     const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true, quoteChar: '"', escapeChar: '"' });
     if (parsed.data[0]) {
-      S.ownerName = `${parsed.data[0]['First Name']||''} ${parsed.data[0]['Last Name']||''}`.trim();
+      const r = parsed.data[0];
+      const fn = r['First Name'] || r['First name'] || r['first_name'] || r['Nombre'] || r['Nome'] || r['Prénom'] || '';
+      const ln = r['Last Name'] || r['Last name'] || r['last_name'] || r['Apellido'] || r['Sobrenome'] || r['Nom'] || '';
+      S.ownerName = `${fn} ${ln}`.trim();
       S.loadedParts.profile = true;
       foundAny = true;
     }
   }
 
-  // 2. Positions
-  const posFile = files.find(f => f.includes('Positions.csv'));
+  // 2. Positions (Multilingüe: Positions.csv, Posiciones.csv, Cargos.csv, etc.)
+  const posFile = files.find(f => /position|posicion|cargo|puesto/i.test(f) && f.endsWith('.csv'));
   if (posFile) {
     const txt = await zip.files[posFile].async('string');
     const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true, quoteChar: '"', escapeChar: '"' });
     const parsedPos = parsed.data.map(r => ({
-      company: r['Company Name'] || '',
-      title: r['Title'] || '',
-      start: r['Started On'] || '',
-      end: r['Finished On'] || ''
+      company: r['Company Name'] || r['Company name'] || r['Empresa'] || r['Nombre de la empresa'] || '',
+      title: r['Title'] || r['title'] || r['Cargo'] || r['Puesto'] || r['Título'] || '',
+      start: r['Started On'] || r['Started on'] || r['Fecha de inicio'] || '',
+      end: r['Finished On'] || r['Finished on'] || r['Fecha de finalización'] || ''
     })).filter(p => p.company || p.title);
     
     if (parsedPos.length > 0) {
@@ -2204,12 +2207,12 @@ async function processZip(zip) {
     }
   }
 
-  // 3. Connections
-  const connFile = files.find(f => /connection/i.test(f) && f.endsWith('.csv'));
+  // 3. Connections (Multilingüe: Connections.csv, Conexiones.csv, Contactos.csv, Conexões.csv, etc.)
+  const connFile = files.find(f => /connect|conexi|contacto|contact/i.test(f) && f.endsWith('.csv'));
   if (connFile) {
     const txt = await zip.files[connFile].async('string');
     const lines = txt.split('\n');
-    const startIdx = lines.findIndex(l => l.includes('First Name'));
+    const startIdx = lines.findIndex(l => /first name|nombre|nome|prénom/i.test(l));
     if (startIdx !== -1) {
       const csvData = lines.slice(startIdx).join('\n');
       const parsed = Papa.parse(csvData, { header: true, skipEmptyLines: true, quoteChar: '"', escapeChar: '"' });
@@ -2218,11 +2221,18 @@ async function processZip(zip) {
         S.loadedParts.connections = true;
         foundAny = true;
       }
+    } else {
+      const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true, quoteChar: '"', escapeChar: '"' });
+      if (parsed.data && parsed.data.length > 0) {
+        buildContacts(parsed.data);
+        S.loadedParts.connections = true;
+        foundAny = true;
+      }
     }
   }
 
-  // 4. Messages
-  const msgFile = files.find(f => f === 'messages.csv' || f.endsWith('/messages.csv'));
+  // 4. Messages (Multilingüe: messages.csv, mensajes.csv, etc.)
+  const msgFile = files.find(f => /message|mensaje/i.test(f) && f.endsWith('.csv'));
   if (msgFile) {
     const txt = await zip.files[msgFile].async('string');
     const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true, quoteChar: '"', escapeChar: '"' });
