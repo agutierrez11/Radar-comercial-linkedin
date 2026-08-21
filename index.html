@@ -5308,7 +5308,7 @@ function loadCrmState() {
       if (c.customCompany) c.company = c.customCompany;
     } else {
       c.crmStatus = 'Ninguno';
-      c.whitelisted = false;
+      if (!c.whitelisted) c.whitelisted = false;
       c.crmNotes = '';
       c.crmDate = '';
       c.customName = '';
