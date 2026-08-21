@@ -3730,6 +3730,14 @@ function renderICPTable() {
 // ═══════════════════════════════════════════════════════════════════════
 function isPurgeCandidate(c) {
   if (c.whitelisted || c.discardedFromPurge || c.crmStatus === 'Descartado') return false;
+  try {
+    const raw = localStorage.getItem('radar_comercial_crm');
+    if (raw) {
+      const db = JSON.parse(raw);
+      const key = getContactCrmKey(c);
+      if (db[key] && (db[key].whitelisted || db[key].status === 'Descartado')) return false;
+    }
+  } catch(e) {}
   return S.criteria.filter(cr => cr.on).some(cr => cr.fn(c));
 }
 
@@ -3737,6 +3745,8 @@ function protectFromPurge(id) {
   const c = S.contacts.find(x => String(x.id) === String(id));
   if (!c) return;
   c.whitelisted = true;
+  c.discardedFromPurge = false;
+  saveContactCrm(c.id, c.crmStatus || 'Ninguno', c.crmNotes || '', null, true);
   showToast(`${c.name} ha sido protegido y conservado en tu red.`, '🛡️');
   renderPurgeCriteria();
   renderPurge();
