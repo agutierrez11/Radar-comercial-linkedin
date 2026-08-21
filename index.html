@@ -3732,7 +3732,7 @@ function renderPurgeCriteria() {
   const container = document.getElementById('purge-criteria');
   if (!container) return;
   container.innerHTML = S.criteria.map((cr, i) => {
-    const count = S.contacts.filter(cr.fn).length;
+    const count = S.contacts.filter(c => !c.whitelisted && !c.discardedFromPurge && c.crmStatus !== 'Descartado' && cr.fn(c)).length;
     return `<div class="criterion-row">
       <label class="toggle"><input type="checkbox" ${cr.on?'checked':''} onchange="toggleCriterion(${i},this.checked)"><span class="toggle-slider"></span></label>
       <span class="criterion-label">${cr.label}</span>
@@ -3743,6 +3743,7 @@ function renderPurgeCriteria() {
 
 function toggleCriterion(idx, val) {
   S.criteria[idx].on = val;
+  renderPurgeCriteria();
   renderPurge();
   renderHeader();
 }
