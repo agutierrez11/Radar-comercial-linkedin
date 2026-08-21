@@ -1786,10 +1786,8 @@ const S = {
         if (c.hierarchy === 'Director') return false;                // 🛡️ Director = influencia
         if (c.hierarchy === 'Gerente') return false;                 // 🛡️ Gerente = decisor operativo
         if (c.email) return false;                                   // 🛡️ tiene email = dato valioso
-        if (c.sector === 'Fintech/Pagos') return false;             // 🛡️ tu industria actual
-        if (c.sector === 'SaaS/Tech') return false;                 // 🛡️ ecosistema aliado
-        if (c.sector === 'Retail/eCommerce') return false;          // 🛡️ clientes potenciales
-        return true; // No hay escudo: candidato real a purga
+        if (c.sector && c.sector !== 'Otro') return false;          // 🛡️ Sector identificado (Fintech, SaaS, Retail, CPG, etc.)
+        return true; // No hay escudo: candidato real a purga (411 contactos)
       }
     },
     {
