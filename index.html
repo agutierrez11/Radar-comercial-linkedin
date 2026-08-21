@@ -2912,15 +2912,16 @@ function renderHeader() {
   document.getElementById('dunbar-label').textContent = `${classa}/150`;
   document.getElementById('header-kpis').style.display = 'flex';
 
+  const activeIcpCount = S.contacts.filter(c => c.score >= 60 && c.crmStatus !== 'Descartado' && !c.discardedFromPurge).length;
   document.getElementById('nb-network').textContent = total.toLocaleString();
-  document.getElementById('nb-icp').textContent = icpContacts.length.toLocaleString();
+  document.getElementById('nb-icp').textContent = activeIcpCount.toLocaleString();
   const purgeCount = S.contacts.filter(c => isPurgeCandidate(c)).length;
   document.getElementById('nb-purge').textContent = purgeCount.toLocaleString();
   
   const msgsCount = S.contacts.filter(c => c.msg_count && c.msg_count > 0).length;
   document.getElementById('nb-msgs').textContent = msgsCount > 0 ? msgsCount.toLocaleString() : (S.messages.length > 0 ? S.messages.length.toLocaleString() : '–');
   
-  const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno').length;
+  const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno' && c.crmStatus !== 'Descartado').length;
   document.getElementById('nb-crm').textContent = crmCount;
 }
 
@@ -5229,9 +5230,9 @@ function loadCrmState() {
 
   // Re-evaluar scores e ICPs por si cambiaron de cargo/empresa
   S.contacts.forEach(c => { c.score = scoreContact(c); });
-  icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
+  icpContacts = S.contacts.filter(c => c.score >= 60 && c.crmStatus !== 'Descartado' && !c.discardedFromPurge).sort((a,b) => b.score - a.score);
   
-  const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno').length;
+  const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno' && c.crmStatus !== 'Descartado').length;
   document.getElementById('nb-crm').textContent = crmCount;
 }
 
@@ -5298,7 +5299,7 @@ function saveContactCrm(contactId, status, notes, customData) {
 
   // Re-evaluar scores
   c.score = scoreContact(c);
-  icpContacts = S.contacts.filter(x => x.score >= 60).sort((a,b) => b.score - a.score);
+  icpContacts = S.contacts.filter(x => x.score >= 60 && x.crmStatus !== 'Descartado' && !x.discardedFromPurge).sort((a,b) => b.score - a.score);
 
   // Renderizar vistas
   renderHeader();
@@ -5306,9 +5307,9 @@ function saveContactCrm(contactId, status, notes, customData) {
   renderICP();
   renderPurge();
 
-  const crmCount = S.contacts.filter(x => x.crmStatus && x.crmStatus !== 'Ninguno').length;
+  const activeCrmCount = S.contacts.filter(x => x.crmStatus && x.crmStatus !== 'Ninguno' && x.crmStatus !== 'Descartado').length;
   const nbCrmEl = document.getElementById('nb-crm');
-  if (nbCrmEl) nbCrmEl.textContent = crmCount;
+  if (nbCrmEl) nbCrmEl.textContent = activeCrmCount;
 
   if (S.activeSection === 'crm') {
     renderCRM();
@@ -5485,7 +5486,7 @@ function renderCRM() {
                     (totalMeet * 0.8 * bountyPerWin) + 
                     (totalWon * 1.0 * bountyPerWin);
                     
-  const crmCount = allCrmEntries.length;
+  const activeCrmCount = allCrmEntries.filter(c => c.crmStatus !== 'Descartado').length;
 
   const elActive = document.getElementById('crm-kpi-active');
   const elConv   = document.getElementById('crm-kpi-conv');
@@ -5499,7 +5500,7 @@ function renderCRM() {
   if (elMeet)   elMeet.textContent   = totalMeet;
   if (elWon)    elWon.textContent    = totalWon;
   if (elBounty) elBounty.textContent = '$' + pipeValue.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
-  if (elNbCrm)  elNbCrm.textContent  = crmCount;
+  if (elNbCrm)  elNbCrm.textContent  = activeCrmCount;
 
   board.style.display = 'grid';
   if (emptyState) emptyState.style.display = 'none';
