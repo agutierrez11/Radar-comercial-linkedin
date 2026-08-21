@@ -3823,7 +3823,18 @@ async function enrichSingleContactLive(contactId) {
 }
 
 function getPurgeReasons(c) {
-  return S.criteria.filter(cr => cr.on && cr.fn(c)).map(cr => cr.label);
+  return S.criteria.filter(cr => cr.on && cr.fn(c)).map(cr => {
+    const full = cr.label;
+    let short = full;
+    if (full.includes('Conexión >4 años')) short = 'CONEXIÓN >4 AÑOS';
+    else if (full.includes('Sin empresa')) short = 'SIN EMPRESA';
+    else if (full.includes('Sin cargo')) short = 'SIN CARGO';
+    else if (full.includes('Cargo genérico')) short = 'CARGO GENÉRICO';
+    else if (full.includes('Inbound pitch')) short = 'INBOUND PITCH';
+    else if (full.includes('País no identificado')) short = 'PAÍS UNKNOWN';
+    else if (full.includes('Nombre incompleto')) short = 'NOMBRE CORTO';
+    return { full, short };
+  });
 }
 
 function renderPurgeCriteria() {
@@ -3885,8 +3896,8 @@ function renderPurge() {
       <td><div class="td-name">${nameHtml}</div></td>
       <td><div class="td-sub">${c.position||'Sin cargo'}</div><div class="td-sub" style="color:var(--muted)">${getDisplayCompany(c)}</div></td>
       <td style="font-size:11px">${c.country==='Desconocido'?'📍 —':countryFlag(c.country)}</td>
-      <td>${reasons.map(r=>`<span class="badge badge-red" style="margin-right:3px;margin-bottom:2px">${r}</span>`).join('')}</td>
-      <td style="white-space:nowrap; text-align:right;">
+      <td style="max-width:180px;">${reasons.map(r=>`<span class="badge badge-red" title="${r.full}" style="margin-right:3px;margin-bottom:2px;white-space:nowrap;display:inline-block;">${r.short}</span>`).join('')}</td>
+      <td style="white-space:nowrap; text-align:right; min-width:240px;">
         <button class="mini-btn primary" onclick="enrichSingleContactLive(${c.id})" style="font-size:9px; padding:3px 7px; background:linear-gradient(135deg, var(--accent), var(--green)); border:none; color:white; font-weight:700;" title="Verificar puesto en vivo vía HarvestAPI">
           ⚡ Verificar Live
         </button>
