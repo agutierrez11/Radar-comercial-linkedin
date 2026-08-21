@@ -6555,46 +6555,47 @@ function clearAiFilter() {
 
 function processCopilotNaturalLanguage(query) {
   const q = norm(query);
-  let matches = S.contacts.filter(c => c.crmStatus !== 'Descartado' && !c.discardedFromPurge);
+  let activeBase = S.contacts.filter(c => c.crmStatus !== 'Descartado' && !c.discardedFromPurge);
+  let matches = [];
   let matchedTopics = [];
+  let isMessageSearch = false;
 
-  // Búsqueda profunda en DMs (messages.csv) si aplica
-  if (S.messages && S.messages.length > 0) {
-    const stopWords = ['de', 'la', 'el', 'los', 'las', 'un', 'una', 'con', 'para', 'por', 'que', 'en', 'contactos', 'mensajes', 'hable', 'hable', 'comparti', 'comparti', 'buscame', 'buscame', 'agrupame', 'agrupame', 'muestrame', 'muestrame', 'sobre', 'donde'];
-    const words = query.toLowerCase().split(/\s+/).map(w => norm(w)).filter(w => w.length > 2 && !stopWords.includes(w));
-    
-    if (words.length > 0) {
-      const matchingMessages = S.messages.filter(m => {
-        const text = norm(m.CONTENT || m.TEXT || m.content || '');
-        return words.some(w => text.includes(w));
-      });
+  const stopWords = new Set(['de', 'la', 'el', 'los', 'las', 'un', 'una', 'con', 'para', 'por', 'que', 'en', 'contactos', 'mensajes', 'hable', 'hable', 'comparti', 'comparti', 'buscame', 'buscame', 'agrupame', 'agrupame', 'muestrame', 'muestrame', 'sobre', 'donde', 'dime', 'quienes']);
+  const words = query.toLowerCase().split(/\s+/).map(w => norm(w)).filter(w => w.length > 2 && !stopWords.has(w));
 
-      if (matchingMessages.length > 0) {
-        matchedTopics = words;
-        const matchingNamesAndUrls = new Set();
-        matchingMessages.forEach(m => {
-          if (m.SENDER_NAME) matchingNamesAndUrls.add(norm(m.SENDER_NAME));
-          if (m.RECIPIENT_NAME) matchingNamesAndUrls.add(norm(m.RECIPIENT_NAME));
-          if (m.FROM) matchingNamesAndUrls.add(norm(m.FROM));
-          if (m.TO) matchingNamesAndUrls.add(norm(m.TO));
-          if (m.SENDER_URL) matchingNamesAndUrls.add(m.SENDER_URL);
-          if (m.TO_URL) matchingNamesAndUrls.add(m.TO_URL);
-        });
+  const isDmQuery = q.includes('hable') || q.includes('hablé') || q.includes('mensajes') || q.includes('dms') || q.includes('chat') || q.includes('comparti') || q.includes('dije');
 
-        const msgMatchedContacts = matches.filter(c => 
-          matchingNamesAndUrls.has(norm(c.name)) || 
-          (c.url && matchingNamesAndUrls.has(c.url))
-        );
+  if (isDmQuery || (words.length > 0 && S.messages && S.messages.length > 0)) {
+    isMessageSearch = true;
+    matchedTopics = words;
 
-        if (msgMatchedContacts.length > 0) {
-          matches = msgMatchedContacts;
+    const matchingNamesAndUrls = new Set();
+    if (S.messages && S.messages.length > 0) {
+      S.messages.forEach(m => {
+        const text = norm(getRowVal(m, 'CONTENT') || getRowVal(m, 'TEXT') || getRowVal(m, 'CONTENT BODY') || m.content || m.text || '');
+        if (words.some(w => text.includes(w))) {
+          const fromName = getRowVal(m, 'FROM') || getRowVal(m, 'SENDER_NAME') || m.from || '';
+          const toName = getRowVal(m, 'TO') || getRowVal(m, 'RECIPIENT_NAME') || m.to || '';
+          const fromUrl = m.SENDER_URL || m.FROM_URL || '';
+          const toUrl = m.TO_URL || m.RECIPIENT_URL || '';
+          if (fromName) matchingNamesAndUrls.add(norm(fromName));
+          if (toName) matchingNamesAndUrls.add(norm(toName));
+          if (fromUrl) matchingNamesAndUrls.add(fromUrl);
+          if (toUrl) matchingNamesAndUrls.add(toUrl);
         }
-      }
+      });
     }
+
+    matches = activeBase.filter(c => {
+      if (matchingNamesAndUrls.has(norm(c.name)) || (c.url && matchingNamesAndUrls.has(c.url))) return true;
+      const notes = norm(c.crmNotes || '');
+      const post = norm(c.last_post_text || '');
+      return words.some(w => notes.includes(w) || post.includes(w));
+    });
   }
 
-  // Si no fue un match exclusivo por texto de DMs, aplicar reglas de metadatos
-  if (matchedTopics.length === 0) {
+  if (!isMessageSearch) {
+    matches = [...activeBase];
     if (q.includes('demand gen') || q.includes('marketing') || q.includes('crecimiento') || q.includes('growth')) {
       matches = matches.filter(c => {
         const pos = norm(c.position);
@@ -6646,7 +6647,17 @@ function processCopilotNaturalLanguage(query) {
 
   const top3 = matches.slice(0, 3).map(c => `• <strong>${c.name}</strong> (${c.position || '—'} @ ${c.company || '—'})`).join('<br>');
 
-  const topicNote = matchedTopics.length > 0 ? `<br>💬 <em>Menciones en conversaciones: "${matchedTopics.join(', ')}"</em>` : '';
+  const topicNote = matchedTopics.length > 0 ? `<br>💬 <em>Palabras clave en conversaciones: "${matchedTopics.join(', ')}"</em>` : '';
+
+  if (matches.length === 0) {
+    return {
+      html: `
+        <strong>🔍 Filtro IA Aplicado:</strong><br>
+        No encontré contactos en tu red con los que hayas compartido mensajes con la palabra <strong>"${matchedTopics.join(', ')}"</strong>.<br><br>
+        <em>👉 He actualizado la tabla activa mostrando 0 contactos. Haz clic en <strong>✖ Limpiar Filtro IA</strong> para volver a ver tu lista completa.</em>
+      `
+    };
+  }
 
   return {
     html: `
