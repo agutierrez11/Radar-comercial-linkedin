@@ -2762,7 +2762,7 @@ async function loadDemoData(autoNavigate = true) {
   }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
     document.body.classList.add('light');
@@ -2771,6 +2771,20 @@ window.addEventListener('DOMContentLoaded', () => {
     if (icon) icon.textContent = '🌙';
     if (text) text.textContent = 'Modo Oscuro';
   }
+
+  try {
+    const restored = await restoreLocalVault();
+    if (restored && S.contacts && S.contacts.length > 0) {
+      finalize();
+      navigate('network');
+      console.log("[Bootstrap] Bóveda guardada restaurada:", S.contacts.length);
+      return;
+    }
+  } catch(e) {
+    console.warn("[Bootstrap] Error en restoreLocalVault:", e);
+  }
+
+  console.log("[Bootstrap] Cargando datos por defecto enriched_connections.json...");
   loadDemoData(true);
 });
 
