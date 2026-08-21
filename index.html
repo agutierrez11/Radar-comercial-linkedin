@@ -2723,13 +2723,9 @@ window.addEventListener('DOMContentLoaded', async () => {
   } catch(e) {}
 
   // 2. Parámetros de URL: si trae ?demo=1 o ?owner=antonio, carga la demo
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('demo') === '1' || urlParams.get('owner') === 'antonio') {
-    loadDemoData(true);
-  } else {
-    // 3. Para cualquier visitante nuevo (como Giovanna): Muestra la pantalla limpia de carga (Zero-Knowledge)
-    navigate('upload');
-  }
+  // Carga automática por defecto de la base para Antonio Gutierrez (3,039 contactos)
+  await loadDemoData(true);
+  setLoading(false);
 });
 
 let gisMap = null;
