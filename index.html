@@ -3031,10 +3031,6 @@ function selectActivePosition(idx) {
   S.activePositionIndex = idx;
   // Recalculate scores based on the new active position
   S.contacts.forEach(c => {
-      // Auto-aplicar la depuración histórica de los 1,584 contactos purgados
-      if (isPurgeCandidate(c)) {
-        c.discardedFromPurge = true;
-      }
       c.score = scoreContact(c);
     });
   icpContacts = S.contacts.filter(c => c.score >= 40).sort((a,b) => b.score - a.score);
