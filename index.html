@@ -3734,22 +3734,26 @@ function isPurgeCandidate(c) {
 }
 
 function protectFromPurge(id) {
-  const c = S.contacts.find(x => x.id === id);
+  const c = S.contacts.find(x => String(x.id) === String(id));
   if (!c) return;
   c.whitelisted = true;
   showToast(`${c.name} ha sido protegido y conservado en tu red.`, '🛡️');
+  renderPurgeCriteria();
   renderPurge();
+  applyNetworkFilters();
+  if (typeof renderICP === 'function') renderICP();
   renderHeader();
   saveLocalVault();
 }
 
 function dismissPurgeContact(id) {
-  const c = S.contacts.find(x => x.id === id);
+  const c = S.contacts.find(x => String(x.id) === String(id));
   if (!c) return;
   c.crmStatus = 'Descartado';
   c.discardedFromPurge = true;
   saveContactCrm(c.id, 'Descartado', c.crmNotes || '');
   showToast(`${c.name} marcado como descartado.`, '🗑️');
+  renderPurgeCriteria();
   renderPurge();
   applyNetworkFilters();
   if (typeof renderICP === 'function') renderICP();
@@ -3758,7 +3762,7 @@ function dismissPurgeContact(id) {
 }
 
 async function enrichSingleContactLive(contactId) {
-  const c = S.contacts.find(x => x.id === contactId);
+  const c = S.contacts.find(x => String(x.id) === String(contactId));
   if (!c) return;
 
   const harvestKey = localStorage.getItem('radar_harvest_key') || '';
