@@ -5295,6 +5295,7 @@ function loadCrmState() {
     if (db[key]) {
       c.crmStatus = db[key].status || 'Ninguno';
       if (c.crmStatus === 'Descartado') c.discardedFromPurge = true;
+      c.whitelisted = !!db[key].whitelisted;
       c.crmNotes = db[key].notes || '';
       c.crmDate = db[key].date || '';
       c.customName = db[key].customName || '';
@@ -5307,6 +5308,7 @@ function loadCrmState() {
       if (c.customCompany) c.company = c.customCompany;
     } else {
       c.crmStatus = 'Ninguno';
+      c.whitelisted = false;
       c.crmNotes = '';
       c.crmDate = '';
       c.customName = '';
@@ -5323,8 +5325,8 @@ function loadCrmState() {
   document.getElementById('nb-crm').textContent = crmCount;
 }
 
-function saveContactCrm(contactId, status, notes, customData) {
-  const c = S.contacts.find(x => x.id === contactId);
+function saveContactCrm(contactId, status, notes, customData, isWhitelisted) {
+  const c = S.contacts.find(x => String(x.id) === String(contactId));
   if (!c) return;
 
   const key = getContactCrmKey(c);
@@ -5333,6 +5335,10 @@ function saveContactCrm(contactId, status, notes, customData) {
     c.crmNotes = notes || '';
   }
   c.crmDate = new Date().toISOString().slice(0, 10);
+
+  if (isWhitelisted !== undefined) {
+    c.whitelisted = !!isWhitelisted;
+  }
 
   if (customData) {
     c.customName = customData.name || '';
@@ -5369,13 +5375,14 @@ function saveContactCrm(contactId, status, notes, customData) {
     try { db = JSON.parse(raw); } catch(e) {}
   }
 
-  if (status === 'Ninguno' && !c.crmNotes && !c.customName && !c.customPosition && !c.customCompany) {
+  if (status === 'Ninguno' && !c.crmNotes && !c.customName && !c.customPosition && !c.customCompany && !c.whitelisted) {
     delete db[key];
   } else {
     db[key] = {
       status: status,
       notes: c.crmNotes,
       date: c.crmDate,
+      whitelisted: !!c.whitelisted,
       customName: c.customName,
       customPosition: c.customPosition,
       customCompany: c.customCompany
