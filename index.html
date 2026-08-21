@@ -2468,7 +2468,7 @@ async function normalizeWithAPI() {
 
 function finalize() {
   loadCrmState();
-  filteredContacts = [...S.contacts];
+  applyNetworkFilters();
   
   populateFilters();
   renderHeader();
@@ -3039,6 +3039,7 @@ function applyNetworkFilters() {
   const hier = document.getElementById('net-hier').value;
   const sector = document.getElementById('net-sector').value;
   filteredContacts = S.contacts.filter(c => {
+    if ((c.crmStatus === 'Descartado' || c.discardedFromPurge) && !S.showDiscarded) return false;
     if (search && !norm(c.name).includes(search) && !norm(c.position).includes(search) && !norm(c.company).includes(search)) return false;
     if (country && c.country !== country) return false;
     if (hier && c.hierarchy !== hier) return false;
@@ -3598,6 +3599,7 @@ function renderICPTable() {
   const search = norm(document.getElementById('icp-search').value);
   const minScore = parseInt(document.getElementById('icp-min-score').value)||0;
   const filtered = icpContacts.filter(c => {
+    if (c.crmStatus === 'Descartado' || c.discardedFromPurge) return false;
     if (c.score < minScore) return false;
     if (search && !norm(c.name).includes(search) && !norm(c.position).includes(search) && !norm(c.company || '').includes(search)) return false;
     return true;
@@ -3641,7 +3643,7 @@ function renderICPTable() {
 // PURGE
 // ═══════════════════════════════════════════════════════════════════════
 function isPurgeCandidate(c) {
-  if (c.whitelisted || c.discardedFromPurge) return false;
+  if (c.whitelisted || c.discardedFromPurge || c.crmStatus === 'Descartado') return false;
   return S.criteria.filter(cr => cr.on).some(cr => cr.fn(c));
 }
 
@@ -3660,8 +3662,11 @@ function dismissPurgeContact(id) {
   if (!c) return;
   c.crmStatus = 'Descartado';
   c.discardedFromPurge = true;
+  saveContactCrm(c.id, 'Descartado', c.crmNotes || '');
   showToast(`${c.name} marcado como descartado.`, '🗑️');
   renderPurge();
+  applyNetworkFilters();
+  if (typeof renderICP === 'function') renderICP();
   renderHeader();
   saveLocalVault();
 }
@@ -5198,6 +5203,7 @@ function loadCrmState() {
     const key = getContactCrmKey(c);
     if (db[key]) {
       c.crmStatus = db[key].status || 'Ninguno';
+      if (c.crmStatus === 'Descartado') c.discardedFromPurge = true;
       c.crmNotes = db[key].notes || '';
       c.crmDate = db[key].date || '';
       c.customName = db[key].customName || '';
