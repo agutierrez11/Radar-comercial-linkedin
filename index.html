@@ -2114,46 +2114,53 @@ async function handleFiles(files) {
   }
 
   if (processedAny) {
-    await normalizeWithAPI();
+    try {
+      await Promise.race([
+        normalizeWithAPI(),
+        new Promise(r => setTimeout(r, 1500))
+      ]);
+    } catch(e) {}
     
-    // Save imported data to Supabase
-    if (currentUser) {
-      setLoading(true, 95);
-      console.log("Upserting contacts to Supabase...");
-      
-      const chunkSize = 200;
-      for (let i = 0; i < S.contacts.length; i += chunkSize) {
-        const chunk = S.contacts.slice(i, i + chunkSize).map(c => ({
-          contact_id: c.url || c.profile_url || String(c.id),
-          user_id: currentUser.id,
-          first_name: c.first_name || '',
-          last_name: c.last_name || '',
-          company: c.company || '',
-          position: c.position || '',
-          connected_on: c.connected_on || '',
-          email_address: c.email_address || '',
-          profile_url: c.url || c.profile_url || '',
-          crm_status: c.crmStatus || 'Ninguno',
-          crm_notes: c.crmNotes || '',
-          custom_name: c.customName || '',
-          custom_company: c.customCompany || '',
-          custom_position: c.customPosition || '',
-          crm_date: c.crmDate || new Date().toISOString(),
-          msg_count: c.msg_count || 0,
-          latest_message: c.latest_message || '',
-          raw_data: c
-        }));
-        
-        try {
-          const { error } = await supabase.from('contacts').upsert(chunk, { onConflict: 'contact_id, user_id' });
-          if (error) console.error("Error upserting chunk:", error);
-        } catch(e) {
-          console.error("Exception upserting chunk:", e);
+    // Save imported data to Supabase if logged in
+    if (typeof currentUser !== 'undefined' && currentUser && window.supabase) {
+      try {
+        setLoading(true, 95);
+        const chunkSize = 200;
+        for (let i = 0; i < S.contacts.length; i += chunkSize) {
+          const chunk = S.contacts.slice(i, i + chunkSize).map(c => ({
+            contact_id: c.url || c.profile_url || String(c.id),
+            user_id: currentUser.id,
+            first_name: c.first_name || '',
+            last_name: c.last_name || '',
+            company: c.company || '',
+            position: c.position || '',
+            connected_on: c.connected_on || '',
+            email_address: c.email_address || '',
+            profile_url: c.url || c.profile_url || '',
+            crm_status: c.crmStatus || 'Ninguno',
+            crm_notes: c.crmNotes || '',
+            custom_name: c.customName || '',
+            custom_company: c.customCompany || '',
+            custom_position: c.customPosition || '',
+            crm_date: c.crmDate || new Date().toISOString(),
+            msg_count: c.msg_count || 0,
+            latest_message: c.latest_message || '',
+            raw_data: c
+          }));
+          await supabase.from('contacts').upsert(chunk, { onConflict: 'contact_id, user_id' });
         }
+      } catch(e) {
+        console.warn("[Supabase Sync Error]", e);
       }
     }
     
     finalize();
+    saveLocalVault();
+    navigate('network');
+    
+    if (typeof showToast === 'function') {
+      showToast(`¡ZIP procesado con éxito! ${S.contacts.length.toLocaleString()} contactos cargados en tu Bóveda.`, '🎉');
+    }
   }
 
   if (errors.length > 0) {
