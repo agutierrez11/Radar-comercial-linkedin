@@ -2372,27 +2372,34 @@ function getCoordsForContact(country, company, position) {
 }
 
 function buildContacts(rows) {
-  if (S.isDemoLoaded) {
+  const isInitialLoad = S.isDemoLoaded || !S.contacts || S.contacts.length === 0;
+
+  if (isInitialLoad) {
     S.contacts = [];
     S.isDemoLoaded = false;
   }
 
-  const existingKeys = new Set(S.contacts.map(c => 
-    `${norm(c.name)}|${norm(c.company)}|${norm(c.position)}|${c.connectedOn}`
-  ));
+  // Mapa de contactos existentes por URL o Nombre Único para evitar duplicados
+  const existingMap = new Map();
+  S.contacts.forEach(c => {
+    const key = c.url ? c.url : norm(c.name);
+    if (key) existingMap.set(key, c);
+  });
 
-  const newContacts = rows.map(row => {
+  const incomingKeys = new Set();
+  const mergedContacts = [];
+
+  rows.forEach((row) => {
     const fn = (row['First Name'] || '').trim();
     const ln = (row['Last Name'] || '').trim();
     const name = `${fn} ${ln}`.trim();
+    if (!name) return;
+
     let company = (row['Company'] || row['company'] || '').trim();
     let position = (row['Position'] || row['position'] || '').trim();
-    if (/\b\d+[\d,.]*\s*(followers?|seguidores?)\b/i.test(company) || company.toLowerCase().includes('follower')) {
-      company = '';
-    }
-    if (/\b\d+[\d,.]*\s*(followers?|seguidores?)\b/i.test(position) || position.toLowerCase().includes('follower')) {
-      position = '';
-    }
+    if (/\b\d+[\d,.]*\s*(followers?|seguidores?)\b/i.test(company) || company.toLowerCase().includes('follower')) company = '';
+    if (/\b\d+[\d,.]*\s*(followers?|seguidores?)\b/i.test(position) || position.toLowerCase().includes('follower')) position = '';
+
     const email = (row['Email Address'] || row['email'] || '').trim();
     const url = (row['URL'] || row['url'] || '').trim();
     const connectedOn = (row['Connected On'] || row['connectedOn'] || '').trim();
@@ -2404,32 +2411,61 @@ function buildContacts(rows) {
     const sector = inferSector(position, company);
 
     let jobStatus = "🟢 Vigente Confirmado";
-    if (connectedOn.includes("2025") || connectedOn.includes("2024")) {
-      jobStatus = "🟡 Vigente Probable";
-    } else if (connectedOn && !connectedOn.includes("2026")) {
-      jobStatus = "🔍 Por Corroborar";
-    }
+    if (connectedOn.includes("2025") || connectedOn.includes("2024")) jobStatus = "🟡 Vigente Probable";
+    else if (connectedOn && !connectedOn.includes("2026")) jobStatus = "🔍 Por Corroborar";
     if (!company) jobStatus = "⚠️ Sin Empresa Registrada";
 
-    return {
-      name, company, position, originalName: name, originalCompany: company, originalPosition: position,
-      email, url, connectedOn, connectedYearsAgo: yearsAgo,
-      country: coords.country, city: coords.city, lat: coords.lat, lng: coords.lng,
-      jobStatus, hierarchy, sector, score: 0
-    };
-  }).filter(c => {
-    if (c.name.length === 0) return false;
-    const key = `${norm(c.name)}|${norm(c.company)}|${norm(c.position)}|${c.connectedOn}`;
-    if (existingKeys.has(key)) return false;
-    existingKeys.add(key);
-    return true;
+    const key = url ? url : norm(name);
+    incomingKeys.add(key);
+
+    if (existingMap.has(key)) {
+      // ACTUALIZACIÓN INTELIGENTE (Smart Re-Sync): Actualiza puesto/empresa pero PRESERVA notas y estado CRM del usuario
+      const existing = existingMap.get(key);
+      existing.company = company || existing.company;
+      existing.position = position || existing.position;
+      existing.email = email || existing.email;
+      existing.connectedOn = connectedOn || existing.connectedOn;
+      existing.hierarchy = hierarchy;
+      existing.sector = sector;
+      existing.disconnectedFromLinkedin = false;
+      mergedContacts.push(existing);
+    } else {
+      // NUEVO CONTACTO DE LINKEDIN
+      mergedContacts.push({
+        id: mergedContacts.length,
+        name, company, position, originalName: name, originalCompany: company, originalPosition: position,
+        email, url, connectedOn, connectedYearsAgo: yearsAgo,
+        country: coords.country, city: coords.city, lat: coords.lat, lng: coords.lng,
+        jobStatus, hierarchy, sector, score: 0
+      });
+    }
   });
 
-  newContacts.forEach((c, idx) => {
-    c.id = S.contacts.length + idx;
-  });
+  // AUTO-PURGA DE CONTACTOS ELIMINADOS EN LINKEDIN:
+  // Si fue removido en LinkedIn y NO tiene notas/tratos activos en CRM, se limpia automáticamente
+  if (!isInitialLoad) {
+    let autoPurgedCount = 0;
+    S.contacts.forEach(c => {
+      const key = c.url ? c.url : norm(c.name);
+      if (!incomingKeys.has(key)) {
+        const hasActiveDeal = c.crmStatus && c.crmStatus !== 'Ninguno' && c.crmStatus !== 'Descartado';
+        if (hasActiveDeal) {
+          c.disconnectedFromLinkedin = true;
+          mergedContacts.push(c);
+        } else {
+          autoPurgedCount++;
+        }
+      }
+    });
+    if (autoPurgedCount > 0) {
+      console.log(`[SmartMerge] Auto-limpieza ejecutada: ${autoPurgedCount} contactos eliminados en LinkedIn fueron removidos del tablero.`);
+      showToast(`Auto-limpieza: ${autoPurgedCount} contactos eliminados en LinkedIn fueron purgados.`, '🧹');
+    }
+  }
 
-  S.contacts = S.contacts.concat(newContacts);
+  mergedContacts.forEach((c, idx) => c.id = idx);
+  S.contacts = mergedContacts;
+  saveLocalVault();
 }
 
 async function normalizeWithAPI() {
