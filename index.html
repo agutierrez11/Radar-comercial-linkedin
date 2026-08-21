@@ -2114,53 +2114,46 @@ async function handleFiles(files) {
   }
 
   if (processedAny) {
-    try {
-      await Promise.race([
-        normalizeWithAPI(),
-        new Promise(r => setTimeout(r, 1500))
-      ]);
-    } catch(e) {}
+    await normalizeWithAPI();
     
-    // Save imported data to Supabase if logged in
-    if (typeof currentUser !== 'undefined' && currentUser && window.supabase) {
-      try {
-        setLoading(true, 95);
-        const chunkSize = 200;
-        for (let i = 0; i < S.contacts.length; i += chunkSize) {
-          const chunk = S.contacts.slice(i, i + chunkSize).map(c => ({
-            contact_id: c.url || c.profile_url || String(c.id),
-            user_id: currentUser.id,
-            first_name: c.first_name || '',
-            last_name: c.last_name || '',
-            company: c.company || '',
-            position: c.position || '',
-            connected_on: c.connected_on || '',
-            email_address: c.email_address || '',
-            profile_url: c.url || c.profile_url || '',
-            crm_status: c.crmStatus || 'Ninguno',
-            crm_notes: c.crmNotes || '',
-            custom_name: c.customName || '',
-            custom_company: c.customCompany || '',
-            custom_position: c.customPosition || '',
-            crm_date: c.crmDate || new Date().toISOString(),
-            msg_count: c.msg_count || 0,
-            latest_message: c.latest_message || '',
-            raw_data: c
-          }));
-          await supabase.from('contacts').upsert(chunk, { onConflict: 'contact_id, user_id' });
+    // Save imported data to Supabase
+    if (currentUser) {
+      setLoading(true, 95);
+      console.log("Upserting contacts to Supabase...");
+      
+      const chunkSize = 200;
+      for (let i = 0; i < S.contacts.length; i += chunkSize) {
+        const chunk = S.contacts.slice(i, i + chunkSize).map(c => ({
+          contact_id: c.url || c.profile_url || String(c.id),
+          user_id: currentUser.id,
+          first_name: c.first_name || '',
+          last_name: c.last_name || '',
+          company: c.company || '',
+          position: c.position || '',
+          connected_on: c.connected_on || '',
+          email_address: c.email_address || '',
+          profile_url: c.url || c.profile_url || '',
+          crm_status: c.crmStatus || 'Ninguno',
+          crm_notes: c.crmNotes || '',
+          custom_name: c.customName || '',
+          custom_company: c.customCompany || '',
+          custom_position: c.customPosition || '',
+          crm_date: c.crmDate || new Date().toISOString(),
+          msg_count: c.msg_count || 0,
+          latest_message: c.latest_message || '',
+          raw_data: c
+        }));
+        
+        try {
+          const { error } = await supabase.from('contacts').upsert(chunk, { onConflict: 'contact_id, user_id' });
+          if (error) console.error("Error upserting chunk:", error);
+        } catch(e) {
+          console.error("Exception upserting chunk:", e);
         }
-      } catch(e) {
-        console.warn("[Supabase Sync Error]", e);
       }
     }
     
     finalize();
-    saveLocalVault();
-    navigate('network');
-    
-    if (typeof showToast === 'function') {
-      showToast(`¡ZIP procesado con éxito! ${S.contacts.length.toLocaleString()} contactos cargados en tu Bóveda.`, '🎉');
-    }
   }
 
   if (errors.length > 0) {
@@ -2173,31 +2166,28 @@ async function processZip(zip) {
   const files = Object.keys(zip.files);
   let foundAny = false;
 
-  // 1. Profile (Multilingüe: Profile.csv, Perfil.csv, etc.)
-  const profileFile = files.find(f => /profile|perfil/i.test(f) && f.endsWith('.csv'));
+  // 1. Profile
+  const profileFile = files.find(f => f.includes('Profile.csv'));
   if (profileFile) {
     const txt = await zip.files[profileFile].async('string');
     const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true, quoteChar: '"', escapeChar: '"' });
     if (parsed.data[0]) {
-      const r = parsed.data[0];
-      const fn = r['First Name'] || r['First name'] || r['first_name'] || r['Nombre'] || r['Nome'] || r['Prénom'] || '';
-      const ln = r['Last Name'] || r['Last name'] || r['last_name'] || r['Apellido'] || r['Sobrenome'] || r['Nom'] || '';
-      S.ownerName = `${fn} ${ln}`.trim();
+      S.ownerName = `${parsed.data[0]['First Name']||''} ${parsed.data[0]['Last Name']||''}`.trim();
       S.loadedParts.profile = true;
       foundAny = true;
     }
   }
 
-  // 2. Positions (Multilingüe: Positions.csv, Posiciones.csv, Cargos.csv, etc.)
-  const posFile = files.find(f => /position|posicion|cargo|puesto/i.test(f) && f.endsWith('.csv'));
+  // 2. Positions
+  const posFile = files.find(f => f.includes('Positions.csv'));
   if (posFile) {
     const txt = await zip.files[posFile].async('string');
     const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true, quoteChar: '"', escapeChar: '"' });
     const parsedPos = parsed.data.map(r => ({
-      company: r['Company Name'] || r['Company name'] || r['Empresa'] || r['Nombre de la empresa'] || '',
-      title: r['Title'] || r['title'] || r['Cargo'] || r['Puesto'] || r['Título'] || '',
-      start: r['Started On'] || r['Started on'] || r['Fecha de inicio'] || '',
-      end: r['Finished On'] || r['Finished on'] || r['Fecha de finalización'] || ''
+      company: r['Company Name'] || '',
+      title: r['Title'] || '',
+      start: r['Started On'] || '',
+      end: r['Finished On'] || ''
     })).filter(p => p.company || p.title);
     
     if (parsedPos.length > 0) {
@@ -2207,12 +2197,12 @@ async function processZip(zip) {
     }
   }
 
-  // 3. Connections (Multilingüe: Connections.csv, Conexiones.csv, Contactos.csv, Conexões.csv, etc.)
-  const connFile = files.find(f => /connect|conexi|contacto|contact/i.test(f) && f.endsWith('.csv'));
+  // 3. Connections
+  const connFile = files.find(f => /connection/i.test(f) && f.endsWith('.csv'));
   if (connFile) {
     const txt = await zip.files[connFile].async('string');
     const lines = txt.split('\n');
-    const startIdx = lines.findIndex(l => /first name|nombre|nome|prénom/i.test(l));
+    const startIdx = lines.findIndex(l => l.includes('First Name'));
     if (startIdx !== -1) {
       const csvData = lines.slice(startIdx).join('\n');
       const parsed = Papa.parse(csvData, { header: true, skipEmptyLines: true, quoteChar: '"', escapeChar: '"' });
@@ -2221,18 +2211,11 @@ async function processZip(zip) {
         S.loadedParts.connections = true;
         foundAny = true;
       }
-    } else {
-      const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true, quoteChar: '"', escapeChar: '"' });
-      if (parsed.data && parsed.data.length > 0) {
-        buildContacts(parsed.data);
-        S.loadedParts.connections = true;
-        foundAny = true;
-      }
     }
   }
 
-  // 4. Messages (Multilingüe: messages.csv, mensajes.csv, etc.)
-  const msgFile = files.find(f => /message|mensaje/i.test(f) && f.endsWith('.csv'));
+  // 4. Messages
+  const msgFile = files.find(f => f === 'messages.csv' || f.endsWith('/messages.csv'));
   if (msgFile) {
     const txt = await zip.files[msgFile].async('string');
     const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true, quoteChar: '"', escapeChar: '"' });
@@ -2655,75 +2638,6 @@ async function loadDemoData(autoNavigate = true) {
       const coords = getCoordsForContact(country, company, position);
       const yearsAgo = connectedYearsAgo(item.connected_on);
 
-      // Si es demo pública anónima, encriptar/anonimizar nombres y empresas
-      let displayName = item.full_name;
-      let displayCompany = company;
-      if (anonymize) {
-        const first = (item.first_name || 'Ejecutivo')[0] + '.';
-        displayName = `${first} ${(item.last_name || 'Contacto')}`;
-        displayCompany = company ? `${company.slice(0, 3)}*** Corp` : 'Empresa Privada';
-      }
-
-      return {
-        id: item.id || idx + 1,
-        name: displayName,
-        first_name: item.first_name,
-        last_name: item.last_name,
-        company: displayCompany,
-        position: position,
-        originalName: item.full_name,
-        originalCompany: item.company,
-        originalPosition: item.position,
-        url: anonymize ? '#' : item.url,
-        email: anonymize ? 'contacto_privado@boveda.com' : (item.email || ""),
-        connectedOn: item.connected_on,
-        connectedYearsAgo: yearsAgo,
-        country: coords.country,
-        city: coords.city,
-        lat: coords.lat,
-        lng: coords.lng,
-        jobStatus: item.job_status || "🟢 Vigente Confirmado",
-        hierarchy: inferHierarchy(position),
-        sector: inferSector(position, company),
-        score: 0,
-        audit_status: item.audit_status || null,
-        msg_count: item.msg_count || 0,
-        last_msg_date: item.last_msg_date || null,
-        last_msg_snippet: item.last_msg_snippet || null,
-        sentiment: item.sentiment || null,
-        intent: item.intent || null,
-        direction: item.direction || null,
-        sentiment_detail: item.sentiment_detail || null,
-        is_they_selling: !!item.is_they_selling,
-        is_friendly: !!item.is_friendly
-      };
-    });
-  setLoading(true, 50);
-  try {
-    const res = await fetch("enriched_connections.json");
-    if (!res.ok) throw new Error("No se pudo cargar enriched_connections.json");
-    const data = await res.json();
-    
-    S.ownerName = "Antonio Gutiérrez";
-    S.positions = [
-      { company: "Clip", title: "Acquisition Executive | BDR | Sales", start: "Jul 2021", end: "Mar 2025" },
-      { company: "Fiserv", title: "Business Sales Consultant", start: "Mar 2024", end: "Oct 2025" },
-      { company: "LATAM Commerce", title: "Co-creador", start: "Mar 2024", end: "Actual" },
-      { company: "ENFA DELIVERY", title: "Ejecutivo de desarrollo del negocio", start: "Jul 2020", end: "Oct 2020" },
-      { company: "JTI (Japan Tobacco International)", title: "Ejecutivo Desarrollador Canal HORECA", start: "Jul 2018", end: "Dec 2019" },
-      { company: "Conagra Brands", title: "Ejecutivo de ventas", start: "2016", end: "2018" }
-    ];
-
-    S.contacts = data.map(item => {
-      const company = item.company_zip || item.company || "";
-      const position = item.position_current || item.position || "";
-      let country = item.country;
-      if (!country || country === "Desconocido") {
-        country = inferCountry(item.email || "", company, position);
-      }
-      const coords = getCoordsForContact(country, company, position);
-      const yearsAgo = connectedYearsAgo(item.connected_on);
-
       return {
         // --- Identidad ---
         id: item.id,
@@ -2779,7 +2693,7 @@ async function loadDemoData(autoNavigate = true) {
   }
 }
 
-window.addEventListener('DOMContentLoaded', async () => {
+window.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
     document.body.classList.add('light');
@@ -2788,20 +2702,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     if (icon) icon.textContent = '🌙';
     if (text) text.textContent = 'Modo Oscuro';
   }
-
-  try {
-    const restored = await restoreLocalVault();
-    if (restored && S.contacts && S.contacts.length > 0) {
-      finalize();
-      navigate('network');
-      console.log("[Bootstrap] Bóveda guardada restaurada:", S.contacts.length);
-      return;
-    }
-  } catch(e) {
-    console.warn("[Bootstrap] Error en restoreLocalVault:", e);
-  }
-
-  console.log("[Bootstrap] Cargando datos por defecto enriched_connections.json...");
   loadDemoData(true);
 });
 
@@ -3652,27 +3552,7 @@ function sortTable(col) {
 function renderNetworkTable(showMore = false) {
   const tbody = document.getElementById('net-tbody');
   const empty = document.getElementById('net-empty');
-  if (!filteredContacts.length) { 
-    tbody.innerHTML=''; 
-    if (filterVerifiedOnly) {
-      empty.innerHTML = `
-        <div style="padding: 24px; text-align: center; background: rgba(99, 102, 241, 0.08); border: 1px dashed var(--accent, #6366f1); border-radius: 12px; margin: 12px 0;">
-          <div style="font-size: 28px; margin-bottom: 8px;">✨</div>
-          <div style="font-weight: 800; font-size: 15px; color: var(--accent-light, #a5b4fc); margin-bottom: 6px;">Aún no has verificado contactos en vivo con HarvestAPI</div>
-          <div style="font-size: 12px; color: var(--muted2, #94a3b8); max-width: 480px; margin: 0 auto 16px auto; line-height: 1.5;">
-            El filtro "Solo Verificados Live" resalta los contactos cuyo puesto actual 2026 ha sido confirmado directamente en LinkedIn sin riesgo de baneo.
-          </div>
-          <button onclick="enrichTopIcpHarvestModal()" class="mini-btn primary" style="padding: 10px 20px; font-weight: 800; font-size: 12px; background: linear-gradient(135deg, #10b981, #6366f1); border: none; color: white; cursor:pointer;">
-            ⚡ Verificar los Top 10 Decisores C-Level Ahora ($0.50 USD)
-          </button>
-        </div>
-      `;
-    } else {
-      empty.innerHTML = 'No hay contactos que coincidan con los filtros.';
-    }
-    empty.style.display='block'; 
-    return; 
-  }
+  if (!filteredContacts.length) { tbody.innerHTML=''; empty.style.display='block'; return; }
   empty.style.display = 'none';
 
   if (!showMore) {
@@ -7166,79 +7046,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 </script>
-
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!-- MODAL DE ENRIQUECIMIENTO Y VERIFICACIÓN EN VIVO HARVESTAPI (BYOK)      -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<div id="harvest-modal-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(15,23,42,0.85); backdrop-filter:blur(8px); z-index:10000; align-items:center; justify-content:center;">
-  <div style="background:var(--card-bg, #1e293b); border:1px solid var(--accent, #6366f1); border-radius:16px; width:90%; max-width:540px; padding:28px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); font-family:'Outfit', sans-serif; color:var(--text, #f8fafc);">
-    
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:14px;">
-      <div style="display:flex; align-items:center; gap:10px;">
-        <span style="font-size:24px;">✨</span>
-        <div>
-          <div style="font-weight:800; font-size:18px; color:var(--accent-light, #a5b4fc);">Verificación Live (HarvestAPI)</div>
-          <div style="font-size:12px; color:var(--muted2, #94a3b8);">Actualización de perfiles en vivo en LinkedIn sin baneo</div>
-        </div>
-      </div>
-      <button onclick="closeHarvestModal()" style="background:none; border:none; color:var(--muted2,#94a3b8); font-size:20px; cursor:pointer; padding:4px;">✕</button>
-    </div>
-
-    <!-- Step 1: Summary & Key Input -->
-    <div id="harvest-step-setup">
-      <div style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); border-radius:10px; padding:14px; margin-bottom:18px; font-size:13px; line-height:1.5;">
-        <div style="font-weight:700; color:#c084fc; margin-bottom:4px;" id="harvest-selected-count-title">🎯 10 Contactos Seleccionados para Verificación</div>
-        <div style="color:#cbd5e1; font-size:12px;" id="harvest-selected-summary">Se consultarán los perfiles en tiempo real para verificar si han cambiado de empresa o cargo en 2026.</div>
-      </div>
-
-      <div style="margin-bottom:16px;">
-        <label style="display:block; font-weight:700; font-size:12px; margin-bottom:6px; color:#f1f5f9;">
-          🔑 HarvestAPI Key (Modelo BYOK — Bring Your Own Key):
-        </label>
-        <input type="password" id="harvest-api-key-input" placeholder="harv_live_xxxxxxxxxxxxxxxx" style="width:100%; padding:10px 14px; background:var(--bg, #0f172a); border:1px solid var(--border, #334155); border-radius:8px; color:#fff; font-family:'JetBrains Mono', monospace; font-size:12px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:6px; font-size:11px;">
-          <span style="color:#94a3b8;" id="harvest-cost-est">Costo estimado: $0.50 USD ($0.05 / perfil)</span>
-          <a href="https://harvestapi.net/?ref=radarcomercial" target="_blank" style="color:#60a5fa; text-decoration:none; font-weight:600;">¿No tienes clave? Obtener créditos ↗</a>
-        </div>
-      </div>
-
-      <div style="display:flex; gap:10px; margin-top:24px;">
-        <button onclick="closeHarvestModal()" class="mini-btn" style="flex:1; padding:10px; font-weight:700;">Cancelar</button>
-        <button onclick="startHarvestEnrichmentProcess()" class="mini-btn primary" style="flex:2; padding:10px; font-weight:800; background:linear-gradient(135deg, #10b981, #6366f1); border:none; color:white;">
-          ⚡ Iniciar Verificación en Vivo
-        </button>
-      </div>
-    </div>
-
-    <!-- Step 2: Live Progress -->
-    <div id="harvest-step-progress" style="display:none; text-align:center; padding:20px 0;">
-      <div style="font-size:36px; margin-bottom:12px; animation: pulse 1.5s infinite;">🔄</div>
-      <div style="font-weight:700; font-size:15px; color:#f8fafc; margin-bottom:6px;" id="harvest-progress-status">Consultando HarvestAPI en tiempo real...</div>
-      <div style="font-size:12px; color:#94a3b8; margin-bottom:18px;" id="harvest-progress-sub">Verificando perfil 1 de 10...</div>
-
-      <div style="width:100%; height:10px; background:#334155; border-radius:10px; overflow:hidden; margin-bottom:16px;">
-        <div id="harvest-progress-bar" style="width:0%; height:100%; background:linear-gradient(90deg, #10b981, #6366f1); transition:width 0.3s ease;"></div>
-      </div>
-    </div>
-
-    <!-- Step 3: Success Result -->
-    <div id="harvest-step-success" style="display:none; text-align:center; padding:10px 0;">
-      <div style="font-size:42px; margin-bottom:10px;">🎉</div>
-      <div style="font-weight:800; font-size:17px; color:#34d399; margin-bottom:6px;">¡Verificación Completada con Éxito!</div>
-      <div style="font-size:13px; color:#cbd5e1; margin-bottom:20px; line-height:1.5;" id="harvest-success-details">
-        Se han verificado los cargos y empresas en vivo de tus contactos. Todos cuentan ahora con sello verde <strong style="color:#34d399;">✨ Verificado Live</strong>.
-      </div>
-
-      <div style="display:flex; gap:10px;">
-        <button onclick="finishHarvestEnrichment(false)" class="mini-btn" style="flex:1; padding:10px; font-weight:700;">Volver a Mi Red</button>
-        <button onclick="finishHarvestEnrichment(true)" class="mini-btn primary" style="flex:2; padding:10px; font-weight:800; background:var(--green); border:none; color:white;">
-          ✨ Ver Solo Verificados Live
-        </button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
 </body>
 </html>
