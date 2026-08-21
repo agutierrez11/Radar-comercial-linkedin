@@ -809,6 +809,9 @@
     <span>📥</span> <span>Restaurar</span>
   </button>
   <input type="file" id="vault-input" accept=".json" onchange="importVaultJson(this.files[0])" style="display:none">
+  <button class="mini-btn" onclick="openVaultSelectorModal()" style="margin-left:8px; display:flex; align-items:center; gap:6px; padding:5px 12px; font-weight:700; font-family:'Outfit', sans-serif; background:linear-gradient(135deg, rgba(79,70,229,0.2), rgba(124,58,237,0.2)); border:1px solid rgba(99,102,241,0.5); color:#fff; border-radius:20px; cursor:pointer;" id="current-vault-btn">
+    <span id="vault-status-icon">🔐</span> <span id="current-vault-label">Bóveda: Antonio Gutiérrez</span> <span style="font-size:10px; color:#a5b4fc;">▾</span>
+  </button>
   <div class="privacy-badge" style="margin-left:12px">
     <div class="privacy-dot"></div>
     <span>100% LOCAL</span>
@@ -7088,5 +7091,91 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 </script>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- MODAL: SELECTOR MULTI-TENANT DE BÓVEDAS (ANTONIO VS CLIENTE)           -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<div id="vault-selector-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(15,23,42,0.85); backdrop-filter:blur(10px); z-index:99999; justify-content:center; align-items:center; padding:20px;">
+  <div style="background:var(--surface, #1e293b); border:1px solid var(--border, #334155); border-radius:16px; width:100%; max-width:540px; padding:26px; box-shadow:var(--shadow-md, 0 10px 30px rgba(0,0,0,0.5)); color:var(--text, #f8fafc);">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
+      <h3 style="margin:0; font-size:18px; font-weight:800; display:flex; align-items:center; gap:8px;">
+        <span>🔐</span> Selector de Bóvedas Privadas
+      </h3>
+      <button onclick="closeVaultSelectorModal()" style="background:none; border:none; color:#94a3b8; font-size:20px; cursor:pointer;">✕</button>
+    </div>
+
+    <p style="font-size:12px; color:#cbd5e1; margin-bottom:20px; line-height:1.5;">
+      Selecciona la sesión activa. Cada bóveda mantiene sus propios contactos, mapas y notas 100% aislados en almacenamiento local Zero-Knowledge.
+    </p>
+
+    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
+      <!-- Opción 1: Antonio Gutiérrez -->
+      <div onclick="switchToVault('antonio')" style="display:flex; align-items:center; justify-content:space-between; padding:14px; background:rgba(79,70,229,0.12); border:1px solid rgba(99,102,241,0.4); border-radius:12px; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.borderColor='#818cf8'" onmouseout="this.style.borderColor='rgba(99,102,241,0.4)'">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="font-size:24px;">👤</div>
+          <div>
+            <div style="font-weight:700; font-size:14px; color:#fff;">Bóveda Antonio Gutiérrez</div>
+            <div style="font-size:11px; color:#a5b4fc;">Base Curada Master • 3,039 contactos • Clip / Fiserv / LATAM Commerce</div>
+          </div>
+        </div>
+        <span style="font-size:11px; padding:4px 8px; background:var(--accent, #4f46e5); color:#fff; border-radius:12px; font-weight:700;">Master</span>
+      </div>
+
+      <!-- Opción 2: Giovanna / Cliente BYOD -->
+      <div onclick="switchToVault('giovanna')" style="display:flex; align-items:center; justify-content:space-between; padding:14px; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); border-radius:12px; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.borderColor='#34d399'" onmouseout="this.style.borderColor='rgba(16,185,129,0.3)'">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="font-size:24px;">👩‍💼</div>
+          <div>
+            <div style="font-weight:700; font-size:14px; color:#fff;">Bóveda Privada Cliente (Giovanna / BYOD)</div>
+            <div style="font-size:11px; color:#6ee7b7;">Bóveda Aislada • Tu propio ZIP de LinkedIn • 100% Privado</div>
+          </div>
+        </div>
+        <span style="font-size:11px; padding:4px 8px; background:var(--green, #10b981); color:#fff; border-radius:12px; font-weight:700;">Cliente</span>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:10px;">
+      <button onclick="closeVaultSelectorModal()" class="mini-btn" style="flex:1; padding:10px; font-weight:700;">Cerrar</button>
+      <button onclick="switchToVault('giovanna'); closeVaultSelectorModal(); navigate('upload');" class="mini-btn primary" style="flex:2; padding:10px; font-weight:800; background:linear-gradient(135deg, #10b981, #6366f1); border:none; color:white;">
+        📤 Cargar Nuevo ZIP en Bóveda Cliente
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openVaultSelectorModal() {
+  document.getElementById('vault-selector-modal').style.display = 'flex';
+}
+function closeVaultSelectorModal() {
+  document.getElementById('vault-selector-modal').style.display = 'none';
+}
+async function switchToVault(vaultType) {
+  if (vaultType === 'antonio') {
+    localStorage.setItem('active_vault_type', 'antonio');
+    document.getElementById('current-vault-label').innerText = "Bóveda: Antonio Gutiérrez";
+    await loadDemoData(true);
+    closeVaultSelectorModal();
+    if (typeof showToast === 'function') showToast("Cargada Bóveda Master: Antonio Gutiérrez (3,039 contactos)", "👤");
+  } else if (vaultType === 'giovanna') {
+    localStorage.setItem('active_vault_type', 'giovanna');
+    document.getElementById('current-vault-label').innerText = "Bóveda: Cliente Privado (Giovanna)";
+    const restored = await restoreLocalVault();
+    if (!restored || !S.contacts || S.contacts.length === 0) {
+      S.contacts = [];
+      S.positions = [];
+      S.messages = [];
+      S.ownerName = "Bóveda Cliente Privado";
+      navigate('upload');
+    } else {
+      finalize();
+      navigate('network');
+    }
+    closeVaultSelectorModal();
+    if (typeof showToast === 'function') showToast("Cargada Bóveda Privada Cliente", "👩‍💼");
+  }
+}
+</script>
+
 </body>
 </html>
