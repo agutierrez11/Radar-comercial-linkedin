@@ -3053,9 +3053,38 @@ function applyNetworkFilters() {
   const country = document.getElementById('net-country').value;
   const hier = document.getElementById('net-hier').value;
   const sector = document.getElementById('net-sector').value;
+
+  // Si hay búsqueda por texto manual, identificar contactos con mensajes coincidentes en S.messages
+  let msgMatchedUrlsAndNames = new Set();
+  if (search && S.messages && S.messages.length > 0) {
+    S.messages.forEach(m => {
+      const text = norm(getRowVal(m, 'CONTENT') || getRowVal(m, 'TEXT') || getRowVal(m, 'CONTENT BODY') || m.content || m.text || '');
+      if (text.includes(search)) {
+        const fromName = getRowVal(m, 'FROM') || getRowVal(m, 'SENDER_NAME') || m.from || '';
+        const toName = getRowVal(m, 'TO') || getRowVal(m, 'RECIPIENT_NAME') || m.to || '';
+        const fromUrl = m.SENDER_URL || m.FROM_URL || '';
+        const toUrl = m.TO_URL || m.RECIPIENT_URL || '';
+        if (fromName) msgMatchedUrlsAndNames.add(norm(fromName));
+        if (toName) msgMatchedUrlsAndNames.add(norm(toName));
+        if (fromUrl) msgMatchedUrlsAndNames.add(fromUrl);
+        if (toUrl) msgMatchedUrlsAndNames.add(toUrl);
+      }
+    });
+  }
+
   filteredContacts = S.contacts.filter(c => {
     if ((c.crmStatus === 'Descartado' || c.discardedFromPurge) && !S.showDiscarded) return false;
-    if (search && !norm(c.name).includes(search) && !norm(c.position).includes(search) && !norm(c.company).includes(search)) return false;
+    if (search) {
+      const nameNorm = norm(c.name || '');
+      const posNorm = norm(c.position || '');
+      const compNorm = norm(c.company || '');
+      const notesNorm = norm(c.crmNotes || '');
+      const postNorm = norm(c.last_post_text || '');
+      
+      const inBasic = nameNorm.includes(search) || posNorm.includes(search) || compNorm.includes(search) || notesNorm.includes(search) || postNorm.includes(search);
+      const inMsg = msgMatchedUrlsAndNames.has(nameNorm) || (c.url && msgMatchedUrlsAndNames.has(c.url));
+      if (!inBasic && !inMsg) return false;
+    }
     if (country && c.country !== country) return false;
     if (hier && c.hierarchy !== hier) return false;
     if (sector && c.sector !== sector) return false;
