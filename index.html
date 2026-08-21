@@ -6569,7 +6569,7 @@ function processCopilotNaturalLanguage(query) {
     isMessageSearch = true;
     matchedTopics = words;
 
-    const matchingNamesAndUrls = new Set();
+    const matchingMessageSenders = [];
     if (S.messages && S.messages.length > 0) {
       S.messages.forEach(m => {
         const text = norm(getRowVal(m, 'CONTENT') || getRowVal(m, 'TEXT') || getRowVal(m, 'CONTENT BODY') || m.content || m.text || '');
@@ -6578,16 +6578,29 @@ function processCopilotNaturalLanguage(query) {
           const toName = getRowVal(m, 'TO') || getRowVal(m, 'RECIPIENT_NAME') || m.to || '';
           const fromUrl = m.SENDER_URL || m.FROM_URL || '';
           const toUrl = m.TO_URL || m.RECIPIENT_URL || '';
-          if (fromName) matchingNamesAndUrls.add(norm(fromName));
-          if (toName) matchingNamesAndUrls.add(norm(toName));
-          if (fromUrl) matchingNamesAndUrls.add(fromUrl);
-          if (toUrl) matchingNamesAndUrls.add(toUrl);
+          if (fromName) matchingMessageSenders.push({ name: norm(fromName), url: fromUrl });
+          if (toName) matchingMessageSenders.push({ name: norm(toName), url: toUrl });
         }
       });
     }
 
     matches = activeBase.filter(c => {
-      if (matchingNamesAndUrls.has(norm(c.name)) || (c.url && matchingNamesAndUrls.has(c.url))) return true;
+      const cNameNorm = norm(c.name || '');
+      const cParts = cNameNorm.split(' ').filter(p => p.length > 2);
+
+      const matchesDm = matchingMessageSenders.some(s => {
+        if (c.url && s.url && c.url === s.url) return true;
+        if (s.name === cNameNorm) return true;
+        if (s.name.includes(cNameNorm) || cNameNorm.includes(s.name)) return true;
+        if (cParts.length > 0 && s.name.includes(cParts[0])) {
+          if (cParts.length === 1) return true;
+          return cParts.slice(1).some(p => s.name.includes(p));
+        }
+        return false;
+      });
+
+      if (matchesDm) return true;
+
       const notes = norm(c.crmNotes || '');
       const post = norm(c.last_post_text || '');
       return words.some(w => notes.includes(w) || post.includes(w));
