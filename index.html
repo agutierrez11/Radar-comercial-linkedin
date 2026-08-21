@@ -2898,10 +2898,11 @@ function navigate(sec) {
 // HEADER KPIs
 // ═══════════════════════════════════════════════════════════════════════
 function renderHeader() {
-  const total = S.contacts.length;
-  const clevel = S.contacts.filter(c => c.hierarchy === 'C-Level').length;
-  const countries = new Set(S.contacts.filter(c => c.country !== 'Desconocido').map(c => c.country)).size;
-  const classa = S.contacts.filter(c => c.score >= 60).length;
+  const activeContacts = S.contacts.filter(c => c.crmStatus !== 'Descartado' && !c.discardedFromPurge);
+  const total = activeContacts.length;
+  const clevel = activeContacts.filter(c => c.hierarchy === 'C-Level').length;
+  const countries = new Set(activeContacts.filter(c => c.country !== 'Desconocido').map(c => c.country)).size;
+  const classa = activeContacts.filter(c => c.score >= 60).length;
   document.getElementById('hkpi-total').textContent = total.toLocaleString();
   document.getElementById('hkpi-clevel').textContent = clevel;
   document.getElementById('hkpi-countries').textContent = countries;
@@ -3087,13 +3088,14 @@ function updateKpiHighlights() {
 }
 
 function renderNetwork() {
-  const total = S.contacts.length;
+  const activeContacts = S.contacts.filter(c => c.crmStatus !== 'Descartado' && !c.discardedFromPurge);
+  const total = activeContacts.length;
   const hier = {};
-  S.contacts.forEach(c => { hier[c.hierarchy] = (hier[c.hierarchy]||0)+1; });
+  activeContacts.forEach(c => { hier[c.hierarchy] = (hier[c.hierarchy]||0)+1; });
   const countries = {};
-  S.contacts.forEach(c => { countries[c.country] = (countries[c.country]||0)+1; });
+  activeContacts.forEach(c => { countries[c.country] = (countries[c.country]||0)+1; });
   const identified = Object.entries(countries).filter(([k]) => k !== 'Desconocido').sort((a,b)=>b[1]-a[1]);
-  const classa = S.contacts.filter(c=>c.score>=60).length;
+  const classa = activeContacts.filter(c=>c.score>=60).length;
 
   const activeF = S.activeKpiFilter || 'total';
   document.getElementById('net-kpis').innerHTML = `
