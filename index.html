@@ -1844,13 +1844,7 @@ function toggleTheme() {
 document.addEventListener('DOMContentLoaded', () => {
   // Carga automática de los datos enriquecidos y navega directo a Mi Red
   if (typeof loadDemoData === 'function') {
-    const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('demo') === '1' || urlParams.get('autodemo') === 'true') {
-    loadDemoData(true, true);
-  } else {
-    // Por defecto para nuevos usuarios: pantalla limpia de carga (Zero-Knowledge)
-    navigate('upload');
-  }
+    loadDemoData(true);
   }
 });
 
@@ -2617,22 +2611,24 @@ function resetAllData() {
   }
 }
 
-async function loadDemoData(autoNavigate = true, anonymize = false) {
-  S.isDemoMode = anonymize;
+async function loadDemoData(autoNavigate = true) {
   setLoading(true, 50);
   try {
     const res = await fetch("enriched_connections.json");
     if (!res.ok) throw new Error("No se pudo cargar enriched_connections.json");
     const data = await res.json();
     
-    S.ownerName = anonymize ? "Usuario Demo (Ejemplo)" : "Antonio Gutiérrez";
+    S.ownerName = "Antonio Gutiérrez";
     S.positions = [
-      { company: anonymize ? "Empresa SaaS Fintech" : "Clip", title: "Acquisition Executive | BDR | Sales", start: "Jul 2021", end: "Mar 2025" },
-      { company: anonymize ? "Empresa Procesamiento Pagos" : "Fiserv", title: "Business Sales Consultant", start: "Mar 2024", end: "Oct 2025" },
-      { company: anonymize ? "Comunidad E-Commerce" : "LATAM Commerce", title: "Co-creador", start: "Mar 2024", end: "Actual" }
+      { company: "Clip", title: "Acquisition Executive | BDR | Sales", start: "Jul 2021", end: "Mar 2025" },
+      { company: "Fiserv", title: "Business Sales Consultant", start: "Mar 2024", end: "Oct 2025" },
+      { company: "LATAM Commerce", title: "Co-creador", start: "Mar 2024", end: "Actual" },
+      { company: "ENFA DELIVERY", title: "Ejecutivo de desarrollo del negocio", start: "Jul 2020", end: "Oct 2020" },
+      { company: "JTI (Japan Tobacco International)", title: "Ejecutivo Desarrollador Canal HORECA", start: "Jul 2018", end: "Dec 2019" },
+      { company: "Conagra Brands", title: "Ejecutivo de ventas", start: "2016", end: "2018" }
     ];
 
-    S.contacts = data.map((item, idx) => {
+    S.contacts = data.map(item => {
       const company = item.company_zip || item.company || "";
       const position = item.position_current || item.position || "";
       let country = item.country;
@@ -2775,13 +2771,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (icon) icon.textContent = '🌙';
     if (text) text.textContent = 'Modo Oscuro';
   }
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('demo') === '1' || urlParams.get('autodemo') === 'true') {
-    loadDemoData(true, true);
-  } else {
-    // Por defecto para nuevos usuarios: pantalla limpia de carga (Zero-Knowledge)
-    navigate('upload');
-  }
+  loadDemoData(true);
 });
 
 let gisMap = null;
