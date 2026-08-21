@@ -6807,7 +6807,7 @@ async function saveLocalVault() {
       messages: S.messages || []
     };
     store.put(dataToSave, 'current_vault');
-    console.log(`[AutoVault] Bóveda guardada automáticamente (${S.contacts.length} contactos).`);
+    console.log(`[AutoVault] Bóveda guardada automáticamente (${S.contacts.length} contactos, ${S.messages ? S.messages.length : 0} mensajes).`);
   } catch (err) {
     console.warn('[AutoVault Save Error]', err);
   }
@@ -6829,8 +6829,9 @@ async function restoreLocalVault() {
           S.messages = val.messages || [];
           S.ownerName = val.ownerName || '';
           S.loadedParts.connections = true;
+          S.loadedParts.messages = S.messages.length > 0;
           S.isDemoLoaded = false;
-          console.log(`[AutoVault] Bóveda restaurada desde IndexedDB (${S.contacts.length} contactos).`);
+          console.log(`[AutoVault] Bóveda restaurada desde IndexedDB (${S.contacts.length} contactos, ${S.messages.length} mensajes).`);
           resolve(true);
         } else {
           resolve(false);
