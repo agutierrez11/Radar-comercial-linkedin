@@ -6589,14 +6589,41 @@ function processCopilotNaturalLanguage(query) {
   let matchedTopics = [];
   let isMessageSearch = false;
 
-  const stopWords = new Set(['de', 'la', 'el', 'los', 'las', 'un', 'una', 'con', 'para', 'por', 'que', 'en', 'contactos', 'mensajes', 'hable', 'hable', 'comparti', 'comparti', 'buscame', 'buscame', 'agrupame', 'agrupame', 'muestrame', 'muestrame', 'sobre', 'donde', 'dime', 'quienes']);
-  const words = query.toLowerCase().split(/\s+/).map(w => norm(w)).filter(w => w.length > 2 && !stopWords.has(w));
+  const commandStopWords = new Set([
+    'filtrame', 'filtra', 'filtrar', 'buscame', 'busca', 'buscar', 'muestrame', 'muestra', 'mostrar',
+    'agrupame', 'agrupa', 'agrupar', 'dame', 'dar', 'encuentra', 'encontrar', 'contactos', 'contacto',
+    'personas', 'persona', 'gente', 'mensajes', 'mensaje', 'chats', 'chat', 'conversaciones', 'conversacion',
+    'dms', 'dm', 'hable', 'hablé', 'hablado', 'hablamos', 'comparti', 'compartí', 'compartido', 'dije',
+    'sobre', 'donde', 'dime', 'quienes', 'quien', 'con', 'los', 'las', 'les', 'que', 'del', 'por', 'para',
+    'una', 'uno', 'unos', 'unas', 'mis', 'sus', 'como', 'cuando', 'este', 'esta', 'estos', 'estas'
+  ]);
 
-  const isDmQuery = q.includes('hable') || q.includes('hablé') || q.includes('mensajes') || q.includes('dms') || q.includes('chat') || q.includes('comparti') || q.includes('dije');
+  let rawWords = query.toLowerCase().split(/\s+/).map(w => norm(w)).filter(w => w.length > 2 && !commandStopWords.has(w));
+
+  // Mapa de sinónimos para términos de productos y negocios (ej. cubrebocas <-> kn95 <-> mascarillas)
+  const synonymMap = {
+    'cubrebocas': ['cubrebocas', 'cubre', 'boca', 'bocas', 'kn95', 'n95', 'mascarilla', 'mascarillas', 'tapabocas', 'barbijo'],
+    'cubre': ['cubrebocas', 'cubre', 'boca', 'bocas', 'kn95', 'n95', 'mascarilla', 'mascarillas', 'tapabocas', 'barbijo'],
+    'bocas': ['cubrebocas', 'cubre', 'boca', 'bocas', 'kn95', 'n95', 'mascarilla', 'mascarillas', 'tapabocas', 'barbijo'],
+    'kn95': ['kn95', 'n95', 'cubrebocas', 'mascarilla', 'mascarillas'],
+    'cotizacion': ['cotizacion', 'cotizame', 'precio', 'presupuesto', 'costo', 'tarifa', 'cuanto'],
+    'reunion': ['reunion', 'demo', 'llamada', 'agenda', 'meeting', 'cita', 'conferencia'],
+    'propuesta': ['propuesta', 'oferta', 'proyecto', 'presentacion', 'pitch', 'deck']
+  };
+
+  let expandedTokens = new Set(rawWords);
+  rawWords.forEach(w => {
+    if (synonymMap[w]) {
+      synonymMap[w].forEach(syn => expandedTokens.add(syn));
+    }
+  });
+  const words = Array.from(expandedTokens);
+
+  const isDmQuery = q.includes('hable') || q.includes('hablé') || q.includes('mensajes') || q.includes('dms') || q.includes('chat') || q.includes('comparti') || q.includes('dije') || rawWords.length > 0;
 
   if (isDmQuery || (words.length > 0 && S.messages && S.messages.length > 0)) {
     isMessageSearch = true;
-    matchedTopics = words;
+    matchedTopics = rawWords.length > 0 ? rawWords : words;
 
     const matchingMessageSenders = [];
     if (S.messages && S.messages.length > 0) {
