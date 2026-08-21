@@ -2678,7 +2678,13 @@ async function loadDemoData(autoNavigate = true) {
       };
     });
 
-    S.contacts.forEach(c => { c.score = scoreContact(c); });
+    S.contacts.forEach(c => {
+      // Auto-aplicar la depuración histórica de los 1,584 contactos purgados
+      if (isPurgeCandidate(c)) {
+        c.discardedFromPurge = true;
+      }
+      c.score = scoreContact(c);
+    });
     icpContacts = S.contacts.filter(c => c.score >= 40).sort((a,b) => b.score - a.score);
     S.loadedParts = { connections: true, positions: true, messages: true, profile: true };
 
@@ -3013,7 +3019,13 @@ function renderProfile() {
 function selectActivePosition(idx) {
   S.activePositionIndex = idx;
   // Recalculate scores based on the new active position
-  S.contacts.forEach(c => { c.score = scoreContact(c); });
+  S.contacts.forEach(c => {
+      // Auto-aplicar la depuración histórica de los 1,584 contactos purgados
+      if (isPurgeCandidate(c)) {
+        c.discardedFromPurge = true;
+      }
+      c.score = scoreContact(c);
+    });
   icpContacts = S.contacts.filter(c => c.score >= 40).sort((a,b) => b.score - a.score);
   
   // Re-render and update UI
@@ -3654,7 +3666,13 @@ function renderNetworkTable(showMore = false) {
   document.getElementById(id).addEventListener('input', renderICPTable);
 });
 document.getElementById('icp-override').addEventListener('input', () => {
-  S.contacts.forEach(c => { c.score = scoreContact(c); });
+  S.contacts.forEach(c => {
+      // Auto-aplicar la depuración histórica de los 1,584 contactos purgados
+      if (isPurgeCandidate(c)) {
+        c.discardedFromPurge = true;
+      }
+      c.score = scoreContact(c);
+    });
   icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
   renderNetwork();
   renderHeader();
@@ -5339,7 +5357,13 @@ function loadCrmState() {
   });
 
   // Re-evaluar scores e ICPs por si cambiaron de cargo/empresa
-  S.contacts.forEach(c => { c.score = scoreContact(c); });
+  S.contacts.forEach(c => {
+      // Auto-aplicar la depuración histórica de los 1,584 contactos purgados
+      if (isPurgeCandidate(c)) {
+        c.discardedFromPurge = true;
+      }
+      c.score = scoreContact(c);
+    });
   icpContacts = S.contacts.filter(c => c.score >= 60 && c.crmStatus !== 'Descartado' && !c.discardedFromPurge).sort((a,b) => b.score - a.score);
   
   const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno' && c.crmStatus !== 'Descartado').length;
