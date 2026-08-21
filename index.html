@@ -2419,14 +2419,19 @@ function buildContacts(rows) {
     incomingKeys.add(key);
 
     if (existingMap.has(key)) {
-      // ACTUALIZACIÓN INTELIGENTE (Smart Re-Sync): Actualiza puesto/empresa pero PRESERVA notas y estado CRM del usuario
+      // ACTUALIZACIÓN INTELIGENTE (Smart Re-Sync): Preserva los roles enriquecidos en vivo (HarvestAPI/Apify), notas CRM, descartados y scoring ICP
       const existing = existingMap.get(key);
-      existing.company = company || existing.company;
-      existing.position = position || existing.position;
+      
+      // Si el contacto ya fue enriquecido previamente con Apify/HarvestAPI, MANTIENE su rol y empresa actualizados de 2026 sin regresionar al CSV antiguo
+      if (!existing.harvest_enriched && !existing.last_updated_apify) {
+        existing.company = company || existing.company;
+        existing.position = position || existing.position;
+        existing.hierarchy = hierarchy;
+        existing.sector = sector;
+      }
+
       existing.email = email || existing.email;
       existing.connectedOn = connectedOn || existing.connectedOn;
-      existing.hierarchy = hierarchy;
-      existing.sector = sector;
       existing.disconnectedFromLinkedin = false;
       mergedContacts.push(existing);
     } else {
