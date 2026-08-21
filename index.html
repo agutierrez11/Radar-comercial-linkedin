@@ -2675,7 +2675,13 @@ async function loadDemoData(autoNavigate = true) {
         direction: item.direction || null,
         sentiment_detail: item.sentiment_detail || null,
         is_they_selling: !!item.is_they_selling,
-        is_friendly: !!item.is_friendly
+        is_friendly: !!item.is_friendly,
+        // --- Decisiones de Purga y CRM Preservadas de Bóveda ---
+        crmStatus: item.crmStatus || 'Ninguno',
+        discardedFromPurge: !!item.discardedFromPurge,
+        whitelisted: !!item.whitelisted,
+        crmNotes: item.crmNotes || '',
+        harvest_enriched: !!item.harvest_enriched
       };
     });
 
