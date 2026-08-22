@@ -7181,6 +7181,48 @@ function updateStatus() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════
+// SUPABASE MULTI-TENANT ENGINE (user_vault_contacts, user_contact_rules, user_zip_files)
+// ═══════════════════════════════════════════════════════════════════════
+async function syncToSupabaseVault(userId, contactsList) {
+  if (!window.supabase) return;
+  const supaClient = window.supabase.createClient('https://yzpqclsfpktmsvjczroq.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6cHFjbHNmcGt0bXN2amN6cm9xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNDEyNjYsImV4cCI6MjA4MjcxNzI2Nn0.3IT-ciZIlWLd_kY0li4q6BSboUq8zkcd5PRyZSF8wyY');
+  
+  try {
+    const payload = contactsList.slice(0, 100).map(c => ({
+      user_id: userId || 'antonio',
+      contact_id: c.id || c.url,
+      name: c.name,
+      company: c.company,
+      position: c.position,
+      score: c.engagement_score || 80,
+      metadata: { city: c.city, country: c.country, dms_sent: c.dms_sent, dms_replied: c.dms_replied }
+    }));
+    await supaClient.from('user_vault_contacts').upsert(payload);
+    console.log(`[Supabase] Synced ${payload.length} contacts to user_vault_contacts for user ${userId}.`);
+  } catch (err) {
+    console.warn('[Supabase Sync Warning]', err.message);
+  }
+}
+
+async function syncZipFileToSupabase(userId, filename, recordsArray, headersArray) {
+  if (!window.supabase) return;
+  const supaClient = window.supabase.createClient('https://yzpqclsfpktmsvjczroq.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6cHFjbHNmcGt0bXN2amN6cm9xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNDEyNjYsImV4cCI6MjA4MjcxNzI2Nn0.3IT-ciZIlWLd_kY0li4q6BSboUq8zkcd5PRyZSF8wyY');
+  
+  try {
+    await supaClient.from('user_zip_files').upsert([{
+      user_id: userId || 'antonio',
+      filename: filename,
+      records: recordsArray,
+      headers: headersArray,
+      uploaded_at: new Date().toISOString()
+    }]);
+    console.log(`[Supabase Raw Storage] Saved ${filename} (${recordsArray.length} records) to user_zip_files.`);
+  } catch (err) {
+    console.warn('[Supabase ZIP Storage Warning]', err.message);
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
 // 1. SISTEMA DE AUTENTICACIÓN DINÁMICA MULTI-TENANT & BÓVEDAS AISLADAS
 // ═══════════════════════════════════════════════════════════════════════
 window.currentAuthUser = { id: 'antonio', name: 'Antonio (Master)', isMaster: true };
