@@ -810,9 +810,6 @@
     <span>📥</span> <span>Restaurar</span>
   </button>
   <input type="file" id="vault-input" accept=".json" onchange="importVaultJson(this.files[0])" style="display:none">
-  <button class="mini-btn" onclick="openVaultSelectorModal()" style="margin-left:8px; display:flex; align-items:center; gap:6px; padding:5px 12px; font-weight:700; font-family:'Outfit', sans-serif; background:linear-gradient(135deg, rgba(79,70,229,0.2), rgba(124,58,237,0.2)); border:1px solid rgba(99,102,241,0.5); color:#fff; border-radius:20px; cursor:pointer;" id="current-vault-btn">
-    <span id="vault-status-icon">🔐</span> <span id="current-vault-label">Bóveda: Antonio Gutiérrez</span> <span style="font-size:10px; color:#a5b4fc;">▾</span>
-  </button>
   <div class="privacy-badge" style="margin-left:12px">
     <div class="privacy-dot"></div>
     <span>100% LOCAL</span>
@@ -1766,7 +1763,7 @@ const S = {
       id: 'no_name',
       label: 'Nombre incompleto (<4 chars)',
       on: true,
-      fn: c => c.name.length < 4
+      fn: c => !c || !(c.name || c.full_name) || (typeof c.name === 'string' && c.name.trim().length < 4)
     },
     {
       id: 'generic_pos',
@@ -1776,17 +1773,21 @@ const S = {
     },
     {
       // Contacto frío real: viejo + sin DMs + sin valor estratégico
-      // Se rescata si: tiene cargo de valor (C-Level/Director), o tiene email
+      // Se rescata si: tiene cargo de valor, sector alineado, o tiene email
       id: 'old_cold',
-      label: 'Conexión >3 años, sin DMs y sin valor estratégico',
+      label: 'Conexión >4 años, sin DMs y sin valor estratégico',
       on: true,
       fn: c => {
         if (c.msg_count && c.msg_count > 0) return false;           // 🛡️ tiene historial de DMs
-        if (c.connectedYearsAgo <= 3) return false;                  // 🛡️ es relativamente reciente (<= 3 años)
+        if (c.connectedYearsAgo <= 4) return false;                  // 🛡️ es relativamente reciente
         if (c.hierarchy === 'C-Level') return false;                 // 🛡️ C-Level = pipeline potencial
         if (c.hierarchy === 'Director') return false;                // 🛡️ Director = influencia
+        if (c.hierarchy === 'Gerente') return false;                 // 🛡️ Gerente = decisor operativo
         if (c.email) return false;                                   // 🛡️ tiene email = dato valioso
-        return true; // Candidato real a purga (~411 contactos)
+        if (c.sector === 'Fintech/Pagos') return false;             // 🛡️ tu industria actual
+        if (c.sector === 'SaaS/Tech') return false;                 // 🛡️ ecosistema aliado
+        if (c.sector === 'Retail/eCommerce') return false;          // 🛡️ clientes potenciales
+        return true; // No hay escudo: candidato real a purga
       }
     },
     {
@@ -1836,11 +1837,17 @@ function toggleTheme() {
 }
 
 (function() {
-  // Forzar Modo Claro por defecto por instrucción directa
-  document.body.classList.add('light');
-  localStorage.setItem('theme', 'light');
+  // Forzar Dark Theme por defecto (Slate 950)
+  document.body.classList.remove('light');
+  localStorage.setItem('theme', 'dark');
 })();
 
+document.addEventListener('DOMContentLoaded', () => {
+  // Carga automática de los datos enriquecidos y navega directo a Mi Red
+  if (typeof loadDemoData === 'function') {
+    loadDemoData(true);
+  }
+});
 
 // ═══════════════════════════════════════════════════════════════════════
 // HELPERS
@@ -2030,21 +2037,35 @@ function countryFlag(c) {
 }
 
 function connectedYearsAgo(str) {
-  if (!str) return 0;
+  if (!str) return 99;
   try {
-    const s = String(str).trim();
-    if (!s) return 0;
-    const m = s.match(/\b(19\d{2}|20\d{2})\b/);
-    if (m) {
-      const yr = parseInt(m[1]);
-      return Math.max(0, 2026 - yr);
+    // Formato ISO: "2021-07-15" o "2021-07"
+    if (/^\d{4}-\d{2}/.test(str.trim())) {
+      const d = new Date(str.trim());
+      if (!isNaN(d)) return (Date.now() - d) / (365.25 * 86400 * 1000);
     }
-    const d = new Date(s);
-    if (!isNaN(d.getTime())) {
-      return Math.max(0, (Date.now() - d.getTime()) / (365.25 * 86400 * 1000));
+    // Formato LinkedIn export: "15 Jul 2021" o "Jul 2021"
+    const months = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+    const parts = str.trim().split(' ');
+    if (parts.length === 3) {
+      const d = new Date(parseInt(parts[2]), months[parts[1].toLowerCase().slice(0,3)], parseInt(parts[0]));
+      if (!isNaN(d)) return (Date.now() - d) / (365.25 * 86400 * 1000);
+    }
+    if (parts.length === 2) {
+      const monthKey = parts[0].toLowerCase().slice(0,3);
+      const year = parseInt(parts[1]);
+      if (months[monthKey] !== undefined && !isNaN(year)) {
+        const d = new Date(year, months[monthKey], 1);
+        return (Date.now() - d) / (365.25 * 86400 * 1000);
+      }
+    }
+    // Último recurso: solo año
+    if (/^\d{4}$/.test(str.trim())) {
+      const d = new Date(parseInt(str.trim()), 0, 1);
+      return (Date.now() - d) / (365.25 * 86400 * 1000);
     }
   } catch(e) {}
-  return 0;
+  return 99;
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -2599,13 +2620,11 @@ async function loadDemoData(autoNavigate = true) {
       const res = await fetch("enriched_connections.json");
       if (res.ok) data = await res.json();
     } catch(err) {
-      console.warn("[LoadDemo] Fetch falló (protocolo file:// o sin red), usando respaldo en memoria:", err);
+      console.warn("[LoadDemo] Fetch fallback to master_data.js:", err);
     }
-
     if (!data && window.__MASTER_DATA__) {
       data = window.__MASTER_DATA__;
     }
-
     if (!data) throw new Error("No se pudo cargar la base de datos.");
     
     S.ownerName = "Antonio Gutiérrez";
@@ -2664,19 +2683,11 @@ async function loadDemoData(autoNavigate = true) {
         direction: item.direction || null,
         sentiment_detail: item.sentiment_detail || null,
         is_they_selling: !!item.is_they_selling,
-        is_friendly: !!item.is_friendly,
-        // --- Decisiones de Purga y CRM Preservadas de Bóveda ---
-        crmStatus: item.crmStatus || 'Ninguno',
-        discardedFromPurge: !!item.discardedFromPurge,
-        whitelisted: !!item.whitelisted,
-        crmNotes: item.crmNotes || '',
-        harvest_enriched: !!item.harvest_enriched
+        is_friendly: !!item.is_friendly
       };
     });
 
-    S.contacts.forEach(c => {
-      c.score = scoreContact(c);
-    });
+    S.contacts.forEach(c => { c.score = scoreContact(c); });
     icpContacts = S.contacts.filter(c => c.score >= 40).sort((a,b) => b.score - a.score);
     S.loadedParts = { connections: true, positions: true, messages: true, profile: true };
 
@@ -2691,33 +2702,16 @@ async function loadDemoData(autoNavigate = true) {
   }
 }
 
-window.addEventListener('DOMContentLoaded', async () => {
-  // Modo Claro activado por defecto
-  document.body.classList.add('light');
-  localStorage.setItem('theme', 'light');
-  const themeIcon = document.getElementById('theme-icon');
-  const themeText = document.getElementById('theme-text');
-  if (themeIcon) themeIcon.textContent = '🌙';
-  if (themeText) themeText.textContent = 'Modo Oscuro';
-
-  // Garantizar que por defecto SIEMPRE cargue la Bóveda Master de Antonio Gutiérrez
-  localStorage.setItem('active_vault_type', 'antonio');
-  
-  try {
-    const restored = await restoreLocalVault();
-    if (restored && S.contacts && S.contacts.length > 0) {
-      finalize();
-      navigate('network');
-      setLoading(false);
-      return;
-    }
-  } catch(e) {}
-
-  // Carga automática garantizada de la Bóveda Master de Antonio y navegación directa a Mi Red
-  await loadDemoData(true);
-  finalize();
-  navigate('network');
-  setLoading(false);
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light');
+    const icon = document.getElementById('theme-icon');
+    const text = document.getElementById('theme-text');
+    if (icon) icon.textContent = '🌙';
+    if (text) text.textContent = 'Modo Oscuro';
+  }
+  loadDemoData(true);
 });
 
 let gisMap = null;
@@ -3028,9 +3022,7 @@ function renderProfile() {
 function selectActivePosition(idx) {
   S.activePositionIndex = idx;
   // Recalculate scores based on the new active position
-  S.contacts.forEach(c => {
-      c.score = scoreContact(c);
-    });
+  S.contacts.forEach(c => { c.score = scoreContact(c); });
   icpContacts = S.contacts.filter(c => c.score >= 40).sort((a,b) => b.score - a.score);
   
   // Re-render and update UI
@@ -3671,13 +3663,7 @@ function renderNetworkTable(showMore = false) {
   document.getElementById(id).addEventListener('input', renderICPTable);
 });
 document.getElementById('icp-override').addEventListener('input', () => {
-  S.contacts.forEach(c => {
-      // Auto-aplicar la depuración histórica de los 1,584 contactos purgados
-      if (isPurgeCandidate(c)) {
-        c.discardedFromPurge = true;
-      }
-      c.score = scoreContact(c);
-    });
+  S.contacts.forEach(c => { c.score = scoreContact(c); });
   icpContacts = S.contacts.filter(c => c.score >= 60).sort((a,b) => b.score - a.score);
   renderNetwork();
   renderHeader();
@@ -5362,13 +5348,7 @@ function loadCrmState() {
   });
 
   // Re-evaluar scores e ICPs por si cambiaron de cargo/empresa
-  S.contacts.forEach(c => {
-      // Auto-aplicar la depuración histórica de los 1,584 contactos purgados
-      if (isPurgeCandidate(c)) {
-        c.discardedFromPurge = true;
-      }
-      c.score = scoreContact(c);
-    });
+  S.contacts.forEach(c => { c.score = scoreContact(c); });
   icpContacts = S.contacts.filter(c => c.score >= 60 && c.crmStatus !== 'Descartado' && !c.discardedFromPurge).sort((a,b) => b.score - a.score);
   
   const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno' && c.crmStatus !== 'Descartado').length;
@@ -6493,14 +6473,8 @@ async function enrichSingleContactLive(contactId) {
   const c = S.contacts.find(x => String(x.id) === String(contactId));
   if (!c) return;
 
-  const harvestKey = localStorage.getItem('radar_harvest_key') || localStorage.getItem('harvest_api_key') || '';
-
-  if (!harvestKey) {
-    showToast(`🔑 Para raspado en tiempo real activa tu HarvestAPI Key en BYOK. Ejecutando verificación en modo demo...`, '💡');
-    if (typeof openAIConfigModal === 'function') openAIConfigModal();
-  } else {
-    showToast(`⚡ Consultando perfil en vivo de ${c.name} en HarvestAPI...`, '⚡');
-  }
+  const harvestKey = localStorage.getItem('radar_harvest_key') || '';
+  showToast(`⚡ Verificando y actualizando perfil de ${c.name}...`, '⚡');
 
   try {
     if (harvestKey) {
@@ -7028,122 +7002,52 @@ function importVaultJson(file) {
   reader.readAsText(file);
 }
 
-</script>
-
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!-- MODAL: SELECTOR MULTI-TENANT DE BÓVEDAS (ANTONIO VS CLIENTE)           -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<div id="vault-selector-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(15,23,42,0.85); backdrop-filter:blur(10px); z-index:99999; justify-content:center; align-items:center; padding:20px;">
-  <div style="background:var(--surface, #1e293b); border:1px solid var(--border, #334155); border-radius:16px; width:100%; max-width:540px; padding:26px; box-shadow:var(--shadow-md, 0 10px 30px rgba(0,0,0,0.5)); color:var(--text, #f8fafc);">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
-      <h3 style="margin:0; font-size:18px; font-weight:800; display:flex; align-items:center; gap:8px;">
-        <span>🔐</span> Selector de Bóvedas Privadas
-      </h3>
-      <button onclick="closeVaultSelectorModal()" style="background:none; border:none; color:#94a3b8; font-size:20px; cursor:pointer;">✕</button>
-    </div>
-
-    <p style="font-size:12px; color:#cbd5e1; margin-bottom:20px; line-height:1.5;">
-      Selecciona la sesión activa. Cada bóveda mantiene sus propios contactos, mapas y notas 100% aislados en almacenamiento local Zero-Knowledge.
-    </p>
-
-    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
-      <!-- Opción 1: Antonio Gutiérrez -->
-      <div onclick="switchToVault('antonio')" style="display:flex; align-items:center; justify-content:space-between; padding:14px; background:rgba(79,70,229,0.12); border:1px solid rgba(99,102,241,0.4); border-radius:12px; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.borderColor='#818cf8'" onmouseout="this.style.borderColor='rgba(99,102,241,0.4)'">
-        <div style="display:flex; align-items:center; gap:12px;">
-          <div style="font-size:24px;">👤</div>
-          <div>
-            <div style="font-weight:700; font-size:14px; color:#fff;">Bóveda Antonio Gutiérrez</div>
-            <div style="font-size:11px; color:#a5b4fc;">Base Curada Master • 2,953 contactos activos • Clip / Fiserv / LATAM Commerce</div>
-          </div>
-        </div>
-        <span style="font-size:11px; padding:4px 8px; background:var(--accent, #4f46e5); color:#fff; border-radius:12px; font-weight:700;">Master</span>
-      </div>
-
-      <!-- Opción 2: Giovanna / Cliente BYOD -->
-      <div onclick="switchToVault('giovanna')" style="display:flex; align-items:center; justify-content:space-between; padding:14px; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); border-radius:12px; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.borderColor='#34d399'" onmouseout="this.style.borderColor='rgba(16,185,129,0.3)'">
-        <div style="display:flex; align-items:center; gap:12px;">
-          <div style="font-size:24px;">👩‍💼</div>
-          <div>
-            <div style="font-weight:700; font-size:14px; color:#fff;">Bóveda Privada Cliente (Giovanna / BYOD)</div>
-            <div style="font-size:11px; color:#6ee7b7;">Bóveda Aislada • Tu propio ZIP de LinkedIn • 100% Privado</div>
-          </div>
-        </div>
-        <span style="font-size:11px; padding:4px 8px; background:var(--green, #10b981); color:#fff; border-radius:12px; font-weight:700;">Cliente</span>
-      </div>
-    </div>
-
-    <div style="display:flex; gap:10px;">
-      <button onclick="closeVaultSelectorModal()" class="mini-btn" style="flex:1; padding:10px; font-weight:700;">Cerrar</button>
-      <button onclick="switchToVault('giovanna', true);" class="mini-btn primary" style="flex:2; padding:10px; font-weight:800; background:linear-gradient(135deg, #10b981, #6366f1); border:none; color:white; cursor:pointer;">
-        📤 Cargar Nuevo ZIP en Bóveda Cliente
-      </button>
-    </div>
-  </div>
-</div>
-
-<script>
-function openVaultSelectorModal() {
-  document.getElementById('vault-selector-modal').style.display = 'flex';
-}
-function closeVaultSelectorModal() {
-  document.getElementById('vault-selector-modal').style.display = 'none';
-}
-async function switchToVault(vaultType, triggerFilePicker = false) {
-  if (vaultType === 'antonio') {
-    localStorage.setItem('active_vault_type', 'antonio');
-    document.getElementById('current-vault-label').innerText = "Bóveda: Antonio Gutiérrez";
-    await loadDemoData(true);
-    closeVaultSelectorModal();
-    if (typeof showToast === 'function') showToast("Cargada Bóveda Master: Antonio Gutiérrez (3,039 contactos)", "👤");
-  } else if (vaultType === 'giovanna') {
-    localStorage.setItem('active_vault_type', 'giovanna');
-    document.getElementById('current-vault-label').innerText = "Bóveda: Cliente Privado (Giovanna)";
-    
-    // Si viene del botón explícito de cargar ZIP o la bóveda está vacía
-    if (triggerFilePicker) {
-      S.contacts = [];
-      S.positions = [];
-      S.messages = [];
-      S.loadedParts = { connections: false, positions: false, messages: false, profile: false };
-      S.ownerName = "Bóveda Cliente Privado";
-      closeVaultSelectorModal();
-      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-      document.getElementById('sec-upload').classList.add('active');
-      document.querySelector('[data-section="upload"]').classList.add('active');
-      setTimeout(() => {
-        const inp = document.getElementById('zip-input');
-        if (inp) inp.click();
-      }, 150);
-      if (typeof showToast === 'function') showToast("Selecciona tu archivo ZIP de LinkedIn", "📂");
+document.addEventListener('DOMContentLoaded', async () => {
+  // 1. Intentar auto-restaurar la bóveda privada guardada en el navegador (IndexedDB)
+  try {
+    const restored = await restoreLocalVault();
+    if (restored) {
+      updateStatus();
+      finalize();
+      if (typeof switchTab === 'function') switchTab('network');
+      const toast = document.getElementById('ui-toast');
+      if (toast) {
+        toast.innerHTML = `<span>⚡</span> <span>Bóveda local restaurada automáticamente (${S.contacts.length.toLocaleString()} contactos).</span>`;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3500);
+      }
       return;
     }
-
-    const restored = await restoreLocalVault();
-    if (!restored || !S.contacts || S.contacts.length === 0) {
-      S.contacts = [];
-      S.positions = [];
-      S.messages = [];
-      S.loadedParts = { connections: false, positions: false, messages: false, profile: false };
-      S.ownerName = "Bóveda Cliente Privado";
-      closeVaultSelectorModal();
-      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-      document.getElementById('sec-upload').classList.add('active');
-      document.querySelector('[data-section="upload"]').classList.add('active');
-      setTimeout(() => {
-        const inp = document.getElementById('zip-input');
-        if (inp) inp.click();
-      }, 150);
-    } else {
-      finalize();
-      navigate('network');
-      closeVaultSelectorModal();
-    }
-    if (typeof showToast === 'function') showToast("Cargada Bóveda Privada Cliente", "👩‍💼");
+  } catch (err) {
+    console.warn("[AutoVault Bootstrap]", err);
   }
-}
-</script>
 
+  // 2. Si no hay bóveda local, cargar datos iniciales de Supabase / Demo
+  if (!window.supabase) {
+    console.warn("[Bootstrap] SDK Supabase no encontrado, esperando...");
+  }
+  
+  if (window.__supabaseDataPromise) {
+    window.__supabaseDataPromise
+      .then(function(contacts) {
+        if (contacts && contacts.length > 0) {
+          console.log("[Bootstrap] Datos listos:", contacts.length, "contactos");
+          if (typeof processData === 'function') {
+            processData(contacts);
+          } else if (typeof finalize === 'function') {
+            S.contacts = contacts;
+            S.loadedParts.connections = true;
+            updateStatus();
+            finalize();
+            if (typeof switchTab === 'function') switchTab('network');
+          }
+        }
+      })
+      .catch(function(e) {
+        console.error("[Bootstrap] Error al cargar datos:", e);
+      });
+  }
+});
+</script>
 </body>
 </html>
