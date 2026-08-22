@@ -1853,8 +1853,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // HELPERS
 // ═══════════════════════════════════════════════════════════════════════
 function getDisplayName(c, idx) {
-  if (!S.isDemoMode) return c.name || 'Sin nombre';
-  const prefix = c.name ? c.name[0].toUpperCase() : 'X';
+  if (!c) return 'Sin nombre';
+  const name = c.name || c.full_name || c.originalName || (c.first_name ? (c.first_name + ' ' + (c.last_name || '')).trim() : '') || 'Sin nombre';
+  if (!S.isDemoMode) return name;
+  const prefix = name !== 'Sin nombre' ? name[0].toUpperCase() : 'X';
   return `Contacto ${prefix}*** (Anonimizado)`;
 }
 
@@ -6896,7 +6898,12 @@ async function restoreLocalVault() {
       request.onsuccess = (e) => {
         const val = e.target.result;
         if (val && val.contacts && val.contacts.length > 0) {
-          S.contacts = val.contacts;
+          S.contacts = val.contacts.map(c => {
+            if (!c.name || c.name === 'Sin nombre') {
+              c.name = c.full_name || c.originalName || (c.first_name ? (c.first_name + ' ' + (c.last_name || '')).trim() : '') || c.name || 'Sin nombre';
+            }
+            return c;
+          });
           S.positions = val.positions || [];
           S.messages = val.messages || [];
           S.ownerName = val.ownerName || '';
