@@ -2696,7 +2696,9 @@ window.addEventListener('DOMContentLoaded', async () => {
     if (text) text.textContent = 'Modo Oscuro';
   }
 
-  // 1. Restaurar Bóveda Local si el usuario ya subió su ZIP antes en esta computadora
+  // Garantizar que por defecto SIEMPRE cargue la Bóveda Master de Antonio Gutiérrez
+  localStorage.setItem('active_vault_type', 'antonio');
+  
   try {
     const restored = await restoreLocalVault();
     if (restored && S.contacts && S.contacts.length > 0) {
@@ -2706,8 +2708,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
   } catch(e) {}
 
-  // 2. Parámetros de URL: si trae ?demo=1 o ?owner=antonio, carga la demo
-  // Carga automática por defecto de la base para Antonio Gutierrez (3,039 contactos)
+  // Carga automática garantizada de la Bóveda Master de Antonio (2,953 contactos activos)
   await loadDemoData(true);
   setLoading(false);
 });
@@ -7091,7 +7092,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <div style="font-size:24px;">👤</div>
           <div>
             <div style="font-weight:700; font-size:14px; color:#fff;">Bóveda Antonio Gutiérrez</div>
-            <div style="font-size:11px; color:#a5b4fc;">Base Curada Master • 3,039 contactos • Clip / Fiserv / LATAM Commerce</div>
+            <div style="font-size:11px; color:#a5b4fc;">Base Curada Master • 2,953 contactos activos • Clip / Fiserv / LATAM Commerce</div>
           </div>
         </div>
         <span style="font-size:11px; padding:4px 8px; background:var(--accent, #4f46e5); color:#fff; border-radius:12px; font-weight:700;">Master</span>
