@@ -7021,52 +7021,6 @@ function importVaultJson(file) {
   reader.readAsText(file);
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-  // 1. Intentar auto-restaurar la bóveda privada guardada en el navegador (IndexedDB)
-  try {
-    const restored = await restoreLocalVault();
-    if (restored) {
-      updateStatus();
-      finalize();
-      if (typeof switchTab === 'function') switchTab('network');
-      const toast = document.getElementById('ui-toast');
-      if (toast) {
-        toast.innerHTML = `<span>⚡</span> <span>Bóveda local restaurada automáticamente (${S.contacts.length.toLocaleString()} contactos).</span>`;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 3500);
-      }
-      return;
-    }
-  } catch (err) {
-    console.warn("[AutoVault Bootstrap]", err);
-  }
-
-  // 2. Si no hay bóveda local, cargar datos iniciales de Supabase / Demo
-  if (!window.supabase) {
-    console.warn("[Bootstrap] SDK Supabase no encontrado, esperando...");
-  }
-  
-  if (window.__supabaseDataPromise) {
-    window.__supabaseDataPromise
-      .then(function(contacts) {
-        if (contacts && contacts.length > 0) {
-          console.log("[Bootstrap] Datos listos:", contacts.length, "contactos");
-          if (typeof processData === 'function') {
-            processData(contacts);
-          } else if (typeof finalize === 'function') {
-            S.contacts = contacts;
-            S.loadedParts.connections = true;
-            updateStatus();
-            finalize();
-            if (typeof switchTab === 'function') switchTab('network');
-          }
-        }
-      })
-      .catch(function(e) {
-        console.error("[Bootstrap] Error al cargar datos:", e);
-      });
-  }
-});
 </script>
 
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
