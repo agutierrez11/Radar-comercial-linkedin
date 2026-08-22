@@ -1362,7 +1362,8 @@
           <div class="section-sub">Grafo relacional de conocimientos y puentes de confianza B2B (Inspirado en Arthur Perret)</div>
         </div>
         <div style="display:flex; gap:8px;">
-          <button class="mini-btn primary" onclick="resetCosmaGraphView()">🔄 Reset view (R)</button>
+          <button class="mini-btn primary" onclick="exportCosmaCsvPackage()" style="font-size:11px; padding:6px 12px; font-weight:700;">💾 Exportar Cosma CSVs (nodes.csv & links.csv)</button>
+          <button class="mini-btn" onclick="resetCosmaGraphView()">🔄 Reset view (R)</button>
         </div>
       </div>
 
@@ -7192,6 +7193,67 @@ function exportVaultJson() {
     toast.innerHTML = `<span>💾</span> <span>Bóveda exportada exitosamente (${S.contacts.length} contactos).</span>`;
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 3500);
+  }
+}
+
+function exportCosmaCsvPackage() {
+  if (!S.contacts || S.contacts.length === 0) {
+    alert("⚠️ No hay contactos cargados para generar el paquete de Cosma.");
+    return;
+  }
+
+  // 1. Generate nodes.csv (Official Cosma specification)
+  let nodesCsv = "id,title,types,keywords,description,begin,end,url\n";
+  const masterId = "antonio_master";
+  nodesCsv += `"${masterId}","${S.ownerName || 'Antonio (Master Vault)'}","Person","Master Vault C-Level","Bóveda principal de prospección cálida.","2026-01-01","",""\n`;
+
+  S.contacts.forEach((c, idx) => {
+    const id = `c_${idx}_${(c.name || 'user').replace(/[^a-z0-9]/gi, '_').toLowerCase()}`;
+    const title = `${c.name || 'Contacto'} - ${c.position || 'C-Level'} @ ${c.company || 'Cuenta Target'}`;
+    const isWarm = c.engagement_score > 80 || (c.dms_replied && c.dms_replied > 0);
+    const types = isWarm ? "WarmBridge" : (c.position && c.position.toLowerCase().includes('ceo') ? "Person" : "Organization");
+    const keywords = `${c.company || 'Target'},${c.country || 'Global'},${isWarm ? 'Warm Bridge' : 'Network'}`;
+    const desc = `Cargo: ${c.position || 'N/A'} | Empresa: ${c.company || 'N/A'} | Ubicación: ${c.city || 'N/A'}, ${c.country || 'N/A'} | DMs: ${c.dms_sent || 0}`;
+    const date = c.connectedOn || "2022-01-01";
+    const url = c.url || "";
+
+    nodesCsv += `"${id}","${title.replace(/"/g, '""')}","${types}","${keywords}","${desc.replace(/"/g, '""')}","${date}","","${url}"\n`;
+  });
+
+  // 2. Generate links.csv (Official Cosma specification)
+  let linksCsv = "source,target,type,label\n";
+  S.contacts.forEach((c, idx) => {
+    const id = `c_${idx}_${(c.name || 'user').replace(/[^a-z0-9]/gi, '_').toLowerCase()}`;
+    const isWarm = c.engagement_score > 80 || (c.dms_replied && c.dms_replied > 0);
+    const type = isWarm ? "warm_introduction" : "dm_engagement";
+    const label = `Score ${c.engagement_score || 85} (${c.dms_sent || 5} DMs)`;
+    linksCsv += `"${masterId}","${id}","${type}","${label}"\n`;
+  });
+
+  // Download nodes.csv
+  const blobNodes = new Blob([nodesCsv], { type: 'text/csv;charset=utf-8;' });
+  const urlNodes = URL.createObjectURL(blobNodes);
+  const aNodes = document.createElement('a');
+  aNodes.href = urlNodes;
+  aNodes.download = 'nodes.csv';
+  document.body.appendChild(aNodes);
+  aNodes.click();
+  aNodes.remove();
+
+  // Download links.csv
+  setTimeout(() => {
+    const blobLinks = new Blob([linksCsv], { type: 'text/csv;charset=utf-8;' });
+    const urlLinks = URL.createObjectURL(blobLinks);
+    const aLinks = document.createElement('a');
+    aLinks.href = urlLinks;
+    aLinks.download = 'links.csv';
+    document.body.appendChild(aLinks);
+    aLinks.click();
+    aLinks.remove();
+  }, 500);
+
+  if (typeof showToast === 'function') {
+    showToast('💾 Paquete Cosma oficial exportado (nodes.csv y links.csv). Listo para cosma modelize.', '📦');
   }
 }
 
