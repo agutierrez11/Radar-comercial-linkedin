@@ -2016,6 +2016,40 @@ function norm(t) {
   return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').trim();
 }
 
+function getCanonicalCountry(c) {
+  if (!c || c === 'Desconocido' || c === 'Unknown' || c === 'null') return 'Desconocido';
+  const raw = String(c).trim();
+  const clean = norm(raw);
+  
+  if (clean.includes('mexico')) return 'México';
+  if (clean.includes('espana') || clean.includes('spain')) return 'España';
+  if (clean.includes('estados unidos') || clean === 'usa' || clean.includes('united states') || clean === 'us') return 'Estados Unidos';
+  if (clean.includes('colombia')) return 'Colombia';
+  if (clean.includes('argentina')) return 'Argentina';
+  if (clean.includes('chile')) return 'Chile';
+  if (clean.includes('peru')) return 'Perú';
+  if (clean.includes('ecuador')) return 'Ecuador';
+  if (clean.includes('uruguay')) return 'Uruguay';
+  if (clean.includes('reino unido') || clean.includes('united kingdom') || clean === 'uk') return 'Reino Unido';
+  if (clean.includes('alemania') || clean.includes('germany')) return 'Alemania';
+  if (clean.includes('francia') || clean.includes('france')) return 'Francia';
+  if (clean.includes('italia') || clean.includes('italy')) return 'Italia';
+  if (clean.includes('paises bajos') || clean.includes('netherlands') || clean.includes('holanda')) return 'Países Bajos';
+  if (clean.includes('suecia') || clean.includes('sweden')) return 'Suecia';
+  if (clean.includes('suiza') || clean.includes('switzerland')) return 'Suiza';
+  if (clean.includes('portugal')) return 'Portugal';
+  if (clean.includes('irlanda') || clean.includes('ireland')) return 'Irlanda';
+  if (clean.includes('belgica') || clean.includes('belgium')) return 'Bélgica';
+  if (clean.includes('austria')) return 'Austria';
+  if (clean.includes('polonia') || clean.includes('poland')) return 'Polonia';
+  if (clean.includes('marruecos') || clean.includes('morocco')) return 'Marruecos';
+  if (clean.includes('turquia') || clean.includes('turkey')) return 'Turquía';
+  if (clean.includes('brasil') || clean.includes('brazil')) return 'Brasil';
+  if (clean.includes('venezuela')) return 'Venezuela';
+
+  return raw;
+}
+
 function showToast(msg, icon = '✨') {
   let toast = document.getElementById('ui-toast');
   if (!toast) {
@@ -3152,7 +3186,7 @@ function selectActivePosition(idx) {
 // NETWORK
 // ═══════════════════════════════════════════════════════════════════════
 function populateFilters() {
-  const countries = [...new Set(S.contacts.map(c => c.country))].sort();
+  const countries = [...new Set(S.contacts.map(c => getCanonicalCountry(c.country)))].sort();
   const sel = document.getElementById('net-country');
   sel.innerHTML = '<option value="">🌎 Todos los países</option>';
   countries.forEach(c => {
@@ -3300,7 +3334,11 @@ function renderNetwork() {
   const hier = {};
   activeContacts.forEach(c => { hier[c.hierarchy] = (hier[c.hierarchy]||0)+1; });
   const countries = {};
-  activeContacts.forEach(c => { countries[c.country] = (countries[c.country]||0)+1; });
+  activeContacts.forEach(c => { 
+    const canonical = getCanonicalCountry(c.country);
+    c.country = canonical;
+    countries[canonical] = (countries[canonical]||0)+1; 
+  });
   const identified = Object.entries(countries).filter(([k]) => k !== 'Desconocido').sort((a,b)=>b[1]-a[1]);
   const classa = activeContacts.filter(c=>c.score>=60).length;
 
