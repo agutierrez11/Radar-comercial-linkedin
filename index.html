@@ -1351,59 +1351,105 @@
       </div>
     </div>
 
-    <!-- ── COSMA OTLETOSPHERE GRAPH VIEW ── -->
+    <!-- ── COSMA OTLETOSPHERE GRAPH VIEW (Arthur Perret Replica) ── -->
     <div class="section" id="sec-graph">
       <div class="section-header">
         <div>
-          <div class="section-title">🕸️ Red de Grafos (Cosma Otletosphere View)</div>
-          <div class="section-sub">Mapa relacional interactivo de embajadores, cuentas objetivo e introducciones cálidas</div>
+          <div class="section-title" style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:20px;">🕸️</span>
+            <span>Otletosphere — Cosma Knowledge Graph</span>
+          </div>
+          <div class="section-sub">Grafo relacional de conocimientos y puentes de confianza B2B (Inspirado en Arthur Perret)</div>
         </div>
         <div style="display:flex; gap:8px;">
-          <select class="filter-input" id="graph-filter-city" onchange="renderCosmaGraph()" style="font-size:11px;">
-            <option value="all">🌍 Todas las Ciudades (Europa & LatAm)</option>
-            <option value="Madrid">🇪🇸 Madrid</option>
-            <option value="Barcelona">🇪🇸 Barcelona</option>
-            <option value="Paris">🇫🇷 París</option>
-            <option value="London">🇬🇧 Londres</option>
-            <option value="Amsterdam">🇳🇱 Ámsterdam</option>
-            <option value="Berlin">🇩🇪 Berlín</option>
-            <option value="Milan">🇮🇹 Milán</option>
-            <option value="Stockholm">🇸🇪 Estocolmo</option>
-            <option value="CDMX">🇲🇽 CDMX</option>
-          </select>
-          <select class="filter-input" id="graph-filter-score" onchange="renderCosmaGraph()" style="font-size:11px;">
-            <option value="all">🔥 Todos los Engagement Scores</option>
-            <option value="high">🔥 Alta Confianza (>80 Score)</option>
-            <option value="medium">🟢 Relación Fluida (>50 Score)</option>
-          </select>
-          <button class="mini-btn primary" onclick="resetCosmaGraphView()">🔄 Reiniciar Física</button>
+          <button class="mini-btn primary" onclick="resetCosmaGraphView()">🔄 Reset view (R)</button>
         </div>
       </div>
 
-      <div style="display:grid; grid-template-columns: 1fr 320px; gap:14px; align-items:start;">
-        <!-- Canvas Container -->
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:12px; position:relative; overflow:hidden;">
-          <div style="position:absolute; top:20px; left:20px; z-index:10; display:flex; gap:8px; font-size:10px; font-family:'JetBrains Mono',monospace;">
-            <span class="badge" style="background:rgba(56,189,248,0.15); color:#38bdf8; border:1px solid #38bdf8;">● Embajador / C-Level</span>
-            <span class="badge" style="background:rgba(168,85,247,0.15); color:#a855f7; border:1px solid #a855f7;">● Cuenta Objetivo</span>
-            <span class="badge" style="background:rgba(245,158,11,0.15); color:#f59e0b; border:1px solid #f59e0b;">- DMs / Engagement</span>
-            <span class="badge" style="background:rgba(16,185,129,0.15); color:#10b981; border:1px solid #10b981;">--- Warm Bridge ($150)</span>
+      <div style="display:grid; grid-template-columns: 260px 1fr 340px; gap:12px; align-items:stretch; min-height:640px;">
+        
+        <!-- LEFT PANEL: Cosma Controls Sidebar -->
+        <div style="background:#121319; border:1px solid #2a2d3d; border-radius:12px; padding:16px; display:flex; flex-direction:column; gap:14px; color:#e2e8f0; font-family:'Outfit', sans-serif;">
+          <div style="font-size:16px; font-weight:800; border-bottom:1px solid #2a2d3d; padding-bottom:8px; color:#f8fafc;">
+            Otletosphere
           </div>
-          <canvas id="cosma-graph-canvas" width="800" height="520" style="width:100%; height:520px; border-radius:8px; background:var(--bg); cursor:grab;"></canvas>
+          
+          <div>
+            <label style="font-size:10px; font-family:'JetBrains Mono',monospace; color:#94a3b8; text-transform:uppercase; display:block; margin-bottom:4px;">Search... (S)</label>
+            <input type="text" id="cosma-search-input" class="filter-input" placeholder="Buscar nodo..." onkeyup="filterCosmaGraph()" style="width:100%; font-size:11px; background:#0a0b0e; border-color:#2a2d3d; color:#fff;">
+          </div>
+
+          <div>
+            <div style="font-size:10px; font-family:'JetBrains Mono',monospace; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px;">▼ Types</div>
+            <div style="display:flex; flex-direction:column; gap:6px; font-size:11px;">
+              <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="checkbox" checked id="type-ambassador" onchange="renderCosmaGraph()"><span style="width:10px; height:10px; border-radius:50%; background:#38bdf8; display:inline-block;"></span> <span>Person (Embajador)</span> <span style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:9px; color:#64748b;" id="cosma-count-persons">97</span></label>
+              <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="checkbox" checked id="type-company" onchange="renderCosmaGraph()"><span style="width:10px; height:10px; border-radius:50%; background:#a855f7; display:inline-block;"></span> <span>Organization (Cuenta)</span> <span style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:9px; color:#64748b;" id="cosma-count-orgs">25</span></label>
+              <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="checkbox" checked id="type-warmbridge" onchange="renderCosmaGraph()"><span style="width:10px; height:10px; border-radius:50%; background:#10b981; display:inline-block;"></span> <span>Warm Bridge ($150)</span> <span style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:9px; color:#64748b;" id="cosma-count-bridges">14</span></label>
+              <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="checkbox" checked id="type-engagement" onchange="renderCosmaGraph()"><span style="width:10px; height:10px; border-radius:50%; background:#f59e0b; display:inline-block;"></span> <span>Engagement / DMs</span> <span style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:9px; color:#64748b;" id="cosma-count-dms">32</span></label>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size:10px; font-family:'JetBrains Mono',monospace; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">▼ Keywords</div>
+            <div style="display:flex; flex-wrap:wrap; gap:4px;">
+              <span class="badge" style="background:#1e293b; color:#38bdf8; border:1px solid #3b82f6; cursor:pointer;" onclick="filterCosmaByKeyword('FinTech')">#FinTech</span>
+              <span class="badge" style="background:#1e293b; color:#c084fc; border:1px solid #a855f7; cursor:pointer;" onclick="filterCosmaByKeyword('MarTech')">#MarTech</span>
+              <span class="badge" style="background:#1e293b; color:#6ee7b7; border:1px solid #10b981; cursor:pointer;" onclick="filterCosmaByKeyword('LATAM')">#LATAM</span>
+              <span class="badge" style="background:#1e293b; color:#fcd34d; border:1px solid #f59e0b; cursor:pointer;" onclick="filterCosmaByKeyword('C-Level')">#C-Level</span>
+              <span class="badge" style="background:#1e293b; color:#cbd5e1; border:1px solid #475569; cursor:pointer;" onclick="filterCosmaByKeyword('EMEA')">#EMEA</span>
+            </div>
+          </div>
+
+          <div style="margin-top:auto; border-top:1px solid #2a2d3d; padding-top:10px; display:flex; flex-direction:column; gap:6px;">
+            <button class="mini-btn" onclick="resetCosmaGraphView()" style="background:#1e293b; color:#fff; border-color:#475569; font-size:11px;">Reset the view</button>
+            <div style="font-size:9px; color:#64748b; font-family:'JetBrains Mono',monospace;">MADE WITH COSMA — OTLETOSPHERE UI</div>
+          </div>
         </div>
 
-        <!-- Cosma Index Card (Side Inspector) -->
-        <div id="cosma-index-card" style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:18px; position:relative;">
-          <div style="font-size:10px; font-family:'JetBrains Mono',monospace; color:var(--purple); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Ficha Cosma #Otletosphere</div>
-          <h3 id="cosma-card-title" style="font-size:15px; font-weight:700; margin-bottom:4px;">Haz clic en un nodo del grafo</h3>
-          <div id="cosma-card-subtitle" style="font-size:11px; color:var(--muted2); margin-bottom:12px;">Selecciona cualquier embajador o empresa para inspeccionar relaciones</div>
-          
-          <div id="cosma-card-body" style="display:flex; flex-direction:column; gap:10px;">
-            <div style="padding:10px; background:var(--bg); border:1px solid var(--border); border-radius:8px; font-size:11px; color:var(--muted2); line-height:1.5;">
-              👈 El Grafo Cosmoscope visualiza los puentes de confianza entre la bóveda de Antonio y la de Giovanna en Europa.
+        <!-- MIDDLE PANEL: Interactive Dark Canvas -->
+        <div style="background:#0a0b0e; border:1px solid #2a2d3d; border-radius:12px; position:relative; overflow:hidden; display:flex; flex-direction:column;">
+          <div style="position:absolute; top:14px; left:14px; z-index:10; display:flex; gap:6px;">
+            <button class="mini-btn" onclick="resetCosmaGraphView()" style="background:rgba(15,23,42,0.8); border-color:#334155; color:#fff; font-size:10px;">Reset (R)</button>
+            <button class="mini-btn" onclick="toggleCosmaFocus()" style="background:rgba(15,23,42,0.8); border-color:#334155; color:#fff; font-size:10px;">Focus (F)</button>
+          </div>
+          <canvas id="cosma-graph-canvas" width="700" height="600" style="width:100%; height:600px; background:#0a0b0e; cursor:grab;"></canvas>
+        </div>
+
+        <!-- RIGHT PANEL: Cosma Index Card (Side Inspector) -->
+        <div id="cosma-index-card" style="background:#121319; border:1px solid #2a2d3d; border-radius:12px; padding:20px; display:flex; flex-direction:column; gap:12px; color:#e2e8f0;">
+          <div style="display:flex; gap:12px; align-items:center; border-bottom:1px solid #2a2d3d; padding-bottom:12px;">
+            <div id="cosma-card-avatar" style="width:48px; height:48px; border-radius:8px; background:linear-gradient(135deg, #38bdf8, #a855f7); display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800; color:#fff; border:2px solid #fff; box-shadow:0 0 12px rgba(56,189,248,0.4);">
+              👤
+            </div>
+            <div>
+              <div id="cosma-card-id" style="font-size:9px; font-family:'JetBrains Mono',monospace; color:#38bdf8;">ID #001 • Person</div>
+              <h3 id="cosma-card-title" style="font-size:16px; font-weight:800; color:#f8fafc; margin:2px 0;">Selecciona un nodo</h3>
+              <div id="cosma-card-subtitle" style="font-size:11px; color:#94a3b8;">Haz clic en cualquier nodo del mapa espacial</div>
+            </div>
+          </div>
+
+          <div id="cosma-card-body" style="display:flex; flex-direction:column; gap:12px;">
+            <div>
+              <div style="font-size:10px; font-family:'JetBrains Mono',monospace; color:#64748b; text-transform:uppercase; margin-bottom:4px;">Keywords</div>
+              <div id="cosma-card-keywords" style="display:flex; flex-wrap:wrap; gap:4px;">
+                <span class="badge" style="background:#1e293b; color:#38bdf8; border:1px solid #3b82f6;">#Otletosphere</span>
+                <span class="badge" style="background:#1e293b; color:#c084fc; border:1px solid #a855f7;">#B2B Intelligence</span>
+              </div>
+            </div>
+
+            <div>
+              <div style="font-size:10px; font-family:'JetBrains Mono',monospace; color:#64748b; text-transform:uppercase; margin-bottom:4px;">Descripción & Historial</div>
+              <div id="cosma-card-desc" style="font-size:11px; color:#cbd5e1; line-height:1.6; background:#0a0b0e; padding:10px; border-radius:8px; border:1px solid #1e293b;">
+                👈 El mapa de grafos visualiza las conexiones de confianza entre la bóveda de Antonio y las cuentas objetivo en Europa y LATAM.
+              </div>
+            </div>
+
+            <div id="cosma-card-actions">
+              <!-- Action Button rendered by JS -->
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
@@ -7189,7 +7235,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (restored) {
       updateStatus();
       finalize();
-      if (typeof switchTab === 'function') switchTab('network');
+      if (typeof navigate === 'function') navigate('network');
       const toast = document.getElementById('ui-toast');
       if (toast) {
         toast.innerHTML = `<span>⚡</span> <span>Bóveda local restaurada automáticamente (${S.contacts.length.toLocaleString()} contactos).</span>`;
@@ -7219,7 +7265,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             S.loadedParts.connections = true;
             updateStatus();
             finalize();
-            if (typeof switchTab === 'function') switchTab('network');
+            if (typeof navigate === 'function') navigate('network');
           }
         }
       })
@@ -7292,7 +7338,7 @@ function openLoginModal() {
   const modal = document.getElementById('login-modal');
   if (modal) {
     modal.classList.add('open');
-    modal.style.display = 'flex';
+    modal.style.cssText = 'position:fixed; inset:0; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); z-index:999999 !important; display:flex !important; align-items:center; justify-content:center; opacity:1 !important; pointer-events:auto !important;';
   }
 }
 
@@ -7300,7 +7346,7 @@ function closeLoginModal() {
   const modal = document.getElementById('login-modal');
   if (modal) {
     modal.classList.remove('open');
-    modal.style.display = 'none';
+    modal.style.cssText = 'display:none !important; opacity:0 !important; pointer-events:none !important;';
   }
 }
 
@@ -7466,46 +7512,108 @@ function calculateEngagementScore(sent, replied, tenureYears) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════════════
 // 3. GRAFO DE REDES INTERACTIVO ESTILO COSMA OTLETOSPHERE (HTML5 Canvas 2D)
 // ═══════════════════════════════════════════════════════════════════════
 let cosmaGraphNodes = [];
 let cosmaGraphLinks = [];
+let cosmaSelectedNodeId = null;
 
 function renderCosmaGraph() {
   const canvas = document.getElementById('cosma-graph-canvas');
   if (!canvas) return;
   if (canvas.parentElement && canvas.parentElement.clientWidth > 0) {
-    canvas.width = canvas.parentElement.clientWidth - 24;
+    canvas.width = canvas.parentElement.clientWidth;
+    canvas.height = canvas.parentElement.clientHeight || 600;
   }
   const ctx = canvas.getContext('2d');
   
-  const selectedCity = document.getElementById('graph-filter-city') ? document.getElementById('graph-filter-city').value : 'all';
+  const showPersons = document.getElementById('type-ambassador') ? document.getElementById('type-ambassador').checked : true;
+  const showOrgs = document.getElementById('type-company') ? document.getElementById('type-company').checked : true;
+  const showWarmBridges = document.getElementById('type-warmbridge') ? document.getElementById('type-warmbridge').checked : true;
+  const showEngagement = document.getElementById('type-engagement') ? document.getElementById('type-engagement').checked : true;
+  const filterQuery = (document.getElementById('cosma-search-input') ? document.getElementById('cosma-search-input').value : '').toLowerCase().trim();
 
-  cosmaGraphNodes = [
-    { id: 'master_antonio', label: 'Bóveda Antonio (Master)', type: 'ambassador', color: '#38bdf8', radius: 14, x: 250, y: 260 },
-    { id: 'vault_giovanna', label: 'Bóveda Giovanna (España)', type: 'ambassador', color: '#38bdf8', radius: 14, x: 520, y: 220 },
-    
-    { id: 'klarna', label: 'Klarna (FinTech)', type: 'company', city: 'Stockholm', color: '#a855f7', radius: 11, x: 420, y: 120 },
-    { id: 'insider', label: 'Insider One (MarTech)', type: 'company', city: 'Madrid', color: '#a855f7', radius: 11, x: 340, y: 380 },
-    { id: 'securion', label: 'SecurionPay (PSP)', type: 'company', city: 'Barcelona', color: '#a855f7', radius: 11, x: 600, y: 340 },
-    { id: 'stripe', label: 'Stripe (PSP)', type: 'company', city: 'London', color: '#a855f7', radius: 10, x: 180, y: 140 },
-    { id: 'mercadopago', label: 'Mercado Pago (LatAm)', type: 'company', city: 'CDMX', color: '#a855f7', radius: 10, x: 120, y: 360 }
+  // Generate dynamic nodes from S.contacts or rich demo set
+  const baseNodes = [
+    { id: 'master_antonio', label: 'Antonio Gutiérrez (Master Vault)', type: 'person', keywords: ['Master', 'LATAM', 'C-Level'], color: '#38bdf8', radius: 14, x: canvas.width * 0.35, y: canvas.height * 0.45, company: 'Radar Comercial', position: 'Founder & CEO', dms: 142 },
+    { id: 'vault_giovanna', label: 'Giovanna (Bóveda España)', type: 'person', keywords: ['EMEA', 'Warm Bridge', 'VP Sales'], color: '#38bdf8', radius: 14, x: canvas.width * 0.65, y: canvas.height * 0.40, company: 'Radar Europe', position: 'VP Growth Europe', dms: 98 },
+    { id: 'ronan_demo', label: 'Ronan (Sandbox BI)', type: 'person', keywords: ['Sandbox', 'MarTech'], color: '#38bdf8', radius: 12, x: canvas.width * 0.25, y: canvas.height * 0.25, company: 'Sandbox Corp', position: 'BI Architect', dms: 45 },
+
+    { id: 'klarna', label: 'Klarna (FinTech)', type: 'organization', keywords: ['FinTech', 'EMEA'], color: '#a855f7', radius: 12, x: canvas.width * 0.75, y: canvas.height * 0.20, city: 'Stockholm', country: 'Suecia' },
+    { id: 'insider', label: 'Insider One (MarTech)', type: 'organization', keywords: ['MarTech', 'Warm Bridge'], color: '#a855f7', radius: 12, x: canvas.width * 0.55, y: canvas.height * 0.75, city: 'Madrid', country: 'España' },
+    { id: 'securion', label: 'SecurionPay (PSP)', type: 'organization', keywords: ['FinTech', 'Warm Bridge'], color: '#a855f7', radius: 11, x: canvas.width * 0.82, y: canvas.height * 0.65, city: 'Barcelona', country: 'España' },
+    { id: 'stripe', label: 'Stripe (PSP)', type: 'organization', keywords: ['FinTech', 'EMEA'], color: '#a855f7', radius: 11, x: canvas.width * 0.20, y: canvas.height * 0.60, city: 'London', country: 'Reino Unido' },
+    { id: 'mercadopago', label: 'Mercado Pago (LatAm)', type: 'organization', keywords: ['LATAM', 'FinTech'], color: '#a855f7', radius: 11, x: canvas.width * 0.15, y: canvas.height * 0.80, city: 'CDMX', country: 'México' },
+
+    { id: 'marc_garcia', label: 'Marc García', type: 'warmbridge', keywords: ['C-Level', 'Warm Bridge', 'EMEA'], color: '#10b981', radius: 11, x: canvas.width * 0.60, y: canvas.height * 0.60, company: 'Insider One', position: 'CEO', dms: 45 },
+    { id: 'sofia_lopez', label: 'Sofia López', type: 'warmbridge', keywords: ['C-Level', 'Warm Bridge', 'LATAM'], color: '#10b981', radius: 10, x: canvas.width * 0.45, y: canvas.height * 0.25, company: 'FinTech LATAM', position: 'Director of Expansion', dms: 32 },
+    { id: 'carlos_mora', label: 'Carlos Mora', type: 'engagement', keywords: ['MarTech', 'Engagement'], color: '#f59e0b', radius: 9, x: canvas.width * 0.30, y: canvas.height * 0.75, company: 'Stripe', position: 'Senior Account Exec', dms: 18 },
+    { id: 'ana_belen', label: 'Ana Belén', type: 'engagement', keywords: ['EMEA', 'Engagement'], color: '#f59e0b', radius: 9, x: canvas.width * 0.70, y: canvas.height * 0.85, company: 'SecurionPay', position: 'Head of Sales', dms: 22 }
   ];
 
-  if (selectedCity !== 'all') {
-    cosmaGraphNodes = cosmaGraphNodes.filter(n => n.type === 'ambassador' || n.city === selectedCity);
+  // Append contacts from S.contacts if available
+  if (S.contacts && S.contacts.length > 0) {
+    S.contacts.slice(0, 30).forEach((c, idx) => {
+      const isWarm = c.engagement_score > 80 || c.dms_replied > 0;
+      const angle = (idx / 30) * Math.PI * 2;
+      const dist = 180 + (idx % 3) * 60;
+      baseNodes.push({
+        id: c.id || `c_${idx}`,
+        label: c.name || `Contacto ${idx}`,
+        type: isWarm ? 'warmbridge' : 'person',
+        keywords: [c.company || 'B2B', c.country || 'Global', isWarm ? 'Warm Bridge' : 'Network'],
+        color: isWarm ? '#10b981' : '#38bdf8',
+        radius: isWarm ? 10 : 8,
+        x: canvas.width * 0.5 + Math.cos(angle) * dist,
+        y: canvas.height * 0.5 + Math.sin(angle) * dist,
+        company: c.company,
+        position: c.position,
+        dms: c.dms_sent || 5
+      });
+    });
   }
 
+  // Filter nodes by type & search
+  cosmaGraphNodes = baseNodes.filter(n => {
+    if (n.type === 'person' && !showPersons) return false;
+    if (n.type === 'organization' && !showOrgs) return false;
+    if (n.type === 'warmbridge' && !showWarmBridges) return false;
+    if (n.type === 'engagement' && !showEngagement) return false;
+
+    if (filterQuery) {
+      const matchLabel = n.label.toLowerCase().includes(filterQuery);
+      const matchKw = n.keywords.some(k => k.toLowerCase().includes(filterQuery));
+      return matchLabel || matchKw;
+    }
+    return true;
+  });
+
+  // Update Left Sidebar counts
+  if (document.getElementById('cosma-count-persons')) document.getElementById('cosma-count-persons').textContent = cosmaGraphNodes.filter(n => n.type === 'person').length;
+  if (document.getElementById('cosma-count-orgs')) document.getElementById('cosma-count-orgs').textContent = cosmaGraphNodes.filter(n => n.type === 'organization').length;
+  if (document.getElementById('cosma-count-bridges')) document.getElementById('cosma-count-bridges').textContent = cosmaGraphNodes.filter(n => n.type === 'warmbridge').length;
+  if (document.getElementById('cosma-count-dms')) document.getElementById('cosma-count-dms').textContent = cosmaGraphNodes.filter(n => n.type === 'engagement').length;
+
+  // Build Links
   cosmaGraphLinks = [
-    { source: 'master_antonio', target: 'mercadopago', label: 'Score 95 (30 DMs)', color: '#f59e0b', width: 2.5 },
-    { source: 'master_antonio', target: 'stripe', label: 'Score 88 (12 DMs)', color: '#f59e0b', width: 2 },
-    { source: 'vault_giovanna', target: 'insider', label: 'Score 98 (45 DMs)', color: '#10b981', width: 3, bounty: true },
-    { source: 'vault_giovanna', target: 'securion', label: 'Score 92 (22 DMs)', color: '#10b981', width: 2.5, bounty: true },
-    { source: 'vault_giovanna', target: 'klarna', label: 'Score 85 (15 DMs)', color: '#f59e0b', width: 2 }
+    { source: 'master_antonio', target: 'mercadopago', color: '#f59e0b', width: 2 },
+    { source: 'master_antonio', target: 'stripe', color: '#f59e0b', width: 1.5 },
+    { source: 'master_antonio', target: 'sofia_lopez', color: '#10b981', width: 2.5 },
+    { source: 'vault_giovanna', target: 'insider', color: '#10b981', width: 3, dashed: true },
+    { source: 'vault_giovanna', target: 'securion', color: '#10b981', width: 2.5, dashed: true },
+    { source: 'vault_giovanna', target: 'klarna', color: '#38bdf8', width: 2 },
+    { source: 'vault_giovanna', target: 'marc_garcia', color: '#10b981', width: 3 },
+    { source: 'marc_garcia', target: 'insider', color: '#10b981', width: 2.5 },
+    { source: 'ana_belen', target: 'securion', color: '#f59e0b', width: 2 },
+    { source: 'carlos_mora', target: 'stripe', color: '#f59e0b', width: 2 }
   ];
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Draw Dark Otletosphere Canvas
+  ctx.fillStyle = '#0a0b0e';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+  // Draw Links
   cosmaGraphLinks.forEach(link => {
     const srcNode = cosmaGraphNodes.find(n => n.id === link.source);
     const tgtNode = cosmaGraphNodes.find(n => n.id === link.target);
@@ -7515,30 +7623,38 @@ function renderCosmaGraph() {
       ctx.lineTo(tgtNode.x, tgtNode.y);
       ctx.strokeStyle = link.color;
       ctx.lineWidth = link.width;
-      if (link.bounty) ctx.setLineDash([6, 4]); else ctx.setLineDash([]);
+      if (link.dashed) ctx.setLineDash([5, 4]); else ctx.setLineDash([]);
       ctx.stroke();
       ctx.setLineDash([]);
-
-      const midX = (srcNode.x + tgtNode.x) / 2;
-      const midY = (srcNode.y + tgtNode.y) / 2;
-      ctx.fillStyle = '#94a3b8';
-      ctx.font = '9px "JetBrains Mono", monospace';
-      ctx.fillText(link.label, midX - 30, midY - 4);
     }
   });
 
+  // Draw Nodes
   cosmaGraphNodes.forEach(node => {
+    const isSelected = node.id === cosmaSelectedNodeId;
+
+    ctx.save();
+    // Glow effect
+    ctx.shadowColor = node.color;
+    ctx.shadowBlur = isSelected ? 20 : 10;
+
+    // Node Circle
     ctx.beginPath();
-    ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+    ctx.arc(node.x, node.y, isSelected ? node.radius + 3 : node.radius, 0, Math.PI * 2);
     ctx.fillStyle = node.color;
     ctx.fill();
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = isSelected ? 3 : 1.5;
+    ctx.strokeStyle = isSelected ? '#ffffff' : 'rgba(255,255,255,0.8)';
     ctx.stroke();
+    ctx.restore();
 
-    ctx.fillStyle = '#f8fafc';
-    ctx.font = '11px "Outfit", sans-serif';
-    ctx.fillText(node.label, node.x + node.radius + 6, node.y + 4);
+    // Node Label (Crisp white with dark shadow for max contrast)
+    ctx.font = isSelected ? '700 12px "Outfit", sans-serif' : '600 11px "Outfit", sans-serif';
+    ctx.fillStyle = isSelected ? '#ffffff' : '#e2e8f0';
+    ctx.shadowColor = 'rgba(0,0,0,0.95)';
+    ctx.shadowBlur = 4;
+    ctx.fillText(node.label, node.x + node.radius + 7, node.y + 4);
+    ctx.shadowBlur = 0;
   });
 
   canvas.onclick = function(e) {
@@ -7548,38 +7664,103 @@ function renderCosmaGraph() {
 
     const clickedNode = cosmaGraphNodes.find(n => {
       const dist = Math.hypot(n.x - clickX, n.y - clickY);
-      return dist <= n.radius + 6;
+      return dist <= n.radius + 8;
     });
 
     if (clickedNode) {
+      cosmaSelectedNodeId = clickedNode.id;
       inspectCosmaNode(clickedNode);
+      renderCosmaGraph();
     }
   };
 }
 
+function filterCosmaGraph() {
+  renderCosmaGraph();
+}
+
+function filterCosmaByKeyword(kw) {
+  const searchInput = document.getElementById('cosma-search-input');
+  if (searchInput) {
+    searchInput.value = kw;
+    renderCosmaGraph();
+  }
+}
+
+function resetCosmaGraphView() {
+  const searchInput = document.getElementById('cosma-search-input');
+  if (searchInput) searchInput.value = '';
+  ['type-ambassador', 'type-company', 'type-warmbridge', 'type-engagement'].forEach(id => {
+    const chk = document.getElementById(id);
+    if (chk) chk.checked = true;
+  });
+  cosmaSelectedNodeId = null;
+  renderCosmaGraph();
+  showToast('🔄 Otletosphere Graph re-centered.');
+}
+
+function toggleCosmaFocus() {
+  if (cosmaGraphNodes.length > 0) {
+    cosmaSelectedNodeId = cosmaGraphNodes[0].id;
+    inspectCosmaNode(cosmaGraphNodes[0]);
+    renderCosmaGraph();
+  }
+}
+
 function inspectCosmaNode(node) {
-  document.getElementById('cosma-card-title').textContent = node.label;
-  document.getElementById('cosma-card-subtitle').textContent = `Tipo: ${node.type === 'ambassador' ? 'Embajador / Bóveda Active' : 'Cuenta Objetivo (' + (node.city || 'Global') + ')'}`;
+  if (!node) return;
   
-  const body = document.getElementById('cosma-card-body');
-  if (node.type === 'company') {
-    body.innerHTML = `
-      <div style="padding:12px; background:var(--bg); border:1px solid var(--border); border-radius:8px; display:flex; flex-direction:column; gap:8px;">
-        <div style="font-size:10px; font-family:'JetBrains Mono',monospace; color:var(--green); font-weight:700;">🟢 PUENTE CÁLIDO DISPONIBLE</div>
-        <div style="font-size:12px; font-weight:700;">Contacto C-Level Detectado (Score 98/100)</div>
-        <div style="font-size:11px; color:var(--muted2);">Bóveda de Origen: <strong>Bóveda Giovanna (España)</strong></div>
-        <div style="font-size:11px; color:var(--muted2);">Interacciones: <strong>45 DMs intercambiados / 22 respuestas mutuas</strong></div>
-        <button class="mini-btn primary" onclick="requestWarmIntroduction('${node.label}')" style="margin-top:6px; padding:8px; font-weight:700;">
+  const titleEl = document.getElementById('cosma-card-title');
+  const subEl = document.getElementById('cosma-card-subtitle');
+  const idEl = document.getElementById('cosma-card-id');
+  const avatarEl = document.getElementById('cosma-card-avatar');
+  const kwEl = document.getElementById('cosma-card-keywords');
+  const descEl = document.getElementById('cosma-card-desc');
+  const actionsEl = document.getElementById('cosma-card-actions');
+
+  if (titleEl) titleEl.textContent = node.label;
+  if (idEl) idEl.textContent = `ID #${node.id.slice(0, 6)} • ${node.type.toUpperCase()}`;
+  if (subEl) subEl.textContent = node.position ? `${node.position} @ ${node.company}` : `${node.city || 'Global'} (${node.country || 'Bóveda'})`;
+  if (avatarEl) avatarEl.textContent = node.label.charAt(0).toUpperCase();
+
+  if (kwEl) {
+    kwEl.innerHTML = (node.keywords || ['Otletosphere', 'B2B']).map(k => `
+      <span class="badge" style="background:#1e293b; color:#38bdf8; border:1px solid #3b82f6;">#${k}</span>
+    `).join(' ');
+  }
+
+  if (descEl) {
+    if (node.type === 'warmbridge' || node.type === 'person') {
+      descEl.innerHTML = `
+        👤 <strong>${node.label}</strong><br>
+        💼 Cargo: <strong>${node.position || 'C-Level'}</strong> en <strong>${node.company || 'Cuenta Target'}</strong><br>
+        💬 Interacciones: <strong>${node.dms || 25} DMs registrados</strong><br>
+        🟢 Puentes de Confianza: Bóveda Giovanna (España) & Bóveda Antonio (LATAM).
+      `;
+    } else {
+      descEl.innerHTML = `
+        🏢 <strong>${node.label}</strong><br>
+        📍 Ubicación: <strong>${node.city || 'Madrid'}, ${node.country || 'España'}</strong><br>
+        🎯 Estatus: Cuenta Target identificada para Co-Selling Interno.<br>
+        💰 Bounty Asignado: <strong>$150.00 USD + 2% comisión</strong> por introducción cálida.
+      `;
+    }
+  }
+
+  if (actionsEl) {
+    if (node.type === 'warmbridge' || node.type === 'organization') {
+      actionsEl.innerHTML = `
+        <button class="mini-btn primary" onclick="requestWarmIntroduction('${node.label}')" style="width:100%; padding:10px; font-weight:700; margin-top:8px;">
           🚀 Solicitar Introducción ($150 USD Bounty)
         </button>
-      </div>
-    `;
-  } else {
-    body.innerHTML = `
-      <div style="padding:12px; background:var(--bg); border:1px solid var(--border); border-radius:8px; font-size:11px; color:var(--muted2); line-height:1.6;">
-        👤 <strong>${node.label}</strong> cuenta con conexiones verificadas en España y Europa con scoring de engagement de mensajes.
-      </div>
-    `;
+      `;
+    } else {
+      actionsEl.innerHTML = `
+        <button class="mini-btn" onclick="goToContactChat()" style="width:100%; padding:10px; font-weight:700; margin-top:8px; border-color:var(--accent); color:var(--text);">
+          💬 Ver Chat / Historial DMs
+        </button>
+      `;
+    }
   }
 }
 
@@ -7617,6 +7798,10 @@ function handleTalkToNetworkSearch(e) {
     if (!rawQuery) return;
     const query = typeof norm === 'function' ? norm(rawQuery) : rawQuery.toLowerCase();
 
+    if (!S.contacts || S.contacts.length === 0) {
+      if (typeof restoreLocalVault === 'function') restoreLocalVault();
+    }
+
     // 1. Search inside S.messages for matching message text (e.g. "batas")
     const matchedContactNames = new Set();
     if (S.messages && S.messages.length > 0) {
@@ -7632,7 +7817,7 @@ function handleTalkToNetworkSearch(e) {
     }
 
     // 2. Filter S.contacts for direct or message matches
-    filteredContacts = S.contacts.filter(c => {
+    filteredContacts = (S.contacts || []).filter(c => {
       const cName = typeof norm === 'function' ? norm(c.name || '') : (c.name || '').toLowerCase();
       const cComp = typeof norm === 'function' ? norm(c.company || '') : (c.company || '').toLowerCase();
       const cPos = typeof norm === 'function' ? norm(c.position || '') : (c.position || '').toLowerCase();
@@ -7643,6 +7828,10 @@ function handleTalkToNetworkSearch(e) {
       const matchMsg = matchedContactNames.has(cName);
       return matchDirect || matchMsg;
     });
+
+    if (S.loadedParts && !S.loadedParts.connections) {
+      S.loadedParts.connections = true;
+    }
 
     navigate('network');
     const searchInput = document.getElementById('net-search') || document.getElementById('search-input');
