@@ -7287,14 +7287,70 @@ function showToast(msg) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════
-// 2. MODO SANDBOX DEMO RONAN (A/B BI TEST + CO-SELLING MATCHMAKING)
+// 2. MODO SANDBOX DEMO RONAN (A/B BI TEST + CO-SELLING MATCHMAKING + NORMALIZACIÓN)
 // ═══════════════════════════════════════════════════════════════════════
 function setupSandboxRonanMode() {
   const demoCompanies = ['Insider One', 'SecurionPay', 'Klarna', 'Stripe', 'Mercado Pago', 'Fiserv', 'Klarna Spain'];
   const demoCities = ['Madrid', 'Barcelona', 'Paris', 'London', 'Amsterdam', 'Berlin', 'Milan', 'Stockholm'];
   
-  const syntheticContacts = [];
-  for (let i = 1; i <= 500; i++) {
+  // EJEMPLOS EXPLÍCITOS DE NORMALIZACIÓN (TESIS DE BECARIO A CEO)
+  const normalizationShowcase = [
+    {
+      id: 'norm_demo_1',
+      name: 'Marc García',
+      raw_name: 'marc garcia (desestructurado)',
+      first_name: 'Marc', last_name: 'García',
+      company: 'Insider One',
+      raw_company: 'Startup Rota S.L. (2018)',
+      position: 'Chief Executive Officer (CEO)',
+      raw_position: 'Analista Jr de Marketing (2018)',
+      city: 'Cancún', raw_city: 'cancun',
+      country: 'México', raw_country: 'mexico',
+      connectedOn: '2018-05-14',
+      msg_count: 32, dms_sent: 32, dms_replied: 22, has_reply: true,
+      engagement_score: 98, is_current: true,
+      jobStatus: '🟢 CEO Vigente (Enriquecido por HarvestAPI + IA 2026)',
+      normalization_log: '✨ Normalización: "cancun / mexico" ➔ "México (Cancún)" | "Analista Jr (2018)" ➔ "CEO (2026)"'
+    },
+    {
+      id: 'norm_demo_2',
+      name: 'Elena Fernández',
+      raw_name: 'elena fernandez',
+      first_name: 'Elena', last_name: 'Fernández',
+      company: 'Klarna EMEA',
+      raw_company: 'Agencia Local (2019)',
+      position: 'VP of Global Sales EMEA',
+      raw_position: 'SDR Inbound (2019)',
+      city: 'Madrid', raw_city: 'madrid',
+      country: 'España', raw_country: 'spain',
+      connectedOn: '2019-11-02',
+      msg_count: 24, dms_sent: 24, dms_replied: 18, has_reply: true,
+      engagement_score: 94, is_current: true,
+      jobStatus: '🟢 VP Vigente (Enriquecido por HarvestAPI + IA 2026)',
+      normalization_log: '✨ Normalización: "madrid / spain" ➔ "España (Madrid)" | "SDR (2019)" ➔ "VP Sales EMEA (2026)"'
+    },
+    {
+      id: 'norm_demo_3',
+      name: 'Alejandro Rossi',
+      raw_name: 'alejandro rossi',
+      first_name: 'Alejandro', last_name: 'Rossi',
+      company: 'SecurionPay',
+      raw_company: 'Consultora X (2020)',
+      position: 'Head of Commercial Expansion',
+      raw_position: 'Coordinador de Cuentas (2020)',
+      city: 'Barcelona', raw_city: 'barcelona',
+      country: 'España', raw_country: 'espana',
+      connectedOn: '2020-03-20',
+      msg_count: 19, dms_sent: 19, dms_replied: 14, has_reply: true,
+      engagement_score: 91, is_current: true,
+      jobStatus: '🟢 Director Vigente (Enriquecido por HarvestAPI + IA 2026)',
+      normalization_log: '✨ Normalización: "barcelona / espana" ➔ "España (Barcelona)" | "Coordinador (2020)" ➔ "Head of Expansion (2026)"'
+    }
+  ];
+
+  const syntheticContacts = [...normalizationShowcase];
+  
+  for (let i = 4; i <= 500; i++) {
     const isCLevel = i % 5 === 0;
     const isDirector = i % 3 === 0 && !isCLevel;
     const pos = isCLevel ? 'Chief Executive Officer' : (isDirector ? 'VP of Sales & MarTech' : 'Senior Marketing Manager');
@@ -7331,7 +7387,7 @@ function setupSandboxRonanMode() {
   finalize();
   navigate('graph');
   renderCosmaGraph();
-  showToast('🧪 Sandbox Demo Ronan Activado (500 contactos de demostración + Grafo Cosma).');
+  showToast('🧪 Sandbox Ronan Activado: Normalización de País/Cargo (Becario ➔ CEO) + Grafo Cosma.');
 }
 
 function calculateEngagementScore(sent, replied, tenureYears) {
