@@ -1836,9 +1836,9 @@ function toggleTheme() {
 }
 
 (function() {
-  // Forzar Dark Theme por defecto (Slate 950)
-  document.body.classList.remove('light');
-  localStorage.setItem('theme', 'dark');
+  // Forzar Modo Claro por defecto por instrucción directa
+  document.body.classList.add('light');
+  localStorage.setItem('theme', 'light');
 })();
 
 
@@ -2692,14 +2692,13 @@ async function loadDemoData(autoNavigate = true) {
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    document.body.classList.add('light');
-    const icon = document.getElementById('theme-icon');
-    const text = document.getElementById('theme-text');
-    if (icon) icon.textContent = '🌙';
-    if (text) text.textContent = 'Modo Oscuro';
-  }
+  // Modo Claro activado por defecto
+  document.body.classList.add('light');
+  localStorage.setItem('theme', 'light');
+  const themeIcon = document.getElementById('theme-icon');
+  const themeText = document.getElementById('theme-text');
+  if (themeIcon) themeIcon.textContent = '🌙';
+  if (themeText) themeText.textContent = 'Modo Oscuro';
 
   // Garantizar que por defecto SIEMPRE cargue la Bóveda Master de Antonio Gutiérrez
   localStorage.setItem('active_vault_type', 'antonio');
@@ -2709,12 +2708,15 @@ window.addEventListener('DOMContentLoaded', async () => {
     if (restored && S.contacts && S.contacts.length > 0) {
       finalize();
       navigate('network');
+      setLoading(false);
       return;
     }
   } catch(e) {}
 
-  // Carga automática garantizada de la Bóveda Master de Antonio (2,953 contactos activos)
+  // Carga automática garantizada de la Bóveda Master de Antonio y navegación directa a Mi Red
   await loadDemoData(true);
+  finalize();
+  navigate('network');
   setLoading(false);
 });
 
