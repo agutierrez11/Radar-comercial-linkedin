@@ -2650,7 +2650,8 @@ async function loadDemoData(autoNavigate = true) {
       return {
         // --- Identidad ---
         id: item.id,
-        name: item.full_name,
+        name: item.name || item.full_name || (item.first_name ? (item.first_name + ' ' + (item.last_name || '')).trim() : 'Sin nombre'),
+        full_name: item.name || item.full_name || 'Sin nombre',
         first_name: item.first_name,
         last_name: item.last_name,
         company: company,
