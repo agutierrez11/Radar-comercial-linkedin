@@ -1840,12 +1840,6 @@ function toggleTheme() {
   localStorage.setItem('theme', 'dark');
 })();
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Carga automática de los datos enriquecidos y navega directo a Mi Red
-  if (typeof loadDemoData === 'function') {
-    loadDemoData(true);
-  }
-});
 
 // ═══════════════════════════════════════════════════════════════════════
 // HELPERS
