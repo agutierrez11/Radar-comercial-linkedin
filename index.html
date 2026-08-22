@@ -771,6 +771,7 @@
 </script>
   <!-- Supabase SDK (único) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="master_data.js"></script>
 </head>
 <body>
 
@@ -2593,9 +2594,19 @@ function resetAllData() {
 async function loadDemoData(autoNavigate = true) {
   setLoading(true, 50);
   try {
-    const res = await fetch("enriched_connections.json");
-    if (!res.ok) throw new Error("No se pudo cargar enriched_connections.json");
-    const data = await res.json();
+    let data = null;
+    try {
+      const res = await fetch("enriched_connections.json");
+      if (res.ok) data = await res.json();
+    } catch(err) {
+      console.warn("[LoadDemo] Fetch falló (protocolo file:// o sin red), usando respaldo en memoria:", err);
+    }
+
+    if (!data && window.__MASTER_DATA__) {
+      data = window.__MASTER_DATA__;
+    }
+
+    if (!data) throw new Error("No se pudo cargar la base de datos.");
     
     S.ownerName = "Antonio Gutiérrez";
     S.positions = [
