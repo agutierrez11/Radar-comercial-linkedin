@@ -888,9 +888,8 @@
 
   <!-- MAIN -->
   <main id="main-content">
-
     <!-- ── UPLOAD ── -->
-    <div class="section active" id="sec-upload">
+    <div class="section" id="sec-upload">
       <div id="upload-screen">
         <div class="upload-card">
           <div class="upload-icon">🗜️</div>
@@ -910,8 +909,6 @@
             </button>
           </div>
           
-          
-          <!-- CRITERIOS DE EXTRACCIÓN Y DATOS DEL ZIP (OPCIÓN B) -->
           <div style="margin-top:16px; text-align:left; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px; box-shadow:var(--shadow-sm);">
             <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
               <span>⚙️ Criterios de Selección y Componentes a Extraer del ZIP</span>
@@ -947,8 +944,6 @@
             </div>
           </div>
 
-
-          <!-- Instrucciones de Descarga -->
           <div style="margin-top:20px; text-align:left; background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:15px;">
             <h4 style="font-size:11px; margin-bottom:10px; color:var(--text); display:flex; align-items:center; gap:6px;">
               <span style="font-size:14px;">ℹ️</span> ¿Cómo obtengo mi ZIP de LinkedIn?
@@ -999,12 +994,128 @@
       </div>
     </div>
 
-          </div><!-- END vault-view-container-a -->
+    <!-- ── NETWORK ── -->
+    <div class="section active" id="sec-network">
 
+      <!-- ── A/B TOGGLE BAR DE NAVEGACIÓN EN BÓVEDA ── -->
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:10px 16px; flex-wrap:wrap; gap:10px; box-shadow:var(--shadow-sm);">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:12px; font-weight:700; color:var(--text); font-family:'Outfit',sans-serif;">🎛️ Experiencia de Bóveda:</span>
+          <span style="font-size:11px; color:var(--text-muted);">Selecciona la interfaz preferida para tu equipo</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:6px; background:var(--bg); padding:4px; border-radius:8px; border:1px solid var(--border);">
+          <button class="mini-btn active" id="vault-mode-btn-a" onclick="switchVaultViewMode('A')" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:6px; cursor:pointer; transition:all 0.2s;">
+            📊 Vista A: Clásica (Dashboard & Mapa GIS)
+          </button>
+          <button class="mini-btn" id="vault-mode-btn-b" onclick="switchVaultViewMode('B')" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:6px; cursor:pointer; transition:all 0.2s;">
+            ✨ Vista B: Bóveda B2B Pro (Attio / Linear)
+          </button>
+        </div>
+      </div>
+
+      <!-- ── VISTA A: CLÁSICA BI & MAPA GIS ── -->
+      <div id="vault-view-container-a">
+        <div class="section-header">
+          <div><div class="section-title">🌐 Mi Red de Contactos</div><div class="section-sub">Análisis por jerarquía, país y sector</div></div>
+          <button class="mini-btn" onclick="exportCSV(filteredContacts, 'red_contactos')">↓ Exportar CSV</button>
+        </div>
+
+        <!-- BANNER PRUEBA A/B RONAN BI TEST -->
+        <div id="ronan-ab-banner" style="display:none; background:linear-gradient(135deg, rgba(79,70,229,0.18), rgba(124,58,237,0.18)); border:1px solid var(--accent); border-radius:12px; padding:14px 18px; margin-bottom:16px; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+          <div>
+            <div style="font-size:13px; font-weight:800; color:var(--accent); font-family:'Outfit',sans-serif; display:flex; align-items:center; gap:8px;">
+              <span>🧪 MÓDULO DE VALIDACIÓN BI / PRUEBA A/B (DEMO RONAN)</span>
+            </div>
+            <div style="font-size:11px; color:var(--text-muted); margin-top:3px; max-width:650px;" id="ronan-ab-explainer">
+              🟢 <b>Opción B (Enriquecida en Vivo 2026):</b> Muestra la red viva con HarvestAPI + IA. Revela los cargos actuales (CEOs, VPs) de contactos que eran analistas en 2018.
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; background:var(--bg); padding:4px 6px; border-radius:8px; border:1px solid var(--border);">
+            <button class="mini-btn" id="ab-btn-option-a" onclick="switchRonanAbMode('A')" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:6px; background:transparent; color:var(--text-muted); border:1px solid var(--border); cursor:pointer;">
+              🔴 Opción A: CSV Plano (Sin Enriquecer)
+            </button>
+            <button class="mini-btn active" id="ab-btn-option-b" onclick="switchRonanAbMode('B')" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:6px; background:var(--accent); color:#fff; border:1px solid var(--accent); cursor:pointer;">
+              🟢 Opción B: Enriquecido en Vivo (2026)
+            </button>
+          </div>
+        </div>
+
+        <div class="kpi-row" id="net-kpis"></div>
+        <div class="charts-row" id="net-charts" style="display:none">
+          <div class="chart-card"><div class="chart-title">Jerarquía</div><div class="chart-canvas-wrap"><canvas id="chart-hier"></canvas></div></div>
+          <div class="chart-card"><div class="chart-title">Top Países</div><div class="chart-canvas-wrap"><canvas id="chart-countries"></canvas></div></div>
+        </div>
+        
+        <!-- 🗺️ MAPA ESPACIAL GIS (mapcn-gis-specialist) -->
+        <div class="chart-card" id="map-gis-card" style="display:none; margin-bottom: 16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
+            <div class="chart-title" style="display:flex; align-items:center; gap:8px;">
+              <span>🗺️ Mapa Espacial de Relaciones (Warm Territory Intelligence)</span>
+              <span class="badge badge-green" id="map-contact-count">0 contactos mapeados</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <button class="mini-btn" onclick="resetMapZoom()" style="padding:4px 8px; font-size:11px;">🔍 Re-centrar Mapa</button>
+            </div>
+          </div>
+          <div id="gis-map" style="width:100%; height:320px; border-radius:10px; border:1px solid var(--border); background:var(--bg); z-index:1;"></div>
+        </div>
+
+        <!-- FILTROS & TABLA CLÁSICA -->
+        <div class="filter-bar">
+          <div class="filter-group" style="flex:2">
+            <label>Buscar en la red</label>
+            <input class="filter-input" id="search-input" type="text" placeholder="Nombre, cargo, empresa, país, ciudad..." oninput="onFilterChange()">
+          </div>
+          <div class="filter-group">
+            <label>Jerarquía</label>
+            <select class="filter-input" id="filter-hier" onchange="onFilterChange()">
+              <option value="">Todas</option>
+              <option value="c-level">C-Level (CEO, CTO...)</option>
+              <option value="director">Director / VP</option>
+              <option value="gerente">Gerente / Manager</option>
+              <option value="otro">Otros cargos</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>País</label>
+            <select class="filter-input" id="filter-country" onchange="onFilterChange()">
+              <option value="">Todos los países</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; font-size:12px; color:var(--text-muted);">
+          <div id="table-counter">Mostrando 0 contactos</div>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span>Orden:</span>
+            <select class="filter-input" id="sort-select" onchange="onFilterChange()" style="font-size:11px; padding:3px 8px;">
+              <option value="name-asc">Nombre (A-Z)</option>
+              <option value="score-desc">Mayor Scoring ICP</option>
+              <option value="date-desc">Conexión reciente</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table id="contacts-table">
+            <thead>
+              <tr>
+                <th>Contacto</th>
+                <th>Cargo / Posición</th>
+                <th>Empresa</th>
+                <th>Ubicación</th>
+                <th>Fecha Conexión</th>
+                <th>Score ICP</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="contacts-tbody"></tbody>
+          </table>
+        </div>
+      </div><!-- END vault-view-container-a -->
 
       <!-- ── VISTA B: REDISEÑO B2B PRO (ATTIO / LINEAR SPEC) ── -->
       <div id="vault-view-container-b" style="display:none; font-family:'Outfit',sans-serif;">
-        
         <!-- BÚSQUEDA HÉROE PROTAGONISTA -->
         <div style="background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:24px 20px; margin-bottom:20px; box-shadow:var(--shadow-sm);">
           <div style="text-align:center; max-width:640px; margin:0 auto 16px auto;">
@@ -1069,12 +1180,10 @@
         <div id="vault-b-feed" style="display:flex; flex-direction:column; gap:10px;">
           <!-- Injected dynamically by renderVaultBFeed() -->
         </div>
-
-      </div>
+      </div><!-- END vault-view-container-b -->
 
     </div><!-- END sec-network -->
-
-    <!-- ── PROFILE ── -->
+<!-- ── PROFILE ── -->
     <div class="section" id="sec-profile">
       <div class="section-header">
         <div><div class="section-title">👤 Mi Perfil</div><div class="section-sub">Historial laboral y contexto activo para pitches</div></div>
