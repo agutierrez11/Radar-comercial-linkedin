@@ -1057,38 +1057,38 @@
               <button class="mini-btn" onclick="resetMapZoom()" style="padding:4px 8px; font-size:11px;">🔍 Re-centrar Mapa</button>
             </div>
           </div>
-          <div id="gis-map" style="width:100%; height:320px; border-radius:10px; border:1px solid var(--border); background:var(--bg); z-index:1;"></div>
+          <div id="gis-map-container" style="width:100%; height:320px; border-radius:10px; border:1px solid var(--border); background:var(--bg); z-index:1;"></div>
         </div>
 
         <!-- FILTROS & TABLA CLÁSICA -->
         <div class="filter-bar">
           <div class="filter-group" style="flex:2">
             <label>Buscar en la red</label>
-            <input class="filter-input" id="search-input" type="text" placeholder="Nombre, cargo, empresa, país, ciudad..." oninput="onFilterChange()">
+            <input class="filter-input" id="net-search" type="text" placeholder="Nombre, cargo, empresa, país, ciudad..." oninput="applyNetworkFilters()">
           </div>
           <div class="filter-group">
             <label>Jerarquía</label>
-            <select class="filter-input" id="filter-hier" onchange="onFilterChange()">
+            <select class="filter-input" id="net-hier" onchange="applyNetworkFilters()">
               <option value="">Todas</option>
-              <option value="c-level">C-Level (CEO, CTO...)</option>
-              <option value="director">Director / VP</option>
-              <option value="gerente">Gerente / Manager</option>
-              <option value="otro">Otros cargos</option>
+              <option value="C-Level">C-Level (CEO, CTO...)</option>
+              <option value="Director">Director / VP</option>
+              <option value="Gerente">Gerente / Manager</option>
+              <option value="Otro">Otros cargos</option>
             </select>
           </div>
           <div class="filter-group">
             <label>País</label>
-            <select class="filter-input" id="filter-country" onchange="onFilterChange()">
+            <select class="filter-input" id="net-country" onchange="applyNetworkFilters()">
               <option value="">Todos los países</option>
             </select>
           </div>
         </div>
 
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; font-size:12px; color:var(--text-muted);">
-          <div id="table-counter">Mostrando 0 contactos</div>
+          <div id="net-counter">Mostrando contactos de tu red</div>
           <div style="display:flex; gap:8px; align-items:center;">
             <span>Orden:</span>
-            <select class="filter-input" id="sort-select" onchange="onFilterChange()" style="font-size:11px; padding:3px 8px;">
+            <select class="filter-input" id="net-sort" onchange="applyNetworkFilters()" style="font-size:11px; padding:3px 8px;">
               <option value="name-asc">Nombre (A-Z)</option>
               <option value="score-desc">Mayor Scoring ICP</option>
               <option value="date-desc">Conexión reciente</option>
@@ -1109,8 +1109,11 @@
                 <th>Acciones</th>
               </tr>
             </thead>
-            <tbody id="contacts-tbody"></tbody>
+            <tbody id="net-tbody"></tbody>
           </table>
+          <div id="net-empty" style="display:none; text-align:center; padding:30px; color:var(--text-muted);">
+            No se encontraron contactos con los filtros seleccionados.
+          </div>
         </div>
       </div><!-- END vault-view-container-a -->
 
@@ -8497,6 +8500,12 @@ function switchVaultViewMode(mode) {
     if (btnB) { btnB.classList.remove('active'); btnB.style.background = 'transparent'; btnB.style.color = 'var(--text-muted)'; }
     if (containerB) containerB.style.display = 'none';
     if (containerA) containerA.style.display = 'block';
+    if (typeof renderNetwork === 'function') renderNetwork();
+    setTimeout(() => {
+      if (typeof gisMapInstance !== 'undefined' && gisMapInstance && typeof gisMapInstance.invalidateSize === 'function') {
+        gisMapInstance.invalidateSize();
+      }
+    }, 150);
     showToast('📊 Vista Clásica (Dashboard BI & Mapa GIS) activada.', '📊');
   }
 }
