@@ -3244,9 +3244,23 @@ function renderHeader() {
   const clevel = activeContacts.filter(c => c.hierarchy === 'C-Level').length;
   const countries = new Set(activeContacts.filter(c => c.country !== 'Desconocido').map(c => c.country)).size;
   const classa = activeContacts.filter(c => c.score >= 60).length;
+
+  // Header KPIs
   setEl('hkpi-total', el => el.textContent = total.toLocaleString());
   setEl('hkpi-clevel', el => el.textContent = clevel);
   setEl('hkpi-countries', el => el.textContent = countries);
+
+  // Sidebar Badges
+  setEl('nb-network', el => el.textContent = total > 0 ? total.toLocaleString() : '-');
+  setEl('nb-icp', el => el.textContent = classa > 0 ? classa.toLocaleString() : '-');
+
+  const purgeCount = (S.contacts || []).filter(c => typeof isPurgeCandidate === 'function' && isPurgeCandidate(c)).length;
+  setEl('nb-purge', el => el.textContent = purgeCount > 0 ? purgeCount.toLocaleString() : '-');
+
+  const crmCount = (S.contacts || []).filter(c => c.crmStatus && c.crmStatus !== 'Ninguno' && c.crmStatus !== 'Descartado').length;
+  setEl('nb-crm', el => el.textContent = crmCount);
+
+  // Dunbar Bar
   const dunbarPct = Math.min(100, (classa / 150) * 100);
   setEl('dunbar-fill', el => {
     el.style.width = dunbarPct + '%';
@@ -3254,6 +3268,17 @@ function renderHeader() {
   });
   setEl('dunbar-label', el => el.textContent = `${classa}/150`);
   setEl('header-kpis', el => el.style.display = 'flex');
+
+  // Messages Badge (2,088 conversations / messages)
+  const convSet = new Set();
+  if (S.messages && S.messages.length > 0) {
+    S.messages.forEach(m => {
+      const cid = m.conv_id || m['CONVERSATION ID'] || m.CONVERSATION_ID || m.FROM || m.SENDER_NAME;
+      if (cid) convSet.add(cid);
+    });
+  }
+  const msgsCount = convSet.size > 0 ? convSet.size : ((S.contacts || []).filter(c => c.msg_count && c.msg_count > 0).length);
+  setEl('nb-msgs', el => el.textContent = msgsCount > 0 ? msgsCount.toLocaleString() : '-');
 }
 
 
