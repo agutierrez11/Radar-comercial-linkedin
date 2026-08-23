@@ -795,14 +795,14 @@
       <span id="dunbar-label">0/150</span>
     </div>
   </div>
-  <div class="kpi-pill" id="active-user-pill" onclick="openLoginModal()" style="cursor:pointer; background:rgba(79,70,229,0.15); border-color:var(--accent); color:var(--text); font-weight:700;" title="Haz clic para cambiar de usuario / bóveda">
+  <div class="kpi-pill" id="active-user-pill" onclick="openLoginModal()" style="cursor:pointer !important; background:rgba(79,70,229,0.15); border-color:var(--accent); color:var(--text); font-weight:700; z-index:1001 !important; position:relative !important;" title="Haz clic para cambiar de usuario / bóveda">
     <span class="dot" style="background:var(--green)"></span><span id="active-user-name">👤 Antonio (Master)</span>
   </div>
   <input type="text" id="network-talk-search" class="filter-input" placeholder="💬 Habla con tu Red (DMs, notas, búsquedas...)" style="width:240px; margin-left:4px; font-size:11px;" onkeyup="handleTalkToNetworkSearch(event)" title="Busca en todos los 49 CSVs del ZIP (DMs, invitaciones, teléfonos, shares, etc.)">
   <button class="mini-btn" id="theme-toggle" onclick="toggleTheme()" style="margin-left:auto; display:flex; align-items:center; gap:6px; padding:4px 10px; font-weight:600; font-family:'Outfit', sans-serif;">
     <span id="theme-icon">☀️</span> <span id="theme-text">Modo Claro</span>
   </button>
-  <button class="mini-btn" onclick="openLoginModal()" style="margin-left:6px; display:flex; align-items:center; gap:5px; padding:4px 9px; font-weight:600; font-family:'Outfit', sans-serif; border:1px solid var(--accent); color:var(--text); background:rgba(79,70,229,0.12);">
+  <button class="mini-btn" id="btn-login-header" onclick="openLoginModal()" style="margin-left:6px; display:flex; align-items:center; gap:5px; padding:4px 9px; font-weight:600; font-family:'Outfit', sans-serif; border:1px solid var(--accent); color:var(--text); background:rgba(79,70,229,0.12); cursor:pointer !important; z-index:1001 !important; position:relative !important;">
     <span>🔐</span> <span>Login</span>
   </button>
   <button class="mini-btn" id="byok-btn" onclick="openAIConfigModal()" style="margin-left:4px; display:flex; align-items:center; gap:6px; padding:4px 10px; font-weight:600; font-family:'Outfit', sans-serif; border:1px solid var(--purple); color:var(--purple); background:rgba(124,58,237,0.08);">
@@ -7397,26 +7397,46 @@ async function syncZipFileToSupabase(userId, filename, recordsArray, headersArra
 window.currentAuthUser = { id: 'antonio', name: 'Antonio (Master)', isMaster: true };
 
 function openLoginModal() {
-  const modal = document.getElementById('login-modal');
+  console.log('[LoginModal] Opening login modal...');
+  let modal = document.getElementById('login-modal');
   if (modal) {
+    document.body.appendChild(modal); // Ensure modal is direct child of body
     modal.classList.add('open');
-    modal.style.cssText = 'position:fixed; inset:0; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); z-index:999999 !important; display:flex !important; align-items:center; justify-content:center; opacity:1 !important; pointer-events:auto !important;';
+    modal.style.setProperty('display', 'flex', 'important');
+    modal.style.setProperty('visibility', 'visible', 'important');
+    modal.style.setProperty('opacity', '1', 'important');
+    modal.style.setProperty('z-index', '9999999', 'important');
+    modal.style.setProperty('pointer-events', 'auto', 'important');
+    modal.style.setProperty('position', 'fixed', 'important');
+    modal.style.setProperty('inset', '0', 'important');
+    modal.style.setProperty('background', 'rgba(10, 10, 18, 0.88)', 'important');
+    modal.style.setProperty('backdrop-filter', 'blur(12px)', 'important');
+  } else {
+    console.error('[LoginModal] Element #login-modal not found');
   }
 }
+window.openLoginModal = openLoginModal;
 
 function closeLoginModal() {
+  console.log('[LoginModal] Closing login modal...');
   const modal = document.getElementById('login-modal');
   if (modal) {
     modal.classList.remove('open');
-    modal.style.cssText = 'display:none !important; opacity:0 !important; pointer-events:none !important;';
+    modal.style.setProperty('display', 'none', 'important');
+    modal.style.setProperty('opacity', '0', 'important');
+    modal.style.setProperty('pointer-events', 'none', 'important');
   }
 }
+window.closeLoginModal = closeLoginModal;
 
 function quickLogin(username, pwd) {
-  document.getElementById('login-username-input').value = username;
-  document.getElementById('login-password-input').value = pwd;
+  const usernameInput = document.getElementById('login-username-input');
+  const pwdInput = document.getElementById('login-password-input');
+  if (usernameInput) usernameInput.value = username;
+  if (pwdInput) pwdInput.value = pwd;
   submitCustomLogin();
 }
+window.quickLogin = quickLogin;
 
 function submitCustomLogin() {
   const username = (document.getElementById('login-username-input').value || '').trim().toLowerCase();
