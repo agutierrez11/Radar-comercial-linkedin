@@ -50,6 +50,9 @@ def main():
 
         page.on("console", handle_console)
         page.on("pageerror", lambda exc: console_errors.append(str(exc)))
+        
+        # Handle prompt dialogs for PIN Admin automatically
+        page.on("dialog", lambda dialog: dialog.accept("12345"))
 
         # 1. Navigate to staging.html
         url = f"http://127.0.0.1:{PORT}/staging.html"
@@ -62,8 +65,14 @@ def main():
         login_btn = page.query_selector('button:has-text("Entrar a mi bóveda")')
         if login_btn and page.is_visible('#login-modal'):
             print("  ✓ Ventana de Bienvenida detectada en inicio.", flush=True)
-            # Click Antonio Bóveda Personal to enter
-            page.click('button:has-text("Antonio · Bóveda personal")')
+            # Submit Antonio Admin Login
+            user_input = page.query_selector('#login-username-input')
+            if user_input:
+                user_input.fill('antonio')
+            pwd_input = page.query_selector('#login-password-input')
+            if pwd_input:
+                pwd_input.fill('12345')
+            login_btn.click()
             time.sleep(0.8)
             print("  ✓ Autenticado como Antonio (Master Vault).", flush=True)
 
@@ -92,21 +101,27 @@ def main():
         if user_pill:
             user_pill.click()
             time.sleep(0.4)
-            page.click('button:has-text("Ronan · Sandbox colaborativo")')
-            time.sleep(0.5)
-            print("  ✓ Conmutado a Ronan Sandbox (500 contactos).", flush=True)
+            ronan_btn = page.query_selector('#admin-vault-dropdown button:has-text("Ronan")')
+            if ronan_btn:
+                ronan_btn.click()
+                time.sleep(0.5)
+                print("  ✓ Conmutado a Ronan Sandbox (500 contactos).", flush=True)
 
             user_pill.click()
             time.sleep(0.4)
-            page.click('button:has-text("Giovanna · Bóveda de prueba")')
-            time.sleep(0.5)
-            print("  ✓ Conmutado a Giovanna (Bóveda privada aislada).", flush=True)
+            gio_btn = page.query_selector('#admin-vault-dropdown button:has-text("Giovanna")')
+            if gio_btn:
+                gio_btn.click()
+                time.sleep(0.5)
+                print("  ✓ Conmutado a Giovanna (Bóveda privada aislada).", flush=True)
 
             user_pill.click()
             time.sleep(0.4)
-            page.click('button:has-text("Antonio · Bóveda personal")')
-            time.sleep(0.5)
-            print("  ✓ Restaurado Antonio (Master Vault 2,953 contactos).", flush=True)
+            ant_btn = page.query_selector('#admin-vault-dropdown button:has-text("Antonio")')
+            if ant_btn:
+                ant_btn.click()
+                time.sleep(0.5)
+                print("  ✓ Restaurado Antonio (Master Vault 2,953 contactos).", flush=True)
 
         # 6. Screenshot
         screenshot_path = os.path.join(DIR, "staging_qa_screenshot.png")
