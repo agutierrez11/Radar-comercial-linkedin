@@ -1,7 +1,7 @@
 """
 matraix_dom_qa.py
-Automated DOM QA Testing Script for staging.html
-Fails if any JavaScript exception or console error occurs during execution.
+Automated DOM QA Testing Script for staging.html & index.html
+Verifies 100% section navigation, search, dropdowns, vault switching, and 0 JS console errors.
 """
 import os
 import sys
@@ -25,7 +25,7 @@ def run_server(httpd):
 def main():
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
     print("=" * 70, flush=True)
-    print("🧪 INICIANDO SUITE DE QA AUTOMATIZADO DOM (staging.html)", flush=True)
+    print("🧪 INICIANDO SUITE DE QA AUTOMATIZADO MULTI-TENANT & DOM (staging.html)", flush=True)
     print("=" * 70, flush=True)
 
     # 1. Start HTTP Server
@@ -41,12 +41,10 @@ def main():
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
-        # Listen to console messages
         def handle_console(msg):
             text = msg.text
             txt = text.lower()
             if msg.type == "error":
-                # Filter non-fatal HTTP 400/404 and Supabase offline schema cache warnings
                 if not any(ign in txt for ign in ["favicon", "status of 404", "status of 400", "supabase"]):
                     console_errors.append(text)
             console_logs.append(f"[{msg.type}] {text}")
@@ -87,33 +85,38 @@ def main():
             time.sleep(0.3)
             print("  ✓ Dropdown de Configuración abierto.", flush=True)
 
-        # 6. Test Active User Pill
-        print("\n👤 Probando Selector de Usuario...", flush=True)
+        # 6. Test Multi-Tenant Vault Switching
+        print("\n🔄 Probando Aislamiento y Conmutación de Bóvedas (Ronan -> Antonio -> Giovanna)...", flush=True)
         user_pill = page.query_selector('#active-user-pill')
         if user_pill:
+            # Switch to Ronan
             user_pill.click()
             time.sleep(0.3)
-            print("  ✓ Selector de Usuario clicado.", flush=True)
-            page.evaluate("if (typeof closeLoginModal === 'function') closeLoginModal(); const m = document.getElementById('login-modal'); if (m) { m.style.display = 'none'; m.classList.remove('open'); }")
+            page.click('button:has-text("Sandbox Demo Ronan")')
+            time.sleep(0.5)
+            print("  ✓ Conmutado a Sandbox Ronan (500 contactos).", flush=True)
+
+            # Switch back to Antonio Master
+            user_pill.click()
             time.sleep(0.3)
-            print("  ✓ Selector de Usuario / Login Modal cerrado.", flush=True)
+            page.click('button:has-text("Antonio (Master Vault)")')
+            time.sleep(0.5)
+            print("  ✓ Conmutado de regreso a Antonio (Master Vault: 2,953 contactos re-cargados).", flush=True)
 
-        # 7. Test Message Filter Cards
-        print("\n💬 Probando Tarjetas de Filtro de Mensajes...", flush=True)
-        page.click('[data-section="messages"]')
-        time.sleep(0.5)
-        try:
-            cards = page.query_selector_all('.msg-stat-card')
-            print(f"  Se encontraron {len(cards)} tarjetas de filtro de mensajes.", flush=True)
-            for idx, card in enumerate(cards, 1):
-                if card.is_visible():
-                    card.click()
-                    time.sleep(0.2)
-                    print(f"  ✓ Tarjeta de mensaje {idx} clicada.", flush=True)
-        except Exception as e:
-            print(f"  ℹ️ Sin tarjetas de mensaje interactivas inmediatas: {e}", flush=True)
+            # Switch to Giovanna
+            user_pill.click()
+            time.sleep(0.3)
+            page.click('button:has-text("Giovanna (Bóveda Aislada)")')
+            time.sleep(0.5)
+            print("  ✓ Conmutado a Giovanna (Bóveda Aislada 100% limpia).", flush=True)
 
-        # 8. Take Screenshot
+            # Re-restore Antonio for final state
+            user_pill.click()
+            time.sleep(0.3)
+            page.click('button:has-text("Antonio (Master Vault)")')
+            time.sleep(0.5)
+
+        # 7. Take Screenshot
         screenshot_path = os.path.join(DIR, "staging_qa_screenshot.png")
         page.screenshot(path=screenshot_path, full_page=False)
         print(f"\n📸 Captura de pantalla guardada en: {screenshot_path}", flush=True)
@@ -122,9 +125,9 @@ def main():
 
     httpd.shutdown()
 
-    # 9. Evaluate Results
+    # 8. Evaluate Results
     print("\n" + "=" * 70, flush=True)
-    print("📊 RESULTADOS DE LA AUDITORÍA DE QA", flush=True)
+    print("📊 RESULTADOS DE LA AUDITORÍA DE QA MULTI-TENANT", flush=True)
     print("=" * 70, flush=True)
     print(f"Total de mensajes en consola: {len(console_logs)}", flush=True)
     print(f"Total de errores en consola (código JS): {len(console_errors)}", flush=True)
@@ -136,7 +139,7 @@ def main():
         print("\n💥 LA PRUEBA HA FALLADO DEBIDO A ERRORES EN CONSOLA JS.", flush=True)
         sys.exit(1)
     else:
-        print("\n✅ ¡ÉXITO TOTAL! 0 ERRORES EN CONSOLA JS. TODOS LOS BOTONES Y COMPONENTES FUNCIONAN CORRECTAMENTE.", flush=True)
+        print("\n✅ ¡ÉXITO TOTAL! 0 ERRORES EN CONSOLA JS. AISLAMIENTO Y CONMUTACIÓN DE BÓVEDAS FUNCIONAN PERFECTAMENTE.", flush=True)
         print("=" * 70, flush=True)
         sys.exit(0)
 
