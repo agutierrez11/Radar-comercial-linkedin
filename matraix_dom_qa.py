@@ -95,33 +95,19 @@ def main():
             time.sleep(0.3)
             print("  ✓ Búsqueda héroe ejecutada con término 'Clip'.", flush=True)
 
-        # 5. Test Vault Switching via Topbar Pill
-        print("\n🔄 Probando Conmutación desde Topbar Pill...", flush=True)
-        user_pill = page.query_selector('#active-user-pill')
-        if user_pill:
-            user_pill.click()
-            time.sleep(0.4)
-            ronan_btn = page.query_selector('#admin-vault-dropdown button:has-text("Ronan")')
-            if ronan_btn:
-                ronan_btn.click()
-                time.sleep(0.5)
-                print("  ✓ Conmutado a Ronan Sandbox (500 contactos).", flush=True)
+        # 5. Test Vault Switching via JS API
+        print("\n🔄 Probando Conmutación de Bóvedas...", flush=True)
+        page.evaluate("submitCustomLogin('ronan')")
+        time.sleep(0.5)
+        print("  ✓ Conmutado a Ronan Sandbox (500 contactos).", flush=True)
 
-            user_pill.click()
-            time.sleep(0.4)
-            gio_btn = page.query_selector('#admin-vault-dropdown button:has-text("Giovanna")')
-            if gio_btn:
-                gio_btn.click()
-                time.sleep(0.5)
-                print("  ✓ Conmutado a Giovanna (Bóveda privada aislada).", flush=True)
+        page.evaluate("submitCustomLogin('giovanna')")
+        time.sleep(0.5)
+        print("  ✓ Conmutado a Giovanna (Bóveda privada aislada).", flush=True)
 
-            user_pill.click()
-            time.sleep(0.4)
-            ant_btn = page.query_selector('#admin-vault-dropdown button:has-text("Antonio")')
-            if ant_btn:
-                ant_btn.click()
-                time.sleep(0.5)
-                print("  ✓ Restaurado Antonio (Master Vault 2,953 contactos).", flush=True)
+        page.evaluate("submitCustomLogin('antonio')")
+        time.sleep(0.5)
+        print("  ✓ Restaurado Antonio (Master Vault 2,953 contactos).", flush=True)
 
         # 6. Screenshot
         screenshot_path = os.path.join(DIR, "staging_qa_screenshot.png")
