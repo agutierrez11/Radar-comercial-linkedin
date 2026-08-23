@@ -2910,6 +2910,21 @@ async function loadDemoData(autoNavigate = true) {
 
     S.contacts.forEach(c => { c.score = scoreContact(c); });
     icpContacts = S.contacts.filter(c => c.score >= 40).sort((a,b) => b.score - a.score);
+
+    // Fetch real 25,110 messages for Antonio
+    try {
+      const msgRes = await fetch("antonio_real_messages_25k.json");
+      if (msgRes.ok) {
+        const msgJson = await msgRes.json();
+        if (msgJson && msgJson.length > 0) {
+          S.messages = msgJson;
+          console.log(`[LoadDemo] Loaded ${S.messages.length.toLocaleString()} real messages for Antonio.`);
+        }
+      }
+    } catch(mErr) {
+      console.warn("[LoadDemo] Failed to fetch antonio_real_messages_25k.json:", mErr);
+    }
+
     S.loadedParts = { connections: true, positions: true, messages: true, profile: true };
 
     finalize();
@@ -3210,8 +3225,9 @@ function renderHeader() {
   const purgeCount = S.contacts.filter(c => isPurgeCandidate(c)).length;
   document.getElementById('nb-purge').textContent = purgeCount.toLocaleString();
   
+  const realConvsCount = new Set((S.messages || []).map(m => m.conv_id || m['CONVERSATION ID'])).size;
   const msgsCount = S.contacts.filter(c => c.msg_count && c.msg_count > 0).length;
-  document.getElementById('nb-msgs').textContent = msgsCount > 0 ? msgsCount.toLocaleString() : (S.messages.length > 0 ? S.messages.length.toLocaleString() : '–');
+  document.getElementById('nb-msgs').textContent = realConvsCount > 0 ? realConvsCount.toLocaleString() : (msgsCount > 0 ? msgsCount.toLocaleString() : '–');
   
   const crmCount = S.contacts.filter(c => c.crmStatus && c.crmStatus !== 'Ninguno' && c.crmStatus !== 'Descartado').length;
   document.getElementById('nb-crm').textContent = crmCount;
