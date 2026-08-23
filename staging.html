@@ -4173,6 +4173,10 @@ function toggleAllPurgeChecks(val) {
 function getRowVal(row, targetKey) {
   if (!row) return '';
   const target = targetKey.toLowerCase().trim();
+  if ((target === 'conversation id' || target === 'conv_id') && (row.conv_id || row.CONVERSATION_ID)) return row.conv_id || row.CONVERSATION_ID;
+  if ((target === 'from' || target === 'sender') && (row.sender || row.FROM)) return row.sender || row.FROM;
+  if ((target === 'date' || target === 'sent_at') && (row.sent_at || row.DATE)) return row.sent_at || row.DATE;
+  if ((target === 'content' || target === 'text') && (row.content || row.CONTENT)) return row.content || row.CONTENT;
   for (const k in row) {
     const cleanK = k.replace(/^["']|["']$/g, '').toLowerCase().trim();
     if (cleanK === target) {
@@ -7189,6 +7193,22 @@ function processRestoredVault(val, resolve) {
     S.loadedParts.connections = true;
     S.loadedParts.messages = S.messages.length > 0;
     S.isDemoLoaded = false;
+    
+    // Auto-load 25,110 real messages for Antonio if messages array is empty
+    const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
+    if (userId === 'antonio' && (!S.messages || S.messages.length === 0)) {
+      fetch('antonio_real_messages_25k.json')
+        .then(r => r.ok ? r.json() : null)
+        .then(msgData => {
+          if (msgData && msgData.length > 0) {
+            S.messages = msgData;
+            S.loadedParts.messages = true;
+            console.log(`[RealMessages] Cargados ${S.messages.length.toLocaleString()} mensajes reales para Antonio.`);
+            if (typeof updateStatus === 'function') updateStatus();
+          }
+        }).catch(err => console.warn('[RealMessages Fetch Warning]', err));
+    }
+    
     console.log(`[AutoVault] Bóveda restaurada desde IndexedDB (${S.contacts.length} contactos).`);
     resolve(true);
   } else {
