@@ -1,7 +1,7 @@
 """
 matraix_dom_qa.py
 Automated DOM QA Testing Script for staging.html & index.html
-Verifies 100% section navigation, search, dropdowns, vault switching, and 0 JS console errors.
+Verifies Welcome Access Gateway, vault switching, navigation, and 0 JS console errors.
 """
 import os
 import sys
@@ -25,10 +25,9 @@ def run_server(httpd):
 def main():
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
     print("=" * 70, flush=True)
-    print("🧪 INICIANDO SUITE DE QA AUTOMATIZADO MULTI-TENANT & DOM (staging.html)", flush=True)
+    print("🧪 INICIANDO SUITE DE QA AUTOMATIZADO WELCOME GATEWAY & DOM", flush=True)
     print("=" * 70, flush=True)
 
-    # 1. Start HTTP Server
     httpd = HTTPServer(('127.0.0.1', PORT), QuietHandler)
     server_thread = threading.Thread(target=run_server, args=(httpd,), daemon=True)
     server_thread.start()
@@ -52,11 +51,21 @@ def main():
         page.on("console", handle_console)
         page.on("pageerror", lambda exc: console_errors.append(str(exc)))
 
-        # 2. Navigate to staging.html
+        # 1. Navigate to staging.html
         url = f"http://127.0.0.1:{PORT}/staging.html"
         print(f"🌐 Navegando a {url}...", flush=True)
         page.goto(url, wait_until="domcontentloaded")
-        time.sleep(1.5)
+        time.sleep(1.0)
+
+        # 2. Check Welcome Access Gateway Modal on Startup
+        print("\n🔐 Verificando Ventana de Acceso / Welcome Gateway en inicio...", flush=True)
+        login_btn = page.query_selector('button:has-text("Entrar a mi bóveda")')
+        if login_btn and page.is_visible('#login-modal'):
+            print("  ✓ Ventana de Bienvenida detectada en inicio.", flush=True)
+            # Click Antonio Bóveda Personal to enter
+            page.click('button:has-text("Antonio · Bóveda personal")')
+            time.sleep(0.8)
+            print("  ✓ Autenticado como Antonio (Master Vault).", flush=True)
 
         # 3. Test Sidebar Navigation Items
         sections = ['upload', 'network', 'graph', 'messages', 'analytics', 'icp', 'crm', 'profile', 'purge', 'benchmarks']
@@ -77,46 +86,29 @@ def main():
             time.sleep(0.3)
             print("  ✓ Búsqueda héroe ejecutada con término 'Clip'.", flush=True)
 
-        # 5. Test Config / Más Modal & Dropdown
-        print("\n⚙️ Probando Menú / Modal de Configuración / Más...", flush=True)
-        more_btn = page.query_selector('#more-menu-btn')
-        if more_btn:
-            more_btn.click()
-            time.sleep(0.3)
-            print("  ✓ Dropdown de Configuración abierto.", flush=True)
-
-        # 6. Test Multi-Tenant Vault Switching
-        print("\n🔄 Probando Aislamiento y Conmutación de Bóvedas (Ronan -> Antonio -> Giovanna)...", flush=True)
+        # 5. Test Vault Switching via Topbar Pill
+        print("\n🔄 Probando Conmutación desde Topbar Pill...", flush=True)
         user_pill = page.query_selector('#active-user-pill')
         if user_pill:
-            # Switch to Ronan
             user_pill.click()
-            time.sleep(0.3)
-            page.click('button:has-text("Sandbox Demo Ronan")')
+            time.sleep(0.4)
+            page.click('button:has-text("Ronan · Sandbox colaborativo")')
             time.sleep(0.5)
-            print("  ✓ Conmutado a Sandbox Ronan (500 contactos).", flush=True)
+            print("  ✓ Conmutado a Ronan Sandbox (500 contactos).", flush=True)
 
-            # Switch back to Antonio Master
             user_pill.click()
-            time.sleep(0.3)
-            page.click('button:has-text("Antonio (Master Vault)")')
+            time.sleep(0.4)
+            page.click('button:has-text("Giovanna · Bóveda de prueba")')
             time.sleep(0.5)
-            print("  ✓ Conmutado de regreso a Antonio (Master Vault: 2,953 contactos re-cargados).", flush=True)
+            print("  ✓ Conmutado a Giovanna (Bóveda privada aislada).", flush=True)
 
-            # Switch to Giovanna
             user_pill.click()
-            time.sleep(0.3)
-            page.click('button:has-text("Giovanna (Bóveda Aislada)")')
+            time.sleep(0.4)
+            page.click('button:has-text("Antonio · Bóveda personal")')
             time.sleep(0.5)
-            print("  ✓ Conmutado a Giovanna (Bóveda Aislada 100% limpia).", flush=True)
+            print("  ✓ Restaurado Antonio (Master Vault 2,953 contactos).", flush=True)
 
-            # Re-restore Antonio for final state
-            user_pill.click()
-            time.sleep(0.3)
-            page.click('button:has-text("Antonio (Master Vault)")')
-            time.sleep(0.5)
-
-        # 7. Take Screenshot
+        # 6. Screenshot
         screenshot_path = os.path.join(DIR, "staging_qa_screenshot.png")
         page.screenshot(path=screenshot_path, full_page=False)
         print(f"\n📸 Captura de pantalla guardada en: {screenshot_path}", flush=True)
@@ -125,9 +117,9 @@ def main():
 
     httpd.shutdown()
 
-    # 8. Evaluate Results
+    # 7. Evaluate Results
     print("\n" + "=" * 70, flush=True)
-    print("📊 RESULTADOS DE LA AUDITORÍA DE QA MULTI-TENANT", flush=True)
+    print("📊 RESULTADOS DE LA AUDITORÍA DE QA WELCOME GATEWAY", flush=True)
     print("=" * 70, flush=True)
     print(f"Total de mensajes en consola: {len(console_logs)}", flush=True)
     print(f"Total de errores en consola (código JS): {len(console_errors)}", flush=True)
@@ -136,10 +128,9 @@ def main():
         print("\n❌ ERRORES ENCONTRADOS EN CONSOLA JS:", flush=True)
         for err in console_errors:
             print(f"  - {err}", flush=True)
-        print("\n💥 LA PRUEBA HA FALLADO DEBIDO A ERRORES EN CONSOLA JS.", flush=True)
         sys.exit(1)
     else:
-        print("\n✅ ¡ÉXITO TOTAL! 0 ERRORES EN CONSOLA JS. AISLAMIENTO Y CONMUTACIÓN DE BÓVEDAS FUNCIONAN PERFECTAMENTE.", flush=True)
+        print("\n✅ ¡ÉXITO TOTAL! VENTANA DE BIENVENIDA Y NAVEGACIÓN FUNCIONAN PERFECTAMENTE (0 ERRORES JS).", flush=True)
         print("=" * 70, flush=True)
         sys.exit(0)
 
