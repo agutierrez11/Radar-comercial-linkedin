@@ -969,6 +969,27 @@
         <div><div class="section-title">🌐 Mi Red de Contactos</div><div class="section-sub">Análisis por jerarquía, país y sector</div></div>
         <button class="mini-btn" onclick="exportCSV(filteredContacts, 'red_contactos')">↓ Exportar CSV</button>
       </div>
+
+      <!-- BANNER PRUEBA A/B RONAN BI TEST -->
+      <div id="ronan-ab-banner" style="display:none; background:linear-gradient(135deg, rgba(79,70,229,0.18), rgba(124,58,237,0.18)); border:1px solid var(--accent); border-radius:12px; padding:14px 18px; margin-bottom:16px; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+        <div>
+          <div style="font-size:13px; font-weight:800; color:var(--accent); font-family:'Outfit',sans-serif; display:flex; align-items:center; gap:8px;">
+            <span>🧪 MÓDULO DE VALIDACIÓN BI / PRUEBA A/B (DEMO RONAN)</span>
+            <span class="badge" style="background:var(--purple); color:#fff; font-size:9px;">TESIS BECARIO ➔ CEO</span>
+          </div>
+          <div style="font-size:11px; color:var(--text-muted); margin-top:3px; max-width:650px;" id="ronan-ab-explainer">
+            🟢 <b>Opción B (Enriquecida en Vivo 2026):</b> Muestra la red viva con HarvestAPI + IA. Revela los cargos actuales (CEOs, VPs) de contactos que eran analistas en 2018.
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px; background:var(--bg); padding:4px 6px; border-radius:8px; border:1px solid var(--border);">
+          <button class="mini-btn" id="ab-btn-option-a" onclick="switchRonanAbMode('A')" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:6px; background:transparent; color:var(--text-muted); border:1px solid var(--border); cursor:pointer;">
+            🔴 Opción A: CSV Plano (Sin Enriquecer)
+          </button>
+          <button class="mini-btn active" id="ab-btn-option-b" onclick="switchRonanAbMode('B')" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:6px; background:var(--accent); color:#fff; border:1px solid var(--accent); cursor:pointer;">
+            🟢 Opción B: Enriquecido en Vivo (2026)
+          </button>
+        </div>
+      </div>
       <div class="kpi-row" id="net-kpis"></div>
       <div class="charts-row" id="net-charts" style="display:none">
         <div class="chart-card"><div class="chart-title">Jerarquía</div><div class="chart-canvas-wrap"><canvas id="chart-hier"></canvas></div></div>
@@ -2906,7 +2927,9 @@ window.addEventListener('DOMContentLoaded', () => {
     if (icon) icon.textContent = '🌙';
     if (text) text.textContent = 'Modo Oscuro';
   }
-  loadDemoData(true);
+  if (window.currentAuthUser && window.currentAuthUser.id === 'antonio' && (!S.contacts || S.contacts.length === 0)) {
+    loadDemoData(true);
+  }
 });
 
 let gisMap = null;
@@ -7086,8 +7109,15 @@ function openVaultDB() {
   });
 }
 
+function getVaultKey() {
+  const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
+  return `vault_${userId}`;
+}
+
 async function saveLocalVault() {
   if (!S.contacts || S.contacts.length === 0 || S.isDemoLoaded) return;
+  const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
+  if (userId === 'giovanna' || userId === 'ronan') return; // Do not auto-overwrite isolated or demo vaults
   try {
     const db = await openVaultDB();
     const tx = db.transaction(STORE_NAME, 'readwrite');
@@ -7099,8 +7129,10 @@ async function saveLocalVault() {
       positions: S.positions || [],
       messages: S.messages || []
     };
-    store.put(dataToSave, 'current_vault');
-    console.log(`[AutoVault] Bóveda guardada automáticamente (${S.contacts.length} contactos, ${S.messages ? S.messages.length : 0} mensajes).`);
+    const vaultKey = getVaultKey();
+    store.put(dataToSave, vaultKey);
+    store.put(dataToSave, 'current_vault'); // Backward compatibility for master
+    console.log(`[AutoVault] Bóveda guardada para ${vaultKey} (${S.contacts.length} contactos).`);
   } catch (err) {
     console.warn('[AutoVault Save Error]', err);
   }
@@ -7108,38 +7140,59 @@ async function saveLocalVault() {
 
 async function restoreLocalVault() {
   try {
+    const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
+    if (userId === 'giovanna') {
+      console.log('[AutoVault] Giovanna vault requested. Isolated empty vault enforced.');
+      return false;
+    }
+    
     const db = await openVaultDB();
     const tx = db.transaction(STORE_NAME, 'readonly');
     const store = tx.objectStore(STORE_NAME);
-    const request = store.get('current_vault');
+    const vaultKey = getVaultKey();
+    const request = store.get(vaultKey);
 
     return new Promise((resolve) => {
       request.onsuccess = (e) => {
-        const val = e.target.result;
-        if (val && val.contacts && val.contacts.length > 0) {
-          S.contacts = val.contacts.map(c => {
-            if (!c.name || c.name === 'Sin nombre') {
-              c.name = c.full_name || c.originalName || (c.first_name ? (c.first_name + ' ' + (c.last_name || '')).trim() : '') || c.name || 'Sin nombre';
-            }
-            return c;
-          });
-          S.positions = val.positions || [];
-          S.messages = val.messages || [];
-          S.ownerName = val.ownerName || '';
-          S.loadedParts.connections = true;
-          S.loadedParts.messages = S.messages.length > 0;
-          S.isDemoLoaded = false;
-          console.log(`[AutoVault] Bóveda restaurada desde IndexedDB (${S.contacts.length} contactos, ${S.messages.length} mensajes).`);
-          resolve(true);
-        } else {
-          resolve(false);
+        let val = e.target.result;
+        // Fallback for Antonio master vault
+        if (!val && userId === 'antonio') {
+          const fallbackReq = store.get('current_vault');
+          fallbackReq.onsuccess = (fe) => {
+            val = fe.target.result;
+            processRestoredVault(val, resolve);
+          };
+          fallbackReq.onerror = () => resolve(false);
+          return;
         }
+        processRestoredVault(val, resolve);
       };
       request.onerror = () => resolve(false);
     });
   } catch (err) {
     console.warn('[AutoVault Restore Error]', err);
     return false;
+  }
+}
+
+function processRestoredVault(val, resolve) {
+  if (val && val.contacts && val.contacts.length > 0) {
+    S.contacts = val.contacts.map(c => {
+      if (!c.name || c.name === 'Sin nombre') {
+        c.name = c.full_name || c.originalName || (c.first_name ? (c.first_name + ' ' + (c.last_name || '')).trim() : '') || c.name || 'Sin nombre';
+      }
+      return c;
+    });
+    S.positions = val.positions || [];
+    S.messages = val.messages || [];
+    S.ownerName = val.ownerName || '';
+    S.loadedParts.connections = true;
+    S.loadedParts.messages = S.messages.length > 0;
+    S.isDemoLoaded = false;
+    console.log(`[AutoVault] Bóveda restaurada desde IndexedDB (${S.contacts.length} contactos).`);
+    resolve(true);
+  } else {
+    resolve(false);
   }
 }
 
@@ -7434,42 +7487,122 @@ function quickLogin(username, pwd) {
   const pwdInput = document.getElementById('login-password-input');
   if (usernameInput) usernameInput.value = username;
   if (pwdInput) pwdInput.value = pwd;
-  submitCustomLogin();
+  submitCustomLogin(username);
 }
 window.quickLogin = quickLogin;
 
-function submitCustomLogin() {
-  const username = (document.getElementById('login-username-input').value || '').trim().toLowerCase();
+function submitCustomLogin(targetUser) {
+  const usernameInput = document.getElementById('login-username-input');
+  const inputVal = usernameInput ? usernameInput.value : '';
+  const username = (targetUser || inputVal || '').trim().toLowerCase();
   if (!username) return;
 
   closeLoginModal();
   const activeUserPill = document.getElementById('active-user-name');
+  const ronanBanner = document.getElementById('ronan-ab-banner');
 
-  if (username === 'antonio') {
+  if (username === 'antonio' || username === 'master') {
     window.currentAuthUser = { id: 'antonio', name: 'Antonio (Master)', isMaster: true };
     if (activeUserPill) activeUserPill.textContent = '👤 Antonio (Master)';
-    restoreLocalVault();
-    showToast('👤 Bóveda Master Antonio cargada (2,953 contactos activos, 86 descartes).');
+    if (ronanBanner) ronanBanner.style.display = 'none';
+    restoreLocalVault().then(restored => {
+      if (!restored) loadDemoData(false);
+      updateStatus();
+      if (typeof renderDashboard === 'function') renderDashboard();
+      if (typeof renderNetworkTable === 'function') renderNetworkTable();
+      showToast('👤 Bóveda Master Antonio cargada (2,953 contactos activos).', '🔑');
+    });
   } else if (username === 'giovanna') {
     window.currentAuthUser = { id: 'giovanna', name: 'Giovanna (Bóveda Aislada)', isMaster: false };
-    if (activeUserPill) activeUserPill.textContent = '👤 Giovanna';
+    if (activeUserPill) activeUserPill.textContent = '👤 Giovanna (0 contactos)';
+    if (ronanBanner) ronanBanner.style.display = 'none';
+    
+    // Complete isolation: Giovanna's vault is 100% EMPTY!
     S.contacts = [];
+    S.positions = [];
+    S.messages = [];
     S.crmState = { discarded: [], whitelisted: [], deals: [] };
+    S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
+    S.isDemoLoaded = false;
+    
     updateStatus();
+    if (typeof renderDashboard === 'function') renderDashboard();
+    if (typeof renderNetworkTable === 'function') renderNetworkTable();
     navigate('upload');
-    showToast('👤 Bóveda de Giovanna seleccionada. Lista para cargar ZIP (15k).');
+    showToast('🔒 Bóveda de Giovanna seleccionada (0 contactos). Lista para cargar tu ZIP.', '🔒');
   } else if (username === 'ronan') {
     window.currentAuthUser = { id: 'ronan', name: 'Sandbox Demo Ronan', isMaster: false, isSandbox: true };
     if (activeUserPill) activeUserPill.textContent = '🧪 Sandbox Ronan';
-    setupSandboxRonanMode();
+    if (ronanBanner) ronanBanner.style.display = 'flex';
+    
+    switchRonanAbMode('B'); // Default to Enriched Option B
+    navigate('network');
+    showToast('🧪 Sandbox Demo Ronan: Banner de Prueba A/B (CSV vs HarvestAPI) activado.', '🧪');
   } else {
     window.currentAuthUser = { id: username, name: username.charAt(0).toUpperCase() + username.slice(1), isMaster: false };
     if (activeUserPill) activeUserPill.textContent = `👤 ${window.currentAuthUser.name}`;
+    if (ronanBanner) ronanBanner.style.display = 'none';
     S.contacts = [];
+    S.positions = [];
+    S.messages = [];
+    S.loadedParts = { connections: false, messages: false };
     updateStatus();
+    if (typeof renderDashboard === 'function') renderDashboard();
+    if (typeof renderNetworkTable === 'function') renderNetworkTable();
     navigate('upload');
-    showToast(`👤 Bóveda de ${window.currentAuthUser.name} inicializada.`);
+    showToast(`👤 Bóveda de ${window.currentAuthUser.name} inicializada (Vacía).`, '👤');
   }
+}
+
+window.ronanAbMode = 'B';
+
+function switchRonanAbMode(mode) {
+  window.ronanAbMode = mode;
+  const btnA = document.getElementById('ab-btn-option-a');
+  const btnB = document.getElementById('ab-btn-option-b');
+  const explainer = document.getElementById('ronan-ab-explainer');
+
+  if (mode === 'A') {
+    if (btnA) { btnA.style.background = 'var(--red)'; btnA.style.color = '#fff'; btnA.style.borderColor = 'var(--red)'; }
+    if (btnB) { btnB.style.background = 'transparent'; btnB.style.color = 'var(--text-muted)'; btnB.style.borderColor = 'var(--border)'; }
+    if (explainer) {
+      explainer.innerHTML = '🔴 <b>Opción A (CSV Plano Desactualizado):</b> Datos estáticos sin enriquecer de 2018-2020. Cargos viejos ("Analista Jr"), 0 C-Levels reconocidos y ciudades sin normalizar ("cancun").';
+    }
+    setupSandboxRonanRawCsvMode();
+  } else {
+    if (btnB) { btnB.style.background = 'var(--accent)'; btnB.style.color = '#fff'; btnB.style.borderColor = 'var(--accent)'; }
+    if (btnA) { btnA.style.background = 'transparent'; btnA.style.color = 'var(--text-muted)'; btnA.style.borderColor = 'var(--border)'; }
+    if (explainer) {
+      explainer.innerHTML = '🟢 <b>Opción B (Enriquecida en Vivo 2026):</b> Muestra la red viva con HarvestAPI + IA. Revela los cargos actuales (CEOs, VPs) de contactos que eran analistas en 2018.';
+    }
+    setupSandboxRonanMode();
+  }
+}
+window.switchRonanAbMode = switchRonanAbMode;
+
+function setupSandboxRonanRawCsvMode() {
+  S.contacts = [
+    { id: 'raw_1', name: 'marc garcia', company: 'Startup Rota S.L.', position: 'Analista Jr de Marketing', city: 'cancun', country: 'mexico', engagement_score: 25, is_current: false },
+    { id: 'raw_2', name: 'elena fernandez', company: 'Agencia Local', position: 'SDR Inbound', city: 'madrid', country: 'spain', engagement_score: 30, is_current: false },
+    { id: 'raw_3', name: 'alejandro rossi', position: 'Coordinador de Cuentas', company: 'Consultora X', city: 'barcelona', country: 'espana', engagement_score: 20, is_current: false }
+  ];
+  for (let i = 4; i <= 500; i++) {
+    S.contacts.push({
+      id: `raw_${i}`,
+      name: `contacto_raw_${i}`,
+      company: `Empresa Vieja ${i % 20}`,
+      position: `Auxiliar / Becario ${i % 5}`,
+      city: i % 2 === 0 ? 'madrid' : 'cancun',
+      country: i % 2 === 0 ? 'spain' : 'mexico',
+      engagement_score: 15,
+      is_current: false
+    });
+  }
+  S.loadedParts = { connections: true, positions: true, messages: true, profile: true };
+  updateStatus();
+  if (typeof renderDashboard === 'function') renderDashboard();
+  if (typeof renderNetworkTable === 'function') renderNetworkTable();
+  showToast('🔴 Opción A (CSV Plano) Cargada: 0 C-Levels reconocidos, cargos desactualizados de 2018.', '⚠️');
 }
 
 function showToast(msg) {
