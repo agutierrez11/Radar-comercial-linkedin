@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 sys.stdout.reconfigure(encoding='utf-8')
 load_dotenv()
 
+NVIDIA_KEY = os.getenv("NVIDIA_API_KEY") or os.getenv("NVAPI_KEY")
 DISIER_KEY = os.getenv("DISIER_API_KEY", "sk-0MINhr9-vEmzYLUFx-OvjQ")
 DISIER_BASE_URL = os.getenv("DISIER_BASE_URL", "https://llm.disier.net/v1")
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")
@@ -17,12 +18,14 @@ def generar_prospeccion_b2b(
     empresa: str,
     conexion_comun: str,
     propuesta_valor: str,
-    mostrar_pensamiento: bool = False
+    mostrar_pensamiento: bool = False,
+    nvidia_key_override: str = None
 ) -> dict:
     """
-    Motor Híbrido de Prospección de Radar Comercial:
-    1. Intenta invocar Qwen/Qwen3.8-27B (Disier) con soporte de Thinking/Reasoning.
-    2. Si hay timeout o error, salta a Google Gemini 2.5 Flash de forma transparente.
+    Motor Híbrido de Prospección de Radar Comercial (Multi-LLM Router):
+    1. NVIDIA NIM (meta/llama-3.1-70b-instruct) -> Conectado & Operativo
+    2. Qwen/Qwen3.8-27B (Disier AI con soporte de Thinking/Reasoning)
+    3. Google Gemini 2.5 Flash (Fallback transparente)
     """
     prompt = f"""Actúa como el copiloto comercial de Radar Comercial.
 Redacta un mensaje directo de LinkedIn (máximo 45 palabras, profesional, sin rodeos ni venta agresiva):
@@ -32,7 +35,42 @@ Redacta un mensaje directo de LinkedIn (máximo 45 palabras, profesional, sin ro
 
 Regla: Enfócate en abrir una conversación de valor o pedir su opinión técnica/comercial."""
 
-    # 1. Intentar con Qwen 3.8-27B (Disier)
+    active_nvidia_key = nvidia_key_override or NVIDIA_KEY
+
+    # 1. Intentar con NVIDIA NIM (Llama 3.1 70B Instruct)
+    if active_nvidia_key:
+        try:
+            url = "https://integrate.api.nvidia.com/v1/chat/completions"
+            payload = {
+                "model": "meta/llama-3.1-70b-instruct",
+                "messages": [{"role": "user", "content": prompt}],
+                "temperature": 0.5,
+                "top_p": 0.95,
+                "max_tokens": 1024
+            }
+            r = requests.post(
+                url,
+                headers={
+                    "Authorization": f"Bearer {active_nvidia_key}",
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                json=payload,
+                timeout=25
+            )
+            if r.status_code == 200:
+                res_data = r.json()
+                text = res_data["choices"][0]["message"]["content"]
+                return {
+                    "success": True,
+                    "provider": "NVIDIA NIM (Meta Llama 3.1 70B Instruct)",
+                    "razonamiento": None,
+                    "mensaje": text.strip()
+                }
+        except Exception as err:
+            print(f"[NVIDIA NIM Warning] {err}", file=sys.stderr)
+
+    # 2. Intentar con Qwen 3.8-27B (Disier AI)
     if DISIER_KEY:
         try:
             payload = {
@@ -47,7 +85,7 @@ Regla: Enfócate en abrir una conversación de valor o pedir su opinión técnic
                 headers={"Authorization": f"Bearer {DISIER_KEY}", "Content-Type": "application/json"},
                 json=payload,
                 stream=True,
-                timeout=40
+                timeout=25
             )
             if r.status_code == 200:
                 reasoning = ""
@@ -79,7 +117,7 @@ Regla: Enfócate en abrir una conversación de valor o pedir su opinión técnic
         except Exception:
             pass
 
-    # 2. Fallback Seguro: Google Gemini 2.5 Flash
+    # 3. Fallback Seguro: Google Gemini 2.5 Flash
     if GEMINI_KEY:
         try:
             url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_KEY}"
@@ -103,7 +141,7 @@ Regla: Enfócate en abrir una conversación de valor o pedir su opinión técnic
     return {"success": False, "error": "No hay proveedor LLM disponible."}
 
 if __name__ == "__main__":
-    print("=== MOTOR DE PROSPECCIÓN RADAR COMERCIAL ===", flush=True)
+    print("=== MOTOR DE PROSPECCIÓN MULTI-LLM RADAR COMERCIAL (NVIDIA NIM ACTIVE) ===", flush=True)
     res = generar_prospeccion_b2b(
         nombre_prospecto="Santiago Morales",
         cargo="VP de Operaciones y Medios de Pago",
@@ -114,8 +152,5 @@ if __name__ == "__main__":
     )
     print(f"Estado: {'✅ Operativo' if res.get('success') else '❌ Falló'}", flush=True)
     print(f"Proveedor Activo: {res.get('provider')}", flush=True)
-    if res.get("razonamiento"):
-        print("\n🧠 Pensamiento del Modelo:", flush=True)
-        print(res["razonamiento"][:250] + "...\n", flush=True)
     print("📩 Mensaje Generado:", flush=True)
     print(res.get("mensaje"), flush=True)

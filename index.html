@@ -6285,6 +6285,12 @@ function openAIConfigModal() {
   document.getElementById('ai-provider-select').addEventListener('change', checkCorsWarning);
   
   document.getElementById('ai-config-modal').style.display = 'flex';
+
+  // Load NVIDIA Key
+  const savedNvidia = localStorage.getItem('rc_nvidia_api_key') || '';
+  const nvidiaInput = document.getElementById('nvidia-api-key');
+  if (nvidiaInput && savedNvidia) nvidiaInput.value = savedNvidia;
+
 }
 
 function checkCorsWarning() {
