@@ -795,7 +795,7 @@
 
   <!-- Search Input (Centro) -->
   <div style="flex:1; max-width:460px; margin:0 12px;">
-    <input type="text" id="network-talk-search" class="filter-input" placeholder="🔍 Buscar en mi bóveda (nombre, cargo, mensajes, sinónimos...)" style="width:100%; font-size:12px; padding:6px 12px; border-radius:8px; background:var(--bg); border:1px solid var(--border); color:var(--text);" onkeyup="handleTalkToNetworkSearch(event)" title="Búsqueda explicable local-first con RadarCore">
+    <input type="text" id="network-talk-search" class="filter-input" placeholder="🔍 Buscar en mi bóveda (nombre, cargo, mensajes, sinónimos...)" style="width:100%; font-size:12px; padding:6px 12px; border-radius:8px; background:var(--bg); border:1px solid var(--border); color:var(--text);" oninput="handleTalkToNetworkSearch(event)" onkeyup="handleTalkToNetworkSearch(event)" title="Búsqueda explicable local-first con RadarCore">
   </div>
 
   <!-- KPIs Compactos -->
@@ -1078,7 +1078,7 @@
               <button class="mini-btn" onclick="resetMapZoom()" style="padding:4px 8px; font-size:11px;">🔍 Re-centrar Mapa</button>
             </div>
           </div>
-          <div id="gis-map-container" style="width:100%; height:320px; border-radius:10px; border:1px solid var(--border); background:var(--bg); z-index:1;"></div>
+          <div id="gis-map-container" style="width:100% !important; min-width:100%; height:340px; border-radius:10px; border:1px solid var(--border); background:var(--bg); z-index:1; overflow:hidden;"></div>
         </div>
 
         <!-- FILTROS & TABLA CLÁSICA -->
