@@ -8421,36 +8421,27 @@ function submitCustomLogin() {
     closeLoginModal();
     if (typeof showToast === 'function') showToast('⏳ Cargando Bóveda Master Antonio (2,953 contactos)...', '⏳');
 
-    restoreLocalVault().then(restored => {
+    restoreLocalVault().then(async restored => {
       if (!restored) {
+        let loaded = false;
         if (typeof window.fetchMasterSupabaseData === 'function') {
-          window.fetchMasterSupabaseData().then(contacts => {
+          try {
+            const contacts = await window.fetchMasterSupabaseData();
             if (contacts && contacts.length > 0) {
               S.contacts = contacts;
-            } else {
-              loadDemoData(false);
+              loaded = true;
             }
-            if (typeof loadCrmState === 'function') loadCrmState();
-            updateStatus();
-            if (typeof renderDashboard === 'function') renderDashboard();
-            if (typeof renderNetworkTable === 'function') renderNetworkTable();
-            if (typeof showToast === 'function') showToast('👤 Bóveda Master Antonio cargada.', '🔑');
-          });
-        } else {
-          loadDemoData(false);
-          if (typeof loadCrmState === 'function') loadCrmState();
-          updateStatus();
-          if (typeof renderDashboard === 'function') renderDashboard();
-          if (typeof renderNetworkTable === 'function') renderNetworkTable();
-          if (typeof showToast === 'function') showToast('👤 Bóveda Master Antonio cargada.', '🔑');
+          } catch(e) { console.warn('[Supabase load error]', e); }
         }
-      } else {
-        if (typeof loadCrmState === 'function') loadCrmState();
-        updateStatus();
-        if (typeof renderDashboard === 'function') renderDashboard();
-        if (typeof renderNetworkTable === 'function') renderNetworkTable();
-        if (typeof showToast === 'function') showToast('👤 Bóveda Master Antonio cargada desde almacenamiento local.', '🔑');
+        if (!loaded) {
+          await loadDemoData(false);
+        }
       }
+      if (typeof loadCrmState === 'function') loadCrmState();
+      updateStatus();
+      if (typeof renderDashboard === 'function') renderDashboard();
+      if (typeof renderNetworkTable === 'function') renderNetworkTable();
+      if (typeof showToast === 'function') showToast(`👤 Bóveda Master Antonio cargada (${(S.contacts||[]).length.toLocaleString()} contactos).`, '🔑');
     });
   } 
   // --- GIOVANNA ISOLATED VAULT ---
