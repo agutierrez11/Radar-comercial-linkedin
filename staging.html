@@ -8129,6 +8129,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 // HELPER SAFEGUARDS FOR BOOTSTRAP & STATUS
 // ═══════════════════════════════════════════════════════════════════════
 function updateStatus() {
+  if (typeof renderHeader === 'function') {
+    try { renderHeader(); } catch(e) {}
+  }
   if (typeof updateUploadStatus === 'function') {
     try { updateUploadStatus(); } catch(e) {}
   }
