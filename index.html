@@ -802,7 +802,7 @@ body.not-authenticated header {
   <script src="radar_core.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
-<body class="not-authenticated">
+<body class="light not-authenticated">
 <script>
 window.filterVerifiedOnly = false;
 window.cosmaSelectedNodeId = null;
@@ -2611,14 +2611,9 @@ function toggleTheme() {
 }
 
 (function() {
-  // Modo Claro por defecto para máxima legibilidad
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.remove('light');
-  } else {
-    document.body.classList.add('light');
-    localStorage.setItem('theme', 'light');
-  }
+  // Modo Claro 100% estricto por defecto
+  document.body.classList.add('light');
+  localStorage.setItem('theme', 'light');
 })();
 
 // Automatic demo load removed on DOMContentLoaded
