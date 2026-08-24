@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Radar Comercial — Intelligence Dashboard</title>
@@ -2477,6 +2480,21 @@ document.addEventListener('DOMContentLoaded', function() {
 // ═══════════════════════════════════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════════════════════════════════
+function resetGlobalState() {
+  S.contacts = [];
+  S.messages = [];
+  S.positions = [];
+  S.filteredContacts = [];
+  S.conversations = [];
+  S.purgeChecked = new Set();
+  S.expandedChats = new Set();
+  S.crmState = { discarded: [], whitelisted: [], deals: [] };
+  S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
+  S.ownerName = '';
+  window.ENRICHED_CONNECTIONS_DATA = [];
+}
+window.resetGlobalState = resetGlobalState;
+
 const S = window.S = {
   contacts: [],
   positions: [],
@@ -7762,6 +7780,10 @@ async function saveLocalVault() {
 }
 
 async function restoreLocalVault() {
+  if (!window.currentAuthUser || !window.currentAuthUser.isMaster) {
+    console.log('[AutoVault] Ignorado: El usuario activo no es Master Admin.');
+    return false;
+  }
   try {
     const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
     if (userId === 'ronan') return false; // Ronan always uses sandbox demo
@@ -8226,6 +8248,9 @@ function submitCustomLogin() {
     return;
   }
 
+  // --- MANDATORY ZERO-DATA RESET BEFORE SWITCHING TENANTS ---
+  resetGlobalState();
+
   // --- ANTONIO MASTER ADMIN ---
   if (userVal === 'antonio' || userVal === 'antonio@radar.com' || userVal === 'master') {
     if (pwdVal !== '12345' && pwdVal !== 'admin') {
@@ -8238,6 +8263,16 @@ function submitCustomLogin() {
     }
 
     window.currentAuthUser = { id: 'antonio', name: '👤 Antonio (Master)', isMaster: true };
+    S.ownerName = "Antonio Gutiérrez";
+    S.positions = [
+      { company: "Clip", title: "Acquisition Executive | BDR | Sales", start: "Jul 2021", end: "Mar 2025" },
+      { company: "Fiserv", title: "Business Sales Consultant", start: "Mar 2024", end: "Oct 2025" },
+      { company: "LATAM Commerce", title: "Co-creador", start: "Mar 2024", end: "Actual" },
+      { company: "ENFA DELIVERY", title: "Ejecutivo de desarrollo del negocio", start: "Jul 2020", end: "Oct 2020" },
+      { company: "JTI (Japan Tobacco International)", title: "Ejecutivo Desarrollador Canal HORECA", start: "Jul 2018", end: "Dec 2019" },
+      { company: "Conagra Brands", title: "Ejecutivo de ventas", start: "2016", end: "2018" }
+    ];
+
     const activeUserPill = document.getElementById('active-user-name');
     if (activeUserPill) activeUserPill.textContent = '👤 Antonio (Master)';
 
@@ -8286,13 +8321,14 @@ function submitCustomLogin() {
     const isGio = userVal.includes('giovanna');
     const nameStr = isGio ? 'Giovanna' : 'Roanna';
     window.currentAuthUser = { id: userVal, name: `🔒 Bóveda ${nameStr} (Privada)`, isMaster: false };
+    S.ownerName = nameStr;
 
+    // Zero-data state for Giovanna
     S.contacts = [];
     S.positions = [];
     S.messages = [];
     S.crmState = { discarded: [], whitelisted: [], deals: [] };
     S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
-    S.isDemoLoaded = false;
 
     closeLoginModal();
     const activeUserPill = document.getElementById('active-user-name');
@@ -8315,6 +8351,9 @@ function submitCustomLogin() {
     }
 
     window.currentAuthUser = { id: 'ronan', name: '🧪 Sandbox Ronan', isMaster: false, isSandbox: true };
+    S.ownerName = 'Ronan';
+    S.positions = [];
+    S.messages = []; // Clear Antonio's messages!
 
     closeLoginModal();
     const activeUserPill = document.getElementById('active-user-name');
@@ -8333,7 +8372,7 @@ function submitCustomLogin() {
     }
 
     window.currentAuthUser = { id: userVal, name: `👤 Bóveda ${userVal}`, isMaster: false };
-
+    S.ownerName = userVal;
     S.contacts = [];
     S.positions = [];
     S.messages = [];
