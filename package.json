@@ -1,0 +1,22 @@
+{
+  "name": "radar-comercial",
+  "version": "1.0.0",
+  "description": "Radar Comercial — BYOD Relationship Intelligence",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site build complete'",
+    "start": "python -m http.server 8888"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agutierrez11/Radar-comercial-linkedin.git"
+  },
+  "keywords": [
+    "b2b",
+    "relationship-intelligence",
+    "linkedin",
+    "radar-comercial"
+  ],
+  "author": "Antonio Gutiérrez",
+  "license": "MIT"
+}
