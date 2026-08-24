@@ -80,4 +80,21 @@ Este proyecto adopta los estándares de las mejores librerías de diseño para a
 5. **Presentation & High-Fidelity Artifacts (`alchaincyf/huashu-design`):**
    - Modales interactivos de pitch B2B, tarjetas de prospección con botones de acción rápida de 1-clic y visualización espacial de clústeres.
 
+---
+
+## 🔒 REGLA INMUTABLE DE PERSISTENCIA Y DEPURACIÓN DE BÓVEDA (GRABADO EN PIEDRA)
+
+1. **PERMANENCIA ABSOLUTA DE AVANCES Y DEPURACIÓN:**
+   - La depuración del usuario (contactos eliminados, descartados, whitelisted, notas y cambios en CRM `crmState`) **MANDA SOBRE CUALQUIER DATASET CRUDO O DEMO**.
+   - Queda **estrictamente prohibido** usar flags como `isDemoLoaded = true` o funciones de login que sobrescriban o descarten los cambios locales del usuario en `saveLocalVault()` y `restoreLocalVault()`.
+   - Cada acción de depuración o edición DEBE llamar inmediatamente a `saveLocalVault()` para garantizar que la copia en IndexedDB/localStorage preserve el progreso exacto 1:1.
+
+2. **PERSISTENCIA COMPLETA DE ESTADO (`crmState` + `contacts`):**
+   - `saveLocalVault()` DEBE incluir siempre `crmState: S.crmState` además de `contacts`, `positions` y `messages`.
+   - `restoreLocalVault()` DEBE restaurar siempre `S.crmState` para garantizar que la lista de descartados y prospectos depurados nunca se pierda.
+
+3. **CERO MEMORIA DE TEFLÓN (RESPETO AL PROGRESO DEL USUARIO):**
+   - Ningún agente puede resetear la bóveda de Antonio a los datos crudos iniciales si el usuario ya ha realizado depuraciones o guardado cambios locales.
+
+
 
