@@ -6,7 +6,7 @@ with sync_playwright() as p:
     browser = p.chromium.launch(headless=True)
     page = browser.new_page(viewport={"width": 1280, "height": 800})
     
-    print("\n--- TEST 1: FRESH PAGE LOAD ZERO-DATA LOCKOUT ---")
+    print("\n--- TEST 1: FRESH PAGE LOAD & MINIMALIST CARD LOCKOUT ---")
     page.goto("http://127.0.0.1:8888/index.html")
     page.wait_for_timeout(1000)
     
@@ -30,8 +30,30 @@ with sync_playwright() as p:
     page.screenshot(path="qa_test1_fresh_login_gating.png")
     print("PASSED TEST 1: Zero-data startup lockout verified!")
 
-    print("\n--- TEST 2: GIOVANNA ISOLATED LOGIN ---")
-    page.evaluate("submitCustomLogin('giovanna');")
+    print("\n--- TEST 2: INVALID PASSWORD REJECTION QA ---")
+    page.fill("#login-username-input", "antonio")
+    page.fill("#login-password-input", "wrong_password_99")
+    page.click("#login-submit-btn")
+    page.wait_for_timeout(500)
+    
+    err_info = page.evaluate("""() => {
+      const alertDiv = document.getElementById('login-error-alert');
+      const stateObj = window.S || (typeof S !== 'undefined' ? S : {});
+      return {
+        display: alertDiv ? alertDiv.style.display : 'none',
+        text: alertDiv ? alertDiv.textContent : '',
+        contactsCount: stateObj.contacts ? stateObj.contacts.length : 0
+      };
+    }""")
+    print("Invalid password alert state:", err_info)
+    assert err_info['display'] == 'block', "Error alert must be visible on wrong password"
+    assert err_info['contactsCount'] == 0, "Contacts count must remain ZERO on invalid login"
+    print("PASSED TEST 2: Invalid password rejected cleanly!")
+
+    print("\n--- TEST 3: GIOVANNA ISOLATED LOGIN ---")
+    page.fill("#login-username-input", "giovanna")
+    page.fill("#login-password-input", "gio2026")
+    page.click("#login-submit-btn")
     page.wait_for_timeout(1000)
     
     gio_info = page.evaluate("""() => {
@@ -49,18 +71,15 @@ with sync_playwright() as p:
     assert gio_info['contactsCount'] == 0, "Giovanna vault must have 0 contacts"
     assert "Giovanna" in gio_info['activeUser'], f"Active user must be Giovanna, got {gio_info['activeUser']}"
     page.screenshot(path="qa_test2_giovanna_isolated_vault.png")
-    print("PASSED TEST 2: Giovanna isolated vault verified!")
+    print("PASSED TEST 3: Giovanna isolated vault verified!")
 
-    print("\n--- TEST 3: ANTONIO MASTER ADMIN LOGIN ---")
+    print("\n--- TEST 4: ANTONIO MASTER ADMIN LOGIN WITH USERNAME + PASSWORD ---")
     page.goto("http://127.0.0.1:8888/index.html")
     page.wait_for_timeout(1000)
     
-    # Fill password 12345 and login as Antonio
-    page.evaluate("""() => {
-      const pwdInput = document.getElementById('login-password-input');
-      if (pwdInput) pwdInput.value = '12345';
-      submitCustomLogin('antonio');
-    }""")
+    page.fill("#login-username-input", "antonio")
+    page.fill("#login-password-input", "12345")
+    page.click("#login-submit-btn")
     page.wait_for_timeout(1500)
     
     antonio_info = page.evaluate("""() => {
@@ -78,7 +97,7 @@ with sync_playwright() as p:
     assert antonio_info['contactsCount'] >= 2900, "Antonio master must have ~2,953 contacts"
     assert antonio_info['isMaster'] == True, "Antonio must be Master Admin"
     page.screenshot(path="qa_test3_antonio_master_admin.png")
-    print("PASSED TEST 3: Antonio Master Admin verified!")
+    print("PASSED TEST 4: Antonio Master Admin verified!")
     
     browser.close()
-    print("\n✅ ALL 3 MULTI-USER AUTHENTICATION QA TESTS PASSED PERFECTLY!")
+    print("\n✅ ALL 4 MINIMALIST LOGIN QA TESTS PASSED PERFECTLY!")

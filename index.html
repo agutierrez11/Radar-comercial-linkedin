@@ -2146,81 +2146,65 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!-- ── PROFESSIONAL SAAS WELCOME ACCESS GATEWAY MODAL ── -->
-<div class="modal-overlay open" id="login-modal" style="display:flex !important; opacity:1 !important; pointer-events:auto !important; z-index:99999 !important;">
-  <div class="modal" style="max-width:460px; padding:28px 24px; border-radius:16px; background:var(--surface); border:1px solid var(--border); box-shadow:0 20px 40px rgba(0,0,0,0.5); font-family:'Outfit',sans-serif;">
+<div class="modal-overlay open" id="login-modal" style="display:flex !important; opacity:1 !important; pointer-events:auto !important; z-index:99999 !important; background:rgba(15, 23, 42, 0.96); padding:20px; align-items:center; justify-content:center;">
+  <div class="modal" style="max-width:440px; width:100%; padding:32px 28px; border-radius:12px; background:#0F172A; border:1px solid #334155; box-shadow:0 10px 30px rgba(0,0,0,0.5); font-family:'Outfit', sans-serif; color:#F8FAFC;">
     
     <!-- BRANDING HEADER -->
-    <div style="text-align:center; margin-bottom:20px;">
-      <div style="display:inline-flex; align-items:center; gap:8px; font-weight:800; font-size:18px; color:var(--text); margin-bottom:4px;">
-        <div style="background:var(--accent); color:#fff; width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px;">📡</div>
-        <span>RADAR <span style="color:var(--accent);">COMERCIAL</span></span>
+    <div style="text-align:center; margin-bottom:24px;">
+      <div style="display:inline-flex; align-items:center; gap:8px; padding:4px 12px; background:#1E293B; border:1px solid #334155; border-radius:9999px; margin-bottom:12px;">
+        <span style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#A5B4FC; letter-spacing:0.06em; text-transform:uppercase;">MINERÍA DE RELACIONES B2B</span>
       </div>
-      <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">
-        Relationship Intelligence & Warm Pipeline Mining
-      </div>
+      <h2 style="font-size:22px; font-weight:800; color:#F8FAFC; margin:0 0 6px 0; letter-spacing:-0.02em;">Radar Comercial</h2>
+      <p style="font-size:13px; color:#94A3B8; margin:0; line-height:1.5;">Ingresa con tus credenciales asignadas.</p>
     </div>
 
-    <!-- TITLE & SUBTITLE -->
-    <div style="text-align:center; margin-bottom:20px;">
-      <h2 style="font-size:20px; font-weight:800; color:var(--text); margin-bottom:6px;">Accede a tu bóveda</h2>
-      <p style="font-size:12px; color:var(--text-muted); line-height:1.5; margin:0;">
-        Tu espacio privado para explorar tu red, tus conversaciones y tus oportunidades comerciales.
-      </p>
-    </div>
-
-    <!-- GOOGLE OAUTH PLACEHOLDER -->
-    <button class="mini-btn" onclick="showToast('🔑 Continuar con Google estará disponible próximamente en Supabase Auth.', '💡')" style="width:100%; padding:10px; font-size:13px; font-weight:700; border-radius:10px; border:1px solid var(--border); background:var(--bg); color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:16px; transition:all 0.2s;">
-      <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-      <span>Continuar con Google <span style="font-size:10px; opacity:0.6; font-weight:400;">(Próximamente)</span></span>
-    </button>
-
-    <!-- SEPARATOR -->
-    <div style="display:flex; align-items:center; margin:16px 0; color:var(--text-muted); font-size:11px;">
-      <div style="flex:1; height:1px; background:var(--border);"></div>
-      <span style="padding:0 10px; font-weight:600; text-transform:lowercase;">o</span>
-      <div style="flex:1; height:1px; background:var(--border);"></div>
+    <!-- ERROR INLINE ALERT -->
+    <div id="login-error-alert" style="display:none; background:#451A1A; border:1px solid #991B1B; color:#FCA5A5; padding:10px 14px; border-radius:8px; font-size:13px; font-weight:600; margin-bottom:18px; text-align:center;">
+      ❌ Credenciales incorrectas. Verifique su usuario y contraseña.
     </div>
 
     <!-- FORMULARIO PRINCIPAL DE ACCESO -->
-    <div style="margin-bottom:20px;">
-      <div style="margin-bottom:12px;">
-        <label style="font-size:11px; font-weight:600; color:var(--text); display:block; margin-bottom:6px;">Correo electrónico o ID de usuario</label>
-        <input type="text" id="login-username-input" class="filter-input" placeholder="ej. antonio@radarcomercial.com" value="antonio" style="width:100%; font-size:13px; padding:10px 12px; border-radius:8px; background:var(--bg); border:1px solid var(--border); color:var(--text); outline:none;" onkeyup="if(event.key==='Enter') submitCustomLogin()">
+    <form id="login-form-card" onsubmit="event.preventDefault(); submitCustomLogin();" style="margin-bottom:24px; display:flex; flex-direction:column; gap:16px;">
+      <div>
+        <label for="login-username-input" style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#94A3B8; display:block; margin-bottom:6px; letter-spacing:0.06em; text-transform:uppercase;">USUARIO O EMAIL</label>
+        <input type="text" id="login-username-input" class="filter-input" placeholder="ej. giovanna o antonio@radar.com" required style="width:100%; height:44px; font-size:14px; padding:0 14px; border-radius:8px; background:#1E293B; border:1px solid #334155; color:#F8FAFC; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#6366F1'" onblur="this.style.borderColor='#334155'">
       </div>
-      <div style="margin-bottom:16px;">
+      
+      <div>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-          <label style="font-size:11px; font-weight:600; color:var(--text);">Contraseña</label>
-          <a href="#" onclick="showToast('🔑 Contacta al administrador para restablecer tu contraseña.', '💡'); return false;" style="font-size:11px; color:var(--accent); text-decoration:none; font-weight:600;">¿Olvidaste tu contraseña?</a>
+          <label for="login-password-input" style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#94A3B8; letter-spacing:0.06em; text-transform:uppercase;">CONTRASEÑA / PIN</label>
         </div>
-        <input type="password" id="login-password-input" class="filter-input" value="12345" style="width:100%; font-size:13px; padding:10px 12px; border-radius:8px; background:var(--bg); border:1px solid var(--border); color:var(--text); outline:none;" onkeyup="if(event.key==='Enter') submitCustomLogin()">
+        <input type="password" id="login-password-input" class="filter-input" placeholder="••••••••" required style="width:100%; height:44px; font-size:14px; padding:0 14px; border-radius:8px; background:#1E293B; border:1px solid #334155; color:#F8FAFC; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#6366F1'" onblur="this.style.borderColor='#334155'">
       </div>
-      <button class="mini-btn primary" onclick="submitCustomLogin()" style="width:100%; padding:11px; font-size:14px; font-weight:700; border-radius:10px; background:linear-gradient(135deg, var(--accent), #4338ca); color:white; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(79,70,229,0.3);">
+
+      <button id="login-submit-btn" type="submit" style="width:100%; height:46px; font-size:14px; font-weight:700; border-radius:8px; background:#4F46E5; color:#FFFFFF; border:none; cursor:pointer; transition:background 0.2s ease; margin-top:4px;" onmouseover="this.style.background='#4338CA'" onmouseout="this.style.background='#4F46E5'">
         Entrar a mi bóveda
       </button>
-    </div>
+    </form>
 
     <!-- SECCIÓN SECUNDARIA: ACCESOS DE DEMO / SELECCIÓN RÁPIDA -->
-    <div style="border-top:1px solid var(--border); padding-top:16px;">
-      <div style="font-size:11px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:.05em; margin-bottom:10px; text-align:center;">
-        ¿Explorando una demostración?
+    <div style="border-top:1px solid #1E293B; padding-top:18px;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:10px; font-weight:700; color:#64748B; text-transform:uppercase; letter-spacing:.08em; margin-bottom:12px; text-align:center;">
+        DEMO ACCESO RÁPIDO
       </div>
       <div style="display:flex; flex-direction:column; gap:8px;">
-        <button class="mini-btn" onclick="quickLogin('antonio', '12345')" style="padding:9px 12px; justify-content:flex-start; font-size:12px; font-weight:600; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text); display:flex; align-items:center; gap:8px;">
-          👤 <span>Antonio · Bóveda personal</span>
-          <span style="margin-left:auto; font-size:10px; color:var(--green); font-weight:700; background:rgba(16,185,129,0.1); padding:2px 6px; border-radius:4px;">2,953 contactos</span>
+        <button type="button" class="mini-btn" onclick="fillQuickLogin('antonio', '12345')" style="padding:10px 14px; font-size:12px; font-weight:600; border-radius:8px; border:1px solid #334155; background:#1E293B; color:#CBD5E1; display:flex; align-items:center; justify-content:space-between; cursor:pointer; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#6366F1'" onmouseout="this.style.borderColor='#334155'">
+          <span>👤 Antonio · Bóveda Master</span>
+          <span style="font-size:11px; color:#818CF8; font-weight:700;">PIN: 12345</span>
         </button>
-        <button class="mini-btn" onclick="quickLogin('giovanna', '12345')" style="padding:9px 12px; justify-content:flex-start; font-size:12px; font-weight:600; border-radius:8px; border:1px solid var(--purple); color:var(--purple); background:rgba(124,58,237,0.06); display:flex; align-items:center; gap:8px;">
-          👤 <span>Giovanna · Bóveda de prueba</span>
-          <span style="margin-left:auto; font-size:10px; opacity:0.8; font-weight:500;">Bóveda privada</span>
+        <button type="button" class="mini-btn" onclick="fillQuickLogin('giovanna', 'gio2026')" style="padding:10px 14px; font-size:12px; font-weight:600; border-radius:8px; border:1px solid #334155; background:#1E293B; color:#CBD5E1; display:flex; align-items:center; justify-content:space-between; cursor:pointer; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#6366F1'" onmouseout="this.style.borderColor='#334155'">
+          <span>🔒 Giovanna · Bóveda Privada</span>
+          <span style="font-size:11px; color:#A7F3D0; font-weight:700;">0 contactos</span>
         </button>
-        <button class="mini-btn" onclick="quickLogin('ronan', '12345')" style="padding:9px 12px; justify-content:flex-start; font-size:12px; font-weight:600; border-radius:8px; border:1px solid var(--amber); color:var(--amber); background:rgba(245,158,11,0.06); display:flex; align-items:center; gap:8px;">
-          🧪 <span>Ronan · Sandbox colaborativo</span>
-          <span style="margin-left:auto; font-size:10px; opacity:0.8; font-weight:500;">500 demo BI</span>
+        <button type="button" class="mini-btn" onclick="fillQuickLogin('ronan', 'ronan123')" style="padding:10px 14px; font-size:12px; font-weight:600; border-radius:8px; border:1px solid #334155; background:#1E293B; color:#CBD5E1; display:flex; align-items:center; justify-content:space-between; cursor:pointer; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#6366F1'" onmouseout="this.style.borderColor='#334155'">
+          <span>🧪 Ronan · Sandbox</span>
+          <span style="font-size:11px; color:#FDE68A; font-weight:700;">500 demo</span>
         </button>
       </div>
     </div>
 
   </div>
+</div>
 </div>
 
 <!-- AI & ENRICHMENT BYOK CONFIG & CALCULATOR MODAL -->
@@ -8209,30 +8193,57 @@ function clearVaultForLiveDemo() {
 }
 window.clearVaultForLiveDemo = clearVaultForLiveDemo;
 
-function submitCustomLogin(targetUser) {
-  const usernameInput = document.getElementById('login-username-input');
+function fillQuickLogin(username, password) {
+  const userInput = document.getElementById('login-username-input');
   const pwdInput = document.getElementById('login-password-input');
-  const inputVal = usernameInput ? usernameInput.value : '';
-  const pwdVal = pwdInput ? pwdInput.value : '';
-  const username = (targetUser || inputVal || '').trim().toLowerCase();
-  if (!username) return;
+  const alertDiv = document.getElementById('login-error-alert');
+  if (alertDiv) alertDiv.style.display = 'none';
+  if (userInput) userInput.value = username;
+  if (pwdInput) pwdInput.value = password;
+  submitCustomLogin();
+}
+window.fillQuickLogin = fillQuickLogin;
 
-  if (username === 'antonio' || username === 'master') {
-    if (pwdVal !== '12345' && pwdVal !== 'admin') {
-      const pin = prompt('🔒 Ingresa el PIN de Administrador para la Bóveda Antonio (12345):');
-      if (!pin || pin.trim() !== '12345') {
-        if (typeof showToast === 'function') showToast('❌ PIN incorrecto. Acceso denegado.', '🔒');
-        return;
-      }
+function quickLogin(username, pwd) {
+  fillQuickLogin(username, pwd || '12345');
+}
+window.quickLogin = quickLogin;
+
+function submitCustomLogin() {
+  const userInput = document.getElementById('login-username-input');
+  const pwdInput = document.getElementById('login-password-input');
+  const alertDiv = document.getElementById('login-error-alert');
+  if (alertDiv) alertDiv.style.display = 'none';
+
+  const userVal = (userInput ? userInput.value : '').trim().toLowerCase();
+  const pwdVal = (pwdInput ? pwdInput.value : '').trim();
+
+  if (!userVal) {
+    if (alertDiv) {
+      alertDiv.textContent = '⚠️ Ingresa tu usuario o email.';
+      alertDiv.style.display = 'block';
     }
-    
+    return;
+  }
+
+  // --- ANTONIO MASTER ADMIN ---
+  if (userVal === 'antonio' || userVal === 'antonio@radar.com' || userVal === 'master') {
+    if (pwdVal !== '12345' && pwdVal !== 'admin') {
+      if (alertDiv) {
+        alertDiv.textContent = '❌ PIN o Contraseña incorrecta para Antonio Master.';
+        alertDiv.style.display = 'block';
+      }
+      if (typeof showToast === 'function') showToast('❌ PIN o Contraseña incorrecta.', '🔒');
+      return;
+    }
+
     window.currentAuthUser = { id: 'antonio', name: '👤 Antonio (Master)', isMaster: true };
     const activeUserPill = document.getElementById('active-user-name');
     if (activeUserPill) activeUserPill.textContent = '👤 Antonio (Master)';
-    
+
     closeLoginModal();
-    showToast('⏳ Cargando Bóveda Master Antonio (2,953 contactos)...', '⏳');
-    
+    if (typeof showToast === 'function') showToast('⏳ Cargando Bóveda Master Antonio (2,953 contactos)...', '⏳');
+
     restoreLocalVault().then(restored => {
       if (!restored) {
         if (typeof window.fetchMasterSupabaseData === 'function') {
@@ -8245,66 +8256,95 @@ function submitCustomLogin(targetUser) {
             updateStatus();
             if (typeof renderDashboard === 'function') renderDashboard();
             if (typeof renderNetworkTable === 'function') renderNetworkTable();
-            showToast('👤 Bóveda Master Antonio cargada (2,953 contactos activos).', '🔑');
+            if (typeof showToast === 'function') showToast('👤 Bóveda Master Antonio cargada (2,953 contactos activos).', '🔑');
           });
         } else {
           loadDemoData(false);
           updateStatus();
           if (typeof renderDashboard === 'function') renderDashboard();
           if (typeof renderNetworkTable === 'function') renderNetworkTable();
-          showToast('👤 Bóveda Master Antonio cargada (2,953 contactos activos).', '🔑');
+          if (typeof showToast === 'function') showToast('👤 Bóveda Master Antonio cargada (2,953 contactos activos).', '🔑');
         }
       } else {
         updateStatus();
         if (typeof renderDashboard === 'function') renderDashboard();
         if (typeof renderNetworkTable === 'function') renderNetworkTable();
-        showToast('👤 Bóveda Master Antonio cargada desde almacenamiento local.', '🔑');
+        if (typeof showToast === 'function') showToast('👤 Bóveda Master Antonio cargada desde almacenamiento local.', '🔑');
       }
     });
-  } else if (username === 'giovanna' || username === 'roanna') {
-    const isGio = username === 'giovanna';
+  } 
+  // --- GIOVANNA ISOLATED VAULT ---
+  else if (userVal === 'giovanna' || userVal === 'giovanna@radar.com' || userVal === 'roanna') {
+    if (pwdVal !== 'gio2026' && pwdVal !== '12345' && pwdVal !== 'giovanna') {
+      if (alertDiv) {
+        alertDiv.textContent = '❌ Contraseña incorrecta para Bóveda Giovanna.';
+        alertDiv.style.display = 'block';
+      }
+      return;
+    }
+
+    const isGio = userVal.includes('giovanna');
     const nameStr = isGio ? 'Giovanna' : 'Roanna';
-    window.currentAuthUser = { id: username, name: `🔒 Bóveda ${nameStr} (Privada)`, isMaster: false };
-    
-    // Complete isolation: Vault is 100% EMPTY for non-master users!
+    window.currentAuthUser = { id: userVal, name: `🔒 Bóveda ${nameStr} (Privada)`, isMaster: false };
+
     S.contacts = [];
     S.positions = [];
     S.messages = [];
     S.crmState = { discarded: [], whitelisted: [], deals: [] };
     S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
     S.isDemoLoaded = false;
-    
+
     closeLoginModal();
     const activeUserPill = document.getElementById('active-user-name');
     if (activeUserPill) activeUserPill.textContent = `🔒 Bóveda ${nameStr} (Privada)`;
-    
+
     updateStatus();
     if (typeof renderDashboard === 'function') renderDashboard();
     if (typeof renderNetworkTable === 'function') renderNetworkTable();
-    navigate('upload');
-    showToast(`🔒 Bóveda Aislada de ${nameStr} (0 contactos). Lista para cargar tu ZIP.`, '🔒');
-  } else if (username === 'ronan') {
+    if (typeof navigate === 'function') navigate('upload');
+    if (typeof showToast === 'function') showToast(`🔒 Bóveda Aislada de ${nameStr} (0 contactos). Lista para cargar tu ZIP.`, '🔒');
+  } 
+  // --- RONAN SANDBOX ---
+  else if (userVal === 'ronan' || userVal === 'ronan@radar.com') {
+    if (pwdVal !== 'ronan123' && pwdVal !== '12345' && pwdVal !== 'ronan') {
+      if (alertDiv) {
+        alertDiv.textContent = '❌ Contraseña incorrecta para Sandbox Ronan.';
+        alertDiv.style.display = 'block';
+      }
+      return;
+    }
+
     window.currentAuthUser = { id: 'ronan', name: '🧪 Sandbox Ronan', isMaster: false, isSandbox: true };
-    
+
     closeLoginModal();
     const activeUserPill = document.getElementById('active-user-name');
     if (activeUserPill) activeUserPill.textContent = '🧪 Sandbox Ronan';
-    
-    switchRonanAbMode('B');
-  } else {
-    window.currentAuthUser = { id: username, name: `👤 Bóveda ${username}`, isMaster: false };
-    
+
+    if (typeof switchRonanAbMode === 'function') switchRonanAbMode('B');
+  } 
+  // --- OTHER INDIVIDUAL USERS ---
+  else {
+    if (!pwdVal) {
+      if (alertDiv) {
+        alertDiv.textContent = '⚠️ Ingresa una contraseña para tu bóveda.';
+        alertDiv.style.display = 'block';
+      }
+      return;
+    }
+
+    window.currentAuthUser = { id: userVal, name: `👤 Bóveda ${userVal}`, isMaster: false };
+
     S.contacts = [];
     S.positions = [];
     S.messages = [];
-    
+
     closeLoginModal();
     const activeUserPill = document.getElementById('active-user-name');
-    if (activeUserPill) activeUserPill.textContent = `👤 Bóveda ${username}`;
-    
+    if (activeUserPill) activeUserPill.textContent = `👤 Bóveda ${userVal}`;
+
     updateStatus();
-    navigate('upload');
-    showToast(`🔒 Bóveda de ${username} lista (0 contactos).`, '🔑');
+    if (typeof navigate === 'function') navigate('upload');
+    if (typeof showToast === 'function') showToast(`🔒 Bóveda de ${userVal} lista (0 contactos).`, '🔑');
   }
 }
 window.submitCustomLogin = submitCustomLogin;
