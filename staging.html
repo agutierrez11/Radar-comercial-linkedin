@@ -782,6 +782,35 @@
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
 <body>
+<script>
+window.filterVerifiedOnly = false;
+window.cosmaSelectedNodeId = null;
+window.cosmaGraphNodes = window.cosmaGraphNodes || [];
+window.cosmaGraphLinks = window.cosmaGraphLinks || [];
+window.gisMapInstance = window.gisMapInstance || null;
+window.gisMap = window.gisMap || null;
+window.gisLayerGroup = window.gisLayerGroup || null;
+window.gisMapMarkers = window.gisMapMarkers || [];
+window.analyticsChartInstance = window.analyticsChartInstance || null;
+window.selectedContactIds = window.selectedContactIds || new Set();
+window.isBatchRunning = false;
+window.COUNTRY_COORDS = window.COUNTRY_COORDS || {};
+window.CITY_COORDS = window.CITY_COORDS || {};
+var filterVerifiedOnly = window.filterVerifiedOnly;
+var cosmaSelectedNodeId = window.cosmaSelectedNodeId;
+var cosmaGraphNodes = window.cosmaGraphNodes;
+var cosmaGraphLinks = window.cosmaGraphLinks;
+var gisMapInstance = window.gisMapInstance;
+var gisMap = window.gisMap;
+var gisLayerGroup = window.gisLayerGroup;
+var gisMapMarkers = window.gisMapMarkers;
+var analyticsChartInstance = window.analyticsChartInstance;
+var selectedContactIds = window.selectedContactIds;
+var isBatchRunning = window.isBatchRunning;
+var COUNTRY_COORDS = window.COUNTRY_COORDS;
+var CITY_COORDS = window.CITY_COORDS;
+</script>
+
 
 <script>
 // 🗺️ RE-CENTRAR MAPA Y AUTO-FIT (emilkowalski-motion Rule 13)
@@ -2719,7 +2748,7 @@ document.getElementById('zip-input').addEventListener('change', e => {
 });
 
 const dropZone = document.getElementById('drop-zone');
-dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+if (dropZone) { dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); }); }
 dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
 dropZone.addEventListener('drop', e => {
   e.preventDefault();
@@ -3374,8 +3403,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-let gisMap = null;
-let gisLayerGroup = null;
+gisMap = null;
+gisLayerGroup = null;
 
 let currentTileLayer = null;
 const TILE_SERVERS = {
@@ -3742,14 +3771,14 @@ function selectActivePosition(idx) {
 function populateFilters() {
   const countries = [...new Set(S.contacts.map(c => getCanonicalCountry(c.country)))].sort();
   const sel = document.getElementById('net-country');
-  sel.innerHTML = '<option value="">🌎 Todos los países</option>';
+  if (sel) sel.innerHTML = '<option value="">🌎 Todos los países</option>';
   countries.forEach(c => {
     const o = document.createElement('option'); o.value = c;
     o.textContent = countryFlag(c); sel.appendChild(o);
   });
   const sectors = [...new Set(S.contacts.map(c => c.sector))].sort();
   const sels = document.getElementById('net-sector');
-  sels.innerHTML = '<option value="">🏭 Todos los sectores</option>';
+  if (sels) sels.innerHTML = '<option value="">🏭 Todos los sectores</option>';
   sectors.forEach(s => {
     const o = document.createElement('option'); o.value = s; o.textContent = s; sels.appendChild(o);
   });
@@ -3784,7 +3813,7 @@ function changeIcpActiveRole(val) {
   });
 });
 
-let filterVerifiedOnly = false;
+filterVerifiedOnly = false;
 function toggleVerifiedFilter() {
   filterVerifiedOnly = !filterVerifiedOnly;
   const btn = document.getElementById('btn-filter-verified');
@@ -3948,10 +3977,10 @@ function renderNetwork() {
   renderNetworkTable();
 }
 
-let gisMapInstance = null;
-let gisMapMarkers = [];
+gisMapInstance = null;
+gisMapMarkers = [];
 
-const COUNTRY_COORDS = {
+COUNTRY_COORDS = {
   'México': [23.6345, -102.5528], 'Mexico': [23.6345, -102.5528],
   'Chile': [-35.6751, -71.5430],
   'Colombia': [4.5709, -74.2973],
@@ -3985,7 +4014,7 @@ const COUNTRY_COORDS = {
 };
 
 // Coordenadas por CIUDAD — usadas cuando metadata.city está disponible
-const CITY_COORDS = {
+CITY_COORDS = {
   // México
   'mexico city': [19.4326, -99.1332], 'ciudad de mexico': [19.4326, -99.1332],
   'cdmx': [19.4326, -99.1332], 'ciudad de méxico': [19.4326, -99.1332],
@@ -5106,7 +5135,7 @@ function calculateOpportunityScore(c) {
   return score;
 }
 
-let isBatchRunning = false;
+isBatchRunning = false;
 async function runBatchAICleaning() {
   const key = localStorage.getItem('radar_ai_key');
   if (!key) {
@@ -5547,7 +5576,7 @@ document.getElementById('pitch-modal').addEventListener('click', e => { if (e.ta
 // ═══════════════════════════════════════════════════════════════════════
 // ANALÍTICA AVANZADA (RevOps)
 // ═══════════════════════════════════════════════════════════════════════
-let analyticsChartInstance = null;
+analyticsChartInstance = null;
 
 function renderAnalytics() {
   const locked = document.getElementById('analytics-locked');
@@ -7136,7 +7165,7 @@ Regla clave: Enfócate en abrir una conversación directa o pedir su opinión so
 // ═══════════════════════════════════════════════════════════════════════
 // SELECCIÓN MÚLTIPLE & ACCIONES MASIVAS
 // ═══════════════════════════════════════════════════════════════════════
-const selectedContactIds = new Set();
+selectedContactIds = window.selectedContactIds || new Set();
 
 function toggleContactSelection(id, checked) {
   if (checked) {
@@ -7206,50 +7235,7 @@ function moveSelectedToCrm(status) {
 // ═══════════════════════════════════════════════════════════════════════
 // ENRIQUECIMIENTO EN VIVO (HARVESTAPI) - INDIVIDUAL & BATCH
 // ═══════════════════════════════════════════════════════════════════════
-async function enrichSingleContactLive(contactId) {
-  const c = S.contacts.find(x => String(x.id) === String(contactId));
-  if (!c) return;
 
-  const harvestKey = localStorage.getItem('radar_harvest_key') || '';
-  showToast(`⚡ Verificando y actualizando perfil de ${c.name}...`, '⚡');
-
-  try {
-    if (harvestKey) {
-      const url = `https://api.harvestapi.io/linkedin/profile?url=${encodeURIComponent(c.url || '')}`;
-      const res = await fetch(url, { headers: { 'X-API-Key': harvestKey } });
-      if (res.ok) {
-        const data = await res.json();
-        const elem = data.element || data;
-        if (elem) {
-          if (elem.position) c.position = elem.position;
-          if (elem.company) c.company = elem.company;
-          if (elem.location && elem.location.country) c.country = elem.location.country;
-        }
-      }
-    } else {
-      await new Promise(r => setTimeout(r, 600));
-    }
-
-    c.harvest_enriched = true;
-    c.jobStatus = '🟢 Vigente Confirmado';
-    c.hierarchy = inferHierarchy(c.position);
-
-    showToast(`✨ ¡Perfil Verificado! ${c.name} ahora está confirmado en tu Red Activa.`, '🎉');
-    renderNetworkTable();
-    renderPurgeCriteria();
-    renderPurge();
-    applyNetworkFilters();
-    renderHeader();
-    saveLocalVault();
-  } catch (err) {
-    console.error('[HarvestAPI Error]', err);
-    c.harvest_enriched = true;
-    c.jobStatus = '🟢 Vigente Confirmado';
-    showToast(`Perfil de ${c.name} marcado como verificado.`, '✅');
-    renderPurge();
-    saveLocalVault();
-  }
-}
 
 async function enrichBulkSelectedLive() {
   const harvestKey = localStorage.getItem('radar_harvest_key');
@@ -8285,9 +8271,9 @@ function calculateEngagementScore(sent, replied, tenureYears) {
 // ═══════════════════════════════════════════════════════════════════════
 // 3. GRAFO DE REDES INTERACTIVO ESTILO COSMA OTLETOSPHERE (HTML5 Canvas 2D)
 // ═══════════════════════════════════════════════════════════════════════
-let cosmaGraphNodes = [];
-let cosmaGraphLinks = [];
-let cosmaSelectedNodeId = null;
+cosmaGraphNodes = [];
+cosmaGraphLinks = [];
+cosmaSelectedNodeId = null;
 
 function renderCosmaGraph() {
   const canvas = document.getElementById('cosma-graph-canvas');
