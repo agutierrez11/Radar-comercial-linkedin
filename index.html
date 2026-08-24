@@ -976,7 +976,8 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
 
   <!-- MAIN -->
   <main id="main-content">
-    <!-- ── UPLOAD ── -->
+  <!-- ── UPLOAD ── -->
+
     <div class="section" id="sec-upload">
       <div id="upload-screen">
         <div class="upload-card">
@@ -1080,11 +1081,12 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
           </div>
         </div>
       </div>
-    </div>
+    
 
     <!-- ── NETWORK ── -->
-    <div class="section active" id="sec-network">
+    </div><!-- END sec-upload -->
 
+    <div class="section active" id="sec-network">
       <!-- ── A/B TOGGLE BAR DE NAVEGACIÓN EN BÓVEDA ── -->
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:10px 16px; flex-wrap:wrap; gap:10px; box-shadow:var(--shadow-sm);">
         <div style="display:flex; align-items:center; gap:8px;">
@@ -1273,8 +1275,10 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
         </div>
       </div><!-- END vault-view-container-b -->
 
-    </div><!-- END sec-network -->
+    
 <!-- ── PROFILE ── -->
+    </div><!-- END sec-network -->
+
     <div class="section" id="sec-profile">
       <div class="section-header">
         <div><div class="section-title">👤 Mi Perfil</div><div class="section-sub">Historial laboral y contexto activo para pitches</div></div>
@@ -1287,11 +1291,12 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
       <div id="profile-content">
         <div class="locked-state"><div class="lock-icon">🔒</div><p>Sube tu ZIP completo para ver tu historial laboral y activar el toggle de contexto.</p></div>
       </div>
-    </div>
+    
 
     <!-- ── NETWORK ── -->
-    <div class="section" id="sec-network">
+    </div><!-- END sec-profile -->
 
+    <div class="section" id="sec-network">
       <!-- ── A/B TOGGLE BAR DE NAVEGACIÓN EN BÓVEDA ── -->
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:10px 16px; flex-wrap:wrap; gap:10px; box-shadow:var(--shadow-sm);">
         <div style="display:flex; align-items:center; gap:8px;">
@@ -1391,6 +1396,8 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
     </div>
 
     <!-- ── ICP ── -->
+    </div><!-- END sec-network -->
+
     <div class="section" id="sec-icp">
       <div class="section-header">
         <div><div class="section-title">🎯 Potenciales Clientes (ICP)</div><div class="section-sub">Contactos con mayor score de afinidad según tu perfil activo</div></div>
@@ -1419,9 +1426,11 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
         </div>
       </div>
       <div class="no-results" id="icp-empty" style="display:none">No hay contactos con ese score mínimo.</div>
-    </div>
+    
 
     <!-- ── CRM PIPELINE ── -->
+    </div><!-- END sec-icp -->
+
     <div class="section" id="sec-crm">
       <div class="section-header">
         <div>
@@ -1495,9 +1504,11 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
       <div class="crm-pipeline-grid" id="crm-kanban-board">
         <!-- Rendered dynamically by JS -->
       </div>
-    </div>
+    
 
     <!-- ── PURGE ── -->
+    </div><!-- END sec-crm -->
+
     <div class="section" id="sec-purge">
       <div class="section-header">
         <div><div class="section-title">🗑️ Dunbar Purge</div><div class="section-sub">Identifica los contactos que consumen tu Dunbar Budget sin retornar valor</div></div>
@@ -1533,9 +1544,11 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
         </div>
         <div class="no-results" id="purge-empty" style="display:none">Ningún contacto cumple los criterios activos.</div>
       </div>
-    </div>
+    
 
     <!-- ── MESSAGES ── -->
+    </div><!-- END sec-purge -->
+
     <div class="section" id="sec-messages">
       <div class="section-header">
         <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
@@ -1546,12 +1559,13 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
       <div id="messages-content">
         <div class="locked-state"><div class="lock-icon">🔒</div><p>Sube el ZIP completo de LinkedIn para desbloquear el análisis de mensajes.<br><span style="color:var(--muted);font-size:10px">El ZIP debe contener el archivo messages.csv</span></p></div>
       </div>
-    </div>
+    
 
     <!-- ── ADVANCED ANALYTICS ── -->
     <!-- ── ADVANCED ANALYTICS ── -->
+    </div><!-- END sec-messages -->
+
     <div class="section" id="sec-analytics">
-      
       <!-- A/B TOGGLE BAR DENTRO DE ANALÍTICA -->
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:10px 16px; flex-wrap:wrap; gap:10px; box-shadow:var(--shadow-sm); font-family:'Outfit',sans-serif;">
         <div style="display:flex; align-items:center; gap:8px;">
@@ -1625,7 +1639,7 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
             </div>
           </div>
         </div>
-      </div><!-- END analytics-view-container-a -->
+      </div>
 
       <!-- ── VISTA B: POWER BI EXECUTIVE SUITE (APACHE ECHARTS) ── -->
       <div id="analytics-view-container-b" style="display:none; font-family:'Outfit',sans-serif;">
@@ -1680,9 +1694,11 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
           <div id="echart-becario-ceo" style="width:100%; height:340px;"></div>
         </div>
 
-      </div><!-- END analytics-view-container-b -->
+      </div>
 
-    </div><!-- END sec-analytics --><!-- ── BENCHMARKS ── -->
+    <!-- ── BENCHMARKS ── -->
+    </div><!-- END sec-analytics -->
+
     <div class="section" id="sec-benchmarks">
       <div class="section-header">
         <div>
@@ -1789,9 +1805,11 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
           </div>
         </div>
       </div>
-    </div>
+    
 
     <!-- ── COSMA OTLETOSPHERE GRAPH VIEW (Arthur Perret Replica) ── -->
+    </div><!-- END sec-benchmarks -->
+
     <div class="section" id="sec-graph">
       <div class="section-header">
         <div>
@@ -1892,7 +1910,7 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
         </div>
 
       </div>
-    </div>
+    </div><!-- END sec-graph -->
 
   </main>
 </div>
