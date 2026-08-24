@@ -1408,8 +1408,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <div class="section" id="sec-profile">
       <div class="section-header">
-        <div><div class="section-title">👤 Mi Perfil</div><div class="section-sub">Historial laboral y contexto activo para pitches</div></div>
+        <div><div class="section-title">👤 Mi Perfil y Cuenta</div><div class="section-sub">Configuración de credenciales de acceso y contexto activo de prospección</div></div>
       </div>
+
+      <!-- ── CONFIGURACIÓN DE CUENTA Y CREDENCIALES ── -->
+      <div style="background:var(--surface, #FFFFFF); border:1px solid var(--border, #E2E8F0); border-radius:16px; padding:24px; margin-bottom:24px; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; border-bottom:1px solid #E2E8F0; padding-bottom:12px;">
+          <div>
+            <h3 style="font-size:16px; font-weight:700; color:#0F172A; margin:0 0 4px 0;">🔐 Configuración de Cuenta y Credenciales</h3>
+            <p style="font-size:12px; color:#64748B; margin:0;">Actualiza tu nombre, correo de acceso y contraseña de tu bóveda.</p>
+          </div>
+          <span style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#4F46E5; background:#EEF2FF; border:1px solid #C7D2FE; padding:4px 10px; border-radius:9999px;">ZERO-KNOWLEDGE VAULT</span>
+        </div>
+
+        <form id="account-settings-form" onsubmit="event.preventDefault(); saveAccountSettings();" style="display:flex; flex-direction:column; gap:16px;">
+          <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:16px;">
+            <div>
+              <label style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:6px; text-transform:uppercase;">NOMBRE / ALIAS</label>
+              <input type="text" id="profile-name-edit" class="filter-input" placeholder="ej. Giovanna Rossi" style="width:100%; height:42px; font-size:13px; padding:0 12px; border-radius:8px; background:#FFFFFF; border:1px solid #CBD5E1; color:#0F172A;">
+            </div>
+
+            <div>
+              <label style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:6px; text-transform:uppercase;">CORREO ELECTRÓNICO</label>
+              <input type="email" id="profile-email-edit" class="filter-input" placeholder="ej. giovanna@empresa.com" style="width:100%; height:42px; font-size:13px; padding:0 12px; border-radius:8px; background:#FFFFFF; border:1px solid #CBD5E1; color:#0F172A;">
+            </div>
+
+            <div>
+              <label style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:6px; text-transform:uppercase;">NUEVA CONTRASEÑA / PIN</label>
+              <input type="password" id="profile-password-edit" class="filter-input" placeholder="Ingresa nueva contraseña" style="width:100%; height:42px; font-size:13px; padding:0 12px; border-radius:8px; background:#FFFFFF; border:1px solid #CBD5E1; color:#0F172A;">
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:flex-end;">
+            <button type="submit" style="height:42px; padding:0 20px; font-size:13px; font-weight:700; border-radius:8px; background:#4F46E5; color:#FFFFFF; border:none; cursor:pointer; transition:background 0.2s ease;" onmouseover="this.style.background='#4338CA'" onmouseout="this.style.background='#4F46E5'">
+              💾 Guardar Cambios de Cuenta
+            </button>
+          </div>
+        </form>
+      </div>
+
       <div class="icp-config">
         <label>Contexto ICP activo — define a quién le vendes (opcional, sobreescribe el auto-detect)</label>
         <input class="icp-input" id="icp-override" type="text" placeholder='ej: "CFO de empresa SaaS B2B de 50-500 empleados en México"'>
@@ -2148,7 +2185,6 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- ── PROFESSIONAL SAAS WELCOME ACCESS GATEWAY MODAL ── -->
 <!-- ── PROFESSIONAL SAAS WELCOME ACCESS GATEWAY MODAL (TAVILY NEBIUS BESPOKE STYLE) ── -->
 <div class="modal-overlay open" id="login-modal" style="display:flex !important; opacity:1 !important; pointer-events:auto !important; z-index:99999 !important; background:rgba(244, 244, 245, 0.96); padding:20px; align-items:center; justify-content:center;">
   <div class="modal" style="max-width:410px; width:100%; padding:40px 32px; border-radius:24px; background:#FFFFFF; border:1px solid #E4E4E7; box-shadow:0 20px 40px rgba(0,0,0,0.06); font-family:'Outfit', sans-serif; color:#09090B;">
@@ -2223,7 +2259,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </div>
 
-<!-- AI & ENRICHMENT
+<!-- AI & ENRICHMENT BYOK CONFIG & CALCULATOR MODAL -->
+<div class="modal-overlay" id="ai-config-modal">
   <div class="modal" style="max-width:580px; max-height:90vh; overflow-y:auto;">
     <div class="modal-header" style="border-bottom:1px solid var(--border); padding-bottom:10px;">
       <div style="flex:1;">
@@ -3827,8 +3864,11 @@ function navigate(sec) {
       requestAnimationFrame(() => { renderCRM(); });
     });
   }
-  
-window.navigate = navigate;
+
+  if (sec === 'profile' && typeof loadAccountSettings === 'function') {
+    loadAccountSettings();
+  }
+
   if (sec === 'analytics') {
     const locked = document.getElementById('analytics-locked');
     const dashboard = document.getElementById('analytics-dashboard');
@@ -3839,6 +3879,7 @@ window.navigate = navigate;
     });
   }
 }
+window.navigate = navigate;
 
 // ═══════════════════════════════════════════════════════════════════════
 // HEADER KPIs
@@ -8180,6 +8221,70 @@ function closeLoginModal() {
   document.body.classList.remove('not-authenticated');
 }
 window.closeLoginModal = closeLoginModal;
+function loadAccountSettings() {
+  if (!window.currentAuthUser) return;
+  const nameInput = document.getElementById('profile-name-edit');
+  const emailInput = document.getElementById('profile-email-edit');
+  const pwdInput = document.getElementById('profile-password-edit');
+
+  const uid = window.currentAuthUser.id;
+  const savedCreds = localStorage.getItem(`custom_creds_${uid}`);
+  let userEmail = uid.includes('@') ? uid : `${uid}@radar.com`;
+  let userName = S.ownerName || window.currentAuthUser.name || uid;
+
+  if (savedCreds) {
+    try {
+      const parsed = JSON.parse(savedCreds);
+      if (parsed.email) userEmail = parsed.email;
+      if (parsed.name) userName = parsed.name;
+    } catch(e){}
+  }
+
+  if (nameInput) nameInput.value = userName;
+  if (emailInput) emailInput.value = userEmail;
+  if (pwdInput) pwdInput.value = '';
+}
+
+function saveAccountSettings() {
+  if (!window.currentAuthUser) {
+    alert('No hay una sesión activa.');
+    return;
+  }
+  const nameInput = document.getElementById('profile-name-edit');
+  const emailInput = document.getElementById('profile-email-edit');
+  const pwdInput = document.getElementById('profile-password-edit');
+
+  const newName = (nameInput ? nameInput.value : '').trim();
+  const newEmail = (emailInput ? emailInput.value : '').trim().toLowerCase();
+  const newPwd = (pwdInput ? pwdInput.value : '').trim();
+
+  if (!newEmail) {
+    alert('Ingresa un correo electrónico válido.');
+    return;
+  }
+
+  const oldUid = window.currentAuthUser.id;
+  const credsToSave = {
+    name: newName || S.ownerName || oldUid,
+    email: newEmail,
+    password: newPwd || 'saved_pass'
+  };
+
+  localStorage.setItem(`custom_creds_${oldUid}`, JSON.stringify(credsToSave));
+  localStorage.setItem(`custom_creds_${newEmail}`, JSON.stringify(credsToSave));
+
+  S.ownerName = newName || S.ownerName;
+  window.currentAuthUser.name = `🔒 Bóveda ${newName || newEmail}`;
+  
+  const activeUserPill = document.getElementById('active-user-name');
+  if (activeUserPill) activeUserPill.textContent = window.currentAuthUser.name;
+
+  if (typeof saveLocalVault === 'function') saveLocalVault();
+  if (typeof showToast === 'function') showToast(`✅ Credenciales actualizadas para ${newEmail}. Bóveda re-guardada.`, '🔐');
+}
+window.loadAccountSettings = loadAccountSettings;
+window.saveAccountSettings = saveAccountSettings;
+
 function logoutUser() {
   try { sessionStorage.removeItem('rc_auth_user'); } catch(e){}
   window.currentAuthUser = null;
