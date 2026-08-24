@@ -2148,42 +2148,47 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- ── PROFESSIONAL SAAS WELCOME ACCESS GATEWAY MODAL ── -->
-<div class="modal-overlay open" id="login-modal" style="display:flex !important; opacity:1 !important; pointer-events:auto !important; z-index:99999 !important; background:rgba(15, 23, 42, 0.96); padding:20px; align-items:center; justify-content:center;">
-  <div class="modal" style="max-width:440px; width:100%; padding:32px 28px; border-radius:12px; background:#0F172A; border:1px solid #334155; box-shadow:0 10px 30px rgba(0,0,0,0.5); font-family:'Outfit', sans-serif; color:#F8FAFC;">
+<!-- ── PROFESSIONAL SAAS WELCOME ACCESS GATEWAY MODAL (GYM COLD LIGHT STYLE) ── -->
+<div class="modal-overlay open" id="login-modal" style="display:flex !important; opacity:1 !important; pointer-events:auto !important; z-index:99999 !important; background:rgba(241, 245, 249, 0.96); padding:20px; align-items:center; justify-content:center;">
+  <div class="modal" style="max-width:420px; width:100%; padding:40px 32px; border-radius:24px; background:#FFFFFF; border:1px solid #E2E8F0; box-shadow:0 12px 36px rgba(0,0,0,0.06); font-family:'Outfit', sans-serif; color:#0F172A;">
     
     <!-- BRANDING HEADER -->
-    <div style="text-align:center; margin-bottom:24px;">
-      <div style="display:inline-flex; align-items:center; gap:8px; padding:4px 12px; background:#1E293B; border:1px solid #334155; border-radius:9999px; margin-bottom:12px;">
-        <span style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#A5B4FC; letter-spacing:0.06em; text-transform:uppercase;">MINERÍA DE RELACIONES B2B</span>
+    <div style="text-align:center; margin-bottom:28px;">
+      <div style="display:inline-flex; align-items:center; justify-content:center; gap:8px; margin-bottom:10px;">
+        <span style="font-size:22px;">📡</span>
+        <h2 style="font-size:24px; font-weight:800; color:#0F172A; margin:0; letter-spacing:-0.02em;">radar comercial<span style="color:#FF4500;">.</span></h2>
       </div>
-      <h2 style="font-size:22px; font-weight:800; color:#F8FAFC; margin:0 0 6px 0; letter-spacing:-0.02em;">Radar Comercial</h2>
-      <p style="font-size:13px; color:#94A3B8; margin:0; line-height:1.5;">Ingresa con tus credenciales asignadas.</p>
+      <p style="font-size:14px; color:#475569; margin:0; line-height:1.5; font-weight:500;">Minería inteligente de relaciones de LinkedIn</p>
     </div>
 
     <!-- ERROR INLINE ALERT -->
-    <div id="login-error-alert" style="display:none; background:#451A1A; border:1px solid #991B1B; color:#FCA5A5; padding:10px 14px; border-radius:8px; font-size:13px; font-weight:600; margin-bottom:18px; text-align:center;">
+    <div id="login-error-alert" style="display:none; background:#FEE2E2; border:1px solid #FCA5A5; color:#B91C1C; padding:12px 14px; border-radius:12px; font-size:13px; font-weight:600; margin-bottom:20px; text-align:center;">
       ❌ Credenciales incorrectas. Verifique su usuario y contraseña.
     </div>
 
     <!-- FORMULARIO PRINCIPAL DE ACCESO -->
-    <form id="login-form-card" onsubmit="event.preventDefault(); submitCustomLogin();" style="margin-bottom:24px; display:flex; flex-direction:column; gap:16px;">
+    <form id="login-form-card" onsubmit="event.preventDefault(); submitCustomLogin();" style="display:flex; flex-direction:column; gap:20px;">
       <div>
-        <label for="login-username-input" style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#94A3B8; display:block; margin-bottom:6px; letter-spacing:0.06em; text-transform:uppercase;">USUARIO O EMAIL</label>
-        <input type="text" id="login-username-input" class="filter-input" placeholder="ej. giovanna o antonio@radar.com" required style="width:100%; height:44px; font-size:14px; padding:0 14px; border-radius:8px; background:#1E293B; border:1px solid #334155; color:#F8FAFC; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#6366F1'" onblur="this.style.borderColor='#334155'">
+        <label for="login-username-input" style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:8px; letter-spacing:0.08em; text-transform:uppercase;">EMAIL / USUARIO</label>
+        <input type="text" id="login-username-input" class="filter-input" placeholder="ej. antonio@radar.com o giovanna" required style="width:100%; height:48px; font-size:14px; padding:0 16px; border-radius:12px; background:#FFFFFF; border:1px solid #CBD5E1; color:#0F172A; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#FF4500'" onblur="this.style.borderColor='#CBD5E1'">
       </div>
       
       <div>
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-          <label for="login-password-input" style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#94A3B8; letter-spacing:0.06em; text-transform:uppercase;">CONTRASEÑA / PIN</label>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <label for="login-password-input" style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#475569; letter-spacing:0.08em; text-transform:uppercase;">CONTRASEÑA</label>
         </div>
-        <input type="password" id="login-password-input" class="filter-input" placeholder="••••••••" required style="width:100%; height:44px; font-size:14px; padding:0 14px; border-radius:8px; background:#1E293B; border:1px solid #334155; color:#F8FAFC; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#6366F1'" onblur="this.style.borderColor='#334155'">
+        <input type="password" id="login-password-input" class="filter-input" placeholder="••••••••" required style="width:100%; height:48px; font-size:14px; padding:0 16px; border-radius:12px; background:#FFFFFF; border:1px solid #CBD5E1; color:#0F172A; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#FF4500'" onblur="this.style.borderColor='#CBD5E1'">
       </div>
 
-      <button id="login-submit-btn" type="submit" style="width:100%; height:46px; font-size:14px; font-weight:700; border-radius:8px; background:#4F46E5; color:#FFFFFF; border:none; cursor:pointer; transition:background 0.2s ease; margin-top:4px;" onmouseover="this.style.background='#4338CA'" onmouseout="this.style.background='#4F46E5'">
-        Entrar a mi bóveda
+      <button id="login-submit-btn" type="submit" style="width:100%; height:50px; font-size:15px; font-weight:700; border-radius:16px; background:#FF4500; color:#FFFFFF; border:none; cursor:pointer; transition:background 0.2s ease, transform 0.1s ease; box-shadow:0 8px 20px rgba(255, 69, 0, 0.25); margin-top:4px;" onmouseover="this.style.background='#E03E00'" onmouseout="this.style.background='#FF4500'">
+        Entrar
       </button>
     </form>
+
+    <div style="text-align:center; margin-top:20px; font-size:12px; color:#64748B; line-height:1.6;">
+      <a href="#" onclick="event.preventDefault(); alert('Si olvidaste tu contraseña, contacta a tu administrador de cuenta.');" style="color:#64748B; text-decoration:none; display:block; margin-bottom:6px; font-weight:500;">¿Olvidaste tu contraseña?</a>
+      <span>¿No tienes cuenta? <strong style="color:#0F172A;">Créala gratis</strong>. Los equipos entran con el enlace de su empresa.</span>
+    </div>
 
 
 
@@ -7732,7 +7737,7 @@ function getVaultKey() {
 async function saveLocalVault() {
   if (!S.contacts || S.contacts.length === 0 || S.isDemoLoaded) return;
   const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
-  if (userId === 'ronan') return; // Do not auto-overwrite demo sandbox
+  if (userId === 'ronan' || window.isRonanAbMode || S.ownerName === 'Ronan' || S.contacts.length === 500) return; // Do not auto-overwrite with Ronan sandbox
 
   try {
     const db = await openVaultDB();
@@ -7781,6 +7786,11 @@ async function restoreLocalVault() {
       });
 
       if (data && data.contacts && data.contacts.length > 0) {
+        if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4)) {
+          console.warn('[AutoVault] Ignorada caché de Ronan en vault_antonio. Forzando restauración de Bóveda Master Antonio.');
+          localStorage.removeItem(vaultKey);
+          return false;
+        }
         S.contacts = data.contacts;
         S.positions = data.positions || [];
         S.messages = data.messages || [];
@@ -7798,6 +7808,11 @@ async function restoreLocalVault() {
     if (savedLocal) {
       const data = JSON.parse(savedLocal);
       if (data && data.contacts && data.contacts.length > 0) {
+        if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4)) {
+          console.warn('[AutoVault] Ignorada caché de localStorage Ronan.');
+          localStorage.removeItem(vaultKey);
+          return false;
+        }
         S.contacts = data.contacts;
         S.positions = data.positions || [];
         S.messages = data.messages || [];

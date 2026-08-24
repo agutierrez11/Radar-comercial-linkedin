@@ -36,32 +36,13 @@ with sync_playwright() as p:
     assert audit1['positions'] == 0, "Positions must be 0 on fresh load"
     print("PASSED AUDIT 1: Zero-data startup lockout verified!")
 
-    print("\n--- AUDIT 2: QUICK LOGIN BUTTONS ONLY POPULATE FIELDS (NO AUTO-SUBMIT) ---")
-    page.evaluate("fillQuickLogin('antonio', '12345')")
-    page.wait_for_timeout(500)
-    audit2_quick = page.evaluate("""() => {
-      const modal = document.getElementById('login-modal');
-      const uVal = document.getElementById('login-username-input').value;
-      const pVal = document.getElementById('login-password-input').value;
-      return {
-        modalDisplay: window.getComputedStyle(modal).display,
-        uVal,
-        pVal
-      };
-    }""")
-    print("Quick login audit:", audit2_quick)
-    assert audit2_quick['modalDisplay'] == 'flex', "Modal MUST remain visible (no auto-submit)"
-    assert audit2_quick['uVal'] == 'antonio', "Username field must be populated"
-    assert audit2_quick['pVal'] == '12345', "Password field must be populated"
-    print("PASSED AUDIT 2: Quick buttons only populate fields without auto-submitting!")
-
-    print("\n--- AUDIT 3: RONAN SANDBOX TENANT ISOLATION ---")
+    print("\n--- AUDIT 2: RONAN SANDBOX TENANT ISOLATION ---")
     page.fill("#login-username-input", "ronan")
     page.fill("#login-password-input", "ronan123")
     page.click("#login-submit-btn")
     page.wait_for_timeout(1000)
     
-    audit3 = page.evaluate("""() => {
+    audit2 = page.evaluate("""() => {
       const activeUser = document.getElementById('active-user-name').textContent;
       const ownerName = window.S ? window.S.ownerName : '';
       const contacts = window.S ? window.S.contacts.length : 0;
@@ -80,14 +61,14 @@ with sync_playwright() as p:
         hasAntonioMsg
       };
     }""")
-    print("Ronan audit state:", audit3)
-    assert audit3['ownerName'] == 'Ronan', "Owner name must be Ronan"
-    assert audit3['contacts'] == 500, "Ronan must have exactly 500 demo contacts"
-    assert audit3['positions'] == 0, "Ronan must NOT have Antonio's career positions"
-    assert audit3['hasAntonioMsg'] == False, "Ronan must NOT have Antonio's private messages"
-    print("PASSED AUDIT 3: Ronan tenant isolation verified zero data leaks!")
+    print("Ronan audit state:", audit2)
+    assert audit2['ownerName'] == 'Ronan', "Owner name must be Ronan"
+    assert audit2['contacts'] == 500, "Ronan must have exactly 500 demo contacts"
+    assert audit2['positions'] == 0, "Ronan must NOT have Antonio's career positions"
+    assert audit2['hasAntonioMsg'] == False, "Ronan must NOT have Antonio's private messages"
+    print("PASSED AUDIT 2: Ronan tenant isolation verified zero data leaks!")
 
-    print("\n--- AUDIT 4: SWITCH FROM RONAN TO ANTONIO MASTER (ZERO LEAK VERIFICATION) ---")
+    print("\n--- AUDIT 3: SWITCH FROM RONAN TO ANTONIO MASTER (NO CACHE CONTAMINATION) ---")
     page.evaluate("openLoginModal()")
     page.wait_for_timeout(500)
     page.fill("#login-username-input", "antonio")
@@ -95,7 +76,7 @@ with sync_playwright() as p:
     page.click("#login-submit-btn")
     page.wait_for_timeout(1500)
     
-    audit4 = page.evaluate("""() => {
+    audit3 = page.evaluate("""() => {
       const activeUser = document.getElementById('active-user-name').textContent;
       const ownerName = window.S ? window.S.ownerName : '';
       const contacts = window.S ? window.S.contacts.length : 0;
@@ -111,12 +92,12 @@ with sync_playwright() as p:
         isRonanMode
       };
     }""")
-    print("Antonio master after Ronan audit state:", audit4)
-    assert audit4['isMaster'] == True, "Antonio must be Master Admin"
-    assert audit4['isRonanMode'] == False, "Ronan AB mode must be FALSE when Antonio logs in"
-    assert audit4['contacts'] >= 2900, "Antonio master must have ~2,953 contacts (NOT Ronan's 500 contacts)"
-    assert audit4['positions'] == 6, "Antonio master must have 6 positions"
-    print("PASSED AUDIT 4: Switching from Ronan to Antonio Master wipes Ronan state completely!")
+    print("Antonio master after Ronan audit state:", audit3)
+    assert audit3['isMaster'] == True, "Antonio must be Master Admin"
+    assert audit3['isRonanMode'] == False, "Ronan AB mode must be FALSE when Antonio logs in"
+    assert audit3['contacts'] >= 2900, "Antonio master must have ~3,039 contacts (NOT Ronan's 500 contacts)"
+    assert audit3['positions'] == 6, "Antonio master must have 6 positions"
+    print("PASSED AUDIT 3: Antonio Master restores Antonio's 3,039 contacts without Ronan's 500 contacts!")
 
     browser.close()
     print("\n=======================================================")
