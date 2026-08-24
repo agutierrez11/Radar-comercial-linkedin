@@ -901,30 +901,15 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
     <div class="kpi-pill tabular-nums" style="font-size:11px; padding:3px 8px; border-radius:6px; background:rgba(16,185,129,0.1); border:1px solid var(--green); color:var(--green);"><span id="hkpi-total">0</span> cont.</div>
   </div>
 
-  <!-- Active User Pill -->
-  <div class="dropdown-container" style="position:relative;">
-    <div class="kpi-pill" id="active-user-pill" onclick="toggleAdminVaultMenu(event)" style="cursor:pointer !important; background:rgba(79,70,229,0.12); border:1px solid var(--accent); color:var(--text); font-weight:700; font-size:11px; padding:4px 10px; border-radius:20px; display:flex; align-items:center; gap:6px;" title="Cambiar usuario/bóveda">
+  <!-- Active User Pill & Logout -->
+  <div style="display:flex; align-items:center; gap:8px;">
+    <div class="kpi-pill" id="active-user-pill" style="background:rgba(79,70,229,0.12); border:1px solid var(--accent); color:var(--text); font-weight:700; font-size:11px; padding:4px 12px; border-radius:20px; display:flex; align-items:center; gap:6px;">
       <span class="dot" style="width:7px; height:7px; border-radius:50%; background:var(--green); display:inline-block;"></span>
-      <span id="active-user-name">👤 Antonio (Master)</span> ▾
+      <span id="active-user-name">🔒 Sin Autenticar</span>
     </div>
-    <div id="admin-vault-dropdown" style="display:none; position:absolute; right:0; top:32px; width:260px; background:var(--surface); border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow-md); padding:8px; z-index:2500; font-family:'Outfit',sans-serif;">
-      <div style="font-size:10px; font-weight:800; color:var(--accent); text-transform:uppercase; letter-spacing:0.05em; padding:4px 8px; margin-bottom:4px;">👑 Conmutador Multi-Tenant (Admin)</div>
-      <button class="mini-btn" onclick="submitCustomLogin('antonio'); toggleAdminVaultMenu();" style="width:100%; text-align:left; padding:8px 10px; background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.2); color:var(--text); border-radius:8px; margin-bottom:4px; font-size:11px; display:flex; justify-content:space-between; align-items:center;">
-        <span>👤 <strong>Antonio</strong> (Master)</span>
-        <span style="font-size:9px; background:rgba(16,185,129,0.2); color:var(--green); padding:1px 6px; border-radius:4px; font-weight:700;">2,953 cont.</span>
-      </button>
-      <button class="mini-btn" onclick="submitCustomLogin('giovanna'); toggleAdminVaultMenu();" style="width:100%; text-align:left; padding:8px 10px; background:rgba(124,58,237,0.08); border:1px solid rgba(124,58,237,0.2); color:var(--purple); border-radius:8px; margin-bottom:4px; font-size:11px; display:flex; justify-content:space-between; align-items:center;">
-        <span>🔒 <strong>Giovanna</strong> (Bóveda Privada)</span>
-        <span style="font-size:9px; background:rgba(124,58,237,0.2); color:var(--purple); padding:1px 6px; border-radius:4px; font-weight:700;">Aislada</span>
-      </button>
-      <button class="mini-btn" onclick="submitCustomLogin('ronan'); toggleAdminVaultMenu();" style="width:100%; text-align:left; padding:8px 10px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.2); color:var(--amber); border-radius:8px; margin-bottom:6px; font-size:11px; display:flex; justify-content:space-between; align-items:center;">
-        <span>🧪 <strong>Ronan</strong> (Sandbox BI)</span>
-        <span style="font-size:9px; background:rgba(245,158,11,0.2); color:var(--amber); padding:1px 6px; border-radius:4px; font-weight:700;">500 demo</span>
-      </button>
-      <div style="border-top:1px solid var(--border); padding-top:6px; display:flex; justify-content:space-between;">
-        <button class="mini-btn" onclick="openLoginModal(); toggleAdminVaultMenu();" style="font-size:10px; color:var(--text-muted); background:transparent; border:none; padding:4px 6px; cursor:pointer;">🔑 Abrir Modal Login</button>
-      </div>
-    </div>
+    <button class="mini-btn" onclick="logoutUser()" style="padding:4px 10px; font-size:10px; font-weight:700; border-radius:14px; background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.3); color:var(--red); cursor:pointer;" title="Cerrar Sesión y Bloquear Bóveda">
+      🚪 Cerrar Sesión
+    </button>
   </div>
 
   <!-- Botón Más Dropdown -->
@@ -8047,30 +8032,47 @@ function importVaultJson(file) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  if (window.currentAuthUser && !window.currentAuthUser.isMaster) {
-    console.log('[AutoVault Bootstrap] Skipped: Active user is isolated non-master.');
+  // Check active session in sessionStorage
+  try {
+    const savedSession = sessionStorage.getItem('rc_auth_user');
+    if (savedSession) {
+      window.currentAuthUser = JSON.parse(savedSession);
+    }
+  } catch(e){}
+
+  // If no user is authenticated, LOCK the app immediately behind the modal and DO NOT LOAD DATA!
+  if (!window.currentAuthUser) {
+    document.body.classList.add('not-authenticated');
+    S.contacts = [];
+    updateStatus();
+    if (typeof openLoginModal === 'function') openLoginModal();
     return;
   }
-  // 1. Intentar auto-restaurar la bóveda privada guardada en el navegador (IndexedDB)
+
+  const activeUserPill = document.getElementById('active-user-name');
+  if (activeUserPill) activeUserPill.textContent = window.currentAuthUser.name;
+  closeLoginModal();
+
+  if (!window.currentAuthUser.isMaster) {
+    console.log('[AutoVault Bootstrap] Skipped data load: Active user is non-master.');
+    S.contacts = [];
+    updateStatus();
+    return;
+  }
+
+  // Restore vault for authenticated master user
   try {
     const restored = await restoreLocalVault();
     if (restored) {
       updateStatus();
       finalize();
       if (typeof navigate === 'function') navigate('network');
-      const toast = document.getElementById('ui-toast');
-      if (toast) {
-        toast.innerHTML = `<span>⚡</span> <span>Bóveda local restaurada automáticamente (${S.contacts.length.toLocaleString()} contactos).</span>`;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 3500);
-      }
       return;
     }
   } catch (err) {
     console.warn("[AutoVault Bootstrap]", err);
   }
 
-  // 2. Si no hay bóveda local, cargar datos iniciales de Supabase / Demo
   if (!window.supabase) {
     console.warn("[Bootstrap] SDK Supabase no encontrado, esperando...");
   }
@@ -8154,7 +8156,7 @@ async function syncZipFileToSupabase(userId, filename, recordsArray, headersArra
 // ═══════════════════════════════════════════════════════════════════════
 // 1. SISTEMA DE AUTENTICACIÓN DINÁMICA MULTI-TENANT & BÓVEDAS AISLADAS
 // ═══════════════════════════════════════════════════════════════════════
-window.currentAuthUser = { id: 'antonio', name: 'Antonio (Master)', isMaster: true };
+window.currentAuthUser = null;
 
 function openLoginModal() {
   console.log('[LoginModal] Opening login modal...');
@@ -8178,7 +8180,11 @@ function openLoginModal() {
 window.openLoginModal = openLoginModal;
 
 function closeLoginModal() {
-  console.log('[LoginModal] Closing login modal...');
+  if (!window.currentAuthUser) {
+    if (typeof showToast === 'function') showToast('🔒 Debes autenticarte para acceder a la bóveda.', '🔒');
+    return;
+  }
+  console.log('[LoginModal] Closing login modal for user:', window.currentAuthUser.name);
   const modal = document.getElementById('login-modal');
   if (modal) {
     modal.classList.remove('open');
@@ -8189,6 +8195,24 @@ function closeLoginModal() {
   document.body.classList.remove('not-authenticated');
 }
 window.closeLoginModal = closeLoginModal;
+function logoutUser() {
+  try { sessionStorage.removeItem('rc_auth_user'); } catch(e){}
+  window.currentAuthUser = null;
+  S.contacts = [];
+  S.positions = [];
+  S.messages = [];
+  S.crmState = { discarded: [], whitelisted: [], deals: [] };
+  
+  const activeUserPill = document.getElementById('active-user-name');
+  if (activeUserPill) activeUserPill.textContent = '🔒 Sin Autenticar';
+  
+  document.body.classList.add('not-authenticated');
+  if (typeof openLoginModal === 'function') openLoginModal();
+  updateStatus();
+  if (typeof renderDashboard === 'function') renderDashboard();
+  if (typeof showToast === 'function') showToast('🔒 Sesión cerrada con éxito. Re-autentícate para ingresar.', '🔒');
+}
+window.logoutUser = logoutUser;
 
 function quickLogin(username, pwd) {
   const usernameInput = document.getElementById('login-username-input');
@@ -8235,22 +8259,24 @@ window.clearVaultForLiveDemo = clearVaultForLiveDemo;
 
 function submitCustomLogin(targetUser) {
   const usernameInput = document.getElementById('login-username-input');
+  const pwdInput = document.getElementById('login-password-input');
   const inputVal = usernameInput ? usernameInput.value : '';
+  const pwdVal = pwdInput ? pwdInput.value : '';
   const username = (targetUser || inputVal || '').trim().toLowerCase();
   if (!username) return;
 
-  closeLoginModal();
-  const activeUserPill = document.getElementById('active-user-name');
-  const activePillContainer = document.getElementById('active-user-pill');
-  const adminDropdown = document.getElementById('admin-vault-dropdown');
-  const ronanBanner = document.getElementById('ronan-ab-banner');
-
   if (username === 'antonio' || username === 'master') {
+    if (pwdVal && pwdVal !== '12345' && pwdVal !== 'admin') {
+      showToast('❌ Contraseña de Administrador incorrecta.', '🔒');
+      return;
+    }
     window.currentAuthUser = { id: 'antonio', name: '👤 Antonio (Master)', isMaster: true };
+    try { sessionStorage.setItem('rc_auth_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
+    
+    closeLoginModal();
+    const activeUserPill = document.getElementById('active-user-name');
     if (activeUserPill) activeUserPill.textContent = '👤 Antonio (Master)';
-    if (activePillContainer) { activePillContainer.style.cursor = 'pointer'; }
-    if (adminDropdown) adminDropdown.style.display = 'block';
-    if (ronanBanner) ronanBanner.style.display = 'none';
+    
     restoreLocalVault().then(restored => {
       if (!restored) loadDemoData(false);
       updateStatus();
@@ -8262,10 +8288,11 @@ function submitCustomLogin(targetUser) {
     const isGio = username === 'giovanna';
     const nameStr = isGio ? 'Giovanna' : 'Roanna';
     window.currentAuthUser = { id: username, name: `🔒 Bóveda ${nameStr} (Privada)`, isMaster: false };
+    try { sessionStorage.setItem('rc_auth_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
+    
+    closeLoginModal();
+    const activeUserPill = document.getElementById('active-user-name');
     if (activeUserPill) activeUserPill.textContent = `🔒 Bóveda ${nameStr} (Privada)`;
-    if (activePillContainer) { activePillContainer.style.cursor = 'default'; activePillContainer.onclick = null; }
-    if (adminDropdown) adminDropdown.style.display = 'none';
-    if (ronanBanner) ronanBanner.style.display = 'none';
     
     // Complete isolation: Vault is 100% EMPTY for non-master users!
     S.contacts = [];
@@ -8282,18 +8309,20 @@ function submitCustomLogin(targetUser) {
     showToast(`🔒 Bóveda Aislada de ${nameStr} (0 contactos). Lista para cargar tu ZIP.`, '🔒');
   } else if (username === 'ronan') {
     window.currentAuthUser = { id: 'ronan', name: '🧪 Sandbox Ronan', isMaster: false, isSandbox: true };
+    try { sessionStorage.setItem('rc_auth_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
+    
+    closeLoginModal();
+    const activeUserPill = document.getElementById('active-user-name');
     if (activeUserPill) activeUserPill.textContent = '🧪 Sandbox Ronan';
-    if (activePillContainer) { activePillContainer.style.cursor = 'default'; activePillContainer.onclick = null; }
-    if (adminDropdown) adminDropdown.style.display = 'none';
-    if (ronanBanner) ronanBanner.style.display = 'flex';
     
     switchRonanAbMode('B');
   } else {
     window.currentAuthUser = { id: username, name: `👤 Bóveda ${username}`, isMaster: false };
+    try { sessionStorage.setItem('rc_auth_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
+    
+    closeLoginModal();
+    const activeUserPill = document.getElementById('active-user-name');
     if (activeUserPill) activeUserPill.textContent = `👤 Bóveda ${username}`;
-    if (activePillContainer) { activePillContainer.style.cursor = 'default'; activePillContainer.onclick = null; }
-    if (adminDropdown) adminDropdown.style.display = 'none';
-    if (ronanBanner) ronanBanner.style.display = 'none';
     
     S.contacts = [];
     S.positions = [];
