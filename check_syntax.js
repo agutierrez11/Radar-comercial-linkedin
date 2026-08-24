@@ -1,23 +1,15 @@
 const fs = require('fs');
-const vm = require('vm');
+const html = fs.readFileSync('index.html', 'utf8');
 
-const content = fs.readFileSync('staging.html', 'utf8');
-const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>/gi;
+const scriptRegex = /<script>([\s\S]*?)<\/script>/gi;
 let match;
-let blockIndex = 0;
-
-while ((match = scriptRegex.exec(content)) !== null) {
-  blockIndex++;
-  const code = match[1];
-  const tag = match[0].split('>')[0];
-  if (tag.includes('src=')) continue; // skip external script tags
-  
-  const linesBefore = content.substring(0, match.index).split('\n').length;
+let count = 0;
+while ((match = scriptRegex.exec(html)) !== null) {
+  count++;
   try {
-    new vm.Script(code, { filename: 'staging.html', lineOffset: linesBefore - 1 });
-    console.log(`Block ${blockIndex} (line ${linesBefore}): OK`);
+    new Function(match[1]);
+    console.log(`Script block #${count}: SYNTAX OK`);
   } catch (err) {
-    console.error(`Block ${blockIndex} (line ${linesBefore}) ERROR: ${err.message}`);
-    console.error(err.stack.split('\n').slice(0, 3).join('\n'));
+    console.error(`Script block #${count}: SYNTAX ERROR:`, err.message);
   }
 }

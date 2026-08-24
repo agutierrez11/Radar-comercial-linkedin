@@ -6,25 +6,29 @@ with sync_playwright() as p:
     browser = p.chromium.launch(headless=True)
     page = browser.new_page(viewport={"width": 1280, "height": 800})
     
-    print("\n--- TEST 1: FRESH PAGE LOAD AUTH GATING ---")
+    print("\n--- TEST 1: FRESH PAGE LOAD ZERO-DATA LOCKOUT ---")
     page.goto("http://127.0.0.1:8888/index.html")
     page.wait_for_timeout(1000)
     
     modal_info = page.evaluate("""() => {
       const modal = document.getElementById('login-modal');
       const main = document.getElementById('main-content');
+      const stateObj = window.S || (typeof S !== 'undefined' ? S : {});
+      const contactsCount = stateObj.contacts ? stateObj.contacts.length : 0;
       return {
         modalDisplay: window.getComputedStyle(modal).display,
         modalZIndex: window.getComputedStyle(modal).zIndex,
         mainVisibility: window.getComputedStyle(main).visibility,
-        mainOpacity: window.getComputedStyle(main).opacity
+        mainOpacity: window.getComputedStyle(main).opacity,
+        contactsCount
       };
     }""")
-    print("Modal gating state:", modal_info)
+    print("Modal lockout state:", modal_info)
     assert modal_info['modalDisplay'] == 'flex', "Modal must be display: flex on load"
     assert modal_info['mainOpacity'] == '0', "Main content must be opacity: 0 before login"
+    assert modal_info['contactsCount'] == 0, "Contacts count must be ZERO on page load before login"
     page.screenshot(path="qa_test1_fresh_login_gating.png")
-    print("PASSED TEST 1: Zero-flash login gating verified!")
+    print("PASSED TEST 1: Zero-data startup lockout verified!")
 
     print("\n--- TEST 2: GIOVANNA ISOLATED LOGIN ---")
     page.evaluate("submitCustomLogin('giovanna');")
@@ -35,12 +39,10 @@ with sync_playwright() as p:
       const stateObj = window.S || (typeof S !== 'undefined' ? S : {});
       const contactsCount = stateObj.contacts ? stateObj.contacts.length : 0;
       const adminDropdown = document.getElementById('admin-vault-dropdown');
-      const pillContainer = document.getElementById('active-user-pill');
       return {
         activeUser,
         contactsCount,
-        dropdownDisplay: adminDropdown ? adminDropdown.style.display : 'NONE',
-        pillCursor: pillContainer ? pillContainer.style.cursor : 'default'
+        dropdownDisplay: adminDropdown ? adminDropdown.style.display : 'NONE'
       };
     }""")
     print("Giovanna vault state:", gio_info)
@@ -52,7 +54,13 @@ with sync_playwright() as p:
     print("\n--- TEST 3: ANTONIO MASTER ADMIN LOGIN ---")
     page.goto("http://127.0.0.1:8888/index.html")
     page.wait_for_timeout(1000)
-    page.evaluate("submitCustomLogin('antonio');")
+    
+    # Fill password 12345 and login as Antonio
+    page.evaluate("""() => {
+      const pwdInput = document.getElementById('login-password-input');
+      if (pwdInput) pwdInput.value = '12345';
+      submitCustomLogin('antonio');
+    }""")
     page.wait_for_timeout(1500)
     
     antonio_info = page.evaluate("""() => {
