@@ -7,7 +7,17 @@
   <meta name="description" content="Minería inteligente de relaciones de LinkedIn. 100% local, sin servidor.">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-  <script>window.JSZip || document.write('<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"><\/script>')</script>
+  <script>
+
+function unlockAnalyticsUI() {
+  const locked = document.getElementById('analytics-locked');
+  const dashboard = document.getElementById('analytics-dashboard');
+  if (locked) locked.style.display = 'none';
+  if (dashboard) dashboard.style.display = 'block';
+  if (typeof renderAnalytics === 'function') renderAnalytics();
+}
+window.unlockAnalyticsUI = unlockAnalyticsUI;
+window.JSZip || document.write('<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"><\/script>')</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script>window.Papa || document.write('<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"><\/script>')</script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -1657,7 +1667,7 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap:16px; margin-bottom:20px;">
           
           <!-- 1. EMBUDO DE PIPELINE -->
-          <div style="background:rgba(15, 23, 42, 0.7); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:20px; backdrop-filter:blur(8px);">
+          <div style="background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow-sm); border-radius:14px; padding:20px; backdrop-filter:blur(8px);">
             <div style="font-size:14px; font-weight:800; color:var(--text); margin-bottom:4px; display:flex; align-items:center; gap:8px;">
               <span>🔻 Embudo de Conversión de Pipeline (Sankey/Funnel)</span>
             </div>
@@ -1665,8 +1675,8 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
             <div id="echart-funnel" style="width:100%; height:320px;"></div>
           </div>
 
-          # 2. MAPA DE CALOR DE DENSIDAD DE PODER
-          <div style="background:rgba(15, 23, 42, 0.7); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:20px; backdrop-filter:blur(8px);">
+          
+          <div style="background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow-sm); border-radius:14px; padding:20px; backdrop-filter:blur(8px);">
             <div style="font-size:14px; font-weight:800; color:var(--text); margin-bottom:4px; display:flex; align-items:center; gap:8px;">
               <span>🔥 Matriz de Densidad: Jerarquía vs Geografía</span>
             </div>
@@ -1677,7 +1687,7 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
         </div>
 
         <!-- ROW 2: EVOLUCIÓN "DE BECARIO A CEO" (STACKED BAR CHART) -->
-        <div style="background:rgba(15, 23, 42, 0.7); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:20px; margin-bottom:20px; backdrop-filter:blur(8px);">
+        <div style="background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow-sm); border-radius:14px; padding:20px; margin-bottom:20px; backdrop-filter:blur(8px);">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:10px;">
             <div>
               <div style="font-size:15px; font-weight:800; color:var(--text); display:flex; align-items:center; gap:8px;">
@@ -2369,7 +2379,7 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
 // ═══════════════════════════════════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════════════════════════════════
-const S = {
+const S = window.S = {
   contacts: [],
   positions: [],
   ownerName: '',
@@ -3211,6 +3221,7 @@ async function normalizeWithAPI() {
 }
 
 function finalize() {
+  unlockAnalyticsUI();
   loadCrmState();
   applyNetworkFilters();
   
@@ -3398,6 +3409,7 @@ async function loadDemoData(autoNavigate = true) {
 
     finalize();
     initGisMap(S.contacts);
+    window.loadDemoData = loadDemoData;
     if (autoNavigate) {
       navigate('network');
     }
@@ -3655,15 +3667,20 @@ const REQUIRES_ZIP = ['network', 'icp', 'purge', 'messages', 'profile', 'analyti
   });
 
 function navigate(sec) {
-  if (REQUIRES_ZIP.includes(sec) && !S.loadedParts.connections) {
+  if (typeof REQUIRES_ZIP !== 'undefined' && REQUIRES_ZIP.includes(sec) && !S.loadedParts.connections) {
     alert("⚠️ Carga primero tu archivo de contactos (Connections.csv) para habilitar esta sección.");
     return;
   }
   S.activeSection = sec;
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  document.getElementById('sec-' + sec).classList.add('active');
-  document.querySelector(`[data-section="${sec}"]`).classList.add('active');
+  const targetSec = document.getElementById('sec-' + sec);
+  if (targetSec) {
+    targetSec.classList.add('active');
+    targetSec.style.display = 'block';
+  }
+  const navItem = document.querySelector(`[data-section="${sec}"]`);
+  if (navItem) navItem.classList.add('active');
 
   if (sec === 'network') {
     setTimeout(() => {
@@ -3685,8 +3702,15 @@ function navigate(sec) {
     });
   }
   
+window.navigate = navigate;
   if (sec === 'analytics') {
-    requestAnimationFrame(() => { renderAnalytics(); });
+    const locked = document.getElementById('analytics-locked');
+    const dashboard = document.getElementById('analytics-dashboard');
+    if (locked) locked.style.display = 'none';
+    if (dashboard) dashboard.style.display = 'block';
+    requestAnimationFrame(() => {
+      if (typeof renderAnalytics === 'function') renderAnalytics();
+    });
   }
 }
 
@@ -8717,7 +8741,7 @@ function renderVaultBFeed(overrideList) {
       : '<span style="font-size:10px; background:rgba(245,158,11,0.15); border:1px solid rgba(245,158,11,0.3); color:#f59e0b; padding:2px 8px; border-radius:12px; font-weight:700; display:inline-flex; align-items:center; gap:4px;">🟡 Probable Decisor</span>';
 
     return `
-      <div class="vault-b-card" style="background:rgba(15, 23, 42, 0.7); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; transition:all 0.22s cubic-bezier(0.4, 0, 0.2, 1); backdrop-filter:blur(8px);" onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='rgba(99,102,241,0.4)'; this.style.boxShadow='0 10px 25px -5px rgba(99,102,241,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='none';">
+      <div class="vault-b-card" style="background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow-sm); border-radius:14px; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; transition:all 0.22s cubic-bezier(0.4, 0, 0.2, 1); backdrop-filter:blur(8px);" onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='rgba(99,102,241,0.4)'; this.style.boxShadow='0 10px 25px -5px rgba(99,102,241,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='none';">
         <div style="display:flex; align-items:center; gap:16px; flex:1; min-width:280px;">
           <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg, #6366f1, #4f46e5); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:18px; font-family:'Outfit',sans-serif; flex-shrink:0; box-shadow:0 4px 12px rgba(99,102,241,0.3);">
             ${initial}
@@ -8816,25 +8840,30 @@ window.renderVaultBFeed = renderVaultBFeed;
 window.currentAnalyticsViewMode = 'A';
 
 function switchAnalyticsViewMode(mode) {
-  window.currentAnalyticsViewMode = mode;
-  const btnA = document.getElementById('ana-mode-btn-a');
-  const btnB = document.getElementById('ana-mode-btn-b');
   const containerA = document.getElementById('analytics-view-container-a');
   const containerB = document.getElementById('analytics-view-container-b');
+  const btnA = document.getElementById('ana-mode-btn-a');
+  const btnB = document.getElementById('ana-mode-btn-b');
+  
+  const locked = document.getElementById('analytics-locked');
+  const dashboard = document.getElementById('analytics-dashboard');
+  if (locked) locked.style.display = 'none';
+  if (dashboard) dashboard.style.display = 'block';
 
   if (mode === 'B') {
-    if (btnB) { btnB.classList.add('active'); btnB.style.background = 'var(--accent)'; btnB.style.color = '#fff'; }
-    if (btnA) { btnA.classList.remove('active'); btnA.style.background = 'transparent'; btnA.style.color = 'var(--text-muted)'; }
     if (containerA) containerA.style.display = 'none';
     if (containerB) containerB.style.display = 'block';
-    renderPowerBiEcharts();
-    showToast('⚡ Vista Power BI Executive Suite (Apache ECharts) activada.', '⚡');
+    if (btnA) { btnA.style.background = 'transparent'; btnA.style.borderColor = 'var(--border)'; }
+    if (btnB) { btnB.style.background = 'var(--primary)'; btnB.style.color = '#ffffff'; btnB.style.borderColor = 'var(--primary)'; }
+    if (typeof renderPowerBiEcharts === 'function') {
+      setTimeout(renderPowerBiEcharts, 100);
+    }
   } else {
-    if (btnA) { btnA.classList.add('active'); btnA.style.background = 'var(--accent)'; btnA.style.color = '#fff'; }
-    if (btnB) { btnB.classList.remove('active'); btnB.style.background = 'transparent'; btnB.style.color = 'var(--text-muted)'; }
-    if (containerB) containerB.style.display = 'none';
     if (containerA) containerA.style.display = 'block';
-    showToast('📊 Vista Clásica Simple de Analítica activada.', '📊');
+    if (containerB) containerB.style.display = 'none';
+    if (btnB) { btnB.style.background = 'transparent'; btnB.style.borderColor = 'var(--border)'; }
+    if (btnA) { btnA.style.background = 'var(--primary)'; btnA.style.color = '#ffffff'; btnA.style.borderColor = 'var(--primary)'; }
+    if (typeof renderAnalytics === 'function') setTimeout(renderAnalytics, 50);
   }
 }
 window.switchAnalyticsViewMode = switchAnalyticsViewMode;
@@ -8842,50 +8871,68 @@ window.switchAnalyticsViewMode = switchAnalyticsViewMode;
 function renderPowerBiEcharts() {
   if (typeof echarts === 'undefined') return;
 
+  const isDark = document.body.classList.contains('dark');
+  const textColor = isDark ? '#e2e8f0' : '#1e293b';
+  const borderColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)';
+
   const contacts = S.contacts || [];
-  const total = contacts.length || 2953;
+  const total = contacts.length > 0 ? contacts.length : 2953;
+  
   const clevel = contacts.filter(c => {
-    const p = (c.position || '').toLowerCase();
-    return p.includes('ceo') || p.includes('director') || p.includes('vp') || p.includes('founder') || p.includes('gerente');
+    const p = ((c ? c.position : '') || '').toLowerCase();
+    return p.includes('ceo') || p.includes('director') || p.includes('vp') || p.includes('founder') || p.includes('gerente') || p.includes('head');
   }).length || 1395;
   
-  const chats = (S.messages || []).length || 14;
-  const opps = 8;
+  const chats = (S.messages || []).length || 2087;
+  const opps = (S.contacts || []).filter(c => c ? c.isClassA : false).length || 296;
 
-  // 1. FUNNEL CHART
+  // 1. FUNNEL CHART (Embudo de Pipeline Warm)
   const funnelDom = document.getElementById('echart-funnel');
   if (funnelDom) {
-    const funnelChart = echarts.init(funnelDom, 'dark');
+    try { echarts.dispose(funnelDom); } catch(e){}
+    const funnelChart = echarts.init(funnelDom);
     funnelChart.setOption({
       backgroundColor: 'transparent',
       tooltip: { trigger: 'item', formatter: '{b} : {c} prospectos ({d}%)' },
       series: [{
-        name: 'Pipeline',
+        name: 'Pipeline Warm',
         type: 'funnel',
-        left: '10%', top: 20, bottom: 20, width: '80%',
+        left: '5%', top: 20, bottom: 20, width: '90%',
         min: 0, max: total,
-        minSize: '15%', maxSize: '100%',
+        minSize: '20%', maxSize: '100%',
         sort: 'descending',
-        gap: 4,
-        label: { show: true, position: 'inside', fontStyle: 'bold', fontFamily: 'Outfit' },
-        itemStyle: { borderRadius: 6, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)' },
+        gap: 6,
+        label: {
+          show: true,
+          position: 'inside',
+          formatter: '{b}
+{c} contactos',
+          fontStyle: 'normal',
+          fontWeight: 'bold',
+          fontFamily: 'Outfit',
+          fontSize: 11,
+          color: '#ffffff'
+        },
+        itemStyle: { borderRadius: 8, borderWidth: 1, borderColor: borderColor },
         data: [
-          { value: total, name: '1. Red Total en Bóveda', itemStyle: { color: '#6366f1' } },
-          { value: Math.round(total * 0.85), name: '2. Analizados por IA', itemStyle: { color: '#818cf8' } },
-          { value: clevel, name: '3. ICP Elegible (C-Level/VP)', itemStyle: { color: '#a5b4fc' } },
-          { value: chats, name: '4. Interacción / Chat Activo', itemStyle: { color: '#f59e0b' } },
+          { value: total, name: '1. Red Total en Bóveda', itemStyle: { color: '#4f46e5' } },
+          { value: Math.round(total * 0.85), name: '2. Analizados por IA & Semántica', itemStyle: { color: '#6366f1' } },
+          { value: clevel, name: '3. ICP Elegible (C-Level / Directores)', itemStyle: { color: '#818cf8' } },
+          { value: chats, name: '4. Interacción / Chat Activo (DMs)', itemStyle: { color: '#f59e0b' } },
           { value: opps, name: '5. Cuentas Objetivo Co-Selling', itemStyle: { color: '#10b981' } }
         ]
       }]
     });
+    setTimeout(() => { try { funnelChart.resize(); } catch(e){} }, 200);
   }
 
-  // 2. HEATMAP CHART (Jerarquía vs País)
+  // 2. HEATMAP CHART (Jerarquía vs Geografía)
   const heatmapDom = document.getElementById('echart-heatmap');
   if (heatmapDom) {
-    const heatmapChart = echarts.init(heatmapDom, 'dark');
-    const hours = ['C-Level', 'Directores', 'Gerentes', 'Otros'];
-    const days = ['México', 'Colombia', 'España', 'Argentina', 'EE.UU.'];
+    try { echarts.dispose(heatmapDom); } catch(e){}
+    const heatmapChart = echarts.init(heatmapDom);
+    const categories = ['C-Level', 'Directores', 'Gerentes', 'Otros'];
+    const countries = ['México', 'Colombia', 'Argentina', 'España', 'EE.UU.'];
     const data = [
       [0,0,466],[0,1,361],[0,2,568],[0,3,250],
       [1,0,150],[1,1,120],[1,2,180],[1,3,90],
@@ -8896,54 +8943,56 @@ function renderPowerBiEcharts() {
     heatmapChart.setOption({
       backgroundColor: 'transparent',
       tooltip: { position: 'top' },
-      grid: { height: '70%', top: '10%' },
-      xAxis: { type: 'category', data: hours, splitArea: { show: true } },
-      yAxis: { type: 'category', data: days, splitArea: { show: true } },
+      grid: { height: '70%', top: '12%', left: '15%', right: '10%' },
+      xAxis: { type: 'category', data: categories, axisLabel: { color: textColor, fontFamily: 'Outfit' } },
+      yAxis: { type: 'category', data: countries, axisLabel: { color: textColor, fontFamily: 'Outfit' } },
       visualMap: {
-        min: 0, max: 500,
-        calculable: true,
-        orient: 'horizontal',
-        left: 'center', bottom: '0%',
-        inRange: { color: ['#0f172a', '#4338ca', '#6366f1', '#10b981'] }
+        min: 0, max: 600, calculable: true, orient: 'horizontal', left: 'center', bottom: '0%',
+        inRange: { color: ['#e0e7ff', '#818cf8', '#4f46e5', '#312e81'] },
+        textStyle: { color: textColor }
       },
       series: [{
-        name: 'Concentración de Contactos',
+        name: 'Densidad',
         type: 'heatmap',
         data: data,
-        label: { show: true, color: '#fff', fontFamily: 'JetBrains Mono' },
+        label: { show: true, color: '#fff', fontWeight: 'bold' },
         emphasis: { itemStyle: { shadowBlur: 10, shadowColor: 'rgba(0, 0, 0, 0.5)' } }
       }]
     });
+    setTimeout(() => { try { heatmapChart.resize(); } catch(e){} }, 200);
   }
 
-  // 3. EVOLUCIÓN BECARIO A CEO
-  const becarioDom = document.getElementById('echart-becario-ceo');
-  if (becarioDom) {
-    const becarioChart = echarts.init(becarioDom, 'dark');
-    becarioChart.setOption({
+  // 3. STACKED BAR CHART ("De Becario a CEO")
+  const ceoDom = document.getElementById('echart-becario-ceo');
+  if (ceoDom) {
+    try { echarts.dispose(ceoDom); } catch(e){}
+    const ceoChart = echarts.init(ceoDom);
+    ceoChart.setOption({
       backgroundColor: 'transparent',
       tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
-      legend: { data: ['Cargo al conectar (2018 - Desactualizado)', 'Cargo en Vivo (2026 - HarvestAPI + IA)'], textStyle: { color: '#e2e8f0' } },
+      legend: { data: ['Cargo Original (Al Conectar)', 'Cargo en Vivo Hoy (2026)'], textStyle: { color: textColor } },
       grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
-      xAxis: { type: 'value', boundaryGap: [0, 0.01] },
-      yAxis: { type: 'category', data: ['CEO / Founder', 'VP / SVP', 'Director General', 'Gerente Sr', 'Analista Jr / Becario'] },
+      xAxis: { type: 'value', axisLabel: { color: textColor } },
+      yAxis: { type: 'category', data: ['Analista / Becario', 'Coordinador', 'Gerente', 'Director / VP', 'CEO / Founder'], axisLabel: { color: textColor } },
       series: [
         {
-          name: 'Cargo al conectar (2018 - Desactualizado)',
+          name: 'Cargo Original (Al Conectar)',
           type: 'bar',
-          data: [45, 80, 150, 420, 2258],
-          itemStyle: { color: '#64748b' }
+          data: [1200, 850, 500, 300, 103],
+          itemStyle: { color: '#94a3b8', borderRadius: [0, 4, 4, 0] }
         },
         {
-          name: 'Cargo en Vivo (2026 - HarvestAPI + IA)',
+          name: 'Cargo en Vivo Hoy (2026)',
           type: 'bar',
-          data: [466, 361, 568, 950, 608],
-          itemStyle: { color: '#10b981' }
+          data: [150, 300, 680, 1100, 723],
+          itemStyle: { color: '#4f46e5', borderRadius: [0, 4, 4, 0] }
         }
       ]
     });
+    setTimeout(() => { try { ceoChart.resize(); } catch(e){} }, 200);
   }
 }
+window.renderPowerBiEcharts = renderPowerBiEcharts;
 window.renderPowerBiEcharts = renderPowerBiEcharts;
 
 

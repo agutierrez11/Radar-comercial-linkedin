@@ -8,14 +8,15 @@ def fix_globals(filepath):
 <script>
 // 🗺️ RE-CENTRAR MAPA Y AUTO-FIT (emilkowalski-motion Rule 13)
 function resetMapZoom() {
-  if (typeof gisMapInstance !== 'undefined' && gisMapInstance) {
-    gisMapInstance.setView([15.0, -70.0], 3);
-    gisMapInstance.invalidateSize();
-    if (typeof showToast === 'function') showToast('🗺️ Mapa re-centrado a vista global.', '🗺️');
-  } else if (typeof gisMap !== 'undefined' && gisMap) {
-    gisMap.setView([20, -10], 2);
-    gisMap.invalidateSize();
-    if (typeof showToast === 'function') showToast('🗺️ Mapa re-centrado a vista global.', '🗺️');
+  try {
+    const targetMap = window.gisMapInstance || window.gisMap;
+    if (targetMap && typeof targetMap.setView === 'function') {
+      targetMap.setView([15.0, -70.0], 3);
+      if (typeof targetMap.invalidateSize === 'function') targetMap.invalidateSize();
+      if (typeof showToast === 'function') showToast('🗺️ Mapa re-centrado a vista global.', '🗺️');
+    }
+  } catch (err) {
+    console.warn('Map recenter error:', err);
   }
 }
 window.resetMapZoom = resetMapZoom;
@@ -40,16 +41,26 @@ function handleTalkToNetworkSearch(e) {
   if (typeof renderVaultBFeed === 'function' && window.currentVaultViewMode === 'B') renderVaultBFeed();
 }
 window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
+
+// 📈 UNLOCK ANALYTICS UI
+function unlockAnalyticsUI() {
+  const locked = document.getElementById('analytics-locked');
+  const dash = document.getElementById('analytics-dashboard');
+  if (locked) locked.style.display = 'none';
+  if (dash) dash.style.display = 'block';
+  if (typeof renderAnalytics === 'function') renderAnalytics();
+  if (typeof renderPowerBiEcharts === 'function' && window.currentAnalyticsViewMode === 'B') renderPowerBiEcharts();
+}
+window.unlockAnalyticsUI = unlockAnalyticsUI;
 </script>
 """
 
-    if 'function resetMapZoom' not in content:
-        # Inject right after <head> or at start of <body>
-        content = content.replace("<body>", "<body>\n" + global_funcs)
+    # Replace old head script block
+    content = re.sub(r'<script>\s*// 🗺️ RE-CENTRAR MAPA[\s\S]*?</script>', global_funcs, content)
 
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(content)
 
-fix_globals("c:\\Users\\Antonio\\.gemini\\antigravity-ide\\scratch\\radar-comercial\\index.html")
-fix_globals("c:\\Users\\Antonio\\.gemini\\antigravity-ide\\scratch\\radar-comercial\\staging.html")
-print("✅ Injected global functions resetMapZoom and handleTalkToNetworkSearch into index.html and staging.html!")
+fix_globals(r"c:\Users\Antonio\.gemini\antigravity-ide\scratch\radar-comercial\index.html")
+fix_globals(r"c:\Users\Antonio\.gemini\antigravity-ide\scratch\radar-comercial\staging.html")
+print("OK")
