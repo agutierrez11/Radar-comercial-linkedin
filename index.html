@@ -7802,9 +7802,9 @@ function getVaultKey() {
 }
 
 async function saveLocalVault() {
-  if (!S.contacts || S.contacts.length === 0 || S.isDemoLoaded) return;
+  if (!S.contacts || S.contacts.length === 0) return;
   const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
-  if (userId === 'ronan' || window.isRonanAbMode || S.ownerName === 'Ronan' || S.contacts.length === 500) return; // Do not auto-overwrite with Ronan sandbox
+  if (userId === 'ronan' || window.isRonanAbMode || S.ownerName === 'Ronan' || (S.contacts.length === 500 && S.messages && S.messages.length === 4)) return; // Do not auto-overwrite with Ronan sandbox
 
   try {
     const db = await openVaultDB();
@@ -7815,7 +7815,8 @@ async function saveLocalVault() {
       ownerName: S.ownerName || userId,
       contacts: S.contacts,
       positions: S.positions || [],
-      messages: S.messages || []
+      messages: S.messages || [],
+      crmState: S.crmState || { discarded: [], whitelisted: [], deals: [] }
     };
     const vaultKey = getVaultKey();
     store.put(dataToSave, vaultKey);
@@ -7832,10 +7833,7 @@ async function saveLocalVault() {
 }
 
 async function restoreLocalVault() {
-  if (!window.currentAuthUser || !window.currentAuthUser.isMaster) {
-    console.log('[AutoVault] Ignorado: El usuario activo no es Master Admin.');
-    return false;
-  }
+  if (!window.currentAuthUser) return false;
   try {
     const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
     if (userId === 'ronan') return false; // Ronan always uses sandbox demo
@@ -7861,6 +7859,7 @@ async function restoreLocalVault() {
         S.contacts = data.contacts;
         S.positions = data.positions || [];
         S.messages = data.messages || [];
+        if (data.crmState) S.crmState = data.crmState;
         S.ownerName = data.ownerName || userId;
         S.loadedParts = { connections: true, positions: S.positions.length > 0, messages: S.messages.length > 0 };
         console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde IndexedDB (${S.contacts.length} contactos).`);
@@ -7883,6 +7882,7 @@ async function restoreLocalVault() {
         S.contacts = data.contacts;
         S.positions = data.positions || [];
         S.messages = data.messages || [];
+        if (data.crmState) S.crmState = data.crmState;
         S.ownerName = data.ownerName || userId;
         S.loadedParts = { connections: true, positions: S.positions.length > 0, messages: S.messages.length > 0 };
         console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde localStorage (${S.contacts.length} contactos).`);
