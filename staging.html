@@ -8437,6 +8437,9 @@ function submitCustomLogin() {
           await loadDemoData(false);
         }
       }
+      if (S.contacts && S.contacts.length > 0) {
+        S.loadedParts.connections = true;
+      }
       if (typeof loadCrmState === 'function') loadCrmState();
       updateStatus();
       if (typeof renderDashboard === 'function') renderDashboard();
