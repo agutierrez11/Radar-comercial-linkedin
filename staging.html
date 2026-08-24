@@ -2492,6 +2492,10 @@ function resetGlobalState() {
   S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
   S.ownerName = '';
   window.ENRICHED_CONNECTIONS_DATA = [];
+  window.ronanAbMode = null;
+  window.isRonanAbMode = false;
+  window.RONAN_DEMO_MESSAGES = undefined;
+  window.RONAN_DEMO_CONTACTS = undefined;
 }
 window.resetGlobalState = resetGlobalState;
 
@@ -8217,7 +8221,6 @@ function fillQuickLogin(username, password) {
   if (alertDiv) alertDiv.style.display = 'none';
   if (userInput) userInput.value = username;
   if (pwdInput) pwdInput.value = password;
-  submitCustomLogin();
 }
 window.fillQuickLogin = fillQuickLogin;
 
@@ -8283,19 +8286,22 @@ function submitCustomLogin() {
             } else {
               loadDemoData(false);
             }
+            if (typeof loadCrmState === 'function') loadCrmState();
             updateStatus();
             if (typeof renderDashboard === 'function') renderDashboard();
             if (typeof renderNetworkTable === 'function') renderNetworkTable();
-            if (typeof showToast === 'function') showToast('👤 Bóveda Master Antonio cargada (2,953 contactos activos).', '🔑');
+            if (typeof showToast === 'function') showToast('👤 Bóveda Master Antonio cargada.', '🔑');
           });
         } else {
           loadDemoData(false);
+          if (typeof loadCrmState === 'function') loadCrmState();
           updateStatus();
           if (typeof renderDashboard === 'function') renderDashboard();
           if (typeof renderNetworkTable === 'function') renderNetworkTable();
-          if (typeof showToast === 'function') showToast('👤 Bóveda Master Antonio cargada (2,953 contactos activos).', '🔑');
+          if (typeof showToast === 'function') showToast('👤 Bóveda Master Antonio cargada.', '🔑');
         }
       } else {
+        if (typeof loadCrmState === 'function') loadCrmState();
         updateStatus();
         if (typeof renderDashboard === 'function') renderDashboard();
         if (typeof renderNetworkTable === 'function') renderNetworkTable();
