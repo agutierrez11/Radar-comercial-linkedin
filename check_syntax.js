@@ -1,15 +1,29 @@
 const fs = require('fs');
-const html = fs.readFileSync('index.html', 'utf8');
+const vm = require('vm');
 
-const scriptRegex = /<script>([\s\S]*?)<\/script>/gi;
+const html = fs.readFileSync('index.html', 'utf8');
+const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>/gi;
+
 let match;
 let count = 0;
+let errors = 0;
+
 while ((match = scriptRegex.exec(html)) !== null) {
   count++;
+  const code = match[1];
+  if (!code.trim()) continue;
   try {
-    new Function(match[1]);
-    console.log(`Script block #${count}: SYNTAX OK`);
+    new vm.Script(code);
   } catch (err) {
-    console.error(`Script block #${count}: SYNTAX ERROR:`, err.message);
+    errors++;
+    console.error(`❌ Syntax Error in Script block ${count}:`, err.message);
   }
+}
+
+if (errors === 0) {
+  console.log(`✅ ALL ${count} SCRIPT BLOCKS PASSED SYNTAX CHECK CLEANLY!`);
+  process.exit(0);
+} else {
+  console.error(`💥 Found ${errors} syntax errors.`);
+  process.exit(1);
 }

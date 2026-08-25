@@ -6,30 +6,24 @@ async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         page = await browser.new_page(viewport={"width": 1440, "height": 900})
+        
         file_path = os.path.abspath('index.html')
         await page.goto(f'file:///{file_path}')
         await page.wait_for_timeout(1500)
 
-        # Login properly and navigate explicitly to network
+        # Login and navigate explicitly to network
         await page.evaluate("""async () => {
             document.getElementById('login-username-input').value = 'antonio';
             document.getElementById('login-password-input').value = '12345';
             await submitCustomLogin();
             if (typeof navigate === 'function') navigate('network');
-            if (typeof switchVaultViewMode === 'function') switchVaultViewMode('A');
-            if (typeof filterNetwork === 'function') filterNetwork();
         }""")
+        
         await page.wait_for_timeout(2000)
 
-        # 1. Screenshot of Mi Red
-        await page.screenshot(path="qa_fix1_mi_red_restored.png")
-
-        # 2. Screenshot of Dunbar Purge
-        await page.evaluate("if(typeof navigate === 'function') navigate('purge');")
-        await page.wait_for_timeout(1500)
-        await page.screenshot(path="qa_fix2_dunbar_purge_restored.png")
-
+        # Take screenshot of network section
+        await page.screenshot(path="qa_network_auto_populate_verified.png")
+        print("[SUCCESS] Screenshot captured successfully: qa_network_auto_populate_verified.png")
         await browser.close()
-        print("Screenshots captured successfully after full navigation!")
 
 asyncio.run(main())

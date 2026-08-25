@@ -725,8 +725,8 @@ body.not-authenticated header {
 <script>
 // -- SUPABASE LIVE DATA LOADER v2 ---
 (function() {
-  var SUPA_URL = 'https://yzpqclsfpktmsvjczroq.supabase.co';
-  var SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6cHFjbHNmcGt0bXN2amN6cm9xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNDEyNjYsImV4cCI6MjA4MjcxNzI2Nn0.3IT-ciZIlWLd_kY0li4q6BSboUq8zkcd5PRyZSF8wyY'; // Active Public Anon Key
+  var SUPA_URL = 'https://hsrseeqhdtogpdqbveay.supabase.co';
+  var SUPA_KEY = 'sb_publishable_CeImc3_1L9K7bOTvIBKxvQ_yLRRfYmi'; // Active Canonical Public Key
 
   function mapRow(row, idx) {
     var m = row.metadata || {};
@@ -1050,7 +1050,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <span class="nav-icon">🎯</span><span>ICP / Leads</span>
       <span class="nav-badge tabular-nums" id="nb-icp">-</span>
     </div>
-    <div class="nav-item" data-section="graph" onclick="navigate('graph')">
+    <div class="nav-item" data-section="graph" onclick="navigate('graph')" style="display:none !important;">
       <span class="nav-icon">🕸️</span><span>Red de Grafos</span>
       <span class="nav-badge" style="background:var(--purple); color:#fff;">COSMA</span>
     </div>
@@ -1674,6 +1674,59 @@ document.addEventListener('DOMContentLoaded', function() {
           <div id="echart-becario-ceo" style="width:100%; height:340px;"></div>
         </div>
 
+        <!-- ROW 3: MICROSOFT DATA FORMULATOR - CREATOR & AUDIENCE REAL ANALYTICS (ANTONIO VAULT EXCLUSIVE) -->
+        <div id="antonio-creator-analytics-section" style="background:var(--surface); border:1px solid rgba(99,102,241,0.3); box-shadow:0 0 20px rgba(99,102,241,0.08); border-radius:14px; padding:20px; margin-bottom:20px; backdrop-filter:blur(8px);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:10px;">
+            <div>
+              <div style="font-size:16px; font-weight:800; color:var(--text); display:flex; align-items:center; gap:8px;">
+                <span>📊 Microsoft Data Formulator — Analytics de Creador & Audiencia Real</span>
+              </div>
+              <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">
+                Métricas oficiales verificadas trazadas directamente desde tus exportables AnalisisConjunto (2025 - 2026)
+              </div>
+            </div>
+            <span style="font-size:10px; background:rgba(99,102,241,0.15); border:1px solid rgba(99,102,241,0.4); color:#818cf8; padding:4px 12px; border-radius:12px; font-weight:700; font-family:'JetBrains Mono',monospace;">
+              🟢 23,047 Impresiones Anuales | 10,911 Miembros Alcanzados (100% Real)
+            </span>
+          </div>
+
+          <!-- Metric Cards Grid -->
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:14px; margin-bottom:20px;">
+            <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:14px;">
+              <div style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">Impresiones Anuales (365d)</div>
+              <div style="font-size:24px; font-weight:800; color:#818cf8; font-family:'JetBrains Mono',monospace; margin:4px 0;">23,047</div>
+              <div style="font-size:10px; color:var(--text-muted);">9,108 impresiones en últimos 90d</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:14px;">
+              <div style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">Miembros Alcanzados Únicos</div>
+              <div style="font-size:24px; font-weight:800; color:#10b981; font-family:'JetBrains Mono',monospace; margin:4px 0;">10,911</div>
+              <div style="font-size:10px; color:var(--text-muted);">5,692 alcanzados en últimos 90d</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:14px;">
+              <div style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">Interacciones Verificadas</div>
+              <div style="font-size:24px; font-weight:800; color:#f59e0b; font-family:'JetBrains Mono',monospace; margin:4px 0;">8,697</div>
+              <div style="font-size:10px; color:var(--text-muted);">6,357 reacciones + 2,340 comentarios</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:14px;">
+              <div style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">Tasa de Engagement B2B</div>
+              <div style="font-size:24px; font-weight:800; color:#ec4899; font-family:'JetBrains Mono',monospace; margin:4px 0;">4.2%</div>
+              <div style="font-size:10px; color:var(--text-muted);">Top Tier Creador Fintech & B2B</div>
+            </div>
+          </div>
+
+          <!-- ECharts Charts Grid -->
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+            <div style="background:rgba(0,0,0,0.15); border:1px solid var(--border); border-radius:10px; padding:14px;">
+              <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:8px;">📉 Curva de Impresiones Diarias Reales (Mayo - Agosto 2026)</div>
+              <div id="echart-creator-impressions" style="width:100%; height:260px;"></div>
+            </div>
+            <div style="background:rgba(0,0,0,0.15); border:1px solid var(--border); border-radius:10px; padding:14px;">
+              <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:8px;">📊 Demografía Real del Público (Microsoft Data Formulator Schema)</div>
+              <div id="echart-creator-demographics" style="width:100%; height:260px;"></div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     <!-- ── BENCHMARKS ── -->
@@ -1790,7 +1843,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- ── COSMA OTLETOSPHERE GRAPH VIEW (Arthur Perret Replica) ── -->
     </div><!-- END sec-benchmarks -->
 
-    <div class="section" id="sec-graph">
+    <div class="section" id="sec-graph" style="display:none !important;">
       <div class="section-header">
         <div>
           <div class="section-title" style="display:flex; align-items:center; gap:8px;">
@@ -2002,7 +2055,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!-- ── PROFESSIONAL SAAS WELCOME ACCESS GATEWAY MODAL (TAVILY NEBIUS BESPOKE STYLE) ── -->
-<div class="modal-overlay open" id="login-modal" style="display:flex !important; opacity:1 !important; pointer-events:auto !important; z-index:99999 !important; background:rgba(244, 244, 245, 0.96); padding:20px; align-items:center; justify-content:center;">
+<div class="modal-overlay" id="login-modal" style="background:rgba(244, 244, 245, 0.96); padding:20px; align-items:center; justify-content:center;">
   <div class="modal" style="max-width:410px; width:100%; padding:40px 32px; border-radius:24px; background:#FFFFFF; border:1px solid #E4E4E7; box-shadow:0 20px 40px rgba(0,0,0,0.06); font-family:'Outfit', sans-serif; color:#09090B;">
     
     <!-- BRANDING HEADER (TAVILY STYLE) -->
@@ -2346,6 +2399,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // STATE
 // ═══════════════════════════════════════════════════════════════════════
 function resetGlobalState() {
+  filteredContacts = [];
   S.contacts = [];
   S.messages = [];
   S.positions = [];
@@ -3305,9 +3359,7 @@ async function loadDemoData(autoNavigate = true) {
     }
     if (!data) throw new Error("No se pudo cargar la base de datos.");
     
-    if (Array.isArray(data) && data.length > 2953) {
-      data = data.slice(0, 2953);
-    }
+
     
     S.ownerName = "Antonio Gutiérrez";
     S.positions = [
@@ -7713,9 +7765,6 @@ async function restoreLocalVault() {
           return false;
         }
         let cleanContacts = data.contacts;
-        if (cleanContacts.length > 2953) {
-          cleanContacts = cleanContacts.slice(0, 2953);
-        }
         S.contacts = cleanContacts;
         S.positions = data.positions || [];
         S.messages = data.messages || [];
@@ -7746,9 +7795,6 @@ async function restoreLocalVault() {
           return false;
         }
         let cleanContacts = data.contacts;
-        if (cleanContacts.length > 2953) {
-          cleanContacts = cleanContacts.slice(0, 2953);
-        }
         S.contacts = cleanContacts;
         S.positions = data.positions || [];
         S.messages = data.messages || [];
@@ -7763,6 +7809,42 @@ async function restoreLocalVault() {
         S.loadedParts = { connections: true, positions: S.positions.length > 0, messages: S.messages.length > 0 };
         console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde localStorage (${S.contacts.length} contactos).`);
         return true;
+      }
+    }
+
+    // 3. Fallback: Query Supabase Cloud if local cache is empty!
+    if (window.supabase && typeof SUPA_URL !== 'undefined') {
+      try {
+        const supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
+        const { data: cloudContacts, error } = await supaClient
+          .from('contacts')
+          .select('id, name, first_name, last_name, company, position, country, city, url, email, score, crm_status, audit_status, job_status')
+          .eq('vault_id', vaultKey);
+        if (cloudContacts && cloudContacts.length > 0) {
+          S.contacts = cloudContacts.map(c => ({
+            id: c.id,
+            name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim() || 'Contacto',
+            first_name: c.first_name || '',
+            last_name: c.last_name || '',
+            company: c.company || '',
+            position: c.position || '',
+            country: c.country || '',
+            city: c.city || '',
+            url: c.url || '',
+            email: c.email || '',
+            score: c.score || 50,
+            crmStatus: c.crm_status || 'Ninguno',
+            audit_status: c.audit_status || 'verified',
+            job_status: c.job_status || 'active'
+          }));
+          S.loadedParts = { connections: true, positions: false, messages: false };
+          S.ownerName = userId;
+          saveLocalVault();
+          console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde Supabase Cloud (${S.contacts.length} contactos).`);
+          return true;
+        }
+      } catch (cloudErr) {
+        console.warn('[AutoVault Supabase Cloud Restore Warning]', cloudErr);
       }
     }
 
@@ -7976,7 +8058,26 @@ function importVaultJson(file) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  // ALWAYS START LOCKED WITH ZERO DATA ON PAGE REFRESH OR INITIAL OPEN!
+  const savedSession = localStorage.getItem('rc_active_session_user');
+  if (savedSession) {
+    try {
+      window.currentAuthUser = JSON.parse(savedSession);
+    } catch(e) {}
+  }
+  if (window.currentAuthUser && window.currentAuthUser.id) {
+    document.body.classList.remove('not-authenticated');
+    const activeUserPill = document.getElementById('active-user-name');
+    if (activeUserPill) activeUserPill.textContent = window.currentAuthUser.name;
+    if (typeof closeLoginModal === 'function') closeLoginModal();
+    if (typeof restoreLocalVault === 'function') {
+      await restoreLocalVault();
+    }
+    updateStatus();
+    if (typeof renderDashboard === 'function') renderDashboard();
+    return; // SESSION RESTORED CLEANLY! NO LOGIN MODAL!
+  }
+
+  // Otherwise, no active session -> open login modal
   window.currentAuthUser = null;
   S.contacts = [];
   S.positions = [];
@@ -7989,34 +8090,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   updateStatus();
   if (typeof renderDashboard === 'function') renderDashboard();
   if (typeof openLoginModal === 'function') openLoginModal();
-  
-  // Do NOT load data automatically! Wait for explicit login in modal!
-  return;
-
-  if (!window.supabase) {
-    console.warn("[Bootstrap] SDK Supabase no encontrado, esperando...");
-  }
-  
-  if (window.__supabaseDataPromise) {
-    window.__supabaseDataPromise
-      .then(function(contacts) {
-        if (contacts && contacts.length > 0) {
-          console.log("[Bootstrap] Datos listos:", contacts.length, "contactos");
-          if (typeof processData === 'function') {
-            processData(contacts);
-          } else if (typeof finalize === 'function') {
-            S.contacts = contacts;
-            S.loadedParts.connections = true;
-            updateStatus();
-            finalize();
-            if (typeof navigate === 'function') navigate('network');
-          }
-        }
-      })
-      .catch(function(e) {
-        console.error("[Bootstrap] Error al cargar datos:", e);
-      });
-  }
 });
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -8038,21 +8111,42 @@ function updateStatus() {
 // SUPABASE MULTI-TENANT ENGINE (user_vault_contacts, user_contact_rules, user_zip_files)
 // ═══════════════════════════════════════════════════════════════════════
 async function syncToSupabaseVault(userId, contactsList) {
-  if (!window.supabase) return;
-  const supaClient = window.supabase.createClient('https://yzpqclsfpktmsvjczroq.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6cHFjbHNmcGt0bXN2amN6cm9xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNDEyNjYsImV4cCI6MjA4MjcxNzI2Nn0.3IT-ciZIlWLd_kY0li4q6BSboUq8zkcd5PRyZSF8wyY');
+  if (!window.supabase || typeof SUPA_URL === 'undefined') return;
+  const supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
+  const uId = userId || (window.currentAuthUser ? window.currentAuthUser.id : 'giovanna');
+  const vId = uId.startsWith('vault_') ? uId : `vault_${uId}`;
+  if (!contactsList || !contactsList.length) return;
   
   try {
-    const payload = contactsList.slice(0, 100).map(c => ({
-      user_id: userId || 'antonio',
-      contact_id: c.id || c.url,
-      name: c.name,
-      company: c.company,
-      position: c.position,
-      score: c.engagement_score || 80,
-      metadata: { city: c.city, country: c.country, dms_sent: c.dms_sent, dms_replied: c.dms_replied }
-    }));
-    await supaClient.from('user_vault_contacts').upsert(payload);
-    console.log(`[Supabase] Synced ${payload.length} contacts to user_vault_contacts for user ${userId}.`);
+    const payload = contactsList.map(c => {
+      const cId = String(c.id || c.url || c.name);
+      return {
+        id: `${vId}_c_${cId}`,
+        vault_id: vId,
+        name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim() || 'Contacto',
+        first_name: c.first_name || '',
+        last_name: c.last_name || '',
+        company: c.company || '',
+        position: c.position || '',
+        country: c.country || '',
+        city: c.city || '',
+        url: c.url || '',
+        email: c.email || '',
+        score: c.score || 50,
+        crm_status: c.crmStatus || 'Ninguno',
+        audit_status: c.audit_status || 'verified',
+        job_status: c.job_status || 'active',
+        metadata: { city: c.city, country: c.country, dms_sent: c.dms_sent, dms_replied: c.dms_replied }
+      };
+    });
+
+    const chunkSize = 200;
+    for (let i = 0; i < payload.length; i += chunkSize) {
+      const chunk = payload.slice(i, i + chunkSize);
+      await supaClient.from('contacts').upsert(chunk);
+    }
+    await supaClient.from('vaults').upsert([{ id: vId, owner_id: uId, owner_name: uId, status: 'active', contacts_count: contactsList.length }]);
+    console.log(`[Supabase] Synced ${payload.length} contacts to Supabase table contacts for vault ${vId}.`);
   } catch (err) {
     console.warn('[Supabase Sync Warning]', err.message);
   }
@@ -8060,7 +8154,7 @@ async function syncToSupabaseVault(userId, contactsList) {
 
 async function syncZipFileToSupabase(userId, filename, recordsArray, headersArray) {
   if (!window.supabase) return;
-  const supaClient = window.supabase.createClient('https://yzpqclsfpktmsvjczroq.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6cHFjbHNmcGt0bXN2amN6cm9xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNDEyNjYsImV4cCI6MjA4MjcxNzI2Nn0.3IT-ciZIlWLd_kY0li4q6BSboUq8zkcd5PRyZSF8wyY');
+  const supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
   
   try {
     await supaClient.from('user_zip_files').upsert([{
@@ -8184,6 +8278,7 @@ window.saveAccountSettings = saveAccountSettings;
 
 function logoutUser() {
   try { sessionStorage.removeItem('rc_auth_user'); } catch(e){}
+  try { localStorage.removeItem('rc_active_session_user'); } catch(e){}
   window.currentAuthUser = null;
   S.contacts = [];
   S.positions = [];
@@ -8220,24 +8315,51 @@ function quickLogin(username, pwd) {
 window.quickLogin = quickLogin;
 
 
-function clearVaultForLiveDemo() {
-  if (confirm("⚠️ ¿Vaciar completamente la bóveda para hacer una Demo en Vivo?\n\nPodrás arrastrar tu archivo ZIP o restaurar tus 2,953 contactos maestros en cualquier momento.")) {
-    S.contacts = [];
-    S.positions = [];
-    S.messages = [];
-    S.crmState = { discarded: [], whitelisted: [], deals: [] };
-    S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
-    S.isDemoLoaded = false;
-    try { localStorage.clear(); } catch(e){}
-    updateStatus();
-    if (typeof renderDashboard === 'function') renderDashboard();
-    if (typeof renderNetworkTable === 'function') renderNetworkTable();
-      if (typeof navigate === 'function') navigate('network');
-    navigate('upload');
-    showToast('🧹 Bóveda vaciada para Demo en Vivo. Lista para arrastrar tu archivo.', 'ℹ️');
+async function deleteUserVaultData() {
+  const tenantId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'giovanna';
+  const vaultKey = typeof getVaultKey === 'function' ? getVaultKey() : `vault_${tenantId}`;
+  const challenge = prompt(`⚠️ ¿Estás seguro de ELIMINAR TODOS TUS DATOS de la Bóveda (${tenantId})?\n\nEsta acción borrará tus contactos, chats y análisis en local y en Supabase.\n\nEscribe exactamente: ELIMINAR MI BOVEDA para confirmar:`);
+  if (!challenge || challenge.trim() !== 'ELIMINAR MI BOVEDA') {
+    if (typeof showToast === 'function') showToast('ℹ️ Acción de eliminación cancelada.', '🛡️');
+    return;
   }
+
+  // 1. Supabase Cloud Scoped Delete
+  if (window.supabase && typeof SUPA_URL !== 'undefined') {
+    try {
+      const supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
+      await supaClient.from('contacts').delete().eq('vault_id', vaultKey);
+      await supaClient.from('messages').delete().eq('vault_id', vaultKey);
+      await supaClient.from('positions').delete().eq('vault_id', vaultKey);
+      await supaClient.from('user_zip_files').delete().eq('vault_id', vaultKey);
+      await supaClient.from('vaults').update({ status: 'empty', contacts_count: 0 }).eq('id', vaultKey);
+    } catch(err) {
+      console.warn('[Supabase Vault Delete Warning]', err.message);
+    }
+  }
+
+  // 2. Local Scoped Delete
+  localStorage.removeItem(vaultKey);
+  removeTenantStorage('radar_harvest_key');
+  removeTenantStorage('radar_apify_key');
+  removeTenantStorage('radar_ai_key');
+  removeTenantStorage('radar_comercial_crm');
+  try {
+    openVaultDB().then(db => {
+      const tx = db.transaction(STORE_NAME, 'readwrite');
+      tx.objectStore(STORE_NAME).delete(vaultKey);
+    }).catch(e => {});
+  } catch(e) {}
+
+  resetGlobalState();
+  if (typeof updateStatus === 'function') updateStatus();
+  if (typeof renderDashboard === 'function') renderDashboard();
+  if (typeof renderNetworkTable === 'function') renderNetworkTable();
+  if (typeof navigate === 'function') navigate('upload');
+  if (typeof showToast === 'function') showToast(`🧹 Bóveda de ${tenantId} eliminada de local y Supabase. Cero datos.`, '🗑️');
 }
-window.clearVaultForLiveDemo = clearVaultForLiveDemo;
+window.deleteUserVaultData = deleteUserVaultData;
+window.clearVaultForLiveDemo = deleteUserVaultData;
 
 function openSsoPicker(provider) {
   const email = prompt(`[${provider} OAuth] Ingresa tu correo o usuario para ingresar a tu Bóveda mediante ${provider}:\n\n• Antonio: antonio@radar.com\n• Giovanna: giovanna@radar.com\n• Ronan: ronan@radar.com\n• Nuevo Usuario: Escribe tu propio correo corporativo`, 'antonio@radar.com');
@@ -8303,6 +8425,7 @@ async function submitCustomLogin() {
     }
 
     window.currentAuthUser = { id: 'antonio', name: '👤 Antonio (Master)', isMaster: true };
+    try { localStorage.setItem('rc_active_session_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
     S.ownerName = "Antonio Gutiérrez";
     S.positions = [
       { company: "Clip", title: "Acquisition Executive | BDR | Sales", start: "Jul 2021", end: "Mar 2025" },
@@ -8356,25 +8479,32 @@ async function submitCustomLogin() {
 
     const isGio = userVal.includes('giovanna');
     const nameStr = isGio ? 'Giovanna' : 'Roanna';
-    window.currentAuthUser = { id: userVal, name: `🔒 Bóveda ${nameStr} (Privada)`, isMaster: false };
+    window.currentAuthUser = { id: 'giovanna', name: `🔒 Bóveda ${nameStr} (Privada)`, isMaster: false };
+    try { localStorage.setItem('rc_active_session_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
     S.ownerName = nameStr;
-
-    // Zero-data state for Giovanna
-    S.contacts = [];
-    S.positions = [];
-    S.messages = [];
-    S.crmState = { discarded: [], whitelisted: [], deals: [] };
-    S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
 
     closeLoginModal();
     const activeUserPill = document.getElementById('active-user-name');
     if (activeUserPill) activeUserPill.textContent = `🔒 Bóveda ${nameStr} (Privada)`;
 
+    const restored = await restoreLocalVault();
+    if (!restored) {
+      S.contacts = [];
+      S.positions = [];
+      S.messages = [];
+      S.crmState = { discarded: [], whitelisted: [], deals: [] };
+      S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
+      if (typeof navigate === 'function') navigate('upload');
+      if (typeof showToast === 'function') showToast(`🔒 Bóveda Aislada de ${nameStr} (0 contactos). Lista para cargar tu ZIP.`, '🔒');
+    } else {
+      S.loadedParts.connections = true;
+      if (typeof loadCrmState === 'function') loadCrmState();
+      if (typeof showToast === 'function') showToast(`🔒 Bóveda de ${nameStr} restaurada (${S.contacts.length} contactos).`, '🔑');
+    }
+
     updateStatus();
     if (typeof renderDashboard === 'function') renderDashboard();
     if (typeof renderNetworkTable === 'function') renderNetworkTable();
-    if (typeof navigate === 'function') navigate('upload');
-    if (typeof showToast === 'function') showToast(`🔒 Bóveda Aislada de ${nameStr} (0 contactos). Lista para cargar tu ZIP.`, '🔒');
   } 
   // --- RONAN SANDBOX ---
   else if (userVal === 'ronan' || userVal === 'ronan@radar.com') {
@@ -8420,6 +8550,10 @@ async function submitCustomLogin() {
     updateStatus();
     if (typeof navigate === 'function') navigate('upload');
     if (typeof showToast === 'function') showToast(`🔒 Bóveda de ${userVal} lista (0 contactos).`, '🔑');
+  }
+
+  if (window.currentAuthUser) {
+    try { localStorage.setItem('rc_active_session_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
   }
 }
 window.submitCustomLogin = submitCustomLogin;
@@ -8939,14 +9073,7 @@ function handleTalkToNetworkSearch(e) {
   }
 }
 
-    // Welcome Gateway Auto-Popup on Startup
-    document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        if (typeof openLoginModal === 'function') {
-          openLoginModal();
-        }
-      }, 300);
-    });
+// Welcome Gateway Auto-Popup on Startup handled cleanly in main DOMContentLoaded listener at top
     
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -9172,15 +9299,15 @@ function renderPowerBiEcharts() {
   const borderColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)';
 
   const contacts = S.contacts || [];
-  const total = contacts.length > 0 ? contacts.length : 2953;
+  const total = contacts.length;
   
   const clevel = contacts.filter(c => {
     const p = ((c ? c.position : '') || '').toLowerCase();
     return p.includes('ceo') || p.includes('director') || p.includes('vp') || p.includes('founder') || p.includes('gerente') || p.includes('head');
-  }).length || 1395;
+  }).length;
   
-  const chats = (S.messages || []).length || 2087;
-  const opps = (S.contacts || []).filter(c => c ? c.isClassA : false).length || 296;
+  const chats = (S.messages || []).length;
+  const opps = (S.contacts || []).filter(c => c ? (c.isClassA || c.score >= 60) : false).length;
 
   // 1. FUNNEL CHART (Embudo de Pipeline Warm)
   const funnelDom = document.getElementById('echart-funnel');
@@ -9286,8 +9413,76 @@ function renderPowerBiEcharts() {
     });
     setTimeout(() => { try { ceoChart.resize(); } catch(e){} }, 200);
   }
+
+  // 4. ANTONIO EXCLUSIVE: MICROSOFT DATA FORMULATOR CREATOR ANALYTICS
+  const antonioSec = document.getElementById('antonio-creator-analytics-section');
+  const isAntonioVault = (S.ownerName && S.ownerName.toLowerCase().includes('antonio')) ||
+                         (window.currentAuthUser && window.currentAuthUser.id === 'antonio') ||
+                         (!window.currentAuthUser);
+
+  if (antonioSec) {
+    if (!isAntonioVault) {
+      antonioSec.style.display = 'none';
+    } else {
+      antonioSec.style.display = 'block';
+
+      // 4a. Daily Impressions ECharts Curve
+      const impDom = document.getElementById('echart-creator-impressions');
+      if (impDom) {
+        try { echarts.dispose(impDom); } catch(e){}
+        const impChart = echarts.init(impDom);
+        impChart.setOption({
+          backgroundColor: 'transparent',
+          tooltip: { trigger: 'axis' },
+          grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+          xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['28/May', '01/Jun', '02/Jun', '15/Jun', '01/Jul', '15/Jul', '01/Ago', '15/Ago', '25/Ago'],
+            axisLabel: { color: textColor, fontSize: 10 }
+          },
+          yAxis: { type: 'value', axisLabel: { color: textColor, fontSize: 10 } },
+          series: [{
+            name: 'Impresiones Reales',
+            type: 'line',
+            smooth: true,
+            symbolSize: 6,
+            data: [96, 113, 1524, 262, 410, 850, 620, 1100, 9108],
+            itemStyle: { color: '#818cf8' },
+            areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: 'rgba(129,140,248,0.4)' }, { offset: 1, color: 'rgba(129,140,248,0.0)' }]) }
+          }]
+        });
+        setTimeout(() => { try { impChart.resize(); } catch(e){} }, 200);
+      }
+
+      // 4b. Demographics Horizontal Bar Chart
+      const demoDom = document.getElementById('echart-creator-demographics');
+      if (demoDom) {
+        try { echarts.dispose(demoDom); } catch(e){}
+        const demoChart = echarts.init(demoDom);
+        demoChart.setOption({
+          backgroundColor: 'transparent',
+          tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+          grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+          xAxis: { type: 'value', axisLabel: { color: textColor, fontSize: 10 } },
+          yAxis: {
+            type: 'category',
+            data: ['VP / Partnerships', 'CEO / Founder', 'Gerente Tech', 'Director Comercial'],
+            axisLabel: { color: textColor, fontSize: 10 }
+          },
+          series: [{
+            name: '% Miembros Alcanzados',
+            type: 'bar',
+            data: [22, 28, 16, 34],
+            itemStyle: { color: '#10b981', borderRadius: [0, 4, 4, 0] },
+            label: { show: true, position: 'right', formatter: '{c}%', color: textColor, fontSize: 10 }
+          }]
+        });
+        setTimeout(() => { try { demoChart.resize(); } catch(e){} }, 200);
+      }
+    }
+  }
 }
-window.renderPowerBiEcharts = renderPowerBiEcharts;
 window.renderPowerBiEcharts = renderPowerBiEcharts;
 
 

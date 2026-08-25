@@ -5,5 +5,5 @@ with open('index.html', 'r', encoding='utf-8') as f:
     lines = f.readlines()
 
 for i, line in enumerate(lines):
-    if 'id="login-modal"' in line or 'function submitCustomLogin' in line or 'function switchVault' in line:
+    if 'default' in line and ('}' in line or ';' in line or 'default' in line):
         print(f"Line {i+1}: {line.strip()}")

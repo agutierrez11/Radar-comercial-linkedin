@@ -1,18 +1,18 @@
-import re
-import subprocess
+import re, sys
 
-with open('index.html', 'r', encoding='utf-8') as f:
-    content = f.read()
+def validate_html(filepath):
+    print(f"--- Validating {filepath} ---")
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
 
-scripts = re.findall(r'<script>(.*?)</script>', content, re.DOTALL)
-combined_js = "\n;\n".join(scripts)
+    ids_to_check = ['sec-network', 'net-tbody', 'net-empty', 'contacts-table', 'net-kpis', 'ronan-ab-banner']
+    for id_name in ids_to_check:
+        matches = len(re.findall(rf'id="{id_name}"', content))
+        status = "OK" if matches == 1 else f"ERROR ({matches} instances)"
+        print(f"ID '{id_name}': {status}")
 
-with open('temp_check.js', 'w', encoding='utf-8') as f:
-    f.write(combined_js)
+    scripts = re.findall(r'<script>(.*?)</script>', content, re.DOTALL)
+    print(f"Total script blocks: {len(scripts)}")
 
-res = subprocess.run(['node', '--check', 'temp_check.js'], capture_output=True, text=True)
-if res.returncode == 0:
-    print("SUCCESS: JAVASCRIPT SYNTAX IS 100% VALID! NO ERRORS FOUND.")
-else:
-    print("ERROR: JS SYNTAX ERROR DETECTED:")
-    print(res.stderr)
+validate_html('index.html')
+validate_html('staging.html')

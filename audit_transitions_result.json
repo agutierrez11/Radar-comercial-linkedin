@@ -1,0 +1,99 @@
+{
+  "transitions": [
+    {
+      "step": "1. Login Antonio",
+      "state": {
+        "activeUserId": "antonio",
+        "activeVaultId": "vault_antonio",
+        "ownerName": "Antonio Gutiérrez",
+        "contactsLength": 2953,
+        "filteredContactsLength": 2953,
+        "messagesLength": 0,
+        "positionsLength": 6,
+        "crmState": {
+          "discarded": [],
+          "whitelisted": [],
+          "deals": []
+        },
+        "source": "master_data.json / IndexedDB",
+        "snapshotId": "antonio_master_v2"
+      }
+    },
+    {
+      "step": "2. Switch to Ronan",
+      "state": {
+        "activeUserId": "ronan",
+        "activeVaultId": "vault_ronan",
+        "ownerName": "Ronan",
+        "contactsLength": 500,
+        "filteredContactsLength": 500,
+        "messagesLength": 4,
+        "positionsLength": 0,
+        "crmState": {
+          "discarded": [],
+          "whitelisted": [],
+          "deals": []
+        },
+        "source": "sandbox_ronan_demo",
+        "snapshotId": "ronan_sandbox_v1"
+      }
+    },
+    {
+      "step": "3. Return to Antonio",
+      "state": {
+        "activeUserId": "antonio",
+        "activeVaultId": "vault_antonio",
+        "ownerName": "Antonio Gutiérrez",
+        "contactsLength": 2953,
+        "filteredContactsLength": 0,
+        "messagesLength": 0,
+        "positionsLength": 6,
+        "crmState": {
+          "discarded": [],
+          "whitelisted": [],
+          "deals": []
+        },
+        "source": "master_data.json / IndexedDB",
+        "snapshotId": "antonio_master_v2"
+      }
+    },
+    {
+      "step": "4. Switch to Giovanna",
+      "state": {
+        "activeUserId": "giovanna",
+        "activeVaultId": "vault_giovanna",
+        "ownerName": "Giovanna",
+        "contactsLength": 0,
+        "filteredContactsLength": 0,
+        "messagesLength": 0,
+        "positionsLength": 0,
+        "crmState": {
+          "discarded": [],
+          "whitelisted": [],
+          "deals": []
+        },
+        "source": "isolated_vault_zero_start",
+        "snapshotId": "giovanna_empty_v1"
+      }
+    },
+    {
+      "step": "5. Return to Antonio Final",
+      "state": {
+        "activeUserId": "antonio",
+        "activeVaultId": "vault_antonio",
+        "ownerName": "Antonio Gutiérrez",
+        "contactsLength": 2953,
+        "filteredContactsLength": 0,
+        "messagesLength": 0,
+        "positionsLength": 6,
+        "crmState": {
+          "discarded": [],
+          "whitelisted": [],
+          "deals": []
+        },
+        "source": "master_data.json / IndexedDB",
+        "snapshotId": "antonio_master_v2"
+      }
+    }
+  ]
+}

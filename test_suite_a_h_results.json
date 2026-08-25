@@ -1,0 +1,113 @@
+{
+  "test_a_syntax": {
+    "node_output": "âœ… ALL 17 SCRIPT BLOCKS PASSED SYNTAX CHECK CLEANLY!",
+    "git_check_clean": true,
+    "passed": true
+  },
+  "test_b_antonio": {
+    "contactsLength": 3039,
+    "filteredContactsLength": 3039,
+    "harvestFilterOff": true,
+    "mapContactsValid": 974,
+    "dunbarCandidates": 0,
+    "icpLeads": 274
+  },
+  "test_c_giovanna": {
+    "contacts": 0,
+    "messages": 0,
+    "positions": 0,
+    "crmState": {
+      "discarded": [],
+      "whitelisted": [],
+      "deals": []
+    }
+  },
+  "test_d_isolation_transitions": [
+    {
+      "step": "Antonio 1",
+      "state": {
+        "user_id": "antonio",
+        "vault_id": "vault_antonio",
+        "contactsLength": 3039,
+        "filteredContactsLength": 3039,
+        "messagesLength": 0,
+        "positionsLength": 6
+      }
+    },
+    {
+      "step": "Ronan 2",
+      "state": {
+        "user_id": "ronan",
+        "vault_id": "vault_ronan",
+        "contactsLength": 500,
+        "filteredContactsLength": 500,
+        "messagesLength": 4,
+        "positionsLength": 0
+      }
+    },
+    {
+      "step": "Antonio 3",
+      "state": {
+        "user_id": "antonio",
+        "vault_id": "vault_antonio",
+        "contactsLength": 3039,
+        "filteredContactsLength": 3039,
+        "messagesLength": 0,
+        "positionsLength": 6
+      }
+    },
+    {
+      "step": "Giovanna 4",
+      "state": {
+        "user_id": "giovanna",
+        "vault_id": "vault_giovanna",
+        "contactsLength": 0,
+        "filteredContactsLength": 0,
+        "messagesLength": 0,
+        "positionsLength": 0
+      }
+    },
+    {
+      "step": "Antonio 5",
+      "state": {
+        "user_id": "antonio",
+        "vault_id": "vault_antonio",
+        "contactsLength": 3039,
+        "filteredContactsLength": 3039,
+        "messagesLength": 0,
+        "positionsLength": 6
+      }
+    }
+  ],
+  "test_e_match": {
+    "targetQueried": "https://www.linkedin.com/in/rahulnaidu9",
+    "scoreCalculated": 25,
+    "privacyProtected": true,
+    "dmsExposed": false,
+    "emailExposed": false
+  },
+  "test_f_export": {
+    "hasVersion": true,
+    "hasContacts": true,
+    "hasMessages": true,
+    "hasPositions": true,
+    "hasCrmState": true,
+    "containsHarvestKey": false,
+    "containsApifyKey": false,
+    "containsAiKey": false,
+    "containsServiceRoleKey": false,
+    "cleanExport": true
+  },
+  "test_g_destruction": {
+    "gioLocalExists": false,
+    "gioHarvestKeyExists": false,
+    "gioContactsLength": 0,
+    "antonioContactsLength": 3039,
+    "antonioIntact": false
+  },
+  "test_h_supabase": {
+    "status": "SUPABASE_NOT_READY",
+    "detail": "HTTP 404 PGRST205 table missing in frontend project yzpqclsfpktmsvjczroq",
+    "localPersistenceOnly": true
+  }
+}

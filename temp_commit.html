@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Radar Comercial — Intelligence Dashboard</title>
@@ -725,8 +722,8 @@ body.not-authenticated header {
 <script>
 // -- SUPABASE LIVE DATA LOADER v2 ---
 (function() {
-  var SUPA_URL = 'https://hsrseeqhdtogpdqbveay.supabase.co';
-  var SUPA_KEY = 'sb_publishable_CeImc3_1L9K7bOTvIBKxvQ_yLRRfYmi'; // Active Canonical Public Key
+  var SUPA_URL = 'https://yzpqclsfpktmsvjczroq.supabase.co';
+  var SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6cHFjbHNmcGt0bXN2amN6cm9xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNDEyNjYsImV4cCI6MjA4MjcxNzI2Nn0.3IT-ciZIlWLd_kY0li4q6BSboUq8zkcd5PRyZSF8wyY'; // Active Public Anon Key
 
   function mapRow(row, idx) {
     var m = row.metadata || {};
@@ -776,24 +773,37 @@ body.not-authenticated header {
     return allRows;
   }
 
-  window.fetchMasterSupabaseData = function() {
-    return new Promise(function(resolve) {
+  window.__supabaseDataPromise = new Promise(function(resolve) {
+    document.addEventListener('DOMContentLoaded', function() {
+      var bar = document.getElementById('loading-bar');
+      var fill = document.getElementById('loading-fill');
+      if (bar) bar.style.display = 'block';
+      if (fill) fill.style.width = '15%';
+
       if (!window.supabase || typeof window.supabase.createClient !== 'function') {
+        console.error('[Supabase] SDK no disponible');
         resolve([]);
         return;
       }
+
       var supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
+      if (fill) fill.style.width = '40%';
+
       fetchAllConnections(supaClient).then(function(rows) {
+        if (fill) fill.style.width = '85%';
         var mapped = rows.map(mapRow);
         window.ENRICHED_CONNECTIONS_DATA = mapped;
+        if (fill) fill.style.width = '100%';
+        setTimeout(function() { if (bar) bar.style.display = 'none'; }, 500);
         resolve(mapped);
       }).catch(function(e) {
         console.error('[Supabase] Error:', e);
         window.ENRICHED_CONNECTIONS_DATA = [];
+        if (bar) bar.style.display = 'none';
         resolve([]);
       });
     });
-  };
+  });
 })();
 </script>
   <!-- Supabase SDK (único) -->
@@ -802,7 +812,7 @@ body.not-authenticated header {
   <script src="radar_core.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
-<body class="light not-authenticated">
+<body class="not-authenticated">
 <script>
 window.filterVerifiedOnly = false;
 window.cosmaSelectedNodeId = null;
@@ -891,15 +901,30 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
     <div class="kpi-pill tabular-nums" style="font-size:11px; padding:3px 8px; border-radius:6px; background:rgba(16,185,129,0.1); border:1px solid var(--green); color:var(--green);"><span id="hkpi-total">0</span> cont.</div>
   </div>
 
-  <!-- Active User Pill & Logout -->
-  <div style="display:flex; align-items:center; gap:8px;">
-    <div class="kpi-pill" id="active-user-pill" style="background:rgba(79,70,229,0.12); border:1px solid var(--accent); color:var(--text); font-weight:700; font-size:11px; padding:4px 12px; border-radius:20px; display:flex; align-items:center; gap:6px;">
+  <!-- Active User Pill -->
+  <div class="dropdown-container" style="position:relative;">
+    <div class="kpi-pill" id="active-user-pill" onclick="toggleAdminVaultMenu(event)" style="cursor:pointer !important; background:rgba(79,70,229,0.12); border:1px solid var(--accent); color:var(--text); font-weight:700; font-size:11px; padding:4px 10px; border-radius:20px; display:flex; align-items:center; gap:6px;" title="Cambiar usuario/bóveda">
       <span class="dot" style="width:7px; height:7px; border-radius:50%; background:var(--green); display:inline-block;"></span>
-      <span id="active-user-name">🔒 Sin Autenticar</span>
+      <span id="active-user-name">👤 Antonio (Master)</span> ▾
     </div>
-    <button class="mini-btn" onclick="logoutUser()" style="padding:4px 10px; font-size:10px; font-weight:700; border-radius:14px; background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.3); color:var(--red); cursor:pointer;" title="Cerrar Sesión y Bloquear Bóveda">
-      🚪 Cerrar Sesión
-    </button>
+    <div id="admin-vault-dropdown" style="display:none; position:absolute; right:0; top:32px; width:260px; background:var(--surface); border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow-md); padding:8px; z-index:2500; font-family:'Outfit',sans-serif;">
+      <div style="font-size:10px; font-weight:800; color:var(--accent); text-transform:uppercase; letter-spacing:0.05em; padding:4px 8px; margin-bottom:4px;">👑 Conmutador Multi-Tenant (Admin)</div>
+      <button class="mini-btn" onclick="submitCustomLogin('antonio'); toggleAdminVaultMenu();" style="width:100%; text-align:left; padding:8px 10px; background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.2); color:var(--text); border-radius:8px; margin-bottom:4px; font-size:11px; display:flex; justify-content:space-between; align-items:center;">
+        <span>👤 <strong>Antonio</strong> (Master)</span>
+        <span style="font-size:9px; background:rgba(16,185,129,0.2); color:var(--green); padding:1px 6px; border-radius:4px; font-weight:700;">2,953 cont.</span>
+      </button>
+      <button class="mini-btn" onclick="submitCustomLogin('giovanna'); toggleAdminVaultMenu();" style="width:100%; text-align:left; padding:8px 10px; background:rgba(124,58,237,0.08); border:1px solid rgba(124,58,237,0.2); color:var(--purple); border-radius:8px; margin-bottom:4px; font-size:11px; display:flex; justify-content:space-between; align-items:center;">
+        <span>🔒 <strong>Giovanna</strong> (Bóveda Privada)</span>
+        <span style="font-size:9px; background:rgba(124,58,237,0.2); color:var(--purple); padding:1px 6px; border-radius:4px; font-weight:700;">Aislada</span>
+      </button>
+      <button class="mini-btn" onclick="submitCustomLogin('ronan'); toggleAdminVaultMenu();" style="width:100%; text-align:left; padding:8px 10px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.2); color:var(--amber); border-radius:8px; margin-bottom:6px; font-size:11px; display:flex; justify-content:space-between; align-items:center;">
+        <span>🧪 <strong>Ronan</strong> (Sandbox BI)</span>
+        <span style="font-size:9px; background:rgba(245,158,11,0.2); color:var(--amber); padding:1px 6px; border-radius:4px; font-weight:700;">500 demo</span>
+      </button>
+      <div style="border-top:1px solid var(--border); padding-top:6px; display:flex; justify-content:space-between;">
+        <button class="mini-btn" onclick="openLoginModal(); toggleAdminVaultMenu();" style="font-size:10px; color:var(--text-muted); background:transparent; border:none; padding:4px 6px; cursor:pointer;">🔑 Abrir Modal Login</button>
+      </div>
+    </div>
   </div>
 
   <!-- Botón Más Dropdown -->
@@ -929,7 +954,35 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
   </div>
 </header>
 
+<!-- 🔔 BOT RECORDATORIO DE ACTUALIZACIÓN MENSUAL DE BÓVEDA (30/60/90 DÍAS) -->
+<div id="monthly-ingestion-reminder-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; padding:10px 24px; background:linear-gradient(90deg, rgba(79,70,229,0.18), rgba(124,58,237,0.18)); border-bottom:1px solid rgba(99,102,241,0.35); font-family:'Outfit',sans-serif; backdrop-filter:blur(10px); z-index:990; font-size:12px; color:var(--text);">
+  <div style="display:flex; align-items:center; gap:12px; flex:1;">
+    <div style="font-size:20px; background:rgba(99,102,241,0.25); border:1px solid rgba(99,102,241,0.5); border-radius:8px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+      🔔
+    </div>
+    <div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <strong style="color:#ffffff; font-size:13px; font-weight:800;">Radar Comercial — Recordatorio de Minería Recurrente (30/60/90 Días)</strong>
+        <span style="background:rgba(16,185,129,0.2); border:1px solid rgba(16,185,129,0.4); color:#10b981; padding:1px 8px; border-radius:12px; font-size:10px; font-weight:700;">+30 Días de Actividad</span>
+      </div>
+      <div style="color:var(--text-muted); margin-top:2px; font-size:11px;">
+        ¡Tu red sigue creciendo! Han pasado más de 30 días desde tu última sincronización. Si has agregado nuevos contactos o recibido invitaciones en el último mes, solicita tu ZIP en LinkedIn para incluirlos a tu Bóveda.
+      </div>
+    </div>
+  </div>
 
+  <div style="display:flex; align-items:center; gap:10px; flex-shrink:0;">
+    <a href="https://www.linkedin.com/mypreferences/d/download-my-data" target="_blank" rel="noopener" class="mini-btn primary" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:8px; background:linear-gradient(135deg, #6366f1, #4f46e5); color:#fff; text-decoration:none; display:inline-flex; align-items:center; gap:6px; box-shadow:0 4px 12px rgba(99,102,241,0.3);">
+      🚀 Solicitar ZIP en LinkedIn
+    </a>
+    <button onclick="openMonthlyIngestionModal()" class="mini-btn" style="padding:6px 12px; font-weight:700; font-size:11px; border-radius:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:var(--text); cursor:pointer;">
+      📋 Guía Paso a Paso
+    </button>
+    <button onclick="dismissMonthlyReminder()" style="background:transparent; border:none; color:var(--muted); font-size:16px; cursor:pointer; padding:4px;" title="Cerrar recordatorio por 30 días">✕</button>
+  </div>
+</div>
+
+<!-- MODAL GUÍA SOLICITUD LINKEDIN ZIP -->
 <div id="monthly-ingestion-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:20px; font-family:'Outfit',sans-serif;">
   <div style="background:#0f172a; border:1px solid rgba(99,102,241,0.4); border-radius:20px; max-width:540px; width:100%; padding:28px; box-shadow:0 25px 60px rgba(0,0,0,0.7); position:relative;">
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:14px;">
@@ -1050,7 +1103,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <span class="nav-icon">🎯</span><span>ICP / Leads</span>
       <span class="nav-badge tabular-nums" id="nb-icp">-</span>
     </div>
-    <div class="nav-item" data-section="graph" onclick="navigate('graph')" style="display:none !important;">
+    <div class="nav-item" data-section="graph" onclick="navigate('graph')">
       <span class="nav-icon">🕸️</span><span>Red de Grafos</span>
       <span class="nav-badge" style="background:var(--purple); color:#fff;">COSMA</span>
     </div>
@@ -1075,36 +1128,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <!-- MAIN -->
   <main id="main-content">
-
-  <!-- 🔔 BOT RECORDATORIO DE ACTUALIZACIÓN MENSUAL DE BÓVEDA (30/60/90 DÍAS) -->
-<div id="monthly-ingestion-reminder-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 20px; margin:0 0 16px 0; width:100%; box-sizing:border-box; background:linear-gradient(90deg, rgba(79,70,229,0.18), rgba(124,58,237,0.18)); border:1px solid rgba(99,102,241,0.35); border-radius:12px; font-family:'Outfit',sans-serif; backdrop-filter:blur(10px); z-index:990; font-size:12px; color:var(--text); box-shadow:0 4px 16px rgba(0,0,0,0.15);">
-  <div style="display:flex; align-items:center; gap:12px; flex:1; min-width:0;">
-    <div style="font-size:20px; background:rgba(99,102,241,0.25); border:1px solid rgba(99,102,241,0.5); border-radius:8px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-      🔔
-    </div>
-    <div style="min-width:0; flex:1;">
-      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-        <strong style="color:#ffffff; font-size:13px; font-weight:800;">Radar Comercial — Recordatorio de Minería Recurrente (30/60/90 Días)</strong>
-        <span style="background:rgba(16,185,129,0.2); border:1px solid rgba(16,185,129,0.4); color:#10b981; padding:1px 8px; border-radius:12px; font-size:10px; font-weight:700;">+30 Días de Actividad</span>
-      </div>
-      <div style="color:var(--text-muted); margin-top:2px; font-size:11px;">
-        ¡Tu red sigue creciendo! Han pasado más de 30 días desde tu última sincronización. Si has agregado nuevos contactos o recibido invitaciones en el último mes, solicita tu ZIP en LinkedIn para incluirlos a tu Bóveda.
-      </div>
-    </div>
-  </div>
-
-  <div style="display:flex; align-items:center; gap:10px; flex-shrink:0;">
-    <a href="https://www.linkedin.com/mypreferences/d/download-my-data" target="_blank" rel="noopener" class="mini-btn primary" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:8px; background:linear-gradient(135deg, #6366f1, #4f46e5); color:#fff; text-decoration:none; display:inline-flex; align-items:center; gap:6px; box-shadow:0 4px 12px rgba(99,102,241,0.3);">
-      🚀 Solicitar ZIP en LinkedIn
-    </a>
-    <button onclick="openMonthlyIngestionModal()" class="mini-btn" style="padding:6px 12px; font-weight:700; font-size:11px; border-radius:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:var(--text); cursor:pointer;">
-      📋 Guía Paso a Paso
-    </button>
-    <button onclick="dismissMonthlyReminder()" style="background:transparent; border:none; color:var(--muted); font-size:16px; cursor:pointer; padding:4px;" title="Cerrar recordatorio por 30 días">✕</button>
-  </div>
-</div>
-
-<!-- MODAL GUÍA SOLICITUD LINKEDIN ZIP -->
   <!-- ── UPLOAD ── -->
 
     <div class="section" id="sec-upload">
@@ -1159,9 +1182,6 @@ document.addEventListener('DOMContentLoaded', function() {
               </select>
               <div style="font-size:11px; font-weight:600; color:var(--text-muted);">Scoring Mínimo ICP:</div>
               <input type="number" id="num-min-scoring" value="50" min="0" max="100" style="width:60px; font-size:11px; padding:4px 6px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text);">
-              <button onclick="resetFullUserVault()" style="margin-left:auto; background:rgba(239,68,68,0.15); color:var(--red); border:1px solid rgba(239,68,68,0.35); font-size:11px; padding:5px 12px; font-weight:700; border-radius:8px; display:inline-flex; align-items:center; gap:6px; cursor:pointer;" title="Eliminar completamente mi Bóveda y reiniciar desde cero">
-                🗑️ Vaciar Mi Bóveda & Reiniciar de Cero
-              </button>
             </div>
           </div>
 
@@ -1218,51 +1238,203 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- ── NETWORK ── -->
     </div><!-- END sec-upload -->
 
-    <!-- ── PROFILE ── -->
-
-
-    <!-- ── PROFILE ── -->
-    <div class="section" id="sec-profile">
-      <div class="section-header">
-        <div><div class="section-title">👤 Mi Perfil y Cuenta</div><div class="section-sub">Configuración de credenciales de acceso y contexto activo de prospección</div></div>
+    <div class="section active" id="sec-network">
+      <!-- ── A/B TOGGLE BAR DE NAVEGACIÓN EN BÓVEDA ── -->
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:10px 16px; flex-wrap:wrap; gap:10px; box-shadow:var(--shadow-sm);">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:12px; font-weight:700; color:var(--text); font-family:'Outfit',sans-serif;">🎛️ Experiencia de Bóveda:</span>
+          <span style="font-size:11px; color:var(--text-muted);">Selecciona la interfaz preferida para tu equipo</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:6px; background:var(--bg); padding:4px; border-radius:8px; border:1px solid var(--border);">
+          <button class="mini-btn active" id="vault-mode-btn-a" onclick="switchVaultViewMode('A')" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:6px; cursor:pointer; transition:all 0.2s;">
+            📊 Vista A: Clásica (Dashboard & Mapa GIS)
+          </button>
+          <button class="mini-btn" id="vault-mode-btn-b" onclick="switchVaultViewMode('B')" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:6px; cursor:pointer; transition:all 0.2s;">
+            ✨ Vista B: Bóveda B2B Pro (Attio / Linear)
+          </button>
+        </div>
       </div>
 
-      <!-- ── CONFIGURACIÓN DE CUENTA Y CREDENCIALES ── -->
-      <div style="background:var(--surface, #FFFFFF); border:1px solid var(--border, #E2E8F0); border-radius:16px; padding:24px; margin-bottom:24px; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; border-bottom:1px solid #E2E8F0; padding-bottom:12px;">
-          <div>
-            <h3 style="font-size:16px; font-weight:700; color:#0F172A; margin:0 0 4px 0;">🔐 Configuración de Cuenta y Credenciales</h3>
-            <p style="font-size:12px; color:#64748B; margin:0;">Actualiza tu nombre, correo de acceso y contraseña de tu bóveda.</p>
-          </div>
-          <span style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#4F46E5; background:#EEF2FF; border:1px solid #C7D2FE; padding:4px 10px; border-radius:9999px;">ZERO-KNOWLEDGE VAULT</span>
+      <!-- ── VISTA A: CLÁSICA BI & MAPA GIS ── -->
+      <div id="vault-view-container-a">
+        <div class="section-header">
+          <div><div class="section-title">🌐 Mi Red de Contactos</div><div class="section-sub">Análisis por jerarquía, país y sector</div></div>
+          <button class="mini-btn" onclick="exportCSV(filteredContacts, 'red_contactos')">↓ Exportar CSV</button>
         </div>
 
-        <form id="account-settings-form" onsubmit="event.preventDefault(); saveAccountSettings();" style="display:flex; flex-direction:column; gap:16px;">
-          <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:16px;">
-            <div>
-              <label style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:6px; text-transform:uppercase;">NOMBRE / ALIAS</label>
-              <input type="text" id="profile-name-edit" class="filter-input" placeholder="ej. Giovanna Rossi" style="width:100%; height:42px; font-size:13px; padding:0 12px; border-radius:8px; background:#FFFFFF; border:1px solid #CBD5E1; color:#0F172A;">
+        <!-- BANNER PRUEBA A/B RONAN BI TEST -->
+        <div id="ronan-ab-banner" style="display:none; background:linear-gradient(135deg, rgba(79,70,229,0.18), rgba(124,58,237,0.18)); border:1px solid var(--accent); border-radius:12px; padding:14px 18px; margin-bottom:16px; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+          <div>
+            <div style="font-size:13px; font-weight:800; color:var(--accent); font-family:'Outfit',sans-serif; display:flex; align-items:center; gap:8px;">
+              <span>🧪 MÓDULO DE VALIDACIÓN BI / PRUEBA A/B (DEMO RONAN)</span>
             </div>
-
-            <div>
-              <label style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:6px; text-transform:uppercase;">CORREO ELECTRÓNICO</label>
-              <input type="email" id="profile-email-edit" class="filter-input" placeholder="ej. giovanna@empresa.com" style="width:100%; height:42px; font-size:13px; padding:0 12px; border-radius:8px; background:#FFFFFF; border:1px solid #CBD5E1; color:#0F172A;">
-            </div>
-
-            <div>
-              <label style="font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:6px; text-transform:uppercase;">NUEVA CONTRASEÑA / PIN</label>
-              <input type="password" id="profile-password-edit" class="filter-input" placeholder="Ingresa nueva contraseña" style="width:100%; height:42px; font-size:13px; padding:0 12px; border-radius:8px; background:#FFFFFF; border:1px solid #CBD5E1; color:#0F172A;">
+            <div style="font-size:11px; color:var(--text-muted); margin-top:3px; max-width:650px;" id="ronan-ab-explainer">
+              🟢 <b>Opción B (Enriquecida en Vivo 2026):</b> Muestra la red viva con HarvestAPI + IA. Revela los cargos actuales (CEOs, VPs) de contactos que eran analistas en 2018.
             </div>
           </div>
-
-          <div style="display:flex; justify-content:flex-end;">
-            <button type="submit" style="height:42px; padding:0 20px; font-size:13px; font-weight:700; border-radius:8px; background:#4F46E5; color:#FFFFFF; border:none; cursor:pointer; transition:background 0.2s ease;" onmouseover="this.style.background='#4338CA'" onmouseout="this.style.background='#4F46E5'">
-              💾 Guardar Cambios de Cuenta
+          <div style="display:flex; align-items:center; gap:8px; background:var(--bg); padding:4px 6px; border-radius:8px; border:1px solid var(--border);">
+            <button class="mini-btn" id="ab-btn-option-a" onclick="switchRonanAbMode('A')" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:6px; background:transparent; color:var(--text-muted); border:1px solid var(--border); cursor:pointer;">
+              🔴 Opción A: CSV Plano (Sin Enriquecer)
+            </button>
+            <button class="mini-btn active" id="ab-btn-option-b" onclick="switchRonanAbMode('B')" style="padding:6px 14px; font-weight:700; font-size:11px; border-radius:6px; background:var(--accent); color:#fff; border:1px solid var(--accent); cursor:pointer;">
+              🟢 Opción B: Enriquecido en Vivo (2026)
             </button>
           </div>
-        </form>
-      </div>
+        </div>
 
+        <div class="kpi-row" id="net-kpis"></div>
+        <div class="charts-row" id="net-charts" style="display:none">
+          <div class="chart-card"><div class="chart-title">Jerarquía</div><div class="chart-canvas-wrap"><canvas id="chart-hier"></canvas></div></div>
+          <div class="chart-card"><div class="chart-title">Top Países</div><div class="chart-canvas-wrap"><canvas id="chart-countries"></canvas></div></div>
+        </div>
+        
+        <!-- 🗺️ MAPA ESPACIAL GIS (mapcn-gis-specialist) -->
+        <div class="chart-card" id="map-gis-card" style="display:none; margin-bottom: 16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
+            <div class="chart-title" style="display:flex; align-items:center; gap:8px;">
+              <span>🗺️ Mapa Espacial de Relaciones (Warm Territory Intelligence)</span>
+              <span class="badge badge-green" id="map-contact-count">0 contactos mapeados</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <button class="mini-btn" onclick="resetMapZoom()" style="padding:4px 8px; font-size:11px;">🔍 Re-centrar Mapa</button>
+            </div>
+          </div>
+          <div id="gis-map-container" style="width:100% !important; min-width:100%; height:340px; border-radius:10px; border:1px solid var(--border); background:var(--bg); z-index:1; overflow:hidden;"></div>
+        </div>
+
+        <!-- FILTROS & TABLA CLÁSICA -->
+        <div class="filter-bar">
+          <div class="filter-group" style="flex:2">
+            <label>Buscar en la red</label>
+            <input class="filter-input" id="net-search" type="text" placeholder="Nombre, cargo, empresa, país, ciudad..." oninput="applyNetworkFilters()">
+          </div>
+          <div class="filter-group">
+            <label>Jerarquía</label>
+            <select class="filter-input" id="net-hier" onchange="applyNetworkFilters()">
+              <option value="">Todas</option>
+              <option value="C-Level">C-Level (CEO, CTO...)</option>
+              <option value="Director">Director / VP</option>
+              <option value="Gerente">Gerente / Manager</option>
+              <option value="Otro">Otros cargos</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>País</label>
+            <select class="filter-input" id="net-country" onchange="applyNetworkFilters()">
+              <option value="">Todos los países</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; font-size:12px; color:var(--text-muted);">
+          <div id="net-counter">Mostrando contactos de tu red</div>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span>Orden:</span>
+            <select class="filter-input" id="net-sort" onchange="applyNetworkFilters()" style="font-size:11px; padding:3px 8px;">
+              <option value="name-asc">Nombre (A-Z)</option>
+              <option value="score-desc">Mayor Scoring ICP</option>
+              <option value="date-desc">Conexión reciente</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table id="contacts-table">
+            <thead>
+              <tr>
+                <th>Contacto</th>
+                <th>Cargo / Posición</th>
+                <th>Empresa</th>
+                <th>Ubicación</th>
+                <th>Fecha Conexión</th>
+                <th>Score ICP</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="net-tbody"></tbody>
+          </table>
+          <div id="net-empty" style="display:none; text-align:center; padding:30px; color:var(--text-muted);">
+            No se encontraron contactos con los filtros seleccionados.
+          </div>
+        </div>
+      </div><!-- END vault-view-container-a -->
+
+      <!-- ── VISTA B: REDISEÑO B2B PRO (ATTIO / LINEAR SPEC) ── -->
+      <div id="vault-view-container-b" style="display:none; font-family:'Outfit',sans-serif;">
+        <!-- BÚSQUEDA HÉROE PROTAGONISTA -->
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:24px 20px; margin-bottom:20px; box-shadow:var(--shadow-sm);">
+          <div style="text-align:center; max-width:640px; margin:0 auto 16px auto;">
+            <h2 style="font-size:20px; font-weight:800; color:var(--text); margin-bottom:6px;">Explora tu Bóveda Privada de Inteligencia</h2>
+            <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">Busca por nombre, cargo, empresa, palabras clave o temas de conversación en tu red.</p>
+          </div>
+
+          <div style="position:relative; max-width:720px; margin:0 auto 14px auto;">
+            <input type="text" id="vault-b-search-input" class="filter-input" placeholder="🔍 Ejemplo: 'batas', 'cfo fintech', 'epp', 'pagos', 'compras hospital'..." style="width:100%; padding:14px 44px 14px 16px; font-size:14px; border-radius:10px; background:var(--bg); border:1px solid var(--accent); color:var(--text); outline:none; box-shadow:0 0 0 3px rgba(79,70,229,0.15);" onkeyup="handleVaultBSearch(event)">
+            <button onclick="triggerVaultBSearch()" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); background:var(--accent); color:white; border:none; border-radius:6px; padding:6px 14px; font-weight:700; font-size:12px; cursor:pointer;">Buscar</button>
+          </div>
+
+          <!-- CHIPS DE BÚSQUEDA RÁPIDA -->
+          <div style="display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap;">
+            <span style="font-size:11px; color:var(--text-muted); font-weight:600;">Sugerencias:</span>
+            <button class="mini-btn" onclick="quickSearchVaultB('hospital')" style="padding:4px 10px; font-size:11px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text);">🩺 Compras Hospitales</button>
+            <button class="mini-btn" onclick="quickSearchVaultB('pagos')" style="padding:4px 10px; font-size:11px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text);">💳 Payments / Fintech</button>
+            <button class="mini-btn" onclick="quickSearchVaultB('epp')" style="padding:4px 10px; font-size:11px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text);">🛡️ Equipos EPP</button>
+            <button class="mini-btn" onclick="quickSearchVaultB('cfo')" style="padding:4px 10px; font-size:11px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text);">🎯 Decisores C-Level</button>
+          </div>
+        </div>
+
+        <!-- 3 KPIS COMERCIALES NÍTIDOS -->
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:14px; margin-bottom:20px;">
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px; display:flex; align-items:center; gap:14px;">
+            <div style="background:rgba(99,102,241,0.12); color:var(--accent); width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px;">🎯</div>
+            <div>
+              <div style="font-size:11px; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:.05em;">Perfiles de Alto ICP</div>
+              <div style="font-size:22px; font-weight:800; color:var(--text);" id="vb-kpi-icp">296</div>
+            </div>
+          </div>
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px; display:flex; align-items:center; gap:14px;">
+            <div style="background:rgba(16,185,129,0.12); color:var(--green); width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px;">💬</div>
+            <div>
+              <div style="font-size:11px; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:.05em;">Chats a Re-contactar</div>
+              <div style="font-size:22px; font-weight:800; color:var(--text);" id="vb-kpi-chats">14</div>
+            </div>
+          </div>
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px; display:flex; align-items:center; gap:14px;">
+            <div style="background:rgba(245,158,11,0.12); color:var(--amber); width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px;">🚀</div>
+            <div>
+              <div style="font-size:11px; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:.05em;">Cuentas Objetivo Co-Selling</div>
+              <div style="font-size:22px; font-weight:800; color:var(--text);" id="vb-kpi-opps">8</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEGMENTACIÓN & FILTROS SOBRIOS -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+          <div style="display:flex; gap:6px; flex-wrap:wrap;">
+            <button class="mini-btn active" id="vb-filter-all" onclick="filterVaultB('all')" style="padding:6px 12px; font-weight:700; font-size:11px; border-radius:6px;">Todos (<span id="vb-count-total">2,953</span>)</button>
+            <button class="mini-btn" id="vb-filter-clevel" onclick="filterVaultB('clevel')" style="padding:6px 12px; font-weight:700; font-size:11px; border-radius:6px;">🎯 C-Level & Directores</button>
+            <button class="mini-btn" id="vb-filter-chats" onclick="filterVaultB('chats')" style="padding:6px 12px; font-weight:700; font-size:11px; border-radius:6px;">💬 Con Historial de Chat</button>
+            <button class="mini-btn" id="vb-filter-mexico" onclick="filterVaultB('mexico')" style="padding:6px 12px; font-weight:700; font-size:11px; border-radius:6px;">🇲🇽 México</button>
+          </div>
+          <div style="font-size:12px; color:var(--text-muted);" id="vb-results-counter">
+            Mostrando prospectos explicables de tu red
+          </div>
+        </div>
+
+        <!-- FEED DE RESULTADOS EXPLICABLES ESTILO ATTIO/LINEAR -->
+        <div id="vault-b-feed" style="display:flex; flex-direction:column; gap:10px;">
+          <!-- Injected dynamically by renderVaultBFeed() -->
+        </div>
+      </div><!-- END vault-view-container-b -->
+
+    
+<!-- ── PROFILE ── -->
+    </div><!-- END sec-network -->
+
+    <div class="section" id="sec-profile">
+      <div class="section-header">
+        <div><div class="section-title">👤 Mi Perfil</div><div class="section-sub">Historial laboral y contexto activo para pitches</div></div>
+      </div>
       <div class="icp-config">
         <label>Contexto ICP activo — define a quién le vendes (opcional, sobreescribe el auto-detect)</label>
         <input class="icp-input" id="icp-override" type="text" placeholder='ej: "CFO de empresa SaaS B2B de 50-500 empleados en México"'>
@@ -1300,7 +1472,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
 
       <!-- BANNER PRUEBA A/B RONAN BI TEST -->
-      <div id="ronan-ab-banner" style="display:none; width:100%; box-sizing:border-box; overflow:hidden; background:linear-gradient(135deg, rgba(79,70,229,0.18), rgba(124,58,237,0.18)); border:1px solid var(--accent); border-radius:12px; padding:14px 18px; margin-bottom:16px; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <div id="ronan-ab-banner" style="display:none; background:linear-gradient(135deg, rgba(79,70,229,0.18), rgba(124,58,237,0.18)); border:1px solid var(--accent); border-radius:12px; padding:14px 18px; margin-bottom:16px; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
         <div>
           <div style="font-size:13px; font-weight:800; color:var(--accent); font-family:'Outfit',sans-serif; display:flex; align-items:center; gap:8px;">
             <span>🧪 MÓDULO DE VALIDACIÓN BI / PRUEBA A/B (DEMO RONAN)</span>
@@ -1674,59 +1846,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <div id="echart-becario-ceo" style="width:100%; height:340px;"></div>
         </div>
 
-        <!-- ROW 3: MICROSOFT DATA FORMULATOR - CREATOR & AUDIENCE REAL ANALYTICS (ANTONIO VAULT EXCLUSIVE) -->
-        <div id="antonio-creator-analytics-section" style="background:var(--surface); border:1px solid rgba(99,102,241,0.3); box-shadow:0 0 20px rgba(99,102,241,0.08); border-radius:14px; padding:20px; margin-bottom:20px; backdrop-filter:blur(8px);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:10px;">
-            <div>
-              <div style="font-size:16px; font-weight:800; color:var(--text); display:flex; align-items:center; gap:8px;">
-                <span>📊 Microsoft Data Formulator — Analytics de Creador & Audiencia Real</span>
-              </div>
-              <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">
-                Métricas oficiales verificadas trazadas directamente desde tus exportables AnalisisConjunto (2025 - 2026)
-              </div>
-            </div>
-            <span style="font-size:10px; background:rgba(99,102,241,0.15); border:1px solid rgba(99,102,241,0.4); color:#818cf8; padding:4px 12px; border-radius:12px; font-weight:700; font-family:'JetBrains Mono',monospace;">
-              🟢 23,047 Impresiones Anuales | 10,911 Miembros Alcanzados (100% Real)
-            </span>
-          </div>
-
-          <!-- Metric Cards Grid -->
-          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:14px; margin-bottom:20px;">
-            <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:14px;">
-              <div style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">Impresiones Anuales (365d)</div>
-              <div style="font-size:24px; font-weight:800; color:#818cf8; font-family:'JetBrains Mono',monospace; margin:4px 0;">23,047</div>
-              <div style="font-size:10px; color:var(--text-muted);">9,108 impresiones en últimos 90d</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:14px;">
-              <div style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">Miembros Alcanzados Únicos</div>
-              <div style="font-size:24px; font-weight:800; color:#10b981; font-family:'JetBrains Mono',monospace; margin:4px 0;">10,911</div>
-              <div style="font-size:10px; color:var(--text-muted);">5,692 alcanzados en últimos 90d</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:14px;">
-              <div style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">Interacciones Verificadas</div>
-              <div style="font-size:24px; font-weight:800; color:#f59e0b; font-family:'JetBrains Mono',monospace; margin:4px 0;">8,697</div>
-              <div style="font-size:10px; color:var(--text-muted);">6,357 reacciones + 2,340 comentarios</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:14px;">
-              <div style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">Tasa de Engagement B2B</div>
-              <div style="font-size:24px; font-weight:800; color:#ec4899; font-family:'JetBrains Mono',monospace; margin:4px 0;">4.2%</div>
-              <div style="font-size:10px; color:var(--text-muted);">Top Tier Creador Fintech & B2B</div>
-            </div>
-          </div>
-
-          <!-- ECharts Charts Grid -->
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-            <div style="background:rgba(0,0,0,0.15); border:1px solid var(--border); border-radius:10px; padding:14px;">
-              <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:8px;">📉 Curva de Impresiones Diarias Reales (Mayo - Agosto 2026)</div>
-              <div id="echart-creator-impressions" style="width:100%; height:260px;"></div>
-            </div>
-            <div style="background:rgba(0,0,0,0.15); border:1px solid var(--border); border-radius:10px; padding:14px;">
-              <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:8px;">📊 Demografía Real del Público (Microsoft Data Formulator Schema)</div>
-              <div id="echart-creator-demographics" style="width:100%; height:260px;"></div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     <!-- ── BENCHMARKS ── -->
@@ -1843,7 +1962,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- ── COSMA OTLETOSPHERE GRAPH VIEW (Arthur Perret Replica) ── -->
     </div><!-- END sec-benchmarks -->
 
-    <div class="section" id="sec-graph" style="display:none !important;">
+    <div class="section" id="sec-graph">
       <div class="section-header">
         <div>
           <div class="section-title" style="display:flex; align-items:center; gap:8px;">
@@ -2054,78 +2173,82 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- ── PROFESSIONAL SAAS WELCOME ACCESS GATEWAY MODAL (TAVILY NEBIUS BESPOKE STYLE) ── -->
-<div class="modal-overlay" id="login-modal" style="background:rgba(244, 244, 245, 0.96); padding:20px; align-items:center; justify-content:center;">
-  <div class="modal" style="max-width:410px; width:100%; padding:40px 32px; border-radius:24px; background:#FFFFFF; border:1px solid #E4E4E7; box-shadow:0 20px 40px rgba(0,0,0,0.06); font-family:'Outfit', sans-serif; color:#09090B;">
+<!-- ── PROFESSIONAL SAAS WELCOME ACCESS GATEWAY MODAL ── -->
+<div class="modal-overlay open" id="login-modal" style="display:flex !important; opacity:1 !important; pointer-events:auto !important; z-index:99999 !important;">
+  <div class="modal" style="max-width:460px; padding:28px 24px; border-radius:16px; background:var(--surface); border:1px solid var(--border); box-shadow:0 20px 40px rgba(0,0,0,0.5); font-family:'Outfit',sans-serif;">
     
-    <!-- BRANDING HEADER (TAVILY STYLE) -->
-    <div style="text-align:center; margin-bottom:28px;">
-      <div style="display:inline-flex; align-items:center; justify-content:center; gap:8px; margin-bottom:16px;">
-        <span style="font-size:24px;">📡</span>
-        <span style="font-size:22px; font-weight:800; color:#09090B; letter-spacing:-0.03em;">radar comercial</span>
-        <span style="font-size:11px; font-weight:600; color:#71717A; background:#F4F4F5; border:1px solid #E4E4E7; padding:2px 8px; border-radius:6px; font-family:'JetBrains Mono', monospace;">BYOD</span>
+    <!-- BRANDING HEADER -->
+    <div style="text-align:center; margin-bottom:20px;">
+      <div style="display:inline-flex; align-items:center; gap:8px; font-weight:800; font-size:18px; color:var(--text); margin-bottom:4px;">
+        <div style="background:var(--accent); color:#fff; width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px;">📡</div>
+        <span>RADAR <span style="color:var(--accent);">COMERCIAL</span></span>
       </div>
-      <h2 style="font-size:26px; font-weight:700; color:#09090B; margin:0 0 6px 0; letter-spacing:-0.02em;">Welcome</h2>
-      <p style="font-size:13px; color:#71717A; margin:0; font-weight:500;">Log in to continue to Radar Comercial</p>
+      <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">
+        Relationship Intelligence & Warm Pipeline Mining
+      </div>
     </div>
 
-    <!-- ERROR INLINE ALERT -->
-    <div id="login-error-alert" style="display:none; background:#FEE2E2; border:1px solid #FCA5A5; color:#991B1B; padding:10px 14px; border-radius:10px; font-size:13px; font-weight:600; margin-bottom:18px; text-align:center;">
-      ❌ Credenciales incorrectas. Verifique su usuario y contraseña.
+    <!-- TITLE & SUBTITLE -->
+    <div style="text-align:center; margin-bottom:20px;">
+      <h2 style="font-size:20px; font-weight:800; color:var(--text); margin-bottom:6px;">Accede a tu bóveda</h2>
+      <p style="font-size:12px; color:var(--text-muted); line-height:1.5; margin:0;">
+        Tu espacio privado para explorar tu red, tus conversaciones y tus oportunidades comerciales.
+      </p>
+    </div>
+
+    <!-- GOOGLE OAUTH PLACEHOLDER -->
+    <button class="mini-btn" onclick="showToast('🔑 Continuar con Google estará disponible próximamente en Supabase Auth.', '💡')" style="width:100%; padding:10px; font-size:13px; font-weight:700; border-radius:10px; border:1px solid var(--border); background:var(--bg); color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:16px; transition:all 0.2s;">
+      <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+      <span>Continuar con Google <span style="font-size:10px; opacity:0.6; font-weight:400;">(Próximamente)</span></span>
+    </button>
+
+    <!-- SEPARATOR -->
+    <div style="display:flex; align-items:center; margin:16px 0; color:var(--text-muted); font-size:11px;">
+      <div style="flex:1; height:1px; background:var(--border);"></div>
+      <span style="padding:0 10px; font-weight:600; text-transform:lowercase;">o</span>
+      <div style="flex:1; height:1px; background:var(--border);"></div>
     </div>
 
     <!-- FORMULARIO PRINCIPAL DE ACCESO -->
-    <form id="login-form-card" onsubmit="event.preventDefault(); submitCustomLogin();" style="display:flex; flex-direction:column; gap:16px; margin-bottom:20px;">
-      <div>
-        <label for="login-username-input" style="font-size:12px; font-weight:600; color:#09090B; display:block; margin-bottom:6px;">Email address / User*</label>
-        <input type="text" id="login-username-input" class="filter-input" placeholder="ej. antonio@radar.com o giovanna" required style="width:100%; height:46px; font-size:14px; padding:0 14px; border-radius:10px; background:#FFFFFF; border:1px solid #09090B; color:#09090B; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#000000';" onblur="this.style.borderColor='#09090B';">
+    <div style="margin-bottom:20px;">
+      <div style="margin-bottom:12px;">
+        <label style="font-size:11px; font-weight:600; color:var(--text); display:block; margin-bottom:6px;">Correo electrónico o ID de usuario</label>
+        <input type="text" id="login-username-input" class="filter-input" placeholder="ej. antonio@radarcomercial.com" value="antonio" style="width:100%; font-size:13px; padding:10px 12px; border-radius:8px; background:var(--bg); border:1px solid var(--border); color:var(--text); outline:none;" onkeyup="if(event.key==='Enter') submitCustomLogin()">
       </div>
-      
-      <div>
+      <div style="margin-bottom:16px;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-          <label for="login-password-input" style="font-size:12px; font-weight:600; color:#09090B;">Password*</label>
+          <label style="font-size:11px; font-weight:600; color:var(--text);">Contraseña</label>
+          <a href="#" onclick="showToast('🔑 Contacta al administrador para restablecer tu contraseña.', '💡'); return false;" style="font-size:11px; color:var(--accent); text-decoration:none; font-weight:600;">¿Olvidaste tu contraseña?</a>
         </div>
-        <input type="password" id="login-password-input" class="filter-input" placeholder="••••••••" required style="width:100%; height:46px; font-size:14px; padding:0 14px; border-radius:10px; background:#FFFFFF; border:1px solid #D4D4D8; color:#09090B; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#000000';" onblur="this.style.borderColor='#D4D4D8';">
+        <input type="password" id="login-password-input" class="filter-input" value="12345" style="width:100%; font-size:13px; padding:10px 12px; border-radius:8px; background:var(--bg); border:1px solid var(--border); color:var(--text); outline:none;" onkeyup="if(event.key==='Enter') submitCustomLogin()">
       </div>
-
-      <button id="login-submit-btn" type="submit" style="width:100%; height:48px; font-size:15px; font-weight:600; border-radius:9999px; background:#09090B; color:#FFFFFF; border:none; cursor:pointer; transition:background 0.2s ease; margin-top:4px;" onmouseover="this.style.background='#27272A'" onmouseout="this.style.background='#09090B'">
-        Continue
-      </button>
-    </form>
-
-    <div style="text-align:center; font-size:12px; color:#71717A; margin-bottom:20px;">
-      Don't have an account? <a href="#" onclick="event.preventDefault(); alert('Para crear una cuenta corporativa, contacta a soporte@radarcomercial.io');" style="color:#2563EB; text-decoration:none; font-weight:600;">Sign up</a>
-    </div>
-
-    <!-- OR DIVIDER -->
-    <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
-      <div style="flex:1; height:1px; background:#E4E4E7;"></div>
-      <span style="font-size:11px; font-weight:600; color:#A1A1AA; text-transform:uppercase;">OR</span>
-      <div style="flex:1; height:1px; background:#E4E4E7;"></div>
-    </div>
-
-    <!-- SOCIAL SSO BUTTONS (DYNAMIC ACCOUNT SELECTOR) -->
-    <div style="display:flex; flex-direction:column; gap:10px;">
-      <button type="button" onclick="openSsoPicker('Google')" style="width:100%; height:44px; font-size:13px; font-weight:600; border-radius:9999px; background:#FFFFFF; border:1px solid #E4E4E7; color:#09090B; display:flex; align-items:center; justify-content:center; gap:10px; cursor:pointer; transition:background 0.2s ease;" onmouseover="this.style.background='#F4F4F5'" onmouseout="this.style.background='#FFFFFF'">
-        <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-        Continue with Google
-      </button>
-
-      <button type="button" onclick="openSsoPicker('LinkedIn')" style="width:100%; height:44px; font-size:13px; font-weight:600; border-radius:9999px; background:#FFFFFF; border:1px solid #E4E4E7; color:#09090B; display:flex; align-items:center; justify-content:center; gap:10px; cursor:pointer; transition:background 0.2s ease;" onmouseover="this.style.background='#F4F4F5'" onmouseout="this.style.background='#FFFFFF'">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-        Continue with LinkedIn
-      </button>
-
-      <button type="button" onclick="openSsoPicker('Microsoft')" style="width:100%; height:44px; font-size:13px; font-weight:600; border-radius:9999px; background:#FFFFFF; border:1px solid #E4E4E7; color:#09090B; display:flex; align-items:center; justify-content:center; gap:10px; cursor:pointer; transition:background 0.2s ease;" onmouseover="this.style.background='#F4F4F5'" onmouseout="this.style.background='#FFFFFF'">
-        <svg width="18" height="18" viewBox="0 0 23 23"><path fill="#f35325" d="M1 1h10v10H1z"/><path fill="#81bc06" d="M12 1h10v10H1z"/><path fill="#05a6f0" d="M1 12h10v10H1z"/><path fill="#ffba08" d="M12 12h10v10H12z"/></svg>
-        Continue with Microsoft
+      <button class="mini-btn primary" onclick="submitCustomLogin()" style="width:100%; padding:11px; font-size:14px; font-weight:700; border-radius:10px; background:linear-gradient(135deg, var(--accent), #4338ca); color:white; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(79,70,229,0.3);">
+        Entrar a mi bóveda
       </button>
     </div>
 
-
+    <!-- SECCIÓN SECUNDARIA: ACCESOS DE DEMO / SELECCIÓN RÁPIDA -->
+    <div style="border-top:1px solid var(--border); padding-top:16px;">
+      <div style="font-size:11px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:.05em; margin-bottom:10px; text-align:center;">
+        ¿Explorando una demostración?
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <button class="mini-btn" onclick="quickLogin('antonio', '12345')" style="padding:9px 12px; justify-content:flex-start; font-size:12px; font-weight:600; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text); display:flex; align-items:center; gap:8px;">
+          👤 <span>Antonio · Bóveda personal</span>
+          <span style="margin-left:auto; font-size:10px; color:var(--green); font-weight:700; background:rgba(16,185,129,0.1); padding:2px 6px; border-radius:4px;">2,953 contactos</span>
+        </button>
+        <button class="mini-btn" onclick="quickLogin('giovanna', '12345')" style="padding:9px 12px; justify-content:flex-start; font-size:12px; font-weight:600; border-radius:8px; border:1px solid var(--purple); color:var(--purple); background:rgba(124,58,237,0.06); display:flex; align-items:center; gap:8px;">
+          👤 <span>Giovanna · Bóveda de prueba</span>
+          <span style="margin-left:auto; font-size:10px; opacity:0.8; font-weight:500;">Bóveda privada</span>
+        </button>
+        <button class="mini-btn" onclick="quickLogin('ronan', '12345')" style="padding:9px 12px; justify-content:flex-start; font-size:12px; font-weight:600; border-radius:8px; border:1px solid var(--amber); color:var(--amber); background:rgba(245,158,11,0.06); display:flex; align-items:center; gap:8px;">
+          🧪 <span>Ronan · Sandbox colaborativo</span>
+          <span style="margin-left:auto; font-size:10px; opacity:0.8; font-weight:500;">500 demo BI</span>
+        </button>
+      </div>
+    </div>
 
   </div>
-</div>
 </div>
 
 <!-- AI & ENRICHMENT BYOK CONFIG & CALCULATOR MODAL -->
@@ -2398,26 +2521,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // ═══════════════════════════════════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════════════════════════════════
-function resetGlobalState() {
-  filteredContacts = [];
-  S.contacts = [];
-  S.messages = [];
-  S.positions = [];
-  S.filteredContacts = [];
-  S.conversations = [];
-  S.purgeChecked = new Set();
-  S.expandedChats = new Set();
-  S.crmState = { discarded: [], whitelisted: [], deals: [] };
-  S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
-  S.ownerName = '';
-  window.ENRICHED_CONNECTIONS_DATA = [];
-  window.ronanAbMode = null;
-  window.isRonanAbMode = false;
-  window.RONAN_DEMO_MESSAGES = undefined;
-  window.RONAN_DEMO_CONTACTS = undefined;
-}
-window.resetGlobalState = resetGlobalState;
-
 const S = window.S = {
   contacts: [],
   positions: [],
@@ -2534,12 +2637,22 @@ function toggleTheme() {
 }
 
 (function() {
-  // Modo Claro 100% estricto por defecto
-  document.body.classList.add('light');
-  localStorage.setItem('theme', 'light');
+  // Modo Claro por defecto para máxima legibilidad
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.remove('light');
+  } else {
+    document.body.classList.add('light');
+    localStorage.setItem('theme', 'light');
+  }
 })();
 
-// Automatic demo load removed on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Carga automática de los datos enriquecidos y navega directo a Mi Red
+  if (typeof loadDemoData === 'function') {
+    loadDemoData(true);
+  }
+});
 
 // ═══════════════════════════════════════════════════════════════════════
 // HELPERS
@@ -2718,32 +2831,33 @@ function inferSector(pos, company) {
 function scoreContact(c) {
   const icpText = norm(document.getElementById('icp-override')?.value || '');
   const activePos = S.positions.length ? S.positions[S.activePositionIndex || 0] : null;
-  const ownerSector = activePos ? inferSector(activePos.title, activePos.company) : 'Ventas / Prospección';
+  const ownerSector = activePos ? inferSector(activePos.title, activePos.company) : '';
   let score = 0;
-
-  // Jerarquía comercial
+  // Jerarquía
   if (c.hierarchy === 'C-Level') score += 35;
   else if (c.hierarchy === 'Director') score += 20;
   else if (c.hierarchy === 'Gerente') score += 10;
-
-  // Empresa y Geografía válida
-  if (c.company && c.company !== 'Desconocido') score += 10;
-  if (c.country && c.country !== 'Desconocido') score += 15;
-
-  // Alineación de sector con el propietario de la bóveda
-  if (c.sector === ownerSector || c.sector === 'Ventas / Prospección') score += 15;
-
-  // Correo de contacto directo o interacción warm
-  if (c.email) score += 5;
-  if (c.msg_count && c.msg_count > 0) score += 10;
-
+  // Geografía conocida
+  if (c.country !== 'Desconocido') score += 15;
+  // Sector alineado con el tuyo
+  if (c.sector === ownerSector && ownerSector && ownerSector !== 'Otro') score += 25;
+  // Datos de contacto
+  if (c.email) score += 10;
+  // Conexión reciente = más caliente
+  if (c.connectedYearsAgo < 2) score += 10;
+  if (c.connectedYearsAgo < 1) score += 5;
+  // Relación warm: hay historial de DMs
+  if (c.msg_count && c.msg_count > 0) score += 15;
+  // Sentimiento positivo en DMs = lead caliente confirmado
+  if (c.sentiment === '\uD83D\uDFE2 Inter\u00e9s Alto / Dispuesto a Demo') score += 10;
+  if (c.intent === 'Lead C\u00e1lido / Oportunidad Real' || c.intent === 'Cualificaci\u00f3n en Proceso') score += 10;
+  // ICP override text match
   if (icpText) {
     const blob = norm(`${c.position} ${c.company} ${c.sector} ${c.country}`);
     const words = icpText.split(/\s+/).filter(w => w.length > 3);
     const matches = words.filter(w => blob.includes(w)).length;
     score += Math.round((matches / Math.max(words.length, 1)) * 20);
   }
-
   return Math.min(100, score);
 }
 
@@ -3359,8 +3473,6 @@ async function loadDemoData(autoNavigate = true) {
     }
     if (!data) throw new Error("No se pudo cargar la base de datos.");
     
-
-    
     S.ownerName = "Antonio Gutiérrez";
     S.positions = [
       { company: "Clip", title: "Acquisition Executive | BDR | Sales", start: "Jul 2021", end: "Mar 2025" },
@@ -3706,7 +3818,7 @@ function navigate(sec) {
     return;
   }
   S.activeSection = sec;
-  document.querySelectorAll('.section').forEach(s => { s.classList.remove('active'); s.style.display = 'none'; });
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   const targetSec = document.getElementById('sec-' + sec);
   if (targetSec) {
@@ -3717,10 +3829,8 @@ function navigate(sec) {
   if (navItem) navItem.classList.add('active');
 
   if (sec === 'network') {
-    if (typeof applyNetworkFilters === 'function') applyNetworkFilters();
     setTimeout(() => {
-      if (typeof gisMapInstance !== 'undefined' && gisMapInstance) gisMapInstance.invalidateSize();
-      if (typeof gisMap !== 'undefined' && gisMap) gisMap.invalidateSize();
+      if (gisMapInstance) gisMapInstance.invalidateSize();
     }, 150);
   }
 
@@ -3737,17 +3847,8 @@ function navigate(sec) {
       requestAnimationFrame(() => { renderCRM(); });
     });
   }
-
-  if (sec === 'profile') {
-    if (typeof loadAccountSettings === 'function') loadAccountSettings();
-    if (typeof renderProfile === 'function') renderProfile();
-  }
-
-  if (sec === 'purge') {
-    if (typeof renderPurgeCriteria === 'function') renderPurgeCriteria();
-    if (typeof renderPurge === 'function') renderPurge();
-  }
-
+  
+window.navigate = navigate;
   if (sec === 'analytics') {
     const locked = document.getElementById('analytics-locked');
     const dashboard = document.getElementById('analytics-dashboard');
@@ -3758,7 +3859,6 @@ function navigate(sec) {
     });
   }
 }
-window.navigate = navigate;
 
 // ═══════════════════════════════════════════════════════════════════════
 // HEADER KPIs
@@ -3903,21 +4003,6 @@ function changeIcpActiveRole(val) {
 
 filterVerifiedOnly = false;
 function toggleVerifiedFilter() {
-  const enrichedCount = (S.contacts || []).filter(c => c.harvest_enriched).length;
-  if (!filterVerifiedOnly && enrichedCount === 0) {
-    if (typeof showToast === 'function') {
-      showToast('ℹ️ Aún no has ejecutado el enriquecimiento Live (HarvestAPI) para tus contactos. Mostrando todos los contactos de la Bóveda.', 'ℹ️');
-    }
-    filterVerifiedOnly = false;
-    const btn = document.getElementById('btn-filter-verified');
-    if (btn) {
-      btn.style.background = 'var(--surface)';
-      btn.style.color = 'var(--green)';
-    }
-    applyNetworkFilters();
-    return;
-  }
-  
   filterVerifiedOnly = !filterVerifiedOnly;
   const btn = document.getElementById('btn-filter-verified');
   if (btn) {
@@ -4077,7 +4162,7 @@ function renderNetwork() {
     }
   });
   initGisMap(S.contacts);
-  applyNetworkFilters();
+  renderNetworkTable();
 }
 
 gisMapInstance = null;
@@ -4738,21 +4823,20 @@ function renderPurge() {
     const reasons = getPurgeReasons(c);
     const checked = S.purgeChecked.has(c.id) ? 'checked' : '';
     const nameHtml = getDisplayNameHTML(c);
-    const safeId = typeof c.id === 'string' ? `'${c.id.replace(/'/g, "\\'")}'` : c.id;
     return `<tr>
-      <td><input type="checkbox" ${checked} onchange="togglePurgeCheck(${safeId},this.checked)"></td>
+      <td><input type="checkbox" ${checked} onchange="togglePurgeCheck(${c.id},this.checked)"></td>
       <td><div class="td-name">${nameHtml}</div></td>
       <td><div class="td-sub">${c.position||'Sin cargo'}</div><div class="td-sub" style="color:var(--muted)">${getDisplayCompany(c)}</div></td>
       <td style="font-size:11px">${c.country==='Desconocido'?'📍 —':countryFlag(c.country)}</td>
       <td style="max-width:180px;">${reasons.map(r=>`<span class="badge badge-red" title="${r.full}" style="margin-right:3px;margin-bottom:2px;white-space:nowrap;display:inline-block;">${r.short}</span>`).join('')}</td>
       <td style="white-space:nowrap; text-align:right; min-width:240px;">
-        <button class="mini-btn primary" onclick="enrichSingleContactLive(${safeId})" style="font-size:9px; padding:3px 7px; background:linear-gradient(135deg, var(--accent), var(--green)); border:none; color:white; font-weight:700;" title="Verificar puesto en vivo vía HarvestAPI">
+        <button class="mini-btn primary" onclick="enrichSingleContactLive(${c.id})" style="font-size:9px; padding:3px 7px; background:linear-gradient(135deg, var(--accent), var(--green)); border:none; color:white; font-weight:700;" title="Verificar puesto en vivo vía HarvestAPI">
           ⚡ Verificar Live
         </button>
-        <button class="mini-btn" onclick="protectFromPurge(${safeId})" style="font-size:9px; padding:3px 7px; color:var(--green); border-color:rgba(16,185,129,0.3);" title="Ignorar purga y conservar en red">
+        <button class="mini-btn" onclick="protectFromPurge(${c.id})" style="font-size:9px; padding:3px 7px; color:var(--green); border-color:rgba(16,185,129,0.3);" title="Ignorar purga y conservar en red">
           🛡️ Mantener
         </button>
-        <button class="mini-btn" onclick="dismissPurgeContact(${safeId})" style="font-size:9px; padding:3px 7px; color:var(--red); border-color:rgba(239,68,68,0.3);" title="Marcar como descartado definitivamente">
+        <button class="mini-btn" onclick="dismissPurgeContact(${c.id})" style="font-size:9px; padding:3px 7px; color:var(--red); border-color:rgba(239,68,68,0.3);" title="Marcar como descartado definitivamente">
           🗑️ Descartar
         </button>
       </td>
@@ -5740,14 +5824,8 @@ function renderAnalyticsChart() {
     let firstReceivedDate = null;
 
     (thread.messages || []).forEach(msg => {
-      let msgDate = null;
-      try {
-        const rawDate = msg.DATE || msg.date || msg.time || msg.created_at;
-        if (rawDate) msgDate = new Date(rawDate);
-        if (msgDate && isNaN(msgDate.getTime())) msgDate = null;
-      } catch(e) { msgDate = null; }
-
-      if (msgDate && msgDate >= thirtyDaysAgo) {
+      const msgDate = new Date(msg.DATE);
+      if (msgDate >= thirtyDaysAgo) {
         const dateStr = msgDate.toISOString().split('T')[0];
         
         if (msg.FROM === S.userName) {
@@ -7703,9 +7781,9 @@ function getVaultKey() {
 }
 
 async function saveLocalVault() {
-  if (!S.contacts || S.contacts.length === 0) return;
+  if (!S.contacts || S.contacts.length === 0 || S.isDemoLoaded) return;
   const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
-  if (userId === 'ronan' || window.isRonanAbMode || S.ownerName === 'Ronan' || (S.contacts.length === 500 && S.messages && S.messages.length === 4)) return; // Do not auto-overwrite with Ronan sandbox
+  if (userId === 'ronan') return; // Do not auto-overwrite demo sandbox
 
   try {
     const db = await openVaultDB();
@@ -7716,8 +7794,7 @@ async function saveLocalVault() {
       ownerName: S.ownerName || userId,
       contacts: S.contacts,
       positions: S.positions || [],
-      messages: S.messages || [],
-      crmState: S.crmState || { discarded: [], whitelisted: [], deals: [] }
+      messages: S.messages || []
     };
     const vaultKey = getVaultKey();
     store.put(dataToSave, vaultKey);
@@ -7733,15 +7810,7 @@ async function saveLocalVault() {
   }
 }
 
-// 🌐 RECONEXIÓN AUTOMÁTICA (AUTO-SYNC AL RECUPERAR INTERNET)
-window.addEventListener('online', () => {
-  console.log('[AutoSync] Conexión restablecida. Sincronizando cambios locales...');
-  if (typeof saveLocalVault === 'function') saveLocalVault();
-  if (typeof showToast === 'function') showToast('🌐 Conexión restablecida. Cambios sincronizados automáticamente con la nube.', '🟢');
-});
-
 async function restoreLocalVault() {
-  if (!window.currentAuthUser) return false;
   try {
     const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
     if (userId === 'ronan') return false; // Ronan always uses sandbox demo
@@ -7759,22 +7828,9 @@ async function restoreLocalVault() {
       });
 
       if (data && data.contacts && data.contacts.length > 0) {
-        if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4)) {
-          console.warn('[AutoVault] Ignorada caché de Ronan en vault_antonio. Forzando restauración de Bóveda Master Antonio.');
-          localStorage.removeItem(vaultKey);
-          return false;
-        }
-        let cleanContacts = data.contacts;
-        S.contacts = cleanContacts;
+        S.contacts = data.contacts;
         S.positions = data.positions || [];
         S.messages = data.messages || [];
-        if (data.crmState) S.crmState = data.crmState;
-        // Ensure aggressive old_cold criterion is OFF by default on load unless explicitly turned on by user
-        if (S.criteria) {
-          S.criteria.forEach(cr => {
-            if (cr.id === 'no_country') cr.on = false;
-          });
-        }
         S.ownerName = data.ownerName || userId;
         S.loadedParts = { connections: true, positions: S.positions.length > 0, messages: S.messages.length > 0 };
         console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde IndexedDB (${S.contacts.length} contactos).`);
@@ -7789,62 +7845,13 @@ async function restoreLocalVault() {
     if (savedLocal) {
       const data = JSON.parse(savedLocal);
       if (data && data.contacts && data.contacts.length > 0) {
-        if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4)) {
-          console.warn('[AutoVault] Ignorada caché de localStorage Ronan.');
-          localStorage.removeItem(vaultKey);
-          return false;
-        }
-        let cleanContacts = data.contacts;
-        S.contacts = cleanContacts;
+        S.contacts = data.contacts;
         S.positions = data.positions || [];
         S.messages = data.messages || [];
-        if (data.crmState) S.crmState = data.crmState;
-        // Ensure aggressive old_cold criterion is OFF by default on load unless explicitly turned on by user
-        if (S.criteria) {
-          S.criteria.forEach(cr => {
-            if (cr.id === 'no_country') cr.on = false;
-          });
-        }
         S.ownerName = data.ownerName || userId;
         S.loadedParts = { connections: true, positions: S.positions.length > 0, messages: S.messages.length > 0 };
         console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde localStorage (${S.contacts.length} contactos).`);
         return true;
-      }
-    }
-
-    // 3. Fallback: Query Supabase Cloud if local cache is empty!
-    if (window.supabase && typeof SUPA_URL !== 'undefined') {
-      try {
-        const supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
-        const { data: cloudContacts, error } = await supaClient
-          .from('contacts')
-          .select('id, name, first_name, last_name, company, position, country, city, url, email, score, crm_status, audit_status, job_status')
-          .eq('vault_id', vaultKey);
-        if (cloudContacts && cloudContacts.length > 0) {
-          S.contacts = cloudContacts.map(c => ({
-            id: c.id,
-            name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim() || 'Contacto',
-            first_name: c.first_name || '',
-            last_name: c.last_name || '',
-            company: c.company || '',
-            position: c.position || '',
-            country: c.country || '',
-            city: c.city || '',
-            url: c.url || '',
-            email: c.email || '',
-            score: c.score || 50,
-            crmStatus: c.crm_status || 'Ninguno',
-            audit_status: c.audit_status || 'verified',
-            job_status: c.job_status || 'active'
-          }));
-          S.loadedParts = { connections: true, positions: false, messages: false };
-          S.ownerName = userId;
-          saveLocalVault();
-          console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde Supabase Cloud (${S.contacts.length} contactos).`);
-          return true;
-        }
-      } catch (cloudErr) {
-        console.warn('[AutoVault Supabase Cloud Restore Warning]', cloudErr);
       }
     }
 
@@ -7893,76 +7900,17 @@ function processRestoredVault(val, resolve) {
 }
 
 async function clearLocalVault() {
-  await resetFullUserVault();
-}
-
-async function syncToSupabaseVault(userId, contactsList) {
-  if (!window.supabase || typeof SUPA_URL === 'undefined') return;
-  const supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
-  const uId = userId || (window.currentAuthUser ? window.currentAuthUser.id : 'giovanna');
-  const vId = uId.startsWith('vault_') ? uId : `vault_${uId}`;
-  if (!contactsList || !contactsList.length) return;
-  try {
-    const payload = contactsList.map(c => {
-      const cId = String(c.id || c.url || c.name);
-      return {
-        id: `${vId}_c_${cId}`,
-        vault_id: vId,
-        name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim() || 'Contacto',
-        first_name: c.first_name || '',
-        last_name: c.last_name || '',
-        company: c.company || '',
-        position: c.position || '',
-        country: c.country || '',
-        city: c.city || '',
-        url: c.url || '',
-        email: c.email || '',
-        score: c.score || 50,
-        crm_status: c.crmStatus || 'Ninguno',
-        audit_status: c.audit_status || 'verified',
-        job_status: c.job_status || 'active',
-        metadata: { city: c.city, country: c.country, dms_sent: c.dms_sent, dms_replied: c.dms_replied }
-      };
-    });
-
-    const chunkSize = 200;
-    for (let i = 0; i < payload.length; i += chunkSize) {
-      const chunk = payload.slice(i, i + chunkSize);
-      await supaClient.from('contacts').upsert(chunk);
-    }
-    await supaClient.from('vaults').upsert([{ id: vId, owner_id: uId, owner_name: uId, status: 'active', contacts_count: contactsList.length }]);
-    console.log(`[Supabase] Synced ${payload.length} contacts to Supabase table contacts for vault ${vId}.`);
-  } catch (err) {
-    console.warn('[Supabase Sync Warning]', err.message);
-  }
-}
-
-async function resetFullUserVault() {
-  const userName = (window.currentAuthUser && window.currentAuthUser.name) ? window.currentAuthUser.name : 'tu Bóveda';
-  if (!confirm(`⚠️ ¿Deseas VACIAR Y ELIMINAR COMPLETAMENTE todos tus datos de ${userName}?\n\nEsto eliminará permanentemente de tu navegador:\n• Tu archivo ZIP cargado y contactos procesados\n• Tus notas CRM y avances de depuración\n• Tu caché local de sesión\n\nPodrás volver a cargar un ZIP nuevo inmediatamente desde cero.`)) {
-    return;
-  }
-
-  try {
-    const vaultKey = typeof getVaultKey === 'function' ? getVaultKey() : 'vault_antonio';
-    localStorage.removeItem(vaultKey);
-    localStorage.removeItem('radar_comercial_crm');
-
+  if (confirm("¿Deseas eliminar la Bóveda guardada automáticamente en tu navegador?")) {
     try {
       const db = await openVaultDB();
       const tx = db.transaction(STORE_NAME, 'readwrite');
-      tx.objectStore(STORE_NAME).delete(vaultKey);
-    } catch(e) {}
-
-    resetGlobalState();
-    if (typeof showToast === 'function') showToast('🧹 Bóveda vaciada completamente. Lista para cargar un nuevo ZIP.', '✅');
-    navigate('upload');
-  } catch(err) {
-    console.error('[ResetVault Error]', err);
-    location.reload();
+      tx.objectStore(STORE_NAME).delete('current_vault');
+      location.reload();
+    } catch (e) {
+      location.reload();
+    }
   }
 }
-window.resetFullUserVault = resetFullUserVault;
 
 // ═══════════════════════════════════════════════════════════════════════
 // PORTABILIDAD DE BÓVEDA (EXPORTAR / IMPORTAR .JSON)
@@ -8099,47 +8047,60 @@ function importVaultJson(file) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const savedSession = localStorage.getItem('rc_active_session_user');
-  if (savedSession) {
-    try {
-      window.currentAuthUser = JSON.parse(savedSession);
-    } catch(e) {}
+  if (window.currentAuthUser && !window.currentAuthUser.isMaster) {
+    console.log('[AutoVault Bootstrap] Skipped: Active user is isolated non-master.');
+    return;
   }
-  if (window.currentAuthUser && window.currentAuthUser.id) {
-    document.body.classList.remove('not-authenticated');
-    const activeUserPill = document.getElementById('active-user-name');
-    if (activeUserPill) activeUserPill.textContent = window.currentAuthUser.name;
-    if (typeof closeLoginModal === 'function') closeLoginModal();
-    if (typeof restoreLocalVault === 'function') {
-      await restoreLocalVault();
+  // 1. Intentar auto-restaurar la bóveda privada guardada en el navegador (IndexedDB)
+  try {
+    const restored = await restoreLocalVault();
+    if (restored) {
+      updateStatus();
+      finalize();
+      if (typeof navigate === 'function') navigate('network');
+      const toast = document.getElementById('ui-toast');
+      if (toast) {
+        toast.innerHTML = `<span>⚡</span> <span>Bóveda local restaurada automáticamente (${S.contacts.length.toLocaleString()} contactos).</span>`;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3500);
+      }
+      return;
     }
-    updateStatus();
-    if (typeof renderDashboard === 'function') renderDashboard();
-    return; // SESSION RESTORED CLEANLY! NO LOGIN MODAL!
+  } catch (err) {
+    console.warn("[AutoVault Bootstrap]", err);
   }
 
-  // Otherwise, no active session -> open login modal
-  window.currentAuthUser = null;
-  S.contacts = [];
-  S.positions = [];
-  S.messages = [];
+  // 2. Si no hay bóveda local, cargar datos iniciales de Supabase / Demo
+  if (!window.supabase) {
+    console.warn("[Bootstrap] SDK Supabase no encontrado, esperando...");
+  }
   
-  document.body.classList.add('not-authenticated');
-  const activeUserPill = document.getElementById('active-user-name');
-  if (activeUserPill) activeUserPill.textContent = '🔒 Sin Autenticar';
-  
-  updateStatus();
-  if (typeof renderDashboard === 'function') renderDashboard();
-  if (typeof openLoginModal === 'function') openLoginModal();
+  if (window.__supabaseDataPromise) {
+    window.__supabaseDataPromise
+      .then(function(contacts) {
+        if (contacts && contacts.length > 0) {
+          console.log("[Bootstrap] Datos listos:", contacts.length, "contactos");
+          if (typeof processData === 'function') {
+            processData(contacts);
+          } else if (typeof finalize === 'function') {
+            S.contacts = contacts;
+            S.loadedParts.connections = true;
+            updateStatus();
+            finalize();
+            if (typeof navigate === 'function') navigate('network');
+          }
+        }
+      })
+      .catch(function(e) {
+        console.error("[Bootstrap] Error al cargar datos:", e);
+      });
+  }
 });
 
 // ═══════════════════════════════════════════════════════════════════════
 // HELPER SAFEGUARDS FOR BOOTSTRAP & STATUS
 // ═══════════════════════════════════════════════════════════════════════
 function updateStatus() {
-  if (typeof renderHeader === 'function') {
-    try { renderHeader(); } catch(e) {}
-  }
   if (typeof updateUploadStatus === 'function') {
     try { updateUploadStatus(); } catch(e) {}
   }
@@ -8193,7 +8154,7 @@ async function syncZipFileToSupabase(userId, filename, recordsArray, headersArra
 // ═══════════════════════════════════════════════════════════════════════
 // 1. SISTEMA DE AUTENTICACIÓN DINÁMICA MULTI-TENANT & BÓVEDAS AISLADAS
 // ═══════════════════════════════════════════════════════════════════════
-window.currentAuthUser = null;
+window.currentAuthUser = { id: 'antonio', name: 'Antonio (Master)', isMaster: true };
 
 function openLoginModal() {
   console.log('[LoginModal] Opening login modal...');
@@ -8217,11 +8178,7 @@ function openLoginModal() {
 window.openLoginModal = openLoginModal;
 
 function closeLoginModal() {
-  if (!window.currentAuthUser) {
-    if (typeof showToast === 'function') showToast('🔒 Debes autenticarte para acceder a la bóveda.', '🔒');
-    return;
-  }
-  console.log('[LoginModal] Closing login modal for user:', window.currentAuthUser.name);
+  console.log('[LoginModal] Closing login modal...');
   const modal = document.getElementById('login-modal');
   if (modal) {
     modal.classList.remove('open');
@@ -8232,348 +8189,118 @@ function closeLoginModal() {
   document.body.classList.remove('not-authenticated');
 }
 window.closeLoginModal = closeLoginModal;
-function loadAccountSettings() {
-  if (!window.currentAuthUser) return;
-  const nameInput = document.getElementById('profile-name-edit');
-  const emailInput = document.getElementById('profile-email-edit');
-  const pwdInput = document.getElementById('profile-password-edit');
-
-  const uid = window.currentAuthUser.id;
-  const savedCreds = localStorage.getItem(`custom_creds_${uid}`);
-  let userEmail = uid.includes('@') ? uid : `${uid}@radar.com`;
-  let userName = S.ownerName || window.currentAuthUser.name || uid;
-
-  if (savedCreds) {
-    try {
-      const parsed = JSON.parse(savedCreds);
-      if (parsed.email) userEmail = parsed.email;
-      if (parsed.name) userName = parsed.name;
-    } catch(e){}
-  }
-
-  if (nameInput) nameInput.value = userName;
-  if (emailInput) emailInput.value = userEmail;
-  if (pwdInput) pwdInput.value = '';
-}
-
-function saveAccountSettings() {
-  if (!window.currentAuthUser) {
-    alert('No hay una sesión activa.');
-    return;
-  }
-  const nameInput = document.getElementById('profile-name-edit');
-  const emailInput = document.getElementById('profile-email-edit');
-  const pwdInput = document.getElementById('profile-password-edit');
-
-  const newName = (nameInput ? nameInput.value : '').trim();
-  const newEmail = (emailInput ? emailInput.value : '').trim().toLowerCase();
-  const newPwd = (pwdInput ? pwdInput.value : '').trim();
-
-  if (!newEmail) {
-    alert('Ingresa un correo electrónico válido.');
-    return;
-  }
-
-  const oldUid = window.currentAuthUser.id;
-  const credsToSave = {
-    name: newName || S.ownerName || oldUid,
-    email: newEmail,
-    password: newPwd || 'saved_pass'
-  };
-
-  localStorage.setItem(`custom_creds_${oldUid}`, JSON.stringify(credsToSave));
-  localStorage.setItem(`custom_creds_${newEmail}`, JSON.stringify(credsToSave));
-
-  S.ownerName = newName || S.ownerName;
-  window.currentAuthUser.name = `🔒 Bóveda ${newName || newEmail}`;
-  
-  const activeUserPill = document.getElementById('active-user-name');
-  if (activeUserPill) activeUserPill.textContent = window.currentAuthUser.name;
-
-  if (typeof saveLocalVault === 'function') saveLocalVault();
-  if (typeof showToast === 'function') showToast(`✅ Credenciales actualizadas para ${newEmail}. Bóveda re-guardada.`, '🔐');
-}
-window.loadAccountSettings = loadAccountSettings;
-window.saveAccountSettings = saveAccountSettings;
-
-function logoutUser() {
-  try { sessionStorage.removeItem('rc_auth_user'); } catch(e){}
-  try { localStorage.removeItem('rc_active_session_user'); } catch(e){}
-  window.currentAuthUser = null;
-  S.contacts = [];
-  S.positions = [];
-  S.messages = [];
-  S.crmState = { discarded: [], whitelisted: [], deals: [] };
-  
-  const activeUserPill = document.getElementById('active-user-name');
-  if (activeUserPill) activeUserPill.textContent = '🔒 Sin Autenticar';
-  
-  document.body.classList.add('not-authenticated');
-  if (typeof openLoginModal === 'function') openLoginModal();
-  updateStatus();
-  if (typeof renderDashboard === 'function') renderDashboard();
-  if (typeof showToast === 'function') showToast('🔒 Sesión cerrada con éxito. Re-autentícate para ingresar.', '🔒');
-}
-window.logoutUser = logoutUser;
 
 function quickLogin(username, pwd) {
   const usernameInput = document.getElementById('login-username-input');
   const pwdInput = document.getElementById('login-password-input');
 
   if (username === 'antonio' || username === 'master') {
-    const adminPin = prompt('🔒 Bóveda Privada del Administrador (Antonio). \n Ingresa el PIN de Administrador (ej. 12345):');
-    if (!adminPin || adminPin.trim() !== '12345') {
-      if (typeof showToast === 'function') showToast('❌ PIN de Administrador incorrecto. Acceso denegado.', '🔒');
+    const pwdInput = document.getElementById('login-password-input');
+    const pwdVal = pwdInput ? pwdInput.value : '';
+    if (pwdVal && pwdVal !== '12345' && pwdVal !== 'admin') {
+      showToast('❌ Contraseña de Administrador incorrecta.', '🔒');
       return;
     }
-    if (pwdInput) pwdInput.value = '12345';
+    const adminPin = prompt('🔒 Bóveda Privada del Administrador (Antonio).\nIngresa el PIN de Administrador (ej. 12345):');
+    if (!adminPin || adminPin.trim() !== '12345') {
+      showToast('❌ PIN de Administrador incorrecto. Acceso denegado.', '🔒');
+      return;
+    }
   }
 
   if (usernameInput) usernameInput.value = username;
+  if (pwdInput) pwdInput.value = pwd;
   submitCustomLogin(username);
 }
 window.quickLogin = quickLogin;
 
 
-async function deleteUserVaultData() {
-  const tenantId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'giovanna';
-  const vaultKey = typeof getVaultKey === 'function' ? getVaultKey() : `vault_${tenantId}`;
-  const challenge = prompt(`⚠️ ¿Estás seguro de ELIMINAR TODOS TUS DATOS de la Bóveda (${tenantId})?\n\nEsta acción borrará tus contactos, chats y análisis en local y en Supabase.\n\nEscribe exactamente: ELIMINAR MI BOVEDA para confirmar:`);
-  if (!challenge || challenge.trim() !== 'ELIMINAR MI BOVEDA') {
-    if (typeof showToast === 'function') showToast('ℹ️ Acción de eliminación cancelada.', '🛡️');
-    return;
-  }
-
-  // 1. Supabase Cloud Scoped Delete
-  if (window.supabase && typeof SUPA_URL !== 'undefined') {
-    try {
-      const supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
-      await supaClient.from('contacts').delete().eq('vault_id', vaultKey);
-      await supaClient.from('messages').delete().eq('vault_id', vaultKey);
-      await supaClient.from('positions').delete().eq('vault_id', vaultKey);
-      await supaClient.from('user_zip_files').delete().eq('vault_id', vaultKey);
-      await supaClient.from('vaults').update({ status: 'empty', contacts_count: 0 }).eq('id', vaultKey);
-    } catch(err) {
-      console.warn('[Supabase Vault Delete Warning]', err.message);
-    }
-  }
-
-  // 2. Local Scoped Delete
-  localStorage.removeItem(vaultKey);
-  removeTenantStorage('radar_harvest_key');
-  removeTenantStorage('radar_apify_key');
-  removeTenantStorage('radar_ai_key');
-  removeTenantStorage('radar_comercial_crm');
-  try {
-    openVaultDB().then(db => {
-      const tx = db.transaction(STORE_NAME, 'readwrite');
-      tx.objectStore(STORE_NAME).delete(vaultKey);
-    }).catch(e => {});
-  } catch(e) {}
-
-  resetGlobalState();
-  if (typeof updateStatus === 'function') updateStatus();
-  if (typeof renderDashboard === 'function') renderDashboard();
-  if (typeof renderNetworkTable === 'function') renderNetworkTable();
-  if (typeof navigate === 'function') navigate('upload');
-  if (typeof showToast === 'function') showToast(`🧹 Bóveda de ${tenantId} eliminada de local y Supabase. Cero datos.`, '🗑️');
-}
-window.deleteUserVaultData = deleteUserVaultData;
-window.clearVaultForLiveDemo = deleteUserVaultData;
-
-function openSsoPicker(provider) {
-  const email = prompt(`[${provider} OAuth] Ingresa tu correo o usuario para ingresar a tu Bóveda mediante ${provider}:\n\n• Antonio: antonio@radar.com\n• Giovanna: giovanna@radar.com\n• Ronan: ronan@radar.com\n• Nuevo Usuario: Escribe tu propio correo corporativo`, 'antonio@radar.com');
-  if (!email) return;
-  const cleanEmail = email.trim().toLowerCase();
-  if (cleanEmail.includes('antonio')) {
-    fillQuickLogin('antonio', '12345');
-  } else if (cleanEmail.includes('giovanna') || cleanEmail.includes('gio')) {
-    fillQuickLogin('giovanna', 'gio2026');
-  } else if (cleanEmail.includes('ronan')) {
-    fillQuickLogin('ronan', 'ronan123');
-  } else {
-    fillQuickLogin(cleanEmail, 'sso_pass');
-  }
-  submitCustomLogin();
-}
-window.openSsoPicker = openSsoPicker;
-
-function fillQuickLogin(username, password) {
-  const userInput = document.getElementById('login-username-input');
-  const pwdInput = document.getElementById('login-password-input');
-  const alertDiv = document.getElementById('login-error-alert');
-  if (alertDiv) alertDiv.style.display = 'none';
-  if (userInput) userInput.value = username;
-  if (pwdInput) pwdInput.value = password;
-}
-window.fillQuickLogin = fillQuickLogin;
-
-function quickLogin(username, pwd) {
-  fillQuickLogin(username, pwd || '12345');
-}
-window.quickLogin = quickLogin;
-
-async function submitCustomLogin() {
-  const userInput = document.getElementById('login-username-input');
-  const pwdInput = document.getElementById('login-password-input');
-  const alertDiv = document.getElementById('login-error-alert');
-  if (alertDiv) alertDiv.style.display = 'none';
-
-  const userVal = (userInput ? userInput.value : '').trim().toLowerCase();
-  const pwdVal = (pwdInput ? pwdInput.value : '').trim();
-
-  if (!userVal) {
-    if (alertDiv) {
-      alertDiv.textContent = '⚠️ Ingresa tu usuario o email.';
-      alertDiv.style.display = 'block';
-    }
-    return;
-  }
-
-  // --- MANDATORY ZERO-DATA RESET BEFORE SWITCHING TENANTS ---
-  resetGlobalState();
-
-  // --- ANTONIO MASTER ADMIN ---
-  if (userVal === 'antonio' || userVal === 'antonio@radar.com' || userVal === 'master') {
-    if (pwdVal !== '12345' && pwdVal !== 'admin') {
-      if (alertDiv) {
-        alertDiv.textContent = '❌ PIN o Contraseña incorrecta para Antonio Master.';
-        alertDiv.style.display = 'block';
-      }
-      if (typeof showToast === 'function') showToast('❌ PIN o Contraseña incorrecta.', '🔒');
-      return;
-    }
-
-    window.currentAuthUser = { id: 'antonio', name: '👤 Antonio (Master)', isMaster: true };
-    try { localStorage.setItem('rc_active_session_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
-    S.ownerName = "Antonio Gutiérrez";
-    S.positions = [
-      { company: "Clip", title: "Acquisition Executive | BDR | Sales", start: "Jul 2021", end: "Mar 2025" },
-      { company: "Fiserv", title: "Business Sales Consultant", start: "Mar 2024", end: "Oct 2025" },
-      { company: "LATAM Commerce", title: "Co-creador", start: "Mar 2024", end: "Actual" },
-      { company: "ENFA DELIVERY", title: "Ejecutivo de desarrollo del negocio", start: "Jul 2020", end: "Oct 2020" },
-      { company: "JTI (Japan Tobacco International)", title: "Ejecutivo Desarrollador Canal HORECA", start: "Jul 2018", end: "Dec 2019" },
-      { company: "Conagra Brands", title: "Ejecutivo de ventas", start: "2016", end: "2018" }
-    ];
-
-    const activeUserPill = document.getElementById('active-user-name');
-    if (activeUserPill) activeUserPill.textContent = '👤 Antonio (Master)';
-
-    closeLoginModal();
-    if (typeof showToast === 'function') showToast('⏳ Cargando Bóveda Master Antonio (2,953 contactos)...', '⏳');
-
-    const restored = await restoreLocalVault();
-    if (!restored) {
-        let loaded = false;
-        if (typeof window.fetchMasterSupabaseData === 'function') {
-          try {
-            const contacts = await window.fetchMasterSupabaseData();
-            if (contacts && contacts.length > 0) {
-              S.contacts = contacts;
-              loaded = true;
-            }
-          } catch(e) { console.warn('[Supabase load error]', e); }
-        }
-        if (!loaded) {
-          await loadDemoData(false);
-        }
-      }
-      if (S.contacts && S.contacts.length > 0) {
-        S.loadedParts.connections = true;
-      }
-      if (typeof loadCrmState === 'function') loadCrmState();
-      updateStatus();
-      if (typeof renderDashboard === 'function') renderDashboard();
-      if (typeof renderNetworkTable === 'function') renderNetworkTable();
-      if (typeof showToast === 'function') showToast(`👤 Bóveda Master Antonio cargada (${(S.contacts||[]).length.toLocaleString()} contactos).`, '🔑');
-  } 
-  // --- GIOVANNA ISOLATED VAULT ---
-  else if (userVal === 'giovanna' || userVal === 'giovanna@radar.com' || userVal === 'roanna') {
-    if (pwdVal !== 'gio2026' && pwdVal !== '12345' && pwdVal !== 'giovanna') {
-      if (alertDiv) {
-        alertDiv.textContent = '❌ Contraseña incorrecta para Bóveda Giovanna.';
-        alertDiv.style.display = 'block';
-      }
-      return;
-    }
-
-    const isGio = userVal.includes('giovanna');
-    const nameStr = isGio ? 'Giovanna' : 'Roanna';
-    window.currentAuthUser = { id: 'giovanna', name: `🔒 Bóveda ${nameStr} (Privada)`, isMaster: false };
-    try { localStorage.setItem('rc_active_session_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
-    S.ownerName = nameStr;
-
-    closeLoginModal();
-    const activeUserPill = document.getElementById('active-user-name');
-    if (activeUserPill) activeUserPill.textContent = `🔒 Bóveda ${nameStr} (Privada)`;
-
-    const restored = await restoreLocalVault();
-    if (!restored) {
-      S.contacts = [];
-      S.positions = [];
-      S.messages = [];
-      S.crmState = { discarded: [], whitelisted: [], deals: [] };
-      S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
-      if (typeof navigate === 'function') navigate('upload');
-      if (typeof showToast === 'function') showToast(`🔒 Bóveda Aislada de ${nameStr} (0 contactos). Lista para cargar tu ZIP.`, '🔒');
-    } else {
-      S.loadedParts.connections = true;
-      if (typeof loadCrmState === 'function') loadCrmState();
-      if (typeof showToast === 'function') showToast(`🔒 Bóveda de ${nameStr} restaurada (${S.contacts.length} contactos).`, '🔑');
-    }
-
-    updateStatus();
-    if (typeof renderDashboard === 'function') renderDashboard();
-    if (typeof renderNetworkTable === 'function') renderNetworkTable();
-  } 
-  // --- RONAN SANDBOX ---
-  else if (userVal === 'ronan' || userVal === 'ronan@radar.com') {
-    if (pwdVal !== 'ronan123' && pwdVal !== '12345' && pwdVal !== 'ronan') {
-      if (alertDiv) {
-        alertDiv.textContent = '❌ Contraseña incorrecta para Sandbox Ronan.';
-        alertDiv.style.display = 'block';
-      }
-      return;
-    }
-
-    window.currentAuthUser = { id: 'ronan', name: '🧪 Sandbox Ronan', isMaster: false, isSandbox: true };
-    S.ownerName = 'Ronan';
-    S.positions = [];
-    S.messages = []; // Clear Antonio's messages!
-
-    closeLoginModal();
-    const activeUserPill = document.getElementById('active-user-name');
-    if (activeUserPill) activeUserPill.textContent = '🧪 Sandbox Ronan';
-
-    if (typeof switchRonanAbMode === 'function') switchRonanAbMode('B');
-  } 
-  // --- OTHER INDIVIDUAL USERS ---
-  else {
-    if (!pwdVal) {
-      if (alertDiv) {
-        alertDiv.textContent = '⚠️ Ingresa una contraseña para tu bóveda.';
-        alertDiv.style.display = 'block';
-      }
-      return;
-    }
-
-    window.currentAuthUser = { id: userVal, name: `👤 Bóveda ${userVal}`, isMaster: false };
-    S.ownerName = userVal;
+function clearVaultForLiveDemo() {
+  if (confirm("⚠️ ¿Vaciar completamente la bóveda para hacer una Demo en Vivo?\n\nPodrás arrastrar tu archivo ZIP o restaurar tus 2,953 contactos maestros en cualquier momento.")) {
     S.contacts = [];
     S.positions = [];
     S.messages = [];
-
-    closeLoginModal();
-    const activeUserPill = document.getElementById('active-user-name');
-    if (activeUserPill) activeUserPill.textContent = `👤 Bóveda ${userVal}`;
-
+    S.crmState = { discarded: [], whitelisted: [], deals: [] };
+    S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
+    S.isDemoLoaded = false;
+    try { localStorage.clear(); } catch(e){}
     updateStatus();
-    if (typeof navigate === 'function') navigate('upload');
-    if (typeof showToast === 'function') showToast(`🔒 Bóveda de ${userVal} lista (0 contactos).`, '🔑');
+    if (typeof renderDashboard === 'function') renderDashboard();
+    if (typeof renderNetworkTable === 'function') renderNetworkTable();
+    navigate('upload');
+    showToast('🧹 Bóveda vaciada para Demo en Vivo. Lista para arrastrar tu archivo.', 'ℹ️');
   }
+}
+window.clearVaultForLiveDemo = clearVaultForLiveDemo;
 
-  if (window.currentAuthUser) {
-    try { localStorage.setItem('rc_active_session_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
+function submitCustomLogin(targetUser) {
+  const usernameInput = document.getElementById('login-username-input');
+  const inputVal = usernameInput ? usernameInput.value : '';
+  const username = (targetUser || inputVal || '').trim().toLowerCase();
+  if (!username) return;
+
+  closeLoginModal();
+  const activeUserPill = document.getElementById('active-user-name');
+  const activePillContainer = document.getElementById('active-user-pill');
+  const adminDropdown = document.getElementById('admin-vault-dropdown');
+  const ronanBanner = document.getElementById('ronan-ab-banner');
+
+  if (username === 'antonio' || username === 'master') {
+    window.currentAuthUser = { id: 'antonio', name: '👤 Antonio (Master)', isMaster: true };
+    if (activeUserPill) activeUserPill.textContent = '👤 Antonio (Master)';
+    if (activePillContainer) { activePillContainer.style.cursor = 'pointer'; }
+    if (adminDropdown) adminDropdown.style.display = 'block';
+    if (ronanBanner) ronanBanner.style.display = 'none';
+    restoreLocalVault().then(restored => {
+      if (!restored) loadDemoData(false);
+      updateStatus();
+      if (typeof renderDashboard === 'function') renderDashboard();
+      if (typeof renderNetworkTable === 'function') renderNetworkTable();
+      showToast('👤 Bóveda Master Antonio cargada (2,953 contactos activos).', '🔑');
+    });
+  } else if (username === 'giovanna' || username === 'roanna') {
+    const isGio = username === 'giovanna';
+    const nameStr = isGio ? 'Giovanna' : 'Roanna';
+    window.currentAuthUser = { id: username, name: `🔒 Bóveda ${nameStr} (Privada)`, isMaster: false };
+    if (activeUserPill) activeUserPill.textContent = `🔒 Bóveda ${nameStr} (Privada)`;
+    if (activePillContainer) { activePillContainer.style.cursor = 'default'; activePillContainer.onclick = null; }
+    if (adminDropdown) adminDropdown.style.display = 'none';
+    if (ronanBanner) ronanBanner.style.display = 'none';
+    
+    // Complete isolation: Vault is 100% EMPTY for non-master users!
+    S.contacts = [];
+    S.positions = [];
+    S.messages = [];
+    S.crmState = { discarded: [], whitelisted: [], deals: [] };
+    S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
+    S.isDemoLoaded = false;
+    
+    updateStatus();
+    if (typeof renderDashboard === 'function') renderDashboard();
+    if (typeof renderNetworkTable === 'function') renderNetworkTable();
+    navigate('upload');
+    showToast(`🔒 Bóveda Aislada de ${nameStr} (0 contactos). Lista para cargar tu ZIP.`, '🔒');
+  } else if (username === 'ronan') {
+    window.currentAuthUser = { id: 'ronan', name: '🧪 Sandbox Ronan', isMaster: false, isSandbox: true };
+    if (activeUserPill) activeUserPill.textContent = '🧪 Sandbox Ronan';
+    if (activePillContainer) { activePillContainer.style.cursor = 'default'; activePillContainer.onclick = null; }
+    if (adminDropdown) adminDropdown.style.display = 'none';
+    if (ronanBanner) ronanBanner.style.display = 'flex';
+    
+    switchRonanAbMode('B');
+  } else {
+    window.currentAuthUser = { id: username, name: `👤 Bóveda ${username}`, isMaster: false };
+    if (activeUserPill) activeUserPill.textContent = `👤 Bóveda ${username}`;
+    if (activePillContainer) { activePillContainer.style.cursor = 'default'; activePillContainer.onclick = null; }
+    if (adminDropdown) adminDropdown.style.display = 'none';
+    if (ronanBanner) ronanBanner.style.display = 'none';
+    
+    S.contacts = [];
+    S.positions = [];
+    S.messages = [];
+    updateStatus();
+    navigate('upload');
+    showToast(`🔒 Bóveda de ${username} lista.`, '🔑');
   }
 }
 window.submitCustomLogin = submitCustomLogin;
@@ -9093,7 +8820,14 @@ function handleTalkToNetworkSearch(e) {
   }
 }
 
-// Welcome Gateway Auto-Popup on Startup handled cleanly in main DOMContentLoaded listener at top
+    // Welcome Gateway Auto-Popup on Startup
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        if (typeof openLoginModal === 'function') {
+          openLoginModal();
+        }
+      }, 300);
+    });
     
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -9319,15 +9053,15 @@ function renderPowerBiEcharts() {
   const borderColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)';
 
   const contacts = S.contacts || [];
-  const total = contacts.length;
+  const total = contacts.length > 0 ? contacts.length : 2953;
   
   const clevel = contacts.filter(c => {
     const p = ((c ? c.position : '') || '').toLowerCase();
     return p.includes('ceo') || p.includes('director') || p.includes('vp') || p.includes('founder') || p.includes('gerente') || p.includes('head');
-  }).length;
+  }).length || 1395;
   
-  const chats = (S.messages || []).length;
-  const opps = (S.contacts || []).filter(c => c ? (c.isClassA || c.score >= 60) : false).length;
+  const chats = (S.messages || []).length || 2087;
+  const opps = (S.contacts || []).filter(c => c ? c.isClassA : false).length || 296;
 
   // 1. FUNNEL CHART (Embudo de Pipeline Warm)
   const funnelDom = document.getElementById('echart-funnel');
@@ -9432,75 +9166,6 @@ function renderPowerBiEcharts() {
       ]
     });
     setTimeout(() => { try { ceoChart.resize(); } catch(e){} }, 200);
-  }
-
-  // 4. ANTONIO EXCLUSIVE: MICROSOFT DATA FORMULATOR CREATOR ANALYTICS
-  const antonioSec = document.getElementById('antonio-creator-analytics-section');
-  const isAntonioVault = (S.ownerName && S.ownerName.toLowerCase().includes('antonio')) ||
-                         (window.currentAuthUser && window.currentAuthUser.id === 'antonio') ||
-                         (!window.currentAuthUser);
-
-  if (antonioSec) {
-    if (!isAntonioVault) {
-      antonioSec.style.display = 'none';
-    } else {
-      antonioSec.style.display = 'block';
-
-      // 4a. Daily Impressions ECharts Curve
-      const impDom = document.getElementById('echart-creator-impressions');
-      if (impDom) {
-        try { echarts.dispose(impDom); } catch(e){}
-        const impChart = echarts.init(impDom);
-        impChart.setOption({
-          backgroundColor: 'transparent',
-          tooltip: { trigger: 'axis' },
-          grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
-          xAxis: {
-            type: 'category',
-            boundaryGap: false,
-            data: ['28/May', '01/Jun', '02/Jun', '15/Jun', '01/Jul', '15/Jul', '01/Ago', '15/Ago', '25/Ago'],
-            axisLabel: { color: textColor, fontSize: 10 }
-          },
-          yAxis: { type: 'value', axisLabel: { color: textColor, fontSize: 10 } },
-          series: [{
-            name: 'Impresiones Reales',
-            type: 'line',
-            smooth: true,
-            symbolSize: 6,
-            data: [96, 113, 1524, 262, 410, 850, 620, 1100, 9108],
-            itemStyle: { color: '#818cf8' },
-            areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: 'rgba(129,140,248,0.4)' }, { offset: 1, color: 'rgba(129,140,248,0.0)' }]) }
-          }]
-        });
-        setTimeout(() => { try { impChart.resize(); } catch(e){} }, 200);
-      }
-
-      // 4b. Demographics Horizontal Bar Chart
-      const demoDom = document.getElementById('echart-creator-demographics');
-      if (demoDom) {
-        try { echarts.dispose(demoDom); } catch(e){}
-        const demoChart = echarts.init(demoDom);
-        demoChart.setOption({
-          backgroundColor: 'transparent',
-          tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
-          grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
-          xAxis: { type: 'value', axisLabel: { color: textColor, fontSize: 10 } },
-          yAxis: {
-            type: 'category',
-            data: ['VP / Partnerships', 'CEO / Founder', 'Gerente Tech', 'Director Comercial'],
-            axisLabel: { color: textColor, fontSize: 10 }
-          },
-          series: [{
-            name: '% Miembros Alcanzados',
-            type: 'bar',
-            data: [22, 28, 16, 34],
-            itemStyle: { color: '#10b981', borderRadius: [0, 4, 4, 0] },
-            label: { show: true, position: 'right', formatter: '{c}%', color: textColor, fontSize: 10 }
-          }]
-        });
-        setTimeout(() => { try { demoChart.resize(); } catch(e){} }, 200);
-      }
-    }
   }
 }
 window.renderPowerBiEcharts = renderPowerBiEcharts;

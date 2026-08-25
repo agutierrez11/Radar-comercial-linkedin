@@ -5,31 +5,31 @@ import os
 async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        page = await browser.new_page(viewport={"width": 1440, "height": 900})
+        page = await browser.new_page(viewport={"width": 1440, "height": 1100})
+        
         file_path = os.path.abspath('index.html')
         await page.goto(f'file:///{file_path}')
         await page.wait_for_timeout(1500)
 
-        # Login properly and navigate explicitly to network
+        # Login and navigate explicitly to network
         await page.evaluate("""async () => {
             document.getElementById('login-username-input').value = 'antonio';
             document.getElementById('login-password-input').value = '12345';
             await submitCustomLogin();
             if (typeof navigate === 'function') navigate('network');
-            if (typeof switchVaultViewMode === 'function') switchVaultViewMode('A');
-            if (typeof filterNetwork === 'function') filterNetwork();
         }""")
+        
         await page.wait_for_timeout(2000)
 
-        # 1. Screenshot of Mi Red
-        await page.screenshot(path="qa_fix1_mi_red_restored.png")
+        # Scroll to network table
+        table_el = page.locator('#net-table')
+        if await table_el.count() > 0:
+            await table_el.scroll_into_view_if_needed()
 
-        # 2. Screenshot of Dunbar Purge
-        await page.evaluate("if(typeof navigate === 'function') navigate('purge');")
-        await page.wait_for_timeout(1500)
-        await page.screenshot(path="qa_fix2_dunbar_purge_restored.png")
-
+        await page.wait_for_timeout(1000)
+        # Take screenshot of network table
+        await page.screenshot(path="qa_network_table_populated.png")
+        print("[SUCCESS] Table screenshot captured successfully: qa_network_table_populated.png")
         await browser.close()
-        print("Screenshots captured successfully after full navigation!")
 
 asyncio.run(main())
