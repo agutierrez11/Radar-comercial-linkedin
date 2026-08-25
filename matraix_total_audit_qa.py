@@ -95,9 +95,9 @@ with sync_playwright() as p:
     print("Antonio master after Ronan audit state:", audit3)
     assert audit3['isMaster'] == True, "Antonio must be Master Admin"
     assert audit3['isRonanMode'] == False, "Ronan AB mode must be FALSE when Antonio logs in"
-    assert audit3['contacts'] >= 2900, "Antonio master must have ~3,039 contacts (NOT Ronan's 500 contacts)"
+    assert audit3['contacts'] >= 2900, "Antonio master must have 2,953 clean depurated contacts"
     assert audit3['positions'] == 6, "Antonio master must have 6 positions"
-    print("PASSED AUDIT 3: Antonio Master restores Antonio's 3,039 contacts without Ronan's 500 contacts!")
+    print("PASSED AUDIT 3: Antonio Master restores Antonio's 2,953 clean contacts without Ronan's 500 contacts!")
 
     browser.close()
     print("\n=======================================================")

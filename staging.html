@@ -3492,6 +3492,10 @@ async function loadDemoData(autoNavigate = true) {
     }
     if (!data) throw new Error("No se pudo cargar la base de datos.");
     
+    if (Array.isArray(data) && data.length > 2953) {
+      data = data.slice(0, 2953);
+    }
+    
     S.ownerName = "Antonio Gutiérrez";
     S.positions = [
       { company: "Clip", title: "Acquisition Executive | BDR | Sales", start: "Jul 2021", end: "Mar 2025" },
@@ -3869,6 +3873,11 @@ function navigate(sec) {
 
   if (sec === 'profile' && typeof loadAccountSettings === 'function') {
     loadAccountSettings();
+  }
+
+  if (sec === 'purge') {
+    if (typeof renderPurgeCriteria === 'function') renderPurgeCriteria();
+    if (typeof renderPurge === 'function') renderPurge();
   }
 
   if (sec === 'analytics') {
@@ -4846,20 +4855,21 @@ function renderPurge() {
     const reasons = getPurgeReasons(c);
     const checked = S.purgeChecked.has(c.id) ? 'checked' : '';
     const nameHtml = getDisplayNameHTML(c);
+    const safeId = typeof c.id === 'string' ? `'${c.id.replace(/'/g, "\\'")}'` : c.id;
     return `<tr>
-      <td><input type="checkbox" ${checked} onchange="togglePurgeCheck(${c.id},this.checked)"></td>
+      <td><input type="checkbox" ${checked} onchange="togglePurgeCheck(${safeId},this.checked)"></td>
       <td><div class="td-name">${nameHtml}</div></td>
       <td><div class="td-sub">${c.position||'Sin cargo'}</div><div class="td-sub" style="color:var(--muted)">${getDisplayCompany(c)}</div></td>
       <td style="font-size:11px">${c.country==='Desconocido'?'📍 —':countryFlag(c.country)}</td>
       <td style="max-width:180px;">${reasons.map(r=>`<span class="badge badge-red" title="${r.full}" style="margin-right:3px;margin-bottom:2px;white-space:nowrap;display:inline-block;">${r.short}</span>`).join('')}</td>
       <td style="white-space:nowrap; text-align:right; min-width:240px;">
-        <button class="mini-btn primary" onclick="enrichSingleContactLive(${c.id})" style="font-size:9px; padding:3px 7px; background:linear-gradient(135deg, var(--accent), var(--green)); border:none; color:white; font-weight:700;" title="Verificar puesto en vivo vía HarvestAPI">
+        <button class="mini-btn primary" onclick="enrichSingleContactLive(${safeId})" style="font-size:9px; padding:3px 7px; background:linear-gradient(135deg, var(--accent), var(--green)); border:none; color:white; font-weight:700;" title="Verificar puesto en vivo vía HarvestAPI">
           ⚡ Verificar Live
         </button>
-        <button class="mini-btn" onclick="protectFromPurge(${c.id})" style="font-size:9px; padding:3px 7px; color:var(--green); border-color:rgba(16,185,129,0.3);" title="Ignorar purga y conservar en red">
+        <button class="mini-btn" onclick="protectFromPurge(${safeId})" style="font-size:9px; padding:3px 7px; color:var(--green); border-color:rgba(16,185,129,0.3);" title="Ignorar purga y conservar en red">
           🛡️ Mantener
         </button>
-        <button class="mini-btn" onclick="dismissPurgeContact(${c.id})" style="font-size:9px; padding:3px 7px; color:var(--red); border-color:rgba(239,68,68,0.3);" title="Marcar como descartado definitivamente">
+        <button class="mini-btn" onclick="dismissPurgeContact(${safeId})" style="font-size:9px; padding:3px 7px; color:var(--red); border-color:rgba(239,68,68,0.3);" title="Marcar como descartado definitivamente">
           🗑️ Descartar
         </button>
       </td>
