@@ -1362,6 +1362,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <th style="width:36px; text-align:center;"><input type="checkbox" id="net-select-all" onclick="toggleSelectAllContacts(this.checked)" style="cursor:pointer; accent-color:var(--accent);" title="Seleccionar todos"></th>
               <th onclick="sortTable('name')">Nombre <span class="sort-arrow">↕</span></th>
               <th onclick="sortTable('position')">Cargo / Empresa <span class="sort-arrow">↕</span></th>
+              <th onclick="sortTable('connectedOn')">Conectado El <span class="sort-arrow">↕</span></th>
               <th onclick="sortTable('country')">País <span class="sort-arrow">↕</span></th>
               <th onclick="sortTable('sector')">Sector <span class="sort-arrow">↕</span></th>
               <th onclick="sortTable('hierarchy')">Nivel <span class="sort-arrow">↕</span></th>
@@ -4458,6 +4459,7 @@ function renderNetworkTable(showMore = false) {
             </div>
           </td>
           <td><div class="td-sub" title="${c.position}">${c.position||'—'}</div></td>
+          <td style="font-size:11px; white-space:nowrap; color:var(--text-muted); font-family:'JetBrains Mono', monospace;"><span title="Fecha exacta de conexión en LinkedIn">🗓️ ${c.connectedOn || (c.connectedYearsAgo ? `Hace ${c.connectedYearsAgo}a` : '—')}</span></td>
           <td style="font-size:11px;white-space:nowrap">${countryFlag(c.country)}</td>
           <td><span class="badge badge-muted" style="font-size:8px">${c.sector}</span></td>
           <td>${hierarchyBadge(c.hierarchy)}</td>
