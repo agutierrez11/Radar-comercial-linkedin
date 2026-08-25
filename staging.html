@@ -1354,6 +1354,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <button type="button" class="filter-input" id="btn-filter-verified" onclick="toggleVerifiedFilter()" style="cursor:pointer; background:var(--surface); color:var(--green); border:1px solid var(--green); font-weight:700; font-size:11px; white-space:nowrap;">
           ✨ Solo Verificados Live (HarvestAPI)
         </button>
+        <button type="button" class="filter-input" id="btn-fullenrich-waterfall" onclick="enrichWithFullEnrich()" style="cursor:pointer; background:linear-gradient(135deg, #8164f4, #5031ae); color:#fff; border:none; font-weight:700; font-size:11px; white-space:nowrap;" title="Waterfall Enrichment 20+ proveedores (FullEnrich v2): Correos corporativos y teléfonos móviles">
+          🚀 FullEnrich Waterfall (Email + Tel)
+        </button>
       </div>
       <div class="table-wrap">
         <div class="table-scroll">
@@ -8235,6 +8238,127 @@ function closeLoginModal() {
   document.body.classList.remove('not-authenticated');
 }
 window.closeLoginModal = closeLoginModal;
+
+// ═══════════════════════════════════════════════════════════════════════
+// FULLENRICH API V2 WATERFALL INTEGRATION (EMAIL & MOBILE PHONES)
+// ═══════════════════════════════════════════════════════════════════════
+async function enrichWithFullEnrich(contactList = [], enrichTypes = ['work_emails', 'phones']) {
+  if (!window.currentAuthUser) {
+    if (typeof showToast === 'function') showToast('🔒 Inicia sesión para usar FullEnrich.', '🔒');
+    return;
+  }
+
+  const uid = window.currentAuthUser.id;
+  let fullEnrichKey = localStorage.getItem(`rc_fullenrich_api_key_${uid}`) || localStorage.getItem('rc_fullenrich_api_key_global');
+
+  if (!fullEnrichKey) {
+    fullEnrichKey = prompt('🔑 Ingresa tu API Key de FullEnrich (v2):');
+    if (!fullEnrichKey) return;
+    fullEnrichKey = fullEnrichKey.trim();
+    localStorage.setItem(`rc_fullenrich_api_key_${uid}`, fullEnrichKey);
+    localStorage.setItem('rc_fullenrich_api_key_global', fullEnrichKey);
+  }
+
+  const targets = (contactList.length > 0 ? contactList : Array.from(selectedContactIds || []).map(id => S.contacts.find(x => x.id === id)).filter(Boolean)).slice(0, 100);
+
+  if (targets.length === 0) {
+    if (typeof showToast === 'function') showToast('⚠️ Selecciona al menos 1 contacto para enriquecer con FullEnrich.', '⚠️');
+    return;
+  }
+
+  if (typeof showToast === 'function') showToast(`🚀 Enviando ${targets.length} contactos a FullEnrich (Waterfall 20+ proveedores)...`, '🚀');
+
+  const enrichFields = [];
+  if (enrichTypes.includes('work_emails')) enrichFields.push('contact.work_emails');
+  if (enrichTypes.includes('personal_emails')) enrichFields.push('contact.personal_emails');
+  if (enrichTypes.includes('phones')) enrichFields.push('contact.phones');
+
+  const payload = {
+    name: `Radar Comercial Batch ${Date.now()}`,
+    data: targets.map(c => ({
+      first_name: c.first_name || (c.name ? c.name.split(' ')[0] : ''),
+      last_name: c.last_name || (c.name ? c.name.split(' ').slice(1).join(' ') : ''),
+      company_name: c.company || '',
+      linkedin_url: c.url || '',
+      enrich_fields: enrichFields,
+      custom: { contact_id: String(c.id) }
+    }))
+  };
+
+  try {
+    const res = await fetch('https://app.fullenrich.com/api/v2/contact/enrich/bulk', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${fullEnrichKey}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!res.ok) {
+      const errTxt = await res.text();
+      throw new Error(`Error ${res.status}: ${errTxt}`);
+    }
+
+    const resData = await res.json();
+    const enrichmentId = resData.id || (resData.data && resData.data.id);
+
+    if (typeof showToast === 'function') showToast(`✨ Lote enviado a FullEnrich ID: ${enrichmentId || 'OK'}. Consultando resultados...`, '✨');
+
+    if (enrichmentId) {
+      pollFullEnrichResults(enrichmentId, fullEnrichKey, targets);
+    }
+  } catch (err) {
+    console.error('[FullEnrich Error]', err);
+    if (typeof showToast === 'function') showToast(`❌ Error FullEnrich: ${err.message}`, '❌');
+  }
+}
+window.enrichWithFullEnrich = enrichWithFullEnrich;
+
+async function pollFullEnrichResults(enrichmentId, apiKey, targets) {
+  let attempts = 0;
+  const maxAttempts = 12;
+  const interval = setInterval(async () => {
+    attempts++;
+    try {
+      const res = await fetch(`https://app.fullenrich.com/api/v2/contact/enrich/bulk/${enrichmentId}`, {
+        headers: { 'Authorization': `Bearer ${apiKey}` }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.status === 'FINISHED' || data.status === 'COMPLETED' || (data.contacts && data.contacts.length > 0)) {
+          clearInterval(interval);
+          let enrichedCount = 0;
+          const returnedContacts = data.contacts || data.data || [];
+          returnedContacts.forEach(item => {
+            const cid = item.custom && item.custom.contact_id;
+            const target = targets.find(t => String(t.id) === String(cid)) || targets.find(t => t.url && item.linkedin_url && t.url.includes(item.linkedin_url));
+            if (target) {
+              if (item.work_email || (item.contact && item.contact.work_emails && item.contact.work_emails[0])) {
+                target.email = item.work_email || item.contact.work_emails[0].email || target.email;
+              }
+              if (item.phone || (item.contact && item.contact.phones && item.contact.phones[0])) {
+                target.phone = item.phone || item.contact.phones[0].number || target.phone;
+              }
+              target.fullenrich_verified = true;
+              enrichedCount++;
+            }
+          });
+          if (typeof saveLocalVault === 'function') saveLocalVault();
+          if (typeof renderNetworkTable === 'function') renderNetworkTable();
+          if (typeof showToast === 'function') showToast(`🎉 FullEnrich completado: ${enrichedCount} contactos enriquecidos con email/teléfono.`, '🎉');
+        }
+      }
+    } catch(e) {
+      console.warn('[FullEnrich Poll Warning]', e);
+    }
+    if (attempts >= maxAttempts) {
+      clearInterval(interval);
+      if (typeof showToast === 'function') showToast('⏳ Proceso de FullEnrich en segundo plano. Los resultados se guardarán al completar.', '⏳');
+    }
+  }, 5000);
+}
+window.pollFullEnrichResults = pollFullEnrichResults;
 function loadAccountSettings() {
   if (!window.currentAuthUser) return;
   const nameInput = document.getElementById('profile-name-edit');
