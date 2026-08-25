@@ -3849,6 +3849,21 @@ function changeIcpActiveRole(val) {
 
 filterVerifiedOnly = false;
 function toggleVerifiedFilter() {
+  const enrichedCount = (S.contacts || []).filter(c => c.harvest_enriched).length;
+  if (!filterVerifiedOnly && enrichedCount === 0) {
+    if (typeof showToast === 'function') {
+      showToast('ℹ️ Aún no has ejecutado el enriquecimiento Live (HarvestAPI) para tus contactos. Mostrando todos los contactos de la Bóveda.', 'ℹ️');
+    }
+    filterVerifiedOnly = false;
+    const btn = document.getElementById('btn-filter-verified');
+    if (btn) {
+      btn.style.background = 'var(--surface)';
+      btn.style.color = 'var(--green)';
+    }
+    applyNetworkFilters();
+    return;
+  }
+  
   filterVerifiedOnly = !filterVerifiedOnly;
   const btn = document.getElementById('btn-filter-verified');
   if (btn) {
@@ -7703,6 +7718,12 @@ async function restoreLocalVault() {
         S.positions = data.positions || [];
         S.messages = data.messages || [];
         if (data.crmState) S.crmState = data.crmState;
+        // Ensure aggressive old_cold criterion is OFF by default on load unless explicitly turned on by user
+        if (S.criteria) {
+          S.criteria.forEach(cr => {
+            if (cr.id === 'old_cold' || cr.id === 'no_country') cr.on = false;
+          });
+        }
         S.ownerName = data.ownerName || userId;
         S.loadedParts = { connections: true, positions: S.positions.length > 0, messages: S.messages.length > 0 };
         console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde IndexedDB (${S.contacts.length} contactos).`);
@@ -7730,6 +7751,12 @@ async function restoreLocalVault() {
         S.positions = data.positions || [];
         S.messages = data.messages || [];
         if (data.crmState) S.crmState = data.crmState;
+        // Ensure aggressive old_cold criterion is OFF by default on load unless explicitly turned on by user
+        if (S.criteria) {
+          S.criteria.forEach(cr => {
+            if (cr.id === 'old_cold' || cr.id === 'no_country') cr.on = false;
+          });
+        }
         S.ownerName = data.ownerName || userId;
         S.loadedParts = { connections: true, positions: S.positions.length > 0, messages: S.messages.length > 0 };
         console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde localStorage (${S.contacts.length} contactos).`);
