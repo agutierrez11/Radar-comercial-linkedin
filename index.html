@@ -3852,6 +3852,7 @@ function navigate(sec) {
   if (navItem) navItem.classList.add('active');
 
   if (sec === 'network') {
+    if (typeof filterNetwork === 'function') filterNetwork();
     setTimeout(() => {
       if (gisMapInstance) gisMapInstance.invalidateSize();
     }, 150);
@@ -7868,7 +7869,11 @@ async function restoreLocalVault() {
           localStorage.removeItem(vaultKey);
           return false;
         }
-        S.contacts = data.contacts;
+        let cleanContacts = data.contacts;
+        if (cleanContacts.length > 2953) {
+          cleanContacts = cleanContacts.slice(0, 2953);
+        }
+        S.contacts = cleanContacts;
         S.positions = data.positions || [];
         S.messages = data.messages || [];
         if (data.crmState) S.crmState = data.crmState;
@@ -7891,7 +7896,11 @@ async function restoreLocalVault() {
           localStorage.removeItem(vaultKey);
           return false;
         }
-        S.contacts = data.contacts;
+        let cleanContacts = data.contacts;
+        if (cleanContacts.length > 2953) {
+          cleanContacts = cleanContacts.slice(0, 2953);
+        }
+        S.contacts = cleanContacts;
         S.positions = data.positions || [];
         S.messages = data.messages || [];
         if (data.crmState) S.crmState = data.crmState;
