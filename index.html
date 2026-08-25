@@ -1157,6 +1157,9 @@ document.addEventListener('DOMContentLoaded', function() {
               </select>
               <div style="font-size:11px; font-weight:600; color:var(--text-muted);">Scoring Mínimo ICP:</div>
               <input type="number" id="num-min-scoring" value="50" min="0" max="100" style="width:60px; font-size:11px; padding:4px 6px; border-radius:6px; background:var(--bg); border:1px solid var(--border); color:var(--text);">
+              <button onclick="resetFullUserVault()" style="margin-left:auto; background:rgba(239,68,68,0.15); color:var(--red); border:1px solid rgba(239,68,68,0.35); font-size:11px; padding:5px 12px; font-weight:700; border-radius:8px; display:inline-flex; align-items:center; gap:6px; cursor:pointer;" title="Eliminar completamente mi Bóveda y reiniciar desde cero">
+                🗑️ Vaciar Mi Bóveda & Reiniciar de Cero
+              </button>
             </div>
           </div>
 
@@ -7959,17 +7962,35 @@ function processRestoredVault(val, resolve) {
 }
 
 async function clearLocalVault() {
-  if (confirm("¿Deseas eliminar la Bóveda guardada automáticamente en tu navegador?")) {
+  await resetFullUserVault();
+}
+
+async function resetFullUserVault() {
+  const userName = (window.currentAuthUser && window.currentAuthUser.name) ? window.currentAuthUser.name : 'tu Bóveda';
+  if (!confirm(`⚠️ ¿Deseas VACIAR Y ELIMINAR COMPLETAMENTE todos tus datos de ${userName}?\n\nEsto eliminará permanentemente de tu navegador:\n• Tu archivo ZIP cargado y contactos procesados\n• Tus notas CRM y avances de depuración\n• Tu caché local de sesión\n\nPodrás volver a cargar un ZIP nuevo inmediatamente desde cero.`)) {
+    return;
+  }
+
+  try {
+    const vaultKey = typeof getVaultKey === 'function' ? getVaultKey() : 'vault_antonio';
+    localStorage.removeItem(vaultKey);
+    localStorage.removeItem('radar_comercial_crm');
+
     try {
       const db = await openVaultDB();
       const tx = db.transaction(STORE_NAME, 'readwrite');
-      tx.objectStore(STORE_NAME).delete('current_vault');
-      location.reload();
-    } catch (e) {
-      location.reload();
-    }
+      tx.objectStore(STORE_NAME).delete(vaultKey);
+    } catch(e) {}
+
+    resetGlobalState();
+    if (typeof showToast === 'function') showToast('🧹 Bóveda vaciada completamente. Lista para cargar un nuevo ZIP.', '✅');
+    navigate('upload');
+  } catch(err) {
+    console.error('[ResetVault Error]', err);
+    location.reload();
   }
 }
+window.resetFullUserVault = resetFullUserVault;
 
 // ═══════════════════════════════════════════════════════════════════════
 // PORTABILIDAD DE BÓVEDA (EXPORTAR / IMPORTAR .JSON)
