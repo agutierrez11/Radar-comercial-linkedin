@@ -930,7 +930,7 @@ window.handleTalkToNetworkSearch = handleTalkToNetworkSearch;
 </header>
 
 <!-- 🔔 BOT RECORDATORIO DE ACTUALIZACIÓN MENSUAL DE BÓVEDA (30/60/90 DÍAS) -->
-<div id="monthly-ingestion-reminder-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; padding:10px 24px; background:linear-gradient(90deg, rgba(79,70,229,0.18), rgba(124,58,237,0.18)); border-bottom:1px solid rgba(99,102,241,0.35); font-family:'Outfit',sans-serif; backdrop-filter:blur(10px); z-index:990; font-size:12px; color:var(--text);">
+<div id="monthly-ingestion-reminder-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 20px; margin:16px 24px 0 24px; background:linear-gradient(90deg, rgba(79,70,229,0.18), rgba(124,58,237,0.18)); border:1px solid rgba(99,102,241,0.35); border-radius:12px; font-family:'Outfit',sans-serif; backdrop-filter:blur(10px); z-index:990; font-size:12px; color:var(--text); box-shadow:0 4px 16px rgba(0,0,0,0.15);">
   <div style="display:flex; align-items:center; gap:12px; flex:1;">
     <div style="font-size:20px; background:rgba(99,102,241,0.25); border:1px solid rgba(99,102,241,0.5); border-radius:8px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
       🔔
@@ -2853,22 +2853,19 @@ function scoreContact(c) {
 
   // Jerarquía comercial
   if (c.hierarchy === 'C-Level') score += 35;
-  else if (c.hierarchy === 'Director') score += 25;
-  else if (c.hierarchy === 'Gerente') score += 15;
-  else score += 10;
+  else if (c.hierarchy === 'Director') score += 20;
+  else if (c.hierarchy === 'Gerente') score += 10;
 
   // Empresa y Geografía válida
-  if (c.company && c.company !== 'Desconocido') score += 15;
-  if (c.country && c.country !== 'Desconocido') score += 10;
+  if (c.company && c.company !== 'Desconocido') score += 10;
+  if (c.country && c.country !== 'Desconocido') score += 15;
 
   // Alineación de sector con el propietario de la bóveda
-  if (c.sector === ownerSector || !c.sector || c.sector === 'Otro') score += 10;
-  else score += 5;
+  if (c.sector === ownerSector || c.sector === 'Ventas / Prospección') score += 15;
 
   // Correo de contacto directo o interacción warm
-  if (c.email) score += 10;
-  if (c.msg_count && c.msg_count > 0) score += 15;
-  if (c.connectedYearsAgo && c.connectedYearsAgo < 3) score += 5;
+  if (c.email) score += 5;
+  if (c.msg_count && c.msg_count > 0) score += 10;
 
   if (icpText) {
     const blob = norm(`${c.position} ${c.company} ${c.sector} ${c.country}`);
@@ -5858,8 +5855,14 @@ function renderAnalyticsChart() {
     let firstReceivedDate = null;
 
     (thread.messages || []).forEach(msg => {
-      const msgDate = new Date(msg.DATE);
-      if (msgDate >= thirtyDaysAgo) {
+      let msgDate = null;
+      try {
+        const rawDate = msg.DATE || msg.date || msg.time || msg.created_at;
+        if (rawDate) msgDate = new Date(rawDate);
+        if (msgDate && isNaN(msgDate.getTime())) msgDate = null;
+      } catch(e) { msgDate = null; }
+
+      if (msgDate && msgDate >= thirtyDaysAgo) {
         const dateStr = msgDate.toISOString().split('T')[0];
         
         if (msg.FROM === S.userName) {

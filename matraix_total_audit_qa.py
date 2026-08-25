@@ -74,7 +74,7 @@ with sync_playwright() as p:
     page.fill("#login-username-input", "antonio")
     page.fill("#login-password-input", "12345")
     page.click("#login-submit-btn")
-    page.wait_for_timeout(1500)
+    page.wait_for_timeout(3000)
     
     audit3 = page.evaluate("""() => {
       const activeUser = document.getElementById('active-user-name').textContent;
