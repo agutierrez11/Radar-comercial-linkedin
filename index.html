@@ -8181,8 +8181,16 @@ async function syncZipFileToSupabase(userId, filename, recordsArray, headersArra
 // ═══════════════════════════════════════════════════════════════════════
 window.currentAuthUser = null;
 
-function openLoginModal() {
+function openLoginModal(clearFields = false) {
   console.log('[LoginModal] Opening login modal...');
+  const usernameInput = document.getElementById('login-username-input');
+  const pwdInput = document.getElementById('login-password-input');
+  const alertDiv = document.getElementById('login-alert');
+  if (clearFields) {
+    if (usernameInput) usernameInput.value = '';
+    if (pwdInput) pwdInput.value = '';
+    if (alertDiv) alertDiv.style.display = 'none';
+  }
   let modal = document.getElementById('login-modal');
   if (modal) {
     document.body.appendChild(modal); // Ensure modal is direct child of body
@@ -8403,6 +8411,22 @@ function saveAccountSettings() {
 window.loadAccountSettings = loadAccountSettings;
 window.saveAccountSettings = saveAccountSettings;
 
+function refreshFullVaultUI() {
+  if (S.contacts) {
+    S.contacts.forEach(c => { if (typeof scoreContact === 'function') c.score = scoreContact(c); });
+  }
+  if (typeof populateFilters === 'function') populateFilters();
+  if (typeof renderHeader === 'function') renderHeader();
+  if (typeof renderProfile === 'function') renderProfile();
+  if (typeof renderNetwork === 'function') renderNetwork();
+  if (typeof renderICP === 'function') renderICP();
+  if (typeof renderPurgeCriteria === 'function') renderPurgeCriteria();
+  if (typeof renderPurge === 'function') renderPurge();
+  if (typeof renderDashboard === 'function') renderDashboard();
+  if (typeof updateStatus === 'function') updateStatus();
+}
+window.refreshFullVaultUI = refreshFullVaultUI;
+
 function logoutUser() {
   try { sessionStorage.removeItem('rc_auth_user'); } catch(e){}
   try { localStorage.removeItem('rc_active_session_user'); } catch(e){}
@@ -8416,9 +8440,8 @@ function logoutUser() {
   if (activeUserPill) activeUserPill.textContent = '🔒 Sin Autenticar';
   
   document.body.classList.add('not-authenticated');
-  if (typeof openLoginModal === 'function') openLoginModal();
-  updateStatus();
-  if (typeof renderDashboard === 'function') renderDashboard();
+  if (typeof openLoginModal === 'function') openLoginModal(true);
+  refreshFullVaultUI();
   if (typeof showToast === 'function') showToast('🔒 Sesión cerrada con éxito. Re-autentícate para ingresar.', '🔒');
 }
 window.logoutUser = logoutUser;
@@ -8589,10 +8612,7 @@ async function submitCustomLogin() {
         S.loadedParts.connections = true;
       }
       if (typeof loadCrmState === 'function') loadCrmState();
-      updateStatus();
-      if (typeof renderNetwork === 'function') renderNetwork();
-      if (typeof renderDashboard === 'function') renderDashboard();
-      if (typeof renderNetworkTable === 'function') renderNetworkTable();
+      refreshFullVaultUI();
       if (typeof showToast === 'function') showToast(`👤 Bóveda Master Antonio cargada (${(S.contacts||[]).length.toLocaleString()} contactos).`, '🔑');
   } 
   // --- GIOVANNA ISOLATED VAULT ---
@@ -8630,10 +8650,7 @@ async function submitCustomLogin() {
       if (typeof showToast === 'function') showToast(`🔒 Bóveda de ${nameStr} restaurada (${S.contacts.length} contactos).`, '🔑');
     }
 
-    updateStatus();
-    if (typeof renderNetwork === 'function') renderNetwork();
-    if (typeof renderDashboard === 'function') renderDashboard();
-    if (typeof renderNetworkTable === 'function') renderNetworkTable();
+    refreshFullVaultUI();
   } 
   // --- RONAN SANDBOX ---
   else if (userVal === 'ronan' || userVal === 'ronan@radar.com') {
