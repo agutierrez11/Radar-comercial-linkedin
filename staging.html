@@ -8442,6 +8442,84 @@ async function analyzeDmThreadWithGroq(messages = [], contactInfo = {}) {
   }
 }
 window.analyzeDmThreadWithGroq = analyzeDmThreadWithGroq;
+
+// ═══════════════════════════════════════════════════════════════════════
+// GOOGLE GEMINI 2.5 FLASH INFERENCE ENGINE FOR DM THREAD MINING & SCORING
+// ═══════════════════════════════════════════════════════════════════════
+async function analyzeDmThreadWithGemini(messages = [], contactInfo = {}) {
+  if (!window.currentAuthUser) {
+    if (typeof showToast === 'function') showToast('🔒 Inicia sesión para usar Gemini AI.', '🔒');
+    return null;
+  }
+
+  const uid = window.currentAuthUser.id;
+  let geminiKey = localStorage.getItem(`rc_gemini_api_key_${uid}`) || localStorage.getItem('rc_gemini_api_key_global');
+
+  if (!geminiKey) {
+    geminiKey = prompt('✨ Ingresa tu API Key de Google Gemini (AI Studio):');
+    if (!geminiKey) return null;
+    geminiKey = geminiKey.trim();
+    localStorage.setItem(`rc_gemini_api_key_${uid}`, geminiKey);
+    localStorage.setItem('rc_gemini_api_key_global', geminiKey);
+  }
+
+  if (!messages || messages.length === 0) {
+    if (typeof showToast === 'function') showToast('⚠️ No hay mensajes registrados en este chat para analizar.', '⚠️');
+    return null;
+  }
+
+  if (typeof showToast === 'function') showToast('✨ Analizando hilo de conversación con Google Gemini 2.5 Flash...', '✨');
+
+  const formattedChat = messages.map(m => `[${m.date || 'Fecha N/D'}] ${m.sender || 'Remitente'}: ${m.text}`).join('\n');
+
+  const systemPrompt = `Eres un VP de Ventas B2B y RevOps Architect experto. Analiza este historial de chat de LinkedIn entre el ejecutivo de ventas y el prospecto ${contactInfo.name || ''} (${contactInfo.position || ''} en ${contactInfo.company || ''}). Responde strictly en formato JSON válido con las siguientes claves:
+{
+  "rumbo_conversacion": "Caliente / Tibio / Frío / Monólogo Sin Respuesta",
+  "quien_tiene_la_bolita": "Ejecutivo / Prospecto",
+  "resumen_1_linea": "Resumen conciso del estado del trato",
+  "objecion_detectada": "Descripción de la objeción o 'Ninguna'",
+  "script_sugerido": "Mensaje de reactivación personalizado de 2-3 oraciones usando el contexto del chat y su empresa actual"
+}`;
+
+  try {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${geminiKey}`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [
+          {
+            role: 'user',
+            parts: [
+              { text: `${systemPrompt}\n\nHistorial de Chat:\n${formattedChat}` }
+            ]
+          }
+        ],
+        generationConfig: {
+          temperature: 0.2,
+          responseMimeType: 'application/json'
+        }
+      })
+    });
+
+    if (!res.ok) {
+      const errTxt = await res.text();
+      throw new Error(`Gemini API Error ${res.status}: ${errTxt}`);
+    }
+
+    const resData = await res.json();
+    const content = resData.candidates && resData.candidates[0] && resData.candidates[0].content && resData.candidates[0].content.parts[0] ? resData.candidates[0].content.parts[0].text : '{}';
+    const analysis = JSON.parse(content);
+
+    if (typeof showToast === 'function') showToast('🎉 Análisis de conversación completado con Google Gemini 2.5 Flash.', '🎉');
+    return analysis;
+  } catch(err) {
+    console.error('[Gemini AI Error]', err);
+    if (typeof showToast === 'function') showToast(`❌ Error Gemini AI: ${err.message}`, '❌');
+    return null;
+  }
+}
+window.analyzeDmThreadWithGemini = analyzeDmThreadWithGemini;
 function loadAccountSettings() {
   if (!window.currentAuthUser) return;
   const nameInput = document.getElementById('profile-name-edit');
