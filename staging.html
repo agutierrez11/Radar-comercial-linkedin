@@ -3665,9 +3665,10 @@ function navigate(sec) {
   if (navItem) navItem.classList.add('active');
 
   if (sec === 'network') {
-    if (typeof filterNetwork === 'function') filterNetwork();
+    if (typeof applyNetworkFilters === 'function') applyNetworkFilters();
     setTimeout(() => {
-      if (gisMapInstance) gisMapInstance.invalidateSize();
+      if (typeof gisMapInstance !== 'undefined' && gisMapInstance) gisMapInstance.invalidateSize();
+      if (typeof gisMap !== 'undefined' && gisMap) gisMap.invalidateSize();
     }, 150);
   }
 
@@ -4024,7 +4025,7 @@ function renderNetwork() {
     }
   });
   initGisMap(S.contacts);
-  renderNetworkTable();
+  applyNetworkFilters();
 }
 
 gisMapInstance = null;
