@@ -2419,7 +2419,7 @@ const S = window.S = {
       // Se rescata si: tiene cargo de valor, sector alineado, o tiene email
       id: 'old_cold',
       label: 'Conexión >4 años, sin DMs y sin valor estratégico',
-      on: false,
+      on: true,
       fn: c => {
         if (c.msg_count && c.msg_count > 0) return false;           // 🛡️ tiene historial de DMs
         if (c.connectedYearsAgo <= 4) return false;                  // 🛡️ es relativamente reciente
@@ -7721,7 +7721,7 @@ async function restoreLocalVault() {
         // Ensure aggressive old_cold criterion is OFF by default on load unless explicitly turned on by user
         if (S.criteria) {
           S.criteria.forEach(cr => {
-            if (cr.id === 'old_cold' || cr.id === 'no_country') cr.on = false;
+            if (cr.id === 'no_country') cr.on = false;
           });
         }
         S.ownerName = data.ownerName || userId;
@@ -7754,7 +7754,7 @@ async function restoreLocalVault() {
         // Ensure aggressive old_cold criterion is OFF by default on load unless explicitly turned on by user
         if (S.criteria) {
           S.criteria.forEach(cr => {
-            if (cr.id === 'old_cold' || cr.id === 'no_country') cr.on = false;
+            if (cr.id === 'no_country') cr.on = false;
           });
         }
         S.ownerName = data.ownerName || userId;
