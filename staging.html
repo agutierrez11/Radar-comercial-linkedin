@@ -2848,33 +2848,35 @@ function inferSector(pos, company) {
 function scoreContact(c) {
   const icpText = norm(document.getElementById('icp-override')?.value || '');
   const activePos = S.positions.length ? S.positions[S.activePositionIndex || 0] : null;
-  const ownerSector = activePos ? inferSector(activePos.title, activePos.company) : '';
+  const ownerSector = activePos ? inferSector(activePos.title, activePos.company) : 'Ventas / Prospección';
   let score = 0;
-  // Jerarquía
+
+  // Jerarquía comercial
   if (c.hierarchy === 'C-Level') score += 35;
-  else if (c.hierarchy === 'Director') score += 20;
-  else if (c.hierarchy === 'Gerente') score += 10;
-  // Geografía conocida
-  if (c.country !== 'Desconocido') score += 15;
-  // Sector alineado con el tuyo
-  if (c.sector === ownerSector && ownerSector && ownerSector !== 'Otro') score += 25;
-  // Datos de contacto
+  else if (c.hierarchy === 'Director') score += 25;
+  else if (c.hierarchy === 'Gerente') score += 15;
+  else score += 10;
+
+  // Empresa y Geografía válida
+  if (c.company && c.company !== 'Desconocido') score += 15;
+  if (c.country && c.country !== 'Desconocido') score += 10;
+
+  // Alineación de sector con el propietario de la bóveda
+  if (c.sector === ownerSector || !c.sector || c.sector === 'Otro') score += 10;
+  else score += 5;
+
+  // Correo de contacto directo o interacción warm
   if (c.email) score += 10;
-  // Conexión reciente = más caliente
-  if (c.connectedYearsAgo < 2) score += 10;
-  if (c.connectedYearsAgo < 1) score += 5;
-  // Relación warm: hay historial de DMs
   if (c.msg_count && c.msg_count > 0) score += 15;
-  // Sentimiento positivo en DMs = lead caliente confirmado
-  if (c.sentiment === '\uD83D\uDFE2 Inter\u00e9s Alto / Dispuesto a Demo') score += 10;
-  if (c.intent === 'Lead C\u00e1lido / Oportunidad Real' || c.intent === 'Cualificaci\u00f3n en Proceso') score += 10;
-  // ICP override text match
+  if (c.connectedYearsAgo && c.connectedYearsAgo < 3) score += 5;
+
   if (icpText) {
     const blob = norm(`${c.position} ${c.company} ${c.sector} ${c.country}`);
     const words = icpText.split(/\s+/).filter(w => w.length > 3);
     const matches = words.filter(w => blob.includes(w)).length;
     score += Math.round((matches / Math.max(words.length, 1)) * 20);
   }
+
   return Math.min(100, score);
 }
 
