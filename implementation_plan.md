@@ -1,39 +1,28 @@
-# Análisis de Verticales con Teoría de Grafos (Starpago)
+# Radar Comercial — Plan de Ejecución del Producto Core
 
-El objetivo es modelar las verticales comerciales de Starpago no como silos aislados, sino como un **Grafo Conectado** donde los *nodos* son las industrias y las *aristas (edges)* son las infraestructuras de pago compartidas. Utilizando conceptos de algoritmos de optimización (como Dijkstra para "el camino de menor fricción a la monetización"), revelaremos cómo cruzar (cross-sell) clientes de una vertical a otra.
+**Propósito:** Minería inteligente de relaciones de primer grado en LinkedIn (Warm Pipeline Mining), depuración de red BYOD y enriquecimiento en vivo BYOK para acelerar la velocidad de venta (Speed to Sell).
 
-## Open Questions
-> [!WARNING]
-> ¿Deseas que este análisis de grafos reemplace alguna sección actual del Dossier, o prefieres que vivan en un nuevo documento dedicado exclusivamente a la Arquitectura de Verticales (ej. `estrategia_grafos_starpago.md`) para presentarlo como un anexo visual en tu entrevista?
+---
 
-## Proposed Changes
+## 🎯 Enfoque Actual del Sistema
 
-### 1. Definición del Modelo de Grafo
-Modelaremos el ecosistema de la siguiente manera:
-*   **Nodos (Verticales de Negocio):**
-    1. iGaming (Casinos / Apuestas)
-    2. E-Sports & Gaming (Ligas, Publishers)
-    3. Crypto & Forex (Exchanges, Brokers)
-    4. E-commerce Cross-Border (Retailers Internacionales, Plataformas SaaS)
-*   **Aristas (El 'Pegamento' o Infraestructura Compartida):**
-    *   *Edge A:* Payouts transfronterizos (Liquidación FX).
-    *   *Edge B:* APMs Locales (OXXO, SPEI, Pix, PSE).
-    *   *Edge C:* Motor Anti-Fraude / Liability Shift.
-    *   *Edge D:* Cumplimiento Regulatorio y KYC.
-*   **El "Shortest Path" (Dijkstra):** El camino más corto para maximizar el LTV (Life Time Value) de la infraestructura de Starpago es venderle *todas* las aristas a un nodo, y usar ese caso de éxito para saltar al nodo adyacente que comparte la misma arista.
+1. **Depuración & Baselines del Vault:**
+   - Mantenimiento estricto del baseline de **2,953 contactos limpios** de Antonio.
+   - Algoritmo de scoring ICP para **296 contactos Clase A** (Alta Densidad de Monetización).
+   - Persistencia inmutable en IndexedDB/localStorage (`crmState` + `contacts`).
 
-### 2. Creación del Artefacto de Grafos (Mermaid Diagram)
-Crearé un diagrama usando `mermaid.js` que el usuario puede visualizar y exportar. El diagrama mostrará visualmente cómo:
-- Un jugador deposita en Crypto.
-- El Exchange usa la infraestructura de FX (Arista A).
-- El usuario lo gasta en iGaming (Nodo 1).
-- El Casino hace Payout a un Streamer de E-sports (Nodo 2).
+2. **Enriquecimiento BYOK ("De Becario a CEO"):**
+   - Integración con HarvestAPI / Apify para actualización en vivo de cargos, empresas y ubicaciones.
+   - Integración con modelos de IA (Gemini 2.5 Flash, Qwen Disier, GPT-4o mini) mediante Bring Your Own Key (BYOK).
 
-### 3. Argumentario "Cross-Selling" (Teoría de Juegos)
-Definiremos los incentivos (Game Theory) de por qué un merchant de E-commerce Crossborder debería adoptar soluciones de iGaming (ej. gamificación de pagos, payouts instantáneos a proveedores locales). 
+3. **Frontend & Resiliencia:**
+   - Auto-sync ante cambios de conectividad (`online` listener).
+   - Analítica RevOps y tablero de visualización A/B Vault.
 
-## Verification Plan
+---
 
-### Manual Verification
-- Validar que el diagrama Mermaid se renderice correctamente en la interfaz.
-- Asegurar que el pitch de venta (el "cruce" entre verticales) suene comercialmente agresivo y técnicamente viable para la entrevista.
+## 📋 Próximos Pasos Ejecutables
+
+1. **Despliegue CI/CD (`main`):** Git commit y push de las mejoras de estabilidad y reconexión automática en `index.html` / `staging.html`.
+2. **Motor de Enriquecimiento BYOK:** Verificar pipeline de llamadas a HarvestAPI/Apify para perfiles con cargos desactualizados.
+3. **Generador de DMs & Playbooks:** Prospección contextual de 1-clic usando las plantillas de Notion integradas en el Dashboard.

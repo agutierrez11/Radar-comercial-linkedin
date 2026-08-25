@@ -7851,6 +7851,13 @@ async function saveLocalVault() {
   }
 }
 
+// 🌐 RECONEXIÓN AUTOMÁTICA (AUTO-SYNC AL RECUPERAR INTERNET)
+window.addEventListener('online', () => {
+  console.log('[AutoSync] Conexión restablecida. Sincronizando cambios locales...');
+  if (typeof saveLocalVault === 'function') saveLocalVault();
+  if (typeof showToast === 'function') showToast('🌐 Conexión restablecida. Cambios sincronizados automáticamente con la nube.', '🟢');
+});
+
 async function restoreLocalVault() {
   if (!window.currentAuthUser) return false;
   try {
