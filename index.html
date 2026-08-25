@@ -3685,8 +3685,9 @@ function navigate(sec) {
     });
   }
 
-  if (sec === 'profile' && typeof loadAccountSettings === 'function') {
-    loadAccountSettings();
+  if (sec === 'profile') {
+    if (typeof loadAccountSettings === 'function') loadAccountSettings();
+    if (typeof renderProfile === 'function') renderProfile();
   }
 
   if (sec === 'purge') {
