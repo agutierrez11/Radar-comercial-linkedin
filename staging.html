@@ -3151,11 +3151,25 @@ function buildContacts(rows) {
     incomingKeys.add(key);
 
     if (existingMap.has(key)) {
-      // ACTUALIZACIÓN INTELIGENTE (Smart Re-Sync): Preserva los roles enriquecidos en vivo (HarvestAPI/Apify), notas CRM, descartados y scoring ICP
       const existing = existingMap.get(key);
       
-      // Si el contacto ya fue enriquecido previamente con Apify/HarvestAPI, MANTIENE su rol y empresa actualizados de 2026 sin regresionar al CSV antiguo
-      if (!existing.harvest_enriched && !existing.last_updated_apify) {
+      const normIncComp = typeof norm === 'function' ? norm(company) : company.toLowerCase().trim();
+      const normIncPos = typeof norm === 'function' ? norm(position) : position.toLowerCase().trim();
+      const normCleanComp = typeof norm === 'function' ? norm(existing.company || '') : (existing.company || '').toLowerCase().trim();
+      const normCleanPos = typeof norm === 'function' ? norm(existing.position || '') : (existing.position || '').toLowerCase().trim();
+
+      const isJobMovement = company && position && normIncComp && normIncPos && (normIncComp !== normCleanComp || normIncPos !== normCleanPos);
+
+      if (isJobMovement) {
+        console.log(`[SmartMerge] 🔄 Movimiento laboral detectado para ${existing.name}: ${existing.company} (${existing.position}) ➔ ${company} (${position})`);
+        existing.company = company;
+        existing.position = position;
+        existing.hierarchy = hierarchy;
+        existing.sector = sector;
+        existing.jobStatus = "🟢 Vigente Confirmado (Movimiento 2026)";
+        existing.harvest_enriched = false;
+        existing.last_updated_apify = null;
+      } else if (!existing.harvest_enriched && !existing.last_updated_apify) {
         existing.company = company || existing.company;
         existing.position = position || existing.position;
         existing.hierarchy = hierarchy;
