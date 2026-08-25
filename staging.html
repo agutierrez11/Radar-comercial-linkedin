@@ -8486,6 +8486,7 @@ async function submitCustomLogin() {
       }
       if (typeof loadCrmState === 'function') loadCrmState();
       updateStatus();
+      if (typeof renderNetwork === 'function') renderNetwork();
       if (typeof renderDashboard === 'function') renderDashboard();
       if (typeof renderNetworkTable === 'function') renderNetworkTable();
       if (typeof showToast === 'function') showToast(`👤 Bóveda Master Antonio cargada (${(S.contacts||[]).length.toLocaleString()} contactos).`, '🔑');
@@ -8526,6 +8527,7 @@ async function submitCustomLogin() {
     }
 
     updateStatus();
+    if (typeof renderNetwork === 'function') renderNetwork();
     if (typeof renderDashboard === 'function') renderDashboard();
     if (typeof renderNetworkTable === 'function') renderNetworkTable();
   } 
