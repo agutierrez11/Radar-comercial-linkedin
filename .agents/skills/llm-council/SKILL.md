@@ -1,35 +1,34 @@
 ---
 name: llm-council
-description: Orchestrates a multi-LLM/multi-agent deliberation council (Andrej Karpathy methodology) with blind response collection, peer review, and a Chairman synthesis.
+description: Orchestrates Antonio Gutiérrez's original CPS 5-LLM Council deliberation (Claude, Perplexity, Kimi, Gemini, Manus + Abogado del Diablo auditor) for commercial strategy, pitch validation, and B2B positioning.
 ---
 
-# LLM Council — Sistema de Deliberación Multi-Modelo & Multi-Agente (Framework Maestro)
+# CPS 5-LLM Council — Sistema Maestro de Deliberación Comercial & Auditoría Adversaria
 
-Esta skill implementa la metodología **5-LLM Council** (creada por Andrej Karpathy) para auditar estrategias comerciales, validar arquitectura de productos o evaluar decisiones de negocio reduciendo sesgos de complacencia.
-
----
-
-## 👥 Matriz de Roles de los 5 LLMs (Framework Agnóstico)
-
-| ID | Modelo Principal | Rol Especializado | Ángulo de Análisis |
-| :--- | :--- | :--- | :--- |
-| **Modelo A** | **Claude 3.5 Sonnet** | **Arquitectura de Producto & Copywriting B2B** | Evalúa la propuesta de valor, mensajes de prospección y experiencia de integración API. |
-| **Modelo B** | **GPT-4o** | **Métricas Comerciales & Pipeline RevOps** | Evalúa unit economics, ROI esperado, velocidad de venta (Speed to Sell) y tasas de conversión. |
-| **Modelo C** | **Gemini 2.5 Pro** | **Estrategia Macro, Mercado & Compliance** | Evalúa regulaciones regionales, tamaño de mercado (TAM/SAM) y contexto legal. |
-| **Modelo D** | **DeepSeek V3 / R1** | **Auditoría Adversaria & Gestión de Riesgos** | Actúa como *Abogado del Diablo*; busca vulnerabilidades de seguridad y fallas operativas. |
-| **Modelo E** | **Kimi / Manus** | **Ecosistema, Integraciones & Co-Selling** | Evalúa alianzas de software, APIs de terceros y estrategias de co-selling. |
+Esta skill implementa la arquitectura original creada por **Antonio Gutiérrez** en sus proyectos `cps-copilot` y `CPS-Mental-Gym` para evaluar cualquier estrategia comercial, producto B2B o pitch directivo mediante 5 modelos especializados + 1 Auditor Adversario (*Abogado del Diablo*).
 
 ---
 
-## 🏛️ Las 3 Etapas del Consejo
+## 👥 Los 5 Modelos del Consejo CPS & Sus Enfoques
 
-### 1. Etapa 1: Recolección Ciega de Opiniones (Blind Opinion Collection)
-Se toma la consulta del usuario y se envía aisladamente a los 5 modelos o subagentes.
-- Cada participante genera su respuesta de manera **autónoma e independiente**, sin conocer las respuestas de los otros miembros.
+1. 🟠 **Claude (Anthropic):** *AE Pragmático & Targeting Quirúrgico ("Black Ops")* — Arqueología de vacantes en LinkedIn, copywriting persuasivo, mensajes anti-ghosting y propuestas de valor directas al CTO/VP.
+2. 🔵 **Perplexity AI:** *Inteligencia Competitiva & Mapeo Institucional* — Matriz de competidores, priorización de segmentos (50/30/20) y mapeo de stack tecnológico en CRM.
+3. 🟢 **Kimi (Moonshot AI):** *Sprint Comercial & Manifiesto Anti-Parálisis* — Ejecución rápida en 30 días, kits anti-fricción y los **3 Bloques Diarios (Cazar 60m, Calentar 60m, Cerrar 60m)**.
+4. 🟡 **Google AI (Gemini):** *Vendor Risk Inverso & Prueba de Estrés* — Due Diligence competitivo, contratos de prueba riesgo cero, mitigación de riesgo para comités de compra y compliance.
+5. 🔮 **Manus AI:** *Segmentación AUM, Triggers & Land & Expand* — Detección de eventos gatillo de compra (rondas de fondeo, cambios de directivos), segmentación por volumen de cartera y ofertas escalonadas.
 
-### 2. Etapa 2: Revisión Anónima entre Pares (Peer Review)
-Se distribuyen las respuestas de la Etapa 1 a todos los miembros del consejo de forma **anonimizada** (`Modelo A`, `Modelo B`, `Modelo C`, `Modelo D`, `Modelo E`).
-- Cada modelo evalúa las propuestas de los demás buscando suposiciones no probadas, riesgos de ejecución o puntos ciegos.
+---
 
-### 3. Etapa 3: Síntesis del Presidente del Consejo (Chairman Synthesis)
-El modelo designado como **El Presidente (Chairman)** compila todas las opiniones y entrega un **Informe Consolidado Final** con los 3 Pilares de Defensa Blindada.
+## 😈 Auditor del Consejo: `abogado-del-diablo`
+
+Somete las propuestas a auditoría adversaria con:
+- **Pre-Mortem:** Identifica las 3 razones por las que la estrategia podría fracasar en 12 meses antes de gastar un solo dólar.
+- **Auditoría Binaria (8 Ejes):** Detecta suposiciones de ciclo de venta falsas y riesgos de canibalización de pricing.
+
+---
+
+## 🏛️ Las 3 Etapas de Ejecución
+
+1. **Etapa 1: Síntesis de Propuestas Independientes:** Claude, Perplexity, Kimi, Gemini y Manus entregan sus posturas blind.
+2. **Etapa 2: Auditoría Adversaria entre Pares:** Filtrado implacable por el *Abogado del Diablo*.
+3. **Etapa 3: Síntesis del Presidente del Consejo (Chairman Verdict):** Entrega de la Estrategia de Pricing Protegida, los 3 Bloques Diarios de Ejecución y el Framing ante el C-Level.

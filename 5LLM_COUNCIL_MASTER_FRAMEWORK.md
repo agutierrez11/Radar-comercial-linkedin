@@ -1,76 +1,82 @@
-# 🏛️ Framework Maestro: 5-LLM Council Strategy & Audit System
-> **Framework Agnóstico de Deliberación Multi-Modelo para Proyectos, Estrategias de Ventas y Validaciones Técnicas**  
-> *Basado en la metodología de deliberación anónima de Andrej Karpathy*
+# 🏛️ Framework Maestro: El Consejo de los 5 LLMs (CPS Sales Council)
+> **Estrategia Original de Antonio Gutiérrez (CPS Copilot / CPS Mental Gym)**  
+> *Marco de deliberación comercial agéntico de 5 pilares con Auditoría Adversaria (Abogado del Diablo)*
 
 ---
 
-## 📌 ¿Qué es el 5-LLM Council?
+## 📌 ¿Qué es el CPS 5-LLM Council?
 
-Es un sistema de auditoría y deliberación en 3 etapas donde 5 perfiles de modelos de Inteligencia Artificial (o subagentes especializados) evalúan cualquier proyecto, estrategia comercial o decisión técnica desde 5 ángulos independientes antes de salir a producción o presentar ante un cliente/inversionista.
+Es la arquitectura de auditoría y estrategia comercial creada por **Antonio Gutiérrez** en sus proyectos `cps-copilot` y `CPS-Mental-Gym`. Utiliza **5 inteligencias especializadas + 1 Auditor Adversario** para evaluar cualquier oportunidad comercial, estrategia de venta B2B, pitch o decisión de producto antes de salir al mercado.
 
 ---
 
-## 👥 Matriz de Roles de los 5 LLMs (Agnóstica por Proyecto)
+## 👥 Matriz de los 5 Modelos & Sus Enfoques Estratégicos
 
-| ID | Modelo Principal | Rol Especializado | Ángulo de Análisis |
+| ID | Modelo | Rol Estratégico CPS | Ángulo de Análisis |
 | :--- | :--- | :--- | :--- |
-| **Modelo A** | **Claude 3.5 Sonnet** | **Arquitectura de Producto & Copywriting B2B** | Evalúa la propuesta de valor, mensajes de prospección, experiencia del usuario e integración API/UX. |
-| **Modelo B** | **GPT-4o** | **Métricas Comerciales & Pipeline RevOps** | Evalúa unit economics, ROI esperado, velocidad de venta (Speed to Sell) y tasas de conversión. |
-| **Modelo C** | **Gemini 2.5 Pro** | **Estrategia Macro, Mercado & Compliance** | Evalúa regulaciones regionales, tamaño de mercado (TAM/SAM), contexto legal y densidad del ICP. |
-| **Modelo D** | **DeepSeek V3 / R1** | **Auditoría Adversaria & Gestión de Riesgos** | Actúa como *Abogado del Diablo*; busca vulnerabilidades de seguridad, riesgos financieros y fallas operativas. |
-| **Modelo E** | **Kimi / Manus** | **Ecosistema, Integraciones & Co-Selling** | Evalúa alianzas de software, APIs de terceros, enriquecimiento de datos y estrategias de co-selling. |
+| 🟠 | **Claude (Anthropic)** | **AE Pragmático & Targeting Quirúrgico ("Black Ops")** | Arqueología de vacantes en LinkedIn, copywriting B2B directo, mensajes anti-ghosting y propuesta de valor al CTO/VP. |
+| 🔵 | **Perplexity AI** | **Inteligencia Competitiva & Mapeo Institucional** | Matriz de competidores, mapeo de stack tecnológico en CRM y priorización de segmentos por potencial de compra. |
+| 🟢 | **Kimi (Moonshot AI)** | **Sprint Comercial & Manifiesto Anti-Parálisis** | Ejecución rápida en 30 días, reducción de fricción de onboarding y los **3 Bloques Diarios (Cazar, Calentar, Cerrar)**. |
+| 🟡 | **Google AI (Gemini)** | **Vendor Risk Inverso & Prueba de Estrés** | Due Diligence competitivo, mitigación de riesgo para comités de compra, contratos riesgo cero y compliance regulatorio. |
+| 🔮 | **Manus AI** | **Segmentación AUM, Triggers & Land & Expand** | Detección de eventos gatillo de compra (SIPRES, rondas de fondeo), segmentación por tamaño de cuenta y ofertas escalonadas. |
 
 ---
 
-## 📑 Plantilla Estructurada para Ejecutar el Consejo (Copia & Pega en Cualquier Proyecto)
+## 😈 El Auditor Adversario: Abogado del Diablo (`abogado-del-diablo`)
+
+Ningún plan se aprueba sin pasar por la **Auditoría Adversaria**:
+- **Pre-Mortem (Escenario: Fracasamos en 12 meses):** Asume que la estrategia falló y rastrea las 3 causas raíz antes de que sucedan.
+- **Rúbrica Binaria de 8 Ejes:** Busca suposiciones falsas de ciclo de venta, canibalización de pricing y fricción operacional.
+
+---
+
+## 📑 Plantilla del Reporte Maestro (Copia & Pega en Cualquier Proyecto)
 
 ```markdown
-# 🏛️ [Nombre del Proyecto / Estrategia] — Reporte del 5-LLM Council
+# 🏛️ DELIBERACIÓN OFICIAL DEL CPS 5-LLM COUNCIL & AUDITORÍA ADVERSARIA
+## Caso: [Nombre del Proyecto / Estrategia Comercial / Pitch B2B]
 
-## 📋 Resumen Ejecutivo
-- **Proyecto Evaluado:** [Nombre del Proyecto o Propuesta]
-- **Veredicto Consolidado:** [Aprobado / Aprobado con Cambios / Rechazado]
-- **Métrica o Mapeo Clave:** [KPI principal de éxito]
+**Modelos Participantes del Consejo:**
+1. 🟠 **Claude (Anthropic)** — *Enfoque: AE Pragmático & Targeting Quirúrgico ("Black Ops")*
+2. 🔵 **Perplexity AI** — *Enfoque: Estructura Institucional, Competidores & Stack CRM*
+3. 🟢 **Kimi (Moonshot AI)** — *Enfoque: Sprint Comercial 30 Días & 3 Bloques Diarios*
+4. 🟡 **Google AI (Gemini)** — *Enfoque: Vendor Risk Inverso & Prueba de Estrés Regulatoria*
+5. 🔮 **Manus AI** — *Enfoque: Triggers de Mercado, Segmentación & Land & Expand*
 
----
-
-## 💬 Etapa 1: Recolección Ciega de Opiniones (Blind Opinion)
-
-### 🤖 Modelo A (Claude 3.5 Sonnet) — Producto & Message Fit
-- **Análisis:** 
-- **Recomendación:** 
-
-### 🤖 Modelo B (GPT-4o) — Métricas & Pipeline Execution
-- **Análisis:** 
-- **Recomendación:** 
-
-### 🤖 Modelo C (Gemini 2.5 Pro) — Macro Mercado & Compliance
-- **Análisis:** 
-- **Recomendación:** 
-
-### 🤖 Modelo D (DeepSeek V3) — Auditoría Adversaria de Riesgo
-- **Análisis:** 
-- **Recomendación:** 
-
-### 🤖 Modelo E (Kimi / Manus) — Ecosistema & Alianzas
-- **Análisis:** 
-- **Recomendación:** 
+**Auditor del Consejo (Abogado del Diablo):** Skill `abogado-del-diablo`
 
 ---
 
-## ⚔️ Etapa 2: Revisión Anónima entre Pares & Puntos Ciegos
-- 🔴 **Punto Ciego Crítico Detectado:** [La principal objeción de mercado o técnica encontrada]
+## 🔬 ETAPA 1: SÍNTESIS DE PROPUESTAS DE LOS 5 INTEGRANTES
+
+| Modelo | Pilar Central | Estrategia de Entrada (Land) | Matriz Anti-Ghosting | Mayor Riesgo Identificado |
+| :--- | :--- | :--- | :--- | :--- |
+| 🟠 **Claude** | | | | |
+| 🔵 **Perplexity** | | | | |
+| 🟢 **Kimi** | | | | |
+| 🟡 **Gemini** | | | | |
+| 🔮 **Manus** | | | | |
 
 ---
 
-## 🏛️ Etapa 3: Síntesis del Presidente del Consejo (Chairman Verdict)
-- **1. Pilar de Producto / Técnico:** 
-- **2. Pilar Comercial / ROI:** 
-- **3. Pilar de Mitigación de Riesgos:** 
+## 😈 ETAPA 2: AUDITORÍA ADVERSARIA (ABOGADO DEL DIABLO & PRE-MORTEM)
+- **1. Suposiciones Falsas:**
+- **2. Aritmética / Riesgo de Pricing:**
+- **3. Análisis Pre-Mortem:**
+
+---
+
+## 🏛️ ETAPA 3: SÍNTESIS DEL PRESIDENTE DEL CONSEJO (CHAIRMAN SYNTHESIS)
+1. **Arquitectura de Oferta Protegida (Land & Expand)**
+2. **Las 3 Reglas de Oro de Ejecución Diaria:**
+   - 🎯 **Bloque CAZAR (60 min/día):**
+   - 🔥 **Bloque CALENTAR (60 min/día):**
+   - ⚡ **Bloque CERRAR (60 min/día):**
+3. **Framing ante el C-Level / Cliente**
 ```
 
 ---
 
-## 🛠️ Cómo Usarlo en Antigravity
-Para invocar este framework en cualquier proyecto o workspace actual, simplemente escribe:
-`/teamwork-preview Ejecuta un 5-LLM Council para auditar mi proyecto [Nombre del Proyecto]`
+## 🛠️ Cómo Invocarlo en Antigravity
+Para ejecutar esta estrategia original en cualquier proyecto, simplemente pide:
+`/teamwork-preview Ejecuta la Deliberación del CPS 5-LLM Council para [Tu Proyecto]`
