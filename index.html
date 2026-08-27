@@ -2820,6 +2820,9 @@ dropZone.addEventListener('drop', e => {
 
 async function handleFiles(files) {
   setLoading(true, 10);
+  if (typeof createVaultSnapshot === 'function') {
+    await createVaultSnapshot();
+  }
   let processedAny = false;
   let errors = [];
 
@@ -7750,6 +7753,75 @@ async function saveLocalVault() {
     console.warn('[AutoVault Save Error]', err);
   }
 }
+
+// 📸 CÁMARA DE SEGURIDAD Y ROLLBACK INSTANTÁNEO (REVERSIÓN A 1-CLIC)
+async function createVaultSnapshot() {
+  if (!S.contacts || S.contacts.length === 0) return false;
+  const vaultKey = getVaultKey();
+  const snapshotKey = `${vaultKey}_snapshot_pre_upload`;
+  const snapshotData = {
+    timestamp: new Date().toISOString(),
+    ownerName: S.ownerName,
+    contacts: JSON.parse(JSON.stringify(S.contacts)),
+    positions: JSON.parse(JSON.stringify(S.positions || [])),
+    messages: JSON.parse(JSON.stringify(S.messages || [])),
+    crmState: JSON.parse(JSON.stringify(S.crmState || { discarded: [], whitelisted: [], deals: [] }))
+  };
+
+  try {
+    const db = await openVaultDB();
+    const tx = db.transaction(STORE_NAME, 'readwrite');
+    tx.objectStore(STORE_NAME).put(snapshotData, snapshotKey);
+    localStorage.setItem(snapshotKey, JSON.stringify(snapshotData));
+    console.log(`[VaultSnapshot] Snapshot de seguridad creado para ${snapshotKey} (${S.contacts.length} contactos).`);
+    return true;
+  } catch(e) {
+    console.warn('[VaultSnapshot Create Error]', e);
+    return false;
+  }
+}
+window.createVaultSnapshot = createVaultSnapshot;
+
+async function restoreVaultSnapshot() {
+  const vaultKey = getVaultKey();
+  const snapshotKey = `${vaultKey}_snapshot_pre_upload`;
+  let snapshotData = null;
+
+  try {
+    const db = await openVaultDB();
+    const tx = db.transaction(STORE_NAME, 'readonly');
+    const store = tx.objectStore(STORE_NAME);
+    const req = store.get(snapshotKey);
+    snapshotData = await new Promise((resolve) => {
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => resolve(null);
+    });
+  } catch(e) {}
+
+  if (!snapshotData) {
+    const local = localStorage.getItem(snapshotKey);
+    if (local) {
+      try { snapshotData = JSON.parse(local); } catch(e){}
+    }
+  }
+
+  if (!snapshotData || !snapshotData.contacts || snapshotData.contacts.length === 0) {
+    if (typeof showToast === 'function') showToast('⚠️ No se encontró un Snapshot de seguridad previo para revertir.', '⚠️');
+    return false;
+  }
+
+  S.contacts = snapshotData.contacts;
+  S.positions = snapshotData.positions || [];
+  S.messages = snapshotData.messages || [];
+  S.crmState = snapshotData.crmState || { discarded: [], whitelisted: [], deals: [] };
+
+  await saveLocalVault();
+  if (typeof refreshFullVaultUI === 'function') refreshFullVaultUI();
+
+  if (typeof showToast === 'function') showToast(`🔄 Bóveda revertida con éxito al Snapshot exacto (${S.contacts.length} contactos).`, '⏪');
+  return true;
+}
+window.restoreVaultSnapshot = restoreVaultSnapshot;
 
 // 🌐 RECONEXIÓN AUTOMÁTICA (AUTO-SYNC AL RECUPERAR INTERNET)
 window.addEventListener('online', () => {
