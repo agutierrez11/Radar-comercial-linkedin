@@ -1,34 +1,22 @@
 ---
 name: llm-council
-description: Orchestrates Antonio Gutiérrez's original CPS 5-LLM Council deliberation (Claude, Perplexity, Kimi, Gemini, Manus + Abogado del Diablo auditor) for commercial strategy, pitch validation, and B2B positioning.
+description: Orchestrates a technical multi-LLM/multi-agent deliberation council (Andrej Karpathy methodology) for software architecture, code reviews, and technical decision making.
 ---
 
-# CPS 5-LLM Council — Sistema Maestro de Deliberación Comercial & Auditoría Adversaria
+# LLM Council — Consejo Técnico de Arquitectura & Código (Karpathy Methodology)
 
-Esta skill implementa la arquitectura original creada por **Antonio Gutiérrez** en sus proyectos `cps-copilot` y `CPS-Mental-Gym` para evaluar cualquier estrategia comercial, producto B2B o pitch directivo mediante 5 modelos especializados + 1 Auditor Adversario (*Abogado del Diablo*).
-
----
-
-## 👥 Los 5 Modelos del Consejo CPS & Sus Enfoques
-
-1. 🟠 **Claude (Anthropic):** *AE Pragmático & Targeting Quirúrgico ("Black Ops")* — Arqueología de vacantes en LinkedIn, copywriting persuasivo, mensajes anti-ghosting y propuestas de valor directas al CTO/VP.
-2. 🔵 **Perplexity AI:** *Inteligencia Competitiva & Mapeo Institucional* — Matriz de competidores, priorización de segmentos (50/30/20) y mapeo de stack tecnológico en CRM.
-3. 🟢 **Kimi (Moonshot AI):** *Sprint Comercial & Manifiesto Anti-Parálisis* — Ejecución rápida en 30 días, kits anti-fricción y los **3 Bloques Diarios (Cazar 60m, Calentar 60m, Cerrar 60m)**.
-4. 🟡 **Google AI (Gemini):** *Vendor Risk Inverso & Prueba de Estrés* — Due Diligence competitivo, contratos de prueba riesgo cero, mitigación de riesgo para comités de compra y compliance.
-5. 🔮 **Manus AI:** *Segmentación AUM, Triggers & Land & Expand* — Detección de eventos gatillo de compra (rondas de fondeo, cambios de directivos), segmentación por volumen de cartera y ofertas escalonadas.
+Esta skill ejecuta el sistema de deliberación anónima multi-modelo creado por **Andrej Karpathy** enfocado en tomar decisiones técnicas complejas (*Build vs Buy*, elección de base de datos, refactorización de código, patrones de diseño).
 
 ---
 
-## 😈 Auditor del Consejo: `abogado-del-diablo`
+## 🏛️ Estructura del Consejo Técnico
 
-Somete las propuestas a auditoría adversaria con:
-- **Pre-Mortem:** Identifica las 3 razones por las que la estrategia podría fracasar en 12 meses antes de gastar un solo dólar.
-- **Auditoría Binaria (8 Ejes):** Detecta suposiciones de ciclo de venta falsas y riesgos de canibalización de pricing.
+1. **Etapa 1: Recolección Ciega de Opiniones (Blind Opinion Collection):** Múltiples modelos (Claude 3.5 Sonnet, GPT-4o, Gemini 2.5 Pro, DeepSeek R1) evalúan de forma independiente el problema técnico sin conocer la opinión de los demás.
+2. **Etapa 2: Revisión Anónima entre Pares (Peer Review):** Evaluación cruzada anonimizada (`Modelo A`, `Modelo B`, `Modelo C`) buscando fallas de arquitectura, problemas de escala o cuellos de botella de memoria/rendimiento.
+3. **Etapa 3: Síntesis del Presidente (Chairman Verdict):** El Presidente del Consejo entrega la solución técnica consolidada definitiva.
 
 ---
 
-## 🏛️ Las 3 Etapas de Ejecución
-
-1. **Etapa 1: Síntesis de Propuestas Independientes:** Claude, Perplexity, Kimi, Gemini y Manus entregan sus posturas blind.
-2. **Etapa 2: Auditoría Adversaria entre Pares:** Filtrado implacable por el *Abogado del Diablo*.
-3. **Etapa 3: Síntesis del Presidente del Consejo (Chairman Verdict):** Entrega de la Estrategia de Pricing Protegida, los 3 Bloques Diarios de Ejecución y el Framing ante el C-Level.
+## 💡 Cómo Invocar este Consejo
+- `"Ejecuta el LLM Council para auditar la arquitectura de mi API"`
+- `"/teamwork-preview Corre el LLM Council para evaluar esta decisión de base de datos"`
