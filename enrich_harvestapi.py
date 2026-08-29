@@ -1,10 +1,10 @@
 """
-enrich_harvestapi_v2.py
-=======================
-Con $20.00 de saldo en HarvestAPI ($0.0064/perfil = 3125 perfiles max).
-Estrategia: priorizar perfiles de empresas Fintech/Pagos/Cross-border.
+enrich_harvestapi.py
+====================
+Con 2 llaves de HarvestAPI en rotación (Key 1 y Key 2).
+Soporta $0.0064/perfil (Full Profile).
 
-Actualiza metadata JSONB con:
+Extrae y actualiza metadata en Supabase/local:
   - country, city, country_code (desde HarvestAPI location)
   - harvest_company, harvest_position (cargo/empresa actuales verificados)
   - harvest_enriched: True (flag de procesado)
@@ -27,18 +27,23 @@ if hasattr(sys.stderr, 'reconfigure'):
 
 load_dotenv()
 
-HARVEST_API_KEY = os.getenv("HARVEST_API_KEY")
+KEYS = [
+    os.getenv("HARVEST_API_KEY"),
+    os.getenv("HARVEST_API_KEY_2")
+]
+# Filtrar None o vacías
+KEYS = [k for k in KEYS if k]
+
 HARVEST_BASE_URL = "https://api.harvestapi.io"
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 
 COST_PER_CALL = 0.0064
-BUDGET = 20.00  # $20 plan
+BUDGET = 40.00  # $20 per key x 2 keys
 MAX_PROFILES = int(BUDGET / COST_PER_CALL)
 
-SLEEP_BETWEEN = 1.3  # free tier: 1 concurrencia
+SLEEP_BETWEEN = 1.0  # 1s entre llamadas distribuyendo rotación
 
-# Palabras clave de prioridad: empresas fintech/pagos/cross-border
 PRIORITY_KEYWORDS = [
     "pay", "payment", "pago", "stripe", "clip", "conekta", "oxxo", "openpay",
     "kushki", "mercado pago", "bancomer", "bbva", "banamex", "hsbc", "santander",
@@ -56,13 +61,12 @@ PRIORITY_KEYWORDS = [
 
 def get_supabase() -> Client:
     if not SUPABASE_URL or not SUPABASE_KEY:
-        print("[ERROR] Faltan variables en .env")
+        print("[ERROR] Faltan variables de Supabase en .env")
         sys.exit(1)
     return create_client(SUPABASE_URL, SUPABASE_KEY)
 
 
 def score_profile(row: dict) -> int:
-    """Asigna score de prioridad: más keywords de pagos = más urgente."""
     text = (
         (row.get("current_company") or "") + " " +
         (row.get("current_position") or "") + " " +
@@ -77,8 +81,7 @@ def score_profile(row: dict) -> int:
 
 
 def fetch_all_profiles(supabase: Client) -> dict:
-    """Trae todos los perfiles, agrupa por linkedin_url y sortea por prioridad."""
-    print("[INFO] Descargando perfiles de Supabase...")
+    print("[INFO] Descargando perfiles pendientes de Supabase...")
     rows = []
     offset = 0
     PAGE = 1000
@@ -96,9 +99,7 @@ def fetch_all_profiles(supabase: Client) -> dict:
         if len(batch) < PAGE:
             break
         offset += PAGE
-        print(f"  Descargados: {len(rows)}...", end="\r")
 
-    # Agrupar IDs por linkedin_url
     grouped = {}
     for row in rows:
         meta = row.get("metadata") or {}
@@ -110,34 +111,41 @@ def fetch_all_profiles(supabase: Client) -> dict:
             grouped[url] = {"ids": [], "row": row, "score": score_profile(row)}
         grouped[url]["ids"].append(row["id"])
     
-    # Sortear por score y limitar
     sorted_urls = sorted(grouped.keys(), key=lambda x: grouped[x]["score"], reverse=True)
     return {url: grouped[url] for url in sorted_urls[:MAX_PROFILES]}
 
 
-def call_harvest(linkedin_url: str) -> dict | None:
+def call_harvest_rotated(linkedin_url: str, call_index: int) -> dict | None:
+    if not KEYS:
+        print("   [ERROR] No hay llaves de HarvestAPI en .env")
+        return None
+
+    # Rotación simple Round-Robin entre las llaves configuradas
+    api_key = KEYS[call_index % len(KEYS)]
+    key_label = f"Key {(call_index % len(KEYS)) + 1}"
+
     try:
         r = requests.get(
             f"{HARVEST_BASE_URL}/linkedin/profile",
-            headers={"X-API-Key": HARVEST_API_KEY},
+            headers={"X-API-Key": api_key},
             params={"url": linkedin_url},
             timeout=20,
         )
         if r.status_code == 200:
-            return r.json().get("element")
+            res_json = r.json()
+            print(f"   [{key_label} OK]", end="")
+            return res_json.get("element")
         else:
-            print(f"   [HTTP {r.status_code}] {r.text[:150]}")
+            print(f"   [{key_label} HTTP {r.status_code}] {r.text[:100]}")
             return None
     except Exception as e:
-        print(f"   [ERROR] {e}")
+        print(f"   [{key_label} ERROR] {e}")
         return None
 
 
 def build_metadata_update(existing_meta: dict, element: dict) -> dict:
-    """Fusiona metadata existente con datos nuevos de HarvestAPI."""
     updated = dict(existing_meta or {})
 
-    # Location
     location = element.get("location") or {}
     parsed = location.get("parsed") or {}
 
@@ -158,31 +166,32 @@ def build_metadata_update(existing_meta: dict, element: dict) -> dict:
     if linkedin_loc:
         updated["location_text"] = linkedin_loc
 
-    # Empresa/cargo actuales verificados
     positions = element.get("currentPosition") or []
     if positions:
         pos = positions[0]
         updated["harvest_company"] = pos.get("companyName") or ""
         updated["harvest_position"] = pos.get("position") or ""
 
-    # Otros datos útiles
     if element.get("headline"):
         updated["headline"] = element["headline"]
 
     updated["harvest_enriched"] = True
-
     return updated
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dry-run", action="store_true", help="No escribe en Supabase")
+    parser.add_argument("--dry-run", action="store_true", help="Modo prueba")
     args = parser.parse_args()
 
-    print("=" * 60)
-    print(f"[*] HarvestAPI Enricher v2 - Radar Comercial")
-    print(f"   Presupuesto: ${BUDGET} | ${COST_PER_CALL}/perfil")
-    print("=" * 60)
+    print("=" * 65)
+    print(f"[*] HarvestAPI Multi-Key Enricher v3 - Radar Comercial")
+    print(f"   Llaves activas: {len(KEYS)} | Presupuesto total: ${BUDGET:.2f} USD")
+    print("=" * 65)
+
+    if not KEYS:
+        print("[ERROR] No se encontraron HARVEST_API_KEY ni HARVEST_API_KEY_2 en .env")
+        return
 
     supabase = get_supabase()
     grouped_profiles = fetch_all_profiles(supabase)
@@ -195,21 +204,20 @@ def main():
     skipped = 0
     spend = 0.0
 
-    for i, (url, data) in enumerate(grouped_profiles.items(), 1):
-        print(f"\n[{i}/{len(grouped_profiles)}] URL: {url}")
+    for i, (url, data) in enumerate(grouped_profiles.items(), 0):
+        print(f"\n[{i+1}/{len(grouped_profiles)}] URL: {url}")
 
         if args.dry_run:
-            print(f"   [DRY] Proceso de {len(data['ids'])} registros - NO se llama a la API")
+            print(f"   [DRY] {len(data['ids'])} registros asociados - Sin llamada API")
             enriched += 1
         else:
-            element = call_harvest(url)
+            element = call_harvest_rotated(url, i)
 
             if not element:
-                print(f"   [--] Sin datos de API")
+                print(f" -> Sin datos devueltos")
                 skipped += 1
             else:
                 for pid in data["ids"]:
-                    # Obtener row actual para mantener metadata previo
                     resp = supabase.table("connections").select("metadata").eq("id", pid).single().execute()
                     existing_meta = resp.data.get("metadata") or {}
                     new_meta = build_metadata_update(existing_meta, element)
@@ -217,16 +225,16 @@ def main():
 
                 enriched += 1
                 spend += COST_PER_CALL
-                print(f"   [OK] Actualizados {len(data['ids'])} registros asociados.")
+                print(f" -> Guardado en Supabase")
 
-            print(f"   [$$] Gasto: ${spend:.4f} / ${BUDGET:.4f} restante: ${BUDGET - spend:.4f}")
+            print(f"   [$$] Gasto: ${spend:.4f} / Sólido restante: ${BUDGET - spend:.4f}")
             time.sleep(SLEEP_BETWEEN)
 
-    print("\n" + "=" * 60)
-    print(f"[OK] Grupos procesados: {enriched}")
-    print(f"[--] Skipped:           {skipped}")
-    print(f"[$$] Gasto total:      ${spend:.4f} USD")
-    print("=" * 60)
+    print("\n" + "=" * 65)
+    print(f"[OK] Perfiles enriquecidos: {enriched}")
+    print(f"[--] Registros fallidos/omitidos: {skipped}")
+    print(f"[$$] Gasto total estimado: ${spend:.4f} USD")
+    print("=" * 65)
 
 
 if __name__ == "__main__":
