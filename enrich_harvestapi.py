@@ -39,8 +39,9 @@ SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 
 COST_PER_CALL = 0.0064
-BUDGET = 40.00  # $20 per key x 2 keys
-MAX_PROFILES = int(BUDGET / COST_PER_CALL)
+BUDGET = 2.00  # $1.00 per key x 2 keys
+MAX_PROFILES = int(BUDGET / COST_PER_CALL)  # ~312 profiles max
+
 
 SLEEP_BETWEEN = 1.0  # 1s entre llamadas distribuyendo rotación
 

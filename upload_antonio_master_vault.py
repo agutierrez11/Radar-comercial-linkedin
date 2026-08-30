@@ -1,10 +1,14 @@
 import json
 import urllib.request
 import os
+from dotenv import load_dotenv
 
-SUPABASE_URL = "https://hsrseeqhdtogpdqbveay.supabase.co"
-SERVICE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "YOUR_SUPABASE_SERVICE_ROLE_KEY")
+load_dotenv()
+
+SUPABASE_URL = os.getenv("SUPABASE_URL", "https://hsrseeqhdtogpdqbveay.supabase.co").strip('"')
+SERVICE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "").strip('"')
 VAULT_ID = "vault_antonio"
+
 
 headers = {
     "apikey": SERVICE_KEY,

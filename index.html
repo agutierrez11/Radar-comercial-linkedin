@@ -800,6 +800,8 @@ body.not-authenticated header {
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script src="master_data.js"></script>
   <script src="radar_core.js"></script>
+
+
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
 <body class="light not-authenticated">
@@ -4035,8 +4037,9 @@ function updateKpiHighlights() {
 }
 
 function renderNetwork() {
-  const activeContacts = S.contacts.filter(c => c.crmStatus !== 'Descartado' && !c.discardedFromPurge);
-  const total = activeContacts.length;
+  const activeContacts = S.contacts || [];
+  const total = S.contacts ? S.contacts.length : 0;
+
   const hier = {};
   (activeContacts || []).forEach(c => { hier[c.hierarchy] = (hier[c.hierarchy]||0)+1; });
   const countries = {};
@@ -7856,10 +7859,10 @@ async function restoreLocalVault() {
         }
         let cleanContacts = data.contacts;
         S.contacts = cleanContacts;
+
         S.positions = data.positions || [];
         S.messages = data.messages || [];
         if (data.crmState) S.crmState = data.crmState;
-        // Ensure aggressive old_cold criterion is OFF by default on load unless explicitly turned on by user
         if (S.criteria) {
           S.criteria.forEach(cr => {
             if (cr.id === 'no_country') cr.on = false;
@@ -7867,8 +7870,9 @@ async function restoreLocalVault() {
         }
         S.ownerName = data.ownerName || userId;
         S.loadedParts = { connections: true, positions: S.positions.length > 0, messages: S.messages.length > 0 };
-        console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde IndexedDB (${S.contacts.length} contactos).`);
+        console.log(`[AutoVault] Bóveda ${vaultKey} restaurada (${S.contacts.length} contactos).`);
         return true;
+
       }
     } catch (idbErr) {
       console.warn('[AutoVault IDB Error]', idbErr);
@@ -8827,30 +8831,18 @@ async function submitCustomLogin() {
     if (activeUserPill) activeUserPill.textContent = '👤 Antonio (Master)';
 
     closeLoginModal();
-    if (typeof showToast === 'function') showToast('⏳ Cargando Bóveda Master Antonio (2,953 contactos)...', '⏳');
+    if (window.MASTER_CONNECTIONS_DATA && window.MASTER_CONNECTIONS_DATA.length > 0) {
+      S.contacts = window.MASTER_CONNECTIONS_DATA;
+    } else {
+      await restoreLocalVault();
+    }
+    if (S.contacts && S.contacts.length > 0) {
+      S.loadedParts.connections = true;
+    }
+    if (typeof loadCrmState === 'function') loadCrmState();
+    refreshFullVaultUI();
+    if (typeof showToast === 'function') showToast(`👤 Bóveda Master Antonio cargada (${(S.contacts||[]).length.toLocaleString()} contactos).`, '🔑');
 
-    const restored = await restoreLocalVault();
-    if (!restored) {
-        let loaded = false;
-        if (typeof window.fetchMasterSupabaseData === 'function') {
-          try {
-            const contacts = await window.fetchMasterSupabaseData();
-            if (contacts && contacts.length > 0) {
-              S.contacts = contacts;
-              loaded = true;
-            }
-          } catch(e) { console.warn('[Supabase load error]', e); }
-        }
-        if (!loaded) {
-          await loadDemoData(false);
-        }
-      }
-      if (S.contacts && S.contacts.length > 0) {
-        S.loadedParts.connections = true;
-      }
-      if (typeof loadCrmState === 'function') loadCrmState();
-      refreshFullVaultUI();
-      if (typeof showToast === 'function') showToast(`👤 Bóveda Master Antonio cargada (${(S.contacts||[]).length.toLocaleString()} contactos).`, '🔑');
   } 
   // --- GIOVANNA ISOLATED VAULT ---
   else if (userVal === 'giovanna' || userVal === 'giovanna@radar.com' || userVal === 'roanna') {
