@@ -802,7 +802,9 @@ body.not-authenticated header {
   <script src="radar_core.js"></script>
 
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
 </head>
 <body class="light not-authenticated">
 <script>
@@ -4071,9 +4073,13 @@ function renderNetwork() {
 
   document.getElementById('net-charts').style.display = 'grid';
   if (chartHier) { try { chartHier.destroy(); } catch(e){} }
-  if (chartCountries) { try { chartCountries.destroy(); } catch(e){} }
+  if (typeof Chart === 'undefined') {
+    setTimeout(renderNetwork, 150);
+    return;
+  }
 
   const cHier = document.getElementById('chart-hier').getContext('2d');
+
 
   chartHier = new Chart(cHier, {
     type: 'doughnut',
