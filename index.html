@@ -8162,37 +8162,31 @@ function importVaultJson(file) {
 
 document.addEventListener('DOMContentLoaded', async () => {
   const savedSession = localStorage.getItem('rc_active_session_user');
-  if (savedSession) {
+  if (!savedSession) {
+    window.currentAuthUser = { id: 'antonio', name: '👤 Antonio (Master)', isMaster: true };
+    try { localStorage.setItem('rc_active_session_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
+  } else {
     try {
       window.currentAuthUser = JSON.parse(savedSession);
     } catch(e) {}
   }
+  
   if (window.currentAuthUser && window.currentAuthUser.id) {
     document.body.classList.remove('not-authenticated');
     const activeUserPill = document.getElementById('active-user-name');
     if (activeUserPill) activeUserPill.textContent = window.currentAuthUser.name;
     if (typeof closeLoginModal === 'function') closeLoginModal();
-    if (typeof restoreLocalVault === 'function') {
+    
+    if (window.MASTER_CONNECTIONS_DATA && window.MASTER_CONNECTIONS_DATA.length > 0) {
+      S.contacts = window.MASTER_CONNECTIONS_DATA;
+    } else if (typeof restoreLocalVault === 'function') {
       await restoreLocalVault();
     }
     updateStatus();
     if (typeof renderDashboard === 'function') renderDashboard();
-    return; // SESSION RESTORED CLEANLY! NO LOGIN MODAL!
+    return;
   }
 
-  // Otherwise, no active session -> open login modal
-  window.currentAuthUser = null;
-  S.contacts = [];
-  S.positions = [];
-  S.messages = [];
-  
-  document.body.classList.add('not-authenticated');
-  const activeUserPill = document.getElementById('active-user-name');
-  if (activeUserPill) activeUserPill.textContent = '🔒 Sin Autenticar';
-  
-  updateStatus();
-  if (typeof renderDashboard === 'function') renderDashboard();
-  if (typeof openLoginModal === 'function') openLoginModal();
 });
 
 // ═══════════════════════════════════════════════════════════════════════
