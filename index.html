@@ -4068,10 +4068,12 @@ function renderNetwork() {
   const barBgColor = isL ? '#2563eb' : '#3b82f6';
   const doughnutBgs = isL ? ['#7e22ce','#2563eb','#15803d','#cbd5e1'] : ['#c084fc','#3b82f6','#10b981','#2b2e46'];
 
-  if (chartHier) chartHier.destroy();
-  if (chartCountries) chartCountries.destroy();
   document.getElementById('net-charts').style.display = 'grid';
+  if (chartHier) { try { chartHier.destroy(); } catch(e){} }
+  if (chartCountries) { try { chartCountries.destroy(); } catch(e){} }
+
   const cHier = document.getElementById('chart-hier').getContext('2d');
+
   chartHier = new Chart(cHier, {
     type: 'doughnut',
     data: {
