@@ -27,7 +27,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 5,
@@ -57,7 +58,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 6,
@@ -87,7 +89,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 7,
@@ -117,7 +120,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 8,
@@ -147,7 +151,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 9,
@@ -177,7 +182,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 10,
@@ -207,7 +213,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 11,
@@ -237,7 +244,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 12,
@@ -267,7 +275,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 13,
@@ -297,7 +306,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 14,
@@ -327,7 +337,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 15,
@@ -357,7 +368,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 16,
@@ -387,7 +399,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 18,
@@ -417,7 +430,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 19,
@@ -447,7 +461,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 20,
@@ -477,7 +492,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 21,
@@ -507,7 +523,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 22,
@@ -537,7 +554,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 23,
@@ -567,7 +585,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 24,
@@ -597,7 +616,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 25,
@@ -627,7 +647,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 26,
@@ -657,7 +678,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 27,
@@ -687,7 +709,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 28,
@@ -717,7 +740,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 29,
@@ -747,7 +771,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 30,
@@ -777,7 +802,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 31,
@@ -807,7 +833,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 32,
@@ -837,7 +864,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 33,
@@ -867,7 +895,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 34,
@@ -897,7 +926,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 35,
@@ -927,7 +957,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 36,
@@ -957,7 +988,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 37,
@@ -987,7 +1019,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 38,
@@ -1017,7 +1050,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 39,
@@ -1047,7 +1081,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 40,
@@ -1077,7 +1112,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 41,
@@ -1107,7 +1143,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 42,
@@ -1137,7 +1174,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 43,
@@ -1167,7 +1205,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 44,
@@ -1197,7 +1236,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 45,
@@ -1227,7 +1267,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 46,
@@ -1257,7 +1298,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 47,
@@ -1287,7 +1329,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 48,
@@ -1317,7 +1360,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 49,
@@ -1347,7 +1391,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 50,
@@ -1377,7 +1422,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 51,
@@ -1407,7 +1453,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 52,
@@ -1437,7 +1484,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 53,
@@ -1467,7 +1515,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 54,
@@ -1497,7 +1546,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 55,
@@ -1527,7 +1577,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 56,
@@ -1557,7 +1608,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 57,
@@ -1587,7 +1639,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 58,
@@ -1617,7 +1670,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 59,
@@ -1647,7 +1701,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 60,
@@ -1677,7 +1732,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 61,
@@ -1707,7 +1763,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 62,
@@ -1737,7 +1794,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 63,
@@ -1767,7 +1825,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 64,
@@ -1797,7 +1856,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 65,
@@ -1827,7 +1887,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 66,
@@ -1857,7 +1918,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 67,
@@ -1887,7 +1949,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 68,
@@ -1917,7 +1980,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 69,
@@ -1947,7 +2011,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 70,
@@ -1977,7 +2042,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 71,
@@ -2007,7 +2073,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 72,
@@ -2037,7 +2104,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 73,
@@ -2067,7 +2135,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 74,
@@ -2097,7 +2166,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 75,
@@ -2127,7 +2197,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 76,
@@ -2157,7 +2228,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 77,
@@ -2187,7 +2259,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 78,
@@ -2217,7 +2290,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 79,
@@ -2247,7 +2321,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 80,
@@ -2277,7 +2352,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 81,
@@ -2307,7 +2383,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 82,
@@ -2337,7 +2414,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 83,
@@ -2367,7 +2445,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 84,
@@ -2397,7 +2476,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 85,
@@ -2427,7 +2507,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 86,
@@ -2457,7 +2538,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 87,
@@ -2487,7 +2569,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 88,
@@ -2517,7 +2600,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 89,
@@ -2547,7 +2631,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 90,
@@ -2577,7 +2662,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 91,
@@ -2607,7 +2693,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 92,
@@ -2637,7 +2724,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 93,
@@ -2667,7 +2755,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 94,
@@ -2697,7 +2786,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 95,
@@ -2727,7 +2817,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 96,
@@ -2757,7 +2848,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 97,
@@ -2787,7 +2879,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 98,
@@ -2817,7 +2910,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 99,
@@ -2847,7 +2941,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 100,
@@ -2877,7 +2972,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 101,
@@ -2907,7 +3003,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 102,
@@ -2937,7 +3034,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 103,
@@ -2967,7 +3065,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 104,
@@ -2997,7 +3096,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 105,
@@ -3027,7 +3127,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 106,
@@ -3057,7 +3158,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 107,
@@ -3087,7 +3189,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 108,
@@ -3117,7 +3220,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 22,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 109,
@@ -3147,7 +3251,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 110,
@@ -3177,7 +3282,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 111,
@@ -3207,7 +3313,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 112,
@@ -3237,7 +3344,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 113,
@@ -3267,7 +3375,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 114,
@@ -3297,7 +3406,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 115,
@@ -3327,7 +3437,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 116,
@@ -3357,7 +3468,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 117,
@@ -3387,7 +3499,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 118,
@@ -3417,7 +3530,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 119,
@@ -3447,7 +3561,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 120,
@@ -3477,7 +3592,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 121,
@@ -3507,7 +3623,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 122,
@@ -3537,7 +3654,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 123,
@@ -3567,7 +3685,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 124,
@@ -3597,7 +3716,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 125,
@@ -3627,7 +3747,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 126,
@@ -3657,7 +3778,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 26,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 127,
@@ -3687,7 +3809,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 128,
@@ -3717,7 +3840,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 129,
@@ -3747,7 +3871,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 130,
@@ -3777,7 +3902,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 131,
@@ -3807,7 +3933,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 132,
@@ -3837,7 +3964,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 133,
@@ -3867,7 +3995,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 134,
@@ -3897,7 +4026,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 135,
@@ -3927,7 +4057,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 136,
@@ -3957,7 +4088,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 137,
@@ -3987,7 +4119,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 138,
@@ -4017,7 +4150,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 139,
@@ -4047,7 +4181,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 140,
@@ -4077,7 +4212,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 141,
@@ -4107,7 +4243,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 142,
@@ -4137,7 +4274,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 143,
@@ -4167,7 +4305,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 144,
@@ -4197,7 +4336,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 145,
@@ -4227,7 +4367,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 146,
@@ -4257,7 +4398,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 147,
@@ -4287,7 +4429,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 148,
@@ -4317,7 +4460,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 149,
@@ -4347,7 +4491,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 150,
@@ -4377,7 +4522,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 151,
@@ -4407,7 +4553,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 152,
@@ -4437,7 +4584,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 153,
@@ -4467,7 +4615,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 155,
@@ -4497,7 +4646,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 156,
@@ -4527,7 +4677,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 157,
@@ -4557,7 +4708,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 158,
@@ -4587,7 +4739,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 159,
@@ -4617,7 +4770,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 160,
@@ -4647,7 +4801,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 161,
@@ -4677,7 +4832,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 162,
@@ -4707,7 +4863,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 163,
@@ -4737,7 +4894,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 164,
@@ -4767,7 +4925,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 165,
@@ -4797,7 +4956,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 166,
@@ -4827,7 +4987,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 167,
@@ -4857,7 +5018,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 168,
@@ -4887,7 +5049,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 169,
@@ -4917,7 +5080,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 170,
@@ -4947,7 +5111,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 171,
@@ -4977,7 +5142,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 172,
@@ -5007,7 +5173,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 173,
@@ -5037,7 +5204,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 174,
@@ -5067,7 +5235,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 175,
@@ -5097,7 +5266,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 176,
@@ -5127,7 +5297,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 177,
@@ -5157,7 +5328,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 178,
@@ -5187,7 +5359,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 179,
@@ -5217,7 +5390,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 180,
@@ -5247,7 +5421,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 181,
@@ -5277,7 +5452,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 182,
@@ -5307,7 +5483,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 183,
@@ -5337,7 +5514,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 184,
@@ -5367,7 +5545,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 185,
@@ -5397,7 +5576,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 186,
@@ -5427,7 +5607,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 187,
@@ -5457,7 +5638,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 188,
@@ -5487,7 +5669,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 189,
@@ -5517,7 +5700,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 190,
@@ -5547,7 +5731,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 191,
@@ -5577,7 +5762,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 192,
@@ -5607,7 +5793,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 193,
@@ -5637,7 +5824,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 194,
@@ -5667,7 +5855,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 195,
@@ -5697,7 +5886,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 196,
@@ -5727,7 +5917,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 197,
@@ -5757,7 +5948,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 198,
@@ -5787,7 +5979,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 199,
@@ -5817,7 +6010,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 200,
@@ -5847,7 +6041,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 201,
@@ -5877,7 +6072,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 202,
@@ -5907,7 +6103,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 203,
@@ -5937,7 +6134,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 204,
@@ -5967,7 +6165,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 205,
@@ -5997,7 +6196,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 206,
@@ -6027,7 +6227,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 207,
@@ -6057,7 +6258,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 208,
@@ -6087,7 +6289,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 209,
@@ -6117,7 +6320,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 210,
@@ -6147,7 +6351,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 211,
@@ -6177,7 +6382,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 212,
@@ -6207,7 +6413,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 213,
@@ -6237,7 +6444,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 214,
@@ -6267,7 +6475,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 215,
@@ -6297,7 +6506,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 216,
@@ -6327,7 +6537,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 217,
@@ -6357,7 +6568,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 218,
@@ -6387,7 +6599,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 219,
@@ -6417,7 +6630,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 220,
@@ -6447,7 +6661,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 221,
@@ -6477,7 +6692,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 222,
@@ -6507,7 +6723,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 223,
@@ -6537,7 +6754,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 224,
@@ -6567,7 +6785,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 225,
@@ -6597,7 +6816,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 226,
@@ -6627,7 +6847,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 227,
@@ -6657,7 +6878,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 228,
@@ -6687,7 +6909,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 229,
@@ -6717,7 +6940,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 230,
@@ -6747,7 +6971,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 231,
@@ -6777,7 +7002,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 232,
@@ -6807,7 +7033,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 233,
@@ -6837,7 +7064,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 234,
@@ -6867,7 +7095,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 235,
@@ -6897,7 +7126,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 236,
@@ -6927,7 +7157,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 237,
@@ -6957,7 +7188,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 238,
@@ -6987,7 +7219,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 239,
@@ -7017,7 +7250,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 240,
@@ -7047,7 +7281,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 241,
@@ -7077,7 +7312,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 242,
@@ -7107,7 +7343,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 243,
@@ -7137,7 +7374,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 244,
@@ -7167,7 +7405,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 245,
@@ -7197,7 +7436,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 246,
@@ -7227,7 +7467,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 247,
@@ -7257,7 +7498,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 248,
@@ -7287,7 +7529,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 249,
@@ -7317,7 +7560,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 250,
@@ -7347,7 +7591,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 251,
@@ -7377,7 +7622,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 252,
@@ -7407,7 +7653,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 101,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 253,
@@ -7437,7 +7684,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 254,
@@ -7467,7 +7715,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 255,
@@ -7497,7 +7746,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 256,
@@ -7527,7 +7777,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 257,
@@ -7557,7 +7808,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 26,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 258,
@@ -7587,7 +7839,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 259,
@@ -7617,7 +7870,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 260,
@@ -7647,7 +7901,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 261,
@@ -7677,7 +7932,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 262,
@@ -7707,7 +7963,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 263,
@@ -7737,7 +7994,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 264,
@@ -7767,7 +8025,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 265,
@@ -7797,7 +8056,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 266,
@@ -7827,7 +8087,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 267,
@@ -7857,7 +8118,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 268,
@@ -7887,7 +8149,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 269,
@@ -7917,7 +8180,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 270,
@@ -7947,7 +8211,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 271,
@@ -7977,7 +8242,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 272,
@@ -8007,7 +8273,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 273,
@@ -8037,7 +8304,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 274,
@@ -8067,7 +8335,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 275,
@@ -8097,7 +8366,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 276,
@@ -8127,7 +8397,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 277,
@@ -8157,7 +8428,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 278,
@@ -8187,7 +8459,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 279,
@@ -8217,7 +8490,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 280,
@@ -8247,7 +8521,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 281,
@@ -8277,7 +8552,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 282,
@@ -8307,7 +8583,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 283,
@@ -8337,7 +8614,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 284,
@@ -8367,7 +8645,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 285,
@@ -8397,7 +8676,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 286,
@@ -8427,7 +8707,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 287,
@@ -8457,7 +8738,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 288,
@@ -8487,7 +8769,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 289,
@@ -8517,7 +8800,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 290,
@@ -8547,7 +8831,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 291,
@@ -8577,7 +8862,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 292,
@@ -8607,7 +8893,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 293,
@@ -8637,7 +8924,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 294,
@@ -8667,7 +8955,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 295,
@@ -8697,7 +8986,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 296,
@@ -8727,7 +9017,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 297,
@@ -8757,7 +9048,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 298,
@@ -8787,7 +9079,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 299,
@@ -8817,7 +9110,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 300,
@@ -8847,7 +9141,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 301,
@@ -8877,7 +9172,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 302,
@@ -8907,7 +9203,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 303,
@@ -8937,7 +9234,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 304,
@@ -8967,7 +9265,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 305,
@@ -8997,7 +9296,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 306,
@@ -9027,7 +9327,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 307,
@@ -9057,7 +9358,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 308,
@@ -9087,7 +9389,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 309,
@@ -9117,7 +9420,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 310,
@@ -9147,7 +9451,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 311,
@@ -9177,7 +9482,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 312,
@@ -9207,7 +9513,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 313,
@@ -9237,7 +9544,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 314,
@@ -9267,7 +9575,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 315,
@@ -9297,7 +9606,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 316,
@@ -9327,7 +9637,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 317,
@@ -9357,7 +9668,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 318,
@@ -9387,7 +9699,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 320,
@@ -9417,7 +9730,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 321,
@@ -9447,7 +9761,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 322,
@@ -9477,7 +9792,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 323,
@@ -9507,7 +9823,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 324,
@@ -9537,7 +9854,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 325,
@@ -9567,7 +9885,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 326,
@@ -9597,7 +9916,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 327,
@@ -9627,7 +9947,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 328,
@@ -9657,7 +9978,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 329,
@@ -9687,7 +10009,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 330,
@@ -9717,7 +10040,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 331,
@@ -9747,7 +10071,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 332,
@@ -9777,7 +10102,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 333,
@@ -9807,7 +10133,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 334,
@@ -9837,7 +10164,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 335,
@@ -9867,7 +10195,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 336,
@@ -9897,7 +10226,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 337,
@@ -9927,7 +10257,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 338,
@@ -9957,7 +10288,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 339,
@@ -9987,7 +10319,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 340,
@@ -10017,7 +10350,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 341,
@@ -10047,7 +10381,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 342,
@@ -10077,7 +10412,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 343,
@@ -10107,7 +10443,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 344,
@@ -10137,7 +10474,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 345,
@@ -10167,7 +10505,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 346,
@@ -10197,7 +10536,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 347,
@@ -10227,7 +10567,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 348,
@@ -10257,7 +10598,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 349,
@@ -10287,7 +10629,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 350,
@@ -10317,7 +10660,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 351,
@@ -10347,7 +10691,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 352,
@@ -10377,7 +10722,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 353,
@@ -10407,7 +10753,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 354,
@@ -10437,7 +10784,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 355,
@@ -10467,7 +10815,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 356,
@@ -10497,7 +10846,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 357,
@@ -10527,7 +10877,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 358,
@@ -10557,7 +10908,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 359,
@@ -10587,7 +10939,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 360,
@@ -10617,7 +10970,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 361,
@@ -10647,7 +11001,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 362,
@@ -10677,7 +11032,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 363,
@@ -10707,7 +11063,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 364,
@@ -10737,7 +11094,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 365,
@@ -10767,7 +11125,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 366,
@@ -10797,7 +11156,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 367,
@@ -10827,7 +11187,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 368,
@@ -10857,7 +11218,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 369,
@@ -10887,7 +11249,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 370,
@@ -10917,7 +11280,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 371,
@@ -10947,7 +11311,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 372,
@@ -10977,7 +11342,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 373,
@@ -11007,7 +11373,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 374,
@@ -11037,7 +11404,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 375,
@@ -11067,7 +11435,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 376,
@@ -11097,7 +11466,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 377,
@@ -11127,7 +11497,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 378,
@@ -11157,7 +11528,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 379,
@@ -11187,7 +11559,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 380,
@@ -11217,7 +11590,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 381,
@@ -11247,7 +11621,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 382,
@@ -11277,7 +11652,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 383,
@@ -11307,7 +11683,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 384,
@@ -11337,7 +11714,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 385,
@@ -11367,7 +11745,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 386,
@@ -11397,7 +11776,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 387,
@@ -11427,7 +11807,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 388,
@@ -11457,7 +11838,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 389,
@@ -11487,7 +11869,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 390,
@@ -11517,7 +11900,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 391,
@@ -11547,7 +11931,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 392,
@@ -11577,7 +11962,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 393,
@@ -11607,7 +11993,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 394,
@@ -11637,7 +12024,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 395,
@@ -11667,7 +12055,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 396,
@@ -11697,7 +12086,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 397,
@@ -11727,7 +12117,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 398,
@@ -11757,7 +12148,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 399,
@@ -11787,7 +12179,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 400,
@@ -11817,7 +12210,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 401,
@@ -11847,7 +12241,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 402,
@@ -11877,7 +12272,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 403,
@@ -11907,7 +12303,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 404,
@@ -11937,7 +12334,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 405,
@@ -11967,7 +12365,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 406,
@@ -11997,7 +12396,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 407,
@@ -12027,7 +12427,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 408,
@@ -12057,7 +12458,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 409,
@@ -12087,7 +12489,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 410,
@@ -12117,7 +12520,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 411,
@@ -12147,7 +12551,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 412,
@@ -12177,7 +12582,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 413,
@@ -12207,7 +12613,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 414,
@@ -12237,7 +12644,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 415,
@@ -12267,7 +12675,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 416,
@@ -12297,7 +12706,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 417,
@@ -12327,7 +12737,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 418,
@@ -12357,7 +12768,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 419,
@@ -12387,7 +12799,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 420,
@@ -12417,7 +12830,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 421,
@@ -12447,7 +12861,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 422,
@@ -12477,7 +12892,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 423,
@@ -12507,7 +12923,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 424,
@@ -12537,7 +12954,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 425,
@@ -12567,7 +12985,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 426,
@@ -12597,7 +13016,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 427,
@@ -12627,7 +13047,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 428,
@@ -12657,7 +13078,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 429,
@@ -12687,7 +13109,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 430,
@@ -12717,7 +13140,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 431,
@@ -12747,7 +13171,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 432,
@@ -12777,7 +13202,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 433,
@@ -12807,7 +13233,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 434,
@@ -12837,7 +13264,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 435,
@@ -12867,7 +13295,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 67,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 436,
@@ -12897,7 +13326,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 437,
@@ -12927,7 +13357,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 438,
@@ -12957,7 +13388,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 31,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 439,
@@ -12987,7 +13419,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 440,
@@ -13017,7 +13450,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 441,
@@ -13047,7 +13481,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 42,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 442,
@@ -13077,7 +13512,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 443,
@@ -13107,7 +13543,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 444,
@@ -13137,7 +13574,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 445,
@@ -13167,7 +13605,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 446,
@@ -13197,7 +13636,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 447,
@@ -13227,7 +13667,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 448,
@@ -13257,7 +13698,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 449,
@@ -13287,7 +13729,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 450,
@@ -13317,7 +13760,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 451,
@@ -13347,7 +13791,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 452,
@@ -13377,7 +13822,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 453,
@@ -13407,7 +13853,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 454,
@@ -13437,7 +13884,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 455,
@@ -13467,7 +13915,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 456,
@@ -13497,7 +13946,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 457,
@@ -13527,7 +13977,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 458,
@@ -13557,7 +14008,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 459,
@@ -13587,7 +14039,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 461,
@@ -13617,7 +14070,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 462,
@@ -13647,7 +14101,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 463,
@@ -13677,7 +14132,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 464,
@@ -13707,7 +14163,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 465,
@@ -13737,7 +14194,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 466,
@@ -13767,7 +14225,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 467,
@@ -13797,7 +14256,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 468,
@@ -13827,7 +14287,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 469,
@@ -13857,7 +14318,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 470,
@@ -13887,7 +14349,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 471,
@@ -13917,7 +14380,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 472,
@@ -13947,7 +14411,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 473,
@@ -13977,7 +14442,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 474,
@@ -14007,7 +14473,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 475,
@@ -14037,7 +14504,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 476,
@@ -14067,7 +14535,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 477,
@@ -14097,7 +14566,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 478,
@@ -14127,7 +14597,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 479,
@@ -14157,7 +14628,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 480,
@@ -14187,7 +14659,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 481,
@@ -14217,7 +14690,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 482,
@@ -14247,7 +14721,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 483,
@@ -14277,7 +14752,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 484,
@@ -14307,7 +14783,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 485,
@@ -14337,7 +14814,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 486,
@@ -14367,7 +14845,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 487,
@@ -14397,7 +14876,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 488,
@@ -14427,7 +14907,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 489,
@@ -14457,7 +14938,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 490,
@@ -14487,7 +14969,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 491,
@@ -14517,7 +15000,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 492,
@@ -14547,7 +15031,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 493,
@@ -14577,7 +15062,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 494,
@@ -14607,7 +15093,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 495,
@@ -14637,7 +15124,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 496,
@@ -14667,7 +15155,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 497,
@@ -14697,7 +15186,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 498,
@@ -14727,7 +15217,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 499,
@@ -14757,7 +15248,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 500,
@@ -14787,7 +15279,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 501,
@@ -14817,7 +15310,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 502,
@@ -14847,7 +15341,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 503,
@@ -14877,7 +15372,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 504,
@@ -14907,7 +15403,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 505,
@@ -14937,7 +15434,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 506,
@@ -14967,7 +15465,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 507,
@@ -14997,7 +15496,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 509,
@@ -15027,7 +15527,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 510,
@@ -15057,7 +15558,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 511,
@@ -15087,7 +15589,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 512,
@@ -15117,7 +15620,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 513,
@@ -15147,7 +15651,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 514,
@@ -15177,7 +15682,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 515,
@@ -15207,7 +15713,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 516,
@@ -15237,7 +15744,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 517,
@@ -15267,7 +15775,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 518,
@@ -15297,7 +15806,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 519,
@@ -15327,7 +15837,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 520,
@@ -15357,7 +15868,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 521,
@@ -15387,7 +15899,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 522,
@@ -15417,7 +15930,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 523,
@@ -15447,7 +15961,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 524,
@@ -15477,7 +15992,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 525,
@@ -15507,7 +16023,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 526,
@@ -15537,7 +16054,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 527,
@@ -15567,7 +16085,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 30,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 528,
@@ -15597,7 +16116,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 529,
@@ -15627,7 +16147,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 530,
@@ -15657,7 +16178,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 531,
@@ -15687,7 +16209,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 532,
@@ -15717,7 +16240,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 533,
@@ -15747,7 +16271,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 534,
@@ -15777,7 +16302,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 535,
@@ -15807,7 +16333,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 536,
@@ -15837,7 +16364,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 537,
@@ -15867,7 +16395,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 538,
@@ -15897,7 +16426,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 539,
@@ -15927,7 +16457,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 540,
@@ -15957,7 +16488,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 541,
@@ -15987,7 +16519,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 542,
@@ -16017,7 +16550,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 543,
@@ -16047,7 +16581,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 544,
@@ -16077,7 +16612,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 545,
@@ -16107,7 +16643,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 547,
@@ -16137,7 +16674,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 548,
@@ -16167,7 +16705,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 549,
@@ -16197,7 +16736,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 550,
@@ -16227,7 +16767,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 551,
@@ -16257,7 +16798,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 552,
@@ -16287,7 +16829,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 553,
@@ -16317,7 +16860,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 554,
@@ -16347,7 +16891,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 555,
@@ -16377,7 +16922,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 556,
@@ -16407,7 +16953,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 557,
@@ -16437,7 +16984,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 558,
@@ -16467,7 +17015,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 559,
@@ -16497,7 +17046,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 560,
@@ -16527,7 +17077,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 561,
@@ -16557,7 +17108,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 562,
@@ -16587,7 +17139,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 563,
@@ -16617,7 +17170,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 564,
@@ -16647,7 +17201,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 565,
@@ -16677,7 +17232,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 566,
@@ -16707,7 +17263,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 567,
@@ -16737,7 +17294,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 568,
@@ -16767,7 +17325,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 569,
@@ -16797,7 +17356,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 570,
@@ -16827,7 +17387,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 571,
@@ -16857,7 +17418,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 572,
@@ -16887,7 +17449,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 573,
@@ -16917,7 +17480,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 574,
@@ -16947,7 +17511,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 575,
@@ -16977,7 +17542,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 576,
@@ -17007,7 +17573,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 577,
@@ -17037,7 +17604,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 578,
@@ -17067,7 +17635,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 579,
@@ -17097,7 +17666,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 580,
@@ -17127,7 +17697,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 581,
@@ -17157,7 +17728,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 582,
@@ -17187,7 +17759,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 583,
@@ -17217,7 +17790,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 584,
@@ -17247,7 +17821,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 585,
@@ -17277,7 +17852,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 587,
@@ -17307,7 +17883,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 588,
@@ -17337,7 +17914,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 589,
@@ -17367,7 +17945,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 590,
@@ -17397,7 +17976,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 591,
@@ -17427,7 +18007,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 592,
@@ -17457,7 +18038,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 593,
@@ -17487,7 +18069,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 594,
@@ -17517,7 +18100,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 595,
@@ -17547,7 +18131,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 596,
@@ -17577,7 +18162,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 597,
@@ -17607,7 +18193,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 598,
@@ -17637,7 +18224,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 599,
@@ -17667,7 +18255,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 600,
@@ -17697,7 +18286,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 601,
@@ -17727,7 +18317,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 602,
@@ -17757,7 +18348,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 603,
@@ -17787,7 +18379,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 604,
@@ -17817,7 +18410,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 605,
@@ -17847,7 +18441,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 606,
@@ -17877,7 +18472,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 607,
@@ -17907,7 +18503,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 608,
@@ -17937,7 +18534,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 609,
@@ -17967,7 +18565,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 610,
@@ -17997,7 +18596,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 611,
@@ -18027,7 +18627,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 612,
@@ -18057,7 +18658,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 613,
@@ -18087,7 +18689,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 614,
@@ -18117,7 +18720,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 615,
@@ -18147,7 +18751,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 616,
@@ -18177,7 +18782,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 617,
@@ -18207,7 +18813,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 618,
@@ -18237,7 +18844,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 619,
@@ -18267,7 +18875,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 620,
@@ -18297,7 +18906,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 621,
@@ -18327,7 +18937,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 622,
@@ -18357,7 +18968,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 623,
@@ -18387,7 +18999,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 624,
@@ -18417,7 +19030,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 625,
@@ -18447,7 +19061,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 626,
@@ -18477,7 +19092,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 627,
@@ -18507,7 +19123,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 628,
@@ -18537,7 +19154,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 629,
@@ -18567,7 +19185,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 630,
@@ -18597,7 +19216,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 631,
@@ -18627,7 +19247,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 632,
@@ -18657,7 +19278,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 633,
@@ -18687,7 +19309,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 634,
@@ -18717,7 +19340,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 635,
@@ -18747,7 +19371,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 636,
@@ -18777,7 +19402,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 637,
@@ -18807,7 +19433,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 638,
@@ -18837,7 +19464,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 639,
@@ -18867,7 +19495,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 640,
@@ -18897,7 +19526,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 641,
@@ -18927,7 +19557,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 642,
@@ -18957,7 +19588,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 643,
@@ -18987,7 +19619,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 644,
@@ -19017,7 +19650,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 645,
@@ -19047,7 +19681,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 646,
@@ -19077,7 +19712,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 647,
@@ -19107,7 +19743,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 21,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 648,
@@ -19137,7 +19774,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 649,
@@ -19167,7 +19805,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 650,
@@ -19197,7 +19836,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 651,
@@ -19227,7 +19867,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 652,
@@ -19257,7 +19898,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 653,
@@ -19287,7 +19929,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 654,
@@ -19317,7 +19960,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 655,
@@ -19347,7 +19991,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 656,
@@ -19377,7 +20022,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 657,
@@ -19407,7 +20053,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 658,
@@ -19437,7 +20084,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 659,
@@ -19467,7 +20115,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 660,
@@ -19497,7 +20146,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 661,
@@ -19527,7 +20177,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 662,
@@ -19557,7 +20208,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 663,
@@ -19587,7 +20239,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 664,
@@ -19617,7 +20270,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 665,
@@ -19647,7 +20301,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 666,
@@ -19677,7 +20332,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 667,
@@ -19707,7 +20363,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 668,
@@ -19737,7 +20394,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 669,
@@ -19767,7 +20425,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 34,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 670,
@@ -19797,7 +20456,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 671,
@@ -19827,7 +20487,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 672,
@@ -19857,7 +20518,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 673,
@@ -19887,7 +20549,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 674,
@@ -19917,7 +20580,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 675,
@@ -19947,7 +20611,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 676,
@@ -19977,7 +20642,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 677,
@@ -20007,7 +20673,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 678,
@@ -20037,7 +20704,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 679,
@@ -20067,7 +20735,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 680,
@@ -20097,7 +20766,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 681,
@@ -20127,7 +20797,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 682,
@@ -20157,7 +20828,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 683,
@@ -20187,7 +20859,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 684,
@@ -20217,7 +20890,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 685,
@@ -20247,7 +20921,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 41,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 686,
@@ -20277,7 +20952,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 687,
@@ -20307,7 +20983,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 688,
@@ -20337,7 +21014,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 689,
@@ -20367,7 +21045,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 690,
@@ -20397,7 +21076,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 691,
@@ -20427,7 +21107,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 692,
@@ -20457,7 +21138,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 693,
@@ -20487,7 +21169,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 694,
@@ -20517,7 +21200,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 695,
@@ -20547,7 +21231,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 696,
@@ -20577,7 +21262,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 697,
@@ -20607,7 +21293,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 698,
@@ -20637,7 +21324,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 699,
@@ -20667,7 +21355,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 700,
@@ -20697,7 +21386,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 701,
@@ -20727,7 +21417,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 702,
@@ -20757,7 +21448,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 703,
@@ -20787,7 +21479,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 704,
@@ -20817,7 +21510,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 705,
@@ -20847,7 +21541,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 706,
@@ -20877,7 +21572,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 707,
@@ -20907,7 +21603,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 708,
@@ -20937,7 +21634,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 709,
@@ -20967,7 +21665,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 710,
@@ -20997,7 +21696,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 711,
@@ -21027,7 +21727,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 712,
@@ -21057,7 +21758,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 713,
@@ -21087,7 +21789,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 714,
@@ -21117,7 +21820,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 715,
@@ -21147,7 +21851,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 716,
@@ -21177,7 +21882,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 717,
@@ -21207,7 +21913,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 718,
@@ -21237,7 +21944,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 719,
@@ -21267,7 +21975,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 720,
@@ -21297,7 +22006,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 721,
@@ -21327,7 +22037,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 722,
@@ -21357,7 +22068,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 723,
@@ -21387,7 +22099,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 724,
@@ -21417,7 +22130,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 725,
@@ -21447,7 +22161,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 726,
@@ -21477,7 +22192,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 727,
@@ -21507,7 +22223,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 728,
@@ -21537,7 +22254,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 729,
@@ -21567,7 +22285,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 730,
@@ -21597,7 +22316,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 731,
@@ -21627,7 +22347,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 733,
@@ -21657,7 +22378,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 734,
@@ -21687,7 +22409,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 736,
@@ -21717,7 +22440,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 737,
@@ -21747,7 +22471,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 738,
@@ -21777,7 +22502,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 739,
@@ -21807,7 +22533,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 740,
@@ -21837,7 +22564,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 741,
@@ -21867,7 +22595,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 742,
@@ -21897,7 +22626,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 743,
@@ -21927,7 +22657,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 744,
@@ -21957,7 +22688,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 745,
@@ -21987,7 +22719,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 746,
@@ -22017,7 +22750,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 747,
@@ -22047,7 +22781,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 748,
@@ -22077,7 +22812,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 749,
@@ -22107,7 +22843,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 750,
@@ -22137,7 +22874,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 751,
@@ -22167,7 +22905,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 752,
@@ -22197,7 +22936,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 753,
@@ -22227,7 +22967,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 754,
@@ -22257,7 +22998,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 755,
@@ -22287,7 +23029,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 756,
@@ -22317,7 +23060,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 757,
@@ -22347,7 +23091,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 758,
@@ -22377,7 +23122,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 759,
@@ -22407,7 +23153,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 760,
@@ -22437,7 +23184,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 761,
@@ -22467,7 +23215,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 762,
@@ -22497,7 +23246,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 763,
@@ -22527,7 +23277,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 764,
@@ -22557,7 +23308,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 765,
@@ -22587,7 +23339,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 766,
@@ -22617,7 +23370,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 767,
@@ -22647,7 +23401,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 768,
@@ -22677,7 +23432,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 769,
@@ -22707,7 +23463,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 770,
@@ -22737,7 +23494,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 771,
@@ -22767,7 +23525,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 772,
@@ -22797,7 +23556,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 773,
@@ -22827,7 +23587,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 64,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 774,
@@ -22857,7 +23618,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 775,
@@ -22887,7 +23649,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 776,
@@ -22917,7 +23680,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 777,
@@ -22947,7 +23711,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 778,
@@ -22977,7 +23742,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 779,
@@ -23007,7 +23773,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 44,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 780,
@@ -23037,7 +23804,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 781,
@@ -23067,7 +23835,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 782,
@@ -23097,7 +23866,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 783,
@@ -23127,7 +23897,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 784,
@@ -23157,7 +23928,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 785,
@@ -23187,7 +23959,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 786,
@@ -23217,7 +23990,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 787,
@@ -23247,7 +24021,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 788,
@@ -23277,7 +24052,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 789,
@@ -23307,7 +24083,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 790,
@@ -23337,7 +24114,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 791,
@@ -23367,7 +24145,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 792,
@@ -23397,7 +24176,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 793,
@@ -23427,7 +24207,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 794,
@@ -23457,7 +24238,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 795,
@@ -23487,7 +24269,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 796,
@@ -23517,7 +24300,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 797,
@@ -23547,7 +24331,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 798,
@@ -23577,7 +24362,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 799,
@@ -23607,7 +24393,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 800,
@@ -23637,7 +24424,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 801,
@@ -23667,7 +24455,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 802,
@@ -23697,7 +24486,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 803,
@@ -23727,7 +24517,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 804,
@@ -23757,7 +24548,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 805,
@@ -23787,7 +24579,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 806,
@@ -23817,7 +24610,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 807,
@@ -23847,7 +24641,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 808,
@@ -23877,7 +24672,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 809,
@@ -23907,7 +24703,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 810,
@@ -23937,7 +24734,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 811,
@@ -23967,7 +24765,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 812,
@@ -23997,7 +24796,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 813,
@@ -24027,7 +24827,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 814,
@@ -24057,7 +24858,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 815,
@@ -24087,7 +24889,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 816,
@@ -24117,7 +24920,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 817,
@@ -24147,7 +24951,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 818,
@@ -24177,7 +24982,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 819,
@@ -24207,7 +25013,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 820,
@@ -24237,7 +25044,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 33,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 821,
@@ -24267,7 +25075,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 822,
@@ -24297,7 +25106,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 823,
@@ -24327,7 +25137,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 825,
@@ -24357,7 +25168,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 826,
@@ -24387,7 +25199,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 827,
@@ -24417,7 +25230,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 828,
@@ -24447,7 +25261,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 829,
@@ -24477,7 +25292,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 830,
@@ -24507,7 +25323,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 831,
@@ -24537,7 +25354,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 832,
@@ -24567,7 +25385,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 833,
@@ -24597,7 +25416,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 834,
@@ -24627,7 +25447,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 835,
@@ -24657,7 +25478,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 836,
@@ -24687,7 +25509,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 837,
@@ -24717,7 +25540,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 838,
@@ -24747,7 +25571,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 839,
@@ -24777,7 +25602,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 840,
@@ -24807,7 +25633,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 841,
@@ -24837,7 +25664,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 842,
@@ -24867,7 +25695,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 843,
@@ -24897,7 +25726,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 844,
@@ -24927,7 +25757,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 845,
@@ -24957,7 +25788,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 846,
@@ -24987,7 +25819,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 847,
@@ -25017,7 +25850,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 848,
@@ -25047,7 +25881,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 849,
@@ -25077,7 +25912,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 850,
@@ -25107,7 +25943,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 851,
@@ -25137,7 +25974,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 852,
@@ -25167,7 +26005,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 853,
@@ -25197,7 +26036,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 854,
@@ -25227,7 +26067,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 855,
@@ -25257,7 +26098,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 856,
@@ -25287,7 +26129,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 857,
@@ -25317,7 +26160,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 858,
@@ -25347,7 +26191,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 859,
@@ -25377,7 +26222,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 860,
@@ -25407,7 +26253,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 861,
@@ -25437,7 +26284,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 862,
@@ -25467,7 +26315,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 863,
@@ -25497,7 +26346,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 28,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 864,
@@ -25527,7 +26377,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 865,
@@ -25557,7 +26408,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 866,
@@ -25587,7 +26439,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 867,
@@ -25617,7 +26470,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 868,
@@ -25647,7 +26501,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 869,
@@ -25677,7 +26532,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 870,
@@ -25707,7 +26563,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 871,
@@ -25737,7 +26594,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 872,
@@ -25767,7 +26625,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 873,
@@ -25797,7 +26656,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 874,
@@ -25827,7 +26687,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 875,
@@ -25857,7 +26718,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 876,
@@ -25887,7 +26749,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 877,
@@ -25917,7 +26780,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 878,
@@ -25947,7 +26811,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 879,
@@ -25977,7 +26842,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 880,
@@ -26007,7 +26873,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 881,
@@ -26037,7 +26904,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 882,
@@ -26067,7 +26935,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 883,
@@ -26097,7 +26966,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 884,
@@ -26127,7 +26997,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 885,
@@ -26157,7 +27028,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 886,
@@ -26187,7 +27059,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 887,
@@ -26217,7 +27090,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 888,
@@ -26247,7 +27121,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 889,
@@ -26277,7 +27152,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 890,
@@ -26307,7 +27183,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 891,
@@ -26337,7 +27214,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 892,
@@ -26367,7 +27245,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 893,
@@ -26397,7 +27276,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 894,
@@ -26427,7 +27307,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 895,
@@ -26457,7 +27338,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 896,
@@ -26487,7 +27369,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 897,
@@ -26517,7 +27400,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 898,
@@ -26547,7 +27431,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 899,
@@ -26577,7 +27462,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 900,
@@ -26607,7 +27493,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 901,
@@ -26637,7 +27524,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 902,
@@ -26667,7 +27555,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 903,
@@ -26697,7 +27586,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 904,
@@ -26727,7 +27617,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 905,
@@ -26757,7 +27648,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 906,
@@ -26787,7 +27679,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 907,
@@ -26817,7 +27710,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 908,
@@ -26847,7 +27741,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 909,
@@ -26877,7 +27772,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 910,
@@ -26907,7 +27803,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 911,
@@ -26937,7 +27834,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 912,
@@ -26967,7 +27865,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 913,
@@ -26997,7 +27896,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 26,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 914,
@@ -27027,7 +27927,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 915,
@@ -27057,7 +27958,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 916,
@@ -27087,7 +27989,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 918,
@@ -27117,7 +28020,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 919,
@@ -27147,7 +28051,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 920,
@@ -27177,7 +28082,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 921,
@@ -27207,7 +28113,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 922,
@@ -27237,7 +28144,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 923,
@@ -27267,7 +28175,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 924,
@@ -27297,7 +28206,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 925,
@@ -27327,7 +28237,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 926,
@@ -27357,7 +28268,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 927,
@@ -27387,7 +28299,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 134,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 928,
@@ -27417,7 +28330,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 929,
@@ -27447,7 +28361,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 930,
@@ -27477,7 +28392,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 931,
@@ -27507,7 +28423,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 932,
@@ -27537,7 +28454,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 933,
@@ -27567,7 +28485,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 934,
@@ -27597,7 +28516,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 935,
@@ -27627,7 +28547,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 936,
@@ -27657,7 +28578,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 937,
@@ -27687,7 +28609,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 938,
@@ -27717,7 +28640,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 939,
@@ -27747,7 +28671,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 940,
@@ -27777,7 +28702,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 34,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 941,
@@ -27807,7 +28733,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 942,
@@ -27837,7 +28764,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 943,
@@ -27867,7 +28795,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 944,
@@ -27897,7 +28826,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 945,
@@ -27927,7 +28857,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 946,
@@ -27957,7 +28888,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 947,
@@ -27987,7 +28919,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 948,
@@ -28017,7 +28950,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 949,
@@ -28047,7 +28981,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 950,
@@ -28077,7 +29012,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 951,
@@ -28107,7 +29043,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 952,
@@ -28137,7 +29074,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 953,
@@ -28167,7 +29105,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 954,
@@ -28197,7 +29136,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 955,
@@ -28227,7 +29167,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 956,
@@ -28257,7 +29198,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 957,
@@ -28287,7 +29229,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 958,
@@ -28317,7 +29260,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 959,
@@ -28347,7 +29291,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 960,
@@ -28377,7 +29322,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 28,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 961,
@@ -28407,7 +29353,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 962,
@@ -28437,7 +29384,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 963,
@@ -28467,7 +29415,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 964,
@@ -28497,7 +29446,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 965,
@@ -28527,7 +29477,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 966,
@@ -28557,7 +29508,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 967,
@@ -28587,7 +29539,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 968,
@@ -28617,7 +29570,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 969,
@@ -28647,7 +29601,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 970,
@@ -28677,7 +29632,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 971,
@@ -28707,7 +29663,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 972,
@@ -28737,7 +29694,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 973,
@@ -28767,7 +29725,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 974,
@@ -28797,7 +29756,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 975,
@@ -28827,7 +29787,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 976,
@@ -28857,7 +29818,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 977,
@@ -28887,7 +29849,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 978,
@@ -28917,7 +29880,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 979,
@@ -28947,7 +29911,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 980,
@@ -28977,7 +29942,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 981,
@@ -29007,7 +29973,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 982,
@@ -29037,7 +30004,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 983,
@@ -29067,7 +30035,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 984,
@@ -29097,7 +30066,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 985,
@@ -29127,7 +30097,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 986,
@@ -29157,7 +30128,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 987,
@@ -29187,7 +30159,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 988,
@@ -29217,7 +30190,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 989,
@@ -29247,7 +30221,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 990,
@@ -29277,7 +30252,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 991,
@@ -29307,7 +30283,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 992,
@@ -29337,7 +30314,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 993,
@@ -29367,7 +30345,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 994,
@@ -29397,7 +30376,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 995,
@@ -29427,7 +30407,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 996,
@@ -29457,7 +30438,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 997,
@@ -29487,7 +30469,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 998,
@@ -29517,7 +30500,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 999,
@@ -29547,7 +30531,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1000,
@@ -29577,7 +30562,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1001,
@@ -29607,7 +30593,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1002,
@@ -29637,7 +30624,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1003,
@@ -29667,7 +30655,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1004,
@@ -29697,7 +30686,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1005,
@@ -29727,7 +30717,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1006,
@@ -29757,7 +30748,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1007,
@@ -29787,7 +30779,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1008,
@@ -29817,7 +30810,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1009,
@@ -29847,7 +30841,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1010,
@@ -29877,7 +30872,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1011,
@@ -29907,7 +30903,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1012,
@@ -29937,7 +30934,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1013,
@@ -29967,7 +30965,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1014,
@@ -29997,7 +30996,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1015,
@@ -30027,7 +31027,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1016,
@@ -30057,7 +31058,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1017,
@@ -30087,7 +31089,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1018,
@@ -30117,7 +31120,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1019,
@@ -30147,7 +31151,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1020,
@@ -30177,7 +31182,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1021,
@@ -30207,7 +31213,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1022,
@@ -30237,7 +31244,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1023,
@@ -30267,7 +31275,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1024,
@@ -30297,7 +31306,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1025,
@@ -30327,7 +31337,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1026,
@@ -30357,7 +31368,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1027,
@@ -30387,7 +31399,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1028,
@@ -30417,7 +31430,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1029,
@@ -30447,7 +31461,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1030,
@@ -30477,7 +31492,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1031,
@@ -30507,7 +31523,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1032,
@@ -30537,7 +31554,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1033,
@@ -30567,7 +31585,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1034,
@@ -30597,7 +31616,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1035,
@@ -30627,7 +31647,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1036,
@@ -30657,7 +31678,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1037,
@@ -30687,7 +31709,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1038,
@@ -30717,7 +31740,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1039,
@@ -30747,7 +31771,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1040,
@@ -30777,7 +31802,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1041,
@@ -30807,7 +31833,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1042,
@@ -30837,7 +31864,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1043,
@@ -30867,7 +31895,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1044,
@@ -30897,7 +31926,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1045,
@@ -30927,7 +31957,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1046,
@@ -30957,7 +31988,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1047,
@@ -30987,7 +32019,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1048,
@@ -31017,7 +32050,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1049,
@@ -31047,7 +32081,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1050,
@@ -31077,7 +32112,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1051,
@@ -31107,7 +32143,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1052,
@@ -31137,7 +32174,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1053,
@@ -31167,7 +32205,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1054,
@@ -31197,7 +32236,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1055,
@@ -31227,7 +32267,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1056,
@@ -31257,7 +32298,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1057,
@@ -31287,7 +32329,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1058,
@@ -31317,7 +32360,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1059,
@@ -31347,7 +32391,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1060,
@@ -31377,7 +32422,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1061,
@@ -31407,7 +32453,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1062,
@@ -31437,7 +32484,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1063,
@@ -31467,7 +32515,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1064,
@@ -31497,7 +32546,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1065,
@@ -31527,7 +32577,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1066,
@@ -31557,7 +32608,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1067,
@@ -31587,7 +32639,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1068,
@@ -31617,7 +32670,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1069,
@@ -31647,7 +32701,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1070,
@@ -31677,7 +32732,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1071,
@@ -31707,7 +32763,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1072,
@@ -31737,7 +32794,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1073,
@@ -31767,7 +32825,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1074,
@@ -31797,7 +32856,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1075,
@@ -31827,7 +32887,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1076,
@@ -31857,7 +32918,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1077,
@@ -31887,7 +32949,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1078,
@@ -31917,7 +32980,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1079,
@@ -31947,7 +33011,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1080,
@@ -31977,7 +33042,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1081,
@@ -32007,7 +33073,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1082,
@@ -32037,7 +33104,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1083,
@@ -32067,7 +33135,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1084,
@@ -32097,7 +33166,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1085,
@@ -32127,7 +33197,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1086,
@@ -32157,7 +33228,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1087,
@@ -32187,7 +33259,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 40,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1088,
@@ -32217,7 +33290,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1089,
@@ -32247,7 +33321,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1090,
@@ -32277,7 +33352,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 36,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1091,
@@ -32307,7 +33383,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1092,
@@ -32337,7 +33414,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1094,
@@ -32367,7 +33445,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1095,
@@ -32397,7 +33476,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1096,
@@ -32427,7 +33507,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1097,
@@ -32457,7 +33538,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1098,
@@ -32487,7 +33569,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1099,
@@ -32517,7 +33600,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1100,
@@ -32547,7 +33631,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1101,
@@ -32577,7 +33662,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1102,
@@ -32607,7 +33693,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1103,
@@ -32637,7 +33724,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1104,
@@ -32667,7 +33755,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1105,
@@ -32697,7 +33786,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1106,
@@ -32727,7 +33817,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1107,
@@ -32757,7 +33848,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1108,
@@ -32787,7 +33879,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1109,
@@ -32817,7 +33910,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1110,
@@ -32847,7 +33941,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1111,
@@ -32877,7 +33972,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1112,
@@ -32907,7 +34003,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1113,
@@ -32937,7 +34034,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1114,
@@ -32967,7 +34065,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1115,
@@ -32997,7 +34096,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1116,
@@ -33027,7 +34127,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1117,
@@ -33057,7 +34158,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1118,
@@ -33087,7 +34189,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1119,
@@ -33117,7 +34220,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1120,
@@ -33147,7 +34251,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1121,
@@ -33177,7 +34282,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1122,
@@ -33207,7 +34313,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1123,
@@ -33237,7 +34344,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1124,
@@ -33267,7 +34375,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1125,
@@ -33297,7 +34406,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1126,
@@ -33327,7 +34437,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1127,
@@ -33357,7 +34468,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1128,
@@ -33387,7 +34499,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1129,
@@ -33417,7 +34530,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1130,
@@ -33447,7 +34561,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1131,
@@ -33477,7 +34592,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1132,
@@ -33507,7 +34623,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1133,
@@ -33537,7 +34654,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1134,
@@ -33567,7 +34685,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1135,
@@ -33597,7 +34716,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1136,
@@ -33627,7 +34747,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1137,
@@ -33657,7 +34778,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1138,
@@ -33687,7 +34809,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1139,
@@ -33717,7 +34840,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1140,
@@ -33747,7 +34871,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1141,
@@ -33777,7 +34902,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1142,
@@ -33807,7 +34933,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1143,
@@ -33837,7 +34964,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1144,
@@ -33867,7 +34995,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1145,
@@ -33897,7 +35026,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1146,
@@ -33927,7 +35057,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1147,
@@ -33957,7 +35088,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1148,
@@ -33987,7 +35119,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1149,
@@ -34017,7 +35150,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1150,
@@ -34047,7 +35181,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1151,
@@ -34077,7 +35212,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1152,
@@ -34107,7 +35243,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1153,
@@ -34137,7 +35274,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1154,
@@ -34167,7 +35305,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1155,
@@ -34197,7 +35336,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1156,
@@ -34227,7 +35367,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1157,
@@ -34257,7 +35398,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1158,
@@ -34287,7 +35429,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1159,
@@ -34317,7 +35460,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1160,
@@ -34347,7 +35491,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1161,
@@ -34377,7 +35522,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1162,
@@ -34407,7 +35553,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1163,
@@ -34437,7 +35584,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1164,
@@ -34467,7 +35615,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1165,
@@ -34497,7 +35646,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1166,
@@ -34527,7 +35677,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1167,
@@ -34557,7 +35708,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1168,
@@ -34587,7 +35739,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1169,
@@ -34617,7 +35770,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1170,
@@ -34647,7 +35801,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1171,
@@ -34677,7 +35832,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1172,
@@ -34707,7 +35863,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1173,
@@ -34737,7 +35894,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1174,
@@ -34767,7 +35925,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1175,
@@ -34797,7 +35956,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1176,
@@ -34827,7 +35987,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1177,
@@ -34857,7 +36018,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1178,
@@ -34887,7 +36049,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1179,
@@ -34917,7 +36080,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1180,
@@ -34947,7 +36111,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1181,
@@ -34977,7 +36142,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1182,
@@ -35007,7 +36173,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1183,
@@ -35037,7 +36204,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1184,
@@ -35067,7 +36235,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1185,
@@ -35097,7 +36266,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1186,
@@ -35127,7 +36297,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1187,
@@ -35157,7 +36328,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1188,
@@ -35187,7 +36359,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1189,
@@ -35217,7 +36390,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1190,
@@ -35247,7 +36421,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1191,
@@ -35277,7 +36452,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1192,
@@ -35307,7 +36483,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1193,
@@ -35337,7 +36514,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1194,
@@ -35367,7 +36545,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1195,
@@ -35397,7 +36576,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1197,
@@ -35427,7 +36607,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1198,
@@ -35457,7 +36638,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1199,
@@ -35487,7 +36669,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1200,
@@ -35517,7 +36700,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1201,
@@ -35547,7 +36731,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1202,
@@ -35577,7 +36762,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1203,
@@ -35607,7 +36793,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1204,
@@ -35637,7 +36824,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1205,
@@ -35667,7 +36855,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1206,
@@ -35697,7 +36886,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1207,
@@ -35727,7 +36917,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1208,
@@ -35757,7 +36948,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1209,
@@ -35787,7 +36979,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1210,
@@ -35817,7 +37010,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1211,
@@ -35847,7 +37041,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1212,
@@ -35877,7 +37072,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1213,
@@ -35907,7 +37103,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1214,
@@ -35937,7 +37134,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1215,
@@ -35967,7 +37165,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1216,
@@ -35997,7 +37196,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1217,
@@ -36027,7 +37227,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1218,
@@ -36057,7 +37258,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1219,
@@ -36087,7 +37289,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1221,
@@ -36117,7 +37320,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1222,
@@ -36147,7 +37351,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1223,
@@ -36177,7 +37382,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1224,
@@ -36207,7 +37413,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1225,
@@ -36237,7 +37444,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 27,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1226,
@@ -36267,7 +37475,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1227,
@@ -36297,7 +37506,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1228,
@@ -36327,7 +37537,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1229,
@@ -36357,7 +37568,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1230,
@@ -36387,7 +37599,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1231,
@@ -36417,7 +37630,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1232,
@@ -36447,7 +37661,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1233,
@@ -36477,7 +37692,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1234,
@@ -36507,7 +37723,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1235,
@@ -36537,7 +37754,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1236,
@@ -36567,7 +37785,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1237,
@@ -36597,7 +37816,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1238,
@@ -36627,7 +37847,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1239,
@@ -36657,7 +37878,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1240,
@@ -36687,7 +37909,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1241,
@@ -36717,7 +37940,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1242,
@@ -36747,7 +37971,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1243,
@@ -36777,7 +38002,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1244,
@@ -36807,7 +38033,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1245,
@@ -36837,7 +38064,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1246,
@@ -36867,7 +38095,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1247,
@@ -36897,7 +38126,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1248,
@@ -36927,7 +38157,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1249,
@@ -36957,7 +38188,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 40,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1250,
@@ -36987,7 +38219,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1252,
@@ -37017,7 +38250,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1253,
@@ -37047,7 +38281,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1254,
@@ -37077,7 +38312,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1255,
@@ -37107,7 +38343,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1256,
@@ -37137,7 +38374,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1257,
@@ -37167,7 +38405,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1258,
@@ -37197,7 +38436,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1259,
@@ -37227,7 +38467,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1260,
@@ -37257,7 +38498,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1261,
@@ -37287,7 +38529,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1262,
@@ -37317,7 +38560,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1263,
@@ -37347,7 +38591,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1264,
@@ -37377,7 +38622,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1265,
@@ -37407,7 +38653,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1266,
@@ -37437,7 +38684,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 70,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1267,
@@ -37467,7 +38715,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1268,
@@ -37497,7 +38746,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1269,
@@ -37527,7 +38777,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1270,
@@ -37557,7 +38808,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1271,
@@ -37587,7 +38839,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1272,
@@ -37617,7 +38870,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1273,
@@ -37647,7 +38901,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1274,
@@ -37677,7 +38932,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1275,
@@ -37707,7 +38963,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1276,
@@ -37737,7 +38994,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 27,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1277,
@@ -37767,7 +39025,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1278,
@@ -37797,7 +39056,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1279,
@@ -37827,7 +39087,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1280,
@@ -37857,7 +39118,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1281,
@@ -37887,7 +39149,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1282,
@@ -37917,7 +39180,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1283,
@@ -37947,7 +39211,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1284,
@@ -37977,7 +39242,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1285,
@@ -38007,7 +39273,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1286,
@@ -38037,7 +39304,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1287,
@@ -38067,7 +39335,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1288,
@@ -38097,7 +39366,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1289,
@@ -38127,7 +39397,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1290,
@@ -38157,7 +39428,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1291,
@@ -38187,7 +39459,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1292,
@@ -38217,7 +39490,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1293,
@@ -38247,7 +39521,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1294,
@@ -38277,7 +39552,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1295,
@@ -38307,7 +39583,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1296,
@@ -38337,7 +39614,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 21,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1297,
@@ -38367,7 +39645,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1298,
@@ -38397,7 +39676,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1299,
@@ -38427,7 +39707,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1300,
@@ -38457,7 +39738,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1301,
@@ -38487,7 +39769,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1302,
@@ -38517,7 +39800,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1303,
@@ -38547,7 +39831,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1304,
@@ -38577,7 +39862,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1305,
@@ -38607,7 +39893,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1306,
@@ -38637,7 +39924,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 24,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1307,
@@ -38667,7 +39955,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1308,
@@ -38697,7 +39986,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1309,
@@ -38727,7 +40017,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1310,
@@ -38757,7 +40048,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1312,
@@ -38787,7 +40079,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1313,
@@ -38817,7 +40110,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1314,
@@ -38847,7 +40141,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1315,
@@ -38877,7 +40172,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1316,
@@ -38907,7 +40203,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1317,
@@ -38937,7 +40234,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1318,
@@ -38967,7 +40265,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1319,
@@ -38997,7 +40296,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1320,
@@ -39027,7 +40327,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1321,
@@ -39057,7 +40358,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1322,
@@ -39087,7 +40389,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1323,
@@ -39117,7 +40420,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1324,
@@ -39147,7 +40451,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1325,
@@ -39177,7 +40482,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1326,
@@ -39207,7 +40513,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1327,
@@ -39237,7 +40544,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1328,
@@ -39267,7 +40575,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1329,
@@ -39297,7 +40606,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1330,
@@ -39327,7 +40637,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1331,
@@ -39357,7 +40668,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1332,
@@ -39387,7 +40699,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 54,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1334,
@@ -39417,7 +40730,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1335,
@@ -39447,7 +40761,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1336,
@@ -39477,7 +40792,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1337,
@@ -39507,7 +40823,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1338,
@@ -39537,7 +40854,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1339,
@@ -39567,7 +40885,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1340,
@@ -39597,7 +40916,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1341,
@@ -39627,7 +40947,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1343,
@@ -39657,7 +40978,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1344,
@@ -39687,7 +41009,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 24,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1345,
@@ -39717,7 +41040,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1346,
@@ -39747,7 +41071,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1347,
@@ -39777,7 +41102,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1348,
@@ -39807,7 +41133,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1349,
@@ -39837,7 +41164,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1350,
@@ -39867,7 +41195,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1351,
@@ -39897,7 +41226,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 53,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1352,
@@ -39927,7 +41257,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1353,
@@ -39957,7 +41288,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1354,
@@ -39987,7 +41319,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1355,
@@ -40017,7 +41350,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1356,
@@ -40047,7 +41381,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1357,
@@ -40077,7 +41412,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1358,
@@ -40107,7 +41443,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1359,
@@ -40137,7 +41474,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1360,
@@ -40167,7 +41505,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1361,
@@ -40197,7 +41536,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1362,
@@ -40227,7 +41567,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 37,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1363,
@@ -40257,7 +41598,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 36,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1364,
@@ -40287,7 +41629,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1365,
@@ -40317,7 +41660,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1366,
@@ -40347,7 +41691,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1367,
@@ -40377,7 +41722,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1368,
@@ -40407,7 +41753,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1369,
@@ -40437,7 +41784,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1370,
@@ -40467,7 +41815,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1371,
@@ -40497,7 +41846,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 42,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1372,
@@ -40527,7 +41877,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 46,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1373,
@@ -40557,7 +41908,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1374,
@@ -40587,7 +41939,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1375,
@@ -40617,7 +41970,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1376,
@@ -40647,7 +42001,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1377,
@@ -40677,7 +42032,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1378,
@@ -40707,7 +42063,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1379,
@@ -40737,7 +42094,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1380,
@@ -40767,7 +42125,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1381,
@@ -40797,7 +42156,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1382,
@@ -40827,7 +42187,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1383,
@@ -40857,7 +42218,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1384,
@@ -40887,7 +42249,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1385,
@@ -40917,7 +42280,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1386,
@@ -40947,7 +42311,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1387,
@@ -40977,7 +42342,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1388,
@@ -41007,7 +42373,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1389,
@@ -41037,7 +42404,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1390,
@@ -41067,7 +42435,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1391,
@@ -41097,7 +42466,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1392,
@@ -41127,7 +42497,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1393,
@@ -41157,7 +42528,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1394,
@@ -41187,7 +42559,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1395,
@@ -41217,7 +42590,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1396,
@@ -41247,7 +42621,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1398,
@@ -41277,7 +42652,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1399,
@@ -41307,7 +42683,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1400,
@@ -41337,7 +42714,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1401,
@@ -41367,7 +42745,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1402,
@@ -41397,7 +42776,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1403,
@@ -41427,7 +42807,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1404,
@@ -41457,7 +42838,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1405,
@@ -41487,7 +42869,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1406,
@@ -41517,7 +42900,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1407,
@@ -41547,7 +42931,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1408,
@@ -41577,7 +42962,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1409,
@@ -41607,7 +42993,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1410,
@@ -41637,7 +43024,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1411,
@@ -41667,7 +43055,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1412,
@@ -41697,7 +43086,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 41,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1413,
@@ -41727,7 +43117,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1414,
@@ -41757,7 +43148,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1415,
@@ -41787,7 +43179,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 30,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1416,
@@ -41817,7 +43210,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1417,
@@ -41847,7 +43241,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1418,
@@ -41877,7 +43272,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1419,
@@ -41907,7 +43303,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1420,
@@ -41937,7 +43334,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1421,
@@ -41967,7 +43365,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1422,
@@ -41997,7 +43396,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1423,
@@ -42027,7 +43427,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1424,
@@ -42057,7 +43458,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1425,
@@ -42087,7 +43489,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1426,
@@ -42117,7 +43520,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1427,
@@ -42147,7 +43551,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1428,
@@ -42177,7 +43582,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1429,
@@ -42207,7 +43613,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1430,
@@ -42237,7 +43644,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1431,
@@ -42267,7 +43675,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 30,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1432,
@@ -42297,7 +43706,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1433,
@@ -42327,7 +43737,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 30,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1434,
@@ -42357,7 +43768,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1435,
@@ -42387,7 +43799,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1436,
@@ -42417,7 +43830,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1438,
@@ -42447,7 +43861,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1439,
@@ -42477,7 +43892,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1440,
@@ -42507,7 +43923,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1441,
@@ -42537,7 +43954,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1442,
@@ -42567,7 +43985,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 48,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1443,
@@ -42597,7 +44016,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 46,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1444,
@@ -42627,7 +44047,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1445,
@@ -42657,7 +44078,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1446,
@@ -42687,7 +44109,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1447,
@@ -42717,7 +44140,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1448,
@@ -42747,7 +44171,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1449,
@@ -42777,7 +44202,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1450,
@@ -42807,7 +44233,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1451,
@@ -42837,7 +44264,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1452,
@@ -42867,7 +44295,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1453,
@@ -42897,7 +44326,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 24,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1454,
@@ -42927,7 +44357,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1455,
@@ -42957,7 +44388,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1456,
@@ -42987,7 +44419,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1457,
@@ -43017,7 +44450,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1458,
@@ -43047,7 +44481,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 54,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1459,
@@ -43077,7 +44512,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1460,
@@ -43107,7 +44543,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1461,
@@ -43137,7 +44574,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1462,
@@ -43167,7 +44605,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1463,
@@ -43197,7 +44636,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1464,
@@ -43227,7 +44667,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1465,
@@ -43257,7 +44698,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1466,
@@ -43287,7 +44729,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1467,
@@ -43317,7 +44760,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1468,
@@ -43347,7 +44791,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1469,
@@ -43377,7 +44822,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 27,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1470,
@@ -43407,7 +44853,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1471,
@@ -43437,7 +44884,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1472,
@@ -43467,7 +44915,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1473,
@@ -43497,7 +44946,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1474,
@@ -43527,7 +44977,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1475,
@@ -43557,7 +45008,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1476,
@@ -43587,7 +45039,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1477,
@@ -43617,7 +45070,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1478,
@@ -43647,7 +45101,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1479,
@@ -43677,7 +45132,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1480,
@@ -43707,7 +45163,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1481,
@@ -43737,7 +45194,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1482,
@@ -43767,7 +45225,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1483,
@@ -43797,7 +45256,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1484,
@@ -43827,7 +45287,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1485,
@@ -43857,7 +45318,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1486,
@@ -43887,7 +45349,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 37,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1487,
@@ -43917,7 +45380,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1488,
@@ -43947,7 +45411,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1489,
@@ -43977,7 +45442,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1490,
@@ -44007,7 +45473,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1491,
@@ -44037,7 +45504,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1492,
@@ -44067,7 +45535,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1493,
@@ -44097,7 +45566,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1494,
@@ -44127,7 +45597,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1495,
@@ -44157,7 +45628,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1496,
@@ -44187,7 +45659,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1497,
@@ -44217,7 +45690,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 57,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1498,
@@ -44247,7 +45721,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1499,
@@ -44277,7 +45752,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1500,
@@ -44307,7 +45783,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1501,
@@ -44337,7 +45814,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1502,
@@ -44367,7 +45845,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 39,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1503,
@@ -44397,7 +45876,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1504,
@@ -44427,7 +45907,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1505,
@@ -44457,7 +45938,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1506,
@@ -44487,7 +45969,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1507,
@@ -44517,7 +46000,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1508,
@@ -44547,7 +46031,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 59,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1509,
@@ -44577,7 +46062,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1510,
@@ -44607,7 +46093,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 103,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1511,
@@ -44637,7 +46124,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1512,
@@ -44667,7 +46155,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1513,
@@ -44697,7 +46186,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1514,
@@ -44727,7 +46217,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1515,
@@ -44757,7 +46248,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1516,
@@ -44787,7 +46279,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1517,
@@ -44817,7 +46310,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1518,
@@ -44847,7 +46341,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1519,
@@ -44877,7 +46372,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1520,
@@ -44907,7 +46403,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1521,
@@ -44937,7 +46434,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1522,
@@ -44967,7 +46465,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1523,
@@ -44997,7 +46496,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1524,
@@ -45027,7 +46527,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1525,
@@ -45057,7 +46558,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1526,
@@ -45087,7 +46589,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 29,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1527,
@@ -45117,7 +46620,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1528,
@@ -45147,7 +46651,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1529,
@@ -45177,7 +46682,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1530,
@@ -45207,7 +46713,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1531,
@@ -45237,7 +46744,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1532,
@@ -45267,7 +46775,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1533,
@@ -45297,7 +46806,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1534,
@@ -45327,7 +46837,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1535,
@@ -45357,7 +46868,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1536,
@@ -45387,7 +46899,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1537,
@@ -45417,7 +46930,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1538,
@@ -45447,7 +46961,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1539,
@@ -45477,7 +46992,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1540,
@@ -45507,7 +47023,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1541,
@@ -45537,7 +47054,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1542,
@@ -45567,7 +47085,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1543,
@@ -45597,7 +47116,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1544,
@@ -45627,7 +47147,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1545,
@@ -45657,7 +47178,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1546,
@@ -45687,7 +47209,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1547,
@@ -45717,7 +47240,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1548,
@@ -45747,7 +47271,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1549,
@@ -45777,7 +47302,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1550,
@@ -45807,7 +47333,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1551,
@@ -45837,7 +47364,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1552,
@@ -45867,7 +47395,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1553,
@@ -45897,7 +47426,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1554,
@@ -45927,7 +47457,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1555,
@@ -45957,7 +47488,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1556,
@@ -45987,7 +47519,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1557,
@@ -46017,7 +47550,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1558,
@@ -46047,7 +47581,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1559,
@@ -46077,7 +47612,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1560,
@@ -46107,7 +47643,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1561,
@@ -46137,7 +47674,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1562,
@@ -46167,7 +47705,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1563,
@@ -46197,7 +47736,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1564,
@@ -46227,7 +47767,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1565,
@@ -46257,7 +47798,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1566,
@@ -46287,7 +47829,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1567,
@@ -46317,7 +47860,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1568,
@@ -46347,7 +47891,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1569,
@@ -46377,7 +47922,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1570,
@@ -46407,7 +47953,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1571,
@@ -46437,7 +47984,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1572,
@@ -46467,7 +48015,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1573,
@@ -46497,7 +48046,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1574,
@@ -46527,7 +48077,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1575,
@@ -46557,7 +48108,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1576,
@@ -46587,7 +48139,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1577,
@@ -46617,7 +48170,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1578,
@@ -46647,7 +48201,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1579,
@@ -46677,7 +48232,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1580,
@@ -46707,7 +48263,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1581,
@@ -46737,7 +48294,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1582,
@@ -46767,7 +48325,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1583,
@@ -46797,7 +48356,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1584,
@@ -46827,7 +48387,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1585,
@@ -46857,7 +48418,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1586,
@@ -46887,7 +48449,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1587,
@@ -46917,7 +48480,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1588,
@@ -46947,7 +48511,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1589,
@@ -46977,7 +48542,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1590,
@@ -47007,7 +48573,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1591,
@@ -47037,7 +48604,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1592,
@@ -47067,7 +48635,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1593,
@@ -47097,7 +48666,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1594,
@@ -47127,7 +48697,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1595,
@@ -47157,7 +48728,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1596,
@@ -47187,7 +48759,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1597,
@@ -47217,7 +48790,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1598,
@@ -47247,7 +48821,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1599,
@@ -47277,7 +48852,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1600,
@@ -47307,7 +48883,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1601,
@@ -47337,7 +48914,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1602,
@@ -47367,7 +48945,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1603,
@@ -47397,7 +48976,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1604,
@@ -47427,7 +49007,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1605,
@@ -47457,7 +49038,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1606,
@@ -47487,7 +49069,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 43,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1607,
@@ -47517,7 +49100,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1608,
@@ -47547,7 +49131,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1609,
@@ -47577,7 +49162,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 33,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1610,
@@ -47607,7 +49193,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1611,
@@ -47637,7 +49224,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1612,
@@ -47667,7 +49255,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 50,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1613,
@@ -47697,7 +49286,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1614,
@@ -47727,7 +49317,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 30,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1615,
@@ -47757,7 +49348,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1616,
@@ -47787,7 +49379,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1617,
@@ -47817,7 +49410,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1618,
@@ -47847,7 +49441,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 35,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1619,
@@ -47877,7 +49472,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 31,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1620,
@@ -47907,7 +49503,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1621,
@@ -47937,7 +49534,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1622,
@@ -47967,7 +49565,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1623,
@@ -47997,7 +49596,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1625,
@@ -48027,7 +49627,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1626,
@@ -48057,7 +49658,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1627,
@@ -48087,7 +49689,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1628,
@@ -48117,7 +49720,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1630,
@@ -48147,7 +49751,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1631,
@@ -48177,7 +49782,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1632,
@@ -48207,7 +49813,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1633,
@@ -48237,7 +49844,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1634,
@@ -48267,7 +49875,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1635,
@@ -48297,7 +49906,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1636,
@@ -48327,7 +49937,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1637,
@@ -48357,7 +49968,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1638,
@@ -48387,7 +49999,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1639,
@@ -48417,7 +50030,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1640,
@@ -48447,7 +50061,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1641,
@@ -48477,7 +50092,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 51,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1642,
@@ -48507,7 +50123,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1643,
@@ -48537,7 +50154,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1644,
@@ -48567,7 +50185,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1645,
@@ -48597,7 +50216,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1646,
@@ -48627,7 +50247,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1647,
@@ -48657,7 +50278,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 157,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1648,
@@ -48687,7 +50309,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1649,
@@ -48717,7 +50340,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1650,
@@ -48747,7 +50371,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1651,
@@ -48777,7 +50402,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1652,
@@ -48807,7 +50433,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 21,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1653,
@@ -48837,7 +50464,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1654,
@@ -48867,7 +50495,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1655,
@@ -48897,7 +50526,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1656,
@@ -48927,7 +50557,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1657,
@@ -48957,7 +50588,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1658,
@@ -48987,7 +50619,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1659,
@@ -49017,7 +50650,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1660,
@@ -49047,7 +50681,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1661,
@@ -49077,7 +50712,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1662,
@@ -49107,7 +50743,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1663,
@@ -49137,7 +50774,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1664,
@@ -49167,7 +50805,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1665,
@@ -49197,7 +50836,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1666,
@@ -49227,7 +50867,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1667,
@@ -49257,7 +50898,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1668,
@@ -49287,7 +50929,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1669,
@@ -49317,7 +50960,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1670,
@@ -49347,7 +50991,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1671,
@@ -49377,7 +51022,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1672,
@@ -49407,7 +51053,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1673,
@@ -49437,7 +51084,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1675,
@@ -49467,7 +51115,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1676,
@@ -49497,7 +51146,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1677,
@@ -49527,7 +51177,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1678,
@@ -49557,7 +51208,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1679,
@@ -49587,7 +51239,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1680,
@@ -49617,7 +51270,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1681,
@@ -49647,7 +51301,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1682,
@@ -49677,7 +51332,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1683,
@@ -49707,7 +51363,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1684,
@@ -49737,7 +51394,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1685,
@@ -49767,7 +51425,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1686,
@@ -49797,7 +51456,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1687,
@@ -49827,7 +51487,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1688,
@@ -49857,7 +51518,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1689,
@@ -49887,7 +51549,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1690,
@@ -49917,7 +51580,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1691,
@@ -49947,7 +51611,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1692,
@@ -49977,7 +51642,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1693,
@@ -50007,7 +51673,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1694,
@@ -50037,7 +51704,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1695,
@@ -50067,7 +51735,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1696,
@@ -50097,7 +51766,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1697,
@@ -50127,7 +51797,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1698,
@@ -50157,7 +51828,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1699,
@@ -50187,7 +51859,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 106,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1700,
@@ -50217,7 +51890,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1701,
@@ -50247,7 +51921,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1702,
@@ -50277,7 +51952,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1703,
@@ -50307,7 +51983,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 85,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1704,
@@ -50337,7 +52014,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1705,
@@ -50367,7 +52045,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1706,
@@ -50397,7 +52076,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1707,
@@ -50427,7 +52107,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1708,
@@ -50457,7 +52138,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1709,
@@ -50487,7 +52169,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1710,
@@ -50517,7 +52200,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1711,
@@ -50547,7 +52231,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1712,
@@ -50577,7 +52262,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1713,
@@ -50607,7 +52293,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1714,
@@ -50637,7 +52324,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1715,
@@ -50667,7 +52355,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1716,
@@ -50697,7 +52386,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1717,
@@ -50727,7 +52417,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1718,
@@ -50757,7 +52448,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1719,
@@ -50787,7 +52479,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1720,
@@ -50817,7 +52510,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1721,
@@ -50847,7 +52541,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1722,
@@ -50877,7 +52572,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1723,
@@ -50907,7 +52603,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1724,
@@ -50937,7 +52634,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1725,
@@ -50967,7 +52665,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 40,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1726,
@@ -50997,7 +52696,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1727,
@@ -51027,7 +52727,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1728,
@@ -51057,7 +52758,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1729,
@@ -51087,7 +52789,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1730,
@@ -51117,7 +52820,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 282,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1731,
@@ -51147,7 +52851,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1732,
@@ -51177,7 +52882,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1733,
@@ -51207,7 +52913,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1734,
@@ -51237,7 +52944,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1735,
@@ -51267,7 +52975,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1736,
@@ -51297,7 +53006,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1737,
@@ -51327,7 +53037,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1738,
@@ -51357,7 +53068,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1739,
@@ -51387,7 +53099,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1740,
@@ -51417,7 +53130,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1741,
@@ -51447,7 +53161,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1742,
@@ -51477,7 +53192,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1743,
@@ -51507,7 +53223,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 23,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1744,
@@ -51537,7 +53254,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1745,
@@ -51567,7 +53285,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1746,
@@ -51597,7 +53316,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1747,
@@ -51627,7 +53347,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 56,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1748,
@@ -51657,7 +53378,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1749,
@@ -51687,7 +53409,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1750,
@@ -51717,7 +53440,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1751,
@@ -51747,7 +53471,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1752,
@@ -51777,7 +53502,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1753,
@@ -51807,7 +53533,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1754,
@@ -51837,7 +53564,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1756,
@@ -51867,7 +53595,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1757,
@@ -51897,7 +53626,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1758,
@@ -51927,7 +53657,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 32,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1759,
@@ -51957,7 +53688,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1760,
@@ -51987,7 +53719,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1761,
@@ -52017,7 +53750,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1762,
@@ -52047,7 +53781,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1763,
@@ -52077,7 +53812,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1764,
@@ -52107,7 +53843,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1765,
@@ -52137,7 +53874,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1766,
@@ -52167,7 +53905,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1767,
@@ -52197,7 +53936,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1768,
@@ -52227,7 +53967,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1769,
@@ -52257,7 +53998,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1770,
@@ -52287,7 +54029,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1771,
@@ -52317,7 +54060,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1772,
@@ -52347,7 +54091,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1773,
@@ -52377,7 +54122,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1774,
@@ -52407,7 +54153,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1775,
@@ -52437,7 +54184,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1776,
@@ -52467,7 +54215,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1777,
@@ -52497,7 +54246,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1778,
@@ -52527,7 +54277,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1779,
@@ -52557,7 +54308,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1780,
@@ -52587,7 +54339,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1781,
@@ -52617,7 +54370,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1782,
@@ -52647,7 +54401,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 38,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1783,
@@ -52677,7 +54432,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1784,
@@ -52707,7 +54463,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1785,
@@ -52737,7 +54494,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1786,
@@ -52767,7 +54525,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1787,
@@ -52797,7 +54556,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1788,
@@ -52827,7 +54587,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1789,
@@ -52857,7 +54618,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1790,
@@ -52887,7 +54649,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1791,
@@ -52917,7 +54680,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1792,
@@ -52947,7 +54711,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1793,
@@ -52977,7 +54742,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1794,
@@ -53007,7 +54773,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1795,
@@ -53037,7 +54804,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1796,
@@ -53067,7 +54835,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1797,
@@ -53097,7 +54866,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1798,
@@ -53127,7 +54897,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1799,
@@ -53157,7 +54928,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1800,
@@ -53187,7 +54959,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1801,
@@ -53217,7 +54990,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1802,
@@ -53247,7 +55021,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1803,
@@ -53277,7 +55052,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1804,
@@ -53307,7 +55083,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1805,
@@ -53337,7 +55114,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1806,
@@ -53367,7 +55145,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1807,
@@ -53397,7 +55176,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1808,
@@ -53427,7 +55207,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1809,
@@ -53457,7 +55238,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1810,
@@ -53487,7 +55269,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1811,
@@ -53517,7 +55300,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1812,
@@ -53547,7 +55331,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1813,
@@ -53577,7 +55362,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1814,
@@ -53607,7 +55393,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1815,
@@ -53637,7 +55424,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1816,
@@ -53667,7 +55455,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1817,
@@ -53697,7 +55486,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 31,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1818,
@@ -53727,7 +55517,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1819,
@@ -53757,7 +55548,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1820,
@@ -53787,7 +55579,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1821,
@@ -53817,7 +55610,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1822,
@@ -53847,7 +55641,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1823,
@@ -53877,7 +55672,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1825,
@@ -53907,7 +55703,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1826,
@@ -53937,7 +55734,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1827,
@@ -53967,7 +55765,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1828,
@@ -53997,7 +55796,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 456,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1829,
@@ -54027,7 +55827,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1830,
@@ -54057,7 +55858,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1831,
@@ -54087,7 +55889,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1832,
@@ -54117,7 +55920,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1833,
@@ -54147,7 +55951,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1834,
@@ -54177,7 +55982,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1835,
@@ -54207,7 +56013,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 24,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1836,
@@ -54237,7 +56044,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1837,
@@ -54267,7 +56075,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1838,
@@ -54297,7 +56106,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1839,
@@ -54327,7 +56137,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1840,
@@ -54357,7 +56168,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1841,
@@ -54387,7 +56199,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1842,
@@ -54417,7 +56230,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1844,
@@ -54447,7 +56261,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1845,
@@ -54477,7 +56292,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1846,
@@ -54507,7 +56323,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1847,
@@ -54537,7 +56354,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1848,
@@ -54567,7 +56385,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 216,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1849,
@@ -54597,7 +56416,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1850,
@@ -54627,7 +56447,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1851,
@@ -54657,7 +56478,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1852,
@@ -54687,7 +56509,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1853,
@@ -54717,7 +56540,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1854,
@@ -54747,7 +56571,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1855,
@@ -54777,7 +56602,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 64,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1856,
@@ -54807,7 +56633,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 26,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1857,
@@ -54837,7 +56664,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1858,
@@ -54867,7 +56695,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1859,
@@ -54897,7 +56726,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1860,
@@ -54927,7 +56757,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 61,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1861,
@@ -54957,7 +56788,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 29,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1862,
@@ -54987,7 +56819,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1863,
@@ -55017,7 +56850,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1864,
@@ -55047,7 +56881,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1865,
@@ -55077,7 +56912,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1866,
@@ -55107,7 +56943,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 31,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1867,
@@ -55137,7 +56974,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1868,
@@ -55167,7 +57005,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 43,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1869,
@@ -55197,7 +57036,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1870,
@@ -55227,7 +57067,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1871,
@@ -55257,7 +57098,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1872,
@@ -55287,7 +57129,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1874,
@@ -55317,7 +57160,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 55,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1875,
@@ -55347,7 +57191,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1876,
@@ -55377,7 +57222,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1877,
@@ -55407,7 +57253,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 149,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1878,
@@ -55437,7 +57284,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 163,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1879,
@@ -55467,7 +57315,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1880,
@@ -55497,7 +57346,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 117,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1881,
@@ -55527,7 +57377,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1882,
@@ -55557,7 +57408,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 92,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1883,
@@ -55587,7 +57439,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1884,
@@ -55617,7 +57470,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1885,
@@ -55647,7 +57501,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1886,
@@ -55677,7 +57532,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 63,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1887,
@@ -55707,7 +57563,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 80,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1888,
@@ -55737,7 +57594,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1889,
@@ -55767,7 +57625,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1890,
@@ -55797,7 +57656,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1891,
@@ -55827,7 +57687,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1892,
@@ -55857,7 +57718,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 26,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1893,
@@ -55887,7 +57749,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1894,
@@ -55917,7 +57780,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1895,
@@ -55947,7 +57811,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 278,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1896,
@@ -55977,7 +57842,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 42,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1897,
@@ -56007,7 +57873,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1898,
@@ -56037,7 +57904,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1899,
@@ -56067,7 +57935,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1900,
@@ -56097,7 +57966,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1901,
@@ -56127,7 +57997,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1902,
@@ -56157,7 +58028,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 41,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1903,
@@ -56187,7 +58059,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1904,
@@ -56217,7 +58090,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 41,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1905,
@@ -56247,7 +58121,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1906,
@@ -56277,7 +58152,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1908,
@@ -56307,7 +58183,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1909,
@@ -56337,7 +58214,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1910,
@@ -56367,7 +58245,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1911,
@@ -56397,7 +58276,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1912,
@@ -56427,7 +58307,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1913,
@@ -56457,7 +58338,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1914,
@@ -56487,7 +58369,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1915,
@@ -56517,7 +58400,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1916,
@@ -56547,7 +58431,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1918,
@@ -56577,7 +58462,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 27,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1919,
@@ -56607,7 +58493,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1920,
@@ -56637,7 +58524,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 22,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1921,
@@ -56667,7 +58555,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1922,
@@ -56697,7 +58586,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1923,
@@ -56727,7 +58617,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1924,
@@ -56757,7 +58648,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 26,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1925,
@@ -56787,7 +58679,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1926,
@@ -56817,7 +58710,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 34,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1927,
@@ -56847,7 +58741,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1928,
@@ -56877,7 +58772,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1929,
@@ -56907,7 +58803,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1930,
@@ -56937,7 +58834,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1931,
@@ -56967,7 +58865,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1932,
@@ -56997,7 +58896,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1933,
@@ -57027,7 +58927,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1934,
@@ -57057,7 +58958,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 133,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1935,
@@ -57087,7 +58989,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1936,
@@ -57117,7 +59020,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 90,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1937,
@@ -57147,7 +59051,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1938,
@@ -57177,7 +59082,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1939,
@@ -57207,7 +59113,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1940,
@@ -57237,7 +59144,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1941,
@@ -57267,7 +59175,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1942,
@@ -57297,7 +59206,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1943,
@@ -57327,7 +59237,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1944,
@@ -57357,7 +59268,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1945,
@@ -57387,7 +59299,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1946,
@@ -57417,7 +59330,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1947,
@@ -57447,7 +59361,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1948,
@@ -57477,7 +59392,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1949,
@@ -57507,7 +59423,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 37,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1950,
@@ -57537,7 +59454,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1951,
@@ -57567,7 +59485,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1952,
@@ -57597,7 +59516,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1953,
@@ -57627,7 +59547,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1954,
@@ -57657,7 +59578,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1956,
@@ -57687,7 +59609,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1957,
@@ -57717,7 +59640,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 52,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1958,
@@ -57747,7 +59671,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 33,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1959,
@@ -57777,7 +59702,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1960,
@@ -57807,7 +59733,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1961,
@@ -57837,7 +59764,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1962,
@@ -57867,7 +59795,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1963,
@@ -57897,7 +59826,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 22,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1964,
@@ -57927,7 +59857,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1965,
@@ -57957,7 +59888,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1966,
@@ -57987,7 +59919,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1967,
@@ -58017,7 +59950,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 61,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1968,
@@ -58047,7 +59981,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1969,
@@ -58077,7 +60012,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1970,
@@ -58107,7 +60043,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1971,
@@ -58137,7 +60074,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1972,
@@ -58167,7 +60105,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1973,
@@ -58197,7 +60136,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1975,
@@ -58227,7 +60167,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1976,
@@ -58257,7 +60198,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1977,
@@ -58287,7 +60229,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1978,
@@ -58317,7 +60260,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1979,
@@ -58347,7 +60291,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 100,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1980,
@@ -58377,7 +60322,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1981,
@@ -58407,7 +60353,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1982,
@@ -58437,7 +60384,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1983,
@@ -58467,7 +60415,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1984,
@@ -58497,7 +60446,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1985,
@@ -58527,7 +60477,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1986,
@@ -58557,7 +60508,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 35,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1987,
@@ -58587,7 +60539,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1988,
@@ -58617,7 +60570,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1989,
@@ -58647,7 +60601,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1990,
@@ -58677,7 +60632,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1991,
@@ -58707,7 +60663,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1992,
@@ -58737,7 +60694,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1993,
@@ -58767,7 +60725,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 21,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1994,
@@ -58797,7 +60756,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1995,
@@ -58827,7 +60787,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1996,
@@ -58857,7 +60818,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1997,
@@ -58887,7 +60849,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1998,
@@ -58917,7 +60880,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 1999,
@@ -58947,7 +60911,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2000,
@@ -58977,7 +60942,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2001,
@@ -59007,7 +60973,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2002,
@@ -59037,7 +61004,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2003,
@@ -59067,7 +61035,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2004,
@@ -59097,7 +61066,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2005,
@@ -59127,7 +61097,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2006,
@@ -59157,7 +61128,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2007,
@@ -59187,7 +61159,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2008,
@@ -59217,7 +61190,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2009,
@@ -59247,7 +61221,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2010,
@@ -59277,7 +61252,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2011,
@@ -59307,7 +61283,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 27,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2012,
@@ -59337,7 +61314,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2013,
@@ -59367,7 +61345,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2014,
@@ -59397,7 +61376,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 32,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2015,
@@ -59427,7 +61407,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2016,
@@ -59457,7 +61438,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2017,
@@ -59487,7 +61469,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2018,
@@ -59517,7 +61500,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 35,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2019,
@@ -59547,7 +61531,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2020,
@@ -59577,7 +61562,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2021,
@@ -59607,7 +61593,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2022,
@@ -59637,7 +61624,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2023,
@@ -59667,7 +61655,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2024,
@@ -59697,7 +61686,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2025,
@@ -59727,7 +61717,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2026,
@@ -59757,7 +61748,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2027,
@@ -59787,7 +61779,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2028,
@@ -59817,7 +61810,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2029,
@@ -59847,7 +61841,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2030,
@@ -59877,7 +61872,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2031,
@@ -59907,7 +61903,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2032,
@@ -59937,7 +61934,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2033,
@@ -59967,7 +61965,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2034,
@@ -59997,7 +61996,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2035,
@@ -60027,7 +62027,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2036,
@@ -60057,7 +62058,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 22,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2037,
@@ -60087,7 +62089,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2038,
@@ -60117,7 +62120,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2039,
@@ -60147,7 +62151,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 29,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2040,
@@ -60177,7 +62182,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2041,
@@ -60207,7 +62213,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2042,
@@ -60237,7 +62244,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2043,
@@ -60267,7 +62275,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 23,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2044,
@@ -60297,7 +62306,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2045,
@@ -60327,7 +62337,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2046,
@@ -60357,7 +62368,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2047,
@@ -60387,7 +62399,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2048,
@@ -60417,7 +62430,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2049,
@@ -60447,7 +62461,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2050,
@@ -60477,7 +62492,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2052,
@@ -60507,7 +62523,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2053,
@@ -60537,7 +62554,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2054,
@@ -60567,7 +62585,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2055,
@@ -60597,7 +62616,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2056,
@@ -60627,7 +62647,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2057,
@@ -60657,7 +62678,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2058,
@@ -60687,7 +62709,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2060,
@@ -60717,7 +62740,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2061,
@@ -60747,7 +62771,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2062,
@@ -60777,7 +62802,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2063,
@@ -60807,7 +62833,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2064,
@@ -60837,7 +62864,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2065,
@@ -60867,7 +62895,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2066,
@@ -60897,7 +62926,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2067,
@@ -60927,7 +62957,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2068,
@@ -60957,7 +62988,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 33,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2069,
@@ -60987,7 +63019,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2070,
@@ -61017,7 +63050,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2071,
@@ -61047,7 +63081,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2072,
@@ -61077,7 +63112,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2073,
@@ -61107,7 +63143,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2074,
@@ -61137,7 +63174,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2075,
@@ -61167,7 +63205,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2076,
@@ -61197,7 +63236,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2077,
@@ -61227,7 +63267,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2078,
@@ -61257,7 +63298,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2079,
@@ -61287,7 +63329,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2080,
@@ -61317,7 +63360,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2081,
@@ -61347,7 +63391,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2082,
@@ -61377,7 +63422,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2083,
@@ -61407,7 +63453,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2084,
@@ -61437,7 +63484,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2085,
@@ -61467,7 +63515,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 21,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2086,
@@ -61497,7 +63546,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2087,
@@ -61527,7 +63577,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2088,
@@ -61557,7 +63608,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 31,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2089,
@@ -61587,7 +63639,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2090,
@@ -61617,7 +63670,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2091,
@@ -61647,7 +63701,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2092,
@@ -61677,7 +63732,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2093,
@@ -61707,7 +63763,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2094,
@@ -61737,7 +63794,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2095,
@@ -61767,7 +63825,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2096,
@@ -61797,7 +63856,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2097,
@@ -61827,7 +63887,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2098,
@@ -61857,7 +63918,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 38,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2099,
@@ -61887,7 +63949,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2100,
@@ -61917,7 +63980,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2101,
@@ -61947,7 +64011,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2102,
@@ -61977,7 +64042,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2103,
@@ -62007,7 +64073,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2104,
@@ -62037,7 +64104,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2105,
@@ -62067,7 +64135,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2106,
@@ -62097,7 +64166,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2107,
@@ -62127,7 +64197,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2108,
@@ -62157,7 +64228,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2109,
@@ -62187,7 +64259,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2110,
@@ -62217,7 +64290,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2111,
@@ -62247,7 +64321,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2112,
@@ -62277,7 +64352,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2113,
@@ -62307,7 +64383,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2114,
@@ -62337,7 +64414,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2115,
@@ -62367,7 +64445,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 22,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2116,
@@ -62397,7 +64476,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2118,
@@ -62427,7 +64507,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2119,
@@ -62457,7 +64538,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2120,
@@ -62487,7 +64569,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2121,
@@ -62517,7 +64600,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 21,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2122,
@@ -62547,7 +64631,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2123,
@@ -62577,7 +64662,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2124,
@@ -62607,7 +64693,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2125,
@@ -62637,7 +64724,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2126,
@@ -62667,7 +64755,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2127,
@@ -62697,7 +64786,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2128,
@@ -62727,7 +64817,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2129,
@@ -62757,7 +64848,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2130,
@@ -62787,7 +64879,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2131,
@@ -62817,7 +64910,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2132,
@@ -62847,7 +64941,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2133,
@@ -62877,7 +64972,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2134,
@@ -62907,7 +65003,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2135,
@@ -62937,7 +65034,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2136,
@@ -62967,7 +65065,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2137,
@@ -62997,7 +65096,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2138,
@@ -63027,7 +65127,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2139,
@@ -63057,7 +65158,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2140,
@@ -63087,7 +65189,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2141,
@@ -63117,7 +65220,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2142,
@@ -63147,7 +65251,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2143,
@@ -63177,7 +65282,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2144,
@@ -63207,7 +65313,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2145,
@@ -63237,7 +65344,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2146,
@@ -63267,7 +65375,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2147,
@@ -63297,7 +65406,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2148,
@@ -63327,7 +65437,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2149,
@@ -63357,7 +65468,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2150,
@@ -63387,7 +65499,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2151,
@@ -63417,7 +65530,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2152,
@@ -63447,7 +65561,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2153,
@@ -63477,7 +65592,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2154,
@@ -63507,7 +65623,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2155,
@@ -63537,7 +65654,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2156,
@@ -63567,7 +65685,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2157,
@@ -63597,7 +65716,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2158,
@@ -63627,7 +65747,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2159,
@@ -63657,7 +65778,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2160,
@@ -63687,7 +65809,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 30,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2161,
@@ -63717,7 +65840,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2162,
@@ -63747,7 +65871,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2163,
@@ -63777,7 +65902,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2164,
@@ -63807,7 +65933,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2165,
@@ -63837,7 +65964,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2166,
@@ -63867,7 +65995,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2167,
@@ -63897,7 +66026,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2168,
@@ -63927,7 +66057,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 22,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2169,
@@ -63957,7 +66088,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2170,
@@ -63987,7 +66119,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2171,
@@ -64017,7 +66150,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2172,
@@ -64047,7 +66181,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2173,
@@ -64077,7 +66212,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2174,
@@ -64107,7 +66243,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2175,
@@ -64137,7 +66274,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2176,
@@ -64167,7 +66305,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2177,
@@ -64197,7 +66336,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2178,
@@ -64227,7 +66367,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2179,
@@ -64257,7 +66398,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2181,
@@ -64287,7 +66429,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2182,
@@ -64317,7 +66460,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2183,
@@ -64347,7 +66491,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2184,
@@ -64377,7 +66522,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2185,
@@ -64407,7 +66553,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 133,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2186,
@@ -64437,7 +66584,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2187,
@@ -64467,7 +66615,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2188,
@@ -64497,7 +66646,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2189,
@@ -64527,7 +66677,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2190,
@@ -64557,7 +66708,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2191,
@@ -64587,7 +66739,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2192,
@@ -64617,7 +66770,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2193,
@@ -64647,7 +66801,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2194,
@@ -64677,7 +66832,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2195,
@@ -64707,7 +66863,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2196,
@@ -64737,7 +66894,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2197,
@@ -64767,7 +66925,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2198,
@@ -64797,7 +66956,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2199,
@@ -64827,7 +66987,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2200,
@@ -64857,7 +67018,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2201,
@@ -64887,7 +67049,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2202,
@@ -64917,7 +67080,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2203,
@@ -64947,7 +67111,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2204,
@@ -64977,7 +67142,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2205,
@@ -65007,7 +67173,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2206,
@@ -65037,7 +67204,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2207,
@@ -65067,7 +67235,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 32,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2208,
@@ -65097,7 +67266,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2209,
@@ -65127,7 +67297,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2210,
@@ -65157,7 +67328,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2211,
@@ -65187,7 +67359,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2212,
@@ -65217,7 +67390,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2213,
@@ -65247,7 +67421,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2214,
@@ -65277,7 +67452,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2215,
@@ -65307,7 +67483,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2216,
@@ -65337,7 +67514,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2217,
@@ -65367,7 +67545,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2218,
@@ -65397,7 +67576,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2219,
@@ -65427,7 +67607,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2220,
@@ -65457,7 +67638,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2221,
@@ -65487,7 +67669,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2222,
@@ -65517,7 +67700,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2223,
@@ -65547,7 +67731,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2224,
@@ -65577,7 +67762,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2225,
@@ -65607,7 +67793,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2226,
@@ -65637,7 +67824,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2227,
@@ -65667,7 +67855,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2228,
@@ -65697,7 +67886,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2229,
@@ -65727,7 +67917,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2230,
@@ -65757,7 +67948,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2231,
@@ -65787,7 +67979,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 28,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2232,
@@ -65817,7 +68010,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2233,
@@ -65847,7 +68041,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2234,
@@ -65877,7 +68072,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2235,
@@ -65907,7 +68103,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2236,
@@ -65937,7 +68134,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2237,
@@ -65967,7 +68165,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2238,
@@ -65997,7 +68196,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2239,
@@ -66027,7 +68227,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 37,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2240,
@@ -66057,7 +68258,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2241,
@@ -66087,7 +68289,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2242,
@@ -66117,7 +68320,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2243,
@@ -66147,7 +68351,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2244,
@@ -66177,7 +68382,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2245,
@@ -66207,7 +68413,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2246,
@@ -66237,7 +68444,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2247,
@@ -66267,7 +68475,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2248,
@@ -66297,7 +68506,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2249,
@@ -66327,7 +68537,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2250,
@@ -66357,7 +68568,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2251,
@@ -66387,7 +68599,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2252,
@@ -66417,7 +68630,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2253,
@@ -66447,7 +68661,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2254,
@@ -66477,7 +68692,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2255,
@@ -66507,7 +68723,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2256,
@@ -66537,7 +68754,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 200,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2258,
@@ -66567,7 +68785,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2259,
@@ -66597,7 +68816,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2260,
@@ -66627,7 +68847,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2261,
@@ -66657,7 +68878,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2262,
@@ -66687,7 +68909,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2264,
@@ -66717,7 +68940,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2265,
@@ -66747,7 +68971,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2266,
@@ -66777,7 +69002,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2267,
@@ -66807,7 +69033,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2268,
@@ -66837,7 +69064,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2269,
@@ -66867,7 +69095,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2270,
@@ -66897,7 +69126,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2271,
@@ -66927,7 +69157,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2272,
@@ -66957,7 +69188,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2273,
@@ -66987,7 +69219,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2274,
@@ -67017,7 +69250,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2275,
@@ -67047,7 +69281,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2276,
@@ -67077,7 +69312,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2277,
@@ -67107,7 +69343,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2278,
@@ -67137,7 +69374,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2279,
@@ -67167,7 +69405,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2280,
@@ -67197,7 +69436,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2281,
@@ -67227,7 +69467,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2282,
@@ -67257,7 +69498,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2283,
@@ -67287,7 +69529,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2284,
@@ -67317,7 +69560,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2285,
@@ -67347,7 +69591,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 24,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2286,
@@ -67377,7 +69622,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2287,
@@ -67407,7 +69653,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2288,
@@ -67437,7 +69684,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2289,
@@ -67467,7 +69715,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2290,
@@ -67497,7 +69746,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2291,
@@ -67527,7 +69777,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2292,
@@ -67557,7 +69808,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2293,
@@ -67587,7 +69839,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 22,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2294,
@@ -67617,7 +69870,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2295,
@@ -67647,7 +69901,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2296,
@@ -67677,7 +69932,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2297,
@@ -67707,7 +69963,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2298,
@@ -67737,7 +69994,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2299,
@@ -67767,7 +70025,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2300,
@@ -67797,7 +70056,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 31,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2301,
@@ -67827,7 +70087,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2302,
@@ -67857,7 +70118,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2303,
@@ -67887,7 +70149,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2304,
@@ -67917,7 +70180,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2305,
@@ -67947,7 +70211,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 217,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2306,
@@ -67977,7 +70242,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2307,
@@ -68007,7 +70273,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2308,
@@ -68037,7 +70304,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2309,
@@ -68067,7 +70335,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2310,
@@ -68097,7 +70366,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2311,
@@ -68127,7 +70397,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2312,
@@ -68157,7 +70428,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2313,
@@ -68187,7 +70459,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2315,
@@ -68217,7 +70490,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2316,
@@ -68247,7 +70521,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2317,
@@ -68277,7 +70552,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2318,
@@ -68307,7 +70583,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2319,
@@ -68337,7 +70614,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2320,
@@ -68367,7 +70645,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2321,
@@ -68397,7 +70676,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2322,
@@ -68427,7 +70707,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2323,
@@ -68457,7 +70738,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2324,
@@ -68487,7 +70769,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2325,
@@ -68517,7 +70800,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2326,
@@ -68547,7 +70831,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2327,
@@ -68577,7 +70862,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2328,
@@ -68607,7 +70893,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2329,
@@ -68637,7 +70924,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 22,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2330,
@@ -68667,7 +70955,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2331,
@@ -68697,7 +70986,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2332,
@@ -68727,7 +71017,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2333,
@@ -68757,7 +71048,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2334,
@@ -68787,7 +71079,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2335,
@@ -68817,7 +71110,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2336,
@@ -68847,7 +71141,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2337,
@@ -68877,7 +71172,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2338,
@@ -68907,7 +71203,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2339,
@@ -68937,7 +71234,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2341,
@@ -68967,7 +71265,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 72,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2342,
@@ -68997,7 +71296,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2343,
@@ -69027,7 +71327,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2344,
@@ -69057,7 +71358,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2345,
@@ -69087,7 +71389,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2346,
@@ -69117,7 +71420,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2347,
@@ -69147,7 +71451,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2348,
@@ -69177,7 +71482,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2350,
@@ -69207,7 +71513,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2351,
@@ -69237,7 +71544,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2352,
@@ -69267,7 +71575,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2353,
@@ -69297,7 +71606,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2354,
@@ -69327,7 +71637,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 21,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2355,
@@ -69357,7 +71668,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2356,
@@ -69387,7 +71699,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2357,
@@ -69417,7 +71730,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 36,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2358,
@@ -69447,7 +71761,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2359,
@@ -69477,7 +71792,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2360,
@@ -69507,7 +71823,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2361,
@@ -69537,7 +71854,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2362,
@@ -69567,7 +71885,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2363,
@@ -69597,7 +71916,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2364,
@@ -69627,7 +71947,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 24,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2365,
@@ -69657,7 +71978,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2366,
@@ -69687,7 +72009,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2367,
@@ -69717,7 +72040,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2368,
@@ -69747,7 +72071,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2369,
@@ -69777,7 +72102,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2370,
@@ -69807,7 +72133,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2371,
@@ -69837,7 +72164,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2372,
@@ -69867,7 +72195,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2373,
@@ -69897,7 +72226,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2374,
@@ -69927,7 +72257,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2375,
@@ -69957,7 +72288,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2376,
@@ -69987,7 +72319,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2377,
@@ -70017,7 +72350,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2378,
@@ -70047,7 +72381,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2379,
@@ -70077,7 +72412,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2380,
@@ -70107,7 +72443,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2381,
@@ -70137,7 +72474,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2382,
@@ -70167,7 +72505,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2383,
@@ -70197,7 +72536,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2384,
@@ -70227,7 +72567,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2385,
@@ -70257,7 +72598,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2386,
@@ -70287,7 +72629,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2387,
@@ -70317,7 +72660,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2388,
@@ -70347,7 +72691,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2389,
@@ -70377,7 +72722,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2390,
@@ -70407,7 +72753,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2391,
@@ -70437,7 +72784,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2392,
@@ -70467,7 +72815,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2393,
@@ -70497,7 +72846,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 185,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2394,
@@ -70527,7 +72877,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2395,
@@ -70557,7 +72908,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2396,
@@ -70587,7 +72939,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2397,
@@ -70617,7 +72970,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2398,
@@ -70647,7 +73001,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2399,
@@ -70677,7 +73032,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2400,
@@ -70707,7 +73063,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2401,
@@ -70737,7 +73094,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2402,
@@ -70767,7 +73125,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2403,
@@ -70797,7 +73156,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2404,
@@ -70827,7 +73187,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2405,
@@ -70857,7 +73218,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2406,
@@ -70887,7 +73249,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2407,
@@ -70917,7 +73280,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2409,
@@ -70947,7 +73311,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2410,
@@ -70977,7 +73342,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2411,
@@ -71007,7 +73373,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2412,
@@ -71037,7 +73404,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2413,
@@ -71067,7 +73435,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2414,
@@ -71097,7 +73466,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2415,
@@ -71127,7 +73497,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2416,
@@ -71157,7 +73528,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2417,
@@ -71187,7 +73559,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2418,
@@ -71217,7 +73590,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2419,
@@ -71247,7 +73621,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2420,
@@ -71277,7 +73652,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2421,
@@ -71307,7 +73683,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2422,
@@ -71337,7 +73714,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2423,
@@ -71367,7 +73745,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2424,
@@ -71397,7 +73776,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2426,
@@ -71427,7 +73807,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2428,
@@ -71457,7 +73838,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2429,
@@ -71487,7 +73869,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2430,
@@ -71517,7 +73900,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 46,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2431,
@@ -71547,7 +73931,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2432,
@@ -71577,7 +73962,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2433,
@@ -71607,7 +73993,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2434,
@@ -71637,7 +74024,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2435,
@@ -71667,7 +74055,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2436,
@@ -71697,7 +74086,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2437,
@@ -71727,7 +74117,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2438,
@@ -71757,7 +74148,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2439,
@@ -71787,7 +74179,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2440,
@@ -71817,7 +74210,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2441,
@@ -71847,7 +74241,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2442,
@@ -71877,7 +74272,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2443,
@@ -71907,7 +74303,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2444,
@@ -71937,7 +74334,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2445,
@@ -71967,7 +74365,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2446,
@@ -71997,7 +74396,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2447,
@@ -72027,7 +74427,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2448,
@@ -72057,7 +74458,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2449,
@@ -72087,7 +74489,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2450,
@@ -72117,7 +74520,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2451,
@@ -72147,7 +74551,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2452,
@@ -72177,7 +74582,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2453,
@@ -72207,7 +74613,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2454,
@@ -72237,7 +74644,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2455,
@@ -72267,7 +74675,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2456,
@@ -72297,7 +74706,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2457,
@@ -72327,7 +74737,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2458,
@@ -72357,7 +74768,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2459,
@@ -72387,7 +74799,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2460,
@@ -72417,7 +74830,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2461,
@@ -72447,7 +74861,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2462,
@@ -72477,7 +74892,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2463,
@@ -72507,7 +74923,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2464,
@@ -72537,7 +74954,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2465,
@@ -72567,7 +74985,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2466,
@@ -72597,7 +75016,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 77,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2467,
@@ -72627,7 +75047,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2468,
@@ -72657,7 +75078,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2469,
@@ -72687,7 +75109,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2470,
@@ -72717,7 +75140,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2471,
@@ -72747,7 +75171,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2472,
@@ -72777,7 +75202,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2473,
@@ -72807,7 +75233,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2474,
@@ -72837,7 +75264,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2476,
@@ -72867,7 +75295,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2477,
@@ -72897,7 +75326,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2478,
@@ -72927,7 +75357,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2479,
@@ -72957,7 +75388,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2480,
@@ -72987,7 +75419,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2481,
@@ -73017,7 +75450,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2482,
@@ -73047,7 +75481,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2483,
@@ -73077,7 +75512,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2484,
@@ -73107,7 +75543,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2485,
@@ -73137,7 +75574,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2486,
@@ -73167,7 +75605,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2487,
@@ -73197,7 +75636,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2488,
@@ -73227,7 +75667,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2489,
@@ -73257,7 +75698,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2490,
@@ -73287,7 +75729,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2491,
@@ -73317,7 +75760,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2492,
@@ -73347,7 +75791,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2493,
@@ -73377,7 +75822,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2495,
@@ -73407,7 +75853,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2496,
@@ -73437,7 +75884,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2497,
@@ -73467,7 +75915,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2498,
@@ -73497,7 +75946,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2500,
@@ -73527,7 +75977,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2501,
@@ -73557,7 +76008,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2502,
@@ -73587,7 +76039,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2503,
@@ -73617,7 +76070,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2504,
@@ -73647,7 +76101,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2505,
@@ -73677,7 +76132,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2506,
@@ -73707,7 +76163,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2508,
@@ -73737,7 +76194,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2509,
@@ -73767,7 +76225,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2510,
@@ -73797,7 +76256,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2512,
@@ -73827,7 +76287,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2513,
@@ -73857,7 +76318,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2514,
@@ -73887,7 +76349,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2515,
@@ -73917,7 +76380,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2516,
@@ -73947,7 +76411,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2517,
@@ -73977,7 +76442,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 32,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2518,
@@ -74007,7 +76473,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2519,
@@ -74037,7 +76504,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2520,
@@ -74067,7 +76535,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2521,
@@ -74097,7 +76566,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2522,
@@ -74127,7 +76597,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2523,
@@ -74157,7 +76628,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2524,
@@ -74187,7 +76659,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2526,
@@ -74217,7 +76690,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 28,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2527,
@@ -74247,7 +76721,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2528,
@@ -74277,7 +76752,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2530,
@@ -74307,7 +76783,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2531,
@@ -74337,7 +76814,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2532,
@@ -74367,7 +76845,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2533,
@@ -74397,7 +76876,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2534,
@@ -74427,7 +76907,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2535,
@@ -74457,7 +76938,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2536,
@@ -74487,7 +76969,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2537,
@@ -74517,7 +77000,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2538,
@@ -74547,7 +77031,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2539,
@@ -74577,7 +77062,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2540,
@@ -74607,7 +77093,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2541,
@@ -74637,7 +77124,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2542,
@@ -74667,7 +77155,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2543,
@@ -74697,7 +77186,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 23,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2544,
@@ -74727,7 +77217,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2545,
@@ -74757,7 +77248,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2546,
@@ -74787,7 +77279,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2547,
@@ -74817,7 +77310,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2548,
@@ -74847,7 +77341,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2549,
@@ -74877,7 +77372,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2550,
@@ -74907,7 +77403,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2551,
@@ -74937,7 +77434,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2552,
@@ -74967,7 +77465,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2553,
@@ -74997,7 +77496,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2554,
@@ -75027,7 +77527,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2555,
@@ -75057,7 +77558,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2556,
@@ -75087,7 +77589,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2557,
@@ -75117,7 +77620,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 33,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2558,
@@ -75147,7 +77651,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2559,
@@ -75177,7 +77682,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2560,
@@ -75207,7 +77713,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2561,
@@ -75237,7 +77744,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2562,
@@ -75267,7 +77775,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2563,
@@ -75297,7 +77806,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2564,
@@ -75327,7 +77837,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2565,
@@ -75357,7 +77868,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2566,
@@ -75387,7 +77899,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2567,
@@ -75417,7 +77930,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2568,
@@ -75447,7 +77961,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2569,
@@ -75477,7 +77992,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2570,
@@ -75507,7 +78023,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2571,
@@ -75537,7 +78054,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2572,
@@ -75567,7 +78085,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2573,
@@ -75597,7 +78116,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2574,
@@ -75627,7 +78147,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2575,
@@ -75657,7 +78178,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2576,
@@ -75687,7 +78209,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2577,
@@ -75717,7 +78240,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2578,
@@ -75747,7 +78271,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2579,
@@ -75777,7 +78302,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2580,
@@ -75807,7 +78333,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2581,
@@ -75837,7 +78364,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2582,
@@ -75867,7 +78395,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 23,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2583,
@@ -75897,7 +78426,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2584,
@@ -75927,7 +78457,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2585,
@@ -75957,7 +78488,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2586,
@@ -75987,7 +78519,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 28,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2587,
@@ -76017,7 +78550,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2588,
@@ -76047,7 +78581,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2589,
@@ -76077,7 +78612,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2590,
@@ -76107,7 +78643,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2591,
@@ -76137,7 +78674,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2592,
@@ -76167,7 +78705,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2593,
@@ -76197,7 +78736,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2594,
@@ -76227,7 +78767,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2595,
@@ -76257,7 +78798,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2596,
@@ -76287,7 +78829,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2597,
@@ -76317,7 +78860,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 32,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2598,
@@ -76347,7 +78891,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2599,
@@ -76377,7 +78922,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2600,
@@ -76407,7 +78953,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2601,
@@ -76437,7 +78984,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 37,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2602,
@@ -76467,7 +79015,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2603,
@@ -76497,7 +79046,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2604,
@@ -76527,7 +79077,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2605,
@@ -76557,7 +79108,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2606,
@@ -76587,7 +79139,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2607,
@@ -76617,7 +79170,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2608,
@@ -76647,7 +79201,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2610,
@@ -76677,7 +79232,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2611,
@@ -76707,7 +79263,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2612,
@@ -76737,7 +79294,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2613,
@@ -76767,7 +79325,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2614,
@@ -76797,7 +79356,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2616,
@@ -76827,7 +79387,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2617,
@@ -76857,7 +79418,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2618,
@@ -76887,7 +79449,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2619,
@@ -76917,7 +79480,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2620,
@@ -76947,7 +79511,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2621,
@@ -76977,7 +79542,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2622,
@@ -77007,7 +79573,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2623,
@@ -77037,7 +79604,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 63,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2624,
@@ -77067,7 +79635,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2625,
@@ -77097,7 +79666,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2626,
@@ -77127,7 +79697,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2627,
@@ -77157,7 +79728,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2628,
@@ -77187,7 +79759,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2629,
@@ -77217,7 +79790,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2630,
@@ -77247,7 +79821,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2631,
@@ -77277,7 +79852,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2632,
@@ -77307,7 +79883,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2633,
@@ -77337,7 +79914,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2634,
@@ -77367,7 +79945,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2635,
@@ -77397,7 +79976,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2636,
@@ -77427,7 +80007,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2637,
@@ -77457,7 +80038,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2638,
@@ -77487,7 +80069,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2640,
@@ -77517,7 +80100,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 42,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2641,
@@ -77547,7 +80131,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2642,
@@ -77577,7 +80162,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2643,
@@ -77607,7 +80193,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2644,
@@ -77637,7 +80224,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2645,
@@ -77667,7 +80255,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2646,
@@ -77697,7 +80286,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2647,
@@ -77727,7 +80317,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2648,
@@ -77757,7 +80348,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2649,
@@ -77787,7 +80379,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2650,
@@ -77817,7 +80410,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2651,
@@ -77847,7 +80441,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2653,
@@ -77877,7 +80472,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2654,
@@ -77907,7 +80503,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2655,
@@ -77937,7 +80534,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2656,
@@ -77967,7 +80565,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2657,
@@ -77997,7 +80596,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2658,
@@ -78027,7 +80627,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2659,
@@ -78057,7 +80658,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 50,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2660,
@@ -78087,7 +80689,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2661,
@@ -78117,7 +80720,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 42,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2662,
@@ -78147,7 +80751,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 32,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2663,
@@ -78177,7 +80782,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2664,
@@ -78207,7 +80813,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2665,
@@ -78237,7 +80844,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2666,
@@ -78267,7 +80875,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2667,
@@ -78297,7 +80906,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2668,
@@ -78327,7 +80937,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2669,
@@ -78357,7 +80968,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 21,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2670,
@@ -78387,7 +80999,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2671,
@@ -78417,7 +81030,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2672,
@@ -78447,7 +81061,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2673,
@@ -78477,7 +81092,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2674,
@@ -78507,7 +81123,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2675,
@@ -78537,7 +81154,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2676,
@@ -78567,7 +81185,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2677,
@@ -78597,7 +81216,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2678,
@@ -78627,7 +81247,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2679,
@@ -78657,7 +81278,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2680,
@@ -78687,7 +81309,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2681,
@@ -78717,7 +81340,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2682,
@@ -78747,7 +81371,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2683,
@@ -78777,7 +81402,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 70,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2684,
@@ -78807,7 +81433,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2685,
@@ -78837,7 +81464,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2686,
@@ -78867,7 +81495,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2687,
@@ -78897,7 +81526,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 50,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2688,
@@ -78927,7 +81557,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2689,
@@ -78957,7 +81588,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2690,
@@ -78987,7 +81619,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2691,
@@ -79017,7 +81650,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2692,
@@ -79047,7 +81681,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2693,
@@ -79077,7 +81712,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2694,
@@ -79107,7 +81743,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2695,
@@ -79137,7 +81774,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 36,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2696,
@@ -79167,7 +81805,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2697,
@@ -79197,7 +81836,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2698,
@@ -79227,7 +81867,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2699,
@@ -79257,7 +81898,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2700,
@@ -79287,7 +81929,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2701,
@@ -79317,7 +81960,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2702,
@@ -79347,7 +81991,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2703,
@@ -79377,7 +82022,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2704,
@@ -79407,7 +82053,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 28,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2705,
@@ -79437,7 +82084,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 84,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2706,
@@ -79467,7 +82115,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2708,
@@ -79497,7 +82146,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2709,
@@ -79527,7 +82177,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2710,
@@ -79557,7 +82208,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2711,
@@ -79587,7 +82239,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2712,
@@ -79617,7 +82270,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2713,
@@ -79647,7 +82301,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2714,
@@ -79677,7 +82332,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 39,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2715,
@@ -79707,7 +82363,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 23,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2717,
@@ -79737,7 +82394,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2718,
@@ -79767,7 +82425,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2719,
@@ -79797,7 +82456,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2720,
@@ -79827,7 +82487,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 33,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2721,
@@ -79857,7 +82518,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2722,
@@ -79887,7 +82549,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2723,
@@ -79917,7 +82580,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2724,
@@ -79947,7 +82611,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2725,
@@ -79977,7 +82642,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2726,
@@ -80007,7 +82673,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2727,
@@ -80037,7 +82704,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 21,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2729,
@@ -80067,7 +82735,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2730,
@@ -80097,7 +82766,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2731,
@@ -80127,7 +82797,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2732,
@@ -80157,7 +82828,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2733,
@@ -80187,7 +82859,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2734,
@@ -80217,7 +82890,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2735,
@@ -80247,7 +82921,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2736,
@@ -80277,7 +82952,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2738,
@@ -80307,7 +82983,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2739,
@@ -80337,7 +83014,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 60,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2740,
@@ -80367,7 +83045,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2741,
@@ -80397,7 +83076,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2742,
@@ -80427,7 +83107,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2743,
@@ -80457,7 +83138,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2744,
@@ -80487,7 +83169,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 38,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2745,
@@ -80517,7 +83200,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2746,
@@ -80547,7 +83231,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2747,
@@ -80577,7 +83262,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2748,
@@ -80607,7 +83293,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2749,
@@ -80637,7 +83324,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 26,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2750,
@@ -80667,7 +83355,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2751,
@@ -80697,7 +83386,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2752,
@@ -80727,7 +83417,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 31,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2753,
@@ -80757,7 +83448,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 161,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2754,
@@ -80787,7 +83479,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2755,
@@ -80817,7 +83510,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2756,
@@ -80847,7 +83541,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2757,
@@ -80877,7 +83572,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2758,
@@ -80907,7 +83603,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 24,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2759,
@@ -80937,7 +83634,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 32,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2760,
@@ -80967,7 +83665,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2761,
@@ -80997,7 +83696,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2762,
@@ -81027,7 +83727,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2763,
@@ -81057,7 +83758,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2764,
@@ -81087,7 +83789,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2765,
@@ -81117,7 +83820,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2766,
@@ -81147,7 +83851,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2767,
@@ -81177,7 +83882,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2768,
@@ -81207,7 +83913,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2769,
@@ -81237,7 +83944,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2770,
@@ -81267,7 +83975,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2771,
@@ -81297,7 +84006,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2772,
@@ -81327,7 +84037,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2773,
@@ -81357,7 +84068,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2774,
@@ -81387,7 +84099,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 48,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2775,
@@ -81417,7 +84130,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2776,
@@ -81447,7 +84161,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 41,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2777,
@@ -81477,7 +84192,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2778,
@@ -81507,7 +84223,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2780,
@@ -81537,7 +84254,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2781,
@@ -81567,7 +84285,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2782,
@@ -81597,7 +84316,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2783,
@@ -81627,7 +84347,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2784,
@@ -81657,7 +84378,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2785,
@@ -81687,7 +84409,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 24,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2786,
@@ -81717,7 +84440,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2787,
@@ -81747,7 +84471,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2788,
@@ -81777,7 +84502,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2789,
@@ -81807,7 +84533,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2790,
@@ -81837,7 +84564,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2791,
@@ -81867,7 +84595,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2792,
@@ -81897,7 +84626,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2793,
@@ -81927,7 +84657,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2794,
@@ -81957,7 +84688,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2795,
@@ -81987,7 +84719,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2796,
@@ -82017,7 +84750,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2797,
@@ -82047,7 +84781,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2798,
@@ -82077,7 +84812,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2799,
@@ -82107,7 +84843,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 27,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2800,
@@ -82137,7 +84874,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2801,
@@ -82167,7 +84905,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2802,
@@ -82197,7 +84936,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2803,
@@ -82227,7 +84967,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2804,
@@ -82257,7 +84998,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2805,
@@ -82287,7 +85029,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2806,
@@ -82317,7 +85060,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2807,
@@ -82347,7 +85091,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2808,
@@ -82377,7 +85122,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 52,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2809,
@@ -82407,7 +85153,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2810,
@@ -82437,7 +85184,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 28,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2811,
@@ -82467,7 +85215,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2812,
@@ -82497,7 +85246,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 30,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2813,
@@ -82527,7 +85277,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2814,
@@ -82557,7 +85308,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2816,
@@ -82587,7 +85339,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2817,
@@ -82617,7 +85370,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2818,
@@ -82647,7 +85401,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2819,
@@ -82677,7 +85432,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 46,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2820,
@@ -82707,7 +85463,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2821,
@@ -82737,7 +85494,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2822,
@@ -82767,7 +85525,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2823,
@@ -82797,7 +85556,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2824,
@@ -82827,7 +85587,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2825,
@@ -82857,7 +85618,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2827,
@@ -82887,7 +85649,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 64,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2828,
@@ -82917,7 +85680,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2829,
@@ -82947,7 +85711,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2830,
@@ -82977,7 +85742,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2831,
@@ -83007,7 +85773,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2832,
@@ -83037,7 +85804,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2833,
@@ -83067,7 +85835,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2834,
@@ -83097,7 +85866,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2835,
@@ -83127,7 +85897,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2836,
@@ -83157,7 +85928,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2837,
@@ -83187,7 +85959,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2838,
@@ -83217,7 +85990,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2839,
@@ -83247,7 +86021,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2840,
@@ -83277,7 +86052,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2841,
@@ -83307,7 +86083,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2842,
@@ -83337,7 +86114,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2844,
@@ -83367,7 +86145,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2845,
@@ -83397,7 +86176,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2846,
@@ -83427,7 +86207,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2847,
@@ -83457,7 +86238,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2848,
@@ -83487,7 +86269,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2849,
@@ -83517,7 +86300,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2850,
@@ -83547,7 +86331,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2851,
@@ -83577,7 +86362,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2852,
@@ -83607,7 +86393,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2853,
@@ -83637,7 +86424,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 29,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2854,
@@ -83667,7 +86455,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2855,
@@ -83697,7 +86486,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2856,
@@ -83727,7 +86517,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2857,
@@ -83757,7 +86548,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2858,
@@ -83787,7 +86579,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2859,
@@ -83817,7 +86610,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2860,
@@ -83847,7 +86641,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2861,
@@ -83877,7 +86672,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2862,
@@ -83907,7 +86703,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2863,
@@ -83937,7 +86734,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2864,
@@ -83967,7 +86765,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2865,
@@ -83997,7 +86796,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2866,
@@ -84027,7 +86827,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 29,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2867,
@@ -84057,7 +86858,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2868,
@@ -84087,7 +86889,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2869,
@@ -84117,7 +86920,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 31,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2870,
@@ -84147,7 +86951,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2871,
@@ -84177,7 +86982,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 57,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2872,
@@ -84207,7 +87013,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 91,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2873,
@@ -84237,7 +87044,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 7,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2874,
@@ -84267,7 +87075,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 31,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2875,
@@ -84297,7 +87106,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2876,
@@ -84327,7 +87137,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2878,
@@ -84357,7 +87168,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2879,
@@ -84387,7 +87199,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2880,
@@ -84417,7 +87230,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2881,
@@ -84447,7 +87261,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2882,
@@ -84477,7 +87292,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 34,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2883,
@@ -84507,7 +87323,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2884,
@@ -84537,7 +87354,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2885,
@@ -84567,7 +87385,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2886,
@@ -84597,7 +87416,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2888,
@@ -84627,7 +87447,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2890,
@@ -84657,7 +87478,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 22,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2891,
@@ -84687,7 +87509,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2892,
@@ -84717,7 +87540,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 111,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2893,
@@ -84747,7 +87571,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2894,
@@ -84777,7 +87602,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 26,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2895,
@@ -84807,7 +87633,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2896,
@@ -84837,7 +87664,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2897,
@@ -84867,7 +87695,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 21,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2898,
@@ -84897,7 +87726,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2899,
@@ -84927,7 +87757,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 34,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2900,
@@ -84957,7 +87788,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 43,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2901,
@@ -84987,7 +87819,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 33,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2902,
@@ -85017,7 +87850,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2903,
@@ -85047,7 +87881,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2904,
@@ -85077,7 +87912,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2905,
@@ -85107,7 +87943,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2906,
@@ -85137,7 +87974,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2907,
@@ -85167,7 +88005,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 53,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2908,
@@ -85197,7 +88036,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2909,
@@ -85227,7 +88067,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 49,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2910,
@@ -85257,7 +88098,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2911,
@@ -85287,7 +88129,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2912,
@@ -85317,7 +88160,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2913,
@@ -85347,7 +88191,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2914,
@@ -85377,7 +88222,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2915,
@@ -85407,7 +88253,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 27,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2916,
@@ -85437,7 +88284,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2917,
@@ -85467,7 +88315,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 48,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2918,
@@ -85497,7 +88346,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2920,
@@ -85527,7 +88377,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 28,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2921,
@@ -85557,7 +88408,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2922,
@@ -85587,7 +88439,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2923,
@@ -85617,7 +88470,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 24,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2924,
@@ -85647,7 +88501,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2925,
@@ -85677,7 +88532,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2926,
@@ -85707,7 +88563,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2927,
@@ -85737,7 +88594,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2928,
@@ -85767,7 +88625,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2929,
@@ -85797,7 +88656,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2930,
@@ -85827,7 +88687,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2931,
@@ -85857,7 +88718,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2932,
@@ -85887,7 +88749,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2933,
@@ -85917,7 +88780,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2935,
@@ -85947,7 +88811,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 34,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2937,
@@ -85977,7 +88842,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2938,
@@ -86007,7 +88873,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2939,
@@ -86037,7 +88904,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2940,
@@ -86067,7 +88935,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2944,
@@ -86097,7 +88966,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2945,
@@ -86127,7 +88997,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2946,
@@ -86157,7 +89028,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2947,
@@ -86187,7 +89059,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2948,
@@ -86209,7 +89082,7 @@ window.MASTER_CONNECTIONS_DATA = [
     "lat": 19.4326,
     "lng": -99.1332,
     "score": 50,
-    "crmStatus": "Descartado",
+    "crmStatus": "Ninguno",
     "audit_status": "Activo Auditado",
     "job_status": "Vigente 2026",
     "is_current": true,
@@ -86217,7 +89090,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2949,
@@ -86247,7 +89121,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 9,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2950,
@@ -86277,7 +89152,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2951,
@@ -86307,7 +89183,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2952,
@@ -86337,7 +89214,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 57,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2953,
@@ -86367,7 +89245,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 28,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2954,
@@ -86397,7 +89276,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2955,
@@ -86427,7 +89307,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2956,
@@ -86457,7 +89338,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2957,
@@ -86487,7 +89369,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2958,
@@ -86517,7 +89400,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2960,
@@ -86547,7 +89431,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 41,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2961,
@@ -86577,7 +89462,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2962,
@@ -86607,7 +89493,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2963,
@@ -86637,7 +89524,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2964,
@@ -86667,7 +89555,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2965,
@@ -86697,7 +89586,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2966,
@@ -86727,7 +89617,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 38,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2967,
@@ -86757,7 +89648,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2968,
@@ -86787,7 +89679,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2969,
@@ -86817,7 +89710,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 22,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2970,
@@ -86847,7 +89741,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 23,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2971,
@@ -86877,7 +89772,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 29,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2972,
@@ -86907,7 +89803,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2973,
@@ -86937,7 +89834,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 20,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2974,
@@ -86967,7 +89865,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2975,
@@ -86997,7 +89896,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2976,
@@ -87027,7 +89927,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 25,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2977,
@@ -87057,7 +89958,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 27,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2978,
@@ -87087,7 +89989,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2979,
@@ -87117,7 +90020,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2980,
@@ -87147,7 +90051,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 47,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2983,
@@ -87177,7 +90082,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2984,
@@ -87207,7 +90113,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2985,
@@ -87237,7 +90144,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2986,
@@ -87267,7 +90175,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2987,
@@ -87297,7 +90206,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 23,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2988,
@@ -87327,7 +90237,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2989,
@@ -87357,7 +90268,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 28,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2991,
@@ -87387,7 +90299,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2992,
@@ -87417,7 +90330,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2993,
@@ -87447,7 +90361,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 29,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2994,
@@ -87477,7 +90392,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2995,
@@ -87507,7 +90423,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 43,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2996,
@@ -87537,7 +90454,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2997,
@@ -87567,7 +90485,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 43,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2998,
@@ -87597,7 +90516,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 2999,
@@ -87627,7 +90547,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3000,
@@ -87657,7 +90578,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3001,
@@ -87687,7 +90609,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 31,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3002,
@@ -87717,7 +90640,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3003,
@@ -87747,7 +90671,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3005,
@@ -87777,7 +90702,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3006,
@@ -87807,7 +90733,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 54,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3007,
@@ -87837,7 +90764,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3008,
@@ -87867,7 +90795,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 24,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3009,
@@ -87897,7 +90826,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 13,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3010,
@@ -87927,7 +90857,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3011,
@@ -87957,7 +90888,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3012,
@@ -87987,7 +90919,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3013,
@@ -88017,7 +90950,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 19,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3014,
@@ -88047,7 +90981,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3015,
@@ -88077,7 +91012,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3016,
@@ -88107,7 +91043,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 26,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3017,
@@ -88137,7 +91074,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 39,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3018,
@@ -88167,7 +91105,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 11,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3019,
@@ -88197,7 +91136,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 39,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3020,
@@ -88227,7 +91167,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3021,
@@ -88257,7 +91198,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 14,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3023,
@@ -88287,7 +91229,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 51,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3024,
@@ -88317,7 +91260,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 40,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3025,
@@ -88347,7 +91291,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 17,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3026,
@@ -88377,7 +91322,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3027,
@@ -88407,7 +91353,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 183,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3028,
@@ -88437,7 +91384,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 69,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3029,
@@ -88467,7 +91415,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 91,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3030,
@@ -88497,7 +91446,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3031,
@@ -88527,7 +91477,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 43,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3032,
@@ -88557,7 +91508,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 26,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3033,
@@ -88587,7 +91539,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3034,
@@ -88617,7 +91570,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3035,
@@ -88647,7 +91601,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3036,
@@ -88677,7 +91632,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3037,
@@ -88707,7 +91663,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3038,
@@ -88737,7 +91694,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 31,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3039,
@@ -88767,7 +91725,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3040,
@@ -88797,7 +91756,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 28,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3041,
@@ -88827,7 +91787,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 53,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3042,
@@ -88857,7 +91818,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3043,
@@ -88887,7 +91849,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3044,
@@ -88917,7 +91880,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3045,
@@ -88947,7 +91911,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3046,
@@ -88977,7 +91942,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 56,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3047,
@@ -89007,7 +91973,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 121,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3048,
@@ -89037,7 +92004,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3049,
@@ -89067,7 +92035,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3050,
@@ -89097,7 +92066,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3051,
@@ -89127,7 +92097,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3052,
@@ -89157,7 +92128,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3053,
@@ -89187,7 +92159,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3054,
@@ -89217,7 +92190,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3055,
@@ -89247,7 +92221,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3056,
@@ -89277,7 +92252,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3057,
@@ -89307,7 +92283,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3058,
@@ -89337,7 +92314,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3059,
@@ -89367,7 +92345,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3060,
@@ -89397,7 +92376,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 21,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3061,
@@ -89427,7 +92407,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3062,
@@ -89457,7 +92438,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3063,
@@ -89487,7 +92469,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 10,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3065,
@@ -89517,7 +92500,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3066,
@@ -89547,7 +92531,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3067,
@@ -89577,7 +92562,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3068,
@@ -89607,7 +92593,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3069,
@@ -89637,7 +92624,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 80,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3070,
@@ -89667,7 +92655,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3071,
@@ -89697,7 +92686,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3072,
@@ -89727,7 +92717,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3073,
@@ -89757,7 +92748,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3074,
@@ -89787,7 +92779,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3075,
@@ -89817,7 +92810,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3076,
@@ -89847,7 +92841,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3077,
@@ -89877,7 +92872,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 337,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3078,
@@ -89907,7 +92903,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3079,
@@ -89937,7 +92934,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3080,
@@ -89967,7 +92965,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3081,
@@ -89997,7 +92996,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 5,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3082,
@@ -90027,7 +93027,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3083,
@@ -90057,7 +93058,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3084,
@@ -90087,7 +93089,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3085,
@@ -90117,7 +93120,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 8,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3086,
@@ -90147,7 +93151,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 6,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3087,
@@ -90177,7 +93182,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3088,
@@ -90207,7 +93213,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3089,
@@ -90237,7 +93244,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3090,
@@ -90267,7 +93275,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3091,
@@ -90297,7 +93306,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3092,
@@ -90327,7 +93337,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3093,
@@ -90357,7 +93368,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3094,
@@ -90387,7 +93399,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 16,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3095,
@@ -90417,7 +93430,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 3,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3096,
@@ -90447,7 +93461,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3097,
@@ -90477,7 +93492,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3098,
@@ -90507,7 +93523,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3099,
@@ -90537,7 +93554,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3100,
@@ -90567,7 +93585,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 18,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3101,
@@ -90597,7 +93616,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 2,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3102,
@@ -90627,7 +93647,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3103,
@@ -90657,7 +93678,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3104,
@@ -90687,7 +93709,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 1,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3105,
@@ -90717,7 +93740,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 27,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3106,
@@ -90747,7 +93771,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 12,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3107,
@@ -90777,7 +93802,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3108,
@@ -90807,7 +93833,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 4,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3109,
@@ -90837,7 +93864,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 15,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3110,
@@ -90867,7 +93895,8 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   },
   {
     "id": 3111,
@@ -90897,6 +93926,7 @@ window.MASTER_CONNECTIONS_DATA = [
     "isHarvestEnriched": false,
     "msg_count": 0,
     "last_post_date": "",
-    "last_post_text": ""
+    "last_post_text": "",
+    "discardedFromPurge": false
   }
 ];
