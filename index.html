@@ -4037,8 +4037,9 @@ function updateKpiHighlights() {
 }
 
 function renderNetwork() {
-  const activeContacts = S.contacts || [];
-  const total = S.contacts ? S.contacts.length : 0;
+  const activeContacts = (S.contacts || []).filter(c => c.crmStatus !== 'Descartado' && !c.discardedFromPurge);
+  const total = activeContacts.length;
+
 
   const hier = {};
   (activeContacts || []).forEach(c => { hier[c.hierarchy] = (hier[c.hierarchy]||0)+1; });
