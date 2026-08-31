@@ -4912,11 +4912,18 @@ function getRowVal(row, targetKey) {
 
 function renderMessages() {
   const el = document.getElementById('messages-content');
+  if (!el) return;
   
+  const withMsgs = (S.contacts || []).filter(c => c.msg_count && c.msg_count > 0);
+  if (withMsgs.length > 0 || (S.messages && S.messages.length > 0)) {
+    if (!S.loadedParts) S.loadedParts = {};
+    S.loadedParts.connections = true;
+    S.loadedParts.messages = true;
+  }
+
   // Si los mensajes vienen pre-analizados en enriched_connections.json (modo demo/BYOD)
-  // pero S.messages está vacío, construimos el dashboard desde los campos del JSON
-  if (!S.messages.length && S.loadedParts.messages && S.contacts.length) {
-    const withMsgs = S.contacts.filter(c => c.msg_count && c.msg_count > 0);
+  // o si S.messages aún no se ha expandido, construimos el dashboard desde los campos del JSON
+  if (!S.messages.length && (S.loadedParts.messages || withMsgs.length > 0) && S.contacts.length) {
 
     // Valores reales del JSON (verificados con python audit 2026-08-02)
     const SENT_INTERES  = '\uD83D\uDFE2 Inter\u00e9s Alto / Dispuesto a Demo';  // 🟢
@@ -7941,9 +7948,9 @@ async function restoreLocalVault() {
       });
 
       if (data && data.contacts && data.contacts.length > 0) {
-        if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4)) {
-          console.warn('[AutoVault] Ignorada caché de Ronan en vault_antonio. Forzando restauración de Bóveda Master Antonio.');
-          localStorage.removeItem(vaultKey);
+        if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4) || (userId === 'antonio' && data.contacts.length < 3030)) {
+          console.warn('[AutoVault] Ignorada caché incompleta (<3030 contactos). Forzando restauración completa de Bóveda Master Antonio.');
+          try { localStorage.removeItem(vaultKey); } catch(e){}
           return false;
         }
         let cleanContacts = data.contacts;
