@@ -4072,10 +4072,18 @@ function renderNetwork() {
   const doughnutBgs = isL ? ['#7e22ce','#2563eb','#15803d','#cbd5e1'] : ['#c084fc','#3b82f6','#10b981','#2b2e46'];
 
   document.getElementById('net-charts').style.display = 'grid';
-  if (chartHier) { try { chartHier.destroy(); } catch(e){} }
   if (typeof Chart === 'undefined') {
     setTimeout(renderNetwork, 150);
     return;
+  }
+
+  if (typeof chartHier !== 'undefined' && chartHier) { try { chartHier.destroy(); } catch(e){} }
+  if (typeof chartCountries !== 'undefined' && chartCountries) { try { chartCountries.destroy(); } catch(e){} }
+  if (Chart.getChart) {
+    const existingHier = Chart.getChart('chart-hier');
+    if (existingHier) { try { existingHier.destroy(); } catch(e){} }
+    const existingCountries = Chart.getChart('chart-countries');
+    if (existingCountries) { try { existingCountries.destroy(); } catch(e){} }
   }
 
   const cHier = document.getElementById('chart-hier').getContext('2d');
