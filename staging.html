@@ -3763,9 +3763,9 @@ function navigate(sec) {
     if (!S.loadedParts) S.loadedParts = {};
     S.loadedParts.connections = true;
   }
+  // Si la sección requiere contactos y la bóveda está vacía, redirigir limpiamente a 'upload' SIN mostrar alertas emergentes
   if (typeof REQUIRES_ZIP !== 'undefined' && REQUIRES_ZIP.includes(sec) && !hasContacts && (!S.loadedParts || !S.loadedParts.connections)) {
-    alert("⚠️ Carga primero tu archivo de contactos (Connections.csv) para habilitar esta sección.");
-    return;
+    sec = 'upload';
   }
   S.activeSection = sec;
   document.querySelectorAll('.section').forEach(s => { s.classList.remove('active'); s.style.display = 'none'; });
@@ -8249,12 +8249,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     if (window.MASTER_CONNECTIONS_DATA && window.MASTER_CONNECTIONS_DATA.length > 0) {
       S.contacts = window.MASTER_CONNECTIONS_DATA;
+      if (!S.loadedParts) S.loadedParts = {};
+      S.loadedParts.connections = true;
     } else if (typeof restoreLocalVault === 'function') {
       await restoreLocalVault();
     }
+
+    if (S.contacts && S.contacts.length > 0) {
+      if (!S.loadedParts) S.loadedParts = {};
+      S.loadedParts.connections = true;
+    }
+
     updateStatus();
-    if (typeof navigate === 'function') navigate('network');
-    if (typeof renderNetwork === 'function') renderNetwork();
+    const targetSection = (S.contacts && S.contacts.length > 0) ? 'network' : 'upload';
+    if (typeof navigate === 'function') navigate(targetSection);
+    if (targetSection === 'network' && typeof renderNetwork === 'function') renderNetwork();
     return;
   }
 });
