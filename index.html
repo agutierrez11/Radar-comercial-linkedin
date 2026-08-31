@@ -4734,7 +4734,18 @@ function renderPurgeCriteria() {
   const container = document.getElementById('purge-criteria');
   if (!container) return;
   container.innerHTML = S.criteria.map((cr, i) => {
-    const count = S.contacts.filter(c => !c.whitelisted && !c.discardedFromPurge && c.crmStatus !== 'Descartado' && cr.fn(c)).length;
+    const count = S.contacts.filter(c => {
+      if (c.whitelisted || c.discardedFromPurge || c.crmStatus === 'Descartado') return false;
+      try {
+        const raw = localStorage.getItem('radar_comercial_crm');
+        if (raw) {
+          const db = JSON.parse(raw);
+          const key = typeof getContactCrmKey === 'function' ? getContactCrmKey(c) : c.id;
+          if (db[key] && (db[key].whitelisted || db[key].status === 'Descartado')) return false;
+        }
+      } catch(e) {}
+      return cr.fn(c);
+    }).length;
     return `<div class="criterion-row">
       <label class="toggle"><input type="checkbox" ${cr.on?'checked':''} onchange="toggleCriterion(${i},this.checked)"><span class="toggle-slider"></span></label>
       <span class="criterion-label">${cr.label}</span>
