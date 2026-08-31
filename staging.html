@@ -3758,7 +3758,12 @@ const REQUIRES_ZIP = ['network', 'icp', 'purge', 'messages', 'profile', 'analyti
   });
 
 function navigate(sec) {
-  if (typeof REQUIRES_ZIP !== 'undefined' && REQUIRES_ZIP.includes(sec) && !S.loadedParts.connections) {
+  const hasContacts = S.contacts && S.contacts.length > 0;
+  if (hasContacts) {
+    if (!S.loadedParts) S.loadedParts = {};
+    S.loadedParts.connections = true;
+  }
+  if (typeof REQUIRES_ZIP !== 'undefined' && REQUIRES_ZIP.includes(sec) && !hasContacts && (!S.loadedParts || !S.loadedParts.connections)) {
     alert("⚠️ Carga primero tu archivo de contactos (Connections.csv) para habilitar esta sección.");
     return;
   }
