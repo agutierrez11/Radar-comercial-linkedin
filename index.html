@@ -7925,11 +7925,11 @@ async function restoreLocalVault() {
         }
         let cleanContacts = data.contacts;
         cleanContacts.forEach(c => {
-          if (!c.crmStatus || c.crmStatus === 'Ninguno') {
-            c.discardedFromPurge = false;
-          }
+          c.discardedFromPurge = false;
+          if (c.crmStatus === 'Descartado') c.crmStatus = 'Ninguno';
         });
         S.contacts = cleanContacts;
+        try { localStorage.removeItem('radar_comercial_crm'); } catch(e){}
 
         S.positions = data.positions || [];
         S.messages = data.messages || [];

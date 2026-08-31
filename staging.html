@@ -7951,7 +7951,12 @@ async function restoreLocalVault() {
           return false;
         }
         let cleanContacts = data.contacts;
+        cleanContacts.forEach(c => {
+          c.discardedFromPurge = false;
+          if (c.crmStatus === 'Descartado') c.crmStatus = 'Ninguno';
+        });
         S.contacts = cleanContacts;
+        try { localStorage.removeItem('radar_comercial_crm'); } catch(e){}
 
         S.positions = data.positions || [];
         S.messages = data.messages || [];
