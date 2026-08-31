@@ -4570,39 +4570,61 @@ document.getElementById('icp-override').addEventListener('input', () => {
 });
 
 function renderICP() {
-  const activeIdx = S.activePositionIndex || 0;
-  const activePos = S.positions[activeIdx];
-  const override = document.getElementById('icp-override').value.trim();
-  
   const icpRoleSelect = document.getElementById('icp-role-select');
-  if (icpRoleSelect && icpRoleSelect.value != activeIdx) {
-    icpRoleSelect.value = activeIdx;
+  if (icpRoleSelect && S.positions && S.positions.length > 0) {
+    const currentVal = S.activePositionIndex || 0;
+    icpRoleSelect.innerHTML = S.positions.map((p, idx) => 
+      `<option value="${idx}" ${idx === currentVal ? 'selected' : ''}>${p.title} @ ${p.company}</option>`
+    ).join('');
   }
+  
+  const activeIdx = S.activePositionIndex || 0;
+  const activePos = (S.positions && S.positions.length > 0) ? S.positions[activeIdx] : null;
+  const overrideElem = document.getElementById('icp-override');
+  const override = overrideElem ? overrideElem.value.trim() : '';
   
   let bannerHtml = '';
   if (override) {
     bannerHtml = `<div class="kpi-card" style="border-color:var(--accent);margin-bottom:0"><div class="kpi-label">ICP Personalizado activo</div><div style="font-size:12px;font-weight:600;margin-top:4px">"${override}"</div></div>`;
   } else if (activePos) {
-    bannerHtml = `<div class="kpi-card" style="border-color:var(--purple);margin-bottom:0"><div class="kpi-label">ICP Auto-detectado desde tu cargo activo</div><div style="font-size:12px;font-weight:600;margin-top:4px">${activePos.title} @ ${activePos.company} → Sector: ${inferSector(activePos.title,activePos.company)}</div></div>`;
+    bannerHtml = `<div class="kpi-card" style="border-color:var(--purple);margin-bottom:0"><div class="kpi-label">ICP Auto-detectado desde tu cargo activo</div><div style="font-size:12px;font-weight:600;margin-top:4px">${activePos.title} @ ${activePos.company} → Sector: ${inferSector(activePos.title, activePos.company)}</div></div>`;
   }
-  document.getElementById('icp-context-banner').innerHTML = bannerHtml;
+  const bannerElem = document.getElementById('icp-context-banner');
+  if (bannerElem) bannerElem.innerHTML = bannerHtml;
+  
   renderICPTable();
 }
 
 function renderICPTable() {
-  const search = norm(document.getElementById('icp-search').value);
-  const minScore = parseInt(document.getElementById('icp-min-score').value)||0;
-  const filtered = icpContacts.filter(c => {
+  const activeContacts = typeof getActiveContacts === 'function' ? getActiveContacts() : (S.contacts || []);
+  activeContacts.forEach(c => { c.score = scoreContact(c); });
+  
+  const searchElem = document.getElementById('icp-search');
+  const search = searchElem ? norm(searchElem.value) : '';
+  const minScoreElem = document.getElementById('icp-min-score');
+  const minScore = minScoreElem ? (parseInt(minScoreElem.value) || 0) : 0;
+
+  const filtered = activeContacts.filter(c => {
     if (c.crmStatus === 'Descartado' || c.discardedFromPurge) return false;
     if (c.score < minScore) return false;
     if (search && !norm(c.name).includes(search) && !norm(c.position).includes(search) && !norm(c.company || '').includes(search)) return false;
     return true;
-  });
-  document.getElementById('nb-icp').textContent = filtered.length;
+  }).sort((a,b) => b.score - a.score);
+
+  const nbIcp = document.getElementById('nb-icp');
+  if (nbIcp) nbIcp.textContent = filtered.length.toLocaleString();
+
   const tbody = document.getElementById('icp-tbody');
   const empty = document.getElementById('icp-empty');
-  if (!filtered.length) { tbody.innerHTML=''; empty.style.display='block'; return; }
-  empty.style.display = 'none';
+  if (!tbody) return;
+
+  if (!filtered.length) { 
+    tbody.innerHTML = ''; 
+    if (empty) empty.style.display = 'block'; 
+    return; 
+  }
+  if (empty) empty.style.display = 'none';
+
   tbody.innerHTML = filtered.map(c => {
     const crmBadge = c.crmStatus && c.crmStatus !== 'Ninguno' 
       ? `<span class="badge" style="background:${scoreColorCrm(c.crmStatus)}; color:#fff; border:none; margin-right:4px; font-size:8px;">${c.crmStatus}</span>` 
