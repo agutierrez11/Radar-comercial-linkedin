@@ -3378,8 +3378,8 @@ async function loadDemoData(autoNavigate = true) {
     } catch(err) {
       console.warn("[LoadDemo] Fetch fallback to master_data.js:", err);
     }
-    if (!data && window.__MASTER_DATA__) {
-      data = window.__MASTER_DATA__;
+    if (!data && (window.MASTER_CONNECTIONS_DATA || window.__MASTER_DATA__)) {
+      data = window.MASTER_CONNECTIONS_DATA || window.__MASTER_DATA__;
     }
     if (!data) throw new Error("No se pudo cargar la base de datos.");
     
