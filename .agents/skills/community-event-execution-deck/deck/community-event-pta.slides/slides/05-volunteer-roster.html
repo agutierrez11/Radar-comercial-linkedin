@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Volunteer Roster Grid</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+  body { margin:0; padding:0; overflow:hidden; font-family:'Inter',system-ui,sans-serif; color:#111; }
+</style>
+</head>
+<body>
+<div class="slide-container" data-screen-label="05 Volunteer Roster" style="position:relative; width:1920px; height:1080px; overflow:hidden; background:#FFFFFF;">
+
+  <!-- Header bar -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:0; top:0; width:1920px; height:88px; background:#0B6E4F; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:0; width:1500px; height:88px; z-index:10;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:15px; letter-spacing:0.2em; color:#E0A800; font-weight:700; padding-top:24px;">05 · VOLUNTEER ROSTER GRID — SIGNATURE COMPONENT</div>
+    <div style="font-size:26px; font-weight:600; color:#FFFFFF; padding-top:6px;">Role × shift × named person × contact × arrival. "TBD" rows in red.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1700px; top:0; width:160px; height:88px; z-index:10;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#FFFFFF; opacity:0.8; font-weight:600; text-align:right; padding:36px 20px 0 0;">05 / 13</div>
+  </div>
+
+  <!-- KPI strip -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:120px; width:1760px; z-index:10;">
+    <div style="display:flex; gap:24px;">
+      <div style="flex:1; border:2px solid #0B6E4F; padding:14px 20px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#0B6E4F; font-weight:700;">CONFIRMED</div>
+        <div style="font-size:36px; font-weight:800; color:#0B6E4F;">22 <span style="font-size:18px; color:#666; font-weight:500;">/ 30 target</span></div>
+      </div>
+      <div style="flex:1; border:2px solid #E0A800; padding:14px 20px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#E0A800; font-weight:700;">PENDING CONFIRM</div>
+        <div style="font-size:36px; font-weight:800; color:#E0A800;">5 <span style="font-size:18px; color:#666; font-weight:500;">replies due Fri</span></div>
+      </div>
+      <div style="flex:1; border:2px solid #C0392B; padding:14px 20px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#C0392B; font-weight:700;">OPEN — TBD</div>
+        <div style="font-size:36px; font-weight:800; color:#C0392B;">3 <span style="font-size:18px; color:#666; font-weight:500;">need board sign-up tonight</span></div>
+      </div>
+      <div style="flex:1; border:2px solid #0B6E4F; padding:14px 20px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#0B6E4F; font-weight:700;">CAPTAINS</div>
+        <div style="font-size:36px; font-weight:800; color:#0B6E4F;">12 <span style="font-size:18px; color:#666; font-weight:500;">/ 12 ✓</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Roster table -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:260px; width:1760px; z-index:10;">
+    <table style="border-collapse:collapse; width:1760px; font-size:13px;">
+      <thead>
+        <tr style="background:#0B6E4F; color:#FFFFFF; height:38px;">
+          <th style="text-align:left; padding:0 14px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; width:170px;">SHIFT</th>
+          <th style="text-align:left; padding:0 14px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; width:230px;">ROLE</th>
+          <th style="text-align:left; padding:0 14px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; width:230px;">NAMED VOLUNTEER</th>
+          <th style="text-align:left; padding:0 14px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; width:200px;">CONTACT</th>
+          <th style="text-align:left; padding:0 14px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; width:140px;">ARRIVAL</th>
+          <th style="text-align:left; padding:0 14px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em;">STATION / NOTES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- SETUP -->
+        <tr style="background:#E8F4EF; height:28px;"><td colspan="6" style="padding:0 14px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#0B6E4F; font-weight:700;">SETUP — SAT 7:00 → 8:30 AM · CAPTAIN: JAMAL OKONKWO</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">7:00 AM</td><td style="padding:0 14px;">Tent + table crew</td><td style="padding:0 14px; font-weight:600;">Jamal Okonkwo (C)</td><td style="padding:0 14px; color:#444;">(415) 555-0142</td><td style="padding:0 14px; font-weight:600; color:#0B6E4F;">6:45 AM</td><td style="padding:0 14px; color:#444;">Truck unload, north gate</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">7:00 AM</td><td style="padding:0 14px;">Tent + table crew</td><td style="padding:0 14px;">Marcus Lee</td><td style="padding:0 14px; color:#444;">(415) 555-0188</td><td style="padding:0 14px; color:#0B6E4F;">6:45 AM</td><td style="padding:0 14px; color:#444;">Truck unload</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">7:00 AM</td><td style="padding:0 14px;">Tent + table crew</td><td style="padding:0 14px;">Ana Reyes</td><td style="padding:0 14px; color:#444;">(415) 555-0231</td><td style="padding:0 14px; color:#0B6E4F;">7:00 AM</td><td style="padding:0 14px; color:#444;">Table layout, playground</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">7:00 AM</td><td style="padding:0 14px;">Signage + traffic cones</td><td style="padding:0 14px; font-weight:600;">Priya Shah (C)</td><td style="padding:0 14px; color:#444;">(415) 555-0177</td><td style="padding:0 14px; color:#0B6E4F;">7:00 AM</td><td style="padding:0 14px; color:#444;">Curb to north gate, ADA route</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">7:30 AM</td><td style="padding:0 14px;">Signage + traffic cones</td><td style="padding:0 14px;">Chris Nakamura</td><td style="padding:0 14px; color:#444;">(415) 555-0265</td><td style="padding:0 14px; color:#0B6E4F;">7:15 AM</td><td style="padding:0 14px; color:#444;">Drop-off lane control</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">7:30 AM</td><td style="padding:0 14px;">Cafeteria + first-aid</td><td style="padding:0 14px;">Lillian Wu, RN</td><td style="padding:0 14px; color:#444;">(415) 555-0303</td><td style="padding:0 14px; color:#0B6E4F;">7:30 AM</td><td style="padding:0 14px; color:#444;">First-aid station, cafeteria SW corner</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #FFE4E1; background:#FFF5F4;"><td style="padding:0 14px; color:#C0392B;">7:30 AM</td><td style="padding:0 14px; color:#C0392B;">Cafeteria + first-aid</td><td style="padding:0 14px; font-weight:700; color:#C0392B;">TBD — 2 needed</td><td style="padding:0 14px; color:#C0392B;">—</td><td style="padding:0 14px; color:#C0392B;">7:30 AM</td><td style="padding:0 14px; color:#C0392B; font-weight:600;">⚑ Board sign-up TONIGHT</td></tr>
+
+        <!-- BOOTH -->
+        <tr style="background:#E8F4EF; height:28px;"><td colspan="6" style="padding:0 14px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#0B6E4F; font-weight:700;">BOOTH OPERATIONS — SAT 8:30 AM → 11:00 AM · CAPTAIN: DEVON CARTER</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">8:30 AM</td><td style="padding:0 14px;">Welcome + sign-in</td><td style="padding:0 14px; font-weight:600;">Devon Carter (C)</td><td style="padding:0 14px; color:#444;">(415) 555-0119</td><td style="padding:0 14px; color:#0B6E4F;">8:15 AM</td><td style="padding:0 14px; color:#444;">North gate sign-in tablets</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">8:30 AM</td><td style="padding:0 14px;">Welcome + sign-in</td><td style="padding:0 14px;">Sofia Martinez</td><td style="padding:0 14px; color:#444;">(415) 555-0156</td><td style="padding:0 14px; color:#0B6E4F;">8:30 AM</td><td style="padding:0 14px; color:#444;">Wristbands, Spanish-language</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">8:30 AM</td><td style="padding:0 14px;">Cake-walk booth</td><td style="padding:0 14px; font-weight:600;">Hannah Kim (C)</td><td style="padding:0 14px; color:#444;">(415) 555-0244</td><td style="padding:0 14px; color:#0B6E4F;">8:30 AM</td><td style="padding:0 14px; color:#444;">Booth 3, playground</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">8:30 AM</td><td style="padding:0 14px;">Cake-walk booth</td><td style="padding:0 14px;">Imani Foster</td><td style="padding:0 14px; color:#444;">(415) 555-0211</td><td style="padding:0 14px; color:#0B6E4F;">8:30 AM</td><td style="padding:0 14px; color:#444;">Cash box, change</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">8:30 AM</td><td style="padding:0 14px;">Face painting</td><td style="padding:0 14px; font-weight:600;">Elena Park (C)</td><td style="padding:0 14px; color:#444;">(415) 555-0298</td><td style="padding:0 14px; color:#0B6E4F;">8:30 AM</td><td style="padding:0 14px; color:#444;">Booth 5, hypoallergenic paints</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">8:30 AM</td><td style="padding:0 14px;">Face painting</td><td style="padding:0 14px;">Mia Goldberg</td><td style="padding:0 14px; color:#444;">(415) 555-0167</td><td style="padding:0 14px; color:#0B6E4F;">8:30 AM</td><td style="padding:0 14px; color:#444;">Booth 5</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">8:30 AM</td><td style="padding:0 14px;">Bake sale</td><td style="padding:0 14px; font-weight:600;">Tom Becker (C)</td><td style="padding:0 14px; color:#444;">(415) 555-0102</td><td style="padding:0 14px; color:#0B6E4F;">8:00 AM</td><td style="padding:0 14px; color:#444;">Cafeteria, allergen labels ✓</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">8:30 AM</td><td style="padding:0 14px;">Bake sale</td><td style="padding:0 14px;">Yusuf Adebayo</td><td style="padding:0 14px; color:#444;">(415) 555-0289</td><td style="padding:0 14px; color:#0B6E4F;">8:30 AM</td><td style="padding:0 14px; color:#444;">Cash &amp; restock</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">8:30 AM</td><td style="padding:0 14px;">Bake sale</td><td style="padding:0 14px;">Rachel O'Brien</td><td style="padding:0 14px; color:#444;">(415) 555-0322</td><td style="padding:0 14px; color:#0B6E4F;">8:30 AM</td><td style="padding:0 14px; color:#444;">Cafeteria</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">9:00 AM</td><td style="padding:0 14px;">Teacher booths host</td><td style="padding:0 14px; font-weight:600;">Carla Jensen (C)</td><td style="padding:0 14px; color:#444;">(415) 555-0258</td><td style="padding:0 14px; color:#0B6E4F;">8:30 AM</td><td style="padding:0 14px; color:#444;">Escort teachers, K–5 corridor</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #FFE4E1; background:#FFF5F4;"><td style="padding:0 14px; color:#C0392B;">9:00 AM</td><td style="padding:0 14px; color:#C0392B;">Spanish translator (roving)</td><td style="padding:0 14px; font-weight:700; color:#C0392B;">TBD — 1 needed</td><td style="padding:0 14px; color:#C0392B;">—</td><td style="padding:0 14px; color:#C0392B;">8:30 AM</td><td style="padding:0 14px; color:#C0392B; font-weight:600;">⚑ Board sign-up TONIGHT</td></tr>
+
+        <!-- CLEANUP -->
+        <tr style="background:#E8F4EF; height:28px;"><td colspan="6" style="padding:0 14px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#0B6E4F; font-weight:700;">CLEANUP — SAT 11:00 AM → 12:30 PM · CAPTAIN: ROBERT NGUYEN</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">11:00 AM</td><td style="padding:0 14px;">Trash + recycling sweep</td><td style="padding:0 14px; font-weight:600;">Robert Nguyen (C)</td><td style="padding:0 14px; color:#444;">(415) 555-0135</td><td style="padding:0 14px; color:#0B6E4F;">10:45 AM</td><td style="padding:0 14px; color:#444;">3 totes, gloves provided</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">11:00 AM</td><td style="padding:0 14px;">Trash + recycling sweep</td><td style="padding:0 14px;">Marcus Lee (returning)</td><td style="padding:0 14px; color:#444;">(415) 555-0188</td><td style="padding:0 14px; color:#0B6E4F;">11:00 AM</td><td style="padding:0 14px; color:#444;">Playground perimeter</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">11:00 AM</td><td style="padding:0 14px;">Tent + table breakdown</td><td style="padding:0 14px;">Ana Reyes (returning)</td><td style="padding:0 14px; color:#444;">(415) 555-0231</td><td style="padding:0 14px; color:#0B6E4F;">11:00 AM</td><td style="padding:0 14px; color:#444;">Inventory check-back to truck</td></tr>
+        <tr style="height:28px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 14px; color:#666;">11:00 AM</td><td style="padding:0 14px;">Lost &amp; found + sign-out</td><td style="padding:0 14px;">Lila Henderson</td><td style="padding:0 14px; color:#444;">(415) 555-0316</td><td style="padding:0 14px; color:#0B6E4F;">11:00 AM</td><td style="padding:0 14px; color:#444;">Cafeteria main door</td></tr>
+        <tr style="height:28px;"><td style="padding:0 14px; color:#666;">11:30 AM</td><td style="padding:0 14px;">Cash count + lockbox</td><td style="padding:0 14px; font-weight:600;">Tom Becker (C, treasurer)</td><td style="padding:0 14px; color:#444;">(415) 555-0102</td><td style="padding:0 14px; color:#0B6E4F;">11:30 AM</td><td style="padding:0 14px; color:#444;">Two-signature deposit, principal's office</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bottom note -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:1030px; width:1760px; z-index:10;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#666; letter-spacing:0.1em;">(C) = SHIFT CAPTAIN · ⚑ = RED-FLAG OPEN ROW · STEP 2 OF NATIONAL PTA 7-STEP MODEL — RECRUIT YOUR TEAM<sup>[1][2]</sup></div>
+  </div>
+
+</div>
+</body>
+</html>

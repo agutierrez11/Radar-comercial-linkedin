@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "format": "html",
+  "metadata": {
+    "title": "Lincoln Elementary Fall Festival — Board Approval Deck",
+    "description": "PTA event planning deck following National PTA 7-step model, IAP2 Spectrum, and Robert's Rules of Order. Civic green / paper-white / accent gold palette.",
+    "author": "Maria Alvarez, PTA Co-Chair"
+  },
+  "canvas": {"width": 1920, "height": 1080},
+  "playlist": [
+    "01-cover.html",
+    "02-iap2-level.html",
+    "03-goal.html",
+    "04-timeline.html",
+    "05-volunteer-roster.html",
+    "06-site-plan.html",
+    "07-permits-insurance.html",
+    "08-communication-plan.html",
+    "09-budget.html",
+    "10-run-of-show.html",
+    "11-cleanup-debrief.html",
+    "12-motion.html",
+    "13-sources.html"
+  ]
+}

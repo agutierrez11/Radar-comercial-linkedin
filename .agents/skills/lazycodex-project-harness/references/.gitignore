@@ -1,0 +1,8 @@
+node_modules/
+/dist/
+!plugins/omo/components/*/dist/
+!plugins/omo/components/*/dist/**
+.env
+.env.*
+*.tgz
+.DS_Store

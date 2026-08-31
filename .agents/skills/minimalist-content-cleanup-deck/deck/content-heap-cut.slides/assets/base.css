@@ -1,0 +1,51 @@
+/* Shared design tokens for the deck.
+   Palette: pure white, ink, single cool slate accent.
+   Two type weights only: 400 (body) + 600 (heading). */
+
+:root {
+  --bg: #FFFFFF;
+  --ink: #111111;
+  --ink-2: #2A2F36;
+  --muted: #5B6470;
+  --rule: #E5E7EB;
+  --rule-2: #D7DCE3;
+  --slate: #3F4A57;
+  --slate-tint: #EEF1F4;
+  --slate-tint-2: #E4E8ED;
+  --cut: #B23A48;
+  --merge: #1F6FEB;
+  --rewrite: #8B5A00;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+/* Atomic-level chip — the ONE allowed icon-ish element. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+.chip::before {
+  content: "";
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--slate);
+}
+.chip.atom::before     { background: #111111; }
+.chip.molecule::before { background: #3F4A57; border-radius: 2px; }
+.chip.organism::before { background: #3F4A57; border-radius: 50%; outline: 2px solid #3F4A57; outline-offset: 2px; }

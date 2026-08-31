@@ -1,0 +1,18 @@
+node_modules/
+dist/
+*.log
+
+# graft's local graph cache — regenerable, not committed. Each dev runs
+# `graft build` locally (it re-adds this line itself), so the folder is a
+# personal cache like node_modules, never a shared artifact.
+graft/
+
+# Env
+.env
+.env.local
+
+# OS
+.DS_Store
+
+# Session transcripts and prompt traces — local analysis, not product.
+transcripts/

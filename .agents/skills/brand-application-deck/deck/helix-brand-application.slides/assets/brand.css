@@ -1,0 +1,24 @@
+/* Helix brand system — shared tokens used across the deck.
+   This file documents the brand decisions; each slide still uses
+   inline styles so the editor can track positions per the contract. */
+
+/* Palette */
+:root {
+  --helix-navy:      #0F2540;   /* primary */
+  --helix-electric:  #0066FF;   /* signal / chart / link */
+  --helix-ink:       #0A1626;   /* near-black for type on light */
+  --helix-paper:     #FFFFFF;   /* primary light */
+  --helix-grid:      #E6ECF2;   /* grid + dividers */
+  --helix-mute:      #6B7785;   /* secondary text */
+  --helix-warn:      #FFB400;   /* sparingly */
+}
+
+/* Typography — display + body, max 3 weights total (Vignelli restraint) */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400&display=swap');
+
+/* Type ramp (display = Space Grotesk; body = Inter)
+   Weights in play across the whole deck:
+   - Space Grotesk 700 (display H1)
+   - Space Grotesk 500 (display H2 / eyebrow)
+   - Inter 400        (body, captions, footnotes)
+   = 3 weights total. */

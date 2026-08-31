@@ -1,0 +1,53 @@
+{
+  "name": "lazycodex-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.7.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "predev": "node ./scripts/generate-docs-content.mjs",
+    "dev": "next dev",
+    "prebuild": "node ./scripts/generate-docs-content.mjs",
+    "build": "NODE_OPTIONS=--no-deprecation next build",
+    "start": "NODE_OPTIONS=--no-deprecation next start",
+    "lint": "biome lint app e2e",
+    "lint:fix": "biome lint --write app e2e",
+    "type-check": "tsc --noEmit",
+    "test:e2e": "NODE_OPTIONS=--no-deprecation playwright test",
+    "test:lighthouse": "NODE_OPTIONS=--no-deprecation playwright test --grep @lighthouse",
+    "test:lighthouse:live": "NODE_OPTIONS=--no-deprecation node ./scripts/lighthouse-live.mjs https://lazycodex.ai/",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+  },
+  "dependencies": {
+    "geist": "1.7.2",
+    "next": "16.2.9",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.0",
+    "@opennextjs/cloudflare": "1.19.11",
+    "@playwright/test": "1.61.0",
+    "@tailwindcss/postcss": "4.3.1",
+    "@types/node": "25.9.3",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "lighthouse": "13.4.0",
+    "marked": "18.0.5",
+    "postcss": "8.5.15",
+    "tailwindcss": "4.3.1",
+    "typescript": "5.9.3",
+    "wrangler": "4.101.0"
+  },
+  "browserslist": [
+    "chrome >= 111",
+    "firefox >= 111",
+    "safari >= 16.4",
+    "edge >= 111"
+  ]
+}

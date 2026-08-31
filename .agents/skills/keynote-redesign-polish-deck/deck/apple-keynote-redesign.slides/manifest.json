@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "format": "html",
+  "metadata": {
+    "title": "Redesign an Existing Deck like an Apple Keynote Design Lead",
+    "description": "A workflow deck demonstrating the Reynolds/Jobs one-idea-per-slide redesign discipline, with a live Slide Diet Tracker.",
+    "author": ""
+  },
+  "canvas": {"width": 1920, "height": 1080},
+  "playlist": [
+    "cover.html",
+    "why-now.html",
+    "the-one-number.html",
+    "one-idea.html",
+    "one-verb.html",
+    "visual-evidence.html",
+    "negative-space.html",
+    "one-type-family.html",
+    "build-dont-dump.html",
+    "before-after-feature.html",
+    "before-after-cover.html",
+    "before-after-chart.html",
+    "the-ask.html",
+    "thank-you.html",
+    "slide-diet-tracker.html",
+    "sources.html"
+  ]
+}

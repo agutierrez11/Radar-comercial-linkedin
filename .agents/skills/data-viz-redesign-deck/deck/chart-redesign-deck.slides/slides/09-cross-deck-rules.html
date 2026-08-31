@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Cross-Deck Rules</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+  body { margin:0; padding:0; overflow:hidden; font-family:'Inter',sans-serif; font-feature-settings:"tnum"; }
+</style>
+</head>
+<body>
+<div data-screen-label="09 Cross-Deck Rules" class="slide-container" style="position:relative; width:1920px; height:1080px; overflow:hidden; background:#FFFFFF;">
+
+  <!-- Header -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:120px; top:96px; width:1680px; height:1px; background:#1A1A1A; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:60px; width:1300px; height:28px; font-family:'JetBrains Mono',monospace; font-size:14px; color:#1A1A1A; letter-spacing:0.12em; text-transform:uppercase; z-index:10;">
+    09 &nbsp;·&nbsp; Cross-Deck Rules (IBCS)
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1520px; top:60px; width:280px; height:28px; font-family:'JetBrains Mono',monospace; font-size:14px; color:#1A1A1A; letter-spacing:0.12em; text-transform:uppercase; text-align:right; z-index:10;">09 / 12</div>
+
+  <!-- Title -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:140px; width:1680px; height:140px; font-size:60px; font-weight:600; line-height:1.05; color:#1A1A1A; letter-spacing:-0.025em; z-index:10;">
+    Same scale, same color, same suffix — every chart.
+  </div>
+
+  <!-- Subhead -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:288px; width:1680px; height:36px; font-size:22px; line-height:1.45; color:#1A1A1A; z-index:10;">
+    The IBCS notation gives a deck a single grammar. The reader learns it once on slide 04 and reuses it everywhere.<sup style="color:#0066CC;">9,10</sup>
+  </div>
+
+  <!-- 3-column rule cards -->
+  <!-- RULE 1 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:120px; top:340px; width:520px; height:540px; background:#FFFFFF; border:1px solid #1A1A1A; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:144px; top:360px; width:480px; height:30px; font-family:'JetBrains Mono',monospace; font-size:14px; color:#0066CC; letter-spacing:0.16em; text-transform:uppercase; font-weight:500; z-index:10;">Rule 01</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:144px; top:394px; width:480px; height:84px; font-size:32px; font-weight:600; line-height:1.1; color:#1A1A1A; letter-spacing:-0.01em; z-index:10;">Same scale across small multiples.</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:144px; top:498px; width:480px; height:80px; font-size:17px; line-height:1.5; color:#1A1A1A; z-index:10;">
+    If two panels share a metric, they share a y-axis range. Don't auto-fit each panel — that hides the differences the reader came for.
+  </div>
+
+  <!-- mini demo: 2 panels same scale -->
+  <svg data-object="true" data-object-type="image" style="position:absolute; left:144px; top:600px; width:480px; height:200px; z-index:5;" viewBox="0 0 480 200">
+    <g>
+      <text x="0" y="14" font-family="Inter" font-size="13" fill="#1A1A1A">EMEA</text>
+      <line x1="0" y1="120" x2="220" y2="120" stroke="#1A1A1A" stroke-width="1"/>
+      <polyline points="10,108 60,92 110,74 160,58 210,40" fill="none" stroke="#0066CC" stroke-width="2.5"/>
+      <text x="220" y="44" font-family="Inter" font-size="12" fill="#0066CC" text-anchor="end">+62%</text>
+    </g>
+    <g transform="translate(260,0)">
+      <text x="0" y="14" font-family="Inter" font-size="13" fill="#1A1A1A">APAC</text>
+      <line x1="0" y1="120" x2="220" y2="120" stroke="#1A1A1A" stroke-width="1"/>
+      <polyline points="10,108 60,100 110,96 160,86 210,82" fill="none" stroke="#9CA3AF" stroke-width="2.5"/>
+      <text x="220" y="86" font-family="Inter" font-size="12" fill="#9CA3AF" text-anchor="end">+18%</text>
+    </g>
+    <text x="0" y="158" font-family="Inter" font-size="12" fill="#9CA3AF">Identical y-axis 0–200, same x-axis dates.</text>
+  </svg>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:144px; top:820px; width:480px; height:30px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; z-index:10;">
+    IBCS — uniform scale
+  </div>
+
+  <!-- RULE 2 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:700px; top:340px; width:520px; height:540px; background:#FFFFFF; border:1px solid #1A1A1A; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:724px; top:360px; width:480px; height:30px; font-family:'JetBrains Mono',monospace; font-size:14px; color:#0066CC; letter-spacing:0.16em; text-transform:uppercase; font-weight:500; z-index:10;">Rule 02</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:724px; top:394px; width:480px; height:84px; font-size:32px; font-weight:600; line-height:1.1; color:#1A1A1A; letter-spacing:-0.01em; z-index:10;">Color carries semantic, not identity.</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:724px; top:498px; width:480px; height:80px; font-size:17px; line-height:1.5; color:#1A1A1A; z-index:10;">
+    Color means a thing — actual vs plan vs forecast, focal vs context, normal vs exception. It does not mean "this is the Apparel category."
+  </div>
+
+  <!-- mini demo: 3 swatches with labels -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:724px; top:610px; width:140px; height:90px; background:#0066CC; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:724px; top:712px; width:140px; height:60px; font-size:14px; line-height:1.4; color:#1A1A1A; z-index:10;">
+    <strong>Focal / Actual</strong><br/><span style="color:#9CA3AF;">analytic blue</span>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:894px; top:610px; width:140px; height:90px; background:#9CA3AF; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:894px; top:712px; width:140px; height:60px; font-size:14px; line-height:1.4; color:#1A1A1A; z-index:10;">
+    <strong>Context / Plan</strong><br/><span style="color:#9CA3AF;">muted gray</span>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:1064px; top:610px; width:140px; height:90px; background:#E37222; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1064px; top:712px; width:140px; height:60px; font-size:14px; line-height:1.4; color:#1A1A1A; z-index:10;">
+    <strong>Exception</strong><br/><span style="color:#9CA3AF;">accent orange</span>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:724px; top:820px; width:480px; height:30px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; z-index:10;">
+    IBCS — uniform color semantics
+  </div>
+
+  <!-- RULE 3 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:1280px; top:340px; width:520px; height:540px; background:#FFFFFF; border:1px solid #1A1A1A; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1304px; top:360px; width:480px; height:30px; font-family:'JetBrains Mono',monospace; font-size:14px; color:#0066CC; letter-spacing:0.16em; text-transform:uppercase; font-weight:500; z-index:10;">Rule 03</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1304px; top:394px; width:480px; height:84px; font-size:32px; font-weight:600; line-height:1.1; color:#1A1A1A; letter-spacing:-0.01em; z-index:10;">Unit suffix lives in the title.</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1304px; top:498px; width:480px; height:80px; font-size:17px; line-height:1.5; color:#1A1A1A; z-index:10;">
+    "$M", "%", "bps", "count" appears once in the chart title — never inside every tick. Tick labels stay bare numbers; tabular numerals only.
+  </div>
+
+  <!-- mini demo: titled chart -->
+  <svg data-object="true" data-object-type="image" style="position:absolute; left:1304px; top:600px; width:460px; height:200px; z-index:5;" viewBox="0 0 460 200">
+    <text x="0" y="18" font-family="Inter" font-size="16" font-weight="500" fill="#1A1A1A">Revenue, $M</text>
+    <line x1="0" y1="160" x2="460" y2="160" stroke="#1A1A1A" stroke-width="1"/>
+    <rect x="20"  y="120" width="60" height="40" fill="#9CA3AF"/>
+    <rect x="100" y="90"  width="60" height="70" fill="#9CA3AF"/>
+    <rect x="180" y="64"  width="60" height="96" fill="#0066CC"/>
+    <rect x="260" y="48"  width="60" height="112" fill="#0066CC"/>
+    <text x="50"  y="184" font-family="Inter" font-size="13" fill="#9CA3AF" text-anchor="middle">Q1</text>
+    <text x="130" y="184" font-family="Inter" font-size="13" fill="#9CA3AF" text-anchor="middle">Q2</text>
+    <text x="210" y="184" font-family="Inter" font-size="13" fill="#9CA3AF" text-anchor="middle">Q3</text>
+    <text x="290" y="184" font-family="Inter" font-size="13" fill="#9CA3AF" text-anchor="middle">Q4</text>
+    <text x="50"  y="114" font-family="Inter" font-size="13" fill="#1A1A1A" text-anchor="middle">42</text>
+    <text x="130" y="84"  font-family="Inter" font-size="13" fill="#1A1A1A" text-anchor="middle">58</text>
+    <text x="210" y="58"  font-family="Inter" font-size="13" fill="#1A1A1A" text-anchor="middle">72</text>
+    <text x="290" y="42"  font-family="Inter" font-size="13" fill="#1A1A1A" text-anchor="middle">85</text>
+  </svg>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1304px; top:820px; width:480px; height:30px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; z-index:10;">
+    IBCS — uniform unit notation
+  </div>
+
+  <!-- Bottom hard rule strip -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:920px; width:1680px; height:70px; font-size:20px; line-height:1.45; color:#1A1A1A; z-index:10;">
+    <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#9CA3AF; letter-spacing:0.16em; text-transform:uppercase;">Hard rule</span>&nbsp;&nbsp; Every chart in the deck must agree with all three rules. A chart that needs an exception gets its exception documented in the appendix — not in a one-off legend.
+  </div>
+
+  <!-- Footer -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:120px; top:1020px; width:1680px; height:1px; background:#1A1A1A; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:1036px; width:1200px; height:24px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; z-index:10;">
+    Source — IBCS / Hichert<sup style="color:#0066CC;">9,10</sup>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1340px; top:1036px; width:460px; height:24px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; text-align:right; z-index:10;">
+    Cross-Deck Rules
+  </div>
+
+</div>
+</body>
+</html>

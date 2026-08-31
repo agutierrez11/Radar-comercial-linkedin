@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Cover — Redesigning the Charts</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+  body { margin:0; padding:0; overflow:hidden; font-family:'Inter',sans-serif; font-feature-settings:"tnum"; }
+</style>
+</head>
+<body>
+<div data-screen-label="01 Cover" class="slide-container" style="position:relative; width:1920px; height:1080px; overflow:hidden; background:#FFFFFF;">
+
+  <!-- Top hairline rule -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:120px; top:96px; width:1680px; height:1px; background:#1A1A1A; z-index:1;"></div>
+
+  <!-- Top-left meta -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:60px; width:900px; height:28px; font-family:'JetBrains Mono',monospace; font-size:14px; color:#1A1A1A; letter-spacing:0.12em; text-transform:uppercase; z-index:10;">
+    A Chart-Redesign Workbook &nbsp;·&nbsp; Methodology &nbsp;·&nbsp; v1.0
+  </div>
+
+  <!-- Top-right meta -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1520px; top:60px; width:280px; height:28px; font-family:'JetBrains Mono',monospace; font-size:14px; color:#1A1A1A; letter-spacing:0.12em; text-transform:uppercase; text-align:right; z-index:10;">
+    01 / 12
+  </div>
+
+  <!-- Eyebrow -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:170px; width:1000px; height:32px; font-family:'JetBrains Mono',monospace; font-size:15px; color:#0066CC; letter-spacing:0.18em; text-transform:uppercase; font-weight:500; z-index:10;">
+    For Analysts, Consultants, BI Leads
+  </div>
+
+  <!-- Main headline -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:230px; width:1180px; height:380px; font-size:120px; font-weight:600; line-height:1.02; color:#1A1A1A; letter-spacing:-0.035em; z-index:10;">
+    Redesigning<br/>the charts in<br/><span style="color:#0066CC;">your deck.</span>
+  </div>
+
+  <!-- Subhead / thesis -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:610px; width:1100px; height:140px; font-size:30px; font-weight:400; line-height:1.35; color:#1A1A1A; z-index:10;">
+    The chart's wrong <em style="font-style:italic; color:#E37222;">type</em>, not the wrong colors.<br/>
+    Pick the encoding the audience can actually decode.
+  </div>
+
+  <!-- Method anchors row (left bottom) -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:870px; width:300px; height:120px; z-index:10;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9CA3AF; letter-spacing:0.16em; text-transform:uppercase; margin-bottom:10px;">Method anchors</div>
+    <div style="font-size:17px; line-height:1.45; color:#1A1A1A;">Cleveland &amp; McGill<sup style="color:#0066CC;">1,3</sup><br/>Tufte<sup style="color:#0066CC;">4</sup>&nbsp;·&nbsp;Yau<sup style="color:#0066CC;">5</sup>&nbsp;·&nbsp;Knaflic<sup style="color:#0066CC;">7,8</sup>&nbsp;·&nbsp;IBCS<sup style="color:#0066CC;">9</sup></div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:460px; top:870px; width:300px; height:120px; z-index:10;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9CA3AF; letter-spacing:0.16em; text-transform:uppercase; margin-bottom:10px;">Output</div>
+    <div style="font-size:17px; line-height:1.45; color:#1A1A1A;">12 slides<br/>5 Chart Redesign Cards<br/>1 style-guide one-pager</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:800px; top:870px; width:340px; height:120px; z-index:10;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9CA3AF; letter-spacing:0.16em; text-transform:uppercase; margin-bottom:10px;">Red line</div>
+    <div style="font-size:17px; line-height:1.45; color:#1A1A1A;">Every chart names<br/>the question it answers.<br/>If it doesn't, it's deleted.</div>
+  </div>
+
+  <!-- Before/after mini block (right side) -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:1340px; top:230px; width:460px; height:560px; background:#FFFFFF; border:1px solid #1A1A1A; z-index:1;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1360px; top:250px; width:420px; height:22px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#1A1A1A; letter-spacing:0.16em; text-transform:uppercase; z-index:10;">
+    Before &nbsp;→&nbsp; After
+  </div>
+
+  <!-- Before label -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1360px; top:290px; width:200px; height:20px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; z-index:10;">
+    Before — 3D donut
+  </div>
+
+  <!-- Before: a flat "donut" placeholder using conic-gradient feel via stacked arcs (SVG) -->
+  <svg data-object="true" data-object-type="image" style="position:absolute; left:1380px; top:320px; width:180px; height:180px; z-index:5;" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#9CA3AF" stroke-width="20" stroke-dasharray="60 251" transform="rotate(-90 50 50)"/>
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#C9C9C9" stroke-width="20" stroke-dasharray="50 251" stroke-dashoffset="-60" transform="rotate(-90 50 50)"/>
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#D8D8D8" stroke-width="20" stroke-dasharray="40 251" stroke-dashoffset="-110" transform="rotate(-90 50 50)"/>
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#E5E5E5" stroke-width="20" stroke-dasharray="35 251" stroke-dashoffset="-150" transform="rotate(-90 50 50)"/>
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#EFEFEF" stroke-width="20" stroke-dasharray="66 251" stroke-dashoffset="-185" transform="rotate(-90 50 50)"/>
+  </svg>
+
+  <!-- Divider arrow -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1580px; top:390px; width:40px; height:40px; font-family:'JetBrains Mono',monospace; font-size:28px; color:#1A1A1A; z-index:10;">
+    →
+  </div>
+
+  <!-- After label -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1620px; top:290px; width:180px; height:20px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; z-index:10;">
+    After — ranked bars
+  </div>
+
+  <!-- After: ranked horizontal bars -->
+  <svg data-object="true" data-object-type="image" style="position:absolute; left:1620px; top:325px; width:170px; height:170px; z-index:5;" viewBox="0 0 170 170">
+    <rect x="0" y="10"  width="160" height="22" fill="#0066CC"/>
+    <rect x="0" y="42"  width="128" height="22" fill="#0066CC"/>
+    <rect x="0" y="74"  width="78"  height="22" fill="#9CA3AF"/>
+    <rect x="0" y="106" width="56"  height="22" fill="#9CA3AF"/>
+    <rect x="0" y="138" width="34"  height="22" fill="#9CA3AF"/>
+  </svg>
+
+  <!-- Card caption -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1360px; top:540px; width:420px; height:230px; font-size:16px; line-height:1.5; color:#1A1A1A; z-index:10;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:10px;">The question this chart answers</div>
+    <div style="font-size:19px; font-weight:500; line-height:1.35; color:#1A1A1A; margin-bottom:14px;">"Which 2 categories drove &gt;50% of Q4 revenue?"</div>
+    <div style="font-size:14px; color:#1A1A1A; line-height:1.5;">Encoding moves from <strong>area</strong> (rank 5/6) to <strong>position on a common scale</strong> (rank 1/6).<sup style="color:#0066CC;">1</sup></div>
+  </div>
+
+  <!-- Bottom footer -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:120px; top:1020px; width:1680px; height:1px; background:#1A1A1A; z-index:1;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:1036px; width:900px; height:24px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; z-index:10;">
+    Citations carry through every slide  ·  see appendix
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1340px; top:1036px; width:460px; height:24px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; text-align:right; z-index:10;">
+    Pick encoding · declutter · color
+  </div>
+
+</div>
+</body>
+</html>

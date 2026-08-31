@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "format": "html",
+  "metadata": {
+    "title": "Art-Direct an Annual Report / IPO Prospectus like a Magazine AD",
+    "description": "A 15-slide editorial design-system deck for corporate design leads building annual reports, sustainability reports, and S-1 prospectuses with the discipline of a magazine art director.",
+    "author": "Editorial Design Studio"
+  },
+  "canvas": {"width": 1920, "height": 1080},
+  "playlist": [
+    "cover.html",
+    "stance.html",
+    "audience.html",
+    "opening-spread.html",
+    "type-system.html",
+    "grid-furniture.html",
+    "image-direction.html",
+    "color-system.html",
+    "data-page.html",
+    "risk-typesetting.html",
+    "cover-concept.html",
+    "production-specs.html",
+    "schedule.html",
+    "colophon.html",
+    "sources.html"
+  ]
+}

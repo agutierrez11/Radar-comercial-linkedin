@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Atom Inventory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/base.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="05 Atom Inventory" style="position:relative; width:1920px; height:1080px; overflow:hidden; background:#FFFFFF;">
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:160px; top:96px; width:520px; height:20px; font-size:14px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#3F4A57;">
+    05 · The signature visual — Atom Inventory
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:160px; top:140px; width:1600px; height:32px; font-size:16px; font-weight:400; color:#5B6470;">
+    Job: catalogue every repeated atom in the input deck. Duplicates drive cut decisions.
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:160px; top:200px; width:1480px; font-size:56px; font-weight:600; line-height:1.05; letter-spacing:-0.02em; color:#111111;">
+    47 input slides. 6 atoms. 142 instances.
+  </div>
+
+  <!-- Header row -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:160px; top:340px; width:1600px; height:32px; font-size:13px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#5B6470;">
+    <div style="display:grid; grid-template-columns: 60px 220px 110px 180px 1fr 140px; column-gap:24px;">
+      <div>#</div>
+      <div>Atom</div>
+      <div>Instances</div>
+      <div>On slides</div>
+      <div>Duplication signal</div>
+      <div>Verdict</div>
+    </div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:160px; top:376px; width:1600px; height:1px; background:#111111;"></div>
+
+  <!-- Inventory rows: ONE textbox holds the whole table per editor contract -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:160px; top:392px; width:1600px; font-size:18px; font-weight:400; line-height:1.45; color:#111111;">
+    <div style="display:grid; grid-template-columns: 60px 220px 110px 180px 1fr 140px; column-gap:24px; row-gap:0;">
+
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#5B6470;">01</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; font-weight:600;">Body paragraph</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB;">58</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#5B6470;">2–47</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#2A2F36;">11 paragraphs duplicate a sentence found in another slide.</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; font-weight:600; color:#B23A48;">Trim 11</div>
+
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#5B6470;">02</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; font-weight:600;">Slack screenshot</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB;">12</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#5B6470;">7, 11, 14, 18, 22…</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#2A2F36;">All 12 lack commentary. Each replaces one decision sentence.</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; font-weight:600; color:#B23A48;">Cut all 12</div>
+
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#5B6470;">03</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; font-weight:600;">Bullet list</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB;">31</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#5B6470;">3, 5, 9, 12…</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#2A2F36;">17 lists have one bullet only. Promote to a sentence; drop the bullet.</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; font-weight:600; color:#8B5A00;">Rewrite 17</div>
+
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#5B6470;">04</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; font-weight:600;">Architecture diagram</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB;">5</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#5B6470;">8, 16, 24, 31, 39</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#2A2F36;">3 diagrams differ only by a colour. One canonical diagram suffices.</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; font-weight:600; color:#1F6FEB;">Merge 5 → 2</div>
+
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#5B6470;">05</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; font-weight:600;">Metric callout</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB;">22</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#5B6470;">across 14 slides</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; color:#2A2F36;">9 metrics restate a number already shown. Keep the first instance.</div>
+      <div style="padding:18px 0; border-bottom:1px solid #E5E7EB; font-weight:600; color:#B23A48;">Trim 9</div>
+
+      <div style="padding:18px 0; border-bottom:1px solid #111111; color:#5B6470;">06</div>
+      <div style="padding:18px 0; border-bottom:1px solid #111111; font-weight:600;">Decorative divider</div>
+      <div style="padding:18px 0; border-bottom:1px solid #111111;">14</div>
+      <div style="padding:18px 0; border-bottom:1px solid #111111; color:#5B6470;">cover, section heads</div>
+      <div style="padding:18px 0; border-bottom:1px solid #111111; color:#2A2F36;">Load-nothing. Removed wholesale per the no-decoration rule.</div>
+      <div style="padding:18px 0; border-bottom:1px solid #111111; font-weight:600; color:#B23A48;">Cut all 14</div>
+
+    </div>
+  </div>
+
+  <!-- Footer summary -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:160px; top:998px; width:1600px; height:20px; font-size:14px; font-weight:400; color:#5B6470;">
+    Cut a content heap into a readable deck · 05 / 20 · Total: 142 atoms → 79 kept · 63 removed
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+main = ".open-next/worker.js"
+name = "lazycodex-web"
+compatibility_date = "2026-05-25"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+preview_urls = false
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+# Only the canonical apex is served by the Worker. The other 3 hosts
+# (www.lazycodex.ai, lazycodex.dev, www.lazycodex.dev) 301-redirect to this
+# apex via Cloudflare DNS-edge Single Redirect rulesets configured in each
+# zone. Those requests never reach the Worker.
+[[routes]]
+pattern = "lazycodex.ai"
+custom_domain = true

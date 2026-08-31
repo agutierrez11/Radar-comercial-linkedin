@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Before / After — chart slide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; padding:0; overflow:hidden; font-family: 'Inter', -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+</style>
+</head>
+<body>
+<div class="slide-container" data-screen-label="12 BA Chart" style="position:relative; width:1920px; height:1080px; overflow:hidden; background:#ffffff;">
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:80px; width:1760px; color:#86868b; font-size:18px; font-weight:400; letter-spacing:2px; text-transform:uppercase;">
+    Surgery 03 / Chart slide
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:130px; width:1760px; color:#1d1d1f; font-size:56px; font-weight:700; letter-spacing:-1.5px; line-height:1.2;">
+    11 bullets → 1 line chart.
+  </div>
+
+  <!-- BEFORE -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:80px; top:280px; width:880px; height:720px; background:#f5f5f7; border:1px solid #e5e5e7;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:310px; width:800px; color:#86868b; font-size:16px; font-weight:700; letter-spacing:2px; text-transform:uppercase;">
+    Before · 11 bullets · 87 words
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:360px; width:800px; color:#1d1d1f; font-size:28px; font-weight:700; line-height:1.2;">
+    Q1–Q4 Revenue Recap
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:420px; width:800px; color:#1d1d1f; font-size:18px; font-weight:400; line-height:1.55;">
+    • Q1 revenue was $1.2M, up 8% MoM<br>
+    • Q2 revenue reached $1.8M, with strong APAC growth<br>
+    • Q3 hit $2.6M after the Pro tier launch<br>
+    • Q4 closed at $3.9M (preliminary)<br>
+    • Net new logos grew 34% QoQ in Q3<br>
+    • Churn dropped to 1.2% by year end<br>
+    • NDR climbed from 108% to 124%<br>
+    • Pipeline coverage now at 3.4×<br>
+    • Sales cycle compressed from 47 to 31 days<br>
+    • Self-serve share of revenue: 28%<br>
+    • Forecast for next FY: $22M ARR
+  </div>
+
+  <!-- AFTER -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:1000px; top:280px; width:840px; height:720px; background:#000000;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1040px; top:310px; width:760px; color:#8a8a8a; font-size:16px; font-weight:700; letter-spacing:2px; text-transform:uppercase;">
+    After · 1 chart · 4 words
+  </div>
+
+  <!-- Inline SVG chart -->
+  <div data-object="true" data-object-type="chart" style="position:absolute; left:1040px; top:380px; width:760px; height:440px;">
+    <svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100%; height:100%;">
+      <!-- baseline -->
+      <line x1="40" y1="400" x2="720" y2="400" stroke="#2a2a2a" stroke-width="1"/>
+      <!-- area -->
+      <path d="M 60 340 L 280 270 L 500 180 L 700 60 L 700 400 L 60 400 Z" fill="#0071E3" fill-opacity="0.18"/>
+      <!-- line -->
+      <path d="M 60 340 L 280 270 L 500 180 L 700 60" fill="none" stroke="#0071E3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- dots -->
+      <circle cx="60" cy="340" r="7" fill="#ffffff"/>
+      <circle cx="280" cy="270" r="7" fill="#ffffff"/>
+      <circle cx="500" cy="180" r="7" fill="#ffffff"/>
+      <circle cx="700" cy="60" r="9" fill="#0071E3" stroke="#ffffff" stroke-width="3"/>
+      <!-- quarter labels -->
+      <text x="60" y="430" fill="#8a8a8a" font-family="Inter" font-size="18" text-anchor="middle">Q1</text>
+      <text x="280" y="430" fill="#8a8a8a" font-family="Inter" font-size="18" text-anchor="middle">Q2</text>
+      <text x="500" y="430" fill="#8a8a8a" font-family="Inter" font-size="18" text-anchor="middle">Q3</text>
+      <text x="700" y="430" fill="#8a8a8a" font-family="Inter" font-size="18" text-anchor="middle">Q4</text>
+      <!-- end label -->
+      <text x="700" y="40" fill="#ffffff" font-family="Inter" font-weight="700" font-size="28" text-anchor="end">$3.9M</text>
+    </svg>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1040px; top:875px; width:760px; color:#ffffff; font-size:44px; font-weight:700; letter-spacing:-1px; line-height:1.2;">
+    Revenue, four quarters.
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:1030px; width:1760px; color:#86868b; font-size:16px; font-weight:400;">
+    NDR, churn, pipeline coverage → spoken aloud, not printed.
+  </div>
+
+</div>
+</body>
+</html>

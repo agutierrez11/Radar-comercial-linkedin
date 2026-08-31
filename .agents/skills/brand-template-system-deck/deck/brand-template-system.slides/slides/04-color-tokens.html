@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Color tokens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0A0A0A;--paper:#F8F8F6;--accent:#0066FF;--mute:#6E6E6E;--line:#E4E4E1;
+        --sans:'Manrope',ui-sans-serif,system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;}
+  body{margin:0;padding:0;overflow:hidden;background:var(--paper);font-family:var(--sans);color:var(--ink);}
+</style>
+</head>
+<body>
+<div class="slide-container" data-screen-label="04 Color tokens" style="position:relative;width:1920px;height:1080px;overflow:hidden;background:#F8F8F6;">
+
+  <!-- top frame -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:72px;width:600px;height:24px;font-family:var(--mono);font-size:13px;letter-spacing:0.1em;color:#6E6E6E;text-transform:uppercase;">
+    04&nbsp;·&nbsp;Atoms&nbsp;/&nbsp;color
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:106px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:154px;width:1100px;height:28px;font-family:var(--mono);font-size:14px;letter-spacing:0.12em;color:#0066FF;text-transform:uppercase;">
+    Color&nbsp;tokens
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:92px;top:198px;width:1700px;height:200px;font-family:var(--sans);font-size:80px;line-height:1.04;font-weight:700;letter-spacing:-0.035em;color:#0A0A0A;">
+    Three roles. Three palettes. No hex in slides.
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:348px;width:1200px;height:36px;font-family:var(--sans);font-size:20px;line-height:1.45;color:#3A3A3A;">
+    Every color in a slide is named. The hex is a private implementation detail of the token.
+  </div>
+
+  <!-- Row 1: Brand -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:432px;width:300px;height:24px;font-family:var(--mono);font-size:12px;letter-spacing:0.12em;color:#6E6E6E;text-transform:uppercase;">
+    Brand
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:468px;width:340px;height:172px;background:#0A0A0A;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:116px;top:592px;width:300px;height:40px;font-family:var(--mono);font-size:14px;line-height:1.4;color:#C9C9C5;">
+    color/ink<br><span style="color:#7A7A7A;">#0A0A0A</span>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:452px;top:468px;width:340px;height:172px;background:#F8F8F6;border:1px solid #E4E4E1;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:472px;top:592px;width:300px;height:40px;font-family:var(--mono);font-size:14px;line-height:1.4;color:#0A0A0A;">
+    color/paper<br><span style="color:#6E6E6E;">#F8F8F6</span>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:808px;top:468px;width:340px;height:172px;background:#0066FF;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:828px;top:592px;width:300px;height:40px;font-family:var(--mono);font-size:14px;line-height:1.4;color:#BFD4FF;">
+    color/accent<br><span style="color:#7DA7FF;">#0066FF</span>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1164px;top:468px;width:340px;height:172px;background:#3A3A3A;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1184px;top:592px;width:300px;height:40px;font-family:var(--mono);font-size:14px;line-height:1.4;color:#C9C9C5;">
+    color/ink/60<br><span style="color:#7A7A7A;">#3A3A3A</span>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1520px;top:468px;width:304px;height:172px;background:#6E6E6E;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1540px;top:592px;width:264px;height:40px;font-family:var(--mono);font-size:14px;line-height:1.4;color:#E4E4E1;">
+    color/mute<br><span style="color:#C9C9C5;">#6E6E6E</span>
+  </div>
+
+  <!-- Row 2: Functional -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:684px;width:300px;height:24px;font-family:var(--mono);font-size:12px;letter-spacing:0.12em;color:#6E6E6E;text-transform:uppercase;">
+    Functional
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:720px;width:268px;height:120px;background:#0E8A4A;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:116px;top:792px;width:228px;height:40px;font-family:var(--mono);font-size:13px;line-height:1.4;color:#C8E8D2;">
+    color/positive<br><span style="color:#86C4A0;">#0E8A4A</span>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:380px;top:720px;width:268px;height:120px;background:#D2331F;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:400px;top:792px;width:228px;height:40px;font-family:var(--mono);font-size:13px;line-height:1.4;color:#F4C8BF;">
+    color/negative<br><span style="color:#E89A8E;">#D2331F</span>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:664px;top:720px;width:268px;height:120px;background:#C28A00;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:684px;top:792px;width:228px;height:40px;font-family:var(--mono);font-size:13px;line-height:1.4;color:#F1DDA8;">
+    color/warn<br><span style="color:#E3C36D;">#C28A00</span>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:948px;top:720px;width:268px;height:120px;background:#FFFFFF;border:1px solid #E4E4E1;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:968px;top:792px;width:228px;height:40px;font-family:var(--mono);font-size:13px;line-height:1.4;color:#0A0A0A;">
+    color/surface<br><span style="color:#6E6E6E;">#FFFFFF</span>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1232px;top:720px;width:268px;height:120px;background:#E4E4E1;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1252px;top:792px;width:228px;height:40px;font-family:var(--mono);font-size:13px;line-height:1.4;color:#0A0A0A;">
+    color/line<br><span style="color:#6E6E6E;">#E4E4E1</span>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1516px;top:720px;width:308px;height:120px;background:#EEF2FA;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1536px;top:792px;width:268px;height:40px;font-family:var(--mono);font-size:13px;line-height:1.4;color:#0A0A0A;">
+    color/surface/quiet<br><span style="color:#6E6E6E;">#EEF2FA</span>
+  </div>
+
+  <!-- Rule strip -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:884px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:904px;width:900px;height:56px;font-family:var(--sans);font-size:17px;line-height:1.45;color:#3A3A3A;">
+    <span style="font-family:var(--mono);color:#0066FF;font-size:14px;">RULE&nbsp;·&nbsp;</span>Cream, ivory, sand and warm-beige are excluded from the system neutral set. The corporate neutral is true off-white.
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1080px;top:904px;width:744px;height:56px;font-family:var(--sans);font-size:17px;line-height:1.45;color:#3A3A3A;text-align:right;">
+    <span style="font-family:var(--mono);color:#0066FF;font-size:14px;">CONTRAST&nbsp;·&nbsp;</span>All body text meets WCAG&nbsp;AA against its background. Token pairs are pre-validated.
+  </div>
+
+  <!-- footer -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:984px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:1004px;width:1200px;height:30px;font-family:var(--mono);font-size:13px;color:#6E6E6E;">
+    atom&nbsp;/&nbsp;color&nbsp;·&nbsp;11&nbsp;tokens&nbsp;·&nbsp;export:&nbsp;tokens/color.json
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1700px;top:1004px;width:124px;height:30px;text-align:right;font-family:var(--mono);font-size:13px;color:#0A0A0A;">
+    04&nbsp;/&nbsp;18
+  </div>
+
+</div>
+</body>
+</html>

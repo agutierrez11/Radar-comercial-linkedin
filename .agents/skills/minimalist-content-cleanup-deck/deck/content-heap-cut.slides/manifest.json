@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "format": "html",
+  "metadata": {
+    "title": "Cut a Content Heap into a Readable Deck",
+    "description": "Notion/Atlassian-style discipline for cutting bloated internal decks — atomic structure, CRAP audit, no decoration.",
+    "author": ""
+  },
+  "canvas": {"width": 1920, "height": 1080},
+  "playlist": [
+    "cover.html",
+    "thesis.html",
+    "persona.html",
+    "methodology.html",
+    "atom-inventory.html",
+    "cut-list.html",
+    "merge-list.html",
+    "rewrite-list.html",
+    "atomic-diagram.html",
+    "card-08-architecture.html",
+    "card-11-migration.html",
+    "card-15-cost.html",
+    "card-19-risks.html",
+    "card-23-rollout.html",
+    "card-27-metrics.html",
+    "before-after-sample.html",
+    "new-toc.html",
+    "style-rules.html",
+    "handoff-onepager.html",
+    "sources.html"
+  ]
+}

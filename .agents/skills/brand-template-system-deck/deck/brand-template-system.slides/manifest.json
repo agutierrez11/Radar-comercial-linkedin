@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "format": "html",
+  "metadata": {
+    "title": "Brand Template System — v1.0",
+    "description": "A grammar of components for a corporate brand deck system, in the Atomic Design tradition.",
+    "author": "Brand & Design Ops"
+  },
+  "canvas": {"width": 1920, "height": 1080},
+  "playlist": [
+    "01-cover.html",
+    "02-why-this-exists.html",
+    "03-the-grammar.html",
+    "04-color-tokens.html",
+    "05-type-tokens.html",
+    "06-spacing-grid.html",
+    "07-molecule-library.html",
+    "08-organism-library.html",
+    "09-template-library.html",
+    "10-do-dont.html",
+    "11-chart-palette.html",
+    "12-photography.html",
+    "13-motion-tokens.html",
+    "14-governance.html",
+    "15-token-export.html",
+    "16-self-presentation-test.html",
+    "17-roadmap.html",
+    "18-credits.html"
+  ]
+}

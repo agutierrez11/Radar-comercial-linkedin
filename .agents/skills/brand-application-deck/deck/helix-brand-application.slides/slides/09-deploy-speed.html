@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Helix — Deploy Speed</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400&display=swap" rel="stylesheet">
+<style> body { margin:0; padding:0; overflow:hidden; background:#FFFFFF; } </style>
+</head>
+<body>
+<div class="slide-container" style="position:relative; width:1920px; height:1080px; overflow:hidden; background:#FFFFFF;">
+
+  <div data-object="true" data-object-type="shape"
+       style="position:absolute; left:0; top:0; width:1920px; height:120px; background:#FFFFFF; border-bottom:1px solid #E6ECF2; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:120px; top:54px; width:200px; z-index:10;
+              font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:22px; color:#0F2540; letter-spacing:-0.02em;">
+    Helix<span style="color:#0066FF;">.</span>
+  </div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:1700px; top:54px; width:100px; z-index:10;
+              font-family:'Inter', sans-serif; font-size:16px; color:#6B7785; text-align:right;">
+    09 / 16
+  </div>
+
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:120px; top:200px; width:800px; z-index:10;
+              font-family:'Space Grotesk', sans-serif; font-weight:500; font-size:20px;
+              color:#0066FF; letter-spacing:0.18em; text-transform:uppercase;">
+    Deploy speed
+  </div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:120px; top:250px; width:1500px; z-index:10;
+              font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:56px;
+              line-height:1.04; color:#0A1626; letter-spacing:-0.03em;">
+    Helix deploys 4× faster than the category median.
+  </div>
+
+  <!-- Bar chart -->
+  <div data-object="true" data-object-type="chart"
+       style="position:absolute; left:120px; top:430px; width:1680px; height:500px; z-index:10;
+              font-family:'Inter',sans-serif;">
+    <svg viewBox="0 0 1680 500" width="1680" height="500" xmlns="http://www.w3.org/2000/svg">
+      <!-- y-axis label -->
+      <text x="0" y="24" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="14" fill="#0066FF" letter-spacing="2.5">DAYS TO PRODUCTION · LOWER IS BETTER</text>
+
+      <!-- baseline -->
+      <line x1="380" y1="420" x2="1680" y2="420" stroke="#0A1626" stroke-width="2"/>
+
+      <!-- gridlines -->
+      <line x1="380" y1="90"  x2="1680" y2="90"  stroke="#E6ECF2" stroke-width="1"/>
+      <line x1="380" y1="172" x2="1680" y2="172" stroke="#E6ECF2" stroke-width="1"/>
+      <line x1="380" y1="254" x2="1680" y2="254" stroke="#E6ECF2" stroke-width="1"/>
+      <line x1="380" y1="337" x2="1680" y2="337" stroke="#E6ECF2" stroke-width="1"/>
+
+      <text x="340" y="96"  font-family="Inter, sans-serif" font-size="16" fill="#6B7785" text-anchor="end">100</text>
+      <text x="340" y="178" font-family="Inter, sans-serif" font-size="16" fill="#6B7785" text-anchor="end">75</text>
+      <text x="340" y="260" font-family="Inter, sans-serif" font-size="16" fill="#6B7785" text-anchor="end">50</text>
+      <text x="340" y="343" font-family="Inter, sans-serif" font-size="16" fill="#6B7785" text-anchor="end">25</text>
+      <text x="340" y="426" font-family="Inter, sans-serif" font-size="16" fill="#6B7785" text-anchor="end">0</text>
+
+      <!-- Median reference line -->
+      <line x1="380" y1="166" x2="1680" y2="166" stroke="#0F2540" stroke-width="1" stroke-dasharray="4 4" opacity="0.55"/>
+      <text x="1680" y="160" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="12" fill="#0F2540" text-anchor="end" letter-spacing="2">CATEGORY MEDIAN 77D</text>
+
+      <!-- Bars (scale: 330 px = 100 days; baseline y=420) -->
+      <!-- Competitor A — 92 days → height 304; top = 116 -->
+      <rect x="420"  y="116" width="200" height="304" fill="#E6ECF2"/>
+      <text x="520"  y="450" font-family="Inter, sans-serif" font-size="20" fill="#0A1626" text-anchor="middle">Competitor A</text>
+      <text x="520"  y="100" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="28" fill="#0A1626" text-anchor="middle" letter-spacing="-0.5">92d</text>
+
+      <!-- Competitor B — 81 days → height 267; top = 153 -->
+      <rect x="680"  y="153" width="200" height="267" fill="#E6ECF2"/>
+      <text x="780"  y="450" font-family="Inter, sans-serif" font-size="20" fill="#0A1626" text-anchor="middle">Competitor B</text>
+      <text x="780"  y="137" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="28" fill="#0A1626" text-anchor="middle" letter-spacing="-0.5">81d</text>
+
+      <!-- Category median — 77 days → height 254; top = 166 -->
+      <rect x="940"  y="166" width="200" height="254" fill="#0F2540"/>
+      <text x="1040" y="450" font-family="Inter, sans-serif" font-size="20" fill="#0A1626" text-anchor="middle">Category median</text>
+      <text x="1040" y="150" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="28" fill="#0F2540" text-anchor="middle" letter-spacing="-0.5">77d</text>
+
+      <!-- Competitor C — 54 days → height 178; top = 242 -->
+      <rect x="1200" y="242" width="200" height="178" fill="#E6ECF2"/>
+      <text x="1300" y="450" font-family="Inter, sans-serif" font-size="20" fill="#0A1626" text-anchor="middle">Competitor C</text>
+      <text x="1300" y="226" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="28" fill="#0A1626" text-anchor="middle" letter-spacing="-0.5">54d</text>
+
+      <!-- Helix — 19 days → height 63; top = 357 -->
+      <rect x="1460" y="357" width="200" height="63" fill="#0066FF"/>
+      <text x="1560" y="450" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="22" fill="#0066FF" text-anchor="middle" letter-spacing="-0.5">Helix</text>
+      <text x="1560" y="341" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="36" fill="#0066FF" text-anchor="middle" letter-spacing="-0.5">19d</text>
+
+      <!-- Delta annotation -->
+      <line x1="1040" y1="465" x2="1560" y2="465" stroke="#0066FF" stroke-width="2"/>
+      <line x1="1040" y1="460" x2="1040" y2="470" stroke="#0066FF" stroke-width="2"/>
+      <line x1="1560" y1="460" x2="1560" y2="470" stroke="#0066FF" stroke-width="2"/>
+      <rect x="1230" y="475" width="180" height="22" fill="#FFFFFF"/>
+      <text x="1320" y="492" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#0066FF" text-anchor="middle" letter-spacing="2.5">−58 DAYS · 4× FASTER</text>
+    </svg>
+  </div>
+
+  <!-- Three-callout context strip -->
+  <div data-object="true" data-object-type="shape"
+       style="position:absolute; left:120px; top:960px; width:1680px; height:1px; background:#E6ECF2; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:120px; top:980px; width:520px; z-index:10;
+              font-family:'Inter', sans-serif; font-size:16px; line-height:1.45; color:#0A1626;">
+    <span style="font-family:'Space Grotesk',sans-serif; font-weight:500; color:#0066FF; letter-spacing:0.18em; text-transform:uppercase; font-size:12px;">Methodology</span><br>
+    Median days from contract signature to first served production workload.
+  </div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:700px; top:980px; width:520px; z-index:10;
+              font-family:'Inter', sans-serif; font-size:16px; line-height:1.45; color:#0A1626;">
+    <span style="font-family:'Space Grotesk',sans-serif; font-weight:500; color:#0066FF; letter-spacing:0.18em; text-transform:uppercase; font-size:12px;">Panel</span><br>
+    n=24 customers, Q1 2026 · competitors anonymised by mutual agreement.
+  </div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:1280px; top:980px; width:520px; z-index:10;
+              font-family:'Inter', sans-serif; font-size:16px; line-height:1.45; color:#0A1626;">
+    <span style="font-family:'Space Grotesk',sans-serif; font-weight:500; color:#0066FF; letter-spacing:0.18em; text-transform:uppercase; font-size:12px;">Audit</span><br>
+    Methodology + raw data available under NDA on request.
+  </div>
+</div>
+</body>
+</html>

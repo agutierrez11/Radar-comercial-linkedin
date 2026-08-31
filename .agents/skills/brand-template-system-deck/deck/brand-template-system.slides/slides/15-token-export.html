@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Token export</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0A0A0A;--paper:#F8F8F6;--accent:#0066FF;--mute:#6E6E6E;--line:#E4E4E1;
+        --sans:'Manrope',ui-sans-serif,system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;}
+  body{margin:0;padding:0;overflow:hidden;background:var(--paper);font-family:var(--sans);color:var(--ink);}
+</style>
+</head>
+<body>
+<div class="slide-container" data-screen-label="15 Token export" style="position:relative;width:1920px;height:1080px;overflow:hidden;background:#F8F8F6;">
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:72px;width:600px;height:24px;font-family:var(--mono);font-size:13px;letter-spacing:0.1em;color:#6E6E6E;text-transform:uppercase;">
+    15&nbsp;·&nbsp;Pipeline
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:106px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:154px;width:1100px;height:28px;font-family:var(--mono);font-size:14px;letter-spacing:0.12em;color:#0066FF;text-transform:uppercase;">
+    Token&nbsp;export&nbsp;·&nbsp;one&nbsp;source,&nbsp;four&nbsp;outputs
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:92px;top:198px;width:1700px;height:88px;font-family:var(--sans);font-size:72px;line-height:1.02;font-weight:700;letter-spacing:-0.03em;color:#0A0A0A;">
+    Tokens are the source of truth.<sup style="font-size:36px;color:#0066FF;font-family:var(--mono);">[3]</sup>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:308px;width:1700px;height:36px;font-family:var(--sans);font-size:18px;line-height:1.45;color:#3A3A3A;">
+    Edit one JSON file; PPTX theme, Keynote theme, Figma variables, and the HTML preview re-build deterministically.
+  </div>
+
+  <!-- Source code panel -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:380px;width:780px;height:508px;background:#0A0A0A;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:408px;width:732px;height:24px;font-family:var(--mono);font-size:12px;letter-spacing:0.12em;color:#7DA7FF;text-transform:uppercase;">
+    tokens/source.json
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:444px;width:732px;height:444px;font-family:var(--mono);font-size:14px;line-height:1.6;color:#F8F8F6;white-space:pre;">
+{
+  "color": {
+    "ink":    { "value": "#0A0A0A" },
+    "paper":  { "value": "#F8F8F6" },
+    "accent": { "value": "#0066FF" }
+  },
+  "type": {
+    "display/xl": {
+      "family": "Manrope",
+      "size": 72, "lineHeight": 78, "weight": 700
+    }
+  },
+  "space": {
+    "4": 4, "8": 8, "16": 16,
+    "24": 24, "40": 40, "64": 64
+  }
+}</div>
+
+  <!-- Arrows + outputs -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:892px;top:626px;width:48px;height:4px;background:#0066FF;z-index:5;"></div>
+
+  <!-- 4 output cards -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:956px;top:380px;width:868px;height:120px;background:#FFFFFF;border:1px solid #E4E4E1;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:404px;width:160px;height:24px;font-family:var(--mono);font-size:12px;letter-spacing:0.12em;color:#0066FF;text-transform:uppercase;">Output&nbsp;01</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:432px;width:600px;height:36px;font-family:var(--sans);font-size:24px;line-height:1.2;font-weight:600;color:#0A0A0A;">PPTX theme&nbsp;&mdash;&nbsp;<span style="font-family:var(--mono);font-size:18px;color:#3A3A3A;">northbound.thmx</span></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:464px;width:824px;height:24px;font-family:var(--sans);font-size:15px;color:#6E6E6E;">Theme colors, fonts, slide masters generated via python-pptx.</div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:956px;top:512px;width:868px;height:120px;background:#FFFFFF;border:1px solid #E4E4E1;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:536px;width:160px;height:24px;font-family:var(--mono);font-size:12px;letter-spacing:0.12em;color:#0066FF;text-transform:uppercase;">Output&nbsp;02</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:564px;width:600px;height:36px;font-family:var(--sans);font-size:24px;line-height:1.2;font-weight:600;color:#0A0A0A;">Keynote theme&nbsp;&mdash;&nbsp;<span style="font-family:var(--mono);font-size:18px;color:#3A3A3A;">northbound.kth</span></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:596px;width:824px;height:24px;font-family:var(--sans);font-size:15px;color:#6E6E6E;">Mirror of PPTX masters &mdash; same slot names, same defaults.</div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:956px;top:644px;width:868px;height:120px;background:#FFFFFF;border:1px solid #E4E4E1;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:668px;width:160px;height:24px;font-family:var(--mono);font-size:12px;letter-spacing:0.12em;color:#0066FF;text-transform:uppercase;">Output&nbsp;03</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:696px;width:824px;height:36px;font-family:var(--sans);font-size:24px;line-height:1.2;font-weight:600;color:#0A0A0A;">Figma variables&nbsp;&mdash;&nbsp;<span style="font-family:var(--mono);font-size:18px;color:#3A3A3A;">northbound.figma.json</span></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:728px;width:824px;height:24px;font-family:var(--sans);font-size:15px;color:#6E6E6E;">Variables collection consumed via Figma&rsquo;s Variables REST endpoint.</div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:956px;top:776px;width:868px;height:112px;background:#0066FF;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:800px;width:160px;height:24px;font-family:var(--mono);font-size:12px;letter-spacing:0.12em;color:#BFD4FF;text-transform:uppercase;">Output&nbsp;04</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:828px;width:824px;height:36px;font-family:var(--sans);font-size:24px;line-height:1.2;font-weight:600;color:#FFFFFF;">Markdown docs&nbsp;&mdash;&nbsp;<span style="font-family:var(--mono);font-size:18px;color:#BFD4FF;">/components/&lt;atom&gt;.md</span></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:980px;top:860px;width:824px;height:24px;font-family:var(--sans);font-size:15px;color:#BFD4FF;">One file per atom/molecule. Frost &amp; Storybook tradition.<sup style="font-family:var(--mono);font-size:12px;">[2][6]</sup></div>
+
+  <!-- footer -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:984px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:1004px;width:1300px;height:30px;font-family:var(--mono);font-size:13px;color:#6E6E6E;">
+    pipeline&nbsp;·&nbsp;CI&nbsp;rebuilds&nbsp;all&nbsp;four&nbsp;outputs&nbsp;on&nbsp;every&nbsp;merge&nbsp;to&nbsp;main
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1700px;top:1004px;width:124px;height:30px;text-align:right;font-family:var(--mono);font-size:13px;color:#0A0A0A;">
+    15&nbsp;/&nbsp;18
+  </div>
+
+</div>
+</body>
+</html>

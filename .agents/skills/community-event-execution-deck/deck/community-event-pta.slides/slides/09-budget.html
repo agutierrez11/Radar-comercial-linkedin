@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Budget — Income, Expense, Cash Flow</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+  body { margin:0; padding:0; overflow:hidden; font-family:'Inter',system-ui,sans-serif; color:#111; }
+</style>
+</head>
+<body>
+<div class="slide-container" data-screen-label="09 Budget" style="position:relative; width:1920px; height:1080px; overflow:hidden; background:#FFFFFF;">
+
+  <!-- Header bar -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:0; top:0; width:1920px; height:88px; background:#0B6E4F; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:0; width:1500px; height:88px; z-index:10;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:15px; letter-spacing:0.2em; color:#E0A800; font-weight:700; padding-top:24px;">09 · BUDGET</div>
+    <div style="font-size:26px; font-weight:600; color:#FFFFFF; padding-top:6px;">Income · expense · week-by-week cash flow.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1700px; top:0; width:160px; height:88px; z-index:10;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#FFFFFF; opacity:0.8; font-weight:600; text-align:right; padding:36px 20px 0 0;">09 / 13</div>
+  </div>
+
+  <!-- KPI strip -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:120px; width:1760px; z-index:10;">
+    <div style="display:flex; gap:20px;">
+      <div style="flex:1; background:#0B6E4F; padding:18px 22px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#E0A800; font-weight:700;">GROSS INCOME TARGET</div>
+        <div style="font-size:42px; font-weight:800; color:#FFFFFF; line-height:1; margin-top:6px;">$11,320</div>
+      </div>
+      <div style="flex:1; background:#FFFFFF; border:2px solid #0B6E4F; padding:18px 22px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#0B6E4F; font-weight:700;">EXPENSE CAP</div>
+        <div style="font-size:42px; font-weight:800; color:#0B6E4F; line-height:1; margin-top:6px;">$4,820</div>
+      </div>
+      <div style="flex:1; background:#E0A800; padding:18px 22px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#0B6E4F; font-weight:700;">NET MINIMUM</div>
+        <div style="font-size:42px; font-weight:800; color:#0B6E4F; line-height:1; margin-top:6px;">$6,500</div>
+      </div>
+      <div style="flex:1; background:#FFFFFF; border:2px solid #0B6E4F; padding:18px 22px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#0B6E4F; font-weight:700;">RESTRICTED USE</div>
+        <div style="font-size:24px; font-weight:800; color:#0B6E4F; line-height:1.1; margin-top:6px;">Library refresh<br>(spring 2027)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Income column -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:280px; width:860px; z-index:10;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; letter-spacing:0.18em; color:#0B6E4F; font-weight:700;">INCOME (PROJECTED)</div>
+    <table style="border-collapse:collapse; width:860px; font-size:15px; margin-top:10px;">
+      <thead>
+        <tr style="border-bottom:2px solid #0B6E4F; height:36px;">
+          <th style="text-align:left; padding:0 12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em;">LINE ITEM</th>
+          <th style="text-align:right; padding:0 12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em; width:120px;">UNITS</th>
+          <th style="text-align:right; padding:0 12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em; width:120px;">$ / UNIT</th>
+          <th style="text-align:right; padding:0 12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em; width:140px;">TOTAL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Raffle wristbands</td><td style="padding:0 12px; text-align:right; color:#444;">800</td><td style="padding:0 12px; text-align:right; color:#444;">$5</td><td style="padding:0 12px; text-align:right; font-weight:600;">$4,000</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Bake sale</td><td style="padding:0 12px; text-align:right; color:#444;">~600</td><td style="padding:0 12px; text-align:right; color:#444;">$3.50</td><td style="padding:0 12px; text-align:right; font-weight:600;">$2,100</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Booth tickets (cake walk, ring toss, crafts)</td><td style="padding:0 12px; text-align:right; color:#444;">1,500</td><td style="padding:0 12px; text-align:right; color:#444;">$1</td><td style="padding:0 12px; text-align:right; font-weight:600;">$1,500</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Face painting</td><td style="padding:0 12px; text-align:right; color:#444;">220</td><td style="padding:0 12px; text-align:right; color:#444;">$4</td><td style="padding:0 12px; text-align:right; font-weight:600;">$880</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Food-truck commission (10% of gross)</td><td style="padding:0 12px; text-align:right; color:#444;">3 trucks</td><td style="padding:0 12px; text-align:right; color:#444;">est.</td><td style="padding:0 12px; text-align:right; font-weight:600;">$1,200</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Corporate sponsor — Maple Bank</td><td style="padding:0 12px; text-align:right; color:#444;">1</td><td style="padding:0 12px; text-align:right; color:#444;">$1,000</td><td style="padding:0 12px; text-align:right; font-weight:600;">$1,000</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Door donations (suggested $2)</td><td style="padding:0 12px; text-align:right; color:#444;">~320</td><td style="padding:0 12px; text-align:right; color:#444;">$2</td><td style="padding:0 12px; text-align:right; font-weight:600;">$640</td></tr>
+        <tr style="height:40px; background:#E8F4EF;"><td style="padding:0 12px; font-weight:800; color:#0B6E4F;">TOTAL INCOME</td><td style="padding:0 12px;"></td><td style="padding:0 12px;"></td><td style="padding:0 12px; text-align:right; font-weight:800; color:#0B6E4F; font-size:18px;">$11,320</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Expense column -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:980px; top:280px; width:860px; z-index:10;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; letter-spacing:0.18em; color:#0B6E4F; font-weight:700;">EXPENSE (CAPPED)</div>
+    <table style="border-collapse:collapse; width:860px; font-size:15px; margin-top:10px;">
+      <thead>
+        <tr style="border-bottom:2px solid #0B6E4F; height:36px;">
+          <th style="text-align:left; padding:0 12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em;">LINE ITEM</th>
+          <th style="text-align:right; padding:0 12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em; width:120px;">VENDOR</th>
+          <th style="text-align:right; padding:0 12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em; width:120px;">PAY BY</th>
+          <th style="text-align:right; padding:0 12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em; width:140px;">AMOUNT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Tent + table rental (4 × 10×20)</td><td style="padding:0 12px; text-align:right; color:#444;">EventPro</td><td style="padding:0 12px; text-align:right; color:#444;">Nov 07</td><td style="padding:0 12px; text-align:right; font-weight:600;">$1,420</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Permits (TFF, sound, curbside)</td><td style="padding:0 12px; text-align:right; color:#444;">City / County</td><td style="padding:0 12px; text-align:right; color:#444;">Oct 31</td><td style="padding:0 12px; text-align:right; font-weight:600;">$314</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Prizes (raffle, cake walk)</td><td style="padding:0 12px; text-align:right; color:#444;">Costco</td><td style="padding:0 12px; text-align:right; color:#444;">Nov 07</td><td style="padding:0 12px; text-align:right; font-weight:600;">$880</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Printing (fliers, signage, EN/ES)</td><td style="padding:0 12px; text-align:right; color:#444;">FedEx</td><td style="padding:0 12px; text-align:right; color:#444;">Oct 17</td><td style="padding:0 12px; text-align:right; font-weight:600;">$320</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Craft + face-paint supplies</td><td style="padding:0 12px; text-align:right; color:#444;">Michaels</td><td style="padding:0 12px; text-align:right; color:#444;">Nov 01</td><td style="padding:0 12px; text-align:right; font-weight:600;">$640</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">First-aid + hand-wash stations</td><td style="padding:0 12px; text-align:right; color:#444;">PTA stock</td><td style="padding:0 12px; text-align:right; color:#444;">Nov 07</td><td style="padding:0 12px; text-align:right; font-weight:600;">$220</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Cleanup supplies + dumpster</td><td style="padding:0 12px; text-align:right; color:#444;">WM</td><td style="padding:0 12px; text-align:right; color:#444;">Nov 14</td><td style="padding:0 12px; text-align:right; font-weight:600;">$386</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Volunteer T-shirts (30) + snacks</td><td style="padding:0 12px; text-align:right; color:#444;">Custom Ink</td><td style="padding:0 12px; text-align:right; color:#444;">Oct 31</td><td style="padding:0 12px; text-align:right; font-weight:600;">$540</td></tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;"><td style="padding:0 12px;">Contingency (5%)</td><td style="padding:0 12px; text-align:right; color:#444;">—</td><td style="padding:0 12px; text-align:right; color:#444;">—</td><td style="padding:0 12px; text-align:right; font-weight:600;">$100</td></tr>
+        <tr style="height:40px; background:#FFF8E1;"><td style="padding:0 12px; font-weight:800; color:#0B6E4F;">TOTAL EXPENSE</td><td style="padding:0 12px;"></td><td style="padding:0 12px;"></td><td style="padding:0 12px; text-align:right; font-weight:800; color:#0B6E4F; font-size:18px;">$4,820</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Cash-flow bar at bottom -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:790px; width:1760px; z-index:10;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; letter-spacing:0.18em; color:#0B6E4F; font-weight:700;">WEEK-BY-WEEK CASH FLOW (PTA OPERATING ACCOUNT, RUNNING BALANCE)</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:830px; width:1760px; z-index:10;">
+    <table style="border-collapse:collapse; width:1760px; font-size:14px;">
+      <thead>
+        <tr style="background:#F4F4F4; height:36px;">
+          <th style="padding:0 14px; text-align:left; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em;">WEEK</th>
+          <th style="padding:0 14px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em;">T-5 Oct 10</th>
+          <th style="padding:0 14px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em;">T-4 Oct 17</th>
+          <th style="padding:0 14px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em;">T-3 Oct 24</th>
+          <th style="padding:0 14px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em;">T-2 Oct 31</th>
+          <th style="padding:0 14px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em;">T-1 Nov 07</th>
+          <th style="padding:0 14px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em;">T-0 Nov 14</th>
+          <th style="padding:0 14px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:0.14em;">T+1 Nov 21</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;">
+          <td style="padding:0 14px;">Inflow (sponsor + presale)</td>
+          <td style="padding:0 14px; text-align:right; color:#0B6E4F;">+$0</td>
+          <td style="padding:0 14px; text-align:right; color:#0B6E4F;">+$1,000</td>
+          <td style="padding:0 14px; text-align:right; color:#0B6E4F;">+$640</td>
+          <td style="padding:0 14px; text-align:right; color:#0B6E4F;">+$1,200</td>
+          <td style="padding:0 14px; text-align:right; color:#0B6E4F;">+$0</td>
+          <td style="padding:0 14px; text-align:right; color:#0B6E4F; font-weight:700;">+$8,480</td>
+          <td style="padding:0 14px; text-align:right; color:#0B6E4F;">+$0</td>
+        </tr>
+        <tr style="height:34px; border-bottom:1px solid #F0F0F0;">
+          <td style="padding:0 14px;">Outflow (deposits + buys)</td>
+          <td style="padding:0 14px; text-align:right; color:#C0392B;">-$0</td>
+          <td style="padding:0 14px; text-align:right; color:#C0392B;">-$320</td>
+          <td style="padding:0 14px; text-align:right; color:#C0392B;">-$214</td>
+          <td style="padding:0 14px; text-align:right; color:#C0392B;">-$640</td>
+          <td style="padding:0 14px; text-align:right; color:#C0392B;">-$2,160</td>
+          <td style="padding:0 14px; text-align:right; color:#C0392B;">-$1,386</td>
+          <td style="padding:0 14px; text-align:right; color:#C0392B;">-$100</td>
+        </tr>
+        <tr style="height:38px; background:#E8F4EF;">
+          <td style="padding:0 14px; font-weight:800; color:#0B6E4F;">Running balance</td>
+          <td style="padding:0 14px; text-align:right; font-weight:700; color:#0B6E4F;">$3,200</td>
+          <td style="padding:0 14px; text-align:right; font-weight:700; color:#0B6E4F;">$3,880</td>
+          <td style="padding:0 14px; text-align:right; font-weight:700; color:#0B6E4F;">$4,306</td>
+          <td style="padding:0 14px; text-align:right; font-weight:700; color:#0B6E4F;">$4,866</td>
+          <td style="padding:0 14px; text-align:right; font-weight:700; color:#0B6E4F;">$2,706</td>
+          <td style="padding:0 14px; text-align:right; font-weight:800; color:#0B6E4F; font-size:16px;">$9,800</td>
+          <td style="padding:0 14px; text-align:right; font-weight:800; color:#0B6E4F; font-size:16px;">$9,700</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer note -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:1030px; width:1760px; z-index:10;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#666; letter-spacing:0.1em;">OPENING BALANCE OCT 10 = $3,200 · NET ADDITION TO RESTRICTED LIBRARY FUND = $6,500 · ALL FIGURES SUBJECT TO TWO-SIGNATURE TREASURER CLOSE-OUT</div>
+  </div>
+
+</div>
+</body>
+</html>

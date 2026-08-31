@@ -1,0 +1,77 @@
+<svg width="1400" height="720" viewBox="0 0 1400 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="74" y1="54" x2="1328" y2="660" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07131E"/>
+      <stop offset="0.55" stop-color="#0B2033"/>
+      <stop offset="1" stop-color="#12354A"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="234" y1="116" x2="1009" y2="584" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="title" x1="253" y1="210" x2="554" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#50F1C8"/>
+      <stop offset="1" stop-color="#53B7FF"/>
+    </linearGradient>
+    <linearGradient id="chipA" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#4EF0C8"/>
+      <stop offset="1" stop-color="#4CA9FF"/>
+    </linearGradient>
+    <filter id="blurA" x="-44" y="-82" width="654" height="654" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="78" result="effect1_foregroundBlur_1_1"/>
+    </filter>
+    <filter id="blurB" x="1002" y="401" width="354" height="354" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="55" result="effect1_foregroundBlur_1_1"/>
+    </filter>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" stroke="#D7F2FF" stroke-opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="1400" height="720" rx="34" fill="url(#bg)"/>
+  <rect width="1400" height="720" rx="34" fill="url(#grid)"/>
+
+  <g filter="url(#blurA)">
+    <circle cx="205" cy="195" r="171" fill="#4EF0C8" fill-opacity="0.22"/>
+  </g>
+  <g filter="url(#blurB)">
+    <circle cx="1179" cy="578" r="79" fill="#5AAFFF" fill-opacity="0.22"/>
+  </g>
+
+  <rect x="205" y="114" width="990" height="470" rx="28" fill="url(#glass)" stroke="rgba(255,255,255,0.14)"/>
+
+  <rect x="252" y="169" width="186" height="34" rx="17" fill="rgba(255,255,255,0.09)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="276" y="191" fill="#E6F6FF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6">PREMIUM BLUEPRINT LIBRARY</text>
+
+  <text x="252" y="286" fill="#F9FCFF" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="800">Agentic AI</text>
+  <text x="252" y="360" fill="url(#title)" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="800">Starters</text>
+
+  <text x="252" y="430" fill="#D0DEEA" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="500">Curated starter blueprints for autonomous AI products.</text>
+  <text x="252" y="468" fill="#D0DEEA" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="500">Workflows, prompts, architecture, and API paths that ship.</text>
+
+  <rect x="252" y="516" width="190" height="50" rx="25" fill="url(#chipA)"/>
+  <text x="294" y="548" fill="#05121D" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">12 STARTERS</text>
+
+  <rect x="457" y="516" width="216" height="50" rx="25" fill="rgba(255,255,255,0.09)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="498" y="548" fill="#EFF7FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">CURATED API STACKS</text>
+
+  <rect x="688" y="516" width="198" height="50" rx="25" fill="rgba(255,255,255,0.09)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="729" y="548" fill="#EFF7FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">MVP TO MONETIZE</text>
+
+  <rect x="962" y="204" width="176" height="144" rx="24" fill="rgba(6,15,25,0.5)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="988" y="244" fill="#FFF3CC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">FEATURED</text>
+  <text x="988" y="284" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800">Research</text>
+  <text x="988" y="317" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800">Agent</text>
+
+  <rect x="988" y="377" width="112" height="30" rx="15" fill="rgba(255,255,255,0.08)"/>
+  <text x="1012" y="397" fill="#DDF7FF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">CITATION-FIRST</text>
+
+  <rect x="955" y="432" width="183" height="94" rx="22" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+  <text x="982" y="471" fill="#FFB16E" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="800">Launch Faster</text>
+  <text x="982" y="502" fill="#D1DDE8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Research, lead gen, SEO,</text>
+  <text x="982" y="522" fill="#D1DDE8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">monitoring, MCP, and ops.</text>
+</svg>

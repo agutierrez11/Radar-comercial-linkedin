@@ -1,0 +1,15 @@
+# pnpm 11+ settings (moved out of package.json). These native postinstall
+# scripts must build to function correctly:
+#   - esbuild: build-time bundler used by Next.js + opennextjs-cloudflare
+#   - sharp:   image pipeline used by next/og + Next.js Image
+#   - workerd: Cloudflare Workers runtime used by @opennextjs/cloudflare
+allowBuilds:
+  esbuild: true
+  sharp: true
+  workerd: true
+
+overrides:
+  "@opentelemetry/core": 2.8.0
+  esbuild: 0.28.1
+  postcss: 8.5.15
+  ws: 8.21.0

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Helix — Architecture</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400&display=swap" rel="stylesheet">
+<style> body { margin:0; padding:0; overflow:hidden; background:#FFFFFF; } </style>
+</head>
+<body>
+<div class="slide-container" style="position:relative; width:1920px; height:1080px; overflow:hidden; background:#FFFFFF;">
+
+  <div data-object="true" data-object-type="shape"
+       style="position:absolute; left:0; top:0; width:1920px; height:120px; background:#FFFFFF; border-bottom:1px solid #E6ECF2; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:120px; top:54px; width:200px; z-index:10;
+              font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:22px; color:#0F2540; letter-spacing:-0.02em;">
+    Helix<span style="color:#0066FF;">.</span>
+  </div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:1700px; top:54px; width:100px; z-index:10;
+              font-family:'Inter', sans-serif; font-size:16px; color:#6B7785; text-align:right;">
+    07 / 16
+  </div>
+
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:120px; top:200px; width:800px; z-index:10;
+              font-family:'Space Grotesk', sans-serif; font-weight:500; font-size:20px;
+              color:#0066FF; letter-spacing:0.18em; text-transform:uppercase;">
+    Architecture
+  </div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:120px; top:250px; width:1500px; z-index:10;
+              font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:60px;
+              line-height:1.04; color:#0A1626; letter-spacing:-0.03em;">
+    Your network. Your keys. Our control plane.
+  </div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:120px; top:400px; width:1400px; z-index:10;
+              font-family:'Inter', sans-serif; font-size:22px; line-height:1.5;
+              color:#6B7785;">
+    Helix runs alongside your stack, not inside it. Customer data stays in the customer VPC at all times — Helix sees policy and metadata only.
+  </div>
+
+  <!-- Architecture diagram — taller, more legible -->
+  <div data-object="true" data-object-type="shape"
+       style="position:absolute; left:120px; top:520px; width:1680px; height:380px; background:#FFFFFF; border:1px solid #E6ECF2; z-index:1;"></div>
+
+  <div data-object="true" data-object-type="shape"
+       style="position:absolute; left:121px; top:521px; width:1678px; height:378px; z-index:5;">
+    <svg viewBox="0 0 1678 378" width="1678" height="378" xmlns="http://www.w3.org/2000/svg">
+      <!-- Customer VPC -->
+      <rect x="60" y="50" width="540" height="280" fill="#FFFFFF" stroke="#0A1626" stroke-width="2"/>
+      <text x="84" y="92" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="14" fill="#0066FF" letter-spacing="2.5">CUSTOMER VPC · NORTHWIND</text>
+      <rect x="100" y="130" width="200" height="60" fill="#E6ECF2"/>
+      <text x="124" y="168" font-family="Inter, sans-serif" font-size="18" fill="#0A1626">Workloads</text>
+      <rect x="340" y="130" width="220" height="60" fill="#E6ECF2"/>
+      <text x="364" y="168" font-family="Inter, sans-serif" font-size="18" fill="#0A1626">Identity (Okta)</text>
+      <rect x="100" y="220" width="460" height="60" fill="#0F2540"/>
+      <text x="124" y="258" font-family="Inter, sans-serif" font-size="18" fill="#FFFFFF">Helix Agent · read-only egress</text>
+
+      <!-- mTLS arrow -->
+      <line x1="620" y1="250" x2="1060" y2="250" stroke="#0066FF" stroke-width="3"/>
+      <polygon points="1060,250 1044,242 1044,258" fill="#0066FF"/>
+      <text x="660" y="232" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="14" fill="#0066FF" letter-spacing="2">mTLS · CUSTOMER-HELD KEYS</text>
+      <text x="660" y="280" font-family="Inter, sans-serif" font-size="14" fill="#6B7785" font-style="italic">metadata + policy only · no payloads</text>
+
+      <!-- Helix Control Plane -->
+      <rect x="1080" y="50" width="540" height="280" fill="#0F2540"/>
+      <text x="1104" y="92" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="14" fill="#0066FF" letter-spacing="2.5">HELIX CONTROL PLANE</text>
+      <rect x="1120" y="130" width="200" height="60" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.25"/>
+      <text x="1144" y="168" font-family="Inter, sans-serif" font-size="18" fill="#FFFFFF">Policy engine</text>
+      <rect x="1360" y="130" width="220" height="60" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.25"/>
+      <text x="1384" y="168" font-family="Inter, sans-serif" font-size="18" fill="#FFFFFF">Observability</text>
+      <rect x="1120" y="220" width="460" height="60" fill="#0066FF"/>
+      <text x="1144" y="258" font-family="Inter, sans-serif" font-size="18" fill="#FFFFFF">Audit log · immutable · customer-mirrored</text>
+    </svg>
+  </div>
+
+  <!-- Three callouts under diagram -->
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:120px; top:940px; width:520px; z-index:10;
+              font-family:'Inter', sans-serif; font-size:20px; line-height:1.45; color:#0A1626;">
+    <div style="font-family:'Space Grotesk',sans-serif; font-weight:500; color:#0066FF; letter-spacing:0.18em; text-transform:uppercase; font-size:14px; margin-bottom:8px;">Data residency</div>
+    Customer data never leaves your VPC. Helix sees policy &amp; metadata only — never payloads.
+  </div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:700px; top:940px; width:520px; z-index:10;
+              font-family:'Inter', sans-serif; font-size:20px; line-height:1.45; color:#0A1626;">
+    <div style="font-family:'Space Grotesk',sans-serif; font-weight:500; color:#0066FF; letter-spacing:0.18em; text-transform:uppercase; font-size:14px; margin-bottom:8px;">Key management</div>
+    Customer-held KMS keys via BYOK · 90-day enforced rotation · zero Helix-side secrets.
+  </div>
+  <div data-object="true" data-object-type="textbox"
+       style="position:absolute; left:1280px; top:940px; width:520px; z-index:10;
+              font-family:'Inter', sans-serif; font-size:20px; line-height:1.45; color:#0A1626;">
+    <div style="font-family:'Space Grotesk',sans-serif; font-weight:500; color:#0066FF; letter-spacing:0.18em; text-transform:uppercase; font-size:14px; margin-bottom:8px;">Audit</div>
+    Every action mirrored to a customer-owned S3 bucket within 60 seconds, signed and immutable.
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "format": "html",
+  "metadata": {
+    "title": "Helix — Enterprise Pitch (Brand-Applied)",
+    "description": "An off-brand enterprise sales deck rebuilt to the Helix brand system, with a Brand-Decision Map appendix proving systemic application across 7 brand surfaces.",
+    "author": "Brand Application Studio"
+  },
+  "canvas": {"width": 1920, "height": 1080},
+  "playlist": [
+    "01-cover.html",
+    "02-agenda.html",
+    "03-why-now.html",
+    "04-problem.html",
+    "05-solution.html",
+    "06-product.html",
+    "07-architecture.html",
+    "08-security.html",
+    "09-deploy-speed.html",
+    "10-customer-quote.html",
+    "11-pricing.html",
+    "12-roadmap.html",
+    "13-team.html",
+    "14-data-benchmark.html",
+    "15-closing.html",
+    "16-credits.html",
+    "17-decision-map.html",
+    "18-sources.html"
+  ]
+}

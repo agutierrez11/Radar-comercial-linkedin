@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide Diet Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; padding:0; overflow:hidden; font-family: 'Inter', -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .row { display:grid; grid-template-columns: 56px 1fr 110px 110px 90px 1fr; align-items:center; gap:24px; padding:14px 20px; border-bottom:1px solid #e5e5e7; }
+  .row.header { color:#86868b; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; border-bottom:2px solid #1d1d1f; padding-bottom:18px; }
+  .row.body { font-size:20px; color:#1d1d1f; }
+  .num { font-family: 'JetBrains Mono', monospace; font-weight:700; color:#86868b; font-size:16px; }
+  .before { font-family: 'JetBrains Mono', monospace; font-weight:700; color:#1d1d1f; text-align:right; }
+  .after { font-family: 'JetBrains Mono', monospace; font-weight:700; color:#0071E3; text-align:right; }
+  .delta { font-family: 'JetBrains Mono', monospace; font-weight:700; color:#0a8754; text-align:right; }
+  .note { color:#6e6e73; font-size:18px; font-weight:400; }
+  .bar { height:6px; background:#f5f5f7; border-radius:3px; overflow:hidden; margin-top:6px; }
+  .bar > span { display:block; height:100%; background:linear-gradient(90deg, #0071E3, #0a8754); }
+</style>
+</head>
+<body>
+<div class="slide-container" data-screen-label="15 Slide Diet Tracker" style="position:relative; width:1920px; height:1080px; overflow:hidden; background:#ffffff;">
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:60px; width:1760px; color:#86868b; font-size:16px; font-weight:400; letter-spacing:2px; text-transform:uppercase;">
+    Slide Diet Tracker — Helio Workflows Q3 redesign
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:90px; width:1500px; color:#1d1d1f; font-size:56px; font-weight:700; letter-spacing:-1.5px; line-height:1.2;">
+    38 slides → 16. <span style="color:#0071E3;">1,612 words → 184.</span>
+  </div>
+
+  <!-- KPI strip -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:80px; top:200px; width:1760px; height:88px; background:#f5f5f7; border-radius:0;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:218px; width:400px; color:#86868b; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase;">Word reduction</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:236px; width:400px; color:#0071E3; font-size:40px; font-weight:700; letter-spacing:-1px; line-height:1.2;">−88.6%</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:560px; top:218px; width:400px; color:#86868b; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase;">Slide reduction</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:560px; top:236px; width:400px; color:#0071E3; font-size:40px; font-weight:700; letter-spacing:-1px; line-height:1.2;">−57.9%</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1000px; top:218px; width:400px; color:#86868b; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase;">Bullets killed</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1000px; top:236px; width:400px; color:#0a8754; font-size:40px; font-weight:700; letter-spacing:-1px; line-height:1.2;">112 → 0</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1440px; top:218px; width:400px; color:#86868b; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase;">Type families</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1440px; top:236px; width:400px; color:#0a8754; font-size:40px; font-weight:700; letter-spacing:-1px; line-height:1.2;">4 → 1</div>
+
+  <!-- Table -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:320px; width:1760px;">
+    <div class="row header">
+      <span>#</span>
+      <span>Original slide title</span>
+      <span style="text-align:right;">Before</span>
+      <span style="text-align:right;">After</span>
+      <span style="text-align:right;">Δ</span>
+      <span>Surgery performed</span>
+    </div>
+    <div class="row body">
+      <span class="num">01</span>
+      <span>Helio Workflows Q3 2026 — The All-in-One AI-Native…</span>
+      <span class="before">23</span>
+      <span class="after">1</span>
+      <span class="delta">−96%</span>
+      <span class="note">Tagline killed. One word: <em>Helio.</em></span>
+    </div>
+    <div class="row body">
+      <span class="num">02</span>
+      <span>Agenda (7 sub-items)</span>
+      <span class="before">42</span>
+      <span class="after">0</span>
+      <span class="delta">−100%</span>
+      <span class="note">Slide deleted. Speaker says it.</span>
+    </div>
+    <div class="row body">
+      <span class="num">03</span>
+      <span>Market Overview (3 bullets, 1 stock photo)</span>
+      <span class="before">68</span>
+      <span class="after">3</span>
+      <span class="delta">−96%</span>
+      <span class="note">One number, 480pt: <em>70–90%</em>.</span>
+    </div>
+    <div class="row body">
+      <span class="num">07</span>
+      <span>Key Features (9 bullets)</span>
+      <span class="before">142</span>
+      <span class="after">6</span>
+      <span class="delta">−96%</span>
+      <span class="note">Split into 3 build slides.</span>
+    </div>
+    <div class="row body">
+      <span class="num">14</span>
+      <span>Q1–Q4 Revenue Recap (11 bullets)</span>
+      <span class="before">87</span>
+      <span class="after">4</span>
+      <span class="delta">−95%</span>
+      <span class="note">Replaced with one line chart.</span>
+    </div>
+    <div class="row body">
+      <span class="num">22</span>
+      <span>Customer Logos (4×6 logo grid + copy)</span>
+      <span class="before">54</span>
+      <span class="after">0</span>
+      <span class="delta">−100%</span>
+      <span class="note">Logos kept, copy dropped.</span>
+    </div>
+    <div class="row body">
+      <span class="num">29</span>
+      <span>Next Steps (5 bullets, 3 footnotes)</span>
+      <span class="before">96</span>
+      <span class="after">5</span>
+      <span class="delta">−95%</span>
+      <span class="note">One sentence: <em>Cut your next deck in half.</em></span>
+    </div>
+    <div class="row body">
+      <span class="num">38</span>
+      <span>Thank You — Contact, Calendar, QR, LinkedIn, Twitter…</span>
+      <span class="before">31</span>
+      <span class="after">3</span>
+      <span class="delta">−90%</span>
+      <span class="note">Name + email. Nothing else.</span>
+    </div>
+  </div>
+
+  <!-- Footer with progress -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:980px; width:1760px; color:#86868b; font-size:18px; font-weight:400;">
+    8 of 38 slides shown. Full CSV export available via <code style="font-family:'JetBrains Mono',monospace; color:#1d1d1f;">scripts/diet_tracker.py</code>.
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:80px; top:1030px; width:1760px; color:#86868b; font-size:16px; font-weight:400;">
+    Methodology: Reynolds, <em>Presentation Zen</em>, 3rd ed.<sup>[3]</sup> &nbsp;·&nbsp; Gallo, Forbes, 2012.<sup>[5]</sup> &nbsp;·&nbsp; Jobs, iPhone keynote transcript, 2007.<sup>[7]</sup>
+  </div>
+
+</div>
+</body>
+</html>

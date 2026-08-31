@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "format": "html",
+  "metadata": {
+    "title": "Brand Experiential Pitch — IMG/Live Nation Producer Style",
+    "description": "14-slide sponsorship pitch leading with the hero moment, not the logo matrix.",
+    "author": ""
+  },
+  "canvas": {"width": 1920, "height": 1080},
+  "playlist": [
+    "cover.html",
+    "the-moment.html",
+    "moment-storyboard.html",
+    "why-property-why-now.html",
+    "footprint-plan.html",
+    "activation-proof-hero.html",
+    "activation-proof-secondary.html",
+    "activation-proof-always-on.html",
+    "talent-content-integration.html",
+    "earned-media-plan.html",
+    "measurement.html",
+    "production-timeline.html",
+    "investment-asset-breakout.html",
+    "brand-safety-permits-team.html",
+    "sources-appendix.html"
+  ]
+}

@@ -1,0 +1,530 @@
+# Native LLM SDK Architecture
+
+> **Authoring model (post-Wave-11):** each chat-model node is a self-contained Python plugin folder under `server/nodes/model/<provider>_chat_model/` that emits a `NodeSpec`. The frontend reads specs via [client/src/lib/nodeSpec.ts](../client/src/lib/nodeSpec.ts) + [adapters/nodeSpecToDescription.ts](../client/src/adapters/nodeSpecToDescription.ts) and renders through `SquareNode` with zero TS edits. See [plugin_system.md](./plugin_system.md) and [server/nodes/README.md](../server/nodes/README.md) for the plugin model, and "Adding a New Provider" below for the chat-model recipe.
+
+OpenCompany routes chat-model nodes and every agent execution through the
+native SDK layer in `server/services/llm/`. The shared buffered tool loop lives
+in `server/services/agent_runtime.py`.
+
+## Why a Native Layer
+
+Talking to each vendor SDK directly avoids three problems a translation layer kept reintroducing:
+
+1. **Windows/Python 3.13 hangs**: the wrapped Google adapter deadlocked on gRPC init. The native Gemini path uses `google.genai.Client` directly.
+2. **Parameter translation loss**: a `max_completion_tokens` rewrite breaks OpenAI-compatible providers (DeepSeek, Kimi, Mistral) that expect `max_tokens`.
+3. **Endpoint control**: OpenAI-compatible endpoint URLs are declared in
+   `server/config/llm_defaults.json` and registered through `_compat.py`.
+   Adding one requires the JSON entry plus one `_COMPAT_PROVIDERS` entry, not a
+   provider-specific adapter class.
+
+The native layer also gives a single normalized response shape (`LLMResponse`) across providers, which simplifies downstream code for token tracking, cost calculation, and thinking extraction.
+
+## Layer Overview
+
+```
+server/services/llm/
+|-- __init__.py           Public API exports
+|-- protocol.py           Message, ToolDef, ToolCall, Usage, LLMResponse, LLMProvider (Protocol)
+|-- config.py             ProviderConfig, PROVIDER_CONFIGS (built from llm_defaults.json)
+|-- registry.py           ProviderSpec + register_provider() — the live provider entry point;
+|                         sdk_exception_refs are lazy "module:Class" strings resolved at except time.
+|                         THIN SHIM since the speech work: the mechanism lives in
+|                         services/provider_registry.py (generic, shared). `_REGISTRY` survives here
+|                         as an alias bound to the SAME dict object the registry mutates, because
+|                         several tests swap provider factories in place through it.
+|-- unifier.py            ChatUnifier — the dispatch facade execute_chat delegates every provider to;
+|                         translates typed SDK errors -> NodeUserError
+|-- schema.py             Provider-aware tool JSON-schema compilation
+|-- vertex.py             Vertex / Agent-Platform key handling
+|-- messages.py           filter_empty_messages, is_valid_message_content
+`-- providers/
+    |-- __init__.py
+    |-- anthropic.py      AnthropicProvider (anthropic SDK)
+    |-- openai.py         OpenAIProvider (openai SDK)
+    |-- gemini.py         GeminiProvider (google-genai SDK)
+    |-- openrouter.py     OpenRouterProvider (extends OpenAIProvider with headers)
+    `-- _compat.py        Registers the 9 OpenAI-compatible providers (xai, deepseek, kimi,
+                          mistral, groq, cerebras, ollama, lmstudio, sarvam) via base_url specs
+```
+
+Each provider module calls `register_provider(ProviderSpec(...))` at module
+bottom. Shipped provider modules are imported from `providers/__init__.py` so
+their registration side effects run at service import. OpenAI-compatible
+providers share `_compat.py` and its explicit `_COMPAT_PROVIDERS` tuple.
+
+## Supported Providers
+
+The native layer currently supports **13 providers**, grouped by implementation:
+
+| Provider | Implementation | SDK | Notes |
+|---|---|---|---|
+| `anthropic` | `providers/anthropic.py` | `anthropic` | Extended thinking via `budget_tokens` |
+| `openai` | `providers/openai.py` | `openai` | Reasoning models (o1/o3) and GPT-5 hybrid thinking |
+| `gemini` | `providers/gemini.py` | `google-genai` | Direct SDK (Windows hang fix) |
+| `openrouter` | `providers/openrouter.py` | `openai` | Sets `HTTP-Referer` + `X-Title` headers |
+| `xai` | `providers/openai.py` + base_url | `openai` | OpenAI-compatible at `api.x.ai/v1` |
+| `deepseek` | `providers/openai.py` + base_url | `openai` | OpenAI-compatible at `api.deepseek.com` |
+| `kimi` | `providers/openai.py` + base_url | `openai` | Moonshot AI, OpenAI-compatible |
+| `mistral` | `providers/openai.py` + base_url | `openai` | OpenAI-compatible |
+| `ollama` | `providers/openai.py` + `{provider}_proxy` URL | `openai` (chat) + `ollama` (probe) | Local server. Validator probes via `ollama.AsyncClient.ps()` for typed `context_length` per loaded model. Runtime uses `OpenAIProvider` with `base_url={user URL}` so traffic stays on `localhost`. |
+| `lmstudio` | `providers/openai.py` + `{provider}_proxy` URL | `openai` (chat) + `lmstudio` (probe) | Local server. Validator probes via `lmstudio.AsyncClient.llm.list_loaded()` for typed `LlmInstanceInfo.context_length`. Same OpenAI-compat runtime path as Ollama. |
+| `groq` | `providers/_compat.py` + base_url | `openai` | OpenAI-compatible |
+| `cerebras` | `providers/_compat.py` + base_url | `openai` | OpenAI-compatible |
+| `sarvam` | `providers/_compat.py` + base_url | `openai` | Indic-first (`sarvam-105b` 128K, `sarvam-30b` 64K) at `api.sarvam.ai/v1`. Ships **no model-list route**, so it sets `supports_model_listing: false` — see below. Reasoning is on by default and returns in `reasoning_content`, which `OpenAIProvider._normalize` already reads. |
+
+Source of truth for this list: `server/config/llm_defaults.json` (the `providers` dict) and the `register_provider(ProviderSpec(...))` calls in `server/services/llm/providers/` (each provider module registers itself at import; the legacy `factory.py` was removed).
+
+### Native chat path vs agent dropdown — two different counts
+
+- **Native chat path (`execute_chat` / `fetch_models`) supports 13 providers, all native** — Anthropic and Gemini via their own SDKs; OpenAI and OpenRouter via the openai SDK; and 9 more through the shared OpenAI-compatible client with a per-provider `base_url` (xai, deepseek, kimi, mistral, groq, cerebras, ollama, lmstudio, sarvam — registered in `providers/_compat.py`). `execute_chat` delegates every provider to `ChatUnifier.chat`; there is no per-provider branch. `xai` lives here.
+- **The agent dropdown exposes the same 13 providers** for `aiAgent`,
+  `chatAgent` (Zeenie), and all specialized agents, including `xai`.
+  `test_plugin_shape.py` asserts exact set equality between the registry and
+  the `provider` Literal in all three agent Params classes, so registering a
+  provider without updating `nodes/agent/ai_agent`, `nodes/agent/chat_agent`
+  and `nodes/agent/_specialized` fails CI immediately.
+- Groq, Cerebras, xAI, and the other compatible endpoints use the same native
+  OpenAI SDK adapter for both standalone chat and agent tool calls.
+
+### Provider / model reference table
+
+`ModelRegistryService` (`server/services/model_registry.py`) manages the per-model constraints below — fetching from OpenRouter for cloud models and from the user's running local server (`ollama.AsyncClient.ps()` / `lmstudio.AsyncClient.llm.list_loaded()`) for Ollama / LM Studio. Falls back to `llm_defaults.json` only when neither source is available.
+
+| Provider | Key Models | Context | Max Output | Thinking | Temp Range |
+|----------|-----------|---------|-----------|----------|------------|
+| **OpenAI** | GPT-5.6 Sol/Terra/Luna, GPT-5.5/5.4 | 1.05M | 128K | effort | omitted for reasoning models |
+| **OpenAI** | GPT-4.1 | ~1.05M | 32K | none | 0-2 |
+| **Anthropic** | Claude Fable 5 | 1M | 128K | budget | 0-1 |
+| **Anthropic** | Claude Opus 4.8/4.7 | 1M | 128K | budget | 0-1 |
+| **Anthropic** | Claude Sonnet 4.6 | 1M | 64K | budget | 0-1 |
+| **Anthropic** | Claude Haiku 4.5 | 200K | 64K | budget | 0-1 |
+| **Google** | Gemini 3.5-flash, 3.1-pro/flash-lite, 3-flash, 2.5-pro/flash/flash-lite | 1M | 64K | budget | 0-2 |
+| **xAI** | Grok 4.20/4.20-multi-agent, 4.5, 4.3, 3 | 131K-2M | 131K | model/provider dependent | 0-2 |
+| **DeepSeek** | deepseek-v4-flash, deepseek-v4-pro (deepseek-chat/reasoner legacy) | 1M | 64K | thinking modes | 0-2 |
+| **Kimi** | kimi-k3 (default), kimi-k2.6, kimi-k2.5, kimi-k2.7-code | 1M (K3); 256K (K2) | 131K (K3); 32K/96K (K2) | K2 provider default explicitly disabled unless requested | K2 fixed 0.6; K3 0-1 |
+| **Mistral** | mistral-large/medium/small-latest, codestral-latest | 256K | 131K | none | 0-1.5 |
+| **Groq** | GPT-OSS-120b/20b, Qwen3-32b, legacy Llama 3.x tiers | 131K | 32K-131K | effort (GPT-OSS), format (Qwen3) | 0-2 |
+| **OpenRouter** | 200+ models from multiple providers | varies | varies | varies | 0-2 |
+| **Cerebras** | GPT-OSS-120b, Z.ai GLM 4.7, Gemma 4 31B | 131K | 40K | budget (GLM preview) | 0-1.5 |
+| **Ollama** | Whatever the user has pulled (qwen2.5, llama3.x, phi-3, deepseek-r1, ...) | per-loaded-model (typed via `ps()`) | ctx ÷ 4 (capped 4096) | none (per-model) | 0-2 |
+| **LM Studio** | Whatever the user has loaded in the LM Studio UI | per-loaded-model (typed via `LlmInstanceInfo.context_length`) | ctx ÷ 4 (capped 4096) | none (per-model) | 0-2 |
+
+`_resolve_max_tokens()` in `server/services/ai.py` (a thin wrapper over `services/llm/config.py::resolve_max_tokens`) clamps user-requested `max_tokens` to the model's actual limit.
+
+## Local LLM Providers (Ollama, LM Studio)
+
+Ollama and LM Studio expose an OpenAI-compatible `/v1` HTTP API, so they ride the same `OpenAIProvider` runtime path used by every other OpenAI-compat backend (DeepSeek, Kimi, Mistral). The differences are the **base URL** (the user enters their server's address, e.g. `http://localhost:11434/v1`) and the **per-model parameters** (which depend on what the user has loaded in the local server's UI, not a JSON default).
+
+**Probe layer** ([`server/nodes/model/_local_validator.py`](../server/nodes/model/_local_validator.py)) — when the user clicks "Fetch" in the Credentials Modal:
+
+1. The user's URL is persisted under the existing `{provider}_proxy` credential — same key the OpenAI-style auth-delegation pattern already uses to override `base_url` at runtime.
+2. The validator probes via the **official SDK** (`ollama>=0.6.0`, `lmstudio>=1.5.0`) — never raw httpx, never Modelfile-parameters parsing:
+   - **Ollama**: `ollama.AsyncClient.ps()` returns `ProcessResponse.Model` per loaded model with typed `context_length` + typed `ModelDetails` (`family`, `parameter_size`, `quantization_level`, `format`).
+   - **LM Studio**: `lmstudio.AsyncClient.llm.list_loaded()` returns `AsyncModelHandle` per loaded model; `handle.get_info()` is a typed `LlmInstanceInfo` (`context_length`, `max_context_length`, `vision`, `trained_for_tool_use`, `architecture`, `params_string`, `format`).
+3. The probed params are persisted in two places:
+   - `EncryptedAPIKey.models["model_params"]` — the same JSON column as the model list, sibling key. Survives DB-backed restart of the validator state.
+   - `model_registry.register_local_model()` — populates a `ModelInfo` entry under `<provider>/<model_id>` and writes through to `model_registry.json`. The sync `get_context_length()` / `get_max_output_tokens()` lookups find this entry first, so chat / agent execution honour the **real n_ctx the server is currently serving** instead of a JSON guess. Capability flags (`tools`, `vision`) flow through `ModelInfo.supported_parameters`.
+
+**Both servers must have a model loaded** for the probe to return entries. The validator's "no models loaded" message is symmetric across providers.
+
+**Runtime path** — `ChatUnifier` resolves `{provider}_proxy` and passes it to
+the registered provider factory. `OpenAIProvider` overrides `base_url` with the
+user's URL and uses the documented placeholder key for unauthenticated local
+servers. The OpenAI SDK then sends to the configured local endpoint — traffic
+never reaches api.openai.com.
+
+**Provider detection** ([`server/constants.py:detect_ai_provider`](../server/constants.py)) MUST list `ollama` / `lmstudio` substrings, and the agent dropdown's `provider` Literal in [`ai_agent.py`](../server/nodes/agent/ai_agent/__init__.py) / [`chat_agent.py`](../server/nodes/agent/chat_agent/__init__.py) / [`_specialized.py`](../server/nodes/agent/_specialized.py) MUST include `"ollama"` / `"lmstudio"` — otherwise the chat-model node silently falls through to `'openai'` and the runtime calls the OpenAI cloud with the local-server placeholder key.
+
+**Open-world skip in `is_model_valid_for_provider`** — local model names like `qwen/qwen3.6-27b` don't contain provider substrings, so the cloud-style pattern check would always reject them. The function returns `True` for `openrouter` / `ollama` / `lmstudio` without consulting `detection_patterns`. The upstream server still rejects genuinely missing models with a clear 404.
+
+## Provider Protocol
+
+Every native provider implements a structural Protocol with two methods:
+
+```python
+@runtime_checkable
+class LLMProvider(Protocol):
+    provider_name: str
+
+    async def chat(
+        self,
+        messages: List[Message],
+        *,
+        model: str,
+        temperature: float = 0.7,
+        max_tokens: int = 4096,
+        thinking: Optional[ThinkingConfig] = None,
+        tools: Optional[List[ToolDef]] = None,
+    ) -> LLMResponse: ...
+
+    async def fetch_models(self, api_key: str) -> List[str]: ...
+```
+
+All providers return the same `LLMResponse` dataclass, regardless of SDK:
+
+```python
+@dataclass
+class LLMResponse:
+    content: str = ""
+    thinking: Optional[str] = None
+    tool_calls: List[ToolCall] = field(default_factory=list)
+    usage: Usage = field(default_factory=Usage)
+    model: str = ""
+    finish_reason: str = "stop"
+    raw: Any = None
+    assistant_message: Optional[Message] = None  # canonical replay envelope
+```
+
+`assistant_message` is the durable source of truth. The flat `content`,
+`thinking`, and `tool_calls` fields remain convenience views; `raw` is never
+written to memory or Temporal history.
+
+## Registry, Unifier, and Lazy SDK Clients
+
+The lightweight provider modules are imported eagerly so the registry is
+complete at service startup. Heavy SDK imports, exception-class resolution,
+and client construction are deferred until first use; `ChatUnifier` then keeps
+clients in its bounded cache. This boundary is locked by
+`tests/llm/test_lazy_sdk_imports.py`:
+
+```python
+# server/services/llm/providers/anthropic.py — bottom of the module
+register_provider(
+    ProviderSpec(
+        name="anthropic",
+        factory=lambda api_key, **kw: AnthropicProvider(api_key, **kw),   # invoked when a client is first needed
+        sdk_exception_refs=("anthropic:APIError",),                        # "module:Class" string, resolved at except time
+    )
+)
+```
+
+At call time `ChatUnifier.chat(provider=...)` looks the spec up via
+`registry.get_provider(name)` and invokes `spec.factory(...)`. The unifier
+also owns error translation: typed SDK exceptions (resolved lazily from
+`sdk_exception_refs` via `pkgutil.resolve_name`) become `NodeUserError`
+with a user-correctable message. There is no per-provider branch anywhere
+in `ai.py`.
+
+The legacy `factory.py` (`create_provider` / `is_native_provider` /
+`NATIVE_PROVIDERS`) was **removed** — `ChatUnifier` + `registry.py` is the
+only dispatch layer.
+
+## Config-Driven Base URLs
+
+`ProviderConfig` is built at import time from `llm_defaults.json`:
+
+```python
+@dataclass
+class ProviderConfig:
+    name: str
+    default_model: str
+    detection_patterns: Tuple[str, ...]
+    models_endpoint: str
+    api_key_header: str              # "Authorization", "x-api-key"
+    api_key_format: str = "Bearer {key}"
+    extra_headers: Dict[str, str] = field(default_factory=dict)
+    base_url: str = ""               # OpenAI-compatible base URL
+```
+
+Adding a new OpenAI-compatible provider requires a config entry:
+
+```json
+"deepseek": {
+  "default_model": "deepseek-v4-flash",
+  "detection_patterns": ["deepseek"],
+  "models_endpoint": "https://api.deepseek.com/v1/models",
+  "base_url": "https://api.deepseek.com/v1",
+  "max_output_tokens": { "_default": 8192 },
+  "context_length": { "_default": 128000 },
+  "temperature_range": [0.0, 2.0]
+}
+```
+
+Then add the same provider name to `_COMPAT_PROVIDERS` in
+`providers/_compat.py`. No new provider class or module import is needed: the
+compat loop reuses `OpenAIProvider` and pins the JSON `base_url` in
+`ProviderSpec.client_kwargs`.
+
+At client creation, a stored `{provider}_proxy` URL takes precedence over that
+configured compat URL. Plain OpenAI uses the SDK default endpoint unless
+`openai_proxy` is set. OpenRouter uses its adapter's built-in endpoint unless
+`openrouter_proxy` is set. Ollama and LM Studio rely on their stored proxy URL
+at runtime so requests go to the selected local server.
+
+## Unified Native Execution Path
+
+```
+execute_chat / execute_agent / execute_chat_agent
+        |
+        v
+ChatUnifier.chat(provider=..., Message[], ToolDef[])
+        |
+        +--> registry.get_provider(name)
+        +--> official SDK or OpenAI-compatible base URL
+        +--> LLMResponse(assistant_message=lossless MessageWireV2)
+```
+
+`run_native_agent_loop` appends the provider's exact assistant envelope before
+executing tools. This preserves Gemini thought signatures, Anthropic signed and
+redacted thinking blocks, and OpenAI reasoning continuation state across
+in-process and Temporal turns. Executions record `llm_engine=native` and wire
+version 2. A markerless prepare result identifies a pre-cutover history, which
+is refused rather than executed (see the end of this document).
+
+## Thinking and Reasoning
+
+The unified `ThinkingConfig` dataclass is translated per provider:
+
+```python
+@dataclass
+class ThinkingConfig:
+    enabled: bool = False
+    budget: int = 2048      # Anthropic budget_tokens, Gemini 2.5 thinking_budget
+    effort: str = "medium"  # OpenAI reasoning_effort (low/medium/high)
+    level: Optional[str] = None  # Gemini 3+ thinking_level, only when explicit
+    format: str = "parsed"  # Groq Qwen3 reasoning_format (parsed/hidden)
+```
+
+Each provider's `chat()` method reads only the fields it supports. The extracted thinking text is returned in `LLMResponse.thinking` so downstream nodes can display or drag it into parameters.
+
+### Supported thinking/reasoning providers
+
+| Provider | Models | Parameter | Thinking Type | Notes |
+|----------|--------|-----------|---------------|-------|
+| **Claude** | All Claude 4.x/3.5 | `thinkingBudget` (1024-16000 tokens) | budget | Requires `max_tokens > budget_tokens`. Temperature auto-set to 1. |
+| **Gemini** | gemini-3.x, gemini-2.5-pro/flash | `thinkingBudget` (token count) | budget | Uses `thinking_budget` API parameter |
+| **OpenAI** | o1, o3, o3-mini, o4-mini | `reasoningEffort` (low/medium/high) | effort | Reasoning-only models. Temperature fixed at 1.0. |
+| **OpenAI** | GPT-5.2/5.1/5/5-mini/5-nano | `reasoningEffort` (low/medium/high/xhigh) | effort | Hybrid reasoning: can operate with or without thinking. |
+| **Groq** | qwen3-32b | `reasoningFormat` ('parsed' or 'hidden') | format | 'parsed' returns reasoning, 'hidden' returns only final answer |
+| **Cerebras** | qwen-3-235b | `reasoningFormat` ('parsed' or 'hidden') | format | Same format-based reasoning as Groq Qwen |
+
+The thinking/reasoning fields (`thinkingEnabled`, `thinkingBudget`, `reasoningEffort`, `reasoningFormat`) live in the backend NodeSpec for each chat model (`server/nodes/model/<provider>_chat_model/`) and are surfaced through `AIChatModelParams` in `server/models/nodes.py`. The frontend renders them automatically via the universal parameter panel.
+
+### Thinking extraction (legacy replay path)
+
+Native providers normalize reasoning directly into `LLMResponse.thinking` and
+ordered `Message.blocks`. The helper below remains only for pre-cutover
+Temporal histories executing the legacy branch:
+
+```python
+def extract_thinking_from_response(response, provider: str) -> Optional[str]:
+    """Extract thinking/reasoning from AI response based on provider."""
+    # Claude: content_blocks with type='thinking'
+    # Gemini: response_metadata.candidates[0].content.parts with thought=True
+    # Groq: additional_kwargs.reasoning or response_metadata.reasoning
+    # OpenAI o-series: requires organization verification
+```
+
+The agent/chat result envelope carries `thinking` alongside the answer:
+
+```python
+{
+    "success": True,
+    "result": {
+        "response": "The final answer text",
+        "thinking": "The model's internal reasoning (if available)",
+        "model": "claude-3-5-sonnet-20241022",
+        "provider": "anthropic",
+        "finish_reason": "stop",
+        "timestamp": "2025-01-23T...",
+    }
+}
+```
+
+The `thinking` field is exposed to downstream nodes via the backend output schema (`AIAgentOutput` in `server/services/node_output_schemas.py`, shared across every LLM-backed agent + chat model) and rendered in a collapsible `ThinkingBlock` (`client/src/components/ui/NodeOutputPanel.tsx`, default-expanded, provider-aware label).
+
+### Thinking limitations
+
+- **OpenAI o-series**: Reasoning summaries are only available to organizations that have completed verification at platform.openai.com. Without verification, `thinking` is `null`.
+- **Claude**: `max_tokens` must be greater than `thinkingBudget`. Temperature is automatically set to 1 when thinking is enabled.
+- **Groq**: Only Qwen3-32b supports reasoning (QwQ removed from Groq). Format `hidden` suppresses reasoning output.
+- **Cerebras**: Qwen-3-235b supports format-based reasoning (same as Groq Qwen).
+
+See [memory_compaction.md](memory_compaction.md) for how thinking token counts are tracked separately from output tokens.
+
+## Model Max Tokens Resolution
+
+`resolve_max_tokens()` in `services/llm/config.py` implements the clamp/default logic:
+
+```python
+def resolve_max_tokens(params: dict, model: str, provider: str) -> int:
+    registry = get_model_registry()
+    model_max = registry.get_max_output_tokens(model, provider)
+    user_val = params.get("max_tokens") or params.get("maxTokens")
+    if user_val:
+        user_int = int(user_val)
+        if user_int > model_max:
+            return model_max   # clamp user value to model hard limit
+        return user_int
+    return model_max
+```
+
+Paired with `ModelRegistryService` (`server/services/model_registry.py`), which loads `model_registry.json` (cached from OpenRouter's `/api/v1/models` endpoint) and falls back to `llm_defaults.json` for unknown models. The registry is the single source for:
+
+- `max_output_tokens`
+- `context_length`
+- `temperature_range`
+- `is_reasoning_model` (fixes temperature to 1.0)
+- `supports_thinking`
+- `thinking_type`
+
+## Proxy-Based Authentication (Ollama Pattern)
+
+AI providers support optional proxy-based authentication — requests route through a local proxy server that handles auth, following the [Ollama Claude Code integration](https://docs.ollama.com/integrations/claude-code) pattern.
+
+**How it works:**
+1. User configures a proxy URL in the Credentials Modal (e.g., `http://localhost:11434`).
+2. Requests route through the proxy instead of directly to the provider API.
+3. Proxy handles authentication (token set to `"ollama"` automatically).
+4. No API key storage needed in OpenCompany — auth delegated to proxy.
+
+**Configuration:** proxy URLs are stored in the credentials DB under the `{provider}_proxy` pattern (e.g., `anthropic_proxy`, `openai_proxy`). Falls back to direct API key if no proxy configured. This is the SAME mechanism the native Ollama / LM Studio path uses (see "Local LLM Providers" above) — the validator persists the user's server URL under `{provider}_proxy`, and at runtime it carries into `OpenAIProvider`'s `base_url`.
+
+For every chat and agent run, `proxy_url` flows through `ChatUnifier` into the
+cached native provider factory.
+
+**Use cases:** Claude Code CLI proxy for Anthropic models; native Ollama / LM Studio support; custom auth proxies; dev/testing with mock servers.
+
+## Provider Default Parameters
+
+Users configure default parameter values per LLM provider in the Credentials Modal; defaults apply to new AI nodes using that provider.
+
+**Configurable parameters:**
+- `temperature` — range varies by provider (Anthropic 0-1, Cerebras 0-1.5, others 0-2; o-series fixed 1.0)
+- `max_tokens` (1-200000) — clamped to the model's actual limit by `_resolve_max_tokens()`
+- `thinking_enabled` — extended thinking toggle
+- `thinking_budget` (1024-16000) — token budget for thinking (Claude, Gemini)
+- `reasoning_effort` (low/medium/high) — OpenAI o-series and GPT-5 hybrid reasoning
+- `reasoning_format` (parsed/hidden) — Groq Qwen3 models
+
+```python
+# server/models/database.py
+class ProviderDefaults(SQLModel, table=True):
+    provider: str           # openai, anthropic, gemini, groq, openrouter, cerebras
+    temperature: float
+    max_tokens: int
+    thinking_enabled: bool
+    thinking_budget: int
+    reasoning_effort: str   # low, medium, high
+    reasoning_format: str   # parsed, hidden
+```
+
+| File | Description |
+|------|-------------|
+| `server/models/database.py` | `ProviderDefaults` SQLModel |
+| `server/core/database.py` | `get_provider_defaults()`, `save_provider_defaults()` CRUD |
+| `server/routers/websocket.py` | `get_provider_defaults`, `save_provider_defaults` handlers |
+| `client/src/hooks/useApiKeys.ts` | `getProviderDefaults()`, `saveProviderDefaults()` methods |
+| `client/src/components/CredentialsModal.tsx` | Default Parameters UI section |
+
+## Adding a New Provider
+
+> **Post-Wave-11 authoring.** A chat-model provider is a self-contained folder under `server/nodes/model/<provider>_chat_model/` with `__init__.py` declaring a `ChatModelBase` subclass. It auto-registers via `BaseNode.__init_subclass__`; the frontend renders it through `SquareNode` from the emitted NodeSpec with **zero TypeScript changes**. There is no `client/src/nodeDefinitions/`, no `ModelNode.tsx`, no `Dashboard.tsx` switch to edit.
+
+```python
+# server/nodes/model/openrouter_chat_model/__init__.py
+class OpenRouterChatModel(ChatModelBase):
+    type = "openrouterChatModel"
+    display_name = "OpenRouter"
+    component_kind = "model"          # routes to SquareNode via COMPONENT_BY_KIND
+
+    class Params(ChatModelBase.Params):
+        # provider-specific overrides; everything else inherits from ChatModelBase
+        ...
+```
+
+Icon and color are NOT class attributes (removed in F1): drop `icon.svg` in
+the plugin folder or add a `visuals.json` entry (`"openrouterChatModel":
+{"icon": "lobehub:openrouter"}`), and put the color in the folder's
+`meta.json`.
+
+**Backend steps:**
+
+1. **OpenAI-compatible provider** (DeepSeek, Kimi, Mistral, Sarvam pattern):
+   - Add an entry to `llm_defaults.json` with `base_url`, `default_model`, `detection_patterns`, `max_output_tokens._default`, `context_length._default`, `temperature_range`.
+   - Add the provider name to the compat list in `services/llm/providers/_compat.py` — its import loop calls `register_provider(ProviderSpec(...))` for every listed name.
+   - Chat and agent calls both use the native OpenAI SDK with that configured
+     `base_url`; do not add a branch in `AIService`.
+   - **If the endpoint has no `/v1/models` route**, set `"supports_model_listing": false` on the JSON block. `OpenAIProvider.fetch_models` then serves the curated list (`popular_models`, else the `max_output_tokens` keys) and validates the key with a one-token completion instead. Without the flag the 404 surfaces as an `openai.OpenAIError`, which `ChatUnifier` converts to `NodeUserError` and `AIService.fetch_models` re-raises **before** its curated fallback — breaking credential validation and the model dropdown for a valid key. Sarvam is the reference case; the flag defaults to `true` so no other provider is affected. Locked by `tests/llm/test_model_listing_fallback.py`.
+
+2. **Custom-SDK provider** (Anthropic, Gemini pattern):
+   - Create `services/llm/providers/<name>.py` implementing the `LLMProvider` protocol.
+   - At module bottom call `register_provider(ProviderSpec(name=..., factory=..., sdk_exception_refs=("sdk_module:ErrorClass",)))` and add the module to the side-effect imports in `services/llm/providers/__init__.py`.
+   - Keep the SDK import inside provider construction or call methods. The eager provider-module import registers the spec; the factory and string exception refs keep SDK loading and client construction lazy (locked by `tests/llm/test_lazy_sdk_imports.py`).
+   - Add a config entry in `llm_defaults.json` (no `base_url` needed if the SDK handles URLs itself).
+   - There is no `factory.py` to touch — the legacy factory module was removed; registration via `register_provider` is the only entry point.
+
+3. **Credentials + agent exposure:**
+   - Add a `Credential` subclass in `server/nodes/model/_credentials.py` — surfaces in the Credentials Modal automatically.
+   - To expose the provider in the **agent dropdown**, add its name to the `provider` Literal in `nodes/agent/ai_agent/__init__.py`, `chat_agent.py`, AND `_specialized.py`, and add the substring to `detect_ai_provider` in `server/constants.py` — otherwise an agent using it silently falls back to `'openai'`.
+
+### Key implementation files
+
+| File | Purpose |
+|---|---|
+| `server/nodes/model/<provider>_chat_model/__init__.py` | Plugin entry — metadata + Params + auto-registers |
+| `server/nodes/model/_credentials.py` | `Credential` subclass per provider |
+| `server/config/llm_defaults.json` | OpenAI-compatible `base_url` values plus supported parameters and model constraints; dedicated SDK providers may use SDK defaults, and OpenRouter owns its gateway fallback in Python |
+| `server/services/llm/providers/<provider>.py` | Native SDK provider (Protocol-based) + `register_provider(ProviderSpec)` at module bottom |
+| `server/services/llm/registry.py` | `ProviderSpec` / `register_provider` — the provider registration contract |
+| `server/services/llm/unifier.py` | `ChatUnifier` — chat dispatch facade + typed-error translation |
+| `server/services/agent_runtime.py` | Shared native agent step/loop and `AgentToolSpec` |
+| `server/services/ai.py` | Node orchestration; legacy factory retained only for recorded Temporal histories |
+| `client/src/Dashboard.tsx` | Generic `COMPONENT_BY_KIND` dispatch — no per-provider entry needed |
+
+## Related Docs
+
+- [DESIGN.md](DESIGN.md) - overall backend architecture
+- [memory_compaction.md](memory_compaction.md) - token tracking and compaction using this layer
+- [pricing_service.md](pricing_service.md) - cost calculation from `LLMResponse.usage`
+- [agent_architecture.md](agent_architecture.md) - agent execution architecture
+
+## Temporal migration and dependency lifecycle
+
+`agent.prepare_payload.v1` records `llm_engine` and `message_wire_version`.
+The marker is a discriminator, not a switch: there is one engine.
+
+A history recorded before the native cutover carries neither field, and its
+messages are in a retired wire format the native `messages_from_wire` reader
+cannot interpret. `execute_llm_step` refuses such a payload with a
+non-retryable `ApplicationError(type="InvalidAgentLLMEngine")` rather than
+reinterpreting the messages and corrupting the conversation. The operator fix
+is to Reset the deployment, which starts a fresh generation.
+
+`tests/llm/test_langchain_removed.py` enforces the dependency end state via an
+AST walk over production sources, the `pyproject.toml` declarations, runtime
+importability, and a guarded `core.container` boot.
+
+
+## Multimodal image input (first increment)
+
+Image input rides the same normalized protocol rather than a parallel path.
+`ContentBlock` carries an optional `source` dict, discriminated by `kind`:
+durable `{"kind": "file_ref", "ref": <FileRef kind=image>, "detail": ...}`
+(~450 B) or transient `{"kind": "bytes", "media_type", "data_b64"}`. The wire
+codec's `_durable_source` **raises** on a bytes-kind source, so hydrated
+request material can never enter the journal or a Temporal payload — the
+never-bytes rule from [media_transport.md](media_transport.md), enforced
+structurally.
+
+Flow: a tool result opts in with `llm_media: [{ref, detail}]` (max 8 entries,
+png/jpeg/webp/gif, `ref.workflow_id` required). Both agent loops attach
+ref-only image blocks to the tool message. `run_native_llm_step` calls
+`services/llm/media.py::hydrate_image_blocks` once per step, on deep copies:
+bytes are read through the contained media reader, fitted to a visual-token
+budget (`services/media/image_fit.py`, detail low/auto/high -> small/normal/
+large), and dropped after the HTTP call. Originals never mutate.
+
+**Capability gate**: `provider_supports_vision` reads
+`llm_defaults.json providers.<p>.vision.enabled`; unknown or absent means
+False and the model gets a text placeholder instead — never emit a block a
+model is not confirmed to accept, because a rejected block would be journaled
+and resent every turn. **Encoder status**: Anthropic renders hydrated images
+inside `tool_result.content` (the documented block-list shape). OpenAI
+(Responses `input_image` inside `function_call_output`; Chat Completions
+hoist-to-user-turn) and Gemini (`inline_data` parts beside
+`function_response`) are pending — their `vision.enabled` stays `false` until
+those encoders land, so bytes are never hydrated only to be dropped.
+Text-only providers keep the `visionAnalyze` delegate tool as their vision
+path (see [data_node.md](data_node.md)). Locked by
+`tests/llm/test_media_blocks.py`.

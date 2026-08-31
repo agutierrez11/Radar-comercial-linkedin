@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0",
+  "format": "html",
+  "metadata": {
+    "title": "Redesigning the Charts",
+    "description": "Cleveland-McGill, Tufte, Yau, Knaflic, IBCS — applied to a real deck",
+    "author": ""
+  },
+  "canvas": {"width": 1920, "height": 1080},
+  "playlist": [
+    "01-cover.html",
+    "02-encoding-ladder.html",
+    "03-top-5-worst.html",
+    "04-card-1-donut.html",
+    "05-card-2-stacked-bar.html",
+    "06-card-3-dual-axis.html",
+    "07-card-4-rainbow-line.html",
+    "08-card-5-3d-column.html",
+    "09-cross-deck-rules.html",
+    "10-palette-type.html",
+    "11-charts-to-delete.html",
+    "12-style-guide.html"
+  ]
+}

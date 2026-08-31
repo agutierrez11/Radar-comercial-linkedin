@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Template library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0A0A0A;--paper:#F8F8F6;--accent:#0066FF;--mute:#6E6E6E;--line:#E4E4E1;
+        --sans:'Manrope',ui-sans-serif,system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;}
+  body{margin:0;padding:0;overflow:hidden;background:var(--paper);font-family:var(--sans);color:var(--ink);}
+</style>
+</head>
+<body>
+<div class="slide-container" data-screen-label="09 Template library" style="position:relative;width:1920px;height:1080px;overflow:hidden;background:#F8F8F6;">
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:72px;width:600px;height:24px;font-family:var(--mono);font-size:13px;letter-spacing:0.1em;color:#6E6E6E;text-transform:uppercase;">
+    09&nbsp;·&nbsp;Templates
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:106px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:154px;width:1100px;height:28px;font-family:var(--mono);font-size:14px;letter-spacing:0.12em;color:#0066FF;text-transform:uppercase;">
+    Template&nbsp;library&nbsp;·&nbsp;7&nbsp;skeletons
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:92px;top:198px;width:1700px;height:88px;font-family:var(--sans);font-size:72px;line-height:1.02;font-weight:700;letter-spacing:-0.03em;color:#0A0A0A;">
+    Seven skeletons. Every deck a permutation.
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:308px;width:1600px;height:36px;font-family:var(--sans);font-size:18px;line-height:1.45;color:#3A3A3A;">
+    A <em>template</em> names the slots; the maker fills them with content. New templates are added only when a job demands a new slot arrangement.
+  </div>
+
+  <!-- Column headers -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:386px;width:1728px;height:1px;background:#0A0A0A;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:400px;width:60px;height:32px;font-family:var(--mono);font-size:12px;letter-spacing:0.1em;color:#6E6E6E;text-transform:uppercase;">#</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:176px;top:400px;width:320px;height:32px;font-family:var(--mono);font-size:12px;letter-spacing:0.1em;color:#6E6E6E;text-transform:uppercase;">Template</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:556px;top:400px;width:360px;height:32px;font-family:var(--mono);font-size:12px;letter-spacing:0.1em;color:#6E6E6E;text-transform:uppercase;">Job</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:956px;top:400px;width:560px;height:32px;font-family:var(--mono);font-size:12px;letter-spacing:0.1em;color:#6E6E6E;text-transform:uppercase;">Composed&nbsp;of</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1556px;top:400px;width:280px;height:32px;font-family:var(--mono);font-size:12px;letter-spacing:0.1em;color:#6E6E6E;text-transform:uppercase;text-align:right;">Density</div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:440px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+
+  <!-- Row 1: cover -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:456px;width:60px;height:64px;font-family:var(--mono);font-size:15px;color:#0066FF;">01</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:176px;top:456px;width:320px;height:64px;font-family:var(--sans);font-size:22px;font-weight:600;color:#0A0A0A;">template/cover</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:556px;top:456px;width:360px;height:64px;font-family:var(--sans);font-size:18px;line-height:1.4;color:#3A3A3A;">Open the deck. Name it. Sign it.</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:956px;top:456px;width:560px;height:64px;font-family:var(--mono);font-size:14px;line-height:1.5;color:#3A3A3A;">eyebrow&nbsp;+&nbsp;display/xl&nbsp;+&nbsp;footer</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1556px;top:456px;width:280px;height:64px;font-family:var(--mono);font-size:14px;color:#0A0A0A;text-align:right;">low</div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:528px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+
+  <!-- Row 2 -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:544px;width:60px;height:64px;font-family:var(--mono);font-size:15px;color:#0066FF;">02</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:176px;top:544px;width:320px;height:64px;font-family:var(--sans);font-size:22px;font-weight:600;color:#0A0A0A;">template/section-divider</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:556px;top:544px;width:360px;height:64px;font-family:var(--sans);font-size:18px;line-height:1.4;color:#3A3A3A;">Announce a new section.</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:956px;top:544px;width:560px;height:64px;font-family:var(--mono);font-size:14px;line-height:1.5;color:#3A3A3A;">section-number&nbsp;+&nbsp;display/md&nbsp;+&nbsp;footer</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1556px;top:544px;width:280px;height:64px;font-family:var(--mono);font-size:14px;color:#0A0A0A;text-align:right;">low</div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:616px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+
+  <!-- Row 3 -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:632px;width:60px;height:64px;font-family:var(--mono);font-size:15px;color:#0066FF;">03</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:176px;top:632px;width:320px;height:64px;font-family:var(--sans);font-size:22px;font-weight:600;color:#0A0A0A;">template/hero-metric</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:556px;top:632px;width:360px;height:64px;font-family:var(--sans);font-size:18px;line-height:1.4;color:#3A3A3A;">One number that earns the slide.</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:956px;top:632px;width:560px;height:64px;font-family:var(--mono);font-size:14px;line-height:1.5;color:#3A3A3A;">title-block&nbsp;+&nbsp;kpi-card&nbsp;+&nbsp;callout&nbsp;+&nbsp;footer</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1556px;top:632px;width:280px;height:64px;font-family:var(--mono);font-size:14px;color:#0A0A0A;text-align:right;">medium</div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:704px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+
+  <!-- Row 4 -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:720px;width:60px;height:64px;font-family:var(--mono);font-size:15px;color:#0066FF;">04</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:176px;top:720px;width:320px;height:64px;font-family:var(--sans);font-size:22px;font-weight:600;color:#0A0A0A;">template/compare-two</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:556px;top:720px;width:360px;height:64px;font-family:var(--sans);font-size:18px;line-height:1.4;color:#3A3A3A;">Two options, side by side.</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:956px;top:720px;width:560px;height:64px;font-family:var(--mono);font-size:14px;line-height:1.5;color:#3A3A3A;">title-block&nbsp;+&nbsp;2&nbsp;×&nbsp;bullet-list&nbsp;+&nbsp;footer</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1556px;top:720px;width:280px;height:64px;font-family:var(--mono);font-size:14px;color:#0A0A0A;text-align:right;">medium</div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:792px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+
+  <!-- Row 5 -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:808px;width:60px;height:48px;font-family:var(--mono);font-size:15px;color:#0066FF;">05</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:176px;top:808px;width:320px;height:48px;font-family:var(--sans);font-size:22px;font-weight:600;color:#0A0A0A;">template/data</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:556px;top:808px;width:360px;height:48px;font-family:var(--sans);font-size:18px;line-height:1.4;color:#3A3A3A;">Numbers driving a claim.</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:956px;top:808px;width:560px;height:48px;font-family:var(--mono);font-size:14px;line-height:1.5;color:#3A3A3A;">title-block&nbsp;+&nbsp;stat-strip&nbsp;+&nbsp;source-list&nbsp;+&nbsp;footer</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1556px;top:808px;width:280px;height:48px;font-family:var(--mono);font-size:14px;color:#0A0A0A;text-align:right;">high</div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:864px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+
+  <!-- Row 6 -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:880px;width:60px;height:48px;font-family:var(--mono);font-size:15px;color:#0066FF;">06</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:176px;top:880px;width:320px;height:48px;font-family:var(--sans);font-size:22px;font-weight:600;color:#0A0A0A;">template/quote</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:556px;top:880px;width:360px;height:48px;font-family:var(--sans);font-size:18px;line-height:1.4;color:#3A3A3A;">Borrow a voice that isn&rsquo;t yours.</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:956px;top:880px;width:560px;height:48px;font-family:var(--mono);font-size:14px;line-height:1.5;color:#3A3A3A;">quote&nbsp;+&nbsp;citation&nbsp;+&nbsp;footer</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1556px;top:880px;width:280px;height:48px;font-family:var(--mono);font-size:14px;color:#0A0A0A;text-align:right;">low</div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:936px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+
+  <!-- Row 7 -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:944px;width:60px;height:36px;font-family:var(--mono);font-size:15px;color:#0066FF;">07</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:176px;top:944px;width:320px;height:36px;font-family:var(--sans);font-size:22px;font-weight:600;color:#0A0A0A;">template/end</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:556px;top:944px;width:360px;height:36px;font-family:var(--sans);font-size:18px;line-height:1.4;color:#3A3A3A;">Close. Credit. Hand off.</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:956px;top:944px;width:560px;height:36px;font-family:var(--mono);font-size:14px;line-height:1.5;color:#3A3A3A;">title-block&nbsp;+&nbsp;source-list&nbsp;+&nbsp;footer</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1556px;top:944px;width:280px;height:36px;font-family:var(--mono);font-size:14px;color:#0A0A0A;text-align:right;">low</div>
+
+  <!-- footer -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:96px;top:984px;width:1728px;height:1px;background:#E4E4E1;z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:96px;top:1004px;width:1300px;height:30px;font-family:var(--mono);font-size:13px;color:#6E6E6E;">
+    template&nbsp;index&nbsp;·&nbsp;7&nbsp;skeletons&nbsp;·&nbsp;new&nbsp;template&nbsp;requires&nbsp;maintainer&nbsp;review
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1700px;top:1004px;width:124px;height:30px;text-align:right;font-family:var(--mono);font-size:13px;color:#0A0A0A;">
+    09&nbsp;/&nbsp;18
+  </div>
+
+</div>
+</body>
+</html>

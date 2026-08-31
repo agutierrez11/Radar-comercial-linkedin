@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Card 3 — Dual-Axis → Two Charts</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+  body { margin:0; padding:0; overflow:hidden; font-family:'Inter',sans-serif; font-feature-settings:"tnum"; }
+</style>
+</head>
+<body>
+<div data-screen-label="06 Card 3" class="slide-container" style="position:relative; width:1920px; height:1080px; overflow:hidden; background:#FFFFFF;">
+
+  <!-- Header -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:120px; top:96px; width:1680px; height:1px; background:#1A1A1A; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:60px; width:1300px; height:28px; font-family:'JetBrains Mono',monospace; font-size:14px; color:#1A1A1A; letter-spacing:0.12em; text-transform:uppercase; z-index:10;">
+    06 &nbsp;·&nbsp; Chart Redesign Card 3 &nbsp;·&nbsp; Dual-Axis → Two Charts
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1520px; top:60px; width:280px; height:28px; font-family:'JetBrains Mono',monospace; font-size:14px; color:#1A1A1A; letter-spacing:0.12em; text-transform:uppercase; text-align:right; z-index:10;">06 / 12</div>
+
+  <!-- Question -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:140px; width:120px; height:22px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#9CA3AF; letter-spacing:0.16em; text-transform:uppercase; z-index:10;">Question</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:170px; width:1500px; height:78px; font-size:54px; font-weight:600; line-height:1.05; color:#1A1A1A; letter-spacing:-0.02em; z-index:10;">
+    Does NPS lead bookings — or are these two questions?
+  </div>
+
+  <!-- BEFORE -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:300px; width:300px; height:24px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#E37222; letter-spacing:0.16em; text-transform:uppercase; font-weight:500; z-index:10;">Before</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:330px; width:760px; height:36px; font-size:24px; font-weight:500; color:#1A1A1A; z-index:10;">
+    Dual-axis line chart · NPS on right, bookings on left
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:120px; top:386px; width:760px; height:480px; background:#FFFFFF; border:1px solid #E5E5E5; z-index:1;"></div>
+
+  <svg data-object="true" data-object-type="image" style="position:absolute; left:144px; top:410px; width:712px; height:440px; z-index:5;" viewBox="0 0 712 440">
+    <g font-family="Inter" font-size="13" fill="#1A1A1A">
+      <text x="0"  y="42">$200M</text>
+      <text x="0"  y="142">$150M</text>
+      <text x="0"  y="242">$100M</text>
+      <text x="0"  y="342">$50M</text>
+      <text x="666" y="42" fill="#E37222">80</text>
+      <text x="666" y="142" fill="#E37222">60</text>
+      <text x="666" y="242" fill="#E37222">40</text>
+      <text x="666" y="342" fill="#E37222">20</text>
+    </g>
+    <line x1="58" y1="30" x2="58" y2="350" stroke="#1A1A1A" stroke-width="1"/>
+    <line x1="660" y1="30" x2="660" y2="350" stroke="#E37222" stroke-width="1"/>
+    <line x1="58" y1="350" x2="660" y2="350" stroke="#1A1A1A" stroke-width="1"/>
+
+    <!-- bookings line (blue) -->
+    <polyline points="80,300 180,260 280,210 380,190 480,150 580,90" fill="none" stroke="#2980B9" stroke-width="2.5"/>
+    <!-- NPS line (red, fights bookings visually) -->
+    <polyline points="80,180 180,220 280,160 380,260 480,200 580,300" fill="none" stroke="#E74C3C" stroke-width="2.5"/>
+
+    <!-- x labels -->
+    <g font-family="Inter" font-size="13" fill="#1A1A1A">
+      <text x="80"  y="372" text-anchor="middle">Jan</text>
+      <text x="180" y="372" text-anchor="middle">Mar</text>
+      <text x="280" y="372" text-anchor="middle">May</text>
+      <text x="380" y="372" text-anchor="middle">Jul</text>
+      <text x="480" y="372" text-anchor="middle">Sep</text>
+      <text x="580" y="372" text-anchor="middle">Nov</text>
+    </g>
+
+    <!-- legend -->
+    <g font-family="Inter" font-size="13" fill="#1A1A1A">
+      <rect x="58"  y="402" width="12" height="3" fill="#2980B9"/><text x="80"  y="410">Bookings ($M, left)</text>
+      <rect x="280" y="402" width="12" height="3" fill="#E74C3C"/><text x="302" y="410">NPS (right)</text>
+    </g>
+  </svg>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:880px; width:760px; height:30px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#1A1A1A; line-height:1.5; z-index:10;">
+    Two scales, one frame — slopes are <em style="color:#E37222;">not</em> comparable. Spurious correlation invited.<sup style="color:#0066CC;">7</sup>
+  </div>
+
+  <!-- AFTER -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:920px; top:300px; width:300px; height:24px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#0066CC; letter-spacing:0.16em; text-transform:uppercase; font-weight:500; z-index:10;">After</div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:920px; top:330px; width:760px; height:36px; font-size:24px; font-weight:500; color:#1A1A1A; z-index:10;">
+    Two stacked panels · each chart answers one question
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:920px; top:386px; width:760px; height:480px; background:#FFFFFF; border:1px solid #E5E5E5; z-index:1;"></div>
+
+  <svg data-object="true" data-object-type="image" style="position:absolute; left:944px; top:404px; width:720px; height:450px; z-index:5;" viewBox="0 0 720 450">
+    <!-- Panel A — Bookings -->
+    <g>
+      <text x="0" y="16" font-family="Inter" font-size="16" font-weight="500" fill="#1A1A1A">Bookings, $M</text>
+      <text x="720" y="16" font-family="Inter" font-size="14" fill="#0066CC" text-anchor="end">+92% YoY</text>
+      <line x1="0" y1="170" x2="720" y2="170" stroke="#1A1A1A" stroke-width="1"/>
+      <polyline points="20,150 140,128 260,98 380,78 500,52 620,26" fill="none" stroke="#0066CC" stroke-width="3"/>
+      <circle cx="620" cy="26" r="4" fill="#0066CC"/>
+      <g font-family="Inter" font-size="12" fill="#9CA3AF">
+        <text x="20"  y="188" text-anchor="middle">Jan</text>
+        <text x="140" y="188" text-anchor="middle">Mar</text>
+        <text x="260" y="188" text-anchor="middle">May</text>
+        <text x="380" y="188" text-anchor="middle">Jul</text>
+        <text x="500" y="188" text-anchor="middle">Sep</text>
+        <text x="620" y="188" text-anchor="middle">Nov</text>
+      </g>
+    </g>
+
+    <!-- Panel B — NPS -->
+    <g transform="translate(0,230)">
+      <text x="0" y="16" font-family="Inter" font-size="16" font-weight="500" fill="#1A1A1A">NPS</text>
+      <text x="720" y="16" font-family="Inter" font-size="14" fill="#1A1A1A" text-anchor="end">range 38–62</text>
+      <line x1="0" y1="170" x2="720" y2="170" stroke="#1A1A1A" stroke-width="1"/>
+      <polyline points="20,80 140,110 260,60 380,130 500,90 620,150" fill="none" stroke="#9CA3AF" stroke-width="3"/>
+      <circle cx="620" cy="150" r="4" fill="#9CA3AF"/>
+      <g font-family="Inter" font-size="12" fill="#9CA3AF">
+        <text x="20"  y="188" text-anchor="middle">Jan</text>
+        <text x="140" y="188" text-anchor="middle">Mar</text>
+        <text x="260" y="188" text-anchor="middle">May</text>
+        <text x="380" y="188" text-anchor="middle">Jul</text>
+        <text x="500" y="188" text-anchor="middle">Sep</text>
+        <text x="620" y="188" text-anchor="middle">Nov</text>
+      </g>
+    </g>
+  </svg>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:920px; top:880px; width:760px; height:30px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#1A1A1A; line-height:1.5; z-index:10;">
+    Two independent y-scales, separated · slopes are now interpretable per panel
+  </div>
+
+  <!-- Decision strip -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:120px; top:920px; width:1560px; height:1px; background:#1A1A1A; z-index:1;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:944px; width:360px; height:80px; z-index:10;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:8px;">Why split</div>
+    <div style="font-size:15px; line-height:1.45; color:#1A1A1A;">Two units (dollars, index). Dual y-axis lets the author imply causation that the data doesn't show.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:520px; top:944px; width:360px; height:80px; z-index:10;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:8px;">One chart, one question<sup style="color:#0066CC;">8</sup></div>
+    <div style="font-size:15px; line-height:1.45; color:#1A1A1A;">Top panel: "is bookings growing?" Bottom panel: "what is NPS doing?" Lead/lag is a third slide if needed.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:920px; top:944px; width:360px; height:80px; z-index:10;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:8px;">IBCS<sup style="color:#0066CC;">9</sup></div>
+    <div style="font-size:15px; line-height:1.45; color:#1A1A1A;">Each unit gets its own scale and axis. Same time domain on x. Same color semantics across deck.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:1320px; top:944px; width:360px; height:80px; z-index:10;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:8px;">Encoding move</div>
+    <div style="font-size:15px; line-height:1.45; color:#1A1A1A;"><span style="color:#9CA3AF;">R4</span> Angle/slope on shared frame &nbsp;→&nbsp; <span style="color:#1A1A1A;">R2</span> Position, two panels.<sup style="color:#0066CC;">1</sup></div>
+  </div>
+
+  <!-- Footer -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:120px; top:1020px; width:1680px; height:1px; background:#1A1A1A; z-index:1;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:120px; top:1036px; width:1200px; height:24px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#9CA3AF; letter-spacing:0.14em; text-transform:uppercase; z-index:10;">
+    Card 03 of 05 &nbsp;·&nbsp; Knaflic — split unrelated metrics<sup style="color:#0066CC;">7,8</sup>
+  </div>
+
+</div>
+</body>
+</html>
