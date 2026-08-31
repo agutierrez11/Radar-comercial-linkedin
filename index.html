@@ -3487,9 +3487,6 @@ window.addEventListener('DOMContentLoaded', () => {
     if (icon) icon.textContent = '🌙';
     if (text) text.textContent = 'Modo Oscuro';
   }
-  if (window.currentAuthUser && window.currentAuthUser.id === 'antonio' && (!S.contacts || S.contacts.length === 0)) {
-    loadDemoData(true);
-  }
 });
 
 gisMap = null;
