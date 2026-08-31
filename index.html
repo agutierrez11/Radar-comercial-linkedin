@@ -10029,7 +10029,9 @@ function openContactDrawer(contactName) {
   if (!c) return;
   alert(`👤 Ficha Comercial de Prospecto:\n\nNombre: ${c.name}\nCargo: ${c.position || 'N/A'}\nEmpresa: ${c.company || 'N/A'}\nUbicación: ${c.city || ''}, ${c.country || ''}\nScore de Calidez: ${c.engagement_score || 80}/100\n\nRelación detectada en tu Bóveda Privada.`);
 }
+}
 window.openContactDrawer = openContactDrawer;
+</script>
 
 <!-- SYSTEM QA ELEMENT CONTAINERS (Toast, Auth Modal, Hidden Filters) -->
 <div id="ui-toast"></div>
@@ -10050,6 +10052,5 @@ window.openContactDrawer = openContactDrawer;
 <div id="graph-filter-city" style="display:none;"></div>
 <div id="graph-filter-score" style="display:none;"></div>
 
-</script>
 </body>
 </html>
