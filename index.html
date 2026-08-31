@@ -4092,11 +4092,8 @@ function renderNetwork() {
   const barBgColor = isL ? '#2563eb' : '#3b82f6';
   const doughnutBgs = isL ? ['#7e22ce','#2563eb','#15803d','#cbd5e1'] : ['#c084fc','#3b82f6','#10b981','#2b2e46'];
 
-  document.getElementById('net-charts').style.display = 'grid';
-  if (typeof Chart === 'undefined') {
-    setTimeout(renderNetwork, 150);
-    return;
-  }
+  if (typeof Chart !== 'undefined') {
+    document.getElementById('net-charts').style.display = 'grid';
 
   if (typeof chartHier !== 'undefined' && chartHier) { try { chartHier.destroy(); } catch(e){} }
   if (typeof chartCountries !== 'undefined' && chartCountries) { try { chartCountries.destroy(); } catch(e){} }
@@ -4137,6 +4134,7 @@ function renderNetwork() {
       }
     }
   });
+  }
   initGisMap(S.contacts);
   applyNetworkFilters();
 }

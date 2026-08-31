@@ -4125,37 +4125,43 @@ function renderNetwork() {
   const barBgColor = isL ? '#2563eb' : '#3b82f6';
   const doughnutBgs = isL ? ['#7e22ce','#2563eb','#15803d','#cbd5e1'] : ['#c084fc','#3b82f6','#10b981','#2b2e46'];
 
-  if (chartHier) chartHier.destroy();
-  if (chartCountries) chartCountries.destroy();
-  document.getElementById('net-charts').style.display = 'grid';
-  const cHier = document.getElementById('chart-hier').getContext('2d');
-  chartHier = new Chart(cHier, {
-    type: 'doughnut',
-    data: {
-      labels: ['C-Level','Director','Gerente','Otros'],
-      datasets: [{ data: [hier['C-Level']||0, hier['Director']||0, hier['Gerente']||0, hier['Otros']||0], backgroundColor: doughnutBgs, borderWidth: 0 }]
-    },
-    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: txtColor, font: { size: 10 } } } }, cutout: '65%' }
-  });
-  const top10 = identified.slice(0,10);
-  const cCountries = document.getElementById('chart-countries').getContext('2d');
-  chartCountries = new Chart(cCountries, {
-    type: 'bar',
-    data: {
-      labels: top10.map(([k])=>k),
-      datasets: [{ data: top10.map(([,v])=>v), backgroundColor: barBgColor, borderRadius: 4 }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      indexAxis: 'y',
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { ticks: { color: txtColor, font:{size:9} }, grid: { display: false } },
-        y: { ticks: { color: txtColor, autoSkip: false, font:{size:11, family:'Outfit'} }, grid: { display: false } }
-      }
+  if (typeof Chart !== 'undefined') {
+    if (typeof chartHier !== 'undefined' && chartHier) { try { chartHier.destroy(); } catch(e){} }
+    if (typeof chartCountries !== 'undefined' && chartCountries) { try { chartCountries.destroy(); } catch(e){} }
+    document.getElementById('net-charts').style.display = 'grid';
+    const cHier = document.getElementById('chart-hier')?.getContext('2d');
+    if (cHier) {
+      chartHier = new Chart(cHier, {
+        type: 'doughnut',
+        data: {
+          labels: ['C-Level','Director','Gerente','Otros'],
+          datasets: [{ data: [hier['C-Level']||0, hier['Director']||0, hier['Gerente']||0, hier['Otros']||0], backgroundColor: doughnutBgs, borderWidth: 0 }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: txtColor, font: { size: 10 } } } }, cutout: '65%' }
+      });
     }
-  });
+    const top10 = identified.slice(0,10);
+    const cCountries = document.getElementById('chart-countries')?.getContext('2d');
+    if (cCountries) {
+      chartCountries = new Chart(cCountries, {
+        type: 'bar',
+        data: {
+          labels: top10.map(([k])=>k),
+          datasets: [{ data: top10.map(([,v])=>v), backgroundColor: barBgColor, borderRadius: 4 }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          indexAxis: 'y',
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: txtColor, font:{size:9} }, grid: { display: false } },
+            y: { ticks: { color: txtColor, autoSkip: false, font:{size:11, family:'Outfit'} }, grid: { display: false } }
+          }
+        }
+      });
+    }
+  }
   initGisMap(S.contacts);
   applyNetworkFilters();
 }
