@@ -4694,7 +4694,7 @@ async function enrichSingleContactLive(contactId) {
   const c = S.contacts.find(x => String(x.id) === String(contactId));
   if (!c) return;
 
-  const harvestKey = localStorage.getItem('radar_harvest_key') || '';
+  const harvestKey = localStorage.getItem('radar_harvest_key') || window.HARVEST_API_KEY || "8xHkKiNd1ympUsbmX9pgV6LzMqeIn2sf";
   showToast(`Actualizando perfil de ${c.name} con HarvestAPI...`, '⚡');
 
   try {
