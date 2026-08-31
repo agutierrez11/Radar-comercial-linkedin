@@ -8315,30 +8315,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     const activeUserPill = document.getElementById('active-user-name');
     if (activeUserPill) activeUserPill.textContent = window.currentAuthUser.name;
     if (typeof closeLoginModal === 'function') closeLoginModal();
-    
-    if (window.MASTER_CONNECTIONS_DATA && window.MASTER_CONNECTIONS_DATA.length >= 3030) {
+
+    if (typeof loadDemoData === 'function') {
+      await loadDemoData(true);
+    } else if (window.MASTER_CONNECTIONS_DATA) {
       S.contacts = window.MASTER_CONNECTIONS_DATA;
-      if (!S.loadedParts) S.loadedParts = {};
-      S.loadedParts.connections = true;
-    } else if (typeof restoreLocalVault === 'function') {
-      const restored = await restoreLocalVault();
-      if (!restored || !S.contacts || S.contacts.length < 3030) {
-        if (typeof loadDemoData === 'function') {
-          await loadDemoData(true);
-        }
-      }
     }
 
-    if (S.contacts && S.contacts.length > 0) {
-      if (!S.loadedParts) S.loadedParts = {};
-      S.loadedParts.connections = true;
+    if (typeof restoreLocalVault === 'function') {
+      try { await restoreLocalVault(); } catch(e) {}
     }
 
     updateStatus();
-    const targetSection = (S.contacts && S.contacts.length > 0) ? 'network' : 'upload';
-    if (typeof navigate === 'function') navigate(targetSection);
-    if (targetSection === 'network' && typeof renderNetwork === 'function') renderNetwork();
-    return;
+    if (typeof navigate === 'function') navigate('network');
+    if (typeof renderNetwork === 'function') renderNetwork();
   }
 });
 
