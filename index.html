@@ -7928,6 +7928,11 @@ async function restoreLocalVault() {
           return false;
         }
         let cleanContacts = data.contacts;
+        cleanContacts.forEach(c => {
+          if (!c.crmStatus || c.crmStatus === 'Ninguno') {
+            c.discardedFromPurge = false;
+          }
+        });
         S.contacts = cleanContacts;
 
         S.positions = data.positions || [];
