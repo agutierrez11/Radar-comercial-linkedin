@@ -3787,14 +3787,29 @@ function navigate(sec) {
     });
   }
 }
-window.navigate = navigate;
+function getActiveContacts() {
+  return (S.contacts || []).filter(c => {
+    if (c.whitelisted) return true;
+    if (c.discardedFromPurge || c.crmStatus === 'Descartado') return false;
+    try {
+      const raw = localStorage.getItem('radar_comercial_crm');
+      if (raw) {
+        const db = JSON.parse(raw);
+        const key = typeof getContactCrmKey === 'function' ? getContactCrmKey(c) : c.id;
+        if (db[key] && (db[key].status === 'Descartado' || db[key].discardedFromPurge)) return false;
+      }
+    } catch(e) {}
+    return true;
+  });
+}
+window.getActiveContacts = getActiveContacts;
 
 // ═══════════════════════════════════════════════════════════════════════
 // HEADER KPIs
 // ═══════════════════════════════════════════════════════════════════════
 function renderHeader() {
   const setEl = (id, fn) => { const el = document.getElementById(id); if (el) fn(el); };
-  const activeContacts = (S.contacts || []).filter(c => c.crmStatus !== 'Descartado' && !c.discardedFromPurge);
+  const activeContacts = getActiveContacts();
   const total = activeContacts.length;
   const clevel = activeContacts.filter(c => c.hierarchy === 'C-Level').length;
   const countries = new Set(activeContacts.filter(c => c.country !== 'Desconocido').map(c => c.country)).size;
@@ -4044,7 +4059,7 @@ function updateKpiHighlights() {
 }
 
 function renderNetwork() {
-  const activeContacts = (S.contacts || []).filter(c => c.crmStatus !== 'Descartado' && !c.discardedFromPurge);
+  const activeContacts = typeof getActiveContacts === 'function' ? getActiveContacts() : (S.contacts || []).filter(c => c.crmStatus !== 'Descartado' && !c.discardedFromPurge);
   const total = activeContacts.length;
 
 
