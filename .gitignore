@@ -3,3 +3,8 @@
 *.pyc
 __pycache__/
 conversation_transcript.md
+.agents/skills/**/references/
+.agents/skills/**/evals/
+.agents/skills/**/test/
+.agents/skills/**/*.test.ts
+
