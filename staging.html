@@ -8310,12 +8310,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (activeUserPill) activeUserPill.textContent = window.currentAuthUser.name;
     if (typeof closeLoginModal === 'function') closeLoginModal();
     
-    if (window.MASTER_CONNECTIONS_DATA && window.MASTER_CONNECTIONS_DATA.length > 0) {
+    if (window.MASTER_CONNECTIONS_DATA && window.MASTER_CONNECTIONS_DATA.length >= 3030) {
       S.contacts = window.MASTER_CONNECTIONS_DATA;
       if (!S.loadedParts) S.loadedParts = {};
       S.loadedParts.connections = true;
     } else if (typeof restoreLocalVault === 'function') {
-      await restoreLocalVault();
+      const restored = await restoreLocalVault();
+      if (!restored || !S.contacts || S.contacts.length < 3030) {
+        if (typeof loadDemoData === 'function') {
+          await loadDemoData(true);
+        }
+      }
     }
 
     if (S.contacts && S.contacts.length > 0) {
