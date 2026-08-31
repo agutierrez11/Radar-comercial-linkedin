@@ -8248,11 +8248,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       await restoreLocalVault();
     }
     updateStatus();
-    if (typeof renderDashboard === 'function') renderDashboard();
+    if (typeof navigate === 'function') navigate('network');
+    if (typeof renderNetwork === 'function') renderNetwork();
     return;
   }
 });
 
+function renderDashboard() {
+  if (typeof navigate === 'function') navigate('network');
+  if (typeof renderNetwork === 'function') renderNetwork();
+}
+window.renderDashboard = renderDashboard;
 
 // ═══════════════════════════════════════════════════════════════════════
 // HELPER SAFEGUARDS FOR BOOTSTRAP & STATUS
@@ -8264,8 +8270,8 @@ function updateStatus() {
   if (typeof updateUploadStatus === 'function') {
     try { updateUploadStatus(); } catch(e) {}
   }
-  if (typeof renderDashboard === 'function') {
-    try { renderDashboard(); } catch(e) {}
+  if (typeof renderNetwork === 'function') {
+    try { renderNetwork(); } catch(e) {}
   }
 }
 
