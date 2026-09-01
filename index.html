@@ -1515,10 +1515,11 @@ document.addEventListener('DOMContentLoaded', function() {
         <!-- rendered by JS -->
       </div>
 
-      <div class="filter-bar">
+      <div class="filter-bar" style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
         <input class="filter-input" id="purge-custom" type="text" placeholder="+ Añadir keyword custom (cargo/empresa)..." style="flex:1">
         <button class="mini-btn" onclick="addCustomCriterion()">Añadir</button>
         <button class="mini-btn" onclick="selectAllPurge()">Sel. todos</button>
+        <button class="mini-btn primary" onclick="executeBulkPurge()" style="background:var(--red); border-color:var(--red); font-weight:700; color:white; padding:4px 12px;" title="Descartar y purgar todos los contactos seleccionados de tu red activa">🔥 Purgar Seleccionados</button>
       </div>
 
       <div class="table-wrap">
@@ -3373,7 +3374,7 @@ async function loadDemoData(autoNavigate = true) {
   try {
     let data = null;
     try {
-      const res = await fetch("enriched_connections.json");
+      const res = await fetch("enriched_connections.json?t=" + Date.now(), { cache: "no-store" });
       if (res.ok) data = await res.json();
     } catch(err) {
       console.warn("[LoadDemo] Fetch fallback to master_data.js:", err);
@@ -3446,6 +3447,23 @@ async function loadDemoData(autoNavigate = true) {
         is_friendly: !!item.is_friendly
       };
     });
+
+    try {
+      const rawCrm = localStorage.getItem('radar_comercial_crm');
+      if (rawCrm) {
+        const crmDb = JSON.parse(rawCrm);
+        (S.contacts || []).forEach(c => {
+          const key = typeof getContactCrmKey === 'function' ? getContactCrmKey(c) : c.id;
+          const entry = crmDb[key] || crmDb[c.id] || crmDb[String(c.id)] || (c.url ? crmDb[c.url] : null);
+          if (entry) {
+            if (entry.status) c.crmStatus = entry.status;
+            if (entry.status === 'Descartado' || entry.discardedFromPurge) c.discardedFromPurge = true;
+            if (entry.whitelisted) c.whitelisted = true;
+            if (entry.notes) c.crmNotes = entry.notes;
+          }
+        });
+      }
+    } catch(e) {}
 
     (S.contacts || []).forEach(c => { c.score = scoreContact(c); });
     icpContacts = S.contacts.filter(c => c.score >= 40).sort((a,b) => b.score - a.score);
@@ -3787,16 +3805,17 @@ function navigate(sec) {
 }
 function getActiveContacts() {
   return (S.contacts || []).filter(c => {
-    if (c.whitelisted) return true;
     if (c.discardedFromPurge || c.crmStatus === 'Descartado') return false;
     try {
       const raw = localStorage.getItem('radar_comercial_crm');
       if (raw) {
         const db = JSON.parse(raw);
         const key = typeof getContactCrmKey === 'function' ? getContactCrmKey(c) : c.id;
-        if (db[key] && (db[key].status === 'Descartado' || db[key].discardedFromPurge)) return false;
+        const entry = db[key] || db[c.id] || db[String(c.id)] || (c.url ? db[c.url] : null);
+        if (entry && (entry.status === 'Descartado' || entry.discardedFromPurge)) return false;
       }
     } catch(e) {}
+    if (c.whitelisted) return true;
     return true;
   });
 }
@@ -4860,6 +4879,37 @@ function toggleAllPurgeChecks(val) {
   (candidates || []).forEach(c => val ? S.purgeChecked.add(c.id) : S.purgeChecked.delete(c.id));
   document.querySelectorAll('#purge-tbody input[type=checkbox]').forEach(cb => cb.checked = val);
 }
+
+function executeBulkPurge() {
+  const candidates = S.contacts.filter(c => isPurgeCandidate(c));
+  const toPurge = S.purgeChecked.size > 0
+    ? S.contacts.filter(c => S.purgeChecked.has(c.id))
+    : candidates;
+
+  if (!toPurge || toPurge.length === 0) {
+    if (typeof showToast === 'function') showToast('⚠️ No hay contactos seleccionados ni candidatos activos para purgar.', '⚠️');
+    return;
+  }
+
+  let count = 0;
+  toPurge.forEach(c => {
+    c.crmStatus = 'Descartado';
+    c.discardedFromPurge = true;
+    saveContactCrm(c.id, 'Descartado', c.crmNotes || '');
+    count++;
+  });
+
+  S.purgeChecked.clear();
+  if (typeof showToast === 'function') showToast(`🔥 Se han purgado y descartado ${count} contactos con éxito de tu Red Activa.`, '🗑️');
+
+  saveLocalVault();
+  renderPurgeCriteria();
+  renderPurge();
+  applyNetworkFilters();
+  if (typeof renderICP === 'function') renderICP();
+  renderHeader();
+}
+window.executeBulkPurge = executeBulkPurge;
 
 // ═══════════════════════════════════════════════════════════════════════
 // MESSAGES
@@ -6367,16 +6417,24 @@ function saveContactCrm(contactId, status, notes, customData, isWhitelisted) {
 
   if (status === 'Ninguno' && !c.crmNotes && !c.customName && !c.customPosition && !c.customCompany && !c.whitelisted) {
     delete db[key];
+    delete db[c.id];
+    delete db[String(c.id)];
+    if (c.url) delete db[c.url];
   } else {
-    db[key] = {
+    const entryObj = {
       status: status,
       notes: c.crmNotes,
       date: c.crmDate,
       whitelisted: !!c.whitelisted,
+      discardedFromPurge: (status === 'Descartado' || !!c.discardedFromPurge),
       customName: c.customName,
       customPosition: c.customPosition,
       customCompany: c.customCompany
     };
+    db[key] = entryObj;
+    db[c.id] = entryObj;
+    db[String(c.id)] = entryObj;
+    if (c.url) db[c.url] = entryObj;
   }
 
   localStorage.setItem('radar_comercial_crm', JSON.stringify(db));
@@ -7918,18 +7976,10 @@ async function restoreLocalVault() {
       });
 
       if (data && data.contacts && data.contacts.length > 0) {
-        if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4) || (userId === 'antonio' && data.contacts.length < 3030)) {
-          console.warn('[AutoVault] Ignorada caché incompleta (<3030 contactos). Forzando restauración completa de Bóveda Master Antonio.');
-          try { localStorage.removeItem(vaultKey); } catch(e){}
-          return false;
+        if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4)) {
+          if (userId === 'antonio') return false; // Ronan sandbox check only
         }
-        let cleanContacts = data.contacts;
-        cleanContacts.forEach(c => {
-          c.discardedFromPurge = false;
-          if (c.crmStatus === 'Descartado') c.crmStatus = 'Ninguno';
-        });
-        S.contacts = cleanContacts;
-        try { localStorage.removeItem('radar_comercial_crm'); } catch(e){}
+        S.contacts = data.contacts;
 
         S.positions = data.positions || [];
         S.messages = data.messages || [];
@@ -7954,13 +8004,10 @@ async function restoreLocalVault() {
     if (savedLocal) {
       const data = JSON.parse(savedLocal);
       if (data && data.contacts && data.contacts.length > 0) {
-        if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4) || (userId === 'antonio' && data.contacts.length < 3030)) {
-          console.warn('[AutoVault] Ignorada caché incompleta de localStorage (<3030 contactos).');
-          try { localStorage.removeItem(vaultKey); } catch(e){}
-          return false;
+        if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4)) {
+          if (userId === 'antonio') return false;
         }
-        let cleanContacts = data.contacts;
-        S.contacts = cleanContacts;
+        S.contacts = data.contacts;
         S.positions = data.positions || [];
         S.messages = data.messages || [];
         if (data.crmState) S.crmState = data.crmState;
@@ -8239,14 +8286,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (activeUserPill) activeUserPill.textContent = window.currentAuthUser.name;
     if (typeof closeLoginModal === 'function') closeLoginModal();
 
-    if (typeof loadDemoData === 'function') {
-      await loadDemoData(true);
-    } else if (window.MASTER_CONNECTIONS_DATA) {
-      S.contacts = window.MASTER_CONNECTIONS_DATA;
+    let restored = false;
+    if (typeof restoreLocalVault === 'function') {
+      try { restored = await restoreLocalVault(); } catch(e) {}
     }
 
-    if (typeof restoreLocalVault === 'function') {
-      try { await restoreLocalVault(); } catch(e) {}
+    if (!restored) {
+      if (typeof loadDemoData === 'function') {
+        await loadDemoData(true);
+      } else if (window.MASTER_CONNECTIONS_DATA) {
+        S.contacts = window.MASTER_CONNECTIONS_DATA;
+      }
     }
 
     updateStatus();
