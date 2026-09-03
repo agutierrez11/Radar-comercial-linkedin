@@ -6438,6 +6438,16 @@ function saveContactCrm(contactId, status, notes, customData, isWhitelisted) {
   }
 
   localStorage.setItem('radar_comercial_crm', JSON.stringify(db));
+  if (status === 'Descartado') {
+    c.crmStatus = 'Descartado';
+    c.discardedFromPurge = true;
+    if (!S.crmState) S.crmState = { discarded: [], whitelisted: [], deals: [] };
+    if (!Array.isArray(S.crmState.discarded)) S.crmState.discarded = [];
+    if (!S.crmState.discarded.includes(c.id)) S.crmState.discarded.push(c.id);
+  }
+  if (typeof saveLocalVault === 'function') {
+    try { saveLocalVault(); } catch(e) {}
+  }
 
   // Re-evaluar scores
   c.score = scoreContact(c);
@@ -7957,6 +7967,37 @@ window.addEventListener('online', () => {
   if (typeof showToast === 'function') showToast('🌐 Conexión restablecida. Cambios sincronizados automáticamente con la nube.', '🟢');
 });
 
+
+function applyCrmStateToContacts() {
+  if (!S.contacts || !S.contacts.length) return;
+  const savedCrmRaw = localStorage.getItem('radar_comercial_crm');
+  let savedCrmDb = {};
+  if (savedCrmRaw) {
+    try { savedCrmDb = JSON.parse(savedCrmRaw); } catch(e){}
+  }
+  S.contacts.forEach(c => {
+    const key = typeof getContactCrmKey === 'function' ? getContactCrmKey(c) : `${c.name}_${c.company}`;
+    const entry = savedCrmDb[key] || savedCrmDb[c.id] || savedCrmDb[String(c.id)] || (c.url && savedCrmDb[c.url]);
+    if (entry) {
+      if (entry.status) c.crmStatus = entry.status;
+      if (entry.whitelisted !== undefined) c.whitelisted = entry.whitelisted;
+      if (entry.discardedFromPurge !== undefined) c.discardedFromPurge = entry.discardedFromPurge;
+      if (entry.status === 'Descartado') c.discardedFromPurge = true;
+      if (entry.notes) c.crmNotes = entry.notes;
+      if (entry.customName) { c.customName = entry.customName; c.name = entry.customName; }
+      if (entry.customPosition) { c.customPosition = entry.customPosition; c.position = entry.customPosition; }
+      if (entry.customCompany) { c.customCompany = entry.customCompany; c.company = entry.customCompany; }
+    }
+    if (S.crmState && Array.isArray(S.crmState.discarded)) {
+      if (S.crmState.discarded.includes(c.id) || S.crmState.discarded.includes(String(c.id))) {
+        c.crmStatus = 'Descartado';
+        c.discardedFromPurge = true;
+      }
+    }
+  });
+}
+window.applyCrmStateToContacts = applyCrmStateToContacts;
+
 async function restoreLocalVault() {
   if (!window.currentAuthUser) return false;
   try {
@@ -8008,6 +8049,7 @@ async function restoreLocalVault() {
           if (userId === 'antonio') return false;
         }
         S.contacts = data.contacts;
+        applyCrmStateToContacts();
         S.positions = data.positions || [];
         S.messages = data.messages || [];
         if (data.crmState) S.crmState = data.crmState;
