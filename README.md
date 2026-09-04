@@ -40,3 +40,15 @@ Este repositorio contiene las especificaciones, código base y desarrollo del MV
   - Desarrollo del plugin de HubSpot y extensión de Chrome básica para alertar sobre cuentas objetivo.
 - [ ] **Fase 3: Cifrado Enterprise & Salesforce - Mes 5 al 8 (16 semanas):**
   - Cifrado Zero-Knowledge e ingreso al AppExchange de Salesforce (aprobación de Security Review).
+
+---
+
+## 🔮 Next Steps & Arquitectura Semántica Futura
+
+### 🧠 Búsqueda Semántica Vectorial con pgvector & Embeddings
+* **Objetivo:** Permitir al comercial buscar por dolor o intención de negocio (ej. *"Decisores que compren quioscos de autoservicio o adquirencia en estaciones de servicio"*) en lugar de depender únicamente de búsquedas por regex rígido.
+* **Benchmark de Selección de Modelos (RTEB):**
+  * Utilizar el **[RTEB (Retrieval Embedding Benchmark) en Hugging Face](https://huggingface.co/spaces/embedding-benchmark/RTEB)** como brújula técnica oficial para evaluar el estado del arte en modelos de embedding para recuperación de texto.
+  * Comparar precisión y coste en tareas de retrieval denso: evaluar modelos Open Source ultraligeros y multilingües (`bge-m3`, `snowflake-arctic-embed`, `jina-embeddings-v3`) frente a APIs propietarias (`text-embedding-3-small` de OpenAI).
+* **Infraestructura:** Integración de la extensión `pgvector` en Supabase con índices vectoriales (HNSW / IVFFlat) particionados por `vault_id`.
+

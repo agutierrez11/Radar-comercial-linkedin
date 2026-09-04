@@ -797,9 +797,10 @@ body.not-authenticated header {
   };
 })();
 </script>
-  <!-- Supabase SDK (único) -->
+  <!-- Supabase SDK (Único) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script src="master_data.js"></script>
+  <script src="harvest_vault_data.js"></script>
   <script src="radar_core.js"></script>
 
 
@@ -3188,13 +3189,58 @@ function buildContacts(rows) {
       existing.disconnectedFromLinkedin = false;
       mergedContacts.push(existing);
     } else {
-      // NUEVO CONTACTO DE LINKEDIN
+      // Chequear si este contacto tiene enriquecimiento en Harvest
+      let hMatch = null;
+      if (window.HARVEST_VERIFIED_DATA && Array.isArray(window.HARVEST_VERIFIED_DATA)) {
+        const uClean = (url || '').trim().toLowerCase().replace(/\/$/, '');
+        const nClean = typeof norm === 'function' ? norm(name) : name.toLowerCase();
+        const coClean = (connectedOn || '').trim().toLowerCase();
+        hMatch = window.HARVEST_VERIFIED_DATA.find(h => {
+          const hu = (h.url || '').trim().toLowerCase().replace(/\/$/, '');
+          if (hu && uClean && hu === uClean) return true;
+          const hn = typeof norm === 'function' ? norm(h.name || `${h.first_name || ''} ${h.last_name || ''}`) : (h.name || '').toLowerCase();
+          const hco = (h.connected_on || '').trim().toLowerCase();
+          return hn && coClean && hn === nClean && hco === coClean;
+        });
+      }
+
+      let finalCompany = company;
+      let finalPosition = position;
+      let finalCountry = coords.country;
+      let finalCity = coords.city;
+      let finalLat = coords.lat;
+      let finalLng = coords.lng;
+      let finalJobStatus = jobStatus;
+      let finalAuditStatus = 'unverified';
+      let isHarvestEnriched = false;
+
+      if (hMatch) {
+        isHarvestEnriched = true;
+        finalAuditStatus = 'verified';
+        finalCountry = hMatch.country || coords.country;
+        finalCity = hMatch.city || coords.city;
+        finalLat = hMatch.lat || coords.lat;
+        finalLng = hMatch.lng || coords.lng;
+
+        const hComp = (hMatch.company || '').trim().toLowerCase();
+        const zipComp = (company || '').trim().toLowerCase();
+        if (zipComp && hComp && zipComp !== hComp) {
+          finalJobStatus = "🔄 Movimiento Laboral 2026";
+        } else {
+          finalCompany = hMatch.company || company;
+          finalPosition = hMatch.position || position;
+          finalJobStatus = "🟢 Vigente 2026 (Auditado)";
+        }
+      }
+
+      // NUEVO CONTACTO DE LINKEDIN CON RESOLUCIÓN DETERMINISTA
       mergedContacts.push({
         id: mergedContacts.length,
-        name, company, position, originalName: name, originalCompany: company, originalPosition: position,
+        name, company: finalCompany, position: finalPosition, originalName: name, originalCompany: company, originalPosition: position,
         email, url, connectedOn, connectedYearsAgo: yearsAgo,
-        country: coords.country, city: coords.city, lat: coords.lat, lng: coords.lng,
-        jobStatus, hierarchy, sector, score: 0
+        country: finalCountry, city: finalCity, lat: finalLat, lng: finalLng,
+        jobStatus: finalJobStatus, audit_status: finalAuditStatus, harvest_enriched: isHarvestEnriched,
+        hierarchy, sector, score: isHarvestEnriched ? 75 : 0
       });
     }
   });
@@ -8380,24 +8426,44 @@ async function syncToSupabaseVault(userId, contactsList) {
   
   try {
     const payload = contactsList.map(c => {
-      const cId = String(c.id || c.url || c.name);
+      let cleanSlug = '';
+      if (c.url && c.url.includes('linkedin.com/in/')) {
+        cleanSlug = c.url.split('linkedin.com/in/')[1].split('?')[0].split('/')[0].replace(/[^a-zA-Z0-9_-]/g, '_');
+      }
+      if (!cleanSlug) {
+        const n = (c.name || `${c.first_name || ''} ${c.last_name || ''}`).trim().toLowerCase().replace(/[^a-zA-Z0-9_-]/g, '_');
+        const co = (c.connected_on || c.connectedOn || '').trim().toLowerCase().replace(/[^a-zA-Z0-9_-]/g, '_');
+        cleanSlug = `${n}_${co}`;
+      }
+      const cUniqueId = `${vId}_${cleanSlug || ('c_' + (c.id || Math.random()))}`;
       return {
-        id: `${vId}_c_${cId}`,
+        id: cUniqueId,
         vault_id: vId,
         name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim() || 'Contacto',
         first_name: c.first_name || '',
         last_name: c.last_name || '',
         company: c.company || '',
         position: c.position || '',
-        country: c.country || '',
-        city: c.city || '',
+        country: c.country || 'Desconocido',
+        city: c.city || 'Desconocido',
         url: c.url || '',
         email: c.email || '',
         score: c.score || 50,
         crm_status: c.crmStatus || 'Ninguno',
-        audit_status: c.audit_status || 'verified',
+        audit_status: c.audit_status || 'unverified',
         job_status: c.job_status || 'active',
-        metadata: { city: c.city, country: c.country, dms_sent: c.dms_sent, dms_replied: c.dms_replied }
+        metadata: {
+          city: c.city,
+          country: c.country,
+          lat: c.lat,
+          lng: c.lng,
+          harvest_enriched: !!c.harvest_enriched,
+          connected_on: c.connected_on || c.connectedOn || '',
+          hierarchy: c.hierarchy || '',
+          sector: c.sector || '',
+          dms_sent: c.dms_sent || 0,
+          dms_replied: c.dms_replied || 0
+        }
       };
     });
 
