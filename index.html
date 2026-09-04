@@ -799,14 +799,38 @@ body.not-authenticated header {
 </script>
   <!-- Supabase SDK (Único) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
-  <script src="master_data.js"></script>
   <script src="harvest_vault_data.js"></script>
   <script src="radar_core.js"></script>
 
+  <script>
+  // PURGA AUTOMÁTICA OBLIGATORIA DE BÓVEDA OBSOLETA (3030 contactos residuales)
+  (function() {
+    const PURGE_FLAG = 'rc_vault_reset_sept_2026_clean_v3';
+    if (!localStorage.getItem(PURGE_FLAG)) {
+      console.warn('[AutoPurge] Eliminando caché de 3030 contactos obsoletos para permitir subida de nuevo ZIP...');
+      localStorage.removeItem('vault_antonio');
+      localStorage.removeItem('radar_vault_antonio');
+      localStorage.removeItem('radar_vault_master');
+      localStorage.removeItem('radar_comercial_crm');
+      try {
+        const req = indexedDB.open('RadarComercialDB', 1);
+        req.onsuccess = function(e) {
+          const db = e.target.result;
+          if (db.objectStoreNames.contains('vaults')) {
+            const tx = db.transaction('vaults', 'readwrite');
+            tx.objectStore('vaults').delete('vault_antonio');
+            tx.objectStore('vaults').delete('radar_vault_antonio');
+            tx.objectStore('vaults').delete('radar_vault_master');
+          }
+        };
+      } catch(e){}
+      localStorage.setItem(PURGE_FLAG, 'purged');
+    }
+  })();
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-
 </head>
 <body class="light not-authenticated">
 <script>
@@ -3406,6 +3430,17 @@ async function loadDemoData(autoNavigate = true) {
       if (res.ok) data = await res.json();
     } catch(err) {
       console.warn("[LoadDemo] Fetch fallback to master_data.js:", err);
+    }
+    if (!data && !window.MASTER_CONNECTIONS_DATA) {
+      try {
+        await new Promise((resolve) => {
+          const sc = document.createElement('script');
+          sc.src = 'master_data.js';
+          sc.onload = resolve;
+          sc.onerror = resolve;
+          document.head.appendChild(sc);
+        });
+      } catch(e) {}
     }
     if (!data && (window.MASTER_CONNECTIONS_DATA || window.__MASTER_DATA__)) {
       data = window.MASTER_CONNECTIONS_DATA || window.__MASTER_DATA__;
