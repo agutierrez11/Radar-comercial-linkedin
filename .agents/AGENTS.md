@@ -96,5 +96,19 @@ Este proyecto adopta los estándares de las mejores librerías de diseño para a
 3. **CERO MEMORIA DE TEFLÓN (RESPETO AL PROGRESO DEL USUARIO):**
    - Ningún agente puede resetear la bóveda de Antonio a los datos crudos iniciales si el usuario ya ha realizado depuraciones o guardado cambios locales.
 
+---
+
+## 🛑 REGLA DE AISLAMIENTO ESTRICTO DE WORKSPACE (ZERO CROSS-TALK)
+
+1. **PROHIBICIÓN DE CONTAMINACIÓN CRUZADA DE PROYECTOS:**
+   - Este workspace es **ÚNICA Y EXCLUSIVAMENTE RADAR COMERCIAL**.
+   - Otros proyectos del usuario (como `paymind-growth-engine`, Toku, CVs, AMPES, etc.) pertenecen a workspaces completamente separados y **JAMÁS deben mezclarse, mencionarse ni cruzarse** en este entorno.
+2. **RESOLUCIÓN DE CONTEXTO ESTRICTAMENTE LOCAL:**
+   - Ante preguntas como *"en qué nos quedamos"* o *"cuál es el estatus"*, el agente DEBE consultar **única y exclusivamente** los recursos dentro de la carpeta actual:
+     - `git status`, `git log -n 5` y diffs locales de `radar-comercial`.
+     - Archivos de configuración y bases de datos locales (`index.html`, `audit_harvest_data.py`, `los_404_contactos_harvest_reales.json`, etc.).
+   - Queda **estrictamente prohibido** leer transcripciones globales de otras conversaciones en `brain/` o escanear directorios hermanos en `scratch/` que correspondan a otros proyectos.
+
+
 
 
