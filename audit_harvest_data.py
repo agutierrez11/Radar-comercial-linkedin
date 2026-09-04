@@ -1,63 +1,72 @@
-import os
+import urllib.request
 import json
+import os
 import sys
 from dotenv import load_dotenv
-from supabase import create_client
 
-if hasattr(sys.stdout, 'reconfigure'):
-    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+if sys.stdout.encoding.lower() != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
 
 load_dotenv()
-sb = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_SERVICE_ROLE_KEY"))
+SUPABASE_URL = "https://hsrseeqhdtogpdqbveay.supabase.co"
+SERVICE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "").strip('"')
 
-# Traer perfiles procesados por HarvestAPI
+headers = {
+    "apikey": SERVICE_KEY,
+    "Authorization": f"Bearer {SERVICE_KEY}",
+    "Content-Type": "application/json"
+}
+
+print("=== AUDITANDO Y EXRAYENDO TODOS LOS PERFILES ENRIQUECIDOS EN SUPABASE ===")
+
+all_contacts = []
 offset = 0
-PAGE = 500
-harvest_rows = []
+limit = 1000
 
 while True:
-    r = sb.table("connections").select("*").range(offset, offset + PAGE - 1).execute()
-    batch = r.data or []
-    if not batch:
+    url = f"{SUPABASE_URL}/rest/v1/contacts?select=*&vault_id=eq.vault_antonio&limit={limit}&offset={offset}"
+    req = urllib.request.Request(url, headers=headers, method='GET')
+    try:
+        with urllib.request.urlopen(req) as resp:
+            chunk = json.loads(resp.read().decode('utf-8'))
+            if not chunk:
+                break
+            all_contacts.extend(chunk)
+            print(f"Descargados {len(chunk)} contactos (Total acumulado: {len(all_contacts)})...")
+            if len(chunk) < limit:
+                break
+            offset += limit
+    except Exception as e:
+        print(f"Error en chunk offset {offset}: {e}")
         break
-    for row in batch:
-        meta = row.get("metadata") or {}
-        if meta.get("harvest_enriched"):
-            harvest_rows.append(row)
-    if len(batch) < PAGE:
-        break
-    offset += PAGE
 
-print("=" * 60)
-print(f"📊 AUDITORIA DE HARVESTAPI (TOTAL ENRIQUECIDOS HOY: {len(harvest_rows)})")
-print("=" * 60)
+print(f"\nTotal contactos obtenidos para vault_antonio: {len(all_contacts)}")
 
-with_country = [r for r in harvest_rows if (r.get("metadata") or {}).get("country")]
-with_company = [r for r in harvest_rows if (r.get("metadata") or {}).get("harvest_company")]
-with_city = [r for r in harvest_rows if (r.get("metadata") or {}).get("city")]
+harvest_list = []
+for c in all_contacts:
+    meta = c.get('metadata') or {}
+    if meta.get('harvest_enriched') or 'harvest' in str(meta).lower() or c.get('audit_status') == 'verified' or c.get('job_status') == 'Vigente 2026':
+        harvest_list.append(c)
 
-print(f"✅ Con país exacto:    {len(with_country)} / {len(harvest_rows)}")
-print(f"✅ Con ciudad exacta:  {len(with_city)} / {len(harvest_rows)}")
-print(f"✅ Con empresa actual: {len(with_company)} / {len(harvest_rows)}")
-print("-" * 60)
-print("Muestra aleatoria de 15 perfiles procesados hoy con HarvestAPI:")
-print("-" * 60)
+print(f"Total perfiles con enriquecimiento activo (Harvest / Verified / Vigente 2026): {len(harvest_list)}")
 
-import random
-sample = random.sample(harvest_rows, min(15, len(harvest_rows))) if harvest_rows else []
+# Guardar backup completo de Antonio
+with open("antonio_supabase_all_contacts_backup.json", "w", encoding="utf-8") as f_all:
+    json.dump(all_contacts, f_all, ensure_ascii=False, indent=2)
 
-for i, r in enumerate(sample, 1):
-    meta = r.get("metadata") or {}
-    fn = r.get("first_name", "")
-    ln = r.get("last_name", "")
-    country = meta.get("country", "N/D")
-    city = meta.get("city", "N/D")
-    company = meta.get("harvest_company", "N/D")
-    position = meta.get("harvest_position", "N/D")
-    url = r.get("linkedin_url", "")
-    print(f"{i:2d}. {fn} {ln}")
-    print(f"    📍 {city}, {country}")
-    print(f"    💼 {position} @ {company}")
-    print(f"    🔗 {url}\n")
+# Guardar archivo exclusivo de los enriquecidos
+with open("antonio_harvest_enriched_backup.json", "w", encoding="utf-8") as f_h:
+    json.dump(harvest_list, f_h, ensure_ascii=False, indent=2)
 
-print("=" * 60)
+print("\nARCHIVOS DE SEGURIDAD GENERADOS:")
+print(f" 1. antonio_supabase_all_contacts_backup.json ({len(all_contacts)} contactos totales de tu bóveda en Supabase)")
+print(f" 2. antonio_harvest_enriched_backup.json ({len(harvest_list)} perfiles enriquecidos)")
+
+if harvest_list:
+    h0 = harvest_list[0]
+    print(f"\nEjemplo de perfil enriquecido:")
+    print(f" - Nombre: {h0.get('name')}")
+    print(f" - Empresa: {h0.get('company')}")
+    print(f" - Puesto: {h0.get('position')}")
+    print(f" - Estatus: {h0.get('job_status')} | Audit: {h0.get('audit_status')}")
+    print(f" - Metadata: {h0.get('metadata')}")
