@@ -7926,7 +7926,7 @@ function getVaultKey() {
 async function saveLocalVault() {
   if (!S.contacts || S.contacts.length === 0) return;
   const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
-  if (userId === 'ronan' || window.isRonanAbMode || S.ownerName === 'Ronan' || (S.contacts.length === 500 && S.messages && S.messages.length === 4)) return; // Do not auto-overwrite with Ronan sandbox
+  if (window.isRonanAbMode || (S.contacts.length === 500 && S.messages && S.messages.length === 4)) return; // Do not auto-overwrite with synthetic sandbox demo
 
   try {
     const db = await openVaultDB();
@@ -8065,7 +8065,6 @@ async function restoreLocalVault() {
   if (!window.currentAuthUser) return false;
   try {
     const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
-    if (userId === 'ronan') return false; // Ronan always uses sandbox demo
     const vaultKey = getVaultKey();
 
     // 1. PRIORIDAD ABSOLUTA: Supabase Cloud First
@@ -9218,26 +9217,42 @@ async function submitCustomLogin() {
 
     refreshFullVaultUI();
   } 
-  // --- RONAN SANDBOX ---
+  // --- RONAN ISOLATED VAULT ---
   else if (userVal === 'ronan' || userVal === 'ronan@radar.com') {
     if (pwdVal !== 'ronan123' && pwdVal !== '12345' && pwdVal !== 'ronan') {
       if (alertDiv) {
-        alertDiv.textContent = '❌ Contraseña incorrecta para Sandbox Ronan.';
+        alertDiv.textContent = '❌ Contraseña incorrecta para Bóveda Ronan.';
         alertDiv.style.display = 'block';
       }
       return;
     }
 
-    window.currentAuthUser = { id: 'ronan', name: '🧪 Sandbox Ronan', isMaster: false, isSandbox: true };
+    window.currentAuthUser = { id: 'ronan', name: '🤝 Ronan (Embajador Tech)', isMaster: false };
+    try { localStorage.setItem('rc_active_session_user', JSON.stringify(window.currentAuthUser)); } catch(e){}
     S.ownerName = 'Ronan';
-    S.positions = [];
-    S.messages = []; // Clear Antonio's messages!
+    window.isRonanAbMode = false;
+    window.ronanAbMode = null;
 
     closeLoginModal();
     const activeUserPill = document.getElementById('active-user-name');
-    if (activeUserPill) activeUserPill.textContent = '🧪 Sandbox Ronan';
+    if (activeUserPill) activeUserPill.textContent = '🤝 Ronan (Embajador Tech)';
 
-    if (typeof switchRonanAbMode === 'function') switchRonanAbMode('B');
+    const restored = await restoreLocalVault();
+    if (!restored || !S.contacts || S.contacts.length === 0) {
+      S.contacts = [];
+      S.positions = [];
+      S.messages = [];
+      S.crmState = { discarded: [], whitelisted: [], deals: [] };
+      S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
+      if (typeof navigate === 'function') navigate('upload');
+      if (typeof showToast === 'function') showToast('📂 Bóveda de Ronan lista (0 contactos). Arrastra tu ZIP de LinkedIn para comenzar.', '🤝');
+    } else {
+      S.loadedParts.connections = true;
+      if (typeof loadCrmState === 'function') loadCrmState();
+      if (typeof showToast === 'function') showToast(`🤝 Bóveda de Ronan restaurada (${S.contacts.length.toLocaleString()} contactos).`, '🔑');
+    }
+
+    refreshFullVaultUI();
   } 
   // --- OTHER INDIVIDUAL USERS ---
   else {
