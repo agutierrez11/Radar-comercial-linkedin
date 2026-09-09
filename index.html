@@ -1367,9 +1367,9 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
           <div style="display:flex; align-items:center; gap:8px;">
             <select id="gis-tile-select" class="filter-input" style="font-size:10px; padding:3px 8px; width:auto; background:var(--bg); border:1px solid var(--border); color:var(--text); cursor:pointer;" onchange="switchGisTileLayer(this.value)">
-              <option value="dark">🌙 Cyberpunk Oscuro</option>
+              <option value="dark">🌙 Cyberpunk Oscuro (Esri)</option>
               <option value="satellite">🛰️ Satelital Esri (HD)</option>
-              <option value="voyager">🗺️ Carto Voyager</option>
+              <option value="voyager">🗺️ Minimalista Claro (Esri)</option>
               <option value="osm">🌐 OpenStreetMap</option>
             </select>
             <div style="font-size:10px; color:var(--muted2); font-family:'JetBrains Mono', monospace;">
@@ -3576,22 +3576,24 @@ gisLayerGroup = null;
 let currentTileLayer = null;
 const TILE_SERVERS = {
   dark: {
-    url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
-    attr: '&copy; CARTO &copy; OpenStreetMap',
-    subdomains: 'abcd'
+    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    attr: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+    maxZoom: 16
   },
   satellite: {
     url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    attr: 'Tiles &copy; Esri'
+    attr: 'Tiles &copy; Esri',
+    maxZoom: 18
   },
   voyager: {
-    url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
-    attr: '&copy; CARTO &copy; OpenStreetMap',
-    subdomains: 'abcd'
+    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    attr: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+    maxZoom: 16
   },
   osm: {
     url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-    attr: '&copy; OpenStreetMap contributors'
+    attr: '&copy; OpenStreetMap contributors',
+    maxZoom: 18
   }
 };
 
@@ -3611,7 +3613,7 @@ function switchGisTileLayer(mode) {
   const opts = {
     attribution: config.attr,
     noWrap: true,
-    maxZoom: 18
+    maxZoom: config.maxZoom || 16
   };
   if (config.subdomains) {
     opts.subdomains = config.subdomains;
@@ -3630,7 +3632,7 @@ function switchGisTileLayer(mode) {
   }, 100);
 
   if (typeof showToast === 'function') {
-    const labelMap = { dark: 'Cyberpunk Oscuro', satellite: 'Satelital HD (Esri)', voyager: 'Carto Voyager', osm: 'OpenStreetMap' };
+    const labelMap = { dark: 'Cyberpunk Oscuro (Esri)', satellite: 'Satelital HD (Esri)', voyager: 'Minimalista Claro (Esri)', osm: 'OpenStreetMap' };
     showToast(`Mapa cambiado: ${labelMap[mode] || mode}`, '🗺️');
   }
 }
@@ -4392,7 +4394,7 @@ function renderGISMap(identifiedCountries, allContacts) {
 
   if (typeof L === 'undefined') return;
 
-  const tileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+  const tileUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}';
 
   if (!gisMapInstance) {
     gisMapInstance = L.map('gis-map-container', {
@@ -4404,8 +4406,8 @@ function renderGISMap(identifiedCountries, allContacts) {
       maxBoundsViscosity: 1.0
     });
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      maxZoom: 14,
+    L.tileLayer(tileUrl, {
+      maxZoom: 16,
       noWrap: true,
       bounds: [[-90, -180], [90, 180]]
     }).addTo(gisMapInstance);
