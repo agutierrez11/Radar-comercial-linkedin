@@ -8389,6 +8389,16 @@ async function resetFullUserVault() {
       tx.objectStore(STORE_NAME).delete('radar_vault_antonio');
     } catch(e) {}
 
+    // Sincronizar vaciado en Supabase Cloud
+    if (window.supabase && typeof SUPA_URL !== 'undefined') {
+      try {
+        const supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
+        supaClient.from('contacts').delete().eq('vault_id', vaultKey).then(() => {
+          console.log(`[Supabase] Bóveda ${vaultKey} vaciada en la nube.`);
+        }).catch(e => console.warn('[Supabase Reset Error]', e));
+      } catch(e) {}
+    }
+
     resetGlobalState();
     if (typeof updateStatus === 'function') updateStatus();
 
