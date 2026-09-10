@@ -1570,6 +1570,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <button type="button" class="filter-input" id="btn-fullenrich-waterfall" onclick="enrichWithFullEnrich()" style="cursor:pointer; background:linear-gradient(135deg, #8164f4, #5031ae); color:#fff; border:none; font-weight:700; font-size:11px; white-space:nowrap;" title="Waterfall Enrichment 20+ proveedores (FullEnrich v2): Correos corporativos y teléfonos móviles">
           🚀 FullEnrich Waterfall (Email + Tel)
         </button>
+        <button type="button" class="filter-input" id="btn-toggle-discarded" onclick="toggleShowDiscarded()" style="cursor:pointer; background:var(--surface); color:var(--text-muted); border:1px solid var(--border); font-weight:600; font-size:11px; white-space:nowrap;" title="Ver u ocultar contactos que han sido descartados de la red">
+          👁️ Ver Descartados (<span id="count-discarded-badge">0</span>)
+        </button>
       </div>
       <div class="table-wrap">
         <div class="table-scroll">
@@ -2607,7 +2610,11 @@ document.addEventListener('DOMContentLoaded', function() {
       <option value="Pitch">Pitch</option>
       <option value="Conversacion">Conversación</option>
       <option value="Reunion">Demo / Reunión</option>
+      <option value="Descartado">🚫 Descartar</option>
     </select>
+    <button class="mini-btn" onclick="discardBulkSelected()" style="font-weight:700; background:rgba(239,68,68,0.18); border-color:rgba(239,68,68,0.4); color:var(--red); font-size:11px;" title="Descartar todos los contactos seleccionados y enviarlos al Ledger">
+      🚫 Descartar seleccionados
+    </button>
     <button class="mini-btn" onclick="clearSelectedContacts()" style="padding:4px 8px;">✕</button>
   </div>
 </div>
@@ -4326,6 +4333,11 @@ function applyNetworkFilters() {
     return (b.score || 0) - (a.score || 0);
   });
 
+  const discCountEl = document.getElementById('count-discarded-badge');
+  if (discCountEl && typeof getDiscardedCount === 'function') {
+    discCountEl.textContent = getDiscardedCount();
+  }
+
   renderNetworkTable();
 }
 
@@ -4806,6 +4818,7 @@ function renderNetworkTable(showMore = false) {
               <div style="width:24px; height:24px; border-radius:50%; background:${avatarColor}20; color:${avatarColor}; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:800; flex-shrink:0;">${ini}</div>
               <div class="td-name" style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
                 ${getDisplayNameHTML(c, idx)}
+                ${(c.crmStatus === 'Descartado' || c.discardedFromPurge) ? '<span class="badge badge-red" style="font-size:8px; padding:1px 5px;">🚫 Descartado</span>' : ''}
                 ${c.harvest_enriched ? '<span class="badge" style="font-size:8px; padding:2px 6px; background:rgba(16,185,129,0.18); color:#6ee7b7; border:1px solid rgba(16,185,129,0.4); font-weight:700;">✨ Verificado Live</span>' : `<span class="badge ${c.jobStatus && c.jobStatus.includes('🟢') ? 'badge-green' : (c.jobStatus && c.jobStatus.includes('🟡') ? 'badge-amber' : 'badge-muted')}" style="font-size:8px; padding:1px 5px;">${c.jobStatus || '🟢 Vigente'}</span>`}
                 ${postBadge}
               </div>
@@ -4818,17 +4831,22 @@ function renderNetworkTable(showMore = false) {
           <td>${hierarchyBadge(c.hierarchy)}</td>
           <td><div class="score-wrap"><div class="score-bar"><div class="score-fill" style="width:${c.score}%;background:${scoreColor(c.score)}"></div></div><span class="score-num">${c.score}</span></div></td>
           <td style="white-space:nowrap; text-align:right;">
-            <button class="mini-btn" onclick="enrichSingleContactLive(${c.id})" title="Actualizar perfil y último post con HarvestAPI" style="margin-right:4px; padding:2px 6px; color:var(--green); border-color:rgba(16,185,129,0.4);">⚡</button>
-            <select class="filter-input" style="font-size:10px; padding:2px 4px; border-radius:6px; height:auto; width:90px; margin-right:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); cursor:pointer;" onchange="saveContactCrm(${c.id}, this.value)">
+            <button class="mini-btn" onclick="enrichSingleContactLive('${c.id}')" title="Actualizar perfil y último post con HarvestAPI" style="margin-right:4px; padding:2px 6px; color:var(--green); border-color:rgba(16,185,129,0.4);">⚡</button>
+            <select class="filter-input" style="font-size:10px; padding:2px 4px; border-radius:6px; height:auto; width:95px; margin-right:6px; background:var(--bg); border:1px solid var(--border); color:var(--text); cursor:pointer;" onchange="saveContactCrm('${c.id}', this.value)">
               <option value="Ninguno" ${c.crmStatus === 'Ninguno' || !c.crmStatus ? 'selected' : ''}>— Mover —</option>
               <option value="Lead" ${c.crmStatus === 'Lead' ? 'selected' : ''}>Lead</option>
               <option value="Pitch" ${c.crmStatus === 'Pitch' ? 'selected' : ''}>Pitch</option>
               <option value="Conversacion" ${c.crmStatus === 'Conversacion' ? 'selected' : ''}>Conv</option>
               <option value="Reunion" ${c.crmStatus === 'Reunion' ? 'selected' : ''}>Demo</option>
               <option value="Cerrado" ${c.crmStatus === 'Cerrado' ? 'selected' : ''}>Ganado</option>
-              <option value="Descartado" ${c.crmStatus === 'Descartado' ? 'selected' : ''}>Desc</option>
+              <option value="Descartado" ${c.crmStatus === 'Descartado' ? 'selected' : ''}>🚫 Descartar</option>
             </select>
-            <button class="mini-btn" onclick="openModal(${c.id})">Outreach</button>
+            <button class="mini-btn" onclick="openModal('${c.id}')">Outreach</button>
+            ${(c.crmStatus === 'Descartado' || c.discardedFromPurge) ? `
+              <button class="mini-btn" onclick="restoreContactDirect('${c.id}')" title="Restaurar contacto a la red activa" style="margin-left:4px; padding:2px 7px; color:var(--green); border-color:rgba(16,185,129,0.35); font-weight:600; font-size:10px;">↩️ Restaurar</button>
+            ` : `
+              <button class="mini-btn" onclick="discardContactDirect('${c.id}')" title="Descartar contacto (enviar a depuración y ledger)" style="margin-left:4px; padding:2px 7px; color:var(--red); border-color:rgba(239,68,68,0.35); font-weight:600; font-size:10px;">🚫 Descartar</button>
+            `}
           </td>
         </tr>`;
     }).join('');
@@ -4935,16 +4953,21 @@ function renderICPTable() {
           <span class="badge ${c.score>=70?'badge-green':c.score>=45?'badge-amber':'badge-red'}">${c.score>=70?'Alto':c.score>=45?'Medio':'Bajo'}</span>
         </div></td>
         <td style="white-space:nowrap; text-align:right;">
-          <select class="filter-input" style="font-size:10px; padding:2px 4px; border-radius:6px; height:auto; width:95px; margin-right:6px; background:var(--surface); border:1px solid var(--border); color:var(--text); cursor:pointer;" onchange="saveContactCrm(${c.id}, this.value)">
+          <select class="filter-input" style="font-size:10px; padding:2px 4px; border-radius:6px; height:auto; width:95px; margin-right:6px; background:var(--surface); border:1px solid var(--border); color:var(--text); cursor:pointer;" onchange="saveContactCrm('${c.id}', this.value)">
             <option value="Ninguno" ${c.crmStatus === 'Ninguno' || !c.crmStatus ? 'selected' : ''}>— Mover a —</option>
             <option value="Lead" ${c.crmStatus === 'Lead' ? 'selected' : ''}>Lead</option>
             <option value="Pitch" ${c.crmStatus === 'Pitch' ? 'selected' : ''}>Pitch</option>
             <option value="Conversacion" ${c.crmStatus === 'Conversacion' ? 'selected' : ''}>Conv</option>
             <option value="Reunion" ${c.crmStatus === 'Reunion' ? 'selected' : ''}>Demo</option>
             <option value="Cerrado" ${c.crmStatus === 'Cerrado' ? 'selected' : ''}>Ganado</option>
-            <option value="Descartado" ${c.crmStatus === 'Descartado' ? 'selected' : ''}>Desc</option>
+            <option value="Descartado" ${c.crmStatus === 'Descartado' ? 'selected' : ''}>🚫 Descartar</option>
           </select>
-          <button class="mini-btn primary" onclick="openModal(${c.id})">Outreach</button>
+          <button class="mini-btn primary" onclick="openModal('${c.id}')">Outreach</button>
+          ${(c.crmStatus === 'Descartado' || c.discardedFromPurge) ? `
+            <button class="mini-btn" onclick="restoreContactDirect('${c.id}')" title="Restaurar contacto a la red activa" style="margin-left:4px; padding:2px 7px; color:var(--green); border-color:rgba(16,185,129,0.35); font-weight:600; font-size:10px;">↩️ Restaurar</button>
+          ` : `
+            <button class="mini-btn" onclick="discardContactDirect('${c.id}')" title="Descartar contacto" style="margin-left:4px; padding:2px 7px; color:var(--red); border-color:rgba(239,68,68,0.35); font-weight:600; font-size:10px;">🚫 Descartar</button>
+          `}
         </td>
       </tr>`;
   }).join('');
@@ -5000,6 +5023,71 @@ function dismissPurgeContact(id) {
   if (typeof renderICP === 'function') renderICP();
   renderHeader();
   saveLocalVault();
+}
+
+function discardContactDirect(id) {
+  const c = S.contacts.find(x => String(x.id) === String(id));
+  if (!c) return;
+  c.crmStatus = 'Descartado';
+  c.discardedFromPurge = true;
+  if (typeof saveToDiscardsLedger === 'function') {
+    saveToDiscardsLedger(c, 'Descarte Manual', c.crmNotes || '');
+  }
+  saveContactCrm(c.id, 'Descartado', c.crmNotes || '');
+  if (typeof showToast === 'function') {
+    showToast(`🚫 ${c.name} descartado y registrado en el Ledger persistente.`, '🗑️');
+  }
+  applyNetworkFilters();
+  if (typeof renderICP === 'function') renderICP();
+  if (typeof renderPurge === 'function') renderPurge();
+  renderHeader();
+  if (typeof saveLocalVault === 'function') saveLocalVault();
+}
+
+function restoreContactDirect(id) {
+  const c = S.contacts.find(x => String(x.id) === String(id));
+  if (!c) return;
+  c.crmStatus = 'Ninguno';
+  c.discardedFromPurge = false;
+  if (S.crmState && Array.isArray(S.crmState.discarded)) {
+    S.crmState.discarded = S.crmState.discarded.filter(xId => String(xId) !== String(c.id));
+  }
+  if (typeof removeFromDiscardsLedger === 'function') {
+    removeFromDiscardsLedger(c);
+  }
+  saveContactCrm(c.id, 'Ninguno', c.crmNotes || '');
+  if (typeof showToast === 'function') {
+    showToast(`✅ ${c.name} restaurado a la red activa.`, '↩️');
+  }
+  applyNetworkFilters();
+  if (typeof renderICP === 'function') renderICP();
+  if (typeof renderPurge === 'function') renderPurge();
+  renderHeader();
+  if (typeof saveLocalVault === 'function') saveLocalVault();
+}
+
+function getDiscardedCount() {
+  return (S.contacts || []).filter(c => c.crmStatus === 'Descartado' || c.discardedFromPurge).length;
+}
+
+function toggleShowDiscarded() {
+  S.showDiscarded = !S.showDiscarded;
+  const btn = document.getElementById('btn-toggle-discarded');
+  if (btn) {
+    const count = getDiscardedCount();
+    if (S.showDiscarded) {
+      btn.style.background = 'rgba(239,68,68,0.18)';
+      btn.style.color = 'var(--red)';
+      btn.style.borderColor = 'var(--red)';
+      btn.innerHTML = `👁️ Ocultar Descartados (${count})`;
+    } else {
+      btn.style.background = 'var(--surface)';
+      btn.style.color = 'var(--text-muted)';
+      btn.style.borderColor = 'var(--border)';
+      btn.innerHTML = `👁️ Ver Descartados (${count})`;
+    }
+  }
+  applyNetworkFilters();
 }
 
 async function enrichSingleContactLive(contactId) {
@@ -7293,7 +7381,7 @@ function renderCRM() {
                     <option value="Conversacion" ${c.crmStatus === 'Conversacion' ? 'selected' : ''}>Conv</option>
                     <option value="Reunion" ${c.crmStatus === 'Reunion' ? 'selected' : ''}>Demo</option>
                     <option value="Cerrado" ${c.crmStatus === 'Cerrado' ? 'selected' : ''}>Ganado</option>
-                    <option value="Descartado" ${c.crmStatus === 'Descartado' ? 'selected' : ''}>Desc</option>
+                    <option value="Descartado" ${c.crmStatus === 'Descartado' ? 'selected' : ''}>🚫 Descartar</option>
                     <option value="Ninguno">Eliminar</option>
                   </select>
                 </div>
@@ -8075,23 +8163,38 @@ function updateBulkBar() {
 function moveSelectedToCrm(status) {
   if (!status || selectedContactIds.size === 0) return;
   let updated = 0;
-  (S.contacts || []).forEach(c => {
-    if (selectedContactIds.has(c.id)) {
-      c.crmStatus = status;
-      c.crmDate = new Date().toISOString();
+  const ids = Array.from(selectedContactIds);
+  ids.forEach(id => {
+    const c = (S.contacts || []).find(x => x.id === id);
+    if (c) {
+      saveContactCrm(c.id, status, c.crmNotes || '', null, status === 'Descartado' ? false : undefined);
       updated++;
     }
   });
   clearSelectedContacts();
-  renderNetworkTable();
+  applyNetworkFilters();
   if (typeof renderCRM === 'function') renderCRM();
+  if (typeof renderICP === 'function') renderICP();
+  if (typeof renderPurge === 'function') renderPurge();
+  renderHeader();
+  if (typeof saveLocalVault === 'function') saveLocalVault();
   
-  const toast = document.getElementById('ui-toast');
-  if (toast) {
-    toast.innerHTML = `<span>🎯</span> <span>${updated} contactos movidos a ${status} en tu CRM.</span>`;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3000);
+  if (typeof showToast === 'function') {
+    if (status === 'Descartado') {
+      showToast(`🚫 ${updated} contactos descartados y guardados en el Ledger persistente.`, '🗑️');
+    } else {
+      showToast(`🎯 ${updated} contactos movidos a ${status} en tu CRM.`, '✅');
+    }
   }
+}
+
+function discardBulkSelected() {
+  if (selectedContactIds.size === 0) return;
+  const count = selectedContactIds.size;
+  if (!confirm(`¿Estás seguro de que deseas descartar ${count} contacto(s) seleccionados? Se moverán al Ledger persistente.`)) {
+    return;
+  }
+  moveSelectedToCrm('Descartado');
 }
 
 // ═══════════════════════════════════════════════════════════════════════
