@@ -4060,6 +4060,18 @@ function navigate(sec) {
     if (typeof renderPurge === 'function') renderPurge();
   }
 
+  if (sec === 'messages') {
+    requestAnimationFrame(() => {
+      if (typeof renderMessages === 'function') renderMessages();
+    });
+  }
+
+  if (sec === 'icp') {
+    requestAnimationFrame(() => {
+      if (typeof renderICP === 'function') renderICP();
+    });
+  }
+
   if (sec === 'analytics') {
     const locked = document.getElementById('analytics-locked');
     const dashboard = document.getElementById('analytics-dashboard');
@@ -5200,7 +5212,30 @@ function getRowVal(row, targetKey) {
 function renderMessages() {
   const el = document.getElementById('messages-content');
   if (!el) return;
-  
+
+  const currentAuthId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : (S.ownerName || 'antonio');
+  if (currentAuthId === 'antonio' && (!S.messages || S.messages.length === 0)) {
+    el.innerHTML = `
+      <div style="display:flex; align-items:center; justify-content:center; padding:40px; color:var(--accent); font-family:'Outfit',sans-serif;">
+        <div style="font-size:20px; margin-right:12px;">⏳</div>
+        <div>Cargando e indexando 25,110 mensajes reales de LinkedIn...</div>
+      </div>
+    `;
+    fetch('antonio_real_messages_25k.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(msgData => {
+        if (msgData && msgData.length > 0) {
+          S.messages = msgData;
+          S.loadedParts.messages = true;
+          const nbMsgs = document.getElementById('nb-msgs');
+          if (nbMsgs) nbMsgs.textContent = S.messages.length.toLocaleString();
+          saveLocalVault();
+          renderMessages();
+        }
+      }).catch(err => console.warn('[renderMessages Fetch Error]', err));
+    return;
+  }
+
   const withMsgs = (S.contacts || []).filter(c => c.msg_count && c.msg_count > 0);
   if (withMsgs.length > 0 || (S.messages && S.messages.length > 0)) {
     if (!S.loadedParts) S.loadedParts = {};
@@ -8144,9 +8179,15 @@ async function saveLocalVault() {
       messages: S.messages || [],
       crmState: S.crmState || { discarded: [], whitelisted: [], deals: [] }
     };
-    const vaultKey = getVaultKey();
     store.put(dataToSave, vaultKey);
-    localStorage.setItem(vaultKey, JSON.stringify(dataToSave));
+    try {
+      localStorage.setItem(vaultKey, JSON.stringify(dataToSave));
+    } catch(lsQuotaErr) {
+      try {
+        const lightweightData = { ...dataToSave, messages: [] };
+        localStorage.setItem(vaultKey, JSON.stringify(lightweightData));
+      } catch(e2) {}
+    }
     console.log(`[AutoVault] Bóveda guardada para ${vaultKey} (${S.contacts.length} contactos).`);
     
     // Sincronización a Supabase Cloud (Multi-dispositivo para respaldo entre laptops)
@@ -8384,16 +8425,22 @@ async function restoreLocalVault() {
 
         // Auto-cargar los 25k mensajes si faltan
         if (userId === 'antonio' && (!S.messages || S.messages.length === 0)) {
-          fetch('antonio_real_messages_25k.json')
-            .then(r => r.ok ? r.json() : null)
-            .then(msgData => {
+          try {
+            const mRes = await fetch('antonio_real_messages_25k.json');
+            if (mRes.ok) {
+              const msgData = await mRes.json();
               if (msgData && msgData.length > 0) {
                 S.messages = msgData;
                 S.loadedParts.messages = true;
+                const nbMsgs = document.getElementById('nb-msgs');
+                if (nbMsgs) nbMsgs.textContent = S.messages.length.toLocaleString();
                 if (typeof updateStatus === 'function') updateStatus();
                 saveLocalVault();
               }
-            }).catch(() => {});
+            }
+          } catch(mErr) {
+            console.warn('[AutoVault] Error fetching 25k messages:', mErr);
+          }
         }
 
         if (userId === 'antonio' && S.contacts.length > 1000) {
@@ -9974,63 +10021,7 @@ function goToContactChat(contactObj) {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════════════
-// 4. "HABLA CON TU RED" (FULL-TEXT SEARCH OVER MESSAGES & CONTACTS)
-// ═══════════════════════════════════════════════════════════════════════
-function handleTalkToNetworkSearch(e) {
-  if (e.key === 'Enter') {
-    const rawQuery = e.target.value.trim();
-    if (!rawQuery) return;
-    const query = typeof norm === 'function' ? norm(rawQuery) : rawQuery.toLowerCase();
-
-    if (!S.contacts || S.contacts.length === 0) {
-      if (typeof restoreLocalVault === 'function') restoreLocalVault();
-    }
-
-    // 1. Search inside S.messages for matching message text (e.g. "batas")
-    const matchedContactNames = new Set();
-    if (S.messages && S.messages.length > 0) {
-      (S.messages || []).forEach(m => {
-        const bodyText = typeof norm === 'function' ? norm(m.CONTENT || m.CONTENT_BODY || m.content || m.text || m.body || '') : (m.content || '').toLowerCase();
-        if (bodyText.includes(query)) {
-          const from = m.FROM || m.SENDER_NAME || m.from || '';
-          const to = m.TO || m.RECIPIENT_NAME || m.to || '';
-          if (from) matchedContactNames.add(typeof norm === 'function' ? norm(from) : from.toLowerCase());
-          if (to) matchedContactNames.add(typeof norm === 'function' ? norm(to) : to.toLowerCase());
-        }
-      });
-    }
-
-    // 2. Filter S.contacts for direct or message matches
-    filteredContacts = (S.contacts || []).filter(c => {
-      const cName = typeof norm === 'function' ? norm(c.name || '') : (c.name || '').toLowerCase();
-      const cComp = typeof norm === 'function' ? norm(c.company || '') : (c.company || '').toLowerCase();
-      const cPos = typeof norm === 'function' ? norm(c.position || '') : (c.position || '').toLowerCase();
-      const cCity = typeof norm === 'function' ? norm(c.city || '') : (c.city || '').toLowerCase();
-      const cNotes = typeof norm === 'function' ? norm(c.crmNotes || '') : (c.crmNotes || '').toLowerCase();
-
-      const matchDirect = cName.includes(query) || cComp.includes(query) || cPos.includes(query) || cCity.includes(query) || cNotes.includes(query);
-      const matchMsg = matchedContactNames.has(cName);
-      return matchDirect || matchMsg;
-    });
-
-    if (S.loadedParts && !S.loadedParts.connections) {
-      S.loadedParts.connections = true;
-    }
-
-    navigate('network');
-    const searchInput = document.getElementById('net-search') || document.getElementById('search-input');
-    if (searchInput) {
-      searchInput.value = rawQuery;
-    }
-    
-    if (typeof renderNetworkTable === 'function') renderNetworkTable();
-
-    showToast(`💬 "Habla con tu Red": ${filteredContacts.length} resultados para "${rawQuery}".`, '🔍');
-  }
-}
-
-// Welcome Gateway Auto-Popup on Startup handled cleanly in main DOMContentLoaded listener at top
+// (Anterior definición duplicada de handleTalkToNetworkSearch eliminada; ahora centralizada en la barra superior con Spotlight y Autocomplete)
     
 
 // ═══════════════════════════════════════════════════════════════════════
