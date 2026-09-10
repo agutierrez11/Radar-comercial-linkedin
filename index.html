@@ -248,19 +248,19 @@ window.JSZip || document.write('<script src="https://cdn.jsdelivr.net/npm/jszip@
 
     /* ── TABLE ── */
     .table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow-x: auto; overflow-y: hidden; box-shadow: var(--shadow-sm); }
-    .compact-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .compact-table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 980px; }
     .compact-table thead tr { border-bottom: 1px solid var(--border); }
-    .compact-table th { position: sticky; top: 0; background: var(--bg); z-index: 10; padding: 8px 10px; text-align: left; font-size: 9px; font-family: 'JetBrains Mono', monospace; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; cursor: pointer; user-select: none; white-space: nowrap; box-shadow: inset 0 -1px 0 var(--border); }
+    .compact-table th { position: sticky; top: 0; background: var(--bg); z-index: 10; padding: 10px 12px; text-align: left; font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; cursor: pointer; user-select: none; white-space: nowrap; box-shadow: inset 0 -1px 0 var(--border); }
     .compact-table th:hover { color: var(--text); }
     .compact-table th .sort-arrow { margin-left: 3px; opacity: .4; }
     .compact-table th.sorted .sort-arrow { opacity: 1; color: var(--accent); }
     .compact-table tbody tr { border-bottom: 1px solid var(--border); transition: all 0.2s ease; }
     .compact-table tbody tr:last-child { border-bottom: none; }
     .compact-table tbody tr:hover { background: rgba(79, 70, 229, 0.04); transform: translateY(-1px); position: relative; z-index: 5; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-    .compact-table td { padding: 7px 10px; vertical-align: middle; }
-    .td-name { font-weight: 600; color: var(--text); white-space: nowrap; }
-    .td-sub { font-size: 10px; color: var(--muted2); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px; }
-    .table-scroll { max-height: 420px; overflow-y: auto; }
+    .compact-table td { padding: 9px 12px; vertical-align: middle; }
+    .td-name { font-weight: 600; color: var(--text); white-space: nowrap; min-width: 170px; }
+    .td-sub { font-size: 11px; color: var(--text-muted); margin-top: 1px; white-space: normal; word-break: break-word; line-height: 1.35; min-width: 200px; max-width: 320px; }
+    .table-scroll { max-height: 600px; overflow-y: auto; overflow-x: auto; }
 
     /* ── BADGES ── */
     .badge { display: inline-flex; align-items: center; gap: 4px; font-size: 9px; font-weight: 700; font-family: 'Inter', sans-serif; padding: 3px 8px; border-radius: 6px; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: transform 0.2s; }
@@ -413,18 +413,19 @@ window.JSZip || document.write('<script src="https://cdn.jsdelivr.net/npm/jszip@
 
     /* ── COPILOTO CONVERSACIONAL DRAWER & FAB ── */
     #copilot-fab {
-      position: fixed; bottom: 24px; left: 24px; z-index: 990;
+      position: fixed; bottom: 18px; left: 18px; z-index: 990;
       background: linear-gradient(135deg, var(--accent), var(--purple));
-      color: #fff; border: none; border-radius: 30px; padding: 9px 16px;
-      font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 700;
-      display: flex; align-items: center; gap: 8px; cursor: pointer;
-      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.4), 0 0 12px rgba(124, 58, 237, 0.3);
+      color: #fff; border: none; border-radius: 20px; padding: 6px 12px;
+      font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 700;
+      display: flex; align-items: center; gap: 6px; cursor: pointer;
+      box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35), 0 0 8px rgba(124, 58, 237, 0.25);
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0.85;
     }
-    #copilot-fab:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 30px rgba(79, 70, 229, 0.6); }
+    #copilot-fab:hover { opacity: 1; transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 24px rgba(79, 70, 229, 0.5); }
 
     #data-copilot-drawer {
-      position: fixed; top: 0; right: -420px; width: 400px; height: 100vh;
+      position: fixed; top: 0; right: -540px; width: 500px; max-width: 90vw; height: 100vh;
       background: var(--surface-glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border-left: 1px solid var(--border); z-index: 1050; box-shadow: -10px 0 40px rgba(0,0,0,0.5);
       display: flex; flex-direction: column; transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -8015,7 +8016,7 @@ async function saveLocalVault() {
     localStorage.setItem(vaultKey, JSON.stringify(dataToSave));
     console.log(`[AutoVault] Bóveda guardada para ${vaultKey} (${S.contacts.length} contactos).`);
     
-    // Cloud sync to Supabase if connected
+    // Sincronización a Supabase Cloud (Multi-dispositivo para respaldo entre laptops)
     if (typeof syncToSupabaseVault === 'function') {
       syncToSupabaseVault(userId, S.contacts);
     }
@@ -8131,72 +8132,82 @@ function applyCrmStateToContacts() {
 }
 window.applyCrmStateToContacts = applyCrmStateToContacts;
 
+// Búsqueda en Supabase con Paginación en Bucle (supera el límite de 1,000 filas para soportar cualquier laptop)
+async function fetchPaginatedVaultFromSupabase(vaultKey) {
+  if (!window.supabase || typeof SUPA_URL === 'undefined') return null;
+  try {
+    const supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
+    let allRows = [];
+    let from = 0;
+    const batchSize = 1000;
+    let keepGoing = true;
+
+    while (keepGoing) {
+      const { data, error } = await supaClient
+        .from('contacts')
+        .select('id, name, first_name, last_name, company, position, country, city, url, email, score, crm_status, audit_status, job_status, metadata')
+        .eq('vault_id', vaultKey)
+        .range(from, from + batchSize - 1);
+
+      if (error) {
+        console.error('[Supabase Vault Fetch Error]', error);
+        break;
+      }
+      if (!data || data.length === 0) {
+        break;
+      }
+      allRows = allRows.concat(data);
+      from += batchSize;
+      if (data.length < batchSize) {
+        keepGoing = false;
+      }
+    }
+
+    if (allRows && allRows.length > 0) {
+      return allRows.map(c => {
+        const meta = c.metadata || {};
+        return {
+          id: c.id,
+          name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim() || 'Contacto',
+          first_name: c.first_name || '',
+          last_name: c.last_name || '',
+          company: c.company || '',
+          position: c.position || '',
+          country: c.country || meta.country || 'Desconocido',
+          city: c.city || meta.city || 'Desconocido',
+          lat: meta.lat || 19.4326,
+          lng: meta.lng || -99.1332,
+          url: c.url || '',
+          email: c.email || '',
+          score: c.score || 50,
+          crmStatus: c.crm_status || 'Ninguno',
+          audit_status: c.audit_status || 'unverified',
+          job_status: c.job_status || 'active',
+          harvest_enriched: meta.harvest_enriched || false,
+          connected_on: meta.connected_on || '',
+          connectedOn: meta.connected_on || '',
+          hierarchy: meta.hierarchy || '',
+          sector: meta.sector || '',
+          dms_sent: meta.dms_sent || 0,
+          dms_replied: meta.dms_replied || 0
+        };
+      });
+    }
+    return null;
+  } catch (err) {
+    console.warn('[Supabase Paginated Fetch Exception]', err);
+    return null;
+  }
+}
+window.fetchPaginatedVaultFromSupabase = fetchPaginatedVaultFromSupabase;
+
 async function restoreLocalVault() {
   if (!window.currentAuthUser) return false;
   try {
     const userId = (window.currentAuthUser && window.currentAuthUser.id) ? window.currentAuthUser.id : 'antonio';
     const vaultKey = getVaultKey();
 
-    // 1. PRIORIDAD ABSOLUTA: Supabase Cloud First
-    if (window.supabase && typeof SUPA_URL !== 'undefined') {
-      try {
-        const supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
-        const { data: cloudContacts, error } = await supaClient
-          .from('contacts')
-          .select('id, name, first_name, last_name, company, position, country, city, url, email, score, crm_status, audit_status, job_status, metadata')
-          .eq('vault_id', vaultKey);
-
-        if (!error) {
-          if (cloudContacts && cloudContacts.length > 0) {
-            S.contacts = cloudContacts.map(c => {
-              const meta = c.metadata || {};
-              return {
-                id: c.id,
-                name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim() || 'Contacto',
-                first_name: c.first_name || '',
-                last_name: c.last_name || '',
-                company: c.company || '',
-                position: c.position || '',
-                country: c.country || meta.country || 'Desconocido',
-                city: c.city || meta.city || 'Desconocido',
-                lat: meta.lat || 19.4326,
-                lng: meta.lng || -99.1332,
-                url: c.url || '',
-                email: c.email || '',
-                score: c.score || 50,
-                crmStatus: c.crm_status || 'Ninguno',
-                audit_status: c.audit_status || 'unverified',
-                job_status: c.job_status || 'active',
-                harvest_enriched: meta.harvest_enriched || false
-              };
-            });
-            S.loadedParts = { connections: true, positions: false, messages: false };
-            S.ownerName = userId;
-            console.log(`[AutoVault] Bóveda ${vaultKey} sincronizada desde Supabase Cloud (${S.contacts.length} contactos).`);
-            return true;
-          } else {
-            // SUPABASE ESTÁ VACÍO (0 filas): Limpiar cualquier residuo en IndexedDB y localStorage
-            console.log(`[AutoVault] Supabase indica bóveda ${vaultKey} vacía (0 contactos). Limpiando caché local.`);
-            localStorage.removeItem(vaultKey);
-            localStorage.removeItem('radar_vault_antonio');
-            localStorage.removeItem('radar_vault_master');
-            try {
-              const db = await openVaultDB();
-              const tx = db.transaction(STORE_NAME, 'readwrite');
-              tx.objectStore(STORE_NAME).delete(vaultKey);
-              tx.objectStore(STORE_NAME).delete('vault_antonio');
-            } catch(e) {}
-            S.contacts = [];
-            S.loadedParts = { connections: false, positions: false, messages: false, profile: false };
-            return false;
-          }
-        }
-      } catch (cloudErr) {
-        console.warn('[AutoVault Supabase Cloud Check Error, cayendo a cache offline]', cloudErr);
-      }
-    }
-
-    // 2. Fallback offline: IndexedDB
+    // 1. PRIORIDAD: IndexedDB Local (Caché rápida en esta máquina)
     try {
       const db = await openVaultDB();
       const tx = db.transaction(STORE_NAME, 'readonly');
@@ -8211,10 +8222,25 @@ async function restoreLocalVault() {
         if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4)) {
           if (userId === 'antonio') return false; // Ronan sandbox check only
         }
-        S.contacts = data.contacts;
+
+        // Si quedó con el residuo truncado de 1,000 contactos, recuperar los 3,000+ completos
+        if (userId === 'antonio' && data.contacts.length === 1000) {
+          const cloudFull = await fetchPaginatedVaultFromSupabase(vaultKey);
+          if (cloudFull && cloudFull.length > 1000) {
+            S.contacts = cloudFull;
+          } else if (window.MASTER_CONNECTIONS_DATA && window.MASTER_CONNECTIONS_DATA.length > 1000) {
+            S.contacts = window.MASTER_CONNECTIONS_DATA;
+          } else {
+            S.contacts = data.contacts;
+          }
+        } else {
+          S.contacts = data.contacts;
+        }
+
         S.positions = data.positions || [];
         S.messages = data.messages || [];
         if (data.crmState) S.crmState = data.crmState;
+        applyCrmStateToContacts();
         if (S.criteria) {
           S.criteria.forEach(cr => {
             if (cr.id === 'no_country') cr.on = false;
@@ -8222,35 +8248,75 @@ async function restoreLocalVault() {
         }
         S.ownerName = data.ownerName || userId;
         S.loadedParts = { connections: true, positions: S.positions.length > 0, messages: S.messages.length > 0 };
-        console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde IndexedDB (${S.contacts.length} contactos).`);
+
+        // Auto-cargar los 25k mensajes si faltan
+        if (userId === 'antonio' && (!S.messages || S.messages.length === 0)) {
+          fetch('antonio_real_messages_25k.json')
+            .then(r => r.ok ? r.json() : null)
+            .then(msgData => {
+              if (msgData && msgData.length > 0) {
+                S.messages = msgData;
+                S.loadedParts.messages = true;
+                if (typeof updateStatus === 'function') updateStatus();
+                saveLocalVault();
+              }
+            }).catch(() => {});
+        }
+
+        if (userId === 'antonio' && S.contacts.length > 1000) {
+          saveLocalVault();
+        }
+
+        console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde IndexedDB (${S.contacts.length} contactos, ${S.messages.length} mensajes).`);
         return true;
       }
     } catch (idbErr) {
       console.warn('[AutoVault IDB Error]', idbErr);
     }
 
-    // 3. Fallback offline: localStorage
+    // 2. Fallback local: localStorage
     const savedLocal = localStorage.getItem(vaultKey);
     if (savedLocal) {
-      const data = JSON.parse(savedLocal);
-      if (data && data.contacts && data.contacts.length > 0) {
-        if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4)) {
-          if (userId === 'antonio') return false;
+      try {
+        const data = JSON.parse(savedLocal);
+        if (data && data.contacts && data.contacts.length > 0) {
+          if (data.ownerName === 'Ronan' || (data.contacts.length === 500 && data.messages && data.messages.length === 4)) {
+            if (userId === 'antonio') return false;
+          }
+          if (userId === 'antonio' && data.contacts.length === 1000 && window.MASTER_CONNECTIONS_DATA && window.MASTER_CONNECTIONS_DATA.length > 1000) {
+            S.contacts = window.MASTER_CONNECTIONS_DATA;
+          } else {
+            S.contacts = data.contacts;
+          }
+          S.positions = data.positions || [];
+          S.messages = data.messages || [];
+          if (data.crmState) S.crmState = data.crmState;
+          applyCrmStateToContacts();
+          S.ownerName = data.ownerName || userId;
+          S.loadedParts = { connections: true, positions: S.positions.length > 0, messages: S.messages.length > 0 };
+          console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde localStorage (${S.contacts.length} contactos).`);
+          return true;
         }
-        S.contacts = data.contacts;
-        applyCrmStateToContacts();
-        S.positions = data.positions || [];
-        S.messages = data.messages || [];
-        if (data.crmState) S.crmState = data.crmState;
-        if (S.criteria) {
-          S.criteria.forEach(cr => {
-            if (cr.id === 'no_country') cr.on = false;
-          });
+      } catch(e) {}
+    }
+
+    // 3. Fallback Nube / Otra Laptop: Descargar desde Supabase con Paginación Completa (sin tope de 1,000)
+    if (window.supabase && typeof SUPA_URL !== 'undefined') {
+      try {
+        const cloudContacts = await fetchPaginatedVaultFromSupabase(vaultKey);
+        if (cloudContacts && cloudContacts.length > 0) {
+          S.contacts = cloudContacts;
+          S.positions = [];
+          S.messages = [];
+          S.ownerName = userId;
+          applyCrmStateToContacts();
+          S.loadedParts = { connections: true, positions: false, messages: false };
+          if (typeof saveLocalVault === 'function') saveLocalVault();
+          console.log(`[AutoVault] Bóveda ${vaultKey} descargada desde Supabase Cloud con paginación (${S.contacts.length} contactos).`);
+          return true;
         }
-        S.ownerName = data.ownerName || userId;
-        S.loadedParts = { connections: true, positions: S.positions.length > 0, messages: S.messages.length > 0 };
-        console.log(`[AutoVault] Bóveda ${vaultKey} restaurada desde localStorage (${S.contacts.length} contactos).`);
-        return true;
+      } catch (cloudErr) {
+        console.warn('[AutoVault Supabase Cloud Error]', cloudErr);
       }
     }
 
@@ -9179,76 +9245,27 @@ async function submitCustomLogin() {
       { company: "Conagra Brands", title: "Ejecutivo de ventas", start: "2016", end: "2018" }
     ];
 
-    const activeUserPill = document.getElementById('active-user-name');
-    if (activeUserPill) activeUserPill.textContent = '👤 Antonio (Master)';
-
     closeLoginModal();
-    // 1. Prioridad absoluta: Supabase Cloud First
-    let cloudLoaded = false;
-    if (window.supabase && typeof SUPA_URL !== 'undefined') {
-      try {
-        const supaClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
-        const { data: cloudContacts, error } = await supaClient
-          .from('contacts')
-          .select('id, name, first_name, last_name, company, position, country, city, url, email, score, crm_status, audit_status, job_status, metadata')
-          .eq('vault_id', 'vault_antonio');
-        if (cloudContacts && cloudContacts.length > 0) {
-          S.contacts = cloudContacts.map(c => {
-            const meta = c.metadata || {};
-            return {
-              id: c.id,
-              name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim() || 'Contacto',
-              first_name: c.first_name || '',
-              last_name: c.last_name || '',
-              company: c.company || '',
-              position: c.position || '',
-              country: c.country || meta.country || 'Desconocido',
-              city: c.city || meta.city || 'Desconocido',
-              lat: meta.lat || 19.4326,
-              lng: meta.lng || -99.1332,
-              url: c.url || '',
-              email: c.email || '',
-              score: c.score || 50,
-              crmStatus: c.crm_status || 'Ninguno',
-              audit_status: c.audit_status || 'unverified',
-              job_status: c.job_status || 'active',
-              harvest_enriched: meta.harvest_enriched || false
-            };
-          });
-          S.loadedParts = { connections: true, positions: false, messages: false };
-          cloudLoaded = true;
-        }
-      } catch (e) {
-        console.warn('[CloudVault Error]', e);
-      }
-    }
+    const activeUserPill = document.getElementById('active-user-name');
+    if (activeUserPill) activeUserPill.textContent = '👑 Antonio (Master)';
 
-    if (!cloudLoaded) {
-      // BÓVEDA VACÍA EN SUPABASE: CERO CONTACTOS, LISTA PARA SUBIR EL ZIP
+    // LOCAL FIRST ZERO-KNOWLEDGE: Restaurar bóveda localmente desde IndexedDB
+    const restored = await restoreLocalVault();
+    if (!restored || !S.contacts || S.contacts.length === 0) {
       S.contacts = [];
-      S.loadedParts = { connections: false, positions: false, messages: false };
-      localStorage.removeItem('radar_vault_antonio');
-      localStorage.removeItem('radar_vault_master');
-      try {
-        const req = indexedDB.open('RadarComercialDB', 1);
-        req.onsuccess = (ev) => {
-          const db = ev.target.result;
-          if (db.objectStoreNames.contains('vaults')) {
-            const tx = db.transaction('vaults', 'readwrite');
-            tx.objectStore('vaults').delete('vault_antonio');
-          }
-        };
-      } catch(e) {}
-    }
-
-    if (typeof loadCrmState === 'function') loadCrmState();
-    refreshFullVaultUI();
-    if (cloudLoaded) {
-      if (typeof showToast === 'function') showToast(`👤 Bóveda Master Antonio cargada (${S.contacts.length.toLocaleString()} contactos desde Supabase).`, '☁️');
+      S.positions = [];
+      S.messages = [];
+      S.crmState = { discarded: [], whitelisted: [], deals: [] };
+      S.loadedParts = { connections: false, messages: false, positions: false, profile: false };
+      if (typeof navigate === 'function') navigate('upload');
+      if (typeof showToast === 'function') showToast('⚡ Bóveda de Antonio lista. Arrastra tu ZIP de LinkedIn para comenzar.', '🚀');
     } else {
-      if (typeof showToast === 'function') showToast('📂 Bóveda limpia (0 contactos). Arrastra tu ZIP de LinkedIn para comenzar.', '✨');
+      S.loadedParts.connections = true;
+      if (typeof loadCrmState === 'function') loadCrmState();
+      if (typeof showToast === 'function') showToast(`💎 Bóveda de Antonio restaurada (${S.contacts.length.toLocaleString()} contactos, ${S.messages.length.toLocaleString()} mensajes).`, '🌟');
     }
 
+    refreshFullVaultUI();
   } 
   // --- GIOVANNA ISOLATED VAULT ---
   else if (userVal === 'giovanna' || userVal === 'giovanna@radar.com' || userVal === 'roanna') {
