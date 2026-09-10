@@ -6805,6 +6805,7 @@ function saveToDiscardsLedger(contact, reason, notes) {
 
   ledger[key] = {
     canonicalKey: key,
+    name: contact.name || contact.originalName || cleanName,
     url: rawUrl,
     aliases: rawUrl ? [rawUrl] : [],
     cleanName: cleanName,
