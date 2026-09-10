@@ -3476,6 +3476,14 @@ function buildContacts(rows) {
 
   mergedContacts.forEach((c, idx) => c.id = idx);
   S.contacts = mergedContacts;
+
+  if (typeof applyCrmStateToContacts === 'function') {
+    applyCrmStateToContacts();
+  }
+  if (typeof applyDiscardsLedgerToContacts === 'function') {
+    applyDiscardsLedgerToContacts();
+  }
+
   saveLocalVault();
 }
 
@@ -4963,6 +4971,9 @@ function protectFromPurge(id) {
   if (!c) return;
   c.whitelisted = true;
   c.discardedFromPurge = false;
+  if (typeof removeFromDiscardsLedger === 'function') {
+    removeFromDiscardsLedger(c);
+  }
   saveContactCrm(c.id, c.crmStatus || 'Ninguno', c.crmNotes || '', null, true);
   showToast(`${c.name} ha sido protegido y conservado en tu red.`, '🛡️');
   renderPurgeCriteria();
@@ -4978,6 +4989,9 @@ function dismissPurgeContact(id) {
   if (!c) return;
   c.crmStatus = 'Descartado';
   c.discardedFromPurge = true;
+  if (typeof saveToDiscardsLedger === 'function') {
+    saveToDiscardsLedger(c, 'Dunbar Purge', c.crmNotes || '');
+  }
   saveContactCrm(c.id, 'Descartado', c.crmNotes || '');
   showToast(`${c.name} marcado como descartado.`, '🗑️');
   renderPurgeCriteria();
@@ -5174,6 +5188,9 @@ function executeBulkPurge() {
   toPurge.forEach(c => {
     c.crmStatus = 'Descartado';
     c.discardedFromPurge = true;
+    if (typeof saveToDiscardsLedger === 'function') {
+      saveToDiscardsLedger(c, 'Dunbar Purge Bulk', c.crmNotes || '');
+    }
     saveContactCrm(c.id, 'Descartado', c.crmNotes || '');
     count++;
   });
@@ -6613,16 +6630,284 @@ function updateIndustryBench(ind) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════
+// CUÁDRUPLE SELLO DE IDENTIDAD & DISCARDS LEDGER PERSISTENTE (BYOD)
+// ═══════════════════════════════════════════════════════════════════════
+
+const DISCARDS_LEDGER_KEY = 'radar_discards_ledger';
+
+function cleanLinkedInUrl(url) {
+  if (!url || typeof url !== 'string') return '';
+  let u = url.trim().toLowerCase();
+  u = u.split('?')[0].split('#')[0];
+  u = u.replace(/\/+$/, '');
+  u = u.replace(/^http:\/\//, 'https://');
+  return u;
+}
+window.cleanLinkedInUrl = cleanLinkedInUrl;
+
+function cleanContactName(name) {
+  if (!name || typeof name !== 'string') return '';
+  let n = name.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
+  n = n.replace(/\b(lic|dr|dra|ing|mba|cfa|phd|msc|cp|c\.p\.|prof)\b\.?/gi, '');
+  return typeof norm === 'function' ? norm(n).replace(/\s+/g, ' ').trim() : n.toLowerCase().trim();
+}
+window.cleanContactName = cleanContactName;
+
+function parseConnectedDate(str) {
+  if (!str) return null;
+  const s = String(str).trim();
+  if (/^\d{4}-\d{2}/.test(s)) {
+    const d = new Date(s);
+    if (!isNaN(d.getTime())) return d;
+  }
+  const months = {
+    jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11,
+    ene:0, abr:3, ago:7, dic:11
+  };
+  const parts = s.split(/\s+/);
+  if (parts.length === 3) {
+    const m = months[parts[1].toLowerCase().slice(0, 3)];
+    if (m !== undefined) {
+      const d = new Date(parseInt(parts[2]), m, parseInt(parts[0]));
+      if (!isNaN(d.getTime())) return d;
+    }
+  }
+  if (parts.length === 2) {
+    const m = months[parts[0].toLowerCase().slice(0, 3)];
+    const yr = parseInt(parts[1]);
+    if (m !== undefined && !isNaN(yr)) {
+      const d = new Date(yr, m, 1);
+      if (!isNaN(d.getTime())) return d;
+    }
+  }
+  const parsed = new Date(s);
+  return isNaN(parsed.getTime()) ? null : parsed;
+}
+window.parseConnectedDate = parseConnectedDate;
+
+function getDiscardsLedger() {
+  try {
+    const raw = localStorage.getItem(DISCARDS_LEDGER_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch(e) {
+    return {};
+  }
+}
+window.getDiscardsLedger = getDiscardsLedger;
+
+function saveToDiscardsLedger(contact, reason, notes) {
+  if (!contact) return;
+  const ledger = getDiscardsLedger();
+  const rawUrl = cleanLinkedInUrl(contact.url || contact.profile_url || '');
+  const cleanName = cleanContactName(contact.name || contact.originalName || '');
+  const connDate = parseConnectedDate(contact.connectedOn);
+  const key = rawUrl || `${cleanName}|${norm(contact.company || contact.originalCompany || '')}`;
+
+  let convId = null;
+  if (S.messages && S.messages.length > 0) {
+    const foundMsg = S.messages.find(m => {
+      const from = m.FROM || m.SENDER_NAME || m.from || m.sender || '';
+      const to = m.TO || m.RECIPIENT_NAME || m.to || m.recipient || '';
+      return cleanContactName(from) === cleanName || cleanContactName(to) === cleanName;
+    });
+    if (foundMsg) {
+      convId = getRowVal(foundMsg, 'CONVERSATION ID') || foundMsg.conv_id || null;
+    }
+  }
+
+  ledger[key] = {
+    canonicalKey: key,
+    url: rawUrl,
+    aliases: rawUrl ? [rawUrl] : [],
+    cleanName: cleanName,
+    company: contact.company || contact.originalCompany || '',
+    position: contact.position || contact.originalPosition || '',
+    connectedOn: contact.connectedOn || '',
+    connectedTimestamp: connDate ? connDate.getTime() : null,
+    convId: convId,
+    discardedAt: new Date().toISOString(),
+    discardedTimestamp: Date.now(),
+    reason: reason || 'Dunbar Purge',
+    notes: notes || contact.crmNotes || ''
+  };
+
+  try {
+    localStorage.setItem(DISCARDS_LEDGER_KEY, JSON.stringify(ledger));
+  } catch(e) {}
+
+  try {
+    openVaultDB().then(db => {
+      const tx = db.transaction(STORE_NAME, 'readwrite');
+      tx.objectStore(STORE_NAME).put(ledger, DISCARDS_LEDGER_KEY);
+    }).catch(() => {});
+  } catch(e) {}
+}
+window.saveToDiscardsLedger = saveToDiscardsLedger;
+
+function removeFromDiscardsLedger(contact) {
+  if (!contact) return;
+  const ledger = getDiscardsLedger();
+  const rawUrl = cleanLinkedInUrl(contact.url || contact.profile_url || '');
+  const cleanName = cleanContactName(contact.name || contact.originalName || '');
+  const key = rawUrl || `${cleanName}|${norm(contact.company || contact.originalCompany || '')}`;
+
+  delete ledger[key];
+  if (rawUrl) {
+    Object.keys(ledger).forEach(k => {
+      if (ledger[k].url === rawUrl || (ledger[k].aliases && ledger[k].aliases.includes(rawUrl))) {
+        delete ledger[k];
+      }
+    });
+  }
+
+  try {
+    localStorage.setItem(DISCARDS_LEDGER_KEY, JSON.stringify(ledger));
+  } catch(e) {}
+
+  try {
+    openVaultDB().then(db => {
+      const tx = db.transaction(STORE_NAME, 'readwrite');
+      tx.objectStore(STORE_NAME).put(ledger, DISCARDS_LEDGER_KEY);
+    }).catch(() => {});
+  } catch(e) {}
+}
+window.removeFromDiscardsLedger = removeFromDiscardsLedger;
+
+function matchContactAgainstDiscardsLedger(contact, ledger) {
+  if (!contact || !ledger) return null;
+  const cUrl = cleanLinkedInUrl(contact.url || contact.profile_url || '');
+  const cName = cleanContactName(contact.name || contact.originalName || '');
+  const cConnDate = parseConnectedDate(contact.connectedOn);
+  const cConnTime = cConnDate ? cConnDate.getTime() : null;
+
+  // Sello 1: URL Canónica directa o en aliases
+  if (cUrl) {
+    if (ledger[cUrl]) return { entry: ledger[cUrl], matchType: 'url_canonical' };
+    for (const k in ledger) {
+      const item = ledger[k];
+      if (item.url === cUrl || (item.aliases && item.aliases.includes(cUrl))) {
+        return { entry: item, matchType: 'url_alias' };
+      }
+    }
+  }
+
+  // Sello 2: Historial de Mensajes (CONVERSATION ID)
+  if (S.messages && S.messages.length > 0) {
+    const matchMsg = S.messages.find(m => {
+      const from = m.FROM || m.SENDER_NAME || m.from || m.sender || '';
+      const to = m.TO || m.RECIPIENT_NAME || m.to || m.recipient || '';
+      return cleanContactName(from) === cName || cleanContactName(to) === cName;
+    });
+    if (matchMsg) {
+      const mConvId = getRowVal(matchMsg, 'CONVERSATION ID') || matchMsg.conv_id;
+      if (mConvId) {
+        for (const k in ledger) {
+          if (ledger[k].convId === mConvId) {
+            return { entry: ledger[k], matchType: 'conversation_id' };
+          }
+        }
+      }
+    }
+  }
+
+  // Sello 3: Mutación de Vanity URL (Connected On exacto + Nombre limpio)
+  if (cName && cConnTime) {
+    for (const k in ledger) {
+      const item = ledger[k];
+      if (item.cleanName === cName && item.connectedTimestamp) {
+        if (Math.abs(item.connectedTimestamp - cConnTime) < 86400000) {
+          if (cUrl && item.aliases && !item.aliases.includes(cUrl)) {
+            item.aliases.push(cUrl);
+            try { localStorage.setItem(DISCARDS_LEDGER_KEY, JSON.stringify(ledger)); } catch(e){}
+          }
+          return { entry: item, matchType: 'connected_on_name_match' };
+        }
+      }
+    }
+  }
+
+  return null;
+}
+window.matchContactAgainstDiscardsLedger = matchContactAgainstDiscardsLedger;
+
+function applyDiscardsLedgerToContacts() {
+  if (!S.contacts || !S.contacts.length) return;
+  const ledger = getDiscardsLedger();
+  if (!ledger || Object.keys(ledger).length === 0) return;
+
+  let reactivatedCount = 0;
+  let reDiscardedCount = 0;
+
+  S.contacts.forEach(c => {
+    const match = matchContactAgainstDiscardsLedger(c, ledger);
+    if (match) {
+      const entry = match.entry;
+      const incomingConnDate = parseConnectedDate(c.connectedOn);
+      const incomingConnTime = incomingConnDate ? incomingConnDate.getTime() : null;
+      const discardTime = entry.discardedTimestamp || (entry.discardedAt ? new Date(entry.discardedAt).getTime() : 0);
+
+      // Sello 4: Detección de Re-Conexión Legítima en LinkedIn
+      const isReconnectedLater = incomingConnTime && discardTime && (incomingConnTime > discardTime);
+
+      if (isReconnectedLater) {
+        reactivatedCount++;
+        console.log(`[IdentityEngine] 🎉 ${c.name} re-agregado en LinkedIn el ${c.connectedOn}. Reactivado en Red Activa.`);
+        removeFromDiscardsLedger(c);
+        c.crmStatus = 'Ninguno';
+        c.discardedFromPurge = false;
+        c.reconnectedOnLinkedin = true;
+
+        // Limpiar de S.crmState.discarded
+        if (S.crmState && Array.isArray(S.crmState.discarded)) {
+          S.crmState.discarded = S.crmState.discarded.filter(id => String(id) !== String(c.id));
+        }
+
+        // Limpiar de radar_comercial_crm
+        try {
+          const rawCrm = localStorage.getItem('radar_comercial_crm');
+          if (rawCrm) {
+            const crmDb = JSON.parse(rawCrm);
+            const key = typeof getContactCrmKey === 'function' ? getContactCrmKey(c) : c.id;
+            delete crmDb[key];
+            delete crmDb[c.id];
+            delete crmDb[String(c.id)];
+            if (c.url) delete crmDb[c.url];
+            localStorage.setItem('radar_comercial_crm', JSON.stringify(crmDb));
+          }
+        } catch(e) {}
+      } else {
+        reDiscardedCount++;
+        c.crmStatus = 'Descartado';
+        c.discardedFromPurge = true;
+        if (entry.notes) c.crmNotes = entry.notes;
+
+        // Comprobar si hubo promoción a ICP relevante
+        const score = typeof scoreContact === 'function' ? scoreContact(c) : (c.score || 0);
+        const isIcpRole = /\b(director|vp|vicepresident|head|founder|socio|ceo|coo|cfo|gerente general)\b/i.test(c.position || '');
+        if (score >= 60 && isIcpRole && (c.company !== entry.company || c.position !== entry.position)) {
+          c.jobMovementAlert = `🔄 Promovido a ${c.position} en ${c.company}`;
+          console.log(`[IdentityEngine] 💡 ${c.name} estaba descartado pero cambió a cargo ICP relevante: ${c.position}`);
+        }
+      }
+    }
+  });
+
+  if (reactivatedCount > 0 && typeof showToast === 'function') {
+    showToast(`🎉 ${reactivatedCount} contacto(s) re-agregado(s) en LinkedIn reactivado(s) en tu Red Activa.`, '🟢');
+  }
+}
+window.applyDiscardsLedgerToContacts = applyDiscardsLedgerToContacts;
+
+// ═══════════════════════════════════════════════════════════════════════
 // CRM LOCAL SYSTEM
 // ═══════════════════════════════════════════════════════════════════════
 
 function getContactCrmKey(c) {
-  if (c.url && c.url.trim().length > 0) {
-    return c.url.trim();
-  }
-  const name = c.originalName || c.name || '';
+  const cleanUrl = cleanLinkedInUrl(c.url || c.profile_url || '');
+  if (cleanUrl) return cleanUrl;
+  const name = cleanContactName(c.originalName || c.name || '');
   const company = c.originalCompany || c.company || '';
-  return `${norm(name)}|${norm(company)}`;
+  return `${name}|${norm(company)}`;
 }
 
 function loadCrmState() {
@@ -6746,6 +7031,13 @@ function saveContactCrm(contactId, status, notes, customData, isWhitelisted) {
     if (!S.crmState) S.crmState = { discarded: [], whitelisted: [], deals: [] };
     if (!Array.isArray(S.crmState.discarded)) S.crmState.discarded = [];
     if (!S.crmState.discarded.includes(c.id)) S.crmState.discarded.push(c.id);
+    if (typeof saveToDiscardsLedger === 'function') {
+      saveToDiscardsLedger(c, 'CRM Descarte', c.crmNotes || '');
+    }
+  } else if (c.whitelisted || (status !== 'Descartado' && c.crmStatus !== 'Descartado')) {
+    if (typeof removeFromDiscardsLedger === 'function') {
+      removeFromDiscardsLedger(c);
+    }
   }
   if (typeof saveLocalVault === 'function') {
     try { saveLocalVault(); } catch(e) {}
@@ -8550,16 +8842,16 @@ async function clearLocalVault() {
 
 async function resetFullUserVault() {
   const userName = (window.currentAuthUser && window.currentAuthUser.name) ? window.currentAuthUser.name : 'tu Bóveda';
-  if (!confirm(`⚠️ ¿Deseas VACIAR Y ELIMINAR COMPLETAMENTE todos tus datos de ${userName}?\n\nEsto eliminará permanentemente de tu navegador:\n• Tu archivo ZIP cargado y contactos procesados\n• Tus notas CRM y avances de depuración\n• Tu caché local de sesión\n\nPodrás volver a cargar un ZIP nuevo inmediatamente desde cero.`)) {
+  if (!confirm(`⚠️ ¿Deseas vaciar la caché de ${userName} para subir un nuevo ZIP?\n\n• Se limpiarán los contactos en pantalla para que cargues tu nuevo archivo ZIP.\n• 🔒 Tu historial de perfiles depurados (Discards Ledger) SE CONSERVARÁ para que si vuelves a subir el mismo ZIP o contactos ya evaluados, el sistema no te obligue a depurarlos dos veces.\n\n¿Deseas continuar?`)) {
     return;
   }
 
   try {
     const vaultKey = typeof getVaultKey === 'function' ? getVaultKey() : 'vault_antonio';
     localStorage.removeItem(vaultKey);
-    localStorage.removeItem('radar_comercial_crm');
     localStorage.removeItem('radar_vault_antonio');
     localStorage.removeItem('radar_vault_master');
+    // Se preserva radar_discards_ledger para mantener la memoria de depuración
 
     try {
       const db = await openVaultDB();
@@ -8567,6 +8859,7 @@ async function resetFullUserVault() {
       tx.objectStore(STORE_NAME).delete(vaultKey);
       tx.objectStore(STORE_NAME).delete('vault_antonio');
       tx.objectStore(STORE_NAME).delete('radar_vault_antonio');
+      // No se elimina DISCARDS_LEDGER_KEY
     } catch(e) {}
 
     // Sincronizar vaciado en Supabase Cloud
